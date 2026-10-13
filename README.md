@@ -4,11 +4,12 @@ Sitio de seguimiento y divulgación del **Semillero Maker de Tecnología con Sen
 espacio extracurricular dirigido por Néstor Andrés Paipa Castro en el Instituto
 Infantil y Juvenil, Bogotá. Semestre 2026-II.
 
-Catorce subequipos de 9°, 10° y 11° recorren las fases del Design Thinking anidadas
+Quince proyectos de 9°, 10° y 11° recorren las fases del Design Thinking anidadas
 con el método científico, hasta llegar a un artículo de desarrollo tecnológico.
 Este sitio le muestra a cada equipo el estado real de su proceso.
 
 - **Sitio:** <https://profenapaipa.github.io/semillero_tecnologia_con_sentido/>
+- **Cómo está organizada la carpeta:** [PROYECTOS.md](PROYECTOS.md)
 - **Cómo publicar un proyecto:** [PUBLICAR.md](PUBLICAR.md)
 - **El encargo:** [BRIEF.md](BRIEF.md)
 - **Decisiones de arquitectura:** [BITACORA_TECNICA.md](BITACORA_TECNICA.md)
@@ -25,6 +26,7 @@ acceso directo a su versión publicada cuando existe.
 | 5 | English Roulette | [englishroulette](https://github.com/profenapaipa/englishroulette) | no aplica, es aplicación de escritorio |
 | 6 | Diverseña | [diversena](https://github.com/profenapaipa/diversena) | no, repositorio privado |
 | 7 | Wisfox | todavía sin repositorio | no |
+| 12 | ZocaLab | todavía sin repositorio | no, pero es el más fácil: es estático |
 
 ---
 
@@ -34,7 +36,8 @@ acceso directo a su versión publicada cuando existe.
 |---|---|---|
 | `docs/` | **El sitio web.** Portal, catorce páginas de equipo y las hojas de estilo. | ✅ Sí |
 | `datos/` | `semillero.json`, el estado de los catorce subequipos. La fuente de verdad. | ❌ No |
-| `herramientas/` | `generar.py`, que convierte los datos en las páginas. | ❌ No |
+| `herramientas/` | `generar.py`, que convierte los datos en las páginas, y `auditar.py`, que las revisa. | ❌ No |
+| Carpetas de proyecto | Los repositorios de los equipos. **No se versionan aquí**, ver [PROYECTOS.md](PROYECTOS.md). | ❌ No |
 
 `docs/` se llama así porque **GitHub lo exige** para publicar desde una subcarpeta.
 
@@ -89,6 +92,7 @@ lleva además una forma o un glifo, para que se lea sin depender de distinguir c
 
    ```
    python herramientas/generar.py
+   python herramientas/auditar.py
    ```
 
 3. Comitear y hacer push. GitHub Pages publica solo.

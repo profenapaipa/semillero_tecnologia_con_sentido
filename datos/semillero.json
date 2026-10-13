@@ -625,7 +625,7 @@
           "url": "https://github.com/profenapaipa/lawebdelaiguana"
         }
       ],
-      "nota": "Es el equipo más adelantado en construcción y el único del semillero con el sitio publicado en internet. Su artículo, en cambio, está en blanco. Los créditos del sitio nombran a Samuel Gómez y Gabriel Giraldo, de décimo B, como quienes lo desarrollaron; Deivyd Vega y Valeria Ordoñez se suman al equipo.",
+      "nota": "Construyen el portal de divulgación de Filosofartec, bajo la identidad de Un Café con la Iguana. Es el equipo más adelantado en construcción y el único del semillero con el sitio publicado en internet; su artículo, en cambio, está en blanco. Los créditos del sitio nombran a Samuel Gómez y Gabriel Giraldo, de décimo B, como quienes lo desarrollaron; Deivyd Vega y Valeria Ordoñez se suman al equipo.",
       "estado": {
         "prop": [
           true,
@@ -2059,27 +2059,125 @@
         "estado": "no aplica",
         "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
       }
+    },
+    {
+      "numero": "12",
+      "slug": "equipo-12",
+      "nombre": "ZocaLab",
+      "linea": "software",
+      "integrantes": "Por definir",
+      "stack": "HTML, CSS y JavaScript, con un servidor local en Python para probarlo",
+      "carpeta": "Zocalab",
+      "enlaces": [],
+      "nota": "Proyecto nuevo: la carpeta en Drive se creó el 13 de octubre y por ahora solo tiene un documento. La aplicación, en cambio, ya existe y está bastante avanzada: ZocaLab, educación ancestral digital, con siete páginas funcionando y una identidad visual muisca propia. Es la aplicación web más fácil de publicar de todo el semillero, porque es estática: no necesita compilarse ni servidor.",
+      "estado": {
+        "prop": [
+          false,
+          "La carpeta de Drive tiene un documento, ZocaLab App, creado el 13 de octubre"
+        ],
+        "acue": [
+          false,
+          "Sin formato de acuerdos del equipo"
+        ],
+        "nece": [
+          false,
+          "Sin formato de necesidades y recursos"
+        ],
+        "ante": [
+          false,
+          "Sin carpeta de antecedentes con fuentes"
+        ],
+        "cron": [
+          false,
+          "Sin cronograma entregado"
+        ],
+        "preg": [
+          false,
+          "Sin Articulo_base.docx en la carpeta"
+        ],
+        "bocg": [
+          true,
+          "assets/ con identidad visual propia: tunjos, tótems, cóndor, árboles y bosque de día y de noche"
+        ],
+        "bocr": [
+          false,
+          "Sin registro escrito del boceto"
+        ],
+        "fich": [
+          false,
+          "Sin ficha técnica"
+        ],
+        "s1": [
+          true,
+          "Carpeta ZocaLab/ con index.html y serve.py; abre con Iniciar ZocaLab.bat"
+        ],
+        "s2": [
+          true,
+          "Siete páginas: inicio, login, perfil, bosque, mi espacio, rutina sol y rutina luna"
+        ],
+        "s3": [
+          true,
+          "Tres hojas propias: muisca.css, style.css y zocalab.css"
+        ],
+        "s4": [
+          true,
+          "Contenido real del proyecto: escenas del bosque, perfiles y rutinas, con sus propios archivos de datos"
+        ],
+        "s5": [
+          false,
+          "No hay repositorio en GitHub: el proyecto vive solo en la carpeta local"
+        ],
+        "s6": [
+          false,
+          "Sin publicar"
+        ],
+        "barr": [
+          false,
+          "Sin hoja de barreras"
+        ],
+        "casi": [
+          false,
+          "Sin casillas marcadas"
+        ],
+        "evid": [
+          true,
+          "Material de trabajo con imágenes y música, y el código completo de la aplicación"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
+      },
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "sin repositorio",
+        "nota": "Es una aplicación web estática: no necesita compilarse ni servidor, así que se puede publicar tal cual. Faltan dos pasos: crear el repositorio en GitHub y mover la carpeta ZocaLab/ a docs/. De todos los proyectos sin publicar, es el que está más cerca."
+      }
     }
   ],
   "hermanos": [
     {
-      "nombre": "Un Café con la Iguana",
-      "que": "Canal de divulgación digital creado por estudiantes para difundir los procesos del colegio: videos, pódcast y documentos. Tiene su propio equipo de medios y un equipo de sonido que trabaja en FL Studio.",
-      "relacion": "Es un espacio de difusión con nombre propio. No es un proyecto técnico del semillero, aunque su sitio lo construye el Equipo 1 y vive en la misma carpeta de Drive.",
+      "nombre": "Filosofartec",
+      "que": "Proyecto transversal del colegio donde se unen Filosofía, Artes y Tecnología. Cada edición tiene una temática distinta; la de 2026 es la Odisea. Su portal de divulgación es La web de la iguana, construida por el Equipo 1 del semillero.",
+      "relacion": "Es un proyecto hermano con nombre propio, no es del semillero. Cuatro subequipos de la línea audiovisual producen contenido también para Filosofartec: 2.1, 2.2, 11.1 y 11.2.",
       "enlaces": [
         {
-          "titulo": "Sitio publicado",
+          "titulo": "Portal de divulgación",
           "url": "https://profenapaipa.github.io/lawebdelaiguana/"
         }
       ]
     },
     {
-      "nombre": "Filosofartec",
-      "que": "Proyecto transversal del colegio donde se unen Filosofía, Artes y Tecnología. Cada edición tiene una temática distinta; la de 2026 es la Odisea.",
-      "relacion": "Es un proyecto hermano con nombre propio, no es del semillero. Cinco subequipos de la línea audiovisual producen contenido también para Filosofartec: 2.1, 2.2, 11.1 y 11.2.",
+      "nombre": "Un Café con la Iguana",
+      "que": "Canal de divulgación digital creado por estudiantes para difundir las voces y las memorias del colegio: videos, pódcast y documentos. Tiene su propio equipo de medios y un equipo de sonido que trabaja en FL Studio.",
+      "relacion": "Es un espacio de difusión con nombre propio, no un proyecto técnico del semillero. Le da la identidad de marca al portal donde se publica Filosofartec.",
       "enlaces": [
         {
-          "titulo": "Banner y concurso en el sitio de la iguana",
+          "titulo": "Ver el canal",
           "url": "https://profenapaipa.github.io/lawebdelaiguana/"
         }
       ]

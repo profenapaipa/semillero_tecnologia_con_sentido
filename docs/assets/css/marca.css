@@ -1,140 +1,196 @@
 /* ===========================================================
-   marca.css — la identidad del Semillero Maker de Tecnología con Sentido
+   marca.css — identidad propia del Semillero Maker de Tecnología con Sentido
    ===========================================================
    ÚNICO archivo donde se definen colores y tipografías.
    El resto de las hojas usa estas variables y nunca un color suelto.
-   Si la identidad cambia, se cambia aquí y cambia en todo el sitio.
 
-   De dónde sale (ver BRIEF.md, sección 5):
+   POR QUÉ ESTA IDENTIDAD NO SE PARECE A LA DE LA IGUANA
+   -----------------------------------------------------
+   La web de la iguana es el portal de divulgación de Filosofartec, y está
+   construida sobre el MANUAL DE MARCA DEL COLEGIO INJUV: de ahí salen su
+   Montserrat, su ámbar #F5B016 y su marino #273C66.
 
-   SE HEREDA de "Un café con la iguana", para que las dos publicaciones
-   se vean de la misma casa:
-     - verde  #2E8150
-     - teal   #257680
-     - ámbar  #F5B016
-     - marino #273C66
-     - Montserrat para el texto corrido
+   El Semillero Maker de Tecnología con Sentido es un proyecto aparte, de
+   Néstor Andrés Paipa, no del colegio. Por eso no hereda la marca
+   institucional: tiene la suya.
 
-   CAMBIA, para que no sea la misma página:
-     - el papel: la iguana trabaja sobre crema y hueso, cálidos.
-       El semillero trabaja sobre un papel frío, gris azulado, de
-       cuaderno técnico. Es el cambio que separa las dos publicaciones.
-     - los títulos: la iguana usa Anton, condensada y de cartel.
-       El semillero usa Archivo en peso alto: más ancha y más seria.
-     - un tercer registro que la iguana no tiene: IBM Plex Mono, para
-       nombres de archivo, rutas, versiones, commits y conteos.
-     - la forma: esquinas de 8px en vez de 14px, sin sombra dura negra.
-       La jerarquía la marcan filetes de 1px y una barra de color a la
-       izquierda de las tarjetas. Más de ficha técnica, menos de afiche.
+   Lo único que se conserva es el PARENTESCO DE FAMILIA cromática, el aire
+   verde azulado, para que las dos publicaciones no se peleen cuando una
+   enlaza a la otra. Los valores son otros y están elegidos aquí.
 
-   REGLA DEL SEMÁFORO: el verde y el ámbar son colores de ESTADO.
-   No se usan de adorno en ningún otro lado. El teal es el color de lo
-   que se puede tocar: enlaces, botones, navegación activa.
+   DIRECCIÓN: "tablero de misiones"
+   --------------------------------
+   El semillero es un taller donde se construye y se mide. La página se lee
+   como un plano técnico que se va completando: panel oscuro con rejilla de
+   plano en las cabeceras, papel frío en el cuerpo de trabajo, y el avance
+   siempre visible como niveles superados y barras de progreso.
 
-   Cada color de estado tiene dos variantes:
-     --x-fill  el color vivo de la marca, para rellenos y puntos
-     --x-texto el mismo color oscurecido, para que el texto tenga
-               contraste suficiente sobre fondo claro
+   Referencia de interacción: las rutas lineales por niveles, tipo Duolingo,
+   enseñan que el estudiante necesita saber EN QUÉ NIVEL VA sin perder la
+   vista del total. Por eso cada página combina las dos cosas: el nivel
+   actual destacado y, al lado, el mapa completo con su avance.
+
+   TIPOGRAFÍA, propia del semillero
+   --------------------------------
+   Bricolage Grotesque para los títulos. Es una grotesca contemporánea de
+   ancho variable, con rasgos inesperados: moderna y curiosa sin dejar de
+   ser seria. No es la del colegio ni la de la iguana.
+
+   Chivo para el texto corrido. Robusta, muy legible en pantalla y con
+   carácter propio; sostiene párrafos largos sin cansar.
+
+   JetBrains Mono para datos. Rutas, versiones, commits y conteos. Es la
+   monoespaciada de un entorno de programación, que es de lo que habla este
+   semillero.
+
+   COLOR
+   -----
+   El cian es la señal de lo que se puede tocar: enlaces, botones,
+   navegación activa.
+   El violeta marca estructura de misión: número de nivel, nodos de la ruta.
+   El verde, el ámbar y el gris son EXCLUSIVAMENTE el semáforo de estado
+   (BRIEF.md 4.2) y no se usan de adorno en ningún otro lugar.
+
+   Cada color de estado tiene tres variantes:
+     --x-fill   el color vivo, para rellenos, puntos y barras
+     --x-texto  oscurecido, para que el texto tenga contraste suficiente
+     --x-tenue  casi transparente, para fondos de pastilla
    =========================================================== */
 
 :root {
-  /* --- Papel y tinta (lo que cambia respecto a la iguana) --- */
-  --papel:       #E8ECEE;
-  --superficie:  #FFFFFF;
-  --superficie2: #F3F6F7;
-  --tinta:       #0F1D21;
-  --tinta-suave: #54686E;
-  --filete:      #CFD9DC;
+  /* --- Papel y tinta --- */
+  --papel:        #EDF1F2;
+  --superficie:   #FFFFFF;
+  --superficie2:  #F4F8F9;
+  --tinta:        #0B1B21;
+  --tinta-suave:  #4D646C;
+  --filete:       #D2DDE0;
+  --filete-sutil: #E3EAEC;
 
-  /* --- Identidad heredada de la iguana --- */
-  --teal:        #1F6670;
-  --teal-vivo:   #257680;
-  --marino:      #223457;
+  /* --- Panel oscuro de las cabeceras, con rejilla de plano --- */
+  --panel:        #0C1D26;
+  --panel-2:      #123241;
+  --sobre-panel:  #E9F3F6;
+  --sobre-panel-suave: #93B1BD;
+  --rejilla:      rgba(255, 255, 255, .07);
+
+  /* --- Acentos propios --- */
+  --cian:        #0E96A6;
+  --cian-vivo:   #12AFC2;
+  --cian-tenue:  #0E96A614;
+  --violeta:     #5A54D6;
+  --violeta-tenue: #5A54D618;
 
   /* --- Semáforo: los tres estados --- */
-  --verde-fill:  #2E8150;
-  --verde-texto: #1E6440;
-  --verde-tenue: #2E815014;
+  --verde-fill:  #1F9D5B;
+  --verde-texto: #157A45;
+  --verde-tenue: #1F9D5B18;
 
-  --ambar-fill:  #F5B016;
-  --ambar-texto: #8A5E02;
-  --ambar-tenue: #F5B01622;
+  --ambar-fill:  #E8A317;
+  --ambar-texto: #8A5E05;
+  --ambar-tenue: #E8A31726;
 
-  --gris-fill:   #8C9CA1;
-  --gris-texto:  #5A6B71;
-  --gris-tenue:  #8C9CA11F;
+  --gris-fill:   #8A9BA2;
+  --gris-texto:  #53676E;
+  --gris-tenue:  #8A9BA220;
 
-  /* --- Tipografías --- */
-  --fuente-titulos: "Archivo", "Segoe UI", system-ui, sans-serif;
-  --fuente-texto:   "Montserrat", "Segoe UI", system-ui, sans-serif;
-  --fuente-datos:   "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  /* --- Tipografías propias del semillero --- */
+  --fuente-titulos: "Bricolage Grotesque", "Archivo", "Segoe UI", system-ui, sans-serif;
+  --fuente-texto:   "Chivo", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --fuente-datos:   "JetBrains Mono", ui-monospace, "Cascadia Mono", monospace;
 
   /* --- Medidas --- */
-  --radio:  8px;
-  --radio-chico: 4px;
-  --ancho: 1100px;
-  --margen: 20px;
+  --radio:       10px;
+  --radio-chico: 6px;
+  --ancho:       1140px;
+  --margen:      20px;
+
+  /* --- Elevación: capas, no filetes sueltos --- */
+  --alzado-1: 0 1px 2px rgba(11, 27, 33, .05), 0 1px 1px rgba(11, 27, 33, .04);
+  --alzado-2: 0 4px 14px rgba(11, 27, 33, .07), 0 1px 3px rgba(11, 27, 33, .05);
+  --alzado-3: 0 14px 34px rgba(11, 27, 33, .12), 0 2px 6px rgba(11, 27, 33, .06);
 
   color-scheme: light;
 }
 
-/* Modo oscuro por preferencia del sistema.
-   El :not([data-theme="light"]) permite que una elección explícita de
-   tema claro gane sobre la preferencia del sistema. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --papel:       #0D1618;
-    --superficie:  #141F22;
-    --superficie2: #1A272B;
-    --tinta:       #E4ECEE;
-    --tinta-suave: #93A6AC;
-    --filete:      #27383D;
+    --papel:        #091317;
+    --superficie:   #101E24;
+    --superficie2:  #15262D;
+    --tinta:        #E5EFF1;
+    --tinta-suave:  #8DA4AC;
+    --filete:       #223740;
+    --filete-sutil: #1A2B32;
 
-    --teal:        #5FC0D0;
-    --teal-vivo:   #4FB3C4;
-    --marino:      #8FA3C9;
+    --panel:        #071319;
+    --panel-2:      #0F2833;
+    --sobre-panel:  #E7F2F5;
+    --sobre-panel-suave: #8EADBA;
+    --rejilla:      rgba(255, 255, 255, .055);
 
-    --verde-fill:  #3FA771;
-    --verde-texto: #5AC68E;
-    --verde-tenue: #3FA77122;
+    --cian:         #45C6D8;
+    --cian-vivo:    #63D8E8;
+    --cian-tenue:   #45C6D81F;
+    --violeta:      #9B96FF;
+    --violeta-tenue:#9B96FF1F;
 
-    --ambar-fill:  #F5B016;
-    --ambar-texto: #EFB63F;
-    --ambar-tenue: #F5B01626;
+    --verde-fill:   #34B872;
+    --verde-texto:  #57D295;
+    --verde-tenue:  #34B87224;
 
-    --gris-fill:   #6B7D83;
-    --gris-texto:  #93A6AC;
-    --gris-tenue:  #6B7D8326;
+    --ambar-fill:   #E8A317;
+    --ambar-texto:  #F0BC49;
+    --ambar-tenue:  #E8A31726;
+
+    --gris-fill:    #627780;
+    --gris-texto:   #8DA4AC;
+    --gris-tenue:   #62778026;
+
+    --alzado-1: 0 1px 2px rgba(0, 0, 0, .4);
+    --alzado-2: 0 4px 14px rgba(0, 0, 0, .45);
+    --alzado-3: 0 14px 34px rgba(0, 0, 0, .55);
 
     color-scheme: dark;
   }
 }
 
-/* La misma paleta oscura, pero por elección explícita, para que un
-   selector de tema gane en los dos sentidos. */
 :root[data-theme="dark"] {
-  --papel:       #0D1618;
-  --superficie:  #141F22;
-  --superficie2: #1A272B;
-  --tinta:       #E4ECEE;
-  --tinta-suave: #93A6AC;
-  --filete:      #27383D;
+  --papel:        #091317;
+  --superficie:   #101E24;
+  --superficie2:  #15262D;
+  --tinta:        #E5EFF1;
+  --tinta-suave:  #8DA4AC;
+  --filete:       #223740;
+  --filete-sutil: #1A2B32;
 
-  --teal:        #5FC0D0;
-  --teal-vivo:   #4FB3C4;
-  --marino:      #8FA3C9;
+  --panel:        #071319;
+  --panel-2:      #0F2833;
+  --sobre-panel:  #E7F2F5;
+  --sobre-panel-suave: #8EADBA;
+  --rejilla:      rgba(255, 255, 255, .055);
 
-  --verde-fill:  #3FA771;
-  --verde-texto: #5AC68E;
-  --verde-tenue: #3FA77122;
+  --cian:         #45C6D8;
+  --cian-vivo:    #63D8E8;
+  --cian-tenue:   #45C6D81F;
+  --violeta:      #9B96FF;
+  --violeta-tenue:#9B96FF1F;
 
-  --ambar-fill:  #F5B016;
-  --ambar-texto: #EFB63F;
-  --ambar-tenue: #F5B01626;
+  --verde-fill:   #34B872;
+  --verde-texto:  #57D295;
+  --verde-tenue:  #34B87224;
 
-  --gris-fill:   #6B7D83;
-  --gris-texto:  #93A6AC;
-  --gris-tenue:  #6B7D8326;
+  --ambar-fill:   #E8A317;
+  --ambar-texto:  #F0BC49;
+  --ambar-tenue:  #E8A31726;
+
+  --gris-fill:    #627780;
+  --gris-texto:   #8DA4AC;
+  --gris-tenue:   #62778026;
+
+  --alzado-1: 0 1px 2px rgba(0, 0, 0, .4);
+  --alzado-2: 0 4px 14px rgba(0, 0, 0, .45);
+  --alzado-3: 0 14px 34px rgba(0, 0, 0, .55);
 
   color-scheme: dark;
 }

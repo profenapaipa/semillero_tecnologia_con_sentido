@@ -1,3 +1,28 @@
+# ===========================================================
+#  .gitignore del PORTAL del semillero
+# ===========================================================
+#  Este repositorio es SOLO el portal: datos, generador y docs/.
+#  Néstor es el único que lo modifica.
+#
+#  Las carpetas de los proyectos de los estudiantes viven aquí al lado
+#  para poder abrirlas desde un mismo sitio, pero NO se versionan aquí:
+#  cada proyecto es su propio repositorio, con su propio historial y sus
+#  propios autores. Ver PROYECTOS.md.
+#
+#  Si se comitearan desde aquí pasarían tres cosas malas:
+#    1. Las que ya tienen .git quedarían como enlaces rotos en GitHub,
+#       con la carpeta vacía y el código perdido.
+#    2. Entrarían unos 50.000 archivos, casi todos de node_modules.
+#    3. Los estudiantes estarían escribiendo en el repositorio del portal.
+# ===========================================================
+
+/App para planeación de inclusión - Camila y Santiago/
+/Diverseña/
+/La web de la iguana/
+/ROULETTE_EnglishDay2026/
+/Wisfox/
+/ZOCALAB CARPETA COMPLETA🤖/
+
 # Windows / macOS
 Thumbs.db
 desktop.ini
@@ -9,9 +34,9 @@ desktop.ini
 # Editor
 .vscode/
 
-# Maquetas de validación, no son parte del sitio
-mockups/
-
 # Python
 __pycache__/
 *.pyc
+
+# Maquetas de validación, no son parte del sitio
+mockups/
