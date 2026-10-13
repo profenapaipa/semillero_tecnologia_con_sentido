@@ -11,3 +11,7 @@ desktop.ini
 
 # Maquetas de validación, no son parte del sitio
 mockups/
+
+# Python
+__pycache__/
+*.pyc
