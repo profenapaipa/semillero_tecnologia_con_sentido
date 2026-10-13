@@ -124,7 +124,25 @@ Queda **anotada como pendiente de decisión de Néstor**, sin implementar.
 
 ## 3. Estado del repositorio al 13 de octubre de 2026
 
-### 3.1 El repositorio del portal todavía no existe
+### 3.0 Resuelto el 13 de octubre: dónde quedó el portal
+
+El portal se publicó en el repositorio `semilleroaulamaker`, que estaba reservado
+y vacío, porque desde la sesión de trabajo no se puede crear un repositorio nuevo:
+no hay `gh` instalado ni token de GitHub, y la API de creación necesita uno.
+
+Néstor pidió renombrarlo a **`semillero_tecnologia_con_sentido`**. El renombre se
+hace en Settings y GitHub deja una redirección desde el nombre viejo, así que ni
+el remoto local ni los enlaces se rompen de inmediato. Después del renombre, el
+remoto local se actualiza con:
+
+```
+git remote set-url origin https://github.com/profenapaipa/semillero_tecnologia_con_sentido.git
+```
+
+Dirección del sitio después del renombre:
+<https://profenapaipa.github.io/semillero_tecnologia_con_sentido/>
+
+### 3.1 Estado del repositorio del portal antes de esta sesión
 
 La carpeta de trabajo `D:\Escritorio old\GIT Tecnología con Sentido` está vacía y
 no es un repositorio git.

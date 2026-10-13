@@ -8,9 +8,22 @@ Catorce subequipos de 9°, 10° y 11° recorren las fases del Design Thinking an
 con el método científico, hasta llegar a un artículo de desarrollo tecnológico.
 Este sitio le muestra a cada equipo el estado real de su proceso.
 
-- **Sitio:** se publica desde `docs/`
+- **Sitio:** <https://profenapaipa.github.io/semillero_tecnologia_con_sentido/>
 - **El encargo:** [BRIEF.md](BRIEF.md)
 - **Decisiones de arquitectura:** [BITACORA_TECNICA.md](BITACORA_TECNICA.md)
+
+## Los proyectos de los equipos
+
+Cada subequipo que tiene repositorio propio queda enlazado desde su página, con
+acceso directo a su versión publicada cuando existe.
+
+| Equipo | Proyecto | Repositorio | Publicado |
+|---|---|---|---|
+| 1 | La web de la iguana | [lawebdelaiguana](https://github.com/profenapaipa/lawebdelaiguana) | [en línea](https://profenapaipa.github.io/lawebdelaiguana/) |
+| 3 | App de planeación inclusiva | [planeacion-inclusiva-piar](https://github.com/profenapaipa/planeacion-inclusiva-piar) | no, repositorio privado y necesita base de datos |
+| 5 | English Roulette | [englishroulette](https://github.com/profenapaipa/englishroulette) | no aplica, es aplicación de escritorio |
+| 6 | Diverseña | [diversena](https://github.com/profenapaipa/diversena) | no, repositorio privado |
+| 7 | Wisfox | todavía sin repositorio | no |
 
 ---
 

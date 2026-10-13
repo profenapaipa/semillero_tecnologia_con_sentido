@@ -14,563 +14,1647 @@
       "Carpeta de Drive montada en local: Proyectos semillero 2026",
       "Repositorios de los equipos en GitHub",
       "Contenido de los .docx y de los documentos de Google, medidos contra la plantilla"
-    ]
+    ],
+    "repo": "https://github.com/profenapaipa/semillero_tecnologia_con_sentido",
+    "sitio": "https://profenapaipa.github.io/semillero_tecnologia_con_sentido/"
   },
-
   "fases": [
-    { "id": "empatizar",  "nombre": "Empatizar",  "paso": "Observación",        "que": "Mirar el problema de cerca: encuestas, entrevistas, mediciones iniciales." },
-    { "id": "definir",    "nombre": "Definir",    "paso": "Plantear hipótesis", "que": "Formular el problema y la pregunta de investigación, con antecedentes que la sostengan." },
-    { "id": "idear",      "nombre": "Idear",      "paso": "Bocetos y selección","que": "Lluvia de ideas, bocetos y elección del concepto que se va a construir." },
-    { "id": "prototipar", "nombre": "Prototipar", "paso": "Experimentación",    "que": "Construir de verdad: código, circuitos, piezas, animación, grabación." },
-    { "id": "testear",    "nombre": "Testear",    "paso": "Análisis de datos",  "que": "Probar, medir qué funciona y qué no, y dejarlo escrito." },
-    { "id": "iterar",     "nombre": "Iterar",     "paso": "Refinar hipótesis",  "que": "Ajustar con lo que mostró la prueba y guardar una versión nueva." },
-    { "id": "comunicar",  "nombre": "Comunicar",  "paso": "Conclusiones",       "que": "Cerrar el artículo de desarrollo tecnológico: metodología, resultados, discusión y conclusiones." }
+    {
+      "id": "empatizar",
+      "nombre": "Empatizar",
+      "paso": "Observación",
+      "que": "Mirar el problema de cerca: encuestas, entrevistas, mediciones iniciales."
+    },
+    {
+      "id": "definir",
+      "nombre": "Definir",
+      "paso": "Plantear hipótesis",
+      "que": "Formular el problema y la pregunta de investigación, con antecedentes que la sostengan."
+    },
+    {
+      "id": "idear",
+      "nombre": "Idear",
+      "paso": "Bocetos y selección",
+      "que": "Lluvia de ideas, bocetos y elección del concepto que se va a construir."
+    },
+    {
+      "id": "prototipar",
+      "nombre": "Prototipar",
+      "paso": "Experimentación",
+      "que": "Construir de verdad: código, circuitos, piezas, animación, grabación."
+    },
+    {
+      "id": "testear",
+      "nombre": "Testear",
+      "paso": "Análisis de datos",
+      "que": "Probar, medir qué funciona y qué no, y dejarlo escrito."
+    },
+    {
+      "id": "iterar",
+      "nombre": "Iterar",
+      "paso": "Refinar hipótesis",
+      "que": "Ajustar con lo que mostró la prueba y guardar una versión nueva."
+    },
+    {
+      "id": "comunicar",
+      "nombre": "Comunicar",
+      "paso": "Conclusiones",
+      "que": "Cerrar el artículo de desarrollo tecnológico: metodología, resultados, discusión y conclusiones."
+    }
   ],
-
   "tareasComunes": {
     "empatizar": [
-      { "id": "prop", "texto": "Propuesta escrita, no solo el archivo creado" },
-      { "id": "acue", "texto": "Acuerdos del equipo diligenciados" },
-      { "id": "nece", "texto": "Necesidades y recursos definidos" }
+      {
+        "id": "prop",
+        "texto": "Propuesta escrita, no solo el archivo creado"
+      },
+      {
+        "id": "acue",
+        "texto": "Acuerdos del equipo diligenciados"
+      },
+      {
+        "id": "nece",
+        "texto": "Necesidades y recursos definidos"
+      }
     ],
     "definir": [
-      { "id": "ante", "texto": "Antecedentes reunidos, con autor y año" },
-      { "id": "cron", "texto": "Cronograma del semestre entregado" },
-      { "id": "preg", "texto": "Pregunta de investigación escrita en el artículo" }
+      {
+        "id": "ante",
+        "texto": "Antecedentes reunidos, con autor y año"
+      },
+      {
+        "id": "cron",
+        "texto": "Cronograma del semestre entregado"
+      },
+      {
+        "id": "preg",
+        "texto": "Pregunta de investigación escrita en el artículo"
+      }
     ],
     "idear": [
-      { "id": "bocg", "texto": "Boceto gráfico o guion del proyecto" },
-      { "id": "bocr", "texto": "Registro escrito del boceto" },
-      { "id": "fich", "texto": "Ficha técnica diligenciada" }
+      {
+        "id": "bocg",
+        "texto": "Boceto gráfico o guion del proyecto"
+      },
+      {
+        "id": "bocr",
+        "texto": "Registro escrito del boceto"
+      },
+      {
+        "id": "fich",
+        "texto": "Ficha técnica diligenciada"
+      }
     ],
     "testear": [
-      { "id": "barr", "texto": "Hoja de barreras diligenciada" },
-      { "id": "casi", "texto": "Casillas de la sesión marcadas" },
-      { "id": "evid", "texto": "Evidencia propia guardada en la carpeta" }
+      {
+        "id": "barr",
+        "texto": "Hoja de barreras diligenciada"
+      },
+      {
+        "id": "casi",
+        "texto": "Casillas de la sesión marcadas"
+      },
+      {
+        "id": "evid",
+        "texto": "Evidencia propia guardada en la carpeta"
+      }
     ],
     "iterar": [
-      { "id": "dect", "texto": "Decisiones técnicas registradas en una bitácora" },
-      { "id": "artv", "texto": "Versión nueva del artículo guardada (_v2)" }
+      {
+        "id": "dect",
+        "texto": "Decisiones técnicas registradas en una bitácora"
+      },
+      {
+        "id": "artv",
+        "texto": "Versión nueva del artículo guardada (_v2)"
+      }
     ],
     "comunicar": [
-      { "id": "a2", "texto": "Metodología, sección 2 del artículo" },
-      { "id": "a3", "texto": "Resultados, secciones 3.1 a 3.5" },
-      { "id": "a4", "texto": "Discusión, sección 4" },
-      { "id": "a5", "texto": "Conclusiones y referencias APA 7, sección 5" }
+      {
+        "id": "a2",
+        "texto": "Metodología, sección 2 del artículo"
+      },
+      {
+        "id": "a3",
+        "texto": "Resultados, secciones 3.1 a 3.5"
+      },
+      {
+        "id": "a4",
+        "texto": "Discusión, sección 4"
+      },
+      {
+        "id": "a5",
+        "texto": "Conclusiones y referencias APA 7, sección 5"
+      }
     ]
   },
-
   "lineas": {
     "software": {
       "nombre": "Desarrollo de software",
       "nota": "Reúne las tres formas que tomó esta línea en el semestre: sitio web, aplicación de escritorio y aplicación web.",
       "hitos": [
-        { "id": "s1", "fase": "prototipar", "nombre": "Proyecto creado y abriendo",
+        {
+          "id": "s1",
+          "fase": "prototipar",
+          "nombre": "Proyecto creado y abriendo",
           "orientacion": "La carpeta del proyecto existe, tiene un archivo de arranque y el proyecto abre sin errores en el computador del equipo.",
-          "recursos": [ { "titulo": "Primeros pasos en la web, MDN en español", "url": "https://developer.mozilla.org/es/docs/Learn_web_development/Getting_started/Your_first_website" } ] },
-        { "id": "s2", "fase": "prototipar", "nombre": "Interfaz que se ve y responde",
+          "recursos": [
+            {
+              "titulo": "Primeros pasos en la web, MDN en español",
+              "url": "https://developer.mozilla.org/es/docs/Learn_web_development/Getting_started/Your_first_website"
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "fase": "prototipar",
+          "nombre": "Interfaz que se ve y responde",
           "orientacion": "Hay pantallas reales, no un archivo en blanco: se ve algo y se puede hacer clic.",
-          "recursos": [ { "titulo": "Estructurar la web con HTML, MDN en español", "url": "https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content" } ] },
-        { "id": "s3", "fase": "prototipar", "nombre": "Estilos propios, no los del navegador",
+          "recursos": [
+            {
+              "titulo": "Estructurar la web con HTML, MDN en español",
+              "url": "https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content"
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "fase": "prototipar",
+          "nombre": "Estilos propios, no los del navegador",
           "orientacion": "El proyecto tiene sus propios colores y tipografías, decididos por el equipo y escritos en un archivo de estilos.",
-          "recursos": [ { "titulo": "Empezar con CSS, MDN en español", "url": "https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Getting_started" } ] },
-        { "id": "s4", "fase": "prototipar", "nombre": "Contenido real, no de relleno",
+          "recursos": [
+            {
+              "titulo": "Empezar con CSS, MDN en español",
+              "url": "https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Getting_started"
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "fase": "prototipar",
+          "nombre": "Contenido real, no de relleno",
           "orientacion": "Los datos que muestra el proyecto son los de verdad del problema que eligieron, no texto de ejemplo.",
-          "recursos": [] },
-        { "id": "s5", "fase": "iterar", "nombre": "Respaldado en GitHub con varios commits",
+          "recursos": []
+        },
+        {
+          "id": "s5",
+          "fase": "iterar",
+          "nombre": "Respaldado en GitHub con varios commits",
           "orientacion": "El proyecto está en GitHub y tiene más de un commit, de fechas distintas. Un solo commit no muestra el proceso.",
           "recursos": [],
-          "porGrabar": "Cómo hacer commit y push desde VS Code cuando ya hay cambios sin guardar, y qué hacer si pide usuario y contraseña." },
-        { "id": "s6", "fase": "comunicar", "nombre": "Publicado o con entregable instalable",
+          "porGrabar": "Cómo hacer commit y push desde VS Code cuando ya hay cambios sin guardar, y qué hacer si pide usuario y contraseña."
+        },
+        {
+          "id": "s6",
+          "fase": "comunicar",
+          "nombre": "Publicado o con entregable instalable",
           "orientacion": "Cualquiera puede abrirlo: publicado en GitHub Pages, o con un ejecutable y sus instrucciones de uso.",
           "recursos": [],
-          "porGrabar": "Cómo activar GitHub Pages desde Settings y por qué el repositorio tiene que ser público con cuenta gratuita." }
+          "porGrabar": "Cómo activar GitHub Pages desde Settings y por qué el repositorio tiene que ser público con cuenta gratuita."
+        }
       ]
     },
-
     "unity": {
       "nombre": "Unity",
       "nota": "Versión acordada para el semestre: Unity 2019.4.38f1. Los tutoriales oficiales más nuevos usan Unity 6, así que los menús pueden no coincidir.",
       "hitos": [
-        { "id": "u1", "fase": "prototipar", "nombre": "Proyecto creado en 2D",
+        {
+          "id": "u1",
+          "fase": "prototipar",
+          "nombre": "Proyecto creado en 2D",
           "orientacion": "El proyecto existe en Unity, en modo 2D, y queda guardado en una carpeta que el equipo sabe encontrar.",
-          "recursos": [ { "titulo": "Unity Essentials, ruta oficial para principiantes", "url": "https://learn.unity.com/pathway/unity-essentials" } ] },
-        { "id": "u2", "fase": "prototipar", "nombre": "Las cinco zonas de la interfaz reconocidas",
+          "recursos": [
+            {
+              "titulo": "Unity Essentials, ruta oficial para principiantes",
+              "url": "https://learn.unity.com/pathway/unity-essentials"
+            }
+          ]
+        },
+        {
+          "id": "u2",
+          "fase": "prototipar",
+          "nombre": "Las cinco zonas de la interfaz reconocidas",
           "orientacion": "El equipo sabe para qué sirve cada zona del editor y puede nombrarlas sin ayuda.",
           "recursos": [],
-          "yaEntregado": "Tutorial de diseño de interfaz, entregado por el docente antes del 13 de octubre." },
-        { "id": "u3", "fase": "prototipar", "nombre": "Canvas con título y dos o más botones",
+          "yaEntregado": "Tutorial de diseño de interfaz, entregado por el docente antes del 13 de octubre."
+        },
+        {
+          "id": "u3",
+          "fase": "prototipar",
+          "nombre": "Canvas con título y dos o más botones",
           "orientacion": "Hay un menú que se ve al ejecutar, con el nombre del juego y botones que llevan a alguna parte.",
-          "recursos": [ { "titulo": "Crear un juego 2D básico, unidad oficial", "url": "https://learn.unity.com/pathway/game-development/unit/create-a-basic-2d-game" } ] },
-        { "id": "u4", "fase": "prototipar", "nombre": "La dinámica principal del juego funcionando",
+          "recursos": [
+            {
+              "titulo": "Crear un juego 2D básico, unidad oficial",
+              "url": "https://learn.unity.com/pathway/game-development/unit/create-a-basic-2d-game"
+            }
+          ]
+        },
+        {
+          "id": "u4",
+          "fase": "prototipar",
+          "nombre": "La dinámica principal del juego funcionando",
           "orientacion": "Esto es el corazón del proyecto: lo que el jugador hace una y otra vez. Sin esto no hay juego, hay menú. Es el hito que tiene frenados a los equipos de Unity.",
           "recursos": [
-            { "titulo": "Llevar el puntaje al hacer clic en objetivos, lección oficial", "url": "https://learn.unity.com/pathway/junior-programmer/unit/user-interface/tutorial/67520c50edbc2a0071aaa9f0?version=6" },
-            { "titulo": "Arrastrar y soltar, módulo oficial de 2019", "url": "https://learn.unity.com/tutorial/drag-and-drop" }
+            {
+              "titulo": "Llevar el puntaje al hacer clic en objetivos, lección oficial",
+              "url": "https://learn.unity.com/pathway/junior-programmer/unit/user-interface/tutorial/67520c50edbc2a0071aaa9f0?version=6"
+            },
+            {
+              "titulo": "Arrastrar y soltar, módulo oficial de 2019",
+              "url": "https://learn.unity.com/tutorial/drag-and-drop"
+            }
           ],
-          "porGrabar": "La dinámica concreta de cada juego, paso a paso en Unity 2019.4. Ver la nota del equipo: no es la misma para el videojuego de motricidad que para el minijuego de coordinación." },
-        { "id": "u5", "fase": "testear", "nombre": "Puntaje o temporizador en pantalla",
+          "porGrabar": "La dinámica concreta de cada juego, paso a paso en Unity 2019.4. Ver la nota del equipo: no es la misma para el videojuego de motricidad que para el minijuego de coordinación."
+        },
+        {
+          "id": "u5",
+          "fase": "testear",
+          "nombre": "Puntaje o temporizador en pantalla",
           "orientacion": "El juego mide algo y lo muestra: aciertos, tiempo, intentos. Sin esto no hay datos que analizar en la fase de Testear.",
           "recursos": [
-            { "titulo": "Agregar un sistema de puntaje, lección oficial", "url": "https://learn.unity.com/pathway/game-development/unit/create-a-basic-2d-game/tutorial/add-a-scoring-system" },
-            { "titulo": "Time y deltaTime, para que el tiempo no dependa del computador", "url": "https://learn.unity.com/course/beginner-scripting/tutorial/delta-time" }
-          ] },
-        { "id": "u6", "fase": "iterar", "nombre": "Segunda versión después de probarlo con alguien",
+            {
+              "titulo": "Agregar un sistema de puntaje, lección oficial",
+              "url": "https://learn.unity.com/pathway/game-development/unit/create-a-basic-2d-game/tutorial/add-a-scoring-system"
+            },
+            {
+              "titulo": "Time y deltaTime, para que el tiempo no dependa del computador",
+              "url": "https://learn.unity.com/course/beginner-scripting/tutorial/delta-time"
+            }
+          ]
+        },
+        {
+          "id": "u6",
+          "fase": "iterar",
+          "nombre": "Segunda versión después de probarlo con alguien",
           "orientacion": "Alguien que no sea del equipo lo juega, se anota qué no entendió, y se ajusta. Eso es iterar.",
-          "recursos": [] },
-        { "id": "u7", "fase": "comunicar", "nombre": "Build jugable exportado",
+          "recursos": []
+        },
+        {
+          "id": "u7",
+          "fase": "comunicar",
+          "nombre": "Build jugable exportado",
           "orientacion": "Un ejecutable que abre en otro computador sin tener Unity instalado, o un build WebGL para publicar en la web.",
           "recursos": [],
-          "porGrabar": "Cómo exportar un build en Unity 2019.4, qué carpeta hay que entregar completa, y cómo sacar un WebGL para publicarlo." }
+          "porGrabar": "Cómo exportar un build en Unity 2019.4, qué carpeta hay que entregar completa, y cómo sacar un WebGL para publicarlo."
+        }
       ]
     },
-
     "electronica": {
       "nombre": "Electrónica y robótica",
       "nota": "Arduino, impresora 3D y cortadora láser.",
       "hitos": [
-        { "id": "e1", "fase": "prototipar", "nombre": "Componentes identificados",
+        {
+          "id": "e1",
+          "fase": "prototipar",
+          "nombre": "Componentes identificados",
           "orientacion": "La lista de componentes está escrita con su referencia exacta, no con el nombre genérico.",
-          "recursos": [] },
-        { "id": "e2", "fase": "prototipar", "nombre": "Circuito dibujado",
+          "recursos": []
+        },
+        {
+          "id": "e2",
+          "fase": "prototipar",
+          "nombre": "Circuito dibujado",
           "orientacion": "Hay un dibujo del circuito, aunque sea a mano y escaneado. Sirve para no volver a armarlo de memoria.",
-          "recursos": [] },
-        { "id": "e3", "fase": "prototipar", "nombre": "Pines mapeados",
+          "recursos": []
+        },
+        {
+          "id": "e3",
+          "fase": "prototipar",
+          "nombre": "Pines mapeados",
           "orientacion": "Está escrito qué pin del Arduino va a qué componente. Es la tabla que salva el proyecto cuando algo deja de responder.",
-          "recursos": [ { "titulo": "Control básico de servo, documentación oficial de Arduino", "url": "https://docs.arduino.cc/tutorials/generic/basic-servo-control/" } ] },
-        { "id": "e4", "fase": "prototipar", "nombre": "Un componente respondiendo",
+          "recursos": [
+            {
+              "titulo": "Control básico de servo, documentación oficial de Arduino",
+              "url": "https://docs.arduino.cc/tutorials/generic/basic-servo-control/"
+            }
+          ]
+        },
+        {
+          "id": "e4",
+          "fase": "prototipar",
+          "nombre": "Un componente respondiendo",
           "orientacion": "Al menos un componente se mueve, enciende o mide cuando se le da la orden. Uno solo ya cuenta.",
-          "recursos": [ { "titulo": "Fundamentos de motores servo con Arduino", "url": "https://docs.arduino.cc/learn/electronics/servo-motors/" } ] },
-        { "id": "e5", "fase": "prototipar", "nombre": "Alimentación resuelta",
+          "recursos": [
+            {
+              "titulo": "Fundamentos de motores servo con Arduino",
+              "url": "https://docs.arduino.cc/learn/electronics/servo-motors/"
+            }
+          ]
+        },
+        {
+          "id": "e5",
+          "fase": "prototipar",
+          "nombre": "Alimentación resuelta",
           "orientacion": "Está decidido de dónde sale la corriente y alcanza para todo el montaje. Los servos no se alimentan desde la placa.",
-          "recursos": [ { "titulo": "Fundamentos de motores servo, apartado de alimentación", "url": "https://docs.arduino.cc/learn/electronics/servo-motors/" } ] },
-        { "id": "e6", "fase": "testear", "nombre": "Código que compila y sube a la placa",
+          "recursos": [
+            {
+              "titulo": "Fundamentos de motores servo, apartado de alimentación",
+              "url": "https://docs.arduino.cc/learn/electronics/servo-motors/"
+            }
+          ]
+        },
+        {
+          "id": "e6",
+          "fase": "testear",
+          "nombre": "Código que compila y sube a la placa",
           "orientacion": "El programa compila sin errores y queda cargado en el Arduino. Guarden el archivo .ino en la carpeta del equipo.",
           "recursos": [],
-          "porGrabar": "Qué hacer cuando el IDE de Arduino no encuentra el puerto, y cómo guardar el .ino en la carpeta de Drive del equipo." },
-        { "id": "e7", "fase": "comunicar", "nombre": "Montaje completo grabado en video",
+          "porGrabar": "Qué hacer cuando el IDE de Arduino no encuentra el puerto, y cómo guardar el .ino en la carpeta de Drive del equipo."
+        },
+        {
+          "id": "e7",
+          "fase": "comunicar",
+          "nombre": "Montaje completo grabado en video",
           "orientacion": "Un video corto del montaje funcionando. Para electrónica, ese video es el resultado que se documenta en el artículo.",
-          "recursos": [] }
+          "recursos": []
+        }
       ]
     },
-
     "audiovisual": {
       "nombre": "Producción audiovisual",
       "nota": "CapCut, DaVinci Resolve y celular. Varios de estos equipos producen además para Filosofartec.",
       "hitos": [
-        { "id": "v1", "fase": "idear", "nombre": "Guion literario",
+        {
+          "id": "v1",
+          "fase": "idear",
+          "nombre": "Guion literario",
           "orientacion": "Qué se cuenta, en orden, escrito como texto corrido. Sin esto no se puede grabar nada.",
-          "recursos": [] },
-        { "id": "v2", "fase": "prototipar", "nombre": "Guion técnico",
+          "recursos": []
+        },
+        {
+          "id": "v2",
+          "fase": "prototipar",
+          "nombre": "Guion técnico",
           "orientacion": "Plano por plano: qué se ve, desde dónde, cuánto dura y qué se oye.",
           "recursos": [],
-          "porGrabar": "Cómo pasar del guion literario al guion técnico usando el formato que ya está en la carpeta, con un ejemplo de tres planos." },
-        { "id": "v3", "fase": "prototipar", "nombre": "Lugar y plan de rodaje definidos",
+          "porGrabar": "Cómo pasar del guion literario al guion técnico usando el formato que ya está en la carpeta, con un ejemplo de tres planos."
+        },
+        {
+          "id": "v3",
+          "fase": "prototipar",
+          "nombre": "Lugar y plan de rodaje definidos",
           "orientacion": "Dónde se graba, qué día, quién lleva qué. Un plan de una página alcanza.",
-          "recursos": [] },
-        { "id": "v4", "fase": "prototipar", "nombre": "Plano de prueba grabado",
+          "recursos": []
+        },
+        {
+          "id": "v4",
+          "fase": "prototipar",
+          "nombre": "Plano de prueba grabado",
           "orientacion": "Un plano cualquiera, grabado de verdad, para ver cómo queda la luz y el sonido antes del rodaje completo.",
-          "recursos": [] },
-        { "id": "v5", "fase": "testear", "nombre": "Audio revisado con audífonos",
+          "recursos": []
+        },
+        {
+          "id": "v5",
+          "fase": "testear",
+          "nombre": "Audio revisado con audífonos",
           "orientacion": "Se escucha el material con audífonos y se anota dónde hay ruido, dónde no se entiende y qué hay que regrabar.",
           "recursos": [],
-          "porGrabar": "Cómo limpiar ruido de fondo en CapCut y en DaVinci Resolve, y cuándo conviene regrabar en vez de arreglar." },
-        { "id": "v6", "fase": "iterar", "nombre": "Corte de edición revisado",
+          "porGrabar": "Cómo limpiar ruido de fondo en CapCut y en DaVinci Resolve, y cuándo conviene regrabar en vez de arreglar."
+        },
+        {
+          "id": "v6",
+          "fase": "iterar",
+          "nombre": "Corte de edición revisado",
           "orientacion": "Una versión editada completa, vista por alguien de fuera, con los ajustes anotados.",
-          "recursos": [] },
-        { "id": "v7", "fase": "comunicar", "nombre": "Exportado final entregado",
+          "recursos": []
+        },
+        {
+          "id": "v7",
+          "fase": "comunicar",
+          "nombre": "Exportado final entregado",
           "orientacion": "El archivo final exportado y guardado en la carpeta del equipo, con el nombre del proyecto.",
           "recursos": [],
-          "porGrabar": "Con qué ajustes exportar para que el video se vea bien y no pese de más, y dónde guardarlo." }
+          "porGrabar": "Con qué ajustes exportar para que el video se vea bien y no pese de más, y dónde guardarlo."
+        }
       ]
     }
   },
-
   "articulo": [
-    { "id": "res", "titulo": "Resumen", "cuando": "De último, en octubre", "palabras": "150 palabras",
+    {
+      "id": "res",
+      "titulo": "Resumen",
+      "cuando": "De último, en octubre",
+      "palabras": "150 palabras",
       "deDonde": "Todo lo demás, ya escrito",
-      "faltan": ["El problema en una frase", "Qué construyeron", "Con qué lo construyeron", "En qué estado quedó", "Qué aprendieron"] },
-    { "id": "tit", "titulo": "Título, autores y grado", "cuando": "Ya se puede llenar", "palabras": "máximo 20 palabras",
+      "faltan": [
+        "El problema en una frase",
+        "Qué construyeron",
+        "Con qué lo construyeron",
+        "En qué estado quedó",
+        "Qué aprendieron"
+      ]
+    },
+    {
+      "id": "tit",
+      "titulo": "Título, autores y grado",
+      "cuando": "Ya se puede llenar",
+      "palabras": "máximo 20 palabras",
       "deDonde": "Ficha técnica y propuesta",
-      "faltan": ["Qué construyen, para quién y dónde", "Nombres completos de los integrantes", "El grado de cada uno"] },
-    { "id": "1.1", "titulo": "1.1 El problema", "cuando": "Ya, viene de julio", "palabras": "80 a 120 palabras",
+      "faltan": [
+        "Qué construyen, para quién y dónde",
+        "Nombres completos de los integrantes",
+        "El grado de cada uno"
+      ]
+    },
+    {
+      "id": "1.1",
+      "titulo": "1.1 El problema",
+      "cuando": "Ya, viene de julio",
+      "palabras": "80 a 120 palabras",
       "deDonde": "Propuesta del 29 y 30 de julio",
-      "faltan": ["Qué situación observaron", "Dónde la observaron", "A quién le pasa", "Qué evidencia tienen, con un número si se puede"] },
-    { "id": "1.2", "titulo": "1.2 Qué se ha hecho antes", "cuando": "Ya, viene de la matriz", "palabras": "100 a 150 palabras",
+      "faltan": [
+        "Qué situación observaron",
+        "Dónde la observaron",
+        "A quién le pasa",
+        "Qué evidencia tienen, con un número si se puede"
+      ]
+    },
+    {
+      "id": "1.2",
+      "titulo": "1.2 Qué se ha hecho antes",
+      "cuando": "Ya, viene de la matriz",
+      "palabras": "100 a 150 palabras",
       "deDonde": "Matriz de antecedentes, columna de idea principal",
-      "faltan": ["Mínimo tres autores con su año", "La idea principal de cada uno", "Qué quedó sin resolver en esos estudios"] },
-    { "id": "1.3", "titulo": "1.3 Pregunta y propósito", "cuando": "Ya, viene de julio", "palabras": "3 o 4 líneas",
+      "faltan": [
+        "Mínimo tres autores con su año",
+        "La idea principal de cada uno",
+        "Qué quedó sin resolver en esos estudios"
+      ]
+    },
+    {
+      "id": "1.3",
+      "titulo": "1.3 Pregunta y propósito",
+      "cuando": "Ya, viene de julio",
+      "palabras": "3 o 4 líneas",
       "deDonde": "Propuesta del 29 y 30 de julio",
-      "faltan": ["La pregunta de investigación, escrita como pregunta", "Qué se propusieron construir para responderla"] },
-    { "id": "2", "titulo": "2 Metodología, tabla de fases", "cuando": "Se completa a medida que avanzan", "palabras": "una o dos frases por fase",
+      "faltan": [
+        "La pregunta de investigación, escrita como pregunta",
+        "Qué se propusieron construir para responderla"
+      ]
+    },
+    {
+      "id": "2",
+      "titulo": "2 Metodología, tabla de fases",
+      "cuando": "Se completa a medida que avanzan",
+      "palabras": "una o dos frases por fase",
       "deDonde": "La bitácora y los bocetos de cada sesión",
-      "faltan": ["Qué hicieron en cada fase", "Qué produjo cada fase, con el archivo que lo demuestra"] },
-    { "id": "2.1", "titulo": "2.1 Metodología en párrafo", "cuando": "Después de llenar la tabla", "palabras": "150 a 250 palabras",
+      "faltan": [
+        "Qué hicieron en cada fase",
+        "Qué produjo cada fase, con el archivo que lo demuestra"
+      ]
+    },
+    {
+      "id": "2.1",
+      "titulo": "2.1 Metodología en párrafo",
+      "cuando": "Después de llenar la tabla",
+      "palabras": "150 a 250 palabras",
       "deDonde": "La tabla de arriba, convertida en texto seguido",
-      "faltan": ["La tabla de la sección 2, ya diligenciada"] },
-    { "id": "3.1", "titulo": "3.1 Qué debe hacer la solución", "cuando": "Ya, viene de la ficha técnica", "palabras": "lista de 3",
+      "faltan": [
+        "La tabla de la sección 2, ya diligenciada"
+      ]
+    },
+    {
+      "id": "3.1",
+      "titulo": "3.1 Qué debe hacer la solución",
+      "cuando": "Ya, viene de la ficha técnica",
+      "palabras": "lista de 3",
       "deDonde": "Ficha técnica, paso 2",
-      "faltan": ["Las tres acciones que la solución debe hacer", "Cómo se comprueba cada una"] },
-    { "id": "3.2", "titulo": "3.2 Con qué se construyó", "cuando": "Ya, viene de la ficha técnica", "palabras": "lista corta",
+      "faltan": [
+        "Las tres acciones que la solución debe hacer",
+        "Cómo se comprueba cada una"
+      ]
+    },
+    {
+      "id": "3.2",
+      "titulo": "3.2 Con qué se construyó",
+      "cuando": "Ya, viene de la ficha técnica",
+      "palabras": "lista corta",
       "deDonde": "Ficha técnica, paso 3",
-      "faltan": ["Programas con su versión exacta", "Materiales con su referencia exacta"] },
-    { "id": "3.3", "titulo": "3.3 Cómo funciona", "cuando": "Ya, viene de la ficha técnica", "palabras": "3 o 4 líneas",
+      "faltan": [
+        "Programas con su versión exacta",
+        "Materiales con su referencia exacta"
+      ]
+    },
+    {
+      "id": "3.3",
+      "titulo": "3.3 Cómo funciona",
+      "cuando": "Ya, viene de la ficha técnica",
+      "palabras": "3 o 4 líneas",
       "deDonde": "Ficha técnica, paso 4",
-      "faltan": ["Qué entra", "Qué hace con eso", "Qué sale"] },
-    { "id": "3.4", "titulo": "3.4 Qué funciona hoy y qué no", "cuando": "Se actualiza cada semana", "palabras": "80 a 120 palabras",
+      "faltan": [
+        "Qué entra",
+        "Qué hace con eso",
+        "Qué sale"
+      ]
+    },
+    {
+      "id": "3.4",
+      "titulo": "3.4 Qué funciona hoy y qué no",
+      "cuando": "Se actualiza cada semana",
+      "palabras": "80 a 120 palabras",
       "deDonde": "El proyecto mismo, al día de hoy",
-      "faltan": ["Qué parte ya opera", "Qué parte quedó a medias", "Qué no se alcanzó, dicho sin adornos"] },
-    { "id": "3.5", "titulo": "3.5 Decisiones técnicas", "cuando": "Se agrega cuando tomen una", "palabras": "2 o 3",
+      "faltan": [
+        "Qué parte ya opera",
+        "Qué parte quedó a medias",
+        "Qué no se alcanzó, dicho sin adornos"
+      ]
+    },
+    {
+      "id": "3.5",
+      "titulo": "3.5 Decisiones técnicas",
+      "cuando": "Se agrega cuando tomen una",
+      "palabras": "2 o 3",
       "deDonde": "Bitácora y control de versiones",
-      "faltan": ["Dos o tres momentos en que eligieron entre dos caminos", "Por qué eligieron ese y no el otro"] },
-    { "id": "4", "titulo": "4 Discusión: aprendizajes y limitaciones", "cuando": "Octubre", "palabras": "100 a 150 palabras",
+      "faltan": [
+        "Dos o tres momentos en que eligieron entre dos caminos",
+        "Por qué eligieron ese y no el otro"
+      ]
+    },
+    {
+      "id": "4",
+      "titulo": "4 Discusión: aprendizajes y limitaciones",
+      "cuando": "Octubre",
+      "palabras": "100 a 150 palabras",
       "deDonde": "Nuevo, lo escriben ustedes",
-      "faltan": ["Qué saben hacer hoy que no sabían en julio", "Qué los frenó: tiempo, materiales o conocimiento", "Cómo se compara con lo que decían los antecedentes"] },
-    { "id": "5.1", "titulo": "5.1 Conclusiones", "cuando": "Octubre", "palabras": "60 a 100 palabras",
+      "faltan": [
+        "Qué saben hacer hoy que no sabían en julio",
+        "Qué los frenó: tiempo, materiales o conocimiento",
+        "Cómo se compara con lo que decían los antecedentes"
+      ]
+    },
+    {
+      "id": "5.1",
+      "titulo": "5.1 Conclusiones",
+      "cuando": "Octubre",
+      "palabras": "60 a 100 palabras",
       "deDonde": "Nuevo",
-      "faltan": ["En qué estado quedó el desarrollo", "Qué seguiría si continuara el próximo año"] },
-    { "id": "5.2", "titulo": "5.2 Referencias en APA 7", "cuando": "Ya, viene de la matriz", "palabras": "mínimo 5",
+      "faltan": [
+        "En qué estado quedó el desarrollo",
+        "Qué seguiría si continuara el próximo año"
+      ]
+    },
+    {
+      "id": "5.2",
+      "titulo": "5.2 Referencias en APA 7",
+      "cuando": "Ya, viene de la matriz",
+      "palabras": "mínimo 5",
       "deDonde": "Matriz de antecedentes",
-      "faltan": ["Mínimo cinco referencias en orden alfabético", "Apellido, inicial, año, título, revista, volumen, páginas y DOI"] }
+      "faltan": [
+        "Mínimo cinco referencias en orden alfabético",
+        "Apellido, inicial, año, título, revista, volumen, páginas y DOI"
+      ]
+    }
   ],
-
   "equipos": [
     {
-      "numero": "1", "slug": "equipo-1", "nombre": "La web de la iguana", "linea": "software",
-      "integrantes": "Gabriel Giraldo y Samuel Gómez",
+      "numero": "1",
+      "slug": "equipo-1",
+      "nombre": "La web de la iguana",
+      "linea": "software",
+      "integrantes": "Deivyd Vega, Valeria Ordoñez, Samuel Alejandro Gómez Gordillo y Gabriel Leonardo Giraldo Collazos",
       "stack": "HTML, CSS y JavaScript, con los datos en archivos JSON",
       "carpeta": "Equipo 1_[la web de la iguana]_2026-II",
       "enlaces": [
-        { "titulo": "Sitio publicado", "url": "https://profenapaipa.github.io/lawebdelaiguana/" },
-        { "titulo": "Repositorio", "url": "https://github.com/profenapaipa/lawebdelaiguana" }
+        {
+          "titulo": "Sitio publicado",
+          "url": "https://profenapaipa.github.io/lawebdelaiguana/"
+        },
+        {
+          "titulo": "Repositorio",
+          "url": "https://github.com/profenapaipa/lawebdelaiguana"
+        }
       ],
-      "nota": "Es el equipo más adelantado en construcción y el único con el sitio publicado en internet. Su artículo, en cambio, está en blanco.",
+      "nota": "Es el equipo más adelantado en construcción y el único del semillero con el sitio publicado en internet. Su artículo, en cambio, está en blanco. Los créditos del sitio nombran a Samuel Gómez y Gabriel Giraldo, de décimo B, como quienes lo desarrollaron; Deivyd Vega y Valeria Ordoñez se suman al equipo.",
       "estado": {
-        "prop": [true,  "Propuesta_borrador_v0: las cinco preguntas respondidas, el problema redactado y tres preguntas de investigación"],
-        "acue": [true,  "Formato2_Acuerdos_equipo.docx, 308 caracteres propios sobre la plantilla"],
-        "nece": [true,  "Formato1_Necesidades, 1.435 caracteres propios sobre la plantilla"],
-        "ante": [true,  "01_Antecedentes: cinco artículos en PDF"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx: la sección 1.3 sigue con el texto de la plantilla, aunque la pregunta ya está escrita en la propuesta"],
-        "bocg": [true,  "04_Desarrollo/2026-08-12_bocetos.jpg"],
-        "bocr": [false, "Bocetos_Equipo1.docx: 21 caracteres sobre la plantilla, está en blanco"],
-        "fich": [false, "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"],
-        "s1": [true,  "Repositorio con estructura docs/ e investigacion/ separadas"],
-        "s2": [true,  "Siete páginas: portada, videos, podcasts, documentos, foro, nosotros y 404"],
-        "s3": [true,  "docs/assets/css: siete hojas propias, con la marca en un solo archivo"],
-        "s4": [true,  "Siete videos reales del canal, cargados desde datos/videos.json"],
-        "s5": [true,  "Seis commits entre el 17 de septiembre y el 1 de octubre"],
-        "s6": [true,  "Publicado en GitHub Pages y abierto a cualquiera con el enlace"],
-        "barr": [false, "Barreras.docx idéntica a la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada desde el 26 de agosto"],
-        "evid": [true,  "investigacion/05_Evidencias: avances del 10 y del 17 de septiembre"],
-        "dect": [true,  "BITACORA.md con decisiones técnicas y bloqueos, sección 2"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          true,
+          "Propuesta_borrador_v0: las cinco preguntas respondidas, el problema redactado y tres preguntas de investigación"
+        ],
+        "acue": [
+          true,
+          "Formato2_Acuerdos_equipo.docx, 308 caracteres propios sobre la plantilla"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades, 1.435 caracteres propios sobre la plantilla"
+        ],
+        "ante": [
+          true,
+          "01_Antecedentes: cinco artículos en PDF"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx: la sección 1.3 sigue con el texto de la plantilla, aunque la pregunta ya está escrita en la propuesta"
+        ],
+        "bocg": [
+          true,
+          "04_Desarrollo/2026-08-12_bocetos.jpg"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_Equipo1.docx: 21 caracteres sobre la plantilla, está en blanco"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+        ],
+        "s1": [
+          true,
+          "Repositorio con estructura docs/ e investigacion/ separadas"
+        ],
+        "s2": [
+          true,
+          "Siete páginas: portada, videos, podcasts, documentos, foro, nosotros y 404"
+        ],
+        "s3": [
+          true,
+          "docs/assets/css: siete hojas propias, con la marca en un solo archivo"
+        ],
+        "s4": [
+          true,
+          "Siete videos reales del canal, cargados desde datos/videos.json"
+        ],
+        "s5": [
+          true,
+          "Seis commits entre el 17 de septiembre y el 1 de octubre"
+        ],
+        "s6": [
+          true,
+          "Publicado en GitHub Pages y abierto a cualquiera con el enlace"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx idéntica a la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada desde el 26 de agosto"
+        ],
+        "evid": [
+          true,
+          "investigacion/05_Evidencias: avances del 10 y del 17 de septiembre"
+        ],
+        "dect": [
+          true,
+          "BITACORA.md con decisiones técnicas y bloqueos, sección 2"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": { "1.1": false, "1.2": false, "1.3": false, "tit": false }
+      "articuloEstado": {
+        "1.1": false,
+        "1.2": false,
+        "1.3": false,
+        "tit": false
+      },
+      "publicacion": {
+        "estado": "en linea",
+        "url": "https://profenapaipa.github.io/lawebdelaiguana/",
+        "repo": "https://github.com/profenapaipa/lawebdelaiguana",
+        "nota": "Publicado en GitHub Pages desde la rama main, carpeta /docs. Es el único proyecto del semillero que hoy cualquiera puede abrir desde internet."
+      }
     },
-
     {
-      "numero": "2.1", "slug": "equipo-2-1", "nombre": "Animación para el Filosofartec", "linea": "audiovisual",
+      "numero": "2.1",
+      "slug": "equipo-2-1",
+      "nombre": "Animación para el Filosofartec",
+      "linea": "audiovisual",
       "integrantes": "Deivid y Valeria",
       "stack": "Animación, pendiente de confirmar la herramienta",
       "carpeta": "Equipo 2_Animación para el Filosofartec / Equipo 2.1",
       "enlaces": [],
       "nota": "Produce también para Filosofartec. La propuesta tiene los campos vacíos y un enlace a un tutorial de Unity, que no corresponde a esta línea.",
       "estado": {
-        "prop": [false, "Propuesta Deivyd y Valeria: nombres y correos vacíos, solo un enlace a un tutorial de Unity"],
-        "acue": [false, "Formato2_Acuerdos idéntico a la plantilla"],
-        "nece": [true,  "Formato1_Necesidades, 154 caracteres propios sobre la plantilla"],
-        "ante": [false, "No hay carpeta de antecedentes con fuentes"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx idéntico a la plantilla"],
-        "bocg": [false, "No hay imagen de boceto ni guion en la carpeta"],
-        "bocr": [true,  "Bocetos_registro.docx, 305 caracteres propios sobre la plantilla"],
-        "fich": [false, "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"],
-        "v1": [false, "No hay guion literario en la carpeta"],
-        "v2": [false, "Guiones_audiovisual.xlsx entregado, sin verificar contenido"],
-        "v3": [false, "No hay plan de rodaje"],
-        "v4": [false, "No hay material grabado en la carpeta"],
-        "v5": [false, "Sin registro de revisión de audio"],
-        "v6": [false, "No hay corte de edición"],
-        "v7": [false, "No hay exportado final"],
-        "barr": [false, "Barreras.docx idéntica a la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [true,  "AI códigos.gdoc, del 23 de septiembre"],
-        "dect": [false, "Sin bitácora de decisiones"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          false,
+          "Propuesta Deivyd y Valeria: nombres y correos vacíos, solo un enlace a un tutorial de Unity"
+        ],
+        "acue": [
+          false,
+          "Formato2_Acuerdos idéntico a la plantilla"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades, 154 caracteres propios sobre la plantilla"
+        ],
+        "ante": [
+          false,
+          "No hay carpeta de antecedentes con fuentes"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx idéntico a la plantilla"
+        ],
+        "bocg": [
+          false,
+          "No hay imagen de boceto ni guion en la carpeta"
+        ],
+        "bocr": [
+          true,
+          "Bocetos_registro.docx, 305 caracteres propios sobre la plantilla"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+        ],
+        "v1": [
+          false,
+          "No hay guion literario en la carpeta"
+        ],
+        "v2": [
+          false,
+          "Guiones_audiovisual.xlsx entregado, sin verificar contenido"
+        ],
+        "v3": [
+          false,
+          "No hay plan de rodaje"
+        ],
+        "v4": [
+          false,
+          "No hay material grabado en la carpeta"
+        ],
+        "v5": [
+          false,
+          "Sin registro de revisión de audio"
+        ],
+        "v6": [
+          false,
+          "No hay corte de edición"
+        ],
+        "v7": [
+          false,
+          "No hay exportado final"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx idéntica a la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          true,
+          "AI códigos.gdoc, del 23 de septiembre"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "no aplica",
+        "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      }
     },
-
     {
-      "numero": "2.2", "slug": "equipo-2-2", "nombre": "MictoMotion, animación para el Filosofartec", "linea": "audiovisual",
+      "numero": "2.2",
+      "slug": "equipo-2-2",
+      "nombre": "MictoMotion, animación para el Filosofartec",
+      "linea": "audiovisual",
       "integrantes": "Emily",
       "stack": "Animación 3D, archivos .abc y .mtl",
       "carpeta": "Equipo 2_Animación para el Filosofartec / Equipo[2.2]_[MictoMotion]",
       "enlaces": [],
       "nota": "Tiene la carpeta mejor organizada de la línea audiovisual, con las siete subcarpetas del proceso, y archivos de animación reales. Falta el guion.",
       "estado": {
-        "prop": [false, "Propuesta_borrador_v0: 1.029 bytes, es la plantilla sin responder"],
-        "acue": [false, "Formato2_Acuerdos idéntico a la plantilla"],
-        "nece": [true,  "Formato1_Necesidades, 1.476 caracteres propios sobre la plantilla"],
-        "ante": [false, "Carpeta 01_Antecedentes creada pero vacía"],
-        "cron": [true,  "Cronograma_tareas_Equipo03.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx: solo cambió el título"],
-        "bocg": [true,  "04_Desarrollo/2026-08-12_bocetos.jpg"],
-        "bocr": [false, "Bocetos_registro.docx, 12 caracteres sobre la plantilla"],
-        "fich": [false, "FFicha_tecnica idéntica a la plantilla, aunque hay un Ficha_proyecto.docx aparte"],
-        "v1": [false, "No hay guion literario"],
-        "v2": [false, "Guiones_audiovisual.xlsx entregado, sin verificar contenido"],
-        "v3": [false, "No hay plan de rodaje"],
-        "v4": [true,  "FINALLYCATT_14352_autosave.abc y .mtl: archivos de animación reales, del 9 y 16 de septiembre"],
-        "v5": [false, "Sin registro de revisión de audio"],
-        "v6": [false, "No hay corte de edición"],
-        "v7": [false, "No hay exportado final"],
-        "barr": [false, "Barreras.docx sin texto propio"],
-        "casi": [false, "18 casillas presentes, ninguna marcada: dos fueron borradas en vez de marcadas"],
-        "evid": [true,  "F) 9 Y 10 de septiembre / Avances sesión 9 de Septiembre"],
-        "dect": [false, "Sin bitácora de decisiones"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          false,
+          "Propuesta_borrador_v0: 1.029 bytes, es la plantilla sin responder"
+        ],
+        "acue": [
+          false,
+          "Formato2_Acuerdos idéntico a la plantilla"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades, 1.476 caracteres propios sobre la plantilla"
+        ],
+        "ante": [
+          false,
+          "Carpeta 01_Antecedentes creada pero vacía"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_Equipo03.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx: solo cambió el título"
+        ],
+        "bocg": [
+          true,
+          "04_Desarrollo/2026-08-12_bocetos.jpg"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx, 12 caracteres sobre la plantilla"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica idéntica a la plantilla, aunque hay un Ficha_proyecto.docx aparte"
+        ],
+        "v1": [
+          false,
+          "No hay guion literario"
+        ],
+        "v2": [
+          false,
+          "Guiones_audiovisual.xlsx entregado, sin verificar contenido"
+        ],
+        "v3": [
+          false,
+          "No hay plan de rodaje"
+        ],
+        "v4": [
+          true,
+          "FINALLYCATT_14352_autosave.abc y .mtl: archivos de animación reales, del 9 y 16 de septiembre"
+        ],
+        "v5": [
+          false,
+          "Sin registro de revisión de audio"
+        ],
+        "v6": [
+          false,
+          "No hay corte de edición"
+        ],
+        "v7": [
+          false,
+          "No hay exportado final"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx sin texto propio"
+        ],
+        "casi": [
+          false,
+          "18 casillas presentes, ninguna marcada: dos fueron borradas en vez de marcadas"
+        ],
+        "evid": [
+          true,
+          "F) 9 Y 10 de septiembre / Avances sesión 9 de Septiembre"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": { "tit": true }
+      "articuloEstado": {
+        "tit": true
+      },
+      "publicacion": {
+        "estado": "no aplica",
+        "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      }
     },
-
     {
-      "numero": "3", "slug": "equipo-3", "nombre": "App de planeación inclusiva", "linea": "software",
+      "numero": "3",
+      "slug": "equipo-3",
+      "nombre": "App de planeación inclusiva",
+      "linea": "software",
       "integrantes": "Camila y Santiago",
       "stack": "Next.js con TypeScript, Drizzle y base de datos",
       "carpeta": "Equipo 3_Camila y Santiago -",
       "enlaces": [
-        { "titulo": "Repositorio, privado", "url": "https://github.com/profenapaipa/planeacion-inclusiva-piar" }
+        {
+          "titulo": "Repositorio, privado",
+          "url": "https://github.com/profenapaipa/planeacion-inclusiva-piar"
+        }
       ],
       "nota": "Es el proyecto técnicamente más ambicioso del semillero: aplicación con base de datos, roles y planeación de clase real, apoyado en el Decreto 1421. El repositorio es privado, así que no se puede publicar en Pages con cuenta gratuita.",
       "estado": {
-        "prop": [true,  "propuesta _borrador_v0: 2.519 bytes con contenido propio"],
-        "acue": [false, "Formato2_Acuerdos, 80 caracteres sobre la plantilla: apenas iniciado"],
-        "nece": [true,  "Formato1_Necesidades_Equipo03, 972 caracteres propios"],
-        "ante": [false, "Carpeta 01_Antecedentes creada pero vacía"],
-        "cron": [true,  "Cronograma_tareas_Equipo03.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx idéntico a la plantilla"],
-        "bocg": [false, "No hay imagen de boceto en la carpeta"],
-        "bocr": [false, "Bocetos_registro.docx idéntico a la plantilla"],
-        "fich": [false, "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"],
-        "s1": [true,  "Proyecto Next.js con app/, components/, db/ y lib/"],
-        "s2": [true,  "Pantallas de planeación, roster y rol de orientador"],
-        "s3": [true,  "Sistema de componentes con components.json y hojas propias"],
-        "s4": [true,  "Roster real del docente y planeación de clase sobre contenidos reales"],
-        "s5": [true,  "Cinco commits por fases, de la 2 a la 7"],
-        "s6": [false, "Repositorio privado y proyecto con base de datos: no se puede publicar en GitHub Pages tal como está"],
-        "barr": [false, "Barreras.docx idéntica a la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [true,  "Carpeta proyecto/ con las siete subcarpetas del proceso"],
-        "dect": [true,  "CHANGELOG.md, CLAUDE.md y docs/ en el repositorio"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          true,
+          "propuesta _borrador_v0: 2.519 bytes con contenido propio"
+        ],
+        "acue": [
+          false,
+          "Formato2_Acuerdos, 80 caracteres sobre la plantilla: apenas iniciado"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades_Equipo03, 972 caracteres propios"
+        ],
+        "ante": [
+          false,
+          "Carpeta 01_Antecedentes creada pero vacía"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_Equipo03.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx idéntico a la plantilla"
+        ],
+        "bocg": [
+          false,
+          "No hay imagen de boceto en la carpeta"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx idéntico a la plantilla"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+        ],
+        "s1": [
+          true,
+          "Proyecto Next.js con app/, components/, db/ y lib/"
+        ],
+        "s2": [
+          true,
+          "Pantallas de planeación, roster y rol de orientador"
+        ],
+        "s3": [
+          true,
+          "Sistema de componentes con components.json y hojas propias"
+        ],
+        "s4": [
+          true,
+          "Roster real del docente y planeación de clase sobre contenidos reales"
+        ],
+        "s5": [
+          true,
+          "Cinco commits por fases, de la 2 a la 7"
+        ],
+        "s6": [
+          false,
+          "Repositorio privado y proyecto con base de datos: no se puede publicar en GitHub Pages tal como está"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx idéntica a la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          true,
+          "Carpeta proyecto/ con las siete subcarpetas del proceso"
+        ],
+        "dect": [
+          true,
+          "CHANGELOG.md, CLAUDE.md y docs/ en el repositorio"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "sin publicar",
+        "repo": "https://github.com/profenapaipa/planeacion-inclusiva-piar",
+        "nota": "El repositorio es privado, y además el proyecto necesita base de datos: GitHub Pages solo sirve archivos estáticos. Para publicarlo habría que hacerlo público y desplegarlo en un servicio que sí corra Next.js."
+      }
     },
-
     {
-      "numero": "4", "slug": "equipo-4", "nombre": "Comedero automático para mascotas", "linea": "electronica",
+      "numero": "4",
+      "slug": "equipo-4",
+      "nombre": "Comedero automático para mascotas",
+      "linea": "electronica",
       "integrantes": "Javier Sanabria y Alejandra Cuestas",
       "stack": "Arduino",
       "carpeta": "Equipo 4_Comedero mascotas automático",
       "enlaces": [],
       "nota": "Tiene la lista de necesidades más detallada de todo el semillero, con 3.329 caracteres propios, y un circuito escaneado. Lo que falta es pasar del papel al montaje.",
       "estado": {
-        "prop": [false, "Propuesta comedero automático: 1.024 bytes, solo nombres y correos, las cinco preguntas sin responder"],
-        "acue": [false, "Formato2_Acuerdos idéntico a la plantilla"],
-        "nece": [true,  "Formato1_Necesidades, 3.329 caracteres propios: lo más completo del semillero"],
-        "ante": [false, "No hay carpeta de antecedentes con fuentes"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx: solo cambió el título a Comedero automático para perros"],
-        "bocg": [true,  "D) 19-20 de agosto / Adobe Scan 19 ago 2026.pdf"],
-        "bocr": [false, "Bocetos_registro.docx idéntico a la plantilla"],
-        "fich": [false, "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"],
-        "e1": [true,  "Componentes listados en Formato1_Necesidades y en cmdr.docx"],
-        "e2": [true,  "Circuito dibujado y escaneado en Adobe Scan 19 ago 2026.pdf"],
-        "e3": [false, "No hay tabla de pines en la carpeta"],
-        "e4": [false, "Sin evidencia de un componente respondiendo"],
-        "e5": [false, "Sin decisión registrada sobre la alimentación"],
-        "e6": [false, "No hay archivo .ino en la carpeta"],
-        "e7": [false, "No hay video del montaje"],
-        "barr": [false, "Barreras.docx idéntica a la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [true,  "cmdr.docx y el escaneo del 19 de agosto"],
-        "dect": [false, "Sin bitácora de decisiones"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          false,
+          "Propuesta comedero automático: 1.024 bytes, solo nombres y correos, las cinco preguntas sin responder"
+        ],
+        "acue": [
+          false,
+          "Formato2_Acuerdos idéntico a la plantilla"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades, 3.329 caracteres propios: lo más completo del semillero"
+        ],
+        "ante": [
+          false,
+          "No hay carpeta de antecedentes con fuentes"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx: solo cambió el título a Comedero automático para perros"
+        ],
+        "bocg": [
+          true,
+          "D) 19-20 de agosto / Adobe Scan 19 ago 2026.pdf"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx idéntico a la plantilla"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+        ],
+        "e1": [
+          true,
+          "Componentes listados en Formato1_Necesidades y en cmdr.docx"
+        ],
+        "e2": [
+          true,
+          "Circuito dibujado y escaneado en Adobe Scan 19 ago 2026.pdf"
+        ],
+        "e3": [
+          false,
+          "No hay tabla de pines en la carpeta"
+        ],
+        "e4": [
+          false,
+          "Sin evidencia de un componente respondiendo"
+        ],
+        "e5": [
+          false,
+          "Sin decisión registrada sobre la alimentación"
+        ],
+        "e6": [
+          false,
+          "No hay archivo .ino en la carpeta"
+        ],
+        "e7": [
+          false,
+          "No hay video del montaje"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx idéntica a la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          true,
+          "cmdr.docx y el escaneo del 19 de agosto"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": { "tit": true }
+      "articuloEstado": {
+        "tit": true
+      },
+      "publicacion": {
+        "estado": "no aplica",
+        "nota": "La línea de electrónica no se publica como sitio web: el resultado es el montaje funcionando, y se documenta aquí con video y fotos."
+      }
     },
-
     {
-      "numero": "5", "slug": "equipo-5", "nombre": "English Roulette", "linea": "software",
-      "integrantes": "Equipo de English Day",
+      "numero": "5",
+      "slug": "equipo-5",
+      "nombre": "English Roulette",
+      "linea": "software",
+      "integrantes": "Mariana Soler",
       "stack": "Python con interfaz de escritorio, base de datos SQLite y firmware para ESP32",
       "carpeta": "Equipo 5_English _Roulette_2026_II",
       "enlaces": [
-        { "titulo": "Repositorio", "url": "https://github.com/profenapaipa/englishroulette" }
+        {
+          "titulo": "Repositorio",
+          "url": "https://github.com/profenapaipa/englishroulette"
+        }
       ],
       "nota": "Aplicación de escritorio, no sitio web: por eso su hito de publicación es un ejecutable con instrucciones, no GitHub Pages. Tiene antecedentes verificados y la ficha técnica llena, que casi nadie más tiene.",
       "estado": {
-        "prop": [true,  "propuesta v1, de 647 KB con imágenes, más Propuesta_borrador_v0 con 5.026 bytes"],
-        "acue": [false, "Formato2_Acuerdos idéntico a la plantilla"],
-        "nece": [false, "Formato1_Necesidades, 38 caracteres sobre la plantilla: en blanco"],
-        "ante": [true,  "01_Antecedentes / Antecedentes de investigación verificados"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx idéntico a la plantilla"],
-        "bocg": [true,  "D) 19-20 de agosto / imagen de referencia de la ruleta"],
-        "bocr": [true,  "Bocetos_Equipo17.docx, 2.429 caracteres propios: el registro de bocetos más completo"],
-        "fich": [true,  "FFicha_tecnica, 1.129 caracteres propios más imágenes"],
-        "s1": [true,  "Proyecto Python con main.py, controllers, services y repositories"],
-        "s2": [true,  "Interfaz de escritorio con pantallas, ruleta en canvas y sonidos"],
-        "s3": [true,  "ui/theme.py y canvas_art.py: identidad visual propia"],
-        "s4": [true,  "Diez bancos de preguntas reales en JSON, de present simple a speaking"],
-        "s5": [false, "Un solo commit en GitHub: no alcanza para mostrar el proceso"],
-        "s6": [false, "Falta el ejecutable entregable, aunque ya existe COMO_EJECUTAR.md"],
-        "barr": [false, "Barreras.docx idéntica a la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [true,  "Carpeta ROULETTE_EnglishDay2026 con el proyecto completo y las siete subcarpetas del proceso"],
-        "dect": [true,  "docs/ARQUITECTURA.md, BASE_DATOS.md y DIAGRAMAS.md"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          true,
+          "propuesta v1, de 647 KB con imágenes, más Propuesta_borrador_v0 con 5.026 bytes"
+        ],
+        "acue": [
+          false,
+          "Formato2_Acuerdos idéntico a la plantilla"
+        ],
+        "nece": [
+          false,
+          "Formato1_Necesidades, 38 caracteres sobre la plantilla: en blanco"
+        ],
+        "ante": [
+          true,
+          "01_Antecedentes / Antecedentes de investigación verificados"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx idéntico a la plantilla"
+        ],
+        "bocg": [
+          true,
+          "D) 19-20 de agosto / imagen de referencia de la ruleta"
+        ],
+        "bocr": [
+          true,
+          "Bocetos_Equipo17.docx, 2.429 caracteres propios: el registro de bocetos más completo"
+        ],
+        "fich": [
+          true,
+          "FFicha_tecnica, 1.129 caracteres propios más imágenes"
+        ],
+        "s1": [
+          true,
+          "Proyecto Python con main.py, controllers, services y repositories"
+        ],
+        "s2": [
+          true,
+          "Interfaz de escritorio con pantallas, ruleta en canvas y sonidos"
+        ],
+        "s3": [
+          true,
+          "ui/theme.py y canvas_art.py: identidad visual propia"
+        ],
+        "s4": [
+          true,
+          "Diez bancos de preguntas reales en JSON, de present simple a speaking"
+        ],
+        "s5": [
+          false,
+          "Un solo commit en GitHub: no alcanza para mostrar el proceso"
+        ],
+        "s6": [
+          false,
+          "Falta el ejecutable entregable, aunque ya existe COMO_EJECUTAR.md"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx idéntica a la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          true,
+          "Carpeta ROULETTE_EnglishDay2026 con el proyecto completo y las siete subcarpetas del proceso"
+        ],
+        "dect": [
+          true,
+          "docs/ARQUITECTURA.md, BASE_DATOS.md y DIAGRAMAS.md"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "sin publicar",
+        "repo": "https://github.com/profenapaipa/englishroulette",
+        "nota": "Es una aplicación de escritorio en Python, no un sitio web: su entregable no es GitHub Pages sino un ejecutable con sus instrucciones de uso. El repositorio ya es público."
+      }
     },
-
     {
-      "numero": "6", "slug": "equipo-6", "nombre": "Diverseña, lector de lengua de señas", "linea": "software",
-      "integrantes": "Equipo de lengua de señas",
+      "numero": "6",
+      "slug": "equipo-6",
+      "nombre": "Diverseña, lector de lengua de señas",
+      "linea": "software",
+      "integrantes": "Nicolás Pachón, César Alejandro Prada y Matías Ávila",
       "stack": "TypeScript con Vite, detección de puntos de la mano y clasificador por vecino más cercano",
       "carpeta": "Equipo 6 - Lector de lengua de señas",
       "enlaces": [
-        { "titulo": "Repositorio, privado", "url": "https://github.com/profenapaipa/diversena" }
+        {
+          "titulo": "Repositorio, privado",
+          "url": "https://github.com/profenapaipa/diversena"
+        }
       ],
       "nota": "Atención: este equipo estaba clasificado en la línea de Unity, pero su proyecto real es una aplicación web en TypeScript con Vite, no un proyecto de Unity. Lo reclasifiqué según la evidencia. Si la clasificación debe volver a Unity, hay que corregirlo en el archivo de datos.",
       "estado": {
-        "prop": [true,  "Propuesta_borrador_v1 y Propuesta_Leguajedeseñas_Equipo6_v2: dos versiones con contenido"],
-        "acue": [true,  "Formato2_Acuerdos, 452 caracteres propios"],
-        "nece": [true,  "Formato1_Necesidades, 706 caracteres propios"],
-        "ante": [true,  "01_Antecedentes: tres artículos en PDF más un documento de propuestas y antecedentes"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx: 101 caracteres sobre la plantilla, está en blanco"],
-        "bocg": [false, "No hay imagen de boceto en la carpeta"],
-        "bocr": [false, "Bocetos_registro.docx, 93 caracteres sobre la plantilla"],
-        "fich": [true,  "FFicha_tecnica, 796 caracteres propios más imágenes"],
-        "s1": [true,  "Proyecto Vite con src/, public/ y configuración de TypeScript"],
-        "s2": [true,  "Cámara unificada para seguimiento y grabación"],
-        "s3": [true,  "Interfaz propia en el proyecto"],
-        "s4": [true,  "Clasificador de señas por vecino más cercano y herramienta de captura de referencias"],
-        "s5": [true,  "Cinco commits, con integración de la rama de una compañera"],
-        "s6": [false, "Repositorio privado: con cuenta gratuita no se puede publicar en Pages"],
-        "barr": [true,  "Barreras.docx, 470 caracteres propios en las secciones de texto"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [true,  "subcarpetas/05_Evidencias con Articulo V.1, y z)diversena-main con el proyecto"],
-        "dect": [true,  "Historial del repositorio con decisiones de arquitectura por fase"],
-        "artv": [false, "Hay una Copia de Articulo V.1, pero no una versión _v2 con avance real"]
+        "prop": [
+          true,
+          "Propuesta_borrador_v1 y Propuesta_Leguajedeseñas_Equipo6_v2: dos versiones con contenido"
+        ],
+        "acue": [
+          true,
+          "Formato2_Acuerdos, 452 caracteres propios"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades, 706 caracteres propios"
+        ],
+        "ante": [
+          true,
+          "01_Antecedentes: tres artículos en PDF más un documento de propuestas y antecedentes"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx: 101 caracteres sobre la plantilla, está en blanco"
+        ],
+        "bocg": [
+          false,
+          "No hay imagen de boceto en la carpeta"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx, 93 caracteres sobre la plantilla"
+        ],
+        "fich": [
+          true,
+          "FFicha_tecnica, 796 caracteres propios más imágenes"
+        ],
+        "s1": [
+          true,
+          "Proyecto Vite con src/, public/ y configuración de TypeScript"
+        ],
+        "s2": [
+          true,
+          "Cámara unificada para seguimiento y grabación"
+        ],
+        "s3": [
+          true,
+          "Interfaz propia en el proyecto"
+        ],
+        "s4": [
+          true,
+          "Clasificador de señas por vecino más cercano y herramienta de captura de referencias"
+        ],
+        "s5": [
+          true,
+          "Cinco commits, con integración de la rama de una compañera"
+        ],
+        "s6": [
+          false,
+          "Repositorio privado: con cuenta gratuita no se puede publicar en Pages"
+        ],
+        "barr": [
+          true,
+          "Barreras.docx, 470 caracteres propios en las secciones de texto"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          true,
+          "subcarpetas/05_Evidencias con Articulo V.1, y z)diversena-main con el proyecto"
+        ],
+        "dect": [
+          true,
+          "Historial del repositorio con decisiones de arquitectura por fase"
+        ],
+        "artv": [
+          false,
+          "Hay una Copia de Articulo V.1, pero no una versión _v2 con avance real"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "sin publicar",
+        "repo": "https://github.com/profenapaipa/diversena",
+        "nota": "El repositorio es privado. El proyecto ya genera una carpeta dist/ con Vite, así que para publicarlo solo falta hacerlo público y activar Pages apuntando a esa carpeta."
+      }
     },
-
     {
-      "numero": "7", "slug": "equipo-7", "nombre": "Wisfox", "linea": "software",
+      "numero": "7",
+      "slug": "equipo-7",
+      "nombre": "Wisfox",
+      "linea": "software",
       "integrantes": "Stephany Parra Peña y Elizabeth Sofía Moreno Nope, grado 10",
       "stack": "HTML y JavaScript con Vite y Firebase",
       "carpeta": "Equipo 7_Wisfox",
       "enlaces": [],
       "nota": "Es el único equipo de los catorce que escribió de verdad en el artículo: tiene las secciones 1.1, 1.2 y 1.3, con cuatro antecedentes citados con año y DOI. Lo que le falta es repositorio en GitHub.",
       "estado": {
-        "prop": [true,  "Varios documentos de propuesta con contenido, más la presentación para la cámara de comercio"],
-        "acue": [true,  "Formato2_Acuerdos, 562 caracteres propios"],
-        "nece": [true,  "Formato1_Necesidades, 955 caracteres propios"],
-        "ante": [true,  "29-30 de julio/01. antecedentes: cuatro artículos en PDF, y la matriz ya está en el artículo"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [true,  "Articulo_base.docx, sección 1.3: la pregunta está escrita sobre organizar el estudio con apoyo de inteligencia artificial"],
-        "bocg": [true,  "Catalogo_Iconos_Web.pdf, Catalogo_Vibrante.pdf y Modelos de prototipos"],
-        "bocr": [true,  "Bocetos_registro.docx, 171 caracteres propios"],
-        "fich": [true,  "FFicha_tecnica, 1.215 caracteres propios"],
-        "s1": [true,  "WISFOX V2 / WisfoxV2 con package.json, Vite y arranque por .bat"],
-        "s2": [true,  "wisfo_19.html y versiones anteriores: la interfaz existe y abre"],
-        "s3": [true,  "Interfaz con identidad propia, catálogo de iconos y paleta"],
-        "s4": [true,  "MALLA INGLES 2026.xlsx y actividades reales de inglés de 10D"],
-        "s5": [false, "No hay repositorio en GitHub: el proyecto vive solo en Drive"],
-        "s6": [false, "Sin publicar"],
-        "barr": [false, "Barreras.docx, 42 caracteres sobre la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [true,  "WISFOX V2, Wisfox.FirebaseV2 y Bitácora de cambios Wisfox"],
-        "dect": [true,  "BITACORA.md dentro de WisfoxV2 y Bitácora de cambios Wisfox"],
-        "artv": [false, "No existe Articulo_base_v2.docx, aunque el artículo ya tiene texto que vale la pena versionar"]
+        "prop": [
+          true,
+          "Varios documentos de propuesta con contenido, más la presentación para la cámara de comercio"
+        ],
+        "acue": [
+          true,
+          "Formato2_Acuerdos, 562 caracteres propios"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades, 955 caracteres propios"
+        ],
+        "ante": [
+          true,
+          "29-30 de julio/01. antecedentes: cuatro artículos en PDF, y la matriz ya está en el artículo"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          true,
+          "Articulo_base.docx, sección 1.3: la pregunta está escrita sobre organizar el estudio con apoyo de inteligencia artificial"
+        ],
+        "bocg": [
+          true,
+          "Catalogo_Iconos_Web.pdf, Catalogo_Vibrante.pdf y Modelos de prototipos"
+        ],
+        "bocr": [
+          true,
+          "Bocetos_registro.docx, 171 caracteres propios"
+        ],
+        "fich": [
+          true,
+          "FFicha_tecnica, 1.215 caracteres propios"
+        ],
+        "s1": [
+          true,
+          "WISFOX V2 / WisfoxV2 con package.json, Vite y arranque por .bat"
+        ],
+        "s2": [
+          true,
+          "wisfo_19.html y versiones anteriores: la interfaz existe y abre"
+        ],
+        "s3": [
+          true,
+          "Interfaz con identidad propia, catálogo de iconos y paleta"
+        ],
+        "s4": [
+          true,
+          "MALLA INGLES 2026.xlsx y actividades reales de inglés de 10D"
+        ],
+        "s5": [
+          false,
+          "No hay repositorio en GitHub: el proyecto vive solo en Drive"
+        ],
+        "s6": [
+          false,
+          "Sin publicar"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx, 42 caracteres sobre la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          true,
+          "WISFOX V2, Wisfox.FirebaseV2 y Bitácora de cambios Wisfox"
+        ],
+        "dect": [
+          true,
+          "BITACORA.md dentro de WisfoxV2 y Bitácora de cambios Wisfox"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx, aunque el artículo ya tiene texto que vale la pena versionar"
+        ]
       },
-      "articuloEstado": { "1.1": true, "1.2": true, "1.3": true, "tit": true }
+      "articuloEstado": {
+        "1.1": true,
+        "1.2": true,
+        "1.3": true,
+        "tit": true
+      },
+      "publicacion": {
+        "estado": "sin repositorio",
+        "nota": "Todavía no tiene repositorio en GitHub: el proyecto vive solo en Drive. Es lo primero que hay que resolver, porque sin repositorio no hay respaldo ni publicación posible."
+      }
     },
-
     {
-      "numero": "8", "slug": "equipo-8", "nombre": "Brazo robótico", "linea": "electronica",
+      "numero": "8",
+      "slug": "equipo-8",
+      "nombre": "Brazo robótico",
+      "linea": "electronica",
       "integrantes": "Equipo del brazo robot",
       "stack": "Arduino con servomotores",
       "carpeta": "Equipo 8_Brazo Robot DT-2026-II",
       "enlaces": [],
       "nota": "Tiene los acuerdos de equipo más completos del semillero, con 856 caracteres propios, pero no hay evidencia de desarrollo técnico en la carpeta. Es el equipo con menos avance construido.",
       "estado": {
-        "prop": [false, "La Propuesta: 1.024 bytes, es la plantilla sin responder"],
-        "acue": [true,  "Formato2_Acuerdos, 856 caracteres propios: el más completo del semillero"],
-        "nece": [true,  "Formato1_Necesidades, 688 caracteres propios"],
-        "ante": [false, "Carpeta 01_Antecedentes creada pero vacía"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx idéntico a la plantilla"],
-        "bocg": [false, "No hay imagen de boceto ni dibujo del circuito"],
-        "bocr": [false, "Bocetos_registro.docx idéntico a la plantilla"],
-        "fich": [false, "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"],
-        "e1": [true,  "Componentes listados en Formato1_Necesidades"],
-        "e2": [false, "No hay dibujo del circuito en la carpeta"],
-        "e3": [false, "No hay tabla de pines"],
-        "e4": [false, "Sin evidencia de un componente respondiendo"],
-        "e5": [false, "Sin decisión registrada sobre la alimentación"],
-        "e6": [false, "No hay archivo .ino en la carpeta"],
-        "e7": [false, "No hay video del montaje"],
-        "barr": [false, "Barreras.docx idéntica a la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [false, "Las siete subcarpetas del proceso están creadas pero casi todas vacías"],
-        "dect": [false, "Sin bitácora de decisiones"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          false,
+          "La Propuesta: 1.024 bytes, es la plantilla sin responder"
+        ],
+        "acue": [
+          true,
+          "Formato2_Acuerdos, 856 caracteres propios: el más completo del semillero"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades, 688 caracteres propios"
+        ],
+        "ante": [
+          false,
+          "Carpeta 01_Antecedentes creada pero vacía"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx idéntico a la plantilla"
+        ],
+        "bocg": [
+          false,
+          "No hay imagen de boceto ni dibujo del circuito"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx idéntico a la plantilla"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+        ],
+        "e1": [
+          true,
+          "Componentes listados en Formato1_Necesidades"
+        ],
+        "e2": [
+          false,
+          "No hay dibujo del circuito en la carpeta"
+        ],
+        "e3": [
+          false,
+          "No hay tabla de pines"
+        ],
+        "e4": [
+          false,
+          "Sin evidencia de un componente respondiendo"
+        ],
+        "e5": [
+          false,
+          "Sin decisión registrada sobre la alimentación"
+        ],
+        "e6": [
+          false,
+          "No hay archivo .ino en la carpeta"
+        ],
+        "e7": [
+          false,
+          "No hay video del montaje"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx idéntica a la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          false,
+          "Las siete subcarpetas del proceso están creadas pero casi todas vacías"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "no aplica",
+        "nota": "La línea de electrónica no se publica como sitio web: el resultado es el montaje funcionando, y se documenta aquí con video y fotos."
+      }
     },
-
     {
-      "numero": "9", "slug": "equipo-9", "nombre": "Proyecto de Matías, Jacobo y Danna", "linea": "audiovisual",
+      "numero": "9",
+      "slug": "equipo-9",
+      "nombre": "Proyecto de Matías, Jacobo y Danna",
+      "linea": "audiovisual",
       "integrantes": "Matías, Jacobo y Danna",
       "stack": "Producción audiovisual, pendiente de confirmar la herramienta",
       "carpeta": "Equipo 9_Proyecto Matías Jacobo y Danna",
       "enlaces": [],
       "nota": "La propuesta está escrita, con 4.647 bytes de contenido, pero los formatos de necesidades y de bocetos siguen en blanco y no hay material audiovisual en la carpeta.",
       "estado": {
-        "prop": [true,  "Propuesta.gdoc: 4.647 bytes con contenido propio, actualizada el 3 de septiembre"],
-        "acue": [false, "Formato2_Acuerdos idéntico a la plantilla"],
-        "nece": [false, "Formato1_Necesidades idéntico a la plantilla"],
-        "ante": [false, "No hay carpeta de antecedentes con fuentes"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx idéntico a la plantilla"],
-        "bocg": [false, "No hay imagen de boceto ni guion"],
-        "bocr": [false, "Bocetos_registro.docx idéntico a la plantilla"],
-        "fich": [false, "FFicha_tecnica: 70 caracteres sobre la plantilla, solo se pegó una imagen"],
-        "v1": [false, "No hay guion literario"],
-        "v2": [false, "Guiones_audiovisual.xlsx entregado, sin verificar contenido"],
-        "v3": [false, "No hay plan de rodaje"],
-        "v4": [false, "No hay material grabado en la carpeta"],
-        "v5": [false, "Sin registro de revisión de audio"],
-        "v6": [false, "No hay corte de edición"],
-        "v7": [false, "No hay exportado final"],
-        "barr": [false, "Barreras.docx idéntica a la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [true,  "Borrador / Borrador de la información.docx, del 13 de agosto"],
-        "dect": [false, "Sin bitácora de decisiones"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          true,
+          "Propuesta.gdoc: 4.647 bytes con contenido propio, actualizada el 3 de septiembre"
+        ],
+        "acue": [
+          false,
+          "Formato2_Acuerdos idéntico a la plantilla"
+        ],
+        "nece": [
+          false,
+          "Formato1_Necesidades idéntico a la plantilla"
+        ],
+        "ante": [
+          false,
+          "No hay carpeta de antecedentes con fuentes"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx idéntico a la plantilla"
+        ],
+        "bocg": [
+          false,
+          "No hay imagen de boceto ni guion"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx idéntico a la plantilla"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica: 70 caracteres sobre la plantilla, solo se pegó una imagen"
+        ],
+        "v1": [
+          false,
+          "No hay guion literario"
+        ],
+        "v2": [
+          false,
+          "Guiones_audiovisual.xlsx entregado, sin verificar contenido"
+        ],
+        "v3": [
+          false,
+          "No hay plan de rodaje"
+        ],
+        "v4": [
+          false,
+          "No hay material grabado en la carpeta"
+        ],
+        "v5": [
+          false,
+          "Sin registro de revisión de audio"
+        ],
+        "v6": [
+          false,
+          "No hay corte de edición"
+        ],
+        "v7": [
+          false,
+          "No hay exportado final"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx idéntica a la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          true,
+          "Borrador / Borrador de la información.docx, del 13 de agosto"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "no aplica",
+        "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      }
     },
-
     {
-      "numero": "10.1", "slug": "equipo-10-1", "nombre": "Videojuego para motricidad", "linea": "unity",
+      "numero": "10.1",
+      "slug": "equipo-10-1",
+      "nombre": "Videojuego para motricidad",
+      "linea": "unity",
       "integrantes": "Camilo, Mariana e Isabella",
       "stack": "Unity 2019.4.38f1, proyecto 2D",
       "carpeta": "Equipo 10_Videojuego para motricidad / Equipo 10.1",
@@ -578,33 +1662,102 @@
       "dinamica": "El jugador toca objetivos que aparecen en pantalla y el juego mide si acertó y con cuánta precisión. La dinámica que hay que resolver es: hacer aparecer un objetivo en una posición al azar, detectar el toque o el clic sobre él, contar acierto o fallo, y volver a empezar.",
       "nota": "Es el equipo con la documentación más completa de la línea Unity: la ficha técnica está llena y la hoja de barreras es la única del semillero con texto propio de verdad, 4.229 caracteres. Lo que no aparece es el proyecto de Unity. Si lo construyeron en la sala y no lo subieron, no hay cómo verlo desde aquí.",
       "estado": {
-        "prop": [false, "Propuesta videojuego motricidad: 1.024 bytes, ni los nombres están escritos"],
-        "acue": [false, "Formato2_Acuerdos, 92 caracteres sobre la plantilla"],
-        "nece": [true,  "Formato1_Necesidades_Equipo10, 1.108 caracteres propios"],
-        "ante": [false, "No hay carpeta de antecedentes con fuentes"],
-        "cron": [true,  "Copia_de_Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx idéntico a la plantilla"],
-        "bocg": [false, "No hay imagen de boceto en la carpeta"],
-        "bocr": [false, "Bocetos_registro.docx, 36 caracteres sobre la plantilla"],
-        "fich": [true,  "FFicha_tecnica, 459 caracteres propios más imágenes"],
-        "u1": [false, "No hay proyecto de Unity en la carpeta de Drive"],
-        "u2": [false, "Sin registro de haberlo trabajado, aunque el tutorial de interfaz ya se entregó"],
-        "u3": [false, "No hay evidencia de un canvas con menú"],
-        "u4": [false, "Sin evidencia de la dinámica funcionando: es el bloqueo principal"],
-        "u5": [false, "Sin puntaje ni temporizador"],
-        "u6": [false, "Sin segunda versión"],
-        "u7": [false, "Sin build exportado"],
-        "barr": [true,  "Barreras.docx, 4.229 caracteres propios en las secciones de barreras y de peticiones al docente"],
-        "casi": [false, "20 casillas, ninguna marcada, aunque escribieron todo lo demás"],
-        "evid": [true,  "Propuesta.docx del 19 de agosto y Sesion_16-17_septiembre"],
-        "dect": [false, "Sin bitácora de decisiones"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          false,
+          "Propuesta videojuego motricidad: 1.024 bytes, ni los nombres están escritos"
+        ],
+        "acue": [
+          false,
+          "Formato2_Acuerdos, 92 caracteres sobre la plantilla"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades_Equipo10, 1.108 caracteres propios"
+        ],
+        "ante": [
+          false,
+          "No hay carpeta de antecedentes con fuentes"
+        ],
+        "cron": [
+          true,
+          "Copia_de_Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx idéntico a la plantilla"
+        ],
+        "bocg": [
+          false,
+          "No hay imagen de boceto en la carpeta"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx, 36 caracteres sobre la plantilla"
+        ],
+        "fich": [
+          true,
+          "FFicha_tecnica, 459 caracteres propios más imágenes"
+        ],
+        "u1": [
+          false,
+          "No hay proyecto de Unity en la carpeta de Drive"
+        ],
+        "u2": [
+          false,
+          "Sin registro de haberlo trabajado, aunque el tutorial de interfaz ya se entregó"
+        ],
+        "u3": [
+          false,
+          "No hay evidencia de un canvas con menú"
+        ],
+        "u4": [
+          false,
+          "Sin evidencia de la dinámica funcionando: es el bloqueo principal"
+        ],
+        "u5": [
+          false,
+          "Sin puntaje ni temporizador"
+        ],
+        "u6": [
+          false,
+          "Sin segunda versión"
+        ],
+        "u7": [
+          false,
+          "Sin build exportado"
+        ],
+        "barr": [
+          true,
+          "Barreras.docx, 4.229 caracteres propios en las secciones de barreras y de peticiones al docente"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada, aunque escribieron todo lo demás"
+        ],
+        "evid": [
+          true,
+          "Propuesta.docx del 19 de agosto y Sesion_16-17_septiembre"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "pendiente de build",
+        "nota": "Un juego de Unity se puede publicar en GitHub Pages si se exporta como build WebGL. Primero hay que tener la dinámica funcionando."
+      }
     },
-
     {
-      "numero": "10.2", "slug": "equipo-10-2", "nombre": "Minijuego de coordinación", "linea": "unity",
+      "numero": "10.2",
+      "slug": "equipo-10-2",
+      "nombre": "Minijuego de coordinación",
+      "linea": "unity",
       "integrantes": "David",
       "stack": "Unity 2019.4.38f1, proyecto 2D",
       "carpeta": "Equipo 10_Videojuego para motricidad / Equipo 10.2",
@@ -612,110 +1765,324 @@
       "dinamica": "El juego muestra una secuencia y el jugador la repite, y se mide el tiempo de reacción. La dinámica que hay que resolver es: generar una secuencia, mostrarla con un ritmo, recibir la respuesta del jugador paso a paso, compararla con la secuencia y medir cuánto tardó.",
       "nota": "Equipo de una sola persona. Los formatos de la carpeta raíz del Equipo 10 están diligenciados, pero no hay proyecto de Unity ni avance técnico visible. Es, junto con 10.1, el bloqueo que los tutoriales de dinámicas tienen que desatascar.",
       "estado": {
-        "prop": [false, "propuesta mninijuego coordinación David: 1.024 bytes, es la plantilla sin responder"],
-        "acue": [true,  "Formato2_Acuerdos del Equipo 10, 210 caracteres propios"],
-        "nece": [true,  "Formato1_Necesidades del Equipo 10, 426 caracteres propios"],
-        "ante": [false, "No hay carpeta de antecedentes con fuentes"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx idéntico a la plantilla"],
-        "bocg": [false, "No hay imagen de boceto en la carpeta"],
-        "bocr": [false, "Bocetos_registro.docx, 36 caracteres sobre la plantilla"],
-        "fich": [false, "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"],
-        "u1": [false, "No hay proyecto de Unity en la carpeta de Drive"],
-        "u2": [false, "Sin registro de haberlo trabajado, aunque el tutorial de interfaz ya se entregó"],
-        "u3": [false, "No hay evidencia de un canvas con menú"],
-        "u4": [false, "Sin evidencia de la dinámica funcionando: es el bloqueo principal"],
-        "u5": [false, "Sin puntaje ni temporizador"],
-        "u6": [false, "Sin segunda versión"],
-        "u7": [false, "Sin build exportado"],
-        "barr": [false, "Barreras.docx sin texto propio: solo se pegó una imagen"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [false, "Solo archivos repartidos por el docente en las carpetas de sesión"],
-        "dect": [false, "Sin bitácora de decisiones"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          false,
+          "propuesta mninijuego coordinación David: 1.024 bytes, es la plantilla sin responder"
+        ],
+        "acue": [
+          true,
+          "Formato2_Acuerdos del Equipo 10, 210 caracteres propios"
+        ],
+        "nece": [
+          true,
+          "Formato1_Necesidades del Equipo 10, 426 caracteres propios"
+        ],
+        "ante": [
+          false,
+          "No hay carpeta de antecedentes con fuentes"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx idéntico a la plantilla"
+        ],
+        "bocg": [
+          false,
+          "No hay imagen de boceto en la carpeta"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx, 36 caracteres sobre la plantilla"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+        ],
+        "u1": [
+          false,
+          "No hay proyecto de Unity en la carpeta de Drive"
+        ],
+        "u2": [
+          false,
+          "Sin registro de haberlo trabajado, aunque el tutorial de interfaz ya se entregó"
+        ],
+        "u3": [
+          false,
+          "No hay evidencia de un canvas con menú"
+        ],
+        "u4": [
+          false,
+          "Sin evidencia de la dinámica funcionando: es el bloqueo principal"
+        ],
+        "u5": [
+          false,
+          "Sin puntaje ni temporizador"
+        ],
+        "u6": [
+          false,
+          "Sin segunda versión"
+        ],
+        "u7": [
+          false,
+          "Sin build exportado"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx sin texto propio: solo se pegó una imagen"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          false,
+          "Solo archivos repartidos por el docente en las carpetas de sesión"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "pendiente de build",
+        "nota": "Un juego de Unity se puede publicar en GitHub Pages si se exporta como build WebGL. Primero hay que tener la dinámica funcionando."
+      }
     },
-
     {
-      "numero": "11.1", "slug": "equipo-11-1", "nombre": "Cortometraje de Heidy Farieta", "linea": "audiovisual",
+      "numero": "11.1",
+      "slug": "equipo-11-1",
+      "nombre": "Cortometraje de Heidy Farieta",
+      "linea": "audiovisual",
       "integrantes": "Heidy Farieta",
       "stack": "Producción audiovisual",
       "carpeta": "Equipo 11_Cortometrajes para el Filosofartec / Equipo 11.1",
       "enlaces": [],
       "nota": "Produce también para Filosofartec. La propuesta está escrita y actualizada el 30 de septiembre, que es de lo más reciente del semillero, pero todos los formatos de la carpeta siguen siendo plantilla.",
       "estado": {
-        "prop": [true,  "Propuesta corto: 3.487 bytes con contenido, actualizada el 1 de octubre"],
-        "acue": [false, "Formato2_Acuerdos idéntico a la plantilla"],
-        "nece": [false, "Formato1_Necesidades idéntico a la plantilla"],
-        "ante": [false, "No hay carpeta de antecedentes con fuentes"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx idéntico a la plantilla"],
-        "bocg": [false, "No hay guion ni imagen de referencia en la carpeta"],
-        "bocr": [false, "Bocetos_registro.docx idéntico a la plantilla"],
-        "fich": [false, "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"],
-        "v1": [false, "No hay guion literario en la carpeta"],
-        "v2": [false, "Guiones_audiovisual.xlsx entregado, sin verificar contenido"],
-        "v3": [false, "No hay plan de rodaje"],
-        "v4": [false, "No hay material grabado en la carpeta"],
-        "v5": [false, "Sin registro de revisión de audio"],
-        "v6": [false, "No hay corte de edición"],
-        "v7": [false, "No hay exportado final"],
-        "barr": [false, "Barreras.docx idéntica a la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [false, "Solo archivos repartidos por el docente en las carpetas de sesión"],
-        "dect": [false, "Sin bitácora de decisiones"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          true,
+          "Propuesta corto: 3.487 bytes con contenido, actualizada el 1 de octubre"
+        ],
+        "acue": [
+          false,
+          "Formato2_Acuerdos idéntico a la plantilla"
+        ],
+        "nece": [
+          false,
+          "Formato1_Necesidades idéntico a la plantilla"
+        ],
+        "ante": [
+          false,
+          "No hay carpeta de antecedentes con fuentes"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx idéntico a la plantilla"
+        ],
+        "bocg": [
+          false,
+          "No hay guion ni imagen de referencia en la carpeta"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx idéntico a la plantilla"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+        ],
+        "v1": [
+          false,
+          "No hay guion literario en la carpeta"
+        ],
+        "v2": [
+          false,
+          "Guiones_audiovisual.xlsx entregado, sin verificar contenido"
+        ],
+        "v3": [
+          false,
+          "No hay plan de rodaje"
+        ],
+        "v4": [
+          false,
+          "No hay material grabado en la carpeta"
+        ],
+        "v5": [
+          false,
+          "Sin registro de revisión de audio"
+        ],
+        "v6": [
+          false,
+          "No hay corte de edición"
+        ],
+        "v7": [
+          false,
+          "No hay exportado final"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx idéntica a la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          false,
+          "Solo archivos repartidos por el docente en las carpetas de sesión"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "no aplica",
+        "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      }
     },
-
     {
-      "numero": "11.2", "slug": "equipo-11-2", "nombre": "La odisea de la diversidad", "linea": "audiovisual",
+      "numero": "11.2",
+      "slug": "equipo-11-2",
+      "nombre": "La odisea de la diversidad",
+      "linea": "audiovisual",
       "integrantes": "Equipo del corto de diversidad",
       "stack": "Producción audiovisual",
       "carpeta": "Equipo 11_Cortometrajes para el Filosofartec / Equipo 11.2",
       "enlaces": [],
       "nota": "Produce también para Filosofartec. Es el único equipo de la línea audiovisual con guion escrito y versionado: hay cinco versiones de Guion editado. La propuesta, en cambio, está en blanco.",
       "estado": {
-        "prop": [false, "Propuesta corto diversidad: 1.134 bytes, la plantilla sin responder"],
-        "acue": [false, "Formato2_Acuerdos idéntico a la plantilla"],
-        "nece": [false, "Formato1_Necesidades idéntico a la plantilla"],
-        "ante": [false, "No hay carpeta de antecedentes con fuentes"],
-        "cron": [true,  "Cronograma_tareas_2026-II.xlsx entregado"],
-        "preg": [false, "Articulo_base.docx idéntico a la plantilla"],
-        "bocg": [true,  "Guion editado.docx y Guion editado (5).docx: cinco versiones del guion"],
-        "bocr": [false, "Bocetos_registro.docx idéntico a la plantilla"],
-        "fich": [false, "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"],
-        "v1": [true,  "Guion editado, con cinco versiones hasta el 9 de septiembre"],
-        "v2": [false, "No hay guion técnico plano por plano"],
-        "v3": [false, "No hay plan de rodaje"],
-        "v4": [false, "No hay material grabado en la carpeta"],
-        "v5": [false, "Sin registro de revisión de audio"],
-        "v6": [true,  "La_incomodidad_de_un_dia_FINAL_legible.pptx, del 16 de septiembre"],
-        "v7": [false, "No hay exportado final de video"],
-        "barr": [false, "Barreras.docx idéntica a la plantilla"],
-        "casi": [false, "20 casillas, ninguna marcada"],
-        "evid": [true,  "Las cinco versiones del guion y la presentación final legible"],
-        "dect": [false, "Sin bitácora de decisiones"],
-        "artv": [false, "No existe Articulo_base_v2.docx"]
+        "prop": [
+          false,
+          "Propuesta corto diversidad: 1.134 bytes, la plantilla sin responder"
+        ],
+        "acue": [
+          false,
+          "Formato2_Acuerdos idéntico a la plantilla"
+        ],
+        "nece": [
+          false,
+          "Formato1_Necesidades idéntico a la plantilla"
+        ],
+        "ante": [
+          false,
+          "No hay carpeta de antecedentes con fuentes"
+        ],
+        "cron": [
+          true,
+          "Cronograma_tareas_2026-II.xlsx entregado"
+        ],
+        "preg": [
+          false,
+          "Articulo_base.docx idéntico a la plantilla"
+        ],
+        "bocg": [
+          true,
+          "Guion editado.docx y Guion editado (5).docx: cinco versiones del guion"
+        ],
+        "bocr": [
+          false,
+          "Bocetos_registro.docx idéntico a la plantilla"
+        ],
+        "fich": [
+          false,
+          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+        ],
+        "v1": [
+          true,
+          "Guion editado, con cinco versiones hasta el 9 de septiembre"
+        ],
+        "v2": [
+          false,
+          "No hay guion técnico plano por plano"
+        ],
+        "v3": [
+          false,
+          "No hay plan de rodaje"
+        ],
+        "v4": [
+          false,
+          "No hay material grabado en la carpeta"
+        ],
+        "v5": [
+          false,
+          "Sin registro de revisión de audio"
+        ],
+        "v6": [
+          true,
+          "La_incomodidad_de_un_dia_FINAL_legible.pptx, del 16 de septiembre"
+        ],
+        "v7": [
+          false,
+          "No hay exportado final de video"
+        ],
+        "barr": [
+          false,
+          "Barreras.docx idéntica a la plantilla"
+        ],
+        "casi": [
+          false,
+          "20 casillas, ninguna marcada"
+        ],
+        "evid": [
+          true,
+          "Las cinco versiones del guion y la presentación final legible"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
       },
-      "articuloEstado": {}
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "no aplica",
+        "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      }
     }
   ],
-
   "hermanos": [
     {
       "nombre": "Un Café con la Iguana",
       "que": "Canal de divulgación digital creado por estudiantes para difundir los procesos del colegio: videos, pódcast y documentos. Tiene su propio equipo de medios y un equipo de sonido que trabaja en FL Studio.",
       "relacion": "Es un espacio de difusión con nombre propio. No es un proyecto técnico del semillero, aunque su sitio lo construye el Equipo 1 y vive en la misma carpeta de Drive.",
-      "enlaces": [ { "titulo": "Sitio publicado", "url": "https://profenapaipa.github.io/lawebdelaiguana/" } ]
+      "enlaces": [
+        {
+          "titulo": "Sitio publicado",
+          "url": "https://profenapaipa.github.io/lawebdelaiguana/"
+        }
+      ]
     },
     {
       "nombre": "Filosofartec",
       "que": "Proyecto transversal del colegio donde se unen Filosofía, Artes y Tecnología. Cada edición tiene una temática distinta; la de 2026 es la Odisea.",
       "relacion": "Es un proyecto hermano con nombre propio, no es del semillero. Cinco subequipos de la línea audiovisual producen contenido también para Filosofartec: 2.1, 2.2, 11.1 y 11.2.",
-      "enlaces": [ { "titulo": "Banner y concurso en el sitio de la iguana", "url": "https://profenapaipa.github.io/lawebdelaiguana/" } ]
+      "enlaces": [
+        {
+          "titulo": "Banner y concurso en el sitio de la iguana",
+          "url": "https://profenapaipa.github.io/lawebdelaiguana/"
+        }
+      ]
     }
   ]
 }

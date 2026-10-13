@@ -166,6 +166,47 @@ def mini(color, texto):
     return '<span class="mini %s"><span class="pt"></span>%s</span>' % (color, e(texto))
 
 
+# Cómo se presenta el estado de publicación de cada proyecto. El objetivo es
+# que el estudiante tenga acceso directo a su versión publicada cuando exista,
+# y que cuando no exista quede dicho exactamente qué falta para publicarla.
+PUBLICACION = {
+    'en linea':           ('verde', 'Versión publicada, en línea'),
+    'sin publicar':       ('ambar', 'Tiene repositorio, falta publicarlo'),
+    'sin repositorio':    ('ambar', 'Todavía sin repositorio en GitHub'),
+    'pendiente de build': ('gris',  'Se podrá publicar cuando haya build'),
+    'no aplica':          ('gris',  'No se publica como sitio web'),
+}
+
+
+def bloque_publicacion(equipo):
+    """La tarjeta de 'tu versión publicada', arriba del todo en cada página."""
+    pub = equipo.get('publicacion') or {}
+    estado = pub.get('estado', 'no aplica')
+    color, rotulo = PUBLICACION.get(estado, PUBLICACION['no aplica'])
+
+    partes = ['<div class="publicacion %s">' % color]
+    partes.append('<div class="pub-cab">%s<span class="pub-rotulo">%s</span></div>'
+                  % (chip(color, 'publicación'), e(rotulo)))
+
+    botones = []
+    if pub.get('url'):
+        botones.append('<a class="boton principal" href="%s">Abrir el proyecto publicado ↗</a>' % e(pub['url']))
+    if pub.get('repo'):
+        botones.append('<a class="boton" href="%s">Ver el código en GitHub ↗</a>' % e(pub['repo']))
+    for en in equipo.get('enlaces', []):
+        if en['url'] not in (pub.get('url'), pub.get('repo')):
+            botones.append('<a class="boton" href="%s">%s ↗</a>' % (e(en['url']), e(en['titulo'])))
+    if botones:
+        partes.append('<div class="enlaces-proyecto">%s</div>' % ''.join(botones))
+
+    if pub.get('url'):
+        partes.append('<p class="pub-url dato">%s</p>' % e(pub['url']))
+    if pub.get('nota'):
+        partes.append('<p class="pub-nota">%s</p>' % e(pub['nota']))
+    partes.append('</div>')
+    return ''.join(partes)
+
+
 def cabeza(titulo, descripcion, prefijo=''):
     """El <head> y la cinta superior. prefijo ajusta las rutas relativas."""
     return """<!doctype html>
@@ -351,12 +392,7 @@ def pagina_equipo(datos, equipo):
     h.append('<li><span class="clave">Tareas completas</span><div class="valor">%d de %d</div></li>' % (total_hechas, total_tareas))
     h.append('<li><span class="clave">Carpeta en Drive</span><div class="valor dato">%s</div></li>' % e(equipo['carpeta']))
     h.append('</ul>')
-    if equipo.get('enlaces'):
-        h.append('<div class="enlaces-proyecto">')
-        for i, en in enumerate(equipo['enlaces']):
-            clase = 'boton principal' if i == 0 else 'boton'
-            h.append('<a class="%s" href="%s">%s</a>' % (clase, e(en['url']), e(en['titulo'])))
-        h.append('</div>')
+    h.append(bloque_publicacion(equipo))
     h.append('</div></header>')
 
     # --- navegación de las tres vistas ---
@@ -602,9 +638,39 @@ def pagina_portal(datos):
                      % (mini(c_ruta, 'ruta %d/%d' % (hec, tot)),
                         mini(color_de(dh, dt), 'desarrollo %d/%d' % (dh, dt)),
                         mini(color_de(ah, at), 'artículo %d/%d' % (ah, at))))
+            if (eq.get('publicacion') or {}).get('estado') == 'en linea':
+                h.append('<span class="sello-vivo">publicado y en línea</span>')
             h.append('</a>')
         h.append('</div></div>')
     h.append('</section>')
+
+    # Acceso directo a lo que ya está publicado y al código de cada equipo.
+    h.append('<section><h2>Proyectos en GitHub</h2>')
+    h.append('<p class="entradilla">Los equipos que ya tienen su proyecto versionado. '
+             'Cuando un proyecto está publicado, el enlace lleva directo a su versión en línea; '
+             'cuando todavía no, queda dicho qué falta para publicarlo.</p>')
+    h.append('<div class="hitos">')
+    for eq in datos['equipos']:
+        pub = eq.get('publicacion') or {}
+        if not pub.get('url') and not pub.get('repo'):
+            continue
+        color, rotulo = PUBLICACION.get(pub.get('estado', 'no aplica'), PUBLICACION['no aplica'])
+        h.append('<article class="hito %s">' % ('hecho' if pub.get('url') else 'bloqueo'))
+        h.append('<div class="hito-cab"><h3>%s</h3>%s</div>'
+                 % (e(eq['nombre']), chip(color, rotulo)))
+        h.append('<div class="hito-cuerpo">')
+        h.append('<p class="dato">Equipo %s · %s</p>' % (e(eq['numero']), e(eq['integrantes'])))
+        botones = []
+        if pub.get('url'):
+            botones.append('<a class="boton principal" href="%s">Abrir el proyecto publicado ↗</a>' % e(pub['url']))
+        if pub.get('repo'):
+            botones.append('<a class="boton" href="%s">Código en GitHub ↗</a>' % e(pub['repo']))
+        botones.append('<a class="boton" href="equipos/%s.html">Ver su ruta</a>' % e(eq['slug']))
+        h.append('<div class="enlaces-proyecto">%s</div>' % ''.join(botones))
+        if pub.get('nota'):
+            h.append('<p class="pub-nota">%s</p>' % e(pub['nota']))
+        h.append('</div></article>')
+    h.append('</div></section>')
 
     # Hermanos
     h.append('<section><h2>Espacios hermanos</h2>')
