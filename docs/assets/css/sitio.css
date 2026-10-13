@@ -163,6 +163,46 @@ code { font-family: var(--fuente-datos); font-size: .92em; overflow-wrap: anywhe
 .pub-url { overflow-wrap: anywhere; }
 .pub-nota { font-size: 13.5px; color: var(--tinta-suave); max-width: 72ch; }
 
+/* Vista previa en vivo de un proyecto publicado.
+   Se puede incrustar porque GitHub Pages no manda X-Frame-Options.
+   El truco del tamaño: el iframe se renderiza a 250% del ancho del
+   contenedor, para que el sitio crea que está en un escritorio, y luego
+   se escala a 0.4, que es justo lo que lo devuelve al 100% de la caja.
+   pointer-events:none deja que el clic pase al enlace que lo envuelve:
+   la vista previa se mira, no se usa. */
+.vistaprevia {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--filete);
+  border-radius: var(--radio-chico);
+  background: var(--superficie2);
+}
+.vistaprevia iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 250%;
+  height: 250%;
+  border: 0;
+  transform: scale(.4);
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+.vistaprevia .pie-previa {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 7px 10px;
+  background: var(--marino);
+  color: #FFFFFF;
+  font-family: var(--fuente-datos);
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.vistaprevia .pie-previa span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
 /* Insignia de publicado en las tarjetas del portal */
 .sello-vivo {
   display: inline-flex;

@@ -178,6 +178,23 @@ PUBLICACION = {
 }
 
 
+def vista_previa(url, nombre):
+    """
+    Vista previa en vivo del proyecto publicado, dentro de un iframe.
+
+    Se puede hacer porque GitHub Pages no manda la cabecera X-Frame-Options
+    (verificado el 13 de octubre de 2026). El sandbox deja correr el
+    JavaScript del sitio, que varios de estos proyectos necesitan para
+    armarse, pero le quita la navegación de la ventana y los formularios.
+    """
+    return ('<div class="vistaprevia">'
+            '<iframe src="%s" title="Vista previa de %s" loading="lazy" tabindex="-1" '
+            'sandbox="allow-scripts allow-same-origin"></iframe>'
+            '<div class="pie-previa"><span>vista previa en vivo</span>'
+            '<span>%s</span></div></div>'
+            % (e(url), e(nombre), e(url.replace('https://', ''))))
+
+
 def bloque_publicacion(equipo):
     """La tarjeta de 'tu versión publicada', arriba del todo en cada página."""
     pub = equipo.get('publicacion') or {}
@@ -187,6 +204,8 @@ def bloque_publicacion(equipo):
     partes = ['<div class="publicacion %s">' % color]
     partes.append('<div class="pub-cab">%s<span class="pub-rotulo">%s</span></div>'
                   % (chip(color, 'publicación'), e(rotulo)))
+    if pub.get('url'):
+        partes.append(vista_previa(pub['url'], equipo['nombre']))
 
     botones = []
     if pub.get('url'):
@@ -660,6 +679,8 @@ def pagina_portal(datos):
                  % (e(eq['nombre']), chip(color, rotulo)))
         h.append('<div class="hito-cuerpo">')
         h.append('<p class="dato">Equipo %s · %s</p>' % (e(eq['numero']), e(eq['integrantes'])))
+        if pub.get('url'):
+            h.append(vista_previa(pub['url'], eq['nombre']))
         botones = []
         if pub.get('url'):
             botones.append('<a class="boton principal" href="%s">Abrir el proyecto publicado ↗</a>' % e(pub['url']))

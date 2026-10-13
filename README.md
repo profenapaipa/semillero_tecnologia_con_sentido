@@ -9,6 +9,7 @@ con el método científico, hasta llegar a un artículo de desarrollo tecnológi
 Este sitio le muestra a cada equipo el estado real de su proceso.
 
 - **Sitio:** <https://profenapaipa.github.io/semillero_tecnologia_con_sentido/>
+- **Cómo publicar un proyecto:** [PUBLICAR.md](PUBLICAR.md)
 - **El encargo:** [BRIEF.md](BRIEF.md)
 - **Decisiones de arquitectura:** [BITACORA_TECNICA.md](BITACORA_TECNICA.md)
 
