@@ -149,6 +149,25 @@ for eq in datos['equipos']:
             avisos.append('equipo %s: el total %d de %d no aparece en su pagina'
                           % (eq['numero'], hh, tt))
 
+# ---- 8. que carpetas estan versionadas ----
+# El portal no debe llevarse el codigo de los estudiantes. Cuatro de esas
+# carpetas traen su propio .git y se guardarian como enlaces rotos.
+import subprocess
+PROHIBIDAS = ('La web de la iguana', 'Wisfox', 'ZOCALAB', 'Diverse',
+              'ROULETTE', 'App para planeaci')
+try:
+    seguidos = subprocess.run(['git', 'ls-files'], cwd=RAIZ, capture_output=True,
+                              text=True, encoding='utf-8', timeout=60).stdout.splitlines()
+except Exception:
+    seguidos = []
+    avisos.append('no se pudo consultar git para revisar que se versiona')
+for ruta in seguidos:
+    for mala in PROHIBIDAS:
+        if ruta.startswith(mala):
+            fallas.append('el repositorio del portal esta versionando %s, que es de un '
+                          'equipo y tiene su propio repositorio' % ruta)
+            break
+
 # ---- informe ----
 print('paginas revisadas: %d' % len(paginas))
 print('tokens de color definidos: %d · usados: %d' % (len(definidos), len(usados)))

@@ -19,6 +19,26 @@ GIT Tecnología con Sentido/        ← EL PORTAL. Solo lo modifica Néstor.
 └── ZOCALAB CARPETA COMPLETA/      ← todavía sin repositorio
 ```
 
+### La excepción: `SEMILLERO AULA MAKER`
+
+Esa carpeta **sí** se versiona, a diferencia de las de los equipos. Son las
+presentaciones de cada sesión y las plantillas en blanco, todo material del
+docente: no hay código de estudiantes ni datos personales. Pesa 1,2 MB.
+
+Está dentro por una razón concreta: `herramientas/extraer_modulos.py` la usa como
+respaldo cuando la unidad de Drive no está montada, y así el sitio se puede
+reconstruir desde cualquier computador que clone el repositorio.
+
+Si se prefiere sacarla, es un comando y queda ignorada de ahí en adelante:
+
+```
+git rm -r --cached "SEMILLERO AULA MAKER"
+echo '/SEMILLERO AULA MAKER/' >> .gitignore
+git commit -m "Saca el material de sesion del repositorio"
+```
+
+Tener en cuenta que seguiría estando en el historial de los commits anteriores.
+
 ## La regla que sostiene todo esto
 
 **Las carpetas de proyecto no se versionan en el repositorio del portal.**
