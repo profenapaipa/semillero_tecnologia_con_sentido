@@ -42,6 +42,7 @@ Thinking: cada hito declara su fase, y la fase lo cuenta.
 import json
 import html
 import os
+import re
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATOS = os.path.join(RAIZ, 'datos', 'semillero.json')
@@ -71,42 +72,55 @@ def fecha_larga(iso):
 # no se puede teñir con el color del tema.
 # ====================================================================
 
-ICONOS = {
-    'software':    '<polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/>',
-    'unity':       '<rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3"/>'
-                   '<circle cx="16" cy="12" r="1"/><circle cx="18.5" cy="14" r="1"/>',
-    'electronica': '<rect x="7" y="7" width="10" height="10" rx="2"/>'
-                   '<path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/>',
-    'audiovisual': '<path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/>'
-                   '<path d="m3 9 1.4-4.4 17 2L20 9"/><path d="M8.2 9 7 5.3M13.2 9.2 12 5.8"/>',
-    'mapa':        '<path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 7 9 4Z"/><path d="M9 4v13M15 7v12.5"/>',
-    'cohete':      '<path d="M12 2.5s4 2.2 4 8c0 2.8-1.4 4.5-1.4 4.5H9.4S8 13.3 8 10.5c0-5.8 4-8 4-8Z"/>'
-                   '<circle cx="12" cy="9" r="1.6"/><path d="M9.4 15 7 18.4l2.6-.6M14.6 15l2.4 3.4-2.6-.6"/>',
-    'documento':   '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/>'
-                   '<path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/>',
-    'check':       '<polyline points="4.5 12.5 9.5 17.5 19.5 6.5"/>',
-    'reloj':       '<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/>',
-    'lupa':        '<circle cx="11" cy="11" r="7"/><line x1="16" y1="16" x2="21" y2="21"/>',
-    'externo':     '<path d="M14 4h6v6"/><path d="M20 4 10.5 13.5"/>'
-                   '<path d="M18 13.5V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4.5"/>',
-    'flecha':      '<path d="M5 12h13"/><path d="m12.5 5.5 7 6.5-7 6.5"/>',
-    'chevron':     '<path d="m9.5 6 6 6-6 6"/>',
-    'capas':       '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/>',
-    'diana':       '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/>',
-    'bombilla':    '<path d="M9.5 18.5h5M10.5 21.5h3"/>'
-                   '<path d="M12 2.5a6.3 6.3 0 0 0-4 11c.6.7 1 1.6 1 2.6h6c0-1 .4-1.9 1-2.6a6.3 6.3 0 0 0-4-11Z"/>',
-    'llave':       '<path d="M15.5 3.5a5.5 5.5 0 1 0 4.2 9.1L21 14l-1.5 1.5L18 14l-1.5 1.5-1.5-1.5-1.4 1.4A5.5 5.5 0 0 0 15.5 3.5Z"/>',
-    'carpeta':     '<path d="M3 7.5a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-10Z"/>',
-    'github':      '<path d="M12 2.2a9.8 9.8 0 0 0-3.1 19.1c.5.1.7-.2.7-.5v-1.9c-2.7.6-3.3-1.3-3.3-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.8 9.8 0 0 0 12 2.2Z" fill="currentColor" stroke="none"/>',
+# Iconografia: set Lucide, incrustado desde docs/assets/iconos/.
+# No se carga desde un CDN a proposito: en la sala de computo la conexion
+# falla, y la via de JavaScript de Lucide hace que los iconos aparezcan un
+# instante despues de la pagina. Incrustados estan desde el primer cuadro,
+# heredan currentColor y funcionan sin conexion.
+# Para agregar uno: se añade a herramientas/traer_iconos.py y se corre.
+CARPETA_ICONOS = os.path.join(SALIDA, 'assets', 'iconos')
+
+# Nombres internos -> nombre del archivo de Lucide.
+ALIAS = {
+    'software': 'code-xml', 'unity': 'gamepad-2', 'electronica': 'cpu',
+    'audiovisual': 'clapperboard', 'mapa': 'map', 'cohete': 'rocket',
+    'documento': 'file-text', 'check': 'check', 'reloj': 'clock',
+    'lupa': 'search', 'externo': 'external-link', 'flecha': 'arrow-right',
+    'chevron': 'chevron-right', 'capas': 'layers', 'diana': 'target',
+    'bombilla': 'lightbulb', 'llave': 'key-round', 'carpeta': 'folder',
+    'github': 'github', 'inicio': 'house', 'tablero': 'layout-grid',
+    'brujula': 'compass', 'rama': 'git-branch', 'globo': 'globe',
+    'regla': 'pencil-ruler', 'lista': 'list-checks', 'matraz': 'flask-conical',
+    'llave-inglesa': 'wrench', 'birrete': 'graduation-cap', 'libro': 'book-open',
+    'video': 'video', 'ayuda': 'circle-help', 'tendencia': 'trending-up',
+    'play': 'play', 'punteado': 'circle-dashed', 'listo': 'circle-check-big',
 }
+
+_cache_iconos = {}
+
+
+def _cuerpo_icono(nombre):
+    """Saca el interior del SVG de Lucide, sin su etiqueta <svg> exterior."""
+    archivo = ALIAS.get(nombre, nombre)
+    if archivo in _cache_iconos:
+        return _cache_iconos[archivo]
+    ruta = os.path.join(CARPETA_ICONOS, '%s.svg' % archivo)
+    if not os.path.exists(ruta):
+        raise SystemExit('Falta el icono %s.svg. Corre: python herramientas/traer_iconos.py'
+                         % archivo)
+    with open(ruta, encoding='utf-8') as fh:
+        svg = fh.read()
+    dentro = re.sub(r'^.*?<svg[^>]*>', '', svg, flags=re.S)
+    dentro = re.sub(r'</svg>\s*$', '', dentro).strip()
+    _cache_iconos[archivo] = dentro
+    return dentro
 
 
 def ico(nombre, tam=20, clase=''):
-    """Un icono. Hereda el color del texto, así funciona en los dos temas."""
-    cuerpo = ICONOS.get(nombre, ICONOS['diana'])
-    return ('<svg class="%s" width="%d" height="%d" viewBox="0 0 24 24" fill="none" '
-            'stroke="currentColor" stroke-width="1.7" stroke-linecap="round" '
-            'stroke-linejoin="round" aria-hidden="true">%s</svg>' % (clase, tam, tam, cuerpo))
+    """Un icono incrustado. Hereda currentColor, asi sirve en los dos temas."""
+    return ('<svg class="ico %s" width="%d" height="%d" viewBox="0 0 24 24" fill="none" '
+            'stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" '
+            'aria-hidden="true">%s</svg>' % (clase, tam, tam, _cuerpo_icono(nombre)))
 
 
 ICONO_LINEA = {'software': 'software', 'unity': 'unity',
@@ -302,18 +316,18 @@ def bloque_publicacion(equipo, con_previa=True):
 # Armazón de página
 # ====================================================================
 
-MENU = [('Inicio', 'index.html', 'inicio'),
-        ('Proyectos', 'index.html#proyectos', 'proyectos'),
-        ('Publicados', 'index.html#publicados', 'publicados'),
-        ('Cómo funciona', 'index.html#como', 'como'),
-        ('Filosofartec', 'index.html#hermanos', 'hermanos')]
+MENU = [('Inicio', 'index.html', 'inicio', 'inicio'),
+        ('Proyectos', 'index.html#proyectos', 'proyectos', 'tablero'),
+        ('Publicados', 'index.html#publicados', 'publicados', 'cohete'),
+        ('Cómo funciona', 'index.html#como', 'como', 'ayuda'),
+        ('Filosofartec', 'index.html#hermanos', 'hermanos', 'globo')]
 
 
-def cabeza(titulo, desc, pre, activo=None):
+def cabeza(titulo, desc, pre, activo=None, linea=None):
     menu = ''.join(
-        '<li><a href="%s%s"%s>%s</a></li>'
-        % (pre, u, ' aria-current="page"' if k == activo else '', e(t))
-        for t, u, k in MENU)
+        '<li><a href="%s%s"%s>%s%s</a></li>'
+        % (pre, u, ' aria-current="page"' if k == activo else '', ico(i, 15), e(t))
+        for t, u, k, i in MENU)
     return """<!doctype html>
 <html lang="es">
 <head>
@@ -326,17 +340,121 @@ def cabeza(titulo, desc, pre, activo=None):
 <link rel="stylesheet" href="%(fuentes)s">
 <link rel="stylesheet" href="%(pre)sassets/css/marca.css">
 <link rel="stylesheet" href="%(pre)sassets/css/sitio.css">
+<script src="%(pre)sassets/js/sitio.js" defer></script>
 </head>
-<body>
-<nav class="barra" aria-label="Navegación principal"><div class="envoltura">
+<body%(linea)s class="no-js">
+<script>document.body.classList.remove('no-js');</script>
+<nav class="barra" aria-label="Navegacion principal"><div class="envoltura">
 <a class="marca-sitio" href="%(pre)sindex.html">
 <span class="sigla">%(logo)s</span>
-<span>Tecnología con Sentido<small>Semillero Maker</small></span>
+<span>Tecnologia con Sentido<small>Semillero Maker</small></span>
 </a>
 <ul class="menu">%(menu)s</ul>
 </div></nav>
 """ % {'tit': e(titulo), 'desc': e(desc), 'pre': pre, 'fuentes': FUENTES_WEB,
-       'menu': menu, 'logo': ico('capas', 17)}
+       'menu': menu, 'logo': ico('capas', 18),
+       'linea': ' data-linea="%s"' % e(linea) if linea else ''}
+
+
+VISTAS = [('Resumen', '', 'brujula'), ('Módulos', '-modulos', 'libro'),
+          ('La ruta', '-ruta', 'mapa'), ('Desarrollo', '-desarrollo', 'cohete'),
+          ('El artículo', '-articulo', 'documento')]
+
+# Qué se pidió en cada sesión. Enlaza el módulo de la semana con las tareas
+# que el sitio ya mide, para que cada módulo muestre el avance real del equipo
+# en lo que se pidió ESA semana, y no un avance general.
+ENTREGABLES = {
+    'A': ['prop'],
+    'B': ['cron', 'acue', 'nece'],
+    'C': ['bocg', 'bocr'],
+    'D': ['fich'],
+    'E': ['preg', 'barr', 'casi'],
+    'F': ['evid'],
+    'G': ['dect'],
+}
+
+# Recursos que complementan cada módulo, fuera de la presentación.
+# Cuando no hay uno que sirva, se deja dicho qué tendría que explicar el
+# tutorial que el profe va a grabar, igual que en los hitos.
+RECURSOS_MODULO = {
+    'A': {'recursos': [], 'porGrabar': 'Cómo plantear el problema a partir de lo observado, con un ejemplo real de un equipo.'},
+    'B': {'recursos': [], 'porGrabar': 'Cómo repartir tareas en un cronograma de tres meses sin que todo quede para la última semana.'},
+    'C': {'recursos': [{'titulo': 'Primeros pasos en la web, MDN en español', 'url': 'https://developer.mozilla.org/es/docs/Learn_web_development/Getting_started/Your_first_website'}],
+          'porGrabar': 'Cómo pasar de un boceto en papel a la primera pantalla, sin saltarse el boceto.'},
+    'D': {'recursos': [], 'porGrabar': 'Cómo llenar la ficha técnica: qué es un requerimiento y cómo se comprueba.'},
+    'E': {'recursos': [], 'porGrabar': 'Cómo escribir la sección 1.2 citando tres autores con año, sin copiar y pegar.'},
+    'F': {'recursos': [{'titulo': 'Unity Essentials, ruta oficial', 'url': 'https://learn.unity.com/pathway/unity-essentials'},
+                       {'titulo': 'Fundamentos de servomotores con Arduino', 'url': 'https://docs.arduino.cc/learn/electronics/servo-motors/'}],
+          'porGrabar': None},
+    'G': {'recursos': [{'titulo': 'Agregar un sistema de puntaje en Unity', 'url': 'https://learn.unity.com/pathway/game-development/unit/create-a-basic-2d-game/tutorial/add-a-scoring-system'},
+                       {'titulo': 'Empezar con CSS, MDN en español', 'url': 'https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Getting_started'}],
+          'porGrabar': 'Cómo guardar una versión nueva del artículo sin perder la anterior.'},
+}
+
+
+def cargar_modulos():
+    ruta = os.path.join(RAIZ, 'datos', 'modulos.json')
+    if not os.path.exists(ruta):
+        return []
+    with open(ruta, encoding='utf-8') as fh:
+        return json.load(fh).get('modulos', [])
+
+
+def mapa_fijo(datos, equipo, nv, act, vista_activa):
+    """
+    El mapa que queda pegado arriba. Responde siempre tres preguntas:
+    en que proyecto estoy, en cual de sus cuatro vistas, y en que nivel va
+    el proyecto. Es lo que vuelve navegable una jerarquia de tres pisos.
+    """
+    linea = datos['lineas'][equipo['linea']]
+    s = equipo['slug']
+    p = ['<div class="mapa"><div class="envoltura">']
+
+    # fila 1: donde estoy en la jerarquia
+    p.append('<ol class="mapa-ruta">')
+    p.append('<li><a href="../index.html">%s Portal</a></li>' % ico('inicio', 14))
+    p.append('<li><a href="../index.html#linea-%s"><span class="insignia">%s %s</span></a></li>'
+             % (e(equipo['linea']), ico(ICONO_LINEA.get(equipo['linea'], 'diana'), 13),
+                e(linea['nombre'])))
+    p.append('<li><a class="aqui" href="%s.html">%s</a></li>' % (e(s), e(equipo['nombre'])))
+    p.append('</ol>')
+
+    # fila 2: las cuatro subsecciones
+    p.append('<nav class="mapa-vistas" aria-label="Vistas del proyecto">')
+    for titulo, sufijo, icono in VISTAS:
+        actual = ' aria-current="page"' if sufijo == vista_activa else ''
+        p.append('<a href="%s%s.html"%s>%s%s</a>' % (e(s), sufijo, actual, ico(icono, 15), e(titulo)))
+    p.append('</nav>')
+
+    # fila 3: los siete niveles, siempre visibles
+    p.append('<ol class="mapa-niveles" aria-label="Avance por niveles">')
+    for i, n in enumerate(nv):
+        if i:
+            p.append('<li class="guion" aria-hidden="true"></li>')
+        aqui = ' aqui' if n is act else ''
+        marca = ico('check', 13) if n['color'] == 'verde' else str(n['n'])
+        p.append('<li class="%s%s"><a class="punto" href="%s-ruta.html#nivel-%d" '
+                 'title="Nivel %d: %s, %d de %d tareas">%s</a></li>'
+                 % (n['color'], aqui, e(s), n['n'], n['n'], e(n['fase']['nombre']),
+                    n['hechas'], n['total'], marca))
+    p.append('<li class="rotulo-aqui">vas en <b>%s</b>, nivel %d de 7</li>'
+             % (e(act['fase']['nombre']), act['n']))
+    p.append('</ol>')
+
+    p.append('</div></div>')
+    return ''.join(p)
+
+
+def mapa_portal(secciones, activa=None):
+    """El mismo mapa, para el portal: sus secciones en vez de las vistas."""
+    p = ['<div class="mapa"><div class="envoltura">']
+    p.append('<ol class="mapa-ruta"><li><span class="aqui">%s Portal del semillero</span></li>'
+             '<li>quince proyectos, cuatro lineas tecnicas</li></ol>' % ico('inicio', 14))
+    p.append('<nav class="mapa-vistas" id="mapa-secciones" aria-label="Secciones del portal">')
+    for ancla, titulo, icono in secciones:
+        p.append('<a href="#%s" data-seccion="%s">%s%s</a>' % (e(ancla), e(ancla), ico(icono, 15), e(titulo)))
+    p.append('</nav></div></div>')
+    return ''.join(p)
 
 
 def migas(items):
@@ -404,6 +522,11 @@ def pagina_portal(datos):
                 'Portal del Semillero Maker de Tecnología con Sentido: catorce proyectos, '
                 'su ruta por niveles y acceso a los que ya están publicados.',
                 '', 'inicio')]
+    h.append(mapa_portal([('como', 'Como funciona', 'ayuda'),
+                          ('numeros', 'Diagnostico', 'tendencia'),
+                          ('proyectos', 'Los proyectos', 'tablero'),
+                          ('publicados', 'Publicados', 'cohete'),
+                          ('hermanos', 'Hermanos', 'globo')]))
 
     # --- portada oscura ---
     h.append('<header class="portada"><div class="envoltura">')
@@ -450,7 +573,7 @@ def pagina_portal(datos):
     h.append('</div></section>')
 
     # --- números ---
-    h.append('<section class="bloque"><div class="envoltura">')
+    h.append('<section class="bloque" id="numeros"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">Diagnóstico</span>'
              '<h2>El semillero, de un vistazo</h2>'
              '<p>Estos números salen de medir los documentos por dentro, no de contar si el '
@@ -483,18 +606,23 @@ def pagina_portal(datos):
         equipos = [x for x in datos['equipos'] if x['linea'] == clave]
         if not equipos:
             continue
-        h.append('<div class="cab-sub"><h3>%s %s</h3><span class="dato">%d equipos</span></div>'
-                 % (ico(ICONO_LINEA.get(clave, 'diana'), 20), e(linea['nombre']), len(equipos)))
+        h.append('<div class="cab-sub" id="linea-%s" data-linea="%s">'
+                 '<span class="icono">%s</span><h3>%s</h3>'
+                 '<span class="dato">%d equipos</span></div>'
+                 % (e(clave), e(clave), ico(ICONO_LINEA.get(clave, 'diana'), 20),
+                    e(linea['nombre']), len(equipos)))
         h.append('<p class="dato" style="margin:-8px 0 14px;max-width:72ch">%s</p>' % e(linea['nota']))
         h.append('<div class="rejilla c3">')
         for eq in equipos:
             hh, tt, nv = totales(datos, eq)
             _, ah, at = resumen_articulo(datos, eq)
             act = nivel_actual(nv)
-            h.append('<a class="equipo" href="equipos/%s.html">' % e(eq['slug']))
-            h.append('<div class="encima"><span class="icono-linea">%s</span>'
-                     '<span class="num">EQUIPO %s</span></div>'
-                     % (ico(ICONO_LINEA.get(clave, 'diana'), 17), e(eq['numero'])))
+            h.append('<a class="equipo revelar" data-linea="%s" href="equipos/%s.html">'
+                     % (e(clave), e(eq['slug'])))
+            h.append('<div class="banda">%s<span>%s</span><span class="num">EQUIPO %s</span></div>'
+                     % (ico(ICONO_LINEA.get(clave, 'diana'), 17), e(linea['nombre']),
+                        e(eq['numero'])))
+            h.append('<div class="interior">')
             h.append('<h3>%s</h3>' % e(eq['nombre']))
             h.append('<p class="quien">%s</p>' % e(eq['integrantes']))
             h.append('<div class="medidas">%s%s</div>'
@@ -502,7 +630,7 @@ def pagina_portal(datos):
                         progreso('Artículo', ah, at)))
             if (eq.get('publicacion') or {}).get('estado') == 'en linea':
                 h.append('<span class="sello"><span class="punto"></span>publicado y en línea</span>')
-            h.append('</a>')
+            h.append('</div></a>')
         h.append('</div>')
     h.append('</div></section>')
 
@@ -590,10 +718,8 @@ def pagina_equipo(datos, equipo):
 
     h = [cabeza('%s · Semillero Maker' % equipo['nombre'],
                 'Ruta por niveles, desarrollo tecnológico y estado del artículo del equipo %s.'
-                % equipo['numero'], '../')]
-    h.append(migas([('Inicio', '../index.html'),
-                    ('Proyectos', '../index.html#proyectos'),
-                    (equipo['nombre'], None)]))
+                % equipo['numero'], '../', linea=equipo['linea'])]
+    h.append(mapa_fijo(datos, equipo, nv, act, ''))
     h.append(portada_equipo(datos, equipo, hh, tt))
     h.append('<main>')
 
@@ -627,11 +753,14 @@ def pagina_equipo(datos, equipo):
 
     # --- las tres vistas ---
     h.append('<section class="bloque sobre-superficie"><div class="envoltura">')
-    h.append('<div class="cab-seccion"><span class="rotulo">Las tres vistas</span>'
+    h.append('<div class="cab-seccion"><span class="rotulo">Las cuatro vistas</span>'
              '<h2>Tu proceso, por dentro</h2>'
-             '<p>El mismo proyecto mirado de tres maneras. Entra a la que necesites.</p></div>')
+             '<p>El mismo proyecto mirado de cuatro maneras. Entra a la que necesites.</p></div>')
     h.append('<div class="rejilla c3">')
     for icono, titulo, desc, url, (a, b) in [
+            ('libro', 'Módulos del semestre',
+             'Semana por semana: lo que se pidió, las diapositivas de la sesión y recursos para repasar.',
+             '%s-modulos.html' % s, (hh, tt)),
             ('mapa', 'La ruta por niveles',
              'Los siete niveles del semestre, con las tareas de cada uno y de dónde salió su estado.',
              '%s-ruta.html' % s, (hh, tt)),
@@ -736,6 +865,135 @@ def seccion_origen(meta):
                ico('bombilla', 17)))
 
 
+def pagina_modulos(datos, equipo, modulos):
+    """
+    Vista de modulos: la ruta de aprendizaje, semana por semana.
+
+    Cada modulo junta tres cosas, que es lo que lo hace servir:
+      1. lo que se pidio esa semana, con el avance REAL del equipo en eso
+      2. las diapositivas de la sesion, legibles aqui mismo, filtradas a la
+         linea del equipo mas las que eran para todos
+      3. recursos de fuera de la presentacion, o el tutorial que falta grabar
+    """
+    meta = datos['meta']
+    hh, tt, nv = totales(datos, equipo)
+    act = nivel_actual(nv)
+    estado = equipo['estado']
+    linea_eq = equipo['linea']
+
+    tareas_texto = {}
+    for grupo in datos['tareasComunes'].values():
+        for t in grupo:
+            tareas_texto[t['id']] = t['texto']
+
+    listos = total_ent = 0
+    for m in modulos:
+        ids = ENTREGABLES.get(m['letra'], [])
+        m['_ent'] = []
+        for i in ids:
+            hecha, fuente = estado.get(i, [False, 'Sin revisar'])
+            m['_ent'].append((i, tareas_texto.get(i, i), hecha, fuente))
+        m['_hechas'] = sum(1 for x in m['_ent'] if x[2])
+        m['_total'] = len(m['_ent'])
+        listos += m['_hechas']
+        total_ent += m['_total']
+
+    h = [cabeza('Modulos - %s' % equipo['nombre'],
+                'Ruta de aprendizaje semana por semana del equipo %s, con las diapositivas de '
+                'cada sesion y lo que se pidio.' % equipo['numero'],
+                '../', linea=equipo['linea'])]
+    h.append(mapa_fijo(datos, equipo, nv, act, '-modulos'))
+    h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
+
+    h.append('<main>')
+    h.append('<section class="bloque"><div class="envoltura">')
+    h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 2 de 5</span>'
+             '<h2>Modulos del semestre</h2>'
+             '<p>Una sesion, un modulo. Cada uno trae lo que se pidio esa semana, el material '
+             'de apoyo que se proyecto en clase, y recursos de fuera para repasar. '
+             'Las diapositivas estan aqui: no hay que ir a buscarlas al Drive.</p></div>'
+             % ico('libro', 15))
+    h.append(progreso('Entregables de las sesiones ya cumplidos', listos, total_ent, alta=True))
+    h.append('</div></section>')
+
+    h.append('<section class="bloque sobre-superficie"><div class="envoltura">')
+    h.append('<ol class="modulos">')
+    ETIQ = {'todos': 'para todos', 'unity': 'Unity', 'software': 'Desarrollo de software',
+            'electronica': 'Electronica', 'audiovisual': 'Audiovisual'}
+    for m in modulos:
+        col = color_de(m['_hechas'], m['_total'])
+        diapos = [d for d in m['diapositivas'] if d['seccion'] in ('todos', linea_eq)]
+        rec = RECURSOS_MODULO.get(m['letra'], {})
+        h.append('<li class="modulo %s revelar">' % col)
+        h.append('<div class="modulo-cab">')
+        h.append('<span class="letra">%s</span>' % e(m['letra']))
+        detalle = ('%d diapositivas para tu linea' % len(diapos)) if diapos else 'sin presentacion'
+        h.append('<div class="titulo"><h3>%s</h3><p class="dato">%s</p></div>'
+                 % (e(m['sesion']), e(detalle)))
+        if m['_total']:
+            h.append('<div class="medida">%s</div>'
+                     % progreso('Lo que se pidio', m['_hechas'], m['_total']))
+        else:
+            h.append('<div class="medida">%s</div>'
+                     % chip('gris', 'sin entregable medible'))
+        h.append('</div>')
+
+        h.append('<div class="modulo-cuerpo">')
+        if m['_ent']:
+            h.append('<div class="modulo-parte"><h4>%s Lo que se pidio esta semana</h4>'
+                     '<ul class="tareas">' % ico('lista', 16))
+            for _id, texto, hecha, fuente in m['_ent']:
+                h.append('<li class="%s"><span class="casilla">%s</span><span class="texto">'
+                         '<b>%s</b><span class="fuente dato">%s</span></span></li>'
+                         % ('hecha' if hecha else 'pendiente', ico('check', 13),
+                            e(texto), e(fuente)))
+            h.append('</ul></div>')
+
+        if diapos:
+            h.append('<details class="mas diapos"><summary>%s Ver las %d diapositivas de la sesion'
+                     '</summary><div>' % (ico('chevron', 14), len(diapos)))
+            h.append('<p class="dato">Se muestran las de tu linea y las que eran para todos. '
+                     'La presentacion completa esta en <code>%s</code>.</p>'
+                     % e(m.get('archivo') or 'la carpeta de la sesion'))
+            h.append('<ol class="diapositivas">')
+            for d in diapos:
+                h.append('<li class="diapo"><div class="diapo-cab">'
+                         '<span class="n">%d</span><h5>%s</h5><span class="seccion">%s</span></div>'
+                         % (d['n'], e(d['titulo'] or 'Diapositiva'), e(ETIQ.get(d['seccion'], ''))))
+                if d['cuerpo']:
+                    h.append('<ul class="vinetas">%s</ul>'
+                             % ''.join('<li>%s</li>' % e(x) for x in d['cuerpo']))
+                for tabla in d['tablas']:
+                    h.append('<div class="tabla-env"><table class="articulo"><tbody>')
+                    for fi, fila in enumerate(tabla):
+                        et = 'th' if fi == 0 else 'td'
+                        h.append('<tr>%s</tr>'
+                                 % ''.join('<%s>%s</%s>' % (et, e(c), et) for c in fila))
+                    h.append('</tbody></table></div>')
+                h.append('</li>')
+            h.append('</ol></div></details>')
+
+        if rec.get('recursos') or rec.get('porGrabar'):
+            h.append('<div class="modulo-parte"><h4>%s Para repasar por fuera de la presentacion</h4>'
+                     % ico('birrete', 16))
+            if rec.get('recursos'):
+                h.append('<ul class="recursos">%s</ul>' % ''.join(
+                    '<li>%s<a href="%s">%s</a></li>'
+                    % (ico('externo', 15), e(r['url']), e(r['titulo'])) for r in rec['recursos']))
+            if rec.get('porGrabar'):
+                h.append('<div class="nota-caja ambar"><span class="titulo">%s'
+                         'Tutorial pendiente de grabar por el profe</span>%s</div>'
+                         % (ico('video', 16), e(rec['porGrabar'])))
+            h.append('</div>')
+        h.append('</div></li>')
+    h.append('</ol></div></section>')
+
+    h.append(seccion_origen(meta))
+    h.append('</main>')
+    h.append(pie(meta))
+    return ''.join(h)
+
+
 def pagina_ruta(datos, equipo):
     meta = datos['meta']
     hh, tt, nv = totales(datos, equipo)
@@ -743,9 +1001,9 @@ def pagina_ruta(datos, equipo):
 
     h = [cabeza('Ruta · %s' % equipo['nombre'],
                 'Los siete niveles del semestre para el equipo %s, con las tareas de cada uno.'
-                % equipo['numero'], '../')]
-    h.append(migas([('Inicio', '../index.html'), ('Proyectos', '../index.html#proyectos'),
-                    (equipo['nombre'], '%s.html' % equipo['slug']), ('La ruta por niveles', None)]))
+                % equipo['numero'], '../', linea=equipo['linea'])]
+    _hh, _tt, _nv = totales(datos, equipo)
+    h.append(mapa_fijo(datos, equipo, _nv, nivel_actual(_nv), '-ruta'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
     h.append('<main>')
@@ -793,9 +1051,9 @@ def pagina_desarrollo(datos, equipo):
 
     h = [cabeza('Desarrollo · %s' % equipo['nombre'],
                 'Hitos técnicos del equipo %s, con orientación y tutoriales.' % equipo['numero'],
-                '../')]
-    h.append(migas([('Inicio', '../index.html'), ('Proyectos', '../index.html#proyectos'),
-                    (equipo['nombre'], '%s.html' % equipo['slug']), ('Desarrollo tecnológico', None)]))
+                '../', linea=equipo['linea'])]
+    _hh, _tt, _nv = totales(datos, equipo)
+    h.append(mapa_fijo(datos, equipo, _nv, nivel_actual(_nv), '-desarrollo'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
     h.append('<main>')
@@ -860,9 +1118,9 @@ def pagina_articulo(datos, equipo):
 
     h = [cabeza('Artículo · %s' % equipo['nombre'],
                 'Estado del artículo de desarrollo tecnológico del equipo %s, sección por sección.'
-                % equipo['numero'], '../')]
-    h.append(migas([('Inicio', '../index.html'), ('Proyectos', '../index.html#proyectos'),
-                    (equipo['nombre'], '%s.html' % equipo['slug']), ('El artículo', None)]))
+                % equipo['numero'], '../', linea=equipo['linea'])]
+    _hh, _tt, _nv = totales(datos, equipo)
+    h.append(mapa_fijo(datos, equipo, _nv, nivel_actual(_nv), '-articulo'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
     h.append('<main>')
@@ -913,6 +1171,7 @@ def main():
     with open(DATOS, encoding='utf-8') as f:
         datos = json.load(f)
 
+    modulos = cargar_modulos()
     os.makedirs(os.path.join(SALIDA, 'equipos'), exist_ok=True)
     escritas = []
 
@@ -926,6 +1185,7 @@ def main():
     for eq in datos['equipos']:
         s = eq['slug']
         escribir('equipos/%s.html' % s, pagina_equipo(datos, eq))
+        escribir('equipos/%s-modulos.html' % s, pagina_modulos(datos, eq, modulos))
         escribir('equipos/%s-ruta.html' % s, pagina_ruta(datos, eq))
         escribir('equipos/%s-desarrollo.html' % s, pagina_desarrollo(datos, eq))
         escribir('equipos/%s-articulo.html' % s, pagina_articulo(datos, eq))

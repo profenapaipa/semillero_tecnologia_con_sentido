@@ -1,0 +1,261 @@
+diapositivas: 22
+tamano: 12192000 x 6858000
+
+--- 1 ---
+  [texto] 26 Y 27 DE AGOSTO
+  [texto] Empezar a construir | y reunir lo escrito
+  [texto] 1
+  [texto] Cada línea trabaja en lo suyo
+  [texto] 2
+  [texto] Todos reúnen lo investigado en el artículo base
+  [texto] 3
+  [texto] Al final, escribir dónde se trabaron
+  [texto] Este archivo está en su carpeta. Ábranlo y vayan a la sección de su proyecto.
+--- 2 ---
+  [texto] Cómo usar este archivo
+  [texto] No hay que verlo todo. Vayan a la sección de su proyecto y sáltense el resto.
+  [texto] Unity
+  [texto] Equipos 6, 10.1 y 10.2
+  [texto] diapositiva 4
+  [texto] Desarrollo web
+  [texto] Equipos 1, 3, 5 y 7
+  [texto] diapositiva 10
+  [texto] Electrónica y robótica
+  [texto] Equipos 4 y 8
+  [texto] diapositiva 13
+  [texto] Producción audiovisual
+  [texto] Equipos 2.1, 2.2, 9, 11.1 y 11.2
+  [texto] diapositiva 15
+  [texto] Documentación
+  [texto] Los 14 equipos, esta sí la ven todos
+  [texto] diapositiva 19
+  [texto] Cada diapositiva tiene arriba a la izquierda la etiqueta de su sección. La última parte, Documentación, es para todos sin excepción.
+--- 3 ---
+  [texto] Cómo se reparten los 90 minutos
+  [texto] Dentro del equipo: unos construyen y otros escriben. No todos hacen lo mismo al tiempo.
+  [texto] 45 min
+  [texto] Construir
+  [texto] Cada línea tiene | su propia tarea
+  [texto] 35 min
+  [texto] Artículo base
+  [texto] Reunir lo que ya | escribieron
+  [texto] 10 min
+  [texto] Barreras
+  [texto] Dónde se trabaron | y qué video piden
+  [texto] Los dos archivos de hoy están en su carpeta E) 26-27 de agosto: Articulo_base y Barreras.
+--- 4 ---
+  [texto] Unity
+  [texto] Equipos 6, 10.1 y 10.2  ·  versión 2019.4.38f1
+--- 5 ---
+  [texto] UNITY
+  [texto] Qué construye cada equipo
+  [texto] Los tres arman lo mismo hoy: una pantalla con botones. Cambia lo que viene después.
+  [texto] Equipo 6
+  [texto] Lector de señas
+  [texto] La pantalla muestra la palabra detectada. El reconocimiento se entrena en Teachable Machine desde el navegador; Unity solo muestra el resultado.
+  [texto] Equipo 10.1
+  [texto] Videojuego motricidad
+  [texto] Menú de inicio, pantalla de juego y pantalla de resultado con el puntaje.
+  [texto] Equipo 10.2
+  [texto] Minijuego de coordinación
+  [texto] Menú de inicio, pantalla de juego y pantalla de fin. Mismo esquema, un solo integrante.
+  [texto] Todos trabajan en 2D. El proyecto se crea con la plantilla 2D, no 3D.
+--- 6 ---
+  [texto] UNITY
+  [texto] Empiecen viendo, no leyendo
+  [texto] Los dos videos son de 2020, así que la pantalla se ve igual a la de ustedes.
+  [texto] 45 min
+  [texto] VIDEO 1
+  [texto] La interfaz de Unity
+  [texto] Empiecen por aquí. Qué es cada panel y cómo moverse. Véanlo con Unity abierto al lado.
+  [texto] youtube.com/watch?v=x3FbFa843Pw
+  [texto] VIDEO 2
+  [texto] Menú principal con botones
+  [texto] Que el botón cambie de pantalla. Es el paso siguiente, no el de hoy.
+  [texto] youtube.com/watch?v=zGvM2pM0QzA
+  [texto] Vean el video 1 mientras van haciendo, con pausa en cada paso. El video 2 solo si les sobra tiempo.
+--- 7 ---
+  [texto] UNITY
+  [texto] Unity no es difícil, es desconocido
+  [texto] Son cinco zonas y cada una tiene un trabajo.
+  [texto] Escena
+  [texto] La mesa de trabajo
+  [texto] Centro
+  [texto] Juego
+  [texto] Lo que verá el jugador
+  [texto] Centro, otra pestaña
+  [texto] Jerarquía
+  [texto] La lista de todo lo que existe
+  [texto] Izquierda
+  [texto] Proyecto
+  [texto] El archivador de archivos
+  [texto] Abajo
+  [texto] Inspector
+  [texto] La ficha del objeto seleccionado
+  [texto] Derecha
+  [texto] La regla que evita casi todas las confusiones: primero se selecciona el objeto en la Jerarquía, y solo entonces se le cambia algo en el Inspector.
+--- 8 ---
+  [texto] UNITY
+  [texto] La meta de hoy, escalón por escalón
+  [texto] Suban uno a la vez. Con llegar al 7 la sesión está cumplida.
+  [texto] 45 min
+  [texto] 1
+  [texto] Crear el proyecto en modo 2D
+  [texto] 2
+  [texto] Reconocer las cinco zonas
+  [texto] 3
+  [texto] Crear el Canvas
+  [texto] 4
+  [texto] Poner el título
+  [texto] 5
+  [texto] Poner dos o tres botones
+  [texto] 6
+  [texto] Darle Play y ver cómo queda
+  [texto] 7
+  [texto] Guardar y saber dónde quedó
+  [texto] Que el botón haga algo al tocarlo queda para la próxima. Nadie aprende Unity en 45 minutos y no es lo que se espera.
+--- 9 ---
+  [texto] UNITY
+  [texto] Tres cosas que asustan y son normales
+  [texto] Si les pasa alguna, no está mal: pasa siempre.
+  [texto] !
+  [texto] El Canvas se ve gigante
+  [texto] En la Escena aparece un rectángulo enorme, más grande que todo. Así es siempre. No lo achiquen.
+  [texto] !
+  [texto] El texto desaparece
+  [texto] Al subir el tamaño de letra, el texto se esconde. Es que la caja quedó chica: agranden Width y Height.
+  [texto] !
+  [texto] El Inspector está vacío
+  [texto] No hay nada seleccionado. Hagan clic en un objeto de la Jerarquía y se llena.
+--- 10 ---
+  [texto] Desarrollo web
+  [texto] Equipos 1, 3, 5 y 7  ·  VS Code y GitHub
+--- 11 ---
+  [texto] DESARROLLO WEB
+  [texto] Por qué usamos GitHub
+  [texto] No es un requisito del profe: resuelve tres problemas que van a tener sí o sí.
+  [texto] Respaldo
+  [texto] Si se daña el computador o se borra la carpeta, el proyecto sigue existiendo.
+  [texto] Control de versiones
+  [texto] Guarda cada cambio. Si algo se dañó, se puede volver a la versión anterior.
+  [texto] Publicar
+  [texto] Con GitHub Pages la página queda en internet con un enlace real, no solo en su computador.
+  [texto] Por ahora se sube desde el computador del profe, con su cuenta. Eso significa que GitHub no registra quién hizo qué: eso sigue quedando en la bitácora y el cronograma. Más adelante abren cuenta propia.
+--- 12 ---
+  [texto] DESARROLLO WEB
+  [texto] La ruta de hoy
+  [texto] Cinco pasos. El quinto solo si llegan.
+  [texto] 45 min
+  [texto] 1
+  [texto] Crear la carpeta del proyecto
+  [texto] Con el nombre del equipo, en el computador, no en USB
+  [texto] 2
+  [texto] Abrirla desde VS Code
+  [texto] Archivo, Abrir carpeta. Todo el trabajo se hace desde ahí
+  [texto] 3
+  [texto] Crear el archivo index.html
+  [texto] Ese nombre exacto, en minúscula. Es la página de inicio
+  [texto] 4
+  [texto] Que se vea algo en el navegador
+  [texto] Un título y un párrafo bastan. Después se le pone CSS
+  [texto] 5
+  [texto] Subirlo a GitHub
+  [texto] Con el profe, desde su computador
+  [texto] Equipo 7, Wisfox: su paso extra es conectar la base de datos que ya avanzaron con la página. Equipo 3: hoy queda definida la estructura de pantallas.
+--- 13 ---
+  [texto] Electrónica y robótica
+  [texto] Equipos 4 y 8  ·  Arduino
+--- 14 ---
+  [texto] ELECTRÓNICA Y ROBÓTICA
+  [texto] La tarea de hoy
+  [texto] El colegio tiene los kits de Arduino, impresora 3D y grabado láser.
+  [texto] 45 min
+  [texto] Equipo 4
+  [texto] Comedero automático
+  [texto] Montar el circuito en protoboard y lograr que el servo se mueva solo, sin el reloj todavía. Después se le agrega el RTC.
+  [texto] Equipo 8
+  [texto] Brazo robot, 4 servos
+  [texto] Montar UN servo y controlar su ángulo. Los cuatro juntos vienen después, cuando esté resuelta la alimentación.
+  [texto] Alerta para el Equipo 8
+  [texto] Cuatro servos NO se pueden alimentar desde el Arduino. La placa no entrega esa corriente: o no se mueven, o se reinicia, o se daña. Necesitan fuente externa de 5V con tierra común. Hoy prueben con uno solo y revisen si e
+--- 15 ---
+  [texto] Producción audiovisual
+  [texto] Equipos 2.1, 2.2, 9, 11.1 y 11.2
+--- 16 ---
+  [texto] AUDIOVISUAL
+  [texto] Un archivo, dos momentos
+  [texto] Guiones_audiovisual.xlsx. Primero la historia, después cómo se graba.
+  [texto] 1
+  [texto] Guion literario
+  [texto] La historia contada como se ve y se oye. Sin cámaras, sin planos.
+  [texto] Hoja: Guion literario
+  [texto] 2
+  [texto] Guion técnico
+  [texto] Cada plano con su locación, tipo de plano, ángulo, sonido y duración.
+  [texto] Hojas: Locaciones, Guion técnico y Plan de rodaje
+  [texto] Las cinco pestañas van en ese orden: Instrucciones, Guion literario, Locaciones, Guion técnico y Plan de rodaje.
+--- 17 ---
+  [texto] AUDIOVISUAL
+  [texto] El ejemplo de referencia
+  [texto] Vean el corto con la hoja al lado: explica el formato mejor que cualquier instrucción.
+  [texto] Corto "Soltar" y su guion, en Drive
+  [texto] drive.google.com/drive/folders/1rudWBw5nRgovwclKJM3R54g-kwo80XMi
+  [texto] Qué cambió en el formato que van a usar
+  [texto] Se escribe la duración, no el tiempo de inicio
+  [texto] El inicio se calcula solo y el total avisa si se pasan del tiempo
+  [texto] La iluminación es lista desplegable
+  [texto] En el ejemplo quedó vacía en los 25 planos porque era incómoda de llenar
+  [texto] Las locaciones tienen hoja propia
+  [texto] Con color, dirección exacta y si necesita permiso
+  [texto] Hay hoja de plan de rodaje
+  [texto] Para grabar agrupado por lugar y no volver cinco veces al mismo sitio
+  [texto] El literario no lleva planos ni ángulos
+  [texto] En el ejemplo los tenía; ahora eso vive solo en la hoja técnica
+  [texto] Ojo: en "Soltar" el storyboard son capturas del video ya editado. Ustedes todavía no han grabado, así que el suyo va con dibujos o fotos de referencia.
+--- 18 ---
+  [texto] AUDIOVISUAL
+  [texto] La tarea de hoy
+  [texto] Escribir el literario. El técnico se llena cuando la historia esté cerrada.
+  [texto] 45 min
+  [texto] Escriban el guion literario
+  [texto] Una página, en presente, solo lo que se ve y se oye. | Si no cabe en una página, la historia es muy larga para el tiempo que tienen.
+  [texto] Y abran la hoja de locaciones
+  [texto] Misma hoja de cálculo, pestaña Locaciones. | Escriban los lugares donde van a grabar y pónganle un color a cada uno.
+  [texto] El error que hace perder semanas
+  [texto] Escribir una historia que necesita seis locaciones, diez actores o efectos que no saben hacer. Antes de cerrar el guion, pregúntense por cada línea: ¿esto lo podemos grabar con lo que tenemos?
+--- 19 ---
+  [texto] Documentación
+  [texto] Los 14 equipos  ·  aquí converge todo
+--- 20 ---
+  [texto] DOCUMENTACIÓN
+  [texto] El artículo base
+  [texto] No se termina hoy: se va llenando sesión tras sesión hasta octubre.
+  [texto] 35 min
+  [texto] 1. Introducción
+  [texto] →  Problema, antecedentes y propósito
+  [texto] 2. Metodología
+  [texto] →  Qué hicieron en cada fase del Design Thinking
+  [texto] 3. Resultados
+  [texto] →  El desarrollo: qué construyeron y qué funciona hoy
+  [texto] 4 y 5. Discusión y cierre
+  [texto] →  Aprendizajes, límites y conclusiones
+  [texto] Hoy llenan lo que ya tienen de las semanas pasadas. La tabla de la primera página les muestra qué falta y cuándo se puede llenar.
+--- 21 ---
+  [texto] DOCUMENTACIÓN
+  [texto] Las barreras: lo último de la clase
+  [texto] De aquí salen los videos que el profe graba el fin de semana.
+  [texto] 10 min
+  [texto] ✗  No sirve escribir
+  [texto] "No entendimos Unity" | "Está muy difícil" | "No nos funcionó"
+  [texto] ✓  Sí sirve
+  [texto] "No logramos crear el Canvas" | "Al minuto 4 del video no nos apareció esa opción"
+  [texto] Las tres preguntas de la hoja
+  [texto] 1.  ¿Hasta dónde llegaron hoy? | 2.  ¿Dónde se trabaron y qué pasó en pantalla? | 3.  ¿Qué necesitan que grabe el profe?
+--- 22 ---
+  [texto] Antes de salir
+  [texto] Los archivos están en la carpeta de la sesión, en su Drive.
+  [texto] Lo que construimos hoy quedó guardado y sabemos dónde.
+  [texto] Articulo_base.docx tiene llenas las secciones que ya podían llenarse.
+  [texto] Barreras.docx está diligenciado con las tres preguntas.
+  [texto] Subimos una foto o captura de hasta dónde llegamos.
+  [texto] 2 y 3 de septiembre: llegan los videos hechos con las barreras de hoy y los formatos de guion.

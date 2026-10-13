@@ -1,0 +1,1640 @@
+{
+ "modulos": [
+  {
+   "letra": "A",
+   "sesion": "29 y 30 de julio",
+   "fecha": "2026-07-29",
+   "archivo": "Sesion_29-30_julio.pptx",
+   "encontrado": true,
+   "diapositivas": [
+    {
+     "n": 1,
+     "seccion": "todos",
+     "titulo": "SESIÓN DEL 29 Y 30 DE JULIO · 90 MINUTOS",
+     "cuerpo": [
+      "Hoy dejamos lista",
+      "la base del proyecto",
+      "Tu carpeta creada y organizada en Drive",
+      "1",
+      "Tu problema y tu pregunta de investigación escritos",
+      "2",
+      "Tres antecedentes verificados que respaldan tu idea",
+      "3",
+      "Nada más. Hoy no construimos el prototipo ni escribimos el artículo."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 2,
+     "seccion": "todos",
+     "titulo": "Los 90 minutos de hoy",
+     "cuerpo": [
+      "Cada bloque termina con algo guardado en Drive.",
+      "10 min",
+      "15 min",
+      "30 min",
+      "30 min",
+      "5 min",
+      "Encuadre",
+      "Tu carpeta",
+      "Tu problema",
+      "Antecedentes",
+      "Cierre",
+      "Abrimos Drive",
+      "y la guía",
+      "Creas la carpeta",
+      "y las subcarpetas",
+      "Lo escribes",
+      "y lo afinas con IA",
+      "Buscas y verificas",
+      "tres artículos",
+      "Revisas la lista",
+      "de salida",
+      "Si te atrasas en un bloque, dilo en voz alta. Es preferible ajustar el ritmo que salir con la mitad hecha."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 3,
+     "seccion": "todos",
+     "titulo": "Crea tu carpeta en Drive",
+     "cuerpo": [
+      "MOMENTO 1 · 15 min",
+      "Todos los equipos usamos exactamente la misma estructura.",
+      "Equipo[03]_[NombreCortoDelProyecto]_2026-II",
+      "00_Propuesta",
+      "la usas hoy",
+      "Y antes de pasar al momento 2",
+      "01_Antecedentes",
+      "la usas hoy",
+      "1.  Sube tu borrador anterior a 00_Propuesta y renómbralo Propuesta_borrador_v0.docx",
+      "2.  No lo borres: muestra de dónde partiste y eso cuenta en la evaluación.",
+      "3.  Comparte la carpeta con tu equipo y con el docente, los dos como editores.",
+      "02_Cronograma",
+      "después",
+      "03_Bitacora",
+      "después",
+      "04_Desarrollo",
+      "después",
+      "05_Evidencias",
+      "después",
+      "06_Entrega_final",
+      "después"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 4,
+     "seccion": "todos",
+     "titulo": "Tu problema y tu pregunta",
+     "cuerpo": [
+      "MOMENTO 2 · 30 min",
+      "Dos cosas distintas que se confunden todo el tiempo.",
+      "El problema",
+      "La pregunta de investigación",
+      "La situación concreta que observaste y que crees que se puede mejorar con tecnología. Algo que viste, en un lugar, que le pasa a alguien.",
+      "Lo que tu proyecto va a responder con evidencia en octubre. Si necesita dos años o un laboratorio que no tienes, hay que ajustarla.",
+      "Así no",
+      "Así sí",
+      "La contaminación en el mundo.",
+      "La tecnología en la educación.",
+      "Los estudiantes de 6.º no separan los residuos en el descanso porque no distinguen las canecas."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 5,
+     "seccion": "todos",
+     "titulo": "Primero escribes tú, sin inteligencia artificial",
+     "cuerpo": [
+      "MOMENTO 2 · paso 1",
+      "Cinco minutos, cinco líneas. Esto es lo único que la IA no puede hacer por ti: no estuvo ahí.",
+      "¿Qué viste?",
+      "La situación exacta, no la interpretación",
+      "1",
+      "¿Dónde?",
+      "El salón, el patio, la casa, el barrio",
+      "2",
+      "¿A quién le pasa?",
+      "Cuántos son y de qué grado o edad",
+      "3",
+      "¿Por qué te llamó la atención?",
+      "Qué te hizo pensar que se puede mejorar",
+      "4",
+      "Con errores de redacción está bien. Eso se arregla en el paso siguiente."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 6,
+     "seccion": "todos",
+     "titulo": "Ahora sí, afina con la IA",
+     "cuerpo": [
+      "MOMENTO 2 · paso 2",
+      "Abre Claude o ChatGPT. Copia el prompt de la guía y cambia lo que está entre corchetes.",
+      "PROMPT 1 · DEL PROBLEMA A LA PREGUNTA",
+      "Ojo con esto",
+      "Actúa como asesor de investigación para",
+      "estudiantes de colegio.",
+      "Esto fue lo que observamos: [tus cinco líneas].",
+      "Ocurre en: [lugar exacto].",
+      "Afecta a: [a quiénes y cuántos].",
+      "Contamos con: [3 meses] y [herramientas].",
+      "1. Reescribe el problema en máximo 120 palabras.",
+      "2. Propón tres preguntas de investigación.",
+      "3. Dime cuál es más realista para tres meses.",
+      "4. Señala qué información me falta.",
+      "No inventes datos que yo no te haya dado.",
+      "Si la respuesta menciona cosas que ustedes no vieron, bórralas. El problema es de ustedes.",
+      "Y después",
+      "Elige una de las tres preguntas y reescríbela con tus palabras. Si la copias tal cual, se nota en la sustentación."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 7,
+     "seccion": "todos",
+     "titulo": "De la pregunta a los objetivos",
+     "cuerpo": [
+      "MOMENTO 2 · pasos 4 y 5",
+      "Un objetivo general y tres específicos. Todos empiezan con un verbo en infinitivo.",
+      "PROMPT 2 · OBJETIVOS",
+      "Verbos que sirven",
+      "Esta es nuestra pregunta: [pega tu pregunta].",
+      "Este es nuestro problema: [pega el párrafo].",
+      "Propón un objetivo general y tres específicos.",
+      "Cada uno empieza con un verbo en infinitivo.",
+      "Sigue la ruta: diagnosticar, diseñar,",
+      "implementar y evaluar.",
+      "Explica en una línea por qué cada específico",
+      "es necesario para cumplir el general.",
+      "identificar · caracterizar",
+      "diseñar · desarrollar",
+      "implementar · evaluar",
+      "comparar · validar",
+      "Pega el problema, la pregunta y los objetivos en tu documento de propuesta, dentro de 00_Propuesta. Guárdalo como Propuesta_IMRaD_EquipoXX_v1.docx"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 8,
+     "seccion": "todos",
+     "titulo": "Tres antecedentes verificados",
+     "cuerpo": [
+      "MOMENTO 3 · 30 min",
+      "Un antecedente es un trabajo que alguien ya publicó sobre algo parecido a lo tuyo.",
+      "Sirven",
+      "No sirven",
+      "Hoy necesitas",
+      "Artículos de revistas académicas y tesis de universidades.",
+      "Blogs, videos, noticias y páginas comerciales.",
+      "Solo tres. En agosto se completan hasta cinco.",
+      "Advertencia: la IA a veces inventa artículos",
+      "Título creíble, autores creíbles, revista creíble, y nada de eso existe. Se llama alucinación. Por eso hoy verificas cada artículo antes de anotarlo: si no lo verificas, no cuenta."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 9,
+     "seccion": "todos",
+     "titulo": "Arma tu búsqueda y busca de verdad",
+     "cuerpo": [
+      "MOMENTO 3 · pasos 1 y 2",
+      "Primero le pides a la IA las palabras; después buscas tú en Google Scholar.",
+      "PROMPT 3 · CONCEPTOS Y ECUACIÓN DE BÚSQUEDA",
+      "Los operadores",
+      "Mi proyecto trata de: [dos frases].",
+      "La población es: [a quiénes va dirigido].",
+      "1. Cinco conceptos clave en español y en inglés.",
+      "2. Tres ecuaciones de búsqueda para Google",
+      "Scholar con los operadores AND, OR y comillas.",
+      "3. Tres palabras que NO debo usar por",
+      "demasiado generales.",
+      "AND exige los dos términos.",
+      "OR acepta sinónimos.",
+      "\"comillas\" buscan la frase exacta.",
+      "Pega la ecuación en scholar.google.com y filtra desde 2019. Abre solo los resultados que tengan PDF o DOI."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 10,
+     "seccion": "todos",
+     "titulo": "Verifica antes de anotar",
+     "cuerpo": [
+      "MOMENTO 3 · paso 3",
+      "Este paso no se salta. Con que falle uno solo, el artículo se descarta.",
+      "Busca el título completo en Google Scholar",
+      "Si no aparece, no existe",
+      "1",
+      "Abre el DOI en doi.org",
+      "Si no abre, el enlace es falso",
+      "2",
+      "Compara el título que abrió con el que te dio la IA",
+      "Si no coincide, no es el mismo artículo",
+      "3",
+      "Lee el resumen y confirma que se parece a tu tema",
+      "Con el título no basta",
+      "4",
+      "Los tres que pasen la prueba se registran en la matriz de 01_Antecedentes y se descarga su PDF."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 11,
+     "seccion": "todos",
+     "titulo": "Lista de salida",
+     "cuerpo": [
+      "Lo que quede sin marcar, dilo en voz alta. Se resuelve hoy, no la próxima semana.",
+      "La carpeta está creada, con las siete subcarpetas y compartida con el docente.",
+      "El borrador anterior quedó guardado como Propuesta_borrador_v0.docx.",
+      "El problema está escrito en un párrafo, con nuestras palabras.",
+      "La pregunta de investigación es realista para tres meses.",
+      "Están escritos el objetivo general y tres específicos.",
+      "Hay tres artículos verificados y registrados, con sus PDF guardados.",
+      "Próxima sesión, 5 y 6 de agosto: fase de ideación. Alternativas de solución e hipótesis."
+     ],
+     "tablas": []
+    }
+   ],
+   "titulo": "SESIÓN DEL 29 Y 30 DE JULIO · 90 MINUTOS Hoy dejamos lista"
+  },
+  {
+   "letra": "B",
+   "sesion": "5 y 6 de agosto",
+   "fecha": "2026-08-05",
+   "archivo": "Paso_a_paso_05-06_agosto.pptx",
+   "encontrado": true,
+   "diapositivas": [
+    {
+     "n": 1,
+     "seccion": "todos",
+     "titulo": "SESIÓN DEL 5 Y 6 DE AGOSTO · PASO A PASO",
+     "cuerpo": [
+      "Qué necesito, qué debo",
+      "aprender y cuándo lo hago",
+      "Hoy no adivinamos el cronograma: primero miramos qué hace falta y solo después lo organizamos en el tiempo.",
+      "Formato 1 · Qué necesitamos y qué debemos aprender",
+      "Formato 2 · Acuerdos de trabajo del equipo",
+      "Cronograma de tareas en Excel"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 2,
+     "seccion": "todos",
+     "titulo": "La ruta de hoy, en cinco pasos",
+     "cuerpo": [
+      "Cada paso alimenta al siguiente. Por eso el cronograma va de último y no de primero.",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "Mira el final",
+      "Qué recursos",
+      "Qué aprender",
+      "Cómo se organizan",
+      "El cronograma",
+      "Qué debe existir",
+      "el 29 de octubre",
+      "Materiales, software,",
+      "equipos, permisos",
+      "Habilidades concretas",
+      "y tutoriales que pides",
+      "Frentes de trabajo",
+      "y acuerdos del equipo",
+      "Tareas semanales",
+      "con responsables",
+      "Un cronograma hecho antes de saber qué se necesita se cae en la segunda semana. Por eso el orden importa."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 3,
+     "seccion": "todos",
+     "titulo": "Los tres archivos de hoy y dónde van",
+     "cuerpo": [
+      "El docente se los comparte. Ustedes los copian a su carpeta y les cambian el nombre.",
+      "Qué necesitamos y qué debemos aprender",
+      "Formato 1",
+      "04_Desarrollo",
+      "Formato1_Necesidades_EquipoXX.docx",
+      "Acuerdos de trabajo del equipo",
+      "Formato 2",
+      "02_Cronograma",
+      "Formato2_Acuerdos_EquipoXX.docx",
+      "Tareas semanales con responsables",
+      "Cronograma",
+      "02_Cronograma",
+      "Cronograma_tareas_EquipoXX.xlsx",
+      "Cambien XX por el número de su equipo. Si el archivo no tiene ese nombre, se pierde entre los demás."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 4,
+     "seccion": "todos",
+     "titulo": "Miren el final primero",
+     "cuerpo": [
+      "PASO 1 · 12 min",
+      "Escriban lo que va a existir el 29 de octubre, no lo que van a estar haciendo.",
+      "Esto no es un entregable",
+      "Esto sí lo es",
+      "\"Trabajar en el modelo\"",
+      "\"Avanzar en la programación\"",
+      "\"Investigar sobre el tema\"",
+      "\"Una pieza impresa que encaja en el soporte\"",
+      "\"Un menú que abre las tres pantallas\"",
+      "\"Un video de dos minutos con subtítulos\"",
+      "La prueba: si no se puede señalar con el dedo o abrir en un computador, no es un entregable.",
+      "N.º",
+      "Qué debe existir el 29 de octubre",
+      "¿Cómo sabremos que quedó bien?",
+      "¿Para qué sesión?",
+      "Ej.",
+      "Un prototipo que un estudiante de sexto use sin ayuda",
+      "Tres personas lo usan sin explicación",
+      "23 y 24 de sep",
+      "1",
+      "2"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 5,
+     "seccion": "todos",
+     "titulo": "Qué recursos necesitamos conseguir",
+     "cuerpo": [
+      "PASO 2 · 15 min",
+      "Revisen las cinco categorías, incluso las que crean que no aplican.",
+      "Materiales",
+      "Software",
+      "Equipos",
+      "Permisos",
+      "Personas",
+      "¿Qué hay que",
+      "comprar o conseguir?",
+      "¿Qué programas",
+      "hay que instalar?",
+      "¿Qué máquinas",
+      "o dispositivos?",
+      "¿A quién hay que",
+      "pedirle autorización?",
+      "¿Quiénes van a",
+      "probar el prototipo?",
+      "Lo que de verdad atrasa un proyecto",
+      "Casi nunca es la falta de ideas. Es el permiso que nadie pidió, el cable que nadie consiguió o el programa que no se pudo instalar en los computadores del colegio. Por cada recurso escriban quién lo consigue y para cuándo."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 6,
+     "seccion": "todos",
+     "titulo": "Pidan acciones, no programas",
+     "cuerpo": [
+      "PASO 3 · 20 min",
+      "De esta tabla salen los tutoriales que el docente prepara para su equipo.",
+      "No cabe en un tutorial",
+      "Sí cabe, y dura ocho minutos",
+      "\"Queremos aprender Unity\"",
+      "\"Necesitamos saber Blender\"",
+      "\"Enséñenos electrónica\"",
+      "\"Guardar el puntaje entre escenas\"",
+      "\"Exportar en STL sin errores de malla\"",
+      "\"Leer un sensor y mostrarlo en pantalla\"",
+      "PROMPT 1 · DESCOMPONER LA SOLUCIÓN EN HABILIDADES",
+      "Señal de alerta",
+      "Nuestra solución es: [tres frases].",
+      "Línea: [3D / electrónica / software / multimedia].",
+      "Vamos a usar: [programa o materiales].",
+      "Sabemos hacer: [lo que ya manejan].",
+      "Descompón la solución en habilidades concretas y",
+      "verificables, de la más básica a la más avanzada.",
+      "Indica cuáles son indispensables y cuáles opcionales.",
+      "Si la lista pasa de doce habilidades, la solución es demasiado ambiciosa para tres meses.",
+      "Simplifíquenla ahora, no en octubre."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 7,
+     "seccion": "todos",
+     "titulo": "La tabla que va a leer el docente",
+     "cuerpo": [
+      "PASO 3 · formato",
+      "Entre más precisa la solicitud, más útil el tutorial que reciben.",
+      "N.º",
+      "Qué necesitamos saber hacer",
+      "¿Alguien ya sabe?",
+      "¿Para qué sesión?",
+      "Prioridad",
+      "Ej.",
+      "Exportar un modelo de Blender en STL para impresión",
+      "No",
+      "26 y 27 de agosto",
+      "Alta",
+      "1",
+      "2",
+      "3",
+      "4",
+      "Cuando terminen, avisen al docente. Los tutoriales llegan a la subcarpeta Tutoriales dentro de 04_Desarrollo. Si varios equipos piden lo mismo, el tutorial se hace grupal; lo que sea único de su proyecto se hace aparte."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 8,
+     "seccion": "todos",
+     "titulo": "Ustedes deciden cómo se organizan",
+     "cuerpo": [
+      "PASO 4 · 12 min",
+      "No hay roles impuestos. Lo único obligatorio es que quede por escrito.",
+      "Si son 3 o 4",
+      "Si son 2",
+      "Si trabajas solo",
+      "Cada quien responde por uno o dos frentes de trabajo.",
+      "Se reparten los frentes y se apoyan mutuamente en los pesados.",
+      "Repartes entre semanas: en qué momento te dedicas a cada frente.",
+      "Los cinco acuerdos que evitan casi todos los problemas",
+      "¿Cómo nos comunicamos entre sesiones?",
+      "1",
+      "¿Qué hacemos si alguien no cumple lo que le tocaba?",
+      "2",
+      "¿Cómo decidimos cuando no estamos de acuerdo?",
+      "3",
+      "¿Cada cuánto revisamos el cronograma?",
+      "4",
+      "¿Cuándo cambian los responsables de cada frente?",
+      "5",
+      "El acuerdo 2 es el que nadie escribe y el que más falta hace. Háganlo hoy, cuando todavía no ha pasado nada."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 9,
+     "seccion": "todos",
+     "titulo": "Ahora sí, el cronograma",
+     "cuerpo": [
+      "PASO 5 · 20 min",
+      "Con el Formato 1 y el Formato 2 al lado. Si no los llenaron, este prompt no sirve.",
+      "PROMPT 2 · CRONOGRAMA DE TAREAS SEMANALES",
+      "Lo nuevo aquí",
+      "Actúa como asesor de proyectos escolares.",
+      "NUESTRO PROYECTO",
+      "Solución: [tres frases]. Objetivos: [pégalos].",
+      "Línea: [3D / electrónica / software / multimedia].",
+      "Somos [1 a 4]: [nombres y de qué responde cada uno].",
+      "Entregables: [pega la parte A del Formato 1].",
+      "Recursos que faltan: [parte B]. Aprendizajes: [parte C].",
+      "CALENDARIO, 90 minutos por sesión",
+      "5-6 ago, 12-13 ago, 19-20 ago, 26-27 ago, 2-3 sep,",
+      "9-10 sep, 16-17 sep, 23-24 sep, 30 sep-1 oct,",
+      "receso 3-12 oct, 14-15 oct, 21-22 oct, 28-29 oct.",
+      "PARA CADA SESIÓN DAME",
+      "- máximo tres tareas que quepan en 90 minutos",
+      "- quién de nosotros responde por cada tarea",
+      "- el entregable que queda guardado en Drive",
+      "- qué necesitamos del docente: tutorial, revisión,",
+      "fecha de entrega, préstamo de equipo, gestión de",
+      "espacio o permiso, apoyo de otro equipo, usuarios",
+      "El prompt pide también las tareas del docente. Eso no es un favor: es lo que ustedes necesitan para poder cumplir.",
+      "Cierren pidiendo que reparta la carga pareja entre los integrantes.",
+      "El prompt completo",
+      "Está en la hoja Instrucciones del Excel, listo para copiar. Tengan abiertos los formatos 1 y 2."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 10,
+     "seccion": "todos",
+     "titulo": "Revisen lo que devolvió antes de copiarlo",
+     "cuerpo": [
+      "La IA no conoce su colegio ni sus horarios. Cinco cosas que casi siempre hay que corregir.",
+      "!",
+      "Tareas que no caben en 90 minutos",
+      "Divídanlas en dos sesiones",
+      "!",
+      "Un integrante con el doble de tareas",
+      "Repártanlas de nuevo",
+      "!",
+      "Tareas escritas en general, tipo \"avanzar\"",
+      "Reescríbanlas con un verbo concreto",
+      "!",
+      "Apoyos del docente que nunca pidieron",
+      "Bórrenlos o cámbienlos",
+      "!",
+      "Semanas sin ningún entregable",
+      "Algo tiene que quedar guardado",
+      "El cronograma es de ustedes. La IA solo hizo un borrador y casi siempre se equivoca en los tiempos."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 11,
+     "seccion": "todos",
+     "titulo": "Cómo se llena el Excel",
+     "cuerpo": [
+      "Tres colores, tres reglas. Cada semana tiene tres renglones para tareas.",
+      "Azul",
+      "Semana, fechas, sesión y fase",
+      "Ya viene puesto. No se modifica.",
+      "Amarillo",
+      "Tarea, responsable y entregable",
+      "Lo llenan hoy, para todo el semestre.",
+      "Verde",
+      "Apoyo del docente",
+      "Lo que necesitan de él. Se confirma en clase.",
+      "Desde la próxima sesión: al terminar cada clase se llenan estado, porcentaje de avance, avance real y ajuste. Dos minutos, y hace parte de la evaluación del proceso."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 12,
+     "seccion": "todos",
+     "titulo": "Lista de salida",
+     "cuerpo": [
+      "Lo que quede sin marcar, díganlo en voz alta antes de irse.",
+      "Formato 1 lleno en sus tres partes, guardado en 04_Desarrollo.",
+      "Mínimo cuatro habilidades pedidas en la tabla de tutoriales.",
+      "Formato 2 lleno y firmado, guardado en 02_Cronograma.",
+      "El Excel tiene tareas y responsable en todas las semanas.",
+      "La columna verde dice qué necesitamos del docente y cuándo.",
+      "Revisamos el borrador de la IA y corregimos lo que no cuadraba.",
+      "Los tres archivos tienen el número de nuestro equipo en el nombre.",
+      "Próxima sesión, 12 y 13 de agosto: completar la matriz hasta cinco antecedentes verificados y redactar ese apartado."
+     ],
+     "tablas": []
+    }
+   ],
+   "titulo": "SESIÓN DEL 5 Y 6 DE AGOSTO · PASO A PASO Qué necesito, qué debo"
+  },
+  {
+   "letra": "C",
+   "sesion": "12 y 13 de agosto",
+   "fecha": "2026-08-12",
+   "archivo": "Sesion_12-13_agosto.pptx",
+   "encontrado": true,
+   "diapositivas": [
+    {
+     "n": 1,
+     "seccion": "todos",
+     "titulo": "12 Y 13 DE AGOSTO · 90 MINUTOS",
+     "cuerpo": [
+      "Revisar, completar",
+      "y dibujar",
+      "Primero ponemos al día la carpeta. Después, el proyecto se dibuja en papel.",
+      "Hoy paso por cada equipo con el checklist"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 2,
+     "seccion": "todos",
+     "titulo": "Los 90 minutos de hoy",
+     "cuerpo": [
+      "Dos bloques. El segundo es el más largo y es con lápiz y papel.",
+      "30 min",
+      "50 min",
+      "10 min",
+      "Revisar y completar",
+      "Dibujar el proyecto",
+      "Cerrar",
+      "Abren la carpeta, revisan",
+      "los 7 puntos y arreglan",
+      "lo que falte",
+      "Storyboard, boceto del",
+      "prototipo o wireframe,",
+      "según su proyecto",
+      "Foto de los dibujos",
+      "y los bloqueos anotados",
+      "Lo que no alcance del primer bloque se termina en casa. El dibujo se hace hoy, en clase."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 3,
+     "seccion": "todos",
+     "titulo": "Revisa tu carpeta y completa lo que falte",
+     "cuerpo": [
+      "BLOQUE 1 · 30 min",
+      "Estos siete puntos son los que voy a mirar equipo por equipo.",
+      "Cinco antecedentes verificados, dos en inglés, con sus PDF",
+      "01_Antecedentes",
+      "1",
+      "Hoja Búsquedas con la herramienta y el prompt que usaron",
+      "01_Antecedentes",
+      "2",
+      "Párrafo de antecedentes, con el vacío identificado",
+      "00_Propuesta",
+      "3",
+      "Referencias en APA 7, en orden alfabético",
+      "00_Propuesta",
+      "4",
+      "Foto de los bocetos de hoy",
+      "04_Desarrollo",
+      "5",
+      "Bocetos_EquipoXX.docx diligenciado",
+      "04_Desarrollo",
+      "6",
+      "Cronograma y bitácora al día",
+      "02 y 03",
+      "7",
+      "Lo que marque queda en Checklist_revision_EquipoXX.docx, dentro de su 02_Cronograma."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 4,
+     "seccion": "todos",
+     "titulo": "Ahora dibujen el proyecto",
+     "cuerpo": [
+      "BLOQUE 2 · 50 min",
+      "Todo a mano, en hojas sueltas. Nadie va a calificar el dibujo.",
+      "Una hoja por idea",
+      "Lápiz, no marcador",
+      "No amontonen todo en la misma hoja. Numérenlas en una esquina.",
+      "Se va a borrar y cambiar varias veces. Esa es la idea.",
+      "Escriban sobre el dibujo",
+      "Muñecos de palo sirven",
+      "Nombres, medidas, qué hace cada parte. Sin palabras no se entiende.",
+      "No se trata de dibujar bonito, se trata de que se entienda.",
+      "¿Cuál de los tres les toca? Miren su proyecto:",
+      "Animación o video  →  Storyboard        Objeto o montaje  →  Boceto del prototipo        App, juego o página  →  Wireframe"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 5,
+     "seccion": "todos",
+     "titulo": "Storyboard",
+     "cuerpo": [
+      "ANIMACIÓN O VIDEO",
+      "Cada cuadro es un momento de la historia. Mínimo seis cuadros.",
+      "1",
+      "2",
+      "3",
+      "En cada cuadro dibuja",
+      "...",
+      "Lo que se ve en pantalla en ese momento: quién aparece, dónde está y desde dónde se mira.",
+      "qué se escucha",
+      "qué se escucha",
+      "qué se escucha",
+      "Y debajo escribe",
+      "Con seis cuadros ya se entiende una historia completa: cómo empieza, qué pasa y cómo termina.",
+      "Qué se escucha: diálogo, música o sonido.",
+      "Cuántos segundos dura ese momento.",
+      "Numera los cuadros en orden. Si un momento cambia mucho, dibújalo en dos cuadros y no en uno."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 6,
+     "seccion": "todos",
+     "titulo": "Boceto del prototipo",
+     "cuerpo": [
+      "OBJETO O MONTAJE",
+      "Dibuja el objeto desde dos lados y ponle nombre a cada parte.",
+      "Dibuja el objeto de frente y de lado, en dos recuadros",
+      "1",
+      "Vista de frente",
+      "Vista de lado",
+      "sensor",
+      "Saca una línea desde cada parte y escribe su nombre",
+      "2",
+      "→ gira",
+      "Anota las medidas aproximadas: alto, ancho, largo",
+      "3",
+      "12 cm",
+      "Marca con una flecha lo que se mueve, se enciende o se conecta",
+      "4",
+      "No importa que quede torcido. Importa que otra persona pueda armarlo mirando su dibujo."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 7,
+     "seccion": "todos",
+     "titulo": "Wireframe",
+     "cuerpo": [
+      "APP, JUEGO O PÁGINA",
+      "Un rectángulo es una pantalla. Adentro van cajas, no dibujos.",
+      "Cómo se dibuja cada cosa",
+      "Inicio",
+      "Menú",
+      "Juego",
+      "Caja con una X cruzada",
+      "Ahí va una imagen o un video",
+      "Líneas rectas",
+      "Ahí va texto. No hay que escribirlo todo",
+      "Rectángulo redondeado",
+      "Entrar",
+      "→",
+      "Entrar",
+      "→",
+      "Volver",
+      "Es un botón. Escríbele adentro su nombre",
+      "Flecha entre pantallas",
+      "Qué pantalla se abre al tocar ese botón",
+      "La flecha sale del botón y llega a la pantalla que abre",
+      "Mínimo tres pantallas. Sin colores y sin dibujos bonitos: solo cajas, palabras y flechas.",
+      "Si su proyecto es un juego, una pantalla es cada momento distinto: el menú, el juego andando y la pantalla de fin."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 8,
+     "seccion": "todos",
+     "titulo": "Con esto se cierra la clase",
+     "cuerpo": [
+      "CIERRE · 10 min",
+      "Tres cosas concretas, nada más.",
+      "1",
+      "2",
+      "3",
+      "Las hojas dibujadas",
+      "La foto en Drive",
+      "El registro lleno",
+      "Storyboard: mínimo 6 cuadros",
+      "Prototipo: 2 vistas con nombres",
+      "Wireframe: mínimo 3 pantallas",
+      "Todas las hojas juntas sobre la mesa.",
+      "En 04_Desarrollo, como",
+      "2026-08-12_bocetos.jpg",
+      "Bocetos_EquipoXX.docx",
+      "Qué dibujaron y qué no supieron",
+      "hacer, empezando con \"no logramos\"",
+      "Los tutoriales del 19 y 20 de agosto se arman con lo que escriban en la parte 2 del registro. Sean específicos ahí."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 9,
+     "seccion": "todos",
+     "titulo": "Antes de salir",
+     "cuerpo": [
+      "La carpeta quedó al día en los siete puntos.",
+      "Las hojas dibujadas están sobre la mesa y fotografiadas.",
+      "La foto está en 04_Desarrollo con el nombre correcto.",
+      "Bocetos_EquipoXX.docx está lleno, con los bloqueos.",
+      "Un integrante firmó el checklist de revisión.",
+      "19 y 20 de agosto: diseño técnico y los primeros tutoriales, armados con los bloqueos de hoy."
+     ],
+     "tablas": []
+    }
+   ],
+   "titulo": "12 Y 13 DE AGOSTO · 90 MINUTOS Revisar, completar"
+  },
+  {
+   "letra": "D",
+   "sesion": "19 y 20 de agosto",
+   "fecha": "2026-08-19",
+   "archivo": null,
+   "encontrado": false,
+   "diapositivas": []
+  },
+  {
+   "letra": "E",
+   "sesion": "26 y 27 de agosto",
+   "fecha": "2026-08-26",
+   "archivo": "Sesion_26-27_agosto.pptx",
+   "encontrado": true,
+   "diapositivas": [
+    {
+     "n": 1,
+     "seccion": "todos",
+     "titulo": "26 Y 27 DE AGOSTO",
+     "cuerpo": [
+      "Empezar a construir",
+      "y reunir lo escrito",
+      "Cada línea trabaja en lo suyo",
+      "1",
+      "Todos reúnen lo investigado en el artículo base",
+      "2",
+      "Al final, escribir dónde se trabaron",
+      "3",
+      "Este archivo está en su carpeta. Ábranlo y vayan a la sección de su proyecto."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 2,
+     "seccion": "todos",
+     "titulo": "Cómo usar este archivo",
+     "cuerpo": [
+      "No hay que verlo todo. Vayan a la sección de su proyecto y sáltense el resto.",
+      "Unity",
+      "Equipos 6, 10.1 y 10.2",
+      "diapositiva 4",
+      "Desarrollo web",
+      "Equipos 1, 3, 5 y 7",
+      "diapositiva 10",
+      "Electrónica y robótica",
+      "Equipos 4 y 8",
+      "diapositiva 13",
+      "Producción audiovisual",
+      "Equipos 2.1, 2.2, 9, 11.1 y 11.2",
+      "diapositiva 15",
+      "Documentación",
+      "Los 14 equipos, esta sí la ven todos",
+      "diapositiva 19",
+      "Cada diapositiva tiene arriba a la izquierda la etiqueta de su sección. La última parte, Documentación, es para todos sin excepción."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 3,
+     "seccion": "todos",
+     "titulo": "Cómo se reparten los 90 minutos",
+     "cuerpo": [
+      "Dentro del equipo: unos construyen y otros escriben. No todos hacen lo mismo al tiempo.",
+      "45 min",
+      "35 min",
+      "10 min",
+      "Construir",
+      "Artículo base",
+      "Barreras",
+      "Cada línea tiene",
+      "su propia tarea",
+      "Reunir lo que ya",
+      "escribieron",
+      "Dónde se trabaron",
+      "y qué video piden",
+      "Los dos archivos de hoy están en su carpeta E) 26-27 de agosto: Articulo_base y Barreras."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 4,
+     "seccion": "todos",
+     "titulo": "Unity",
+     "cuerpo": [
+      "Equipos 6, 10.1 y 10.2  ·  versión 2019.4.38f1"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 5,
+     "seccion": "unity",
+     "titulo": "UNITY",
+     "cuerpo": [
+      "Qué construye cada equipo",
+      "Los tres arman lo mismo hoy: una pantalla con botones. Cambia lo que viene después.",
+      "Lector de señas",
+      "Equipo 6",
+      "La pantalla muestra la palabra detectada. El reconocimiento se entrena en Teachable Machine desde el navegador; Unity solo muestra el resultado.",
+      "Videojuego motricidad",
+      "Equipo 10.1",
+      "Menú de inicio, pantalla de juego y pantalla de resultado con el puntaje.",
+      "Minijuego de coordinación",
+      "Equipo 10.2",
+      "Menú de inicio, pantalla de juego y pantalla de fin. Mismo esquema, un solo integrante.",
+      "Todos trabajan en 2D. El proyecto se crea con la plantilla 2D, no 3D."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 6,
+     "seccion": "unity",
+     "titulo": "UNITY",
+     "cuerpo": [
+      "45 min",
+      "Empiecen viendo, no leyendo",
+      "Los dos videos son de 2020, así que la pantalla se ve igual a la de ustedes.",
+      "youtube.com/watch?v=x3FbFa843Pw",
+      "La interfaz de Unity",
+      "VIDEO 1",
+      "Empiecen por aquí. Qué es cada panel y cómo moverse. Véanlo con Unity abierto al lado.",
+      "youtube.com/watch?v=zGvM2pM0QzA",
+      "Menú principal con botones",
+      "VIDEO 2",
+      "Que el botón cambie de pantalla. Es el paso siguiente, no el de hoy.",
+      "Vean el video 1 mientras van haciendo, con pausa en cada paso. El video 2 solo si les sobra tiempo."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 7,
+     "seccion": "unity",
+     "titulo": "UNITY",
+     "cuerpo": [
+      "Unity no es difícil, es desconocido",
+      "Son cinco zonas y cada una tiene un trabajo.",
+      "Escena",
+      "La mesa de trabajo",
+      "Centro",
+      "Juego",
+      "Lo que verá el jugador",
+      "Centro, otra pestaña",
+      "Jerarquía",
+      "La lista de todo lo que existe",
+      "Izquierda",
+      "Proyecto",
+      "El archivador de archivos",
+      "Abajo",
+      "Inspector",
+      "La ficha del objeto seleccionado",
+      "Derecha",
+      "La regla que evita casi todas las confusiones: primero se selecciona el objeto en la Jerarquía, y solo entonces se le cambia algo en el Inspector."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 8,
+     "seccion": "unity",
+     "titulo": "UNITY",
+     "cuerpo": [
+      "45 min",
+      "La meta de hoy, escalón por escalón",
+      "Suban uno a la vez. Con llegar al 7 la sesión está cumplida.",
+      "Crear el proyecto en modo 2D",
+      "1",
+      "Reconocer las cinco zonas",
+      "2",
+      "Crear el Canvas",
+      "3",
+      "Poner el título",
+      "4",
+      "Poner dos o tres botones",
+      "5",
+      "Darle Play y ver cómo queda",
+      "6",
+      "Guardar y saber dónde quedó",
+      "7",
+      "Que el botón haga algo al tocarlo queda para la próxima. Nadie aprende Unity en 45 minutos y no es lo que se espera."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 9,
+     "seccion": "unity",
+     "titulo": "UNITY",
+     "cuerpo": [
+      "Tres cosas que asustan y son normales",
+      "Si les pasa alguna, no está mal: pasa siempre.",
+      "!",
+      "El Canvas se ve gigante",
+      "En la Escena aparece un rectángulo enorme, más grande que todo. Así es siempre. No lo achiquen.",
+      "!",
+      "El texto desaparece",
+      "Al subir el tamaño de letra, el texto se esconde. Es que la caja quedó chica: agranden Width y Height.",
+      "!",
+      "El Inspector está vacío",
+      "No hay nada seleccionado. Hagan clic en un objeto de la Jerarquía y se llena."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 10,
+     "seccion": "unity",
+     "titulo": "Desarrollo web",
+     "cuerpo": [
+      "Equipos 1, 3, 5 y 7  ·  VS Code y GitHub"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 11,
+     "seccion": "software",
+     "titulo": "DESARROLLO WEB",
+     "cuerpo": [
+      "Por qué usamos GitHub",
+      "No es un requisito del profe: resuelve tres problemas que van a tener sí o sí.",
+      "Respaldo",
+      "Si se daña el computador o se borra la carpeta, el proyecto sigue existiendo.",
+      "Control de versiones",
+      "Guarda cada cambio. Si algo se dañó, se puede volver a la versión anterior.",
+      "Publicar",
+      "Con GitHub Pages la página queda en internet con un enlace real, no solo en su computador.",
+      "Por ahora se sube desde el computador del profe, con su cuenta. Eso significa que GitHub no registra quién hizo qué: eso sigue quedando en la bitácora y el cronograma. Más adelante abren cuenta propia."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 12,
+     "seccion": "software",
+     "titulo": "DESARROLLO WEB",
+     "cuerpo": [
+      "45 min",
+      "La ruta de hoy",
+      "Cinco pasos. El quinto solo si llegan.",
+      "Crear la carpeta del proyecto",
+      "Con el nombre del equipo, en el computador, no en USB",
+      "1",
+      "Abrirla desde VS Code",
+      "Archivo, Abrir carpeta. Todo el trabajo se hace desde ahí",
+      "2",
+      "Crear el archivo index.html",
+      "Ese nombre exacto, en minúscula. Es la página de inicio",
+      "3",
+      "Que se vea algo en el navegador",
+      "Un título y un párrafo bastan. Después se le pone CSS",
+      "4",
+      "Subirlo a GitHub",
+      "Con el profe, desde su computador",
+      "5",
+      "Equipo 7, Wisfox: su paso extra es conectar la base de datos que ya avanzaron con la página. Equipo 3: hoy queda definida la estructura de pantallas."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 13,
+     "seccion": "software",
+     "titulo": "Electrónica y robótica",
+     "cuerpo": [
+      "Equipos 4 y 8  ·  Arduino"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 14,
+     "seccion": "electronica",
+     "titulo": "ELECTRÓNICA Y ROBÓTICA",
+     "cuerpo": [
+      "45 min",
+      "La tarea de hoy",
+      "El colegio tiene los kits de Arduino, impresora 3D y grabado láser.",
+      "Comedero automático",
+      "Equipo 4",
+      "Montar el circuito en protoboard y lograr que el servo se mueva solo, sin el reloj todavía. Después se le agrega el RTC.",
+      "Brazo robot, 4 servos",
+      "Equipo 8",
+      "Montar UN servo y controlar su ángulo. Los cuatro juntos vienen después, cuando esté resuelta la alimentación.",
+      "Alerta para el Equipo 8",
+      "Cuatro servos NO se pueden alimentar desde el Arduino. La placa no entrega esa corriente: o no se mueven, o se reinicia, o se daña. Necesitan fuente externa de 5V con tierra común. Hoy prueben con uno solo y revisen si el kit trae la fuente."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 15,
+     "seccion": "electronica",
+     "titulo": "Producción audiovisual",
+     "cuerpo": [
+      "Equipos 2.1, 2.2, 9, 11.1 y 11.2"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 16,
+     "seccion": "audiovisual",
+     "titulo": "AUDIOVISUAL",
+     "cuerpo": [
+      "Un archivo, dos momentos",
+      "Guiones_audiovisual.xlsx. Primero la historia, después cómo se graba.",
+      "Hoja: Guion literario",
+      "Guion literario",
+      "1",
+      "La historia contada como se ve y se oye. Sin cámaras, sin planos.",
+      "Hojas: Locaciones, Guion técnico y Plan de rodaje",
+      "Guion técnico",
+      "2",
+      "Cada plano con su locación, tipo de plano, ángulo, sonido y duración.",
+      "Las cinco pestañas van en ese orden: Instrucciones, Guion literario, Locaciones, Guion técnico y Plan de rodaje."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 17,
+     "seccion": "audiovisual",
+     "titulo": "AUDIOVISUAL",
+     "cuerpo": [
+      "El ejemplo de referencia",
+      "Vean el corto con la hoja al lado: explica el formato mejor que cualquier instrucción.",
+      "Corto \"Soltar\" y su guion, en Drive",
+      "drive.google.com/drive/folders/1rudWBw5nRgovwclKJM3R54g-kwo80XMi",
+      "Qué cambió en el formato que van a usar",
+      "Se escribe la duración, no el tiempo de inicio",
+      "El inicio se calcula solo y el total avisa si se pasan del tiempo",
+      "La iluminación es lista desplegable",
+      "En el ejemplo quedó vacía en los 25 planos porque era incómoda de llenar",
+      "Las locaciones tienen hoja propia",
+      "Con color, dirección exacta y si necesita permiso",
+      "Hay hoja de plan de rodaje",
+      "Para grabar agrupado por lugar y no volver cinco veces al mismo sitio",
+      "El literario no lleva planos ni ángulos",
+      "En el ejemplo los tenía; ahora eso vive solo en la hoja técnica",
+      "Ojo: en \"Soltar\" el storyboard son capturas del video ya editado. Ustedes todavía no han grabado, así que el suyo va con dibujos o fotos de referencia."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 18,
+     "seccion": "audiovisual",
+     "titulo": "AUDIOVISUAL",
+     "cuerpo": [
+      "45 min",
+      "La tarea de hoy",
+      "Escribir el literario. El técnico se llena cuando la historia esté cerrada.",
+      "Escriban el guion literario",
+      "Y abran la hoja de locaciones",
+      "Una página, en presente, solo lo que se ve y se oye.",
+      "Si no cabe en una página, la historia es muy larga para el tiempo que tienen.",
+      "Misma hoja de cálculo, pestaña Locaciones.",
+      "Escriban los lugares donde van a grabar y pónganle un color a cada uno.",
+      "El error que hace perder semanas",
+      "Escribir una historia que necesita seis locaciones, diez actores o efectos que no saben hacer. Antes de cerrar el guion, pregúntense por cada línea: ¿esto lo podemos grabar con lo que tenemos?"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 19,
+     "seccion": "audiovisual",
+     "titulo": "Documentación",
+     "cuerpo": [
+      "Los 14 equipos  ·  aquí converge todo"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 20,
+     "seccion": "todos",
+     "titulo": "DOCUMENTACIÓN",
+     "cuerpo": [
+      "35 min",
+      "El artículo base",
+      "No se termina hoy: se va llenando sesión tras sesión hasta octubre.",
+      "1. Introducción",
+      "2. Metodología",
+      "→  Problema, antecedentes y propósito",
+      "→  Qué hicieron en cada fase del Design Thinking",
+      "3. Resultados",
+      "4 y 5. Discusión y cierre",
+      "→  El desarrollo: qué construyeron y qué funciona hoy",
+      "→  Aprendizajes, límites y conclusiones",
+      "Hoy llenan lo que ya tienen de las semanas pasadas. La tabla de la primera página les muestra qué falta y cuándo se puede llenar."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 21,
+     "seccion": "todos",
+     "titulo": "DOCUMENTACIÓN",
+     "cuerpo": [
+      "10 min",
+      "Las barreras: lo último de la clase",
+      "De aquí salen los videos que el profe graba el fin de semana.",
+      "No sirve escribir",
+      "Sí sirve",
+      "\"No entendimos Unity\"",
+      "\"Está muy difícil\"",
+      "\"No nos funcionó\"",
+      "\"No logramos crear el Canvas\"",
+      "\"Al minuto 4 del video no nos apareció esa opción\"",
+      "Las tres preguntas de la hoja",
+      "1.  ¿Hasta dónde llegaron hoy?",
+      "2.  ¿Dónde se trabaron y qué pasó en pantalla?",
+      "3.  ¿Qué necesitan que grabe el profe?"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 22,
+     "seccion": "todos",
+     "titulo": "Antes de salir",
+     "cuerpo": [
+      "Los archivos están en la carpeta de la sesión, en su Drive.",
+      "Lo que construimos hoy quedó guardado y sabemos dónde.",
+      "Articulo_base.docx tiene llenas las secciones que ya podían llenarse.",
+      "Barreras.docx está diligenciado con las tres preguntas.",
+      "Subimos una foto o captura de hasta dónde llegamos.",
+      "2 y 3 de septiembre: llegan los videos hechos con las barreras de hoy y los formatos de guion."
+     ],
+     "tablas": []
+    }
+   ],
+   "titulo": "26 Y 27 DE AGOSTO Empezar a construir"
+  },
+  {
+   "letra": "F",
+   "sesion": "9 y 10 de septiembre",
+   "fecha": "2026-09-09",
+   "archivo": "Sesion_09-10_septiembre.pptx",
+   "encontrado": true,
+   "diapositivas": [
+    {
+     "n": 1,
+     "seccion": "todos",
+     "titulo": "9 Y 10 DE SEPTIEMBRE",
+     "cuerpo": [
+      "Ponerle nombre",
+      "a lo que hacemos",
+      "Elegir el nombre y el logo del semillero",
+      "1",
+      "Escribir la ficha pública de su proyecto",
+      "2",
+      "Seguir construyendo",
+      "3",
+      "Lo que escriban hoy en la ficha va a quedar publicado en el tablero del semillero, donde todos ven en qué va cada proyecto."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 2,
+     "seccion": "todos",
+     "titulo": "Los 90 minutos de hoy",
+     "cuerpo": [
+      "Lo primero es corto y es de todos. Después cada equipo a lo suyo.",
+      "15 min",
+      "25 min",
+      "45 min",
+      "5 min",
+      "El nombre",
+      "La ficha",
+      "Construir",
+      "Cierre",
+      "Elegimos entre tres",
+      "y bocetamos el logo",
+      "La idea, el objetivo",
+      "y en qué van",
+      "Cada equipo en",
+      "su proyecto",
+      "Todo guardado",
+      "en la carpeta",
+      "La ficha de proyecto y el nombre del semillero son lo único obligatorio de hoy. Lo demás depende de en qué va cada equipo."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 3,
+     "seccion": "todos",
+     "titulo": "El nombre del semillero",
+     "cuerpo": [
+      "Para los 14 equipos  ·  15 minutos"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 4,
+     "seccion": "todos",
+     "titulo": "IDENTIDAD",
+     "cuerpo": [
+      "Un nombre propio, no una descripción",
+      "\"Semillero de Tecnología Maker\" dice qué somos, pero no se recuerda ni se defiende.",
+      "Lo que ya existe",
+      "Lo que nos falta",
+      "Un café con la Iguana es el espacio donde se difunden los proyectos del colegio, liderado por estudiantes.",
+      "Ese es el canal, no el semillero.",
+      "Un nombre para lo que construimos.",
+      "El semillero produce, el café difunde. Son dos cosas distintas y cada una necesita su nombre.",
+      "Un nombre sin razón no sirve",
+      "No se trata de que suene bonito. Se trata de que puedan explicar por qué ese y no otro. Hoy cada equipo propone uno con su justificación escrita, y de ahí sale el del semillero."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 5,
+     "seccion": "todos",
+     "titulo": "IDENTIDAD",
+     "cuerpo": [
+      "15 min",
+      "Seis ejemplos de razones bien construidas",
+      "No son finalistas. Son ejemplos de qué tan sólida debe ser la justificación.",
+      "Pulpo",
+      "Tiene nueve cerebros: uno central y uno en cada brazo. Cada brazo decide solo, pero todos son el mismo animal.",
+      "Micelio",
+      "La red bajo tierra que conecta los árboles de un bosque y les reparte nutrientes. Lo que no se ve es lo que sostiene.",
+      "Fragua",
+      "El taller donde se forja el metal, con calor y golpes. Nada sale terminado a la primera.",
+      "Órbita",
+      "Cuerpos muy distintos girando alrededor de un mismo centro, sin chocarse.",
+      "Andamio",
+      "La estructura que sostiene mientras se construye y se retira cuando la obra ya se para sola.",
+      "Bitácora",
+      "El cuaderno donde se anota el viaje día a día. Al final vale más que el destino.",
+      "Vienen de un animal, un hongo, un oficio, la astronomía, la construcción y la navegación. El suyo puede venir de donde quieran."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 6,
+     "seccion": "todos",
+     "titulo": "IDENTIDAD",
+     "cuerpo": [
+      "15 min",
+      "Lo que hace cada equipo",
+      "Una propuesta por equipo. Catorce ideas, y de ahí sale el nombre.",
+      "Piensen en algo que represente lo que hacemos: un animal, un objeto, un oficio, una idea",
+      "1",
+      "Escriban el nombre en una hoja, grande",
+      "2",
+      "Debajo, la razón en dos líneas: por qué ese y no otro",
+      "3",
+      "Dibujen al lado una forma simple que pueda servir de logo",
+      "4",
+      "Foto de la hoja y a la carpeta del semillero",
+      "5",
+      "La prueba del logo",
+      "Una sola forma, máximo dos colores, sin sombras. Si al achicarlo al tamaño de una uña todavía se entiende, sirve."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 7,
+     "seccion": "todos",
+     "titulo": "La ficha del proyecto",
+     "cuerpo": [
+      "Para los 14 equipos  ·  25 minutos"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 8,
+     "seccion": "todos",
+     "titulo": "FICHA DEL PROYECTO",
+     "cuerpo": [
+      "25 min",
+      "Lo que va a ver todo el mundo",
+      "Cinco campos que se publican en el tablero del semillero.",
+      "El nombre del proyecto",
+      "Máximo seis palabras. Puede cambiar si se les ocurrió algo mejor.",
+      "1",
+      "La idea en una frase",
+      "Qué es y para quién. Máximo 25 palabras.",
+      "2",
+      "El objetivo",
+      "Qué quieren lograr. Empiecen con un verbo en infinitivo.",
+      "3",
+      "Lo que ya construimos",
+      "Lo que existe hoy, aunque sea poco. Si no hay nada, qué está definido.",
+      "4",
+      "Lo que sigue",
+      "La próxima cosa concreta. Una sola, no la lista completa.",
+      "5",
+      "Escríbanlo pensando en alguien que no sabe nada de lo que ustedes hacen: un profe de otra área, un papá, un estudiante de sexto."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 9,
+     "seccion": "todos",
+     "titulo": "FICHA DEL PROYECTO",
+     "cuerpo": [
+      "La tabla de avance por semana",
+      "La parte que no se publica. Aquí va la verdad, sin adornos.",
+      "No sirve escribir",
+      "Sí sirve",
+      "\"Avanzamos en el proyecto\"",
+      "\"Trabajamos bastante\"",
+      "\"Todo va bien\"",
+      "\"Armamos el menú con tres botones\"",
+      "\"No avanzamos, faltaron dos integrantes\"",
+      "\"Grabamos el plano de prueba\"",
+      "Escribir que no avanzaron no baja la nota",
+      "Lo que sí pesa en octubre es un tablero inflado que no coincide con lo que hay en la carpeta. Eso se nota de inmediato."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 10,
+     "seccion": "todos",
+     "titulo": "Construir",
+     "cuerpo": [
+      "45 minutos  ·  cada equipo en lo suyo"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 11,
+     "seccion": "todos",
+     "titulo": "CONSTRUIR",
+     "cuerpo": [
+      "45 min",
+      "En qué avanza cada sección hoy",
+      "Si vienen atrasados, esta es la sesión para ponerse al día.",
+      "Unity",
+      "Que el botón lleve de una pantalla a otra y vuelva. Con eso ya hay navegación completa.",
+      "Desarrollo web",
+      "Que la página se vea en el navegador y quede respaldada. Wisfox: conectar un dato de la base.",
+      "Electrónica y robótica",
+      "Comedero: el servo moviéndose por tiempo. Brazo: un servo llegando al ángulo exacto.",
+      "Producción audiovisual",
+      "Cerrar el guion literario y empezar a llenar la pestaña de locaciones.",
+      "Los que no entregaron las semanas pasadas: hoy es la oportunidad de ponerse al día sin que se acumule más."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 12,
+     "seccion": "todos",
+     "titulo": "Antes de salir",
+     "cuerpo": [
+      "Ficha_proyecto.docx está llena en los cinco campos públicos.",
+      "La tabla de avance por semana está diligenciada con la verdad.",
+      "La propuesta de logo está dibujada y fotografiada.",
+      "Lo que construimos hoy quedó guardado en la carpeta.",
+      "La próxima semana el tablero del semillero ya va a estar publicado con la ficha de cada equipo."
+     ],
+     "tablas": []
+    }
+   ],
+   "titulo": "9 Y 10 DE SEPTIEMBRE Ponerle nombre"
+  },
+  {
+   "letra": "G",
+   "sesion": "16 y 17 de septiembre",
+   "fecha": "2026-09-16",
+   "archivo": "Sesion_16-17_septiembre_1.pptx",
+   "encontrado": true,
+   "diapositivas": [
+    {
+     "n": 1,
+     "seccion": "todos",
+     "titulo": "16 Y 17 DE SEPTIEMBRE",
+     "cuerpo": [
+      "Dos equipos van a la",
+      "Cámara de Comercio",
+      "Con lo que entreguen hoy se eligen los dos proyectos que representan al colegio. Los catorce entregan; dos pasan. No hay entrega tardía.",
+      "LOS CUATRO CRITERIOS",
+      "Claridad",
+      "que se entienda sin conocer el proyecto",
+      "Evidencia",
+      "que el proceso esté documentado, no solo contado",
+      "Avance real",
+      "que haya algo construido, aunque falte",
+      "Honestidad",
+      "que digan qué falta: eso suma, no resta",
+      "También es la evidencia del proceso para las horas sociales y para la reunión con el semillero de la universidad."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 2,
+     "seccion": "todos",
+     "titulo": "Lo que se entrega hoy",
+     "cuerpo": [
+      "Dos archivos, a la carpeta de esta semana, con estos nombres.",
+      "Presentacion_EquipoXX.pptx",
+      "Un archivo con dos partes: el pitch adelante, la documentación atrás",
+      "Pitch_EquipoXX.mp4",
+      "Video horizontal de máximo tres minutos presentando el proyecto",
+      "Los 90 minutos",
+      "15 min",
+      "Identidad",
+      "Proponen el nombre del semillero en el formulario",
+      "55 min",
+      "Diapositivas",
+      "Documentan las cinco fases con su evidencia",
+      "15 min",
+      "El pitch",
+      "Ensayan y graban el video",
+      "5 min",
+      "Entrega",
+      "Todo sube a la carpeta"
+     ],
+     "tablas": []
+    },
+    {
+     "n": 3,
+     "seccion": "todos",
+     "titulo": "Un archivo, dos partes",
+     "cuerpo": [
+      "Separadas por una diapositiva que diga: Anexo, el proceso completo.",
+      "Parte A · El pitch, 5 diapositivas",
+      "Parte B · Una por cada fase",
+      "1. Portada: nombre, integrantes, grado y una imagen del proyecto.",
+      "2. El problema: qué observaron y a quién le pasa. Una frase.",
+      "3. La solución: la foto o captura, grande, casi toda la diapositiva.",
+      "4. Cómo funciona: el esquema de las tres cajas.",
+      "5. En qué vamos: qué funciona, qué falta y para cuándo.",
+      "Máximo 30 palabras por diapositiva.",
+      "Empatizar: qué observaron. Fotos del lugar y notas.",
+      "Definir: problema, pregunta y objetivos, tal como quedaron escritos.",
+      "Idear: las alternativas y por qué eligieron esa. La matriz de decisión.",
+      "Prototipar: los bocetos de agosto y la ficha técnica.",
+      "Evaluar: cómo van a probarlo. La rúbrica que arman hoy.",
+      "Cada imagen lleva un pie de foto con qué es y de qué fecha. Sin eso, una foto no prueba nada."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 4,
+     "seccion": "todos",
+     "titulo": "La evidencia ya está en su carpeta",
+     "cuerpo": [
+      "Todo esto lo hicieron entre julio y agosto. Solo hay que recogerlo.",
+      "Fotos de los bocetos",
+      "Capturas de pantalla",
+      "Las hojas del 12 y 13 de agosto",
+      "Del programa, el código, la interfaz o el circuito",
+      "Tablas de la ficha técnica",
+      "La matriz de antecedentes",
+      "Requerimientos, herramientas y las tres cajas",
+      "Los artículos que encontraron y verificaron",
+      "Fotos del montaje",
+      "Pantallazos de la bitácora",
+      "El circuito armado, la maqueta, el set de grabación",
+      "Lo que anotaron sesión a sesión",
+      "Si una fase quedó floja",
+      "Muéstrenla igual y digan qué falta. Un proceso honesto se defiende mejor que uno inflado, y ese es uno de los cuatro criterios."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 5,
+     "seccion": "todos",
+     "titulo": "Antes de escribir el guion, vean esto",
+     "cuerpo": [
+      "Tres videos cortos. Con el primero basta si andan justos de tiempo.",
+      "Qué es un pitch y cómo se hace",
+      "Un ejemplo de 30 segundos",
+      "Convencer en tres minutos",
+      "La estructura básica, con ejemplos",
+      "Cómo suena uno bien armado",
+      "El formato más parecido al de ustedes",
+      "Si el video no carga en PowerPoint, ábranlo en YouTube: los enlaces también están en el archivo de la sesión."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 6,
+     "seccion": "todos",
+     "titulo": "Cómo se reparten los tres minutos",
+     "cuerpo": [
+      "Ensáyenlo con cronómetro. Siempre dura más de lo que uno cree.",
+      "0:00 · 0:20",
+      "El problema. Una frase que se entienda sin contexto.",
+      "0:20 · 0:50",
+      "Qué construyeron. Muéstrenlo, no lo describan.",
+      "0:50 · 1:40",
+      "Cómo funciona. Si pueden mostrarlo andando, mejor.",
+      "1:40 · 2:20",
+      "En qué van hoy y qué falta. Con fechas.",
+      "2:20 · 3:00",
+      "A quién le sirve y por qué vale la pena terminarlo.",
+      "Todos los integrantes hablan al menos una vez. Repártanse los bloques antes de grabar.",
+      "No lean la diapositiva. Quien escucha lee más rápido de lo que ustedes hablan."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 7,
+     "seccion": "todos",
+     "titulo": "Prompts para armar el guion",
+     "cuerpo": [
+      "Escriban primero ustedes. La IA afina lo que ya existe, no lo inventa.",
+      "PROMPT 1 · EL GUION",
+      "PROMPT 2 · LA PRIMERA FRASE",
+      "Actúa como asesor de presentaciones para estudiantes",
+      "de colegio.",
+      "Nuestro proyecto: [nombre].",
+      "Problema: [péguenlo de su propuesta].",
+      "Qué construimos: [tres frases].",
+      "Cómo funciona: [las tres cajas de la ficha técnica].",
+      "Qué ya funciona hoy: [sean honestos].",
+      "Qué falta: [díganlo].",
+      "Somos [número] y hablamos todos.",
+      "Escribe un guion de exactamente 3 minutos, dividido",
+      "por bloques de tiempo, y marca quién habla en cada uno.",
+      "Usa lenguaje de estudiante de colegio, no corporativo.",
+      "No inventes datos, resultados ni usuarios que no te di.",
+      "Esta es la primera frase de nuestro pitch:",
+      "[péguenla].",
+      "Proponme tres versiones más potentes, que se",
+      "entiendan sin contexto, en menos de 20 palabras.",
+      "Sin exagerar ni prometer de más.",
+      "PROMPT 3 · LAS PREGUNTAS",
+      "Te paso nuestro guion de pitch: [péguenlo].",
+      "¿Qué cinco preguntas difíciles nos haría un jurado?",
+      "Para cada una, dime qué deberíamos tener listo",
+      "para responder con honestidad.",
+      "Lo que devuelva la IA se ensaya en voz alta y se corrige: casi siempre queda largo y suena a adulto."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 8,
+     "seccion": "todos",
+     "titulo": "Cómo grabar el video",
+     "cuerpo": [
+      "Con el celular basta. Lo que importa es que se oiga.",
+      "Horizontal",
+      "Nunca vertical. El celular acostado y apoyado en algo firme.",
+      "Cerca del micrófono",
+      "A un metro o menos. Si hay ruido, busquen otro salón.",
+      "Luz de frente",
+      "Nunca una ventana detrás: quedan en sombra.",
+      "Muestren el proyecto",
+      "Aunque sea la pantalla del computador o el circuito en la mesa.",
+      "Una sola toma",
+      "No editen. Si se equivocan, repitan desde el principio.",
+      "Antes de subirlo, véanlo completo con audífonos. Si ustedes no aguantan verlo, nadie más lo va a ver."
+     ],
+     "tablas": []
+    },
+    {
+     "n": 9,
+     "seccion": "todos",
+     "titulo": "Antes de salir",
+     "cuerpo": [
+      "Presentacion_EquipoXX.pptx con las dos partes.",
+      "Las cinco fases documentadas, cada una con su evidencia y su fecha.",
+      "Pitch_EquipoXX.mp4, horizontal y de máximo tres minutos.",
+      "La propuesta de nombre enviada en el formulario.",
+      "Gracias por lo que llevan construido hasta aquí. Esto es la mitad del camino y ya hay mucho que mostrar."
+     ],
+     "tablas": []
+    }
+   ],
+   "titulo": "16 Y 17 DE SEPTIEMBRE Dos equipos van a la"
+  }
+ ]
+}

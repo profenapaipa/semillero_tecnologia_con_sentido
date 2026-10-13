@@ -9,6 +9,7 @@ con el método científico, hasta llegar a un artículo de desarrollo tecnológi
 Este sitio le muestra a cada equipo el estado real de su proceso.
 
 - **Sitio:** <https://profenapaipa.github.io/semillero_tecnologia_con_sentido/>
+- **Manual de marca:** [MANUAL_DE_MARCA.md](MANUAL_DE_MARCA.md)
 - **Cómo está organizada la carpeta:** [PROYECTOS.md](PROYECTOS.md)
 - **Cómo publicar un proyecto:** [PUBLICAR.md](PUBLICAR.md)
 - **El encargo:** [BRIEF.md](BRIEF.md)
@@ -91,9 +92,14 @@ lleva además una forma o un glifo, para que se lea sin depender de distinguir c
 2. Correr el generador:
 
    ```
-   python herramientas/generar.py
-   python herramientas/auditar.py
+   python herramientas/generar_marca.py    marca.css y el manual, desde datos/marca.json
+   python herramientas/extraer_modulos.py  las diapositivas de cada sesión
+   python herramientas/generar.py          las 76 páginas
+   python herramientas/auditar.py          revisa que nada se rompió
    ```
+
+   Lo normal es correr solo los dos últimos. Los dos primeros se corren cuando
+   cambia la identidad visual o cuando hay una sesión nueva.
 
 3. Comitear y hacer push. GitHub Pages publica solo.
 
