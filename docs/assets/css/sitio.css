@@ -1,0 +1,623 @@
+/* ===========================================================
+   sitio.css — estructura y componentes del sitio del semillero
+   ===========================================================
+   Usa SOLO las variables de marca.css. Ningún color suelto aquí.
+
+   Orden del archivo:
+     1. Base y tipografía
+     2. Estructura de página y encabezado
+     3. Navegación interna de las tres vistas
+     4. Semáforo y casillas (la regla de los dos niveles)
+     5. Ruta del Design Thinking
+     6. Desarrollo tecnológico
+     7. Documentación del artículo
+     8. Checklist de la semana
+     9. Portal: tarjetas de equipo y resumen
+    10. Pie y utilidades
+   =========================================================== */
+
+/* ============ 1. Base y tipografía ============ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: var(--fuente-titulos); letter-spacing: -.015em; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+
+a { color: var(--teal); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--teal-vivo); }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+  border-radius: var(--radio-chico);
+}
+
+img { max-width: 100%; height: auto; }
+code { font-family: var(--fuente-datos); font-size: .92em; overflow-wrap: anywhere; }
+
+.dato {
+  font-family: var(--fuente-datos);
+  font-size: 11.5px;
+  letter-spacing: .05em;
+  color: var(--tinta-suave);
+}
+.etiqueta {
+  font-family: var(--fuente-datos);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+/* ============ 2. Estructura de página y encabezado ============ */
+
+.envoltura {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding-inline: var(--margen);
+}
+
+.cinta {
+  background: var(--marino);
+  color: var(--superficie);
+  font-family: var(--fuente-datos);
+  font-size: 11.5px;
+  letter-spacing: .04em;
+}
+:root[data-theme="dark"] .cinta,
+.cinta { color: #FFFFFF; }
+.cinta .envoltura {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding-block: 9px;
+}
+.cinta a { color: #FFFFFF; }
+
+.cabecera { padding-block: 34px 26px; border-bottom: 1px solid var(--filete); }
+.cabecera h1 { font-size: clamp(28px, 6vw, 44px); font-weight: 800; line-height: 1.04; margin-block: 8px 10px; }
+.cabecera .resumen { color: var(--tinta-suave); max-width: 64ch; }
+
+.volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fuente-datos);
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+/* Ficha de datos del proyecto, bajo el título */
+.ficha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--filete);
+  list-style: none;
+  padding-left: 0;
+}
+.ficha > li { min-width: 0; }
+.ficha dt, .ficha .clave {
+  font-family: var(--fuente-datos);
+  font-size: 10.5px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+.ficha dd, .ficha .valor { margin: 2px 0 0; font-weight: 600; font-size: 14.5px; }
+
+.enlaces-proyecto { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border: 1px solid var(--teal);
+  border-radius: var(--radio-chico);
+  background: var(--superficie);
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+}
+.boton:hover { background: var(--teal); color: var(--superficie); }
+.boton.principal { background: var(--teal); color: var(--superficie); }
+.boton.principal:hover { background: var(--teal-vivo); }
+
+main { padding-block: 32px 60px; display: flex; flex-direction: column; gap: 40px; }
+
+section > h2 { font-size: 23px; font-weight: 800; margin-bottom: 4px; }
+section > .entradilla { color: var(--tinta-suave); max-width: 66ch; margin-bottom: 20px; }
+
+/* ============ 3. Navegación interna de las tres vistas ============ */
+
+/* Barra pegajosa de las tres vistas. No lleva margen negativo: la caja
+   interna .envoltura ya pone el margen lateral, y un margen negativo aquí
+   desbordaría la página hacia los lados. */
+.vistas {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--papel);
+  border-bottom: 1px solid var(--filete);
+}
+.vistas ol {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+.vistas a {
+  display: block;
+  padding: 13px 14px;
+  font-family: var(--fuente-datos);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .03em;
+  white-space: nowrap;
+  color: var(--tinta-suave);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.vistas a:hover { color: var(--teal); border-bottom-color: var(--teal); }
+.vistas .num { color: var(--teal); font-weight: 600; margin-right: 5px; }
+
+/* ============ 4. Semáforo y casillas ============ */
+
+/* Chip de estado de una fase o de un grupo. Lleva punto de color Y texto:
+   el color nunca va solo (BRIEF.md 4.2). */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-family: var(--fuente-datos);
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.chip .pt { width: 9px; height: 9px; border-radius: 50%; background: currentColor; flex: none; }
+.chip.verde { background: var(--verde-tenue); color: var(--verde-texto); }
+.chip.ambar { background: var(--ambar-tenue); color: var(--ambar-texto); }
+.chip.gris  { background: var(--gris-tenue);  color: var(--gris-texto); }
+
+/* Casilla de tarea individual: binaria. Hecha lleva un check dibujado
+   con CSS, no solo color. */
+.tarea-casilla {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+  border-radius: 3px;
+  position: relative;
+}
+.hecha > .tarea-casilla { background: var(--teal); }
+.hecha > .tarea-casilla::after {
+  content: "";
+  position: absolute;
+  left: 3.5px; top: 1.5px;
+  width: 5px; height: 8px;
+  border-right: 2px solid var(--superficie);
+  border-bottom: 2px solid var(--superficie);
+  transform: rotate(40deg);
+}
+.pendiente > .tarea-casilla { border: 1.5px solid var(--gris-fill); }
+
+.lista-tareas { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.lista-tareas > li { display: flex; gap: 11px; min-width: 0; }
+.lista-tareas .texto { min-width: 0; }
+.lista-tareas .texto b { font-weight: 600; font-size: 14.5px; }
+.lista-tareas .pendiente .texto b { color: var(--tinta-suave); font-weight: 500; }
+.lista-tareas .fuente {
+  display: block;
+  font-family: var(--fuente-datos);
+  font-size: 11.5px;
+  color: var(--tinta-suave);
+  margin-top: 3px;
+  overflow-wrap: anywhere;
+}
+
+/* Convenciones: la leyenda del semáforo */
+.convenciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  padding: 14px 16px;
+  margin-top: 16px;
+  background: var(--superficie2);
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  font-size: 13px;
+}
+.convenciones > div { display: flex; align-items: center; gap: 9px; min-width: 0; }
+.convenciones b { font-weight: 600; }
+.convenciones small { color: var(--tinta-suave); }
+.muestra { width: 15px; height: 15px; border-radius: 50%; flex: none; box-sizing: border-box; }
+.muestra.verde { background: var(--verde-fill); }
+.muestra.ambar { background: var(--superficie); border: 3px solid var(--ambar-fill); }
+.muestra.gris  { background: var(--superficie); border: 3px solid var(--gris-fill); }
+.muestra-cuadro { width: 12px; height: 12px; border-radius: 3px; flex: none; box-sizing: border-box; }
+.muestra-cuadro.si { background: var(--teal); }
+.muestra-cuadro.no { border: 1.5px solid var(--gris-fill); }
+
+/* ============ 5. Ruta del Design Thinking ============ */
+
+figure.ruta { margin: 0; }
+.lienzo {
+  overflow-x: auto;
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  padding: 18px 10px 12px;
+}
+.lienzo svg { display: block; min-width: 900px; width: 100%; height: auto; }
+figcaption { color: var(--tinta-suave); font-size: 13.5px; margin-top: 12px; max-width: 70ch; }
+
+.rejilla-fases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+.tarjeta {
+  min-width: 0;
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-left: 4px solid var(--gris-fill);
+  border-radius: var(--radio);
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.tarjeta.verde { border-left-color: var(--verde-fill); }
+.tarjeta.ambar { border-left-color: var(--ambar-fill); }
+.tarjeta.gris  { border-left-color: var(--gris-fill); }
+
+.tarjeta-cab { display: flex; align-items: flex-start; gap: 12px; }
+.tarjeta-cab .ord {
+  font-family: var(--fuente-datos);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--tinta-suave);
+  padding-top: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.tarjeta-cab hgroup { flex: 1; min-width: 0; }
+.tarjeta-cab h3 { font-size: 17.5px; font-weight: 700; }
+.tarjeta-cab .paso {
+  font-family: var(--fuente-datos);
+  font-size: 10.5px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin-top: 2px;
+}
+.tarjeta .que { font-size: 13.5px; color: var(--tinta-suave); }
+
+/* ============ 6. Desarrollo tecnológico ============ */
+
+.hitos { display: flex; flex-direction: column; gap: 12px; }
+
+.hito {
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-left: 4px solid var(--gris-fill);
+  border-radius: var(--radio);
+  overflow: hidden;
+}
+.hito.hecho { border-left-color: var(--verde-fill); }
+.hito.falta { border-left-color: var(--gris-fill); }
+.hito.bloqueo { border-left-color: var(--ambar-fill); }
+
+.hito-cab { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 15px 18px; }
+.hito-cab .marca { flex: none; display: flex; align-items: flex-start; }
+.hito-cab .tarea-casilla { margin-top: 0; }
+.hito-cab h3 { flex: 1; min-width: 180px; font-size: 16.5px; font-weight: 700; }
+.hito-cab .fase-pin {
+  font-family: var(--fuente-datos);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--teal);
+  border: 1px solid var(--filete);
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+.hito-cuerpo { padding: 0 18px 16px; display: flex; flex-direction: column; gap: 12px; }
+.hito-cuerpo .fuente {
+  font-family: var(--fuente-datos);
+  font-size: 11.5px;
+  color: var(--tinta-suave);
+  overflow-wrap: anywhere;
+}
+.hito-cuerpo .orientacion { font-size: 14px; }
+
+/* Detalle a pedido: HTML nativo, sin JavaScript (BRIEF.md 6) */
+details.mas {
+  border-top: 1px solid var(--filete);
+  padding-top: 12px;
+}
+details.mas > summary {
+  cursor: pointer;
+  font-family: var(--fuente-datos);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--teal);
+  list-style: none;
+}
+details.mas > summary::-webkit-details-marker { display: none; }
+details.mas > summary::before { content: "▸ "; }
+details.mas[open] > summary::before { content: "▾ "; }
+details.mas > div { padding-top: 12px; display: flex; flex-direction: column; gap: 12px; }
+
+.recursos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.recursos > li { display: flex; gap: 9px; font-size: 14px; }
+.recursos > li::before { content: "↗"; color: var(--teal); flex: none; font-size: 13px; padding-top: 2px; }
+
+.aviso-tutorial {
+  border-left: 3px solid var(--ambar-fill);
+  background: var(--ambar-tenue);
+  border-radius: var(--radio-chico);
+  padding: 12px 14px;
+  font-size: 13.5px;
+}
+.aviso-tutorial .titulo {
+  display: block;
+  font-family: var(--fuente-datos);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ambar-texto);
+  margin-bottom: 5px;
+}
+.aviso-entregado {
+  border-left: 3px solid var(--verde-fill);
+  background: var(--verde-tenue);
+  border-radius: var(--radio-chico);
+  padding: 12px 14px;
+  font-size: 13.5px;
+}
+.aviso-entregado .titulo {
+  display: block;
+  font-family: var(--fuente-datos);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--verde-texto);
+  margin-bottom: 5px;
+}
+
+.destacado-dinamica {
+  background: var(--superficie2);
+  border: 1px solid var(--filete);
+  border-left: 4px solid var(--ambar-fill);
+  border-radius: var(--radio);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.destacado-dinamica h3 { font-size: 17px; font-weight: 700; }
+
+/* ============ 7. Documentación del artículo ============ */
+
+.tabla-envoltura { overflow-x: auto; border: 1px solid var(--filete); border-radius: var(--radio); background: var(--superficie); }
+table.articulo { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 14px; }
+table.articulo th, table.articulo td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--filete); vertical-align: top; }
+table.articulo thead th {
+  font-family: var(--fuente-datos);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  background: var(--superficie2);
+  position: sticky;
+  top: 0;
+}
+table.articulo tbody tr:last-child td { border-bottom: 0; }
+table.articulo .sec { font-weight: 600; min-width: 170px; }
+table.articulo .cuando { font-family: var(--fuente-datos); font-size: 11.5px; color: var(--tinta-suave); white-space: nowrap; }
+table.articulo ul.faltan { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; }
+table.articulo ul.faltan li { font-size: 13.5px; }
+table.articulo tr.lista-ok td { background: var(--verde-tenue); }
+table.articulo .de-donde { font-size: 13px; color: var(--tinta-suave); margin-top: 4px; }
+
+/* ============ 8. Checklist de la semana ============ */
+
+.semana {
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  padding: 22px 24px 24px;
+}
+.semana-cab {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px 16px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--filete);
+  margin-bottom: 20px;
+}
+.semana-cab h2 { font-size: 21px; font-weight: 800; }
+.columnas { display: grid; grid-template-columns: repeat(auto-fit, minmax(248px, 1fr)); gap: 24px; }
+.columnas > div { min-width: 0; }
+.columnas h3 {
+  font-family: var(--fuente-datos);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--filete);
+}
+.columnas h3.ya    { border-color: var(--verde-fill); color: var(--verde-texto); }
+.columnas h3.falta { border-color: var(--ambar-fill); color: var(--ambar-texto); }
+.columnas h3.sigue { border-color: var(--teal);       color: var(--teal); }
+.columnas ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; font-size: 14px; }
+.columnas li { display: flex; gap: 9px; }
+.columnas li::before { content: ""; flex: none; width: 5px; height: 5px; margin-top: 9px; border-radius: 50%; background: var(--tinta-suave); }
+.columnas code { background: var(--superficie2); border: 1px solid var(--filete); border-radius: 3px; padding: 0 4px; }
+
+/* ============ 9. Portal: tarjetas de equipo y resumen ============ */
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+}
+.celda {
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  padding: 15px 16px;
+}
+.celda .cifra {
+  font-family: var(--fuente-titulos);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  display: block;
+}
+.celda .cifra.alerta { color: var(--ambar-texto); }
+.celda .cifra.bien { color: var(--verde-texto); }
+.celda .leyenda { font-size: 13px; color: var(--tinta-suave); margin-top: 4px; }
+
+.grupo-linea { margin-bottom: 30px; }
+.grupo-linea > .cab {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid var(--filete);
+}
+.grupo-linea > .cab h3 { font-size: 19px; font-weight: 800; }
+.grupo-linea > .cab .nota { font-size: 13px; color: var(--tinta-suave); max-width: 60ch; }
+
+.rejilla-equipos { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 13px; }
+
+a.equipo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-left: 4px solid var(--gris-fill);
+  border-radius: var(--radio);
+  padding: 16px 17px;
+  text-decoration: none;
+  color: inherit;
+}
+a.equipo:hover { border-color: var(--teal); }
+a.equipo.verde { border-left-color: var(--verde-fill); }
+a.equipo.ambar { border-left-color: var(--ambar-fill); }
+a.equipo.gris  { border-left-color: var(--gris-fill); }
+a.equipo .num {
+  font-family: var(--fuente-datos);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--tinta-suave);
+}
+a.equipo h4 { font-size: 17px; font-weight: 700; color: var(--tinta); }
+a.equipo .quien { font-size: 13px; color: var(--tinta-suave); }
+a.equipo .tres { display: flex; flex-wrap: wrap; gap: 6px; }
+a.equipo .mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--fuente-datos);
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+a.equipo .mini .pt { width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
+a.equipo .mini.verde { background: var(--verde-tenue); color: var(--verde-texto); }
+a.equipo .mini.ambar { background: var(--ambar-tenue); color: var(--ambar-texto); }
+a.equipo .mini.gris  { background: var(--gris-tenue);  color: var(--gris-texto); }
+
+/* Espacios hermanos */
+.hermano {
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radio);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hermano h3 { font-size: 20px; font-weight: 800; }
+.hermano .relacion { font-size: 13.5px; color: var(--tinta-suave); }
+
+/* ============ 10. Pie y utilidades ============ */
+
+.origen {
+  background: var(--superficie2);
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  padding: 20px 22px;
+}
+.origen h2 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.origen ol { margin: 14px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; font-size: 14px; }
+.origen li::marker { font-family: var(--fuente-datos); font-size: 12px; color: var(--tinta-suave); }
+.limite {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--ambar-fill);
+  background: var(--ambar-tenue);
+  border-radius: var(--radio-chico);
+  font-size: 13.5px;
+}
+
+footer.pie {
+  border-top: 1px solid var(--filete);
+  background: var(--superficie);
+}
+footer.pie .envoltura { padding-block: 26px 34px; display: flex; flex-direction: column; gap: 8px; }
+footer.pie .nombre { font-family: var(--fuente-titulos); font-weight: 700; font-size: 16px; }
+footer.pie p { font-size: 13px; color: var(--tinta-suave); }
+
+@media (max-width: 560px) {
+  body { font-size: 14.5px; }
+  main { padding-block: 24px 44px; gap: 32px; }
+  .semana, .origen, .hermano { padding: 17px 17px 19px; }
+  .tarjeta { padding: 14px 15px 16px; }
+  .hito-cab, .hito-cuerpo { padding-inline: 15px; }
+}

@@ -1,0 +1,13 @@
+# Windows / macOS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Archivos temporales de Office (los ~$ que deja Word abierto)
+~$*
+
+# Editor
+.vscode/
+
+# Maquetas de validación, no son parte del sitio
+mockups/

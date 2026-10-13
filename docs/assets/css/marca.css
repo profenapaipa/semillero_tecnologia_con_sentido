@@ -1,0 +1,140 @@
+/* ===========================================================
+   marca.css — la identidad del Semillero Maker de Tecnología con Sentido
+   ===========================================================
+   ÚNICO archivo donde se definen colores y tipografías.
+   El resto de las hojas usa estas variables y nunca un color suelto.
+   Si la identidad cambia, se cambia aquí y cambia en todo el sitio.
+
+   De dónde sale (ver BRIEF.md, sección 5):
+
+   SE HEREDA de "Un café con la iguana", para que las dos publicaciones
+   se vean de la misma casa:
+     - verde  #2E8150
+     - teal   #257680
+     - ámbar  #F5B016
+     - marino #273C66
+     - Montserrat para el texto corrido
+
+   CAMBIA, para que no sea la misma página:
+     - el papel: la iguana trabaja sobre crema y hueso, cálidos.
+       El semillero trabaja sobre un papel frío, gris azulado, de
+       cuaderno técnico. Es el cambio que separa las dos publicaciones.
+     - los títulos: la iguana usa Anton, condensada y de cartel.
+       El semillero usa Archivo en peso alto: más ancha y más seria.
+     - un tercer registro que la iguana no tiene: IBM Plex Mono, para
+       nombres de archivo, rutas, versiones, commits y conteos.
+     - la forma: esquinas de 8px en vez de 14px, sin sombra dura negra.
+       La jerarquía la marcan filetes de 1px y una barra de color a la
+       izquierda de las tarjetas. Más de ficha técnica, menos de afiche.
+
+   REGLA DEL SEMÁFORO: el verde y el ámbar son colores de ESTADO.
+   No se usan de adorno en ningún otro lado. El teal es el color de lo
+   que se puede tocar: enlaces, botones, navegación activa.
+
+   Cada color de estado tiene dos variantes:
+     --x-fill  el color vivo de la marca, para rellenos y puntos
+     --x-texto el mismo color oscurecido, para que el texto tenga
+               contraste suficiente sobre fondo claro
+   =========================================================== */
+
+:root {
+  /* --- Papel y tinta (lo que cambia respecto a la iguana) --- */
+  --papel:       #E8ECEE;
+  --superficie:  #FFFFFF;
+  --superficie2: #F3F6F7;
+  --tinta:       #0F1D21;
+  --tinta-suave: #54686E;
+  --filete:      #CFD9DC;
+
+  /* --- Identidad heredada de la iguana --- */
+  --teal:        #1F6670;
+  --teal-vivo:   #257680;
+  --marino:      #223457;
+
+  /* --- Semáforo: los tres estados --- */
+  --verde-fill:  #2E8150;
+  --verde-texto: #1E6440;
+  --verde-tenue: #2E815014;
+
+  --ambar-fill:  #F5B016;
+  --ambar-texto: #8A5E02;
+  --ambar-tenue: #F5B01622;
+
+  --gris-fill:   #8C9CA1;
+  --gris-texto:  #5A6B71;
+  --gris-tenue:  #8C9CA11F;
+
+  /* --- Tipografías --- */
+  --fuente-titulos: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --fuente-texto:   "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --fuente-datos:   "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+
+  /* --- Medidas --- */
+  --radio:  8px;
+  --radio-chico: 4px;
+  --ancho: 1100px;
+  --margen: 20px;
+
+  color-scheme: light;
+}
+
+/* Modo oscuro por preferencia del sistema.
+   El :not([data-theme="light"]) permite que una elección explícita de
+   tema claro gane sobre la preferencia del sistema. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel:       #0D1618;
+    --superficie:  #141F22;
+    --superficie2: #1A272B;
+    --tinta:       #E4ECEE;
+    --tinta-suave: #93A6AC;
+    --filete:      #27383D;
+
+    --teal:        #5FC0D0;
+    --teal-vivo:   #4FB3C4;
+    --marino:      #8FA3C9;
+
+    --verde-fill:  #3FA771;
+    --verde-texto: #5AC68E;
+    --verde-tenue: #3FA77122;
+
+    --ambar-fill:  #F5B016;
+    --ambar-texto: #EFB63F;
+    --ambar-tenue: #F5B01626;
+
+    --gris-fill:   #6B7D83;
+    --gris-texto:  #93A6AC;
+    --gris-tenue:  #6B7D8326;
+
+    color-scheme: dark;
+  }
+}
+
+/* La misma paleta oscura, pero por elección explícita, para que un
+   selector de tema gane en los dos sentidos. */
+:root[data-theme="dark"] {
+  --papel:       #0D1618;
+  --superficie:  #141F22;
+  --superficie2: #1A272B;
+  --tinta:       #E4ECEE;
+  --tinta-suave: #93A6AC;
+  --filete:      #27383D;
+
+  --teal:        #5FC0D0;
+  --teal-vivo:   #4FB3C4;
+  --marino:      #8FA3C9;
+
+  --verde-fill:  #3FA771;
+  --verde-texto: #5AC68E;
+  --verde-tenue: #3FA77122;
+
+  --ambar-fill:  #F5B016;
+  --ambar-texto: #EFB63F;
+  --ambar-tenue: #F5B01626;
+
+  --gris-fill:   #6B7D83;
+  --gris-texto:  #93A6AC;
+  --gris-tenue:  #6B7D8326;
+
+  color-scheme: dark;
+}
