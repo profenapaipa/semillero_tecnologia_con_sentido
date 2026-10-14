@@ -597,7 +597,8 @@ def indice_portal(datos):
     cuentas = {'proyectos': str(len(datos['equipos'])),
                'hermanos': str(len(datos['hermanos'])),
                'como': '4'}
-    p = ['<nav class="indice-portal" id="indice-portal" aria-label="Secciones del portal">']
+    p = ['<nav class="indice-portal" id="panel-izq" aria-label="Secciones del portal">'
+         '<span id="indice-portal" hidden></span>']
     p.append('<div class="cab-ind"><span class="rotulo">Portal del semillero</span>'
              '<b>%d proyectos</b></div>' % len(datos['equipos']))
     for ancla, titulo, icono in SECCIONES_PORTAL:
@@ -743,6 +744,7 @@ def pagina_portal(datos):
     h.append('<div class="portal-cuerpo">')
     h.append(indice_portal(datos))
     h.append('<main class="principal">')
+    h.append(tiradores(con_derecho=False))
 
     # --- cómo funciona: panel introductorio ---
     h.append('<section class="bloque sobre-superficie" id="como" data-tinte="teal">'
@@ -968,6 +970,7 @@ def pagina_equipo(datos, equipo):
     h.append('<div class="con-lateral">')
     h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '', _mods_lat))
     h.append('<main class="principal">')
+    h.append(tiradores())
 
     # --- nivel actual ---
     h.append('<section class="bloque"><div class="envoltura">')
@@ -1188,6 +1191,24 @@ def camino(nv, act, enlace, slug):
     return ''.join(p)
 
 
+
+def tiradores(con_derecho=True):
+    """
+    Los botones para plegar los paneles. Al plegarlos, su espacio pasa
+    entero a la columna de lectura, que es lo que escasea.
+    """
+    b = ['<div class="tiradores">']
+    b.append('<button class="tirador" type="button" data-pliega="izq" '
+             'aria-expanded="true" aria-controls="panel-izq">%s Índice</button>'
+             % ico('chevron', 13))
+    if con_derecho:
+        b.append('<button class="tirador" type="button" data-pliega="der" '
+                 'aria-expanded="true" aria-controls="panel-der">%s Estado</button>'
+                 % ico('chevron', 13))
+    b.append('</div>')
+    return ''.join(b)
+
+
 def menu_izquierdo(datos, equipo, nv, act, vista, modulos=None):
     """
     Indice del proyecto, a la izquierda y desplegable.
@@ -1199,7 +1220,7 @@ def menu_izquierdo(datos, equipo, nv, act, vista, modulos=None):
     estas vienen abiertos.
     """
     s_ = equipo['slug']
-    p = ['<nav class="lateral-izq" aria-label="Indice del proyecto">']
+    p = ['<nav class="lateral-izq" id="panel-izq" aria-label="Índice del proyecto">']
     p.append('<div class="izq-cab"><span class="rotulo">Indice</span>'
              '<b>%s</b></div>' % e(equipo['nombre']))
 
@@ -1265,7 +1286,7 @@ def panel_derecho(datos, equipo, nv, act, hh, tt):
     _a, ah, at = resumen_articulo(datos, equipo)
     pend = [t for t in act['tareas'] if not t[2]]
 
-    p = ['<aside class="lateral" aria-label="Estado del proyecto">']
+    p = ['<aside class="lateral" id="panel-der" aria-label="Estado del proyecto">']
 
     p.append('<div class="caja-lat destacada"><span class="rotulo">Puntos del equipo</span>')
     p.append('<div class="marcador"><b>%d</b><small>de %d posibles</small></div>'
@@ -1454,6 +1475,7 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
     h.append('<div class="con-lateral">')
     h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-modulos', _mods_lat))
     h.append('<main class="principal">')
+    h.append(tiradores())
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 2 de 5</span>'
              '<h2>Modulos del semestre</h2>'
@@ -1627,6 +1649,7 @@ def pagina_ruta(datos, equipo):
     h.append('<div class="con-lateral">')
     h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-ruta', _mods_lat))
     h.append('<main class="principal">')
+    h.append(tiradores())
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 1 de 3</span>'
              '<h2>La ruta por niveles</h2>'
@@ -1679,6 +1702,7 @@ def pagina_desarrollo(datos, equipo):
     h.append('<div class="con-lateral">')
     h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-desarrollo', _mods_lat))
     h.append('<main class="principal">')
+    h.append(tiradores())
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 2 de 3</span>'
              '<h2>Desarrollo tecnológico</h2>'
@@ -1753,6 +1777,7 @@ def pagina_articulo(datos, equipo):
     h.append('<div class="con-lateral">')
     h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-articulo', _mods_lat))
     h.append('<main class="principal">')
+    h.append(tiradores())
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 3 de 3</span>'
              '<h2>Documentación del artículo</h2>'

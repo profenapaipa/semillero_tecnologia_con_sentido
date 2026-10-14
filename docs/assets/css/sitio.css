@@ -880,12 +880,16 @@ a.equipo .titular h3 { padding-top: 2px; }
 /* ============ 14. Dos columnas, a la manera de un aula virtual ============ */
 
 .con-lateral {
-  max-width: var(--ancho);
+  /* Antes esto vivia encerrado en 1140px, asi que a 1920 sobraban 374px de
+     margen muerto a cada lado mientras la columna de lectura se quedaba en
+     50 caracteres. Ahora la rejilla ocupa el ancho util y los paneles se
+     pegan al borde: ese margen se convierte en texto legible. */
+  max-width: 1760px;
   margin: 0 auto;
   padding-inline: var(--margen);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 312px;
-  gap: 34px;
+  grid-template-columns: var(--rail-izq) minmax(0, 1fr) var(--rail-der);
+  gap: 26px;
   align-items: start;
 }
 /* Dentro de la rejilla el margen lateral ya está puesto: las secciones
@@ -1265,10 +1269,7 @@ details.texto-diapos { margin-top: 4px; }
    Centro: el contenido.
    Derecha: bloques que informan y no navegan. */
 
-.con-lateral {
-  grid-template-columns: 258px minmax(0, 1fr) 300px;
-  gap: 28px;
-}
+
 
 .lateral-izq {
   position: sticky;
@@ -1460,12 +1461,12 @@ details.texto-diapos { margin-top: 4px; }
    las páginas de equipo se recorren de la misma manera. */
 
 .portal-cuerpo {
-  max-width: var(--ancho);
+  max-width: 1760px;
   margin: 0 auto;
   padding-inline: var(--margen);
   display: grid;
-  grid-template-columns: 236px minmax(0, 1fr);
-  gap: 30px;
+  grid-template-columns: var(--rail-izq) minmax(0, 1fr);
+  gap: 26px;
   align-items: start;
 }
 .portal-cuerpo .envoltura { max-width: none; padding-inline: 0; }
@@ -1795,3 +1796,86 @@ details.mas > div { min-width: 0; }
   background: var(--panel);
 }
 .video-en-ventana iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+
+/* ============ 28. Proporciones y paneles plegables ============ */
+/* Medido antes del cambio: los paneles sumaban 558px y la columna de
+   lectura 526px, con 50 caracteres por linea. Los lados pesaban mas que lo
+   que se lee, y a 1920px la pagina ni siquiera crecia.
+   La medida comoda de lectura esta entre 60 y 75 caracteres: por debajo de
+   45 el ojo salta de linea demasiado seguido, por encima de 90 se pierde el
+   renglon al volver. Eso es lo que persiguen estos anchos. */
+
+:root {
+  --rail-izq: 244px;
+  --rail-der: 288px;
+}
+/* Plegados, su espacio pasa entero a la columna de lectura */
+[data-izq="cerrado"] { --rail-izq: 0px; }
+[data-der="cerrado"] { --rail-der: 0px; }
+[data-izq="cerrado"] .lateral-izq,
+[data-izq="cerrado"] .indice-portal,
+[data-der="cerrado"] aside.lateral { display: none; }
+
+/* Cada panel va a SU columna, siempre.
+   Sin esto, al ocultar uno la rejilla recolocaba los demas y el contenido
+   caia en la columna de ancho cero que acababa de dejar el panel: la
+   columna central se quedaba en 0 px y la pagina en blanco. */
+.lateral-izq, .indice-portal { grid-column: 1; }
+.con-lateral > .principal, .portal-cuerpo > .principal { grid-column: 2; }
+.con-lateral > aside.lateral { grid-column: 3; }
+
+/* La prosa no se estira aunque la columna crezca: una linea muy larga
+   cansa tanto como una muy corta. Las tablas, el carrusel y las rejillas
+   si usan todo el ancho, porque ahi no se lee en renglones. */
+.principal .cab-seccion,
+.principal .entradilla,
+.principal > section > .envoltura > p,
+.tareas .como,
+.nota-caja,
+.objetivo-modulo,
+.origen p {
+  max-width: 72ch;
+}
+
+/* El tirador para plegar cada panel */
+.tirador {
+  position: sticky;
+  top: calc(var(--alto-fijo) + 18px);
+  z-index: 25;
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: 34px;
+  padding: 7px 11px;
+  border: 1px solid var(--filete);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--tinta-suave);
+  font-family: var(--fuente-datos); font-size: 11px; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase;
+  cursor: pointer; white-space: nowrap;
+  box-shadow: var(--alzado-1);
+}
+.tirador:hover { border-color: var(--cian); color: var(--cian); }
+.tirador .ico { transition: transform .2s ease; }
+.tirador[aria-expanded="false"] .ico { transform: rotate(180deg); }
+
+/* Cuando un panel esta plegado, su tirador queda como pestana en el borde */
+.tiradores {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 1240px) {
+  :root { --rail-der: 0px; }
+  .con-lateral aside.lateral {
+    grid-column: 1 / -1; position: static; padding-top: 0; padding-bottom: 34px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  [data-der="cerrado"] aside.lateral { display: grid; }
+}
+@media (max-width: 900px) {
+  :root { --rail-izq: 0px; }
+  .con-lateral, .portal-cuerpo { grid-template-columns: 1fr; gap: 0; }
+  [data-izq="cerrado"] .lateral-izq,
+  [data-izq="cerrado"] .indice-portal { display: flex; }
+}

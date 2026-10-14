@@ -14,6 +14,7 @@
      8. Pintar la barra de avance de lectura.
      9. Hacer que las cifras cuenten hasta su valor al entrar en pantalla.
     10. Abrir las lecciones en ventana emergente, sin sacar de la pagina.
+    11. Plegar los paneles laterales y recordar la eleccion.
 
    Las dos librerias se eligieron por una razon concreta: ninguna esconde
    contenido desde el CSS. Si no cargan, la pagina se ve completa, solo que
@@ -372,6 +373,35 @@
     // detras de la pagina con la ventana ya cerrada.
     modal.addEventListener('close', function () { modalCuerpo.innerHTML = ''; });
   }
+
+
+  /* ---- 12. Plegar los paneles laterales ---- */
+  /* Al plegar uno, su espacio pasa entero a la columna de lectura, que es
+     lo que escasea. La eleccion se recuerda en ese navegador, porque es una
+     preferencia de quien lee y no un dato del proyecto. */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-pliega]'), function (b) {
+    var lado = b.getAttribute('data-pliega');
+    var clave = 'panel-' + lado;
+
+    function pintar(cerrado) {
+      document.documentElement.setAttribute('data-' + lado, cerrado ? 'cerrado' : 'abierto');
+      b.setAttribute('aria-expanded', cerrado ? 'false' : 'true');
+    }
+
+    var guardado = null;
+    try { guardado = localStorage.getItem(clave); } catch (e) { /* sin permiso */ }
+    if (guardado === 'cerrado') { pintar(true); }
+
+    b.addEventListener('click', function () {
+      var cerrado = b.getAttribute('aria-expanded') === 'true';
+      pintar(cerrado);
+      try { localStorage.setItem(clave, cerrado ? 'cerrado' : 'abierto'); } catch (e) { }
+      // La rejilla cambio de ancho: los disparadores y el carrusel hay que
+      // recalcularlos o quedan midiendo sobre el ancho de antes.
+      if (window.ScrollTrigger) { ScrollTrigger.refresh(); }
+      window.dispatchEvent(new Event('resize'));
+    });
+  });
 
   /* El sistema duplicado de aparicion se retiro aqui: escondia el contenido
      desde el CSS y peleaba con GSAP por la misma propiedad. Ver la nota en
