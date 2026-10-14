@@ -416,7 +416,9 @@ def mapa_fijo(datos, equipo, nv, act, vista_activa):
     p.append('<li><a href="../index.html#linea-%s"><span class="insignia">%s %s</span></a></li>'
              % (e(equipo['linea']), ico(ICONO_LINEA.get(equipo['linea'], 'diana'), 13),
                 e(linea['nombre'])))
-    p.append('<li><a class="aqui" href="%s.html">%s</a></li>' % (e(s), e(equipo['nombre'])))
+    p.append('<li><a class="aqui" href="%s.html">'
+             '<span class="num-mapa">%s</span>%s</a></li>'
+             % (e(s), e(equipo['numero']), e(equipo['nombre'])))
     p.append('</ol>')
 
     # fila 2: las cuatro subsecciones
@@ -602,10 +604,24 @@ def pagina_portal(datos):
              '<h2>Catorce equipos, cuatro líneas técnicas</h2>'
              '<p>Cada tarjeta trae el avance de la ruta completa y el del artículo. '
              'Entra a la del equipo para ver su nivel actual y qué sigue.</p></div>')
+    h.append('<div class="buscador">')
+    h.append('<label class="campo" for="q">%s'
+             '<input type="search" id="q" placeholder="Busca por numero, nombre, '
+             'integrante o linea" autocomplete="off" spellcheck="false">'
+             '<button type="button" id="q-limpiar" hidden aria-label="Limpiar busqueda">%s</button>'
+             '</label>' % (ico('lupa', 19), ico('check', 16)))
+    h.append('<p class="buscador-estado dato" id="q-estado" role="status">'
+             '%d proyectos</p>' % len(datos['equipos']))
+    h.append('</div>')
+    h.append('<p class="sin-resultados dato" id="q-vacio" hidden>%s '
+             'No hay ningun proyecto con eso. Prueba con el numero del equipo, '
+             'con un nombre o con el de un integrante.</p>' % ico('ayuda', 17))
+
     for clave, linea in datos['lineas'].items():
         equipos = [x for x in datos['equipos'] if x['linea'] == clave]
         if not equipos:
             continue
+        h.append('<div class="grupo-linea" data-grupo="%s">' % e(clave))
         h.append('<div class="cab-sub" id="linea-%s" data-linea="%s">'
                  '<span class="icono">%s</span><h3>%s</h3>'
                  '<span class="dato">%d equipos</span></div>'
@@ -617,13 +633,17 @@ def pagina_portal(datos):
             hh, tt, nv = totales(datos, eq)
             _, ah, at = resumen_articulo(datos, eq)
             act = nivel_actual(nv)
-            h.append('<a class="equipo revelar" data-linea="%s" href="equipos/%s.html">'
-                     % (e(clave), e(eq['slug'])))
-            h.append('<div class="banda">%s<span>%s</span><span class="num">EQUIPO %s</span></div>'
-                     % (ico(ICONO_LINEA.get(clave, 'diana'), 17), e(linea['nombre']),
-                        e(eq['numero'])))
+            buscable = ' '.join([eq['numero'], 'equipo ' + eq['numero'], eq['nombre'],
+                                 eq['integrantes'], linea['nombre'], eq.get('stack', '')])
+            h.append('<a class="equipo revelar" data-linea="%s" data-buscar="%s" '
+                     'href="equipos/%s.html">'
+                     % (e(clave), e(buscable.lower()), e(eq['slug'])))
+            h.append('<div class="banda">%s<span>%s</span></div>'
+                     % (ico(ICONO_LINEA.get(clave, 'diana'), 17), e(linea['nombre'])))
             h.append('<div class="interior">')
-            h.append('<h3>%s</h3>' % e(eq['nombre']))
+            h.append('<div class="titular"><span class="numero-equipo">'
+                     '<small>equipo</small><b>%s</b></span><h3>%s</h3></div>'
+                     % (e(eq['numero']), e(eq['nombre'])))
             h.append('<p class="quien">%s</p>' % e(eq['integrantes']))
             h.append('<div class="medidas">%s%s</div>'
                      % (progreso('Ruta, nivel %d de 7' % act['n'], hh, tt),
@@ -631,7 +651,7 @@ def pagina_portal(datos):
             if (eq.get('publicacion') or {}).get('estado') == 'en linea':
                 h.append('<span class="sello"><span class="punto"></span>publicado y en línea</span>')
             h.append('</div></a>')
-        h.append('</div>')
+        h.append('</div></div>')
     h.append('</div></section>')
 
     # --- publicados ---
@@ -694,9 +714,11 @@ def pagina_portal(datos):
 def portada_equipo(datos, equipo, hh, tt, compacta=False):
     linea = datos['lineas'][equipo['linea']]
     p = ['<header class="portada%s"><div class="envoltura">' % (' compacta' if compacta else '')]
-    p.append('<div class="identidad"><span class="insignia-linea">%s %s</span>'
-             '<span class="rotulo" style="color:var(--sobre-panel-suave)">Equipo %s</span></div>'
-             % (ico(ICONO_LINEA.get(equipo['linea'], 'diana'), 17), e(linea['nombre']), e(equipo['numero'])))
+    p.append('<div class="identidad"><span class="placa-equipo">'
+             '<small>equipo</small><b>%s</b></span>'
+             '<span class="insignia-linea">%s %s</span></div>'
+             % (e(equipo['numero']), ico(ICONO_LINEA.get(equipo['linea'], 'diana'), 17),
+                e(linea['nombre'])))
     p.append('<h1>%s</h1>' % e(equipo['nombre']))
     p.append('<p class="bajada">%s</p>' % e(equipo['integrantes']))
     if not compacta:

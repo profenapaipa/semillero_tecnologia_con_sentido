@@ -4,7 +4,8 @@
    Dos cosas, nada más:
 
      1. Marcar en el mapa fijo la sección que se está mirando.
-     2. Hacer aparecer los bloques al desplazar.
+     2. Filtrar los proyectos con el buscador del portal.
+     3. Hacer aparecer los bloques al desplazar.
 
    No se usa ninguna librería a propósito. Son unas pocas líneas con las
    herramientas del navegador, y si este archivo no carga la página sigue
@@ -44,7 +45,59 @@
     });
   }
 
-  /* ---- 2. Aparecer al desplazar ---- */
+
+  /* ---- 3. Buscador de proyectos ---- */
+  var caja = document.getElementById('q');
+  if (caja) {
+    var tarjetas = Array.prototype.slice.call(document.querySelectorAll('a.equipo[data-buscar]'));
+    var grupos = Array.prototype.slice.call(document.querySelectorAll('[data-grupo]'));
+    var estado = document.getElementById('q-estado');
+    var vacio = document.getElementById('q-vacio');
+    var limpiar = document.getElementById('q-limpiar');
+    var total = tarjetas.length;
+
+    // Sin tildes y en minusculas, para que "animacion" encuentre "animación".
+    function normal(t) {
+      return (t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+    tarjetas.forEach(function (t) { t._clave = normal(t.getAttribute('data-buscar')); });
+
+    function filtrar() {
+      var q = normal(caja.value.trim());
+      var visibles = 0;
+      tarjetas.forEach(function (t) {
+        var pasa = !q || q.split(/\s+/).every(function (parte) {
+          return t._clave.indexOf(parte) !== -1;
+        });
+        t.hidden = !pasa;
+        if (pasa) { visibles++; }
+      });
+      // Una linea tecnica se esconde si ninguno de los suyos quedo visible.
+      grupos.forEach(function (g) {
+        var algunos = g.querySelectorAll('a.equipo:not([hidden])').length;
+        g.hidden = algunos === 0;
+      });
+      if (estado) {
+        estado.textContent = q
+          ? (visibles === 1 ? '1 proyecto encontrado' : visibles + ' proyectos encontrados')
+          : total + ' proyectos';
+      }
+      if (vacio) { vacio.hidden = visibles !== 0; }
+      if (limpiar) { limpiar.hidden = !q; }
+    }
+
+    caja.addEventListener('input', filtrar);
+    caja.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape') { caja.value = ''; filtrar(); }
+    });
+    if (limpiar) {
+      limpiar.addEventListener('click', function () { caja.value = ''; filtrar(); caja.focus(); });
+    }
+    // La barra puede traer texto si el navegador lo recordo al recargar.
+    filtrar();
+  }
+
+  /* ---- 4. Aparecer al desplazar ---- */
   var porRevelar = document.querySelectorAll('.revelar');
   if (!porRevelar.length) { return; }
 
