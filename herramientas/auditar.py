@@ -116,6 +116,50 @@ for i, linea in enumerate(sitio.splitlines(), 1):
         fallas.append('sitio.css linea %d usa %s como relleno de texto SVG. [%s]'
                       % (i, f.group(1), limpia.strip()[:60]))
 
+# ---- 4.ter el CSS no puede esconder contenido ----
+# El defecto de las tarjetas invisibles del portal: una regla de CSS ponia
+# opacity:0 y esperaba que un script pusiera la clase que lo revelaba. Si el
+# script falla, o si otra libreria toca la misma propiedad, queda contenido
+# invisible que igual recibe el clic. Esconder es tarea del script, que si
+# sabe si va a poder revelar; nunca de la hoja de estilo.
+#
+# Dos excepciones legitimas:
+#   - dentro de @keyframes, donde opacity:0 es un fotograma de una animacion
+#     que vuelve a dejar el elemento visible;
+#   - las clases hechas para ocultar a proposito, como [hidden] o .no-js.
+PERMITIDO_OCULTO = ('::backdrop', '[hidden]', '.no-js', 'sr-only', 'visually-hidden')
+
+# Se quitan los comentarios de TODO el archivo, incluidos los de varias
+# lineas: si no, la regla se marca a si misma al leer su propia explicacion.
+_sin_coment = re.sub(r'/\*.*?\*/', lambda m: '\n' * m.group(0).count('\n'), sitio, flags=re.S)
+_lineas = _sin_coment.splitlines()
+
+# Se marca que lineas caen dentro de un @keyframes, contando llaves.
+_en_keyframes = [False] * len(_lineas)
+_prof = 0
+_dentro = False
+for _i, _l in enumerate(_lineas):
+    if '@keyframes' in _l:
+        _dentro = True
+        _prof = 0
+    if _dentro:
+        _en_keyframes[_i] = True
+        _prof += _l.count('{') - _l.count('}')
+        if _prof <= 0 and '{' in ''.join(_lineas[:_i + 1])[-400:]:
+            if _l.count('}') and _prof <= 0:
+                _dentro = False
+
+for _i, _l in enumerate(_lineas):
+    if not re.search(r'opacity:\s*0(?![.\d])', _l):
+        continue
+    if _en_keyframes[_i]:
+        continue
+    _ctx = '\n'.join(_lineas[max(0, _i - 5):_i + 1])
+    if any(ok in _ctx for ok in PERMITIDO_OCULTO):
+        continue
+    fallas.append('sitio.css linea %d esconde contenido con opacity:0. Eso lo hace el '
+                  'script, no la hoja de estilo. [%s]' % (_i + 1, _l.strip()[:60]))
+
 # ---- 5. tokens definidos en el :root base ----
 marca = leer(os.path.join(CSS, 'marca.css'))
 base = marca.split('@media', 1)[0]

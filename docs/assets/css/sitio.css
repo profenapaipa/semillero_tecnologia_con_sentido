@@ -105,11 +105,18 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
 
 /* Aparición al desplazar. Sin librería: veinte líneas de JavaScript y, si el
    JavaScript no corre, todo queda visible igual. */
-.revelar { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
-.revelar.visible, .no-js .revelar { opacity: 1; transform: none; }
+/* .revelar NO esconde nada, a proposito.
+   Antes valia opacity:0 y esperaba que un script le pusiera .visible. Eso
+   dejaba el contenido invisible si el script fallaba, y encima peleaba con
+   GSAP, que anima los mismos elementos: al terminar su animacion GSAP quita
+   su estilo en linea, volvia a mandar este opacity:0, y las tarjetas
+   quedaban invisibles pero clicables.
+   Ahora la clase es solo una marca. Quien anima es GSAP, que pone los
+   estados iniciales desde JavaScript: si GSAP no carga, no esconde nada. */
+.revelar { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .revelar { opacity: 1; transform: none; transition: none; }
+  .revelar { opacity: 1; transform: none; }
   * { animation-duration: .001ms !important; }
 }
 

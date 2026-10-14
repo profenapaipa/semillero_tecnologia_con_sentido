@@ -5,7 +5,8 @@
 
      1. Marcar en el mapa fijo la sección que se está mirando.
      2. Filtrar los proyectos con el buscador del portal.
-     3. Hacer aparecer los bloques al desplazar.
+     3. Hacer aparecer los bloques al desplazar, con GSAP y solo con GSAP:
+        ninguna hoja de estilo esconde contenido esperando un script.
      4. Cargar el reproductor de YouTube solo cuando alguien pulsa.
      5. Cerrar los menus desplegables al salirse o con Escape.
      6. Mover el carrusel de diapositivas (Swiper).
@@ -253,6 +254,14 @@
         scrollTrigger: { trigger: pz, start: 'top top', end: 'bottom top', scrub: true }
       });
     });
+    // Las fuentes y las imagenes cambian el alto de la pagina al llegar, y
+    // entonces los disparadores quedan calculados sobre un alto que ya no
+    // existe. Se recalculan cuando todo termino de cargar.
+    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { ScrollTrigger.refresh(); });
+    }
+
     // El numero gigante del nivel actual se mueve un poco mas lento.
     Array.prototype.forEach.call(document.querySelectorAll('.nivel-actual .gigante'), function (g) {
       gsap.to(g, {
@@ -333,27 +342,8 @@
       function (sm) { sm.setAttribute('aria-haspopup', 'dialog'); });
   }
 
-  /* ---- 4. Aparecer al desplazar, respaldo sin librerias ---- */
-  var porRevelar = document.querySelectorAll('.revelar');
-  if (!porRevelar.length) { return; }
+  /* El sistema duplicado de aparicion se retiro aqui: escondia el contenido
+     desde el CSS y peleaba con GSAP por la misma propiedad. Ver la nota en
+     sitio.css, regla .revelar. */
 
-  var quietos = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (quietos || !('IntersectionObserver' in window)) {
-    Array.prototype.forEach.call(porRevelar, function (el) { el.classList.add('visible'); });
-    return;
-  }
-
-  var aparecer = new IntersectionObserver(function (entradas, obs) {
-    entradas.forEach(function (ent) {
-      if (!ent.isIntersecting) { return; }
-      ent.target.classList.add('visible');
-      obs.unobserve(ent.target);   // una vez visible, se deja en paz
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
-
-  Array.prototype.forEach.call(porRevelar, function (el, i) {
-    // Un escalonado corto para que una rejilla no aparezca de golpe.
-    el.style.transitionDelay = Math.min(i % 6, 5) * 55 + 'ms';
-    aparecer.observe(el);
-  });
 }());
