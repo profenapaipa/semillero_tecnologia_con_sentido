@@ -2,10 +2,10 @@
    Sale de datos/marca.json con  python herramientas/generar_marca.py
    Cualquier cambio hecho aquí se pierde en la próxima generación. */
 
-/* Semillero Maker de Tecnología con Sentido · manual de marca v6.0 · 2026-10-13
-   Concepto: Cuaderno de expedicion
+/* Semillero Maker de Tecnología con Sentido · manual de marca v7.0 · 2026-10-13
+   Concepto: Laboratorio
 
-   El semillero no es una marca de colegio ni un panel de control: es un taller que sale a campo. La pagina se ve como el cuaderno de esa expedicion y se recorre como un sendero: papel marfil con curvas de nivel dibujadas al fondo, tinta sepia, anotaciones en monoespaciada, y un trazo que marca lo recorrido y lo que falta. El avance no se cuenta, se camina.
+   El semillero construye y mide. La pagina se ve como el tablero de ese laboratorio: papel frio y limpio, tinta azul profunda, y acentos electricos que marcan de que oficio es cada cosa. Nada de crema ni de tonos tierra: eso pertenece a otra clase de documento. El avance se camina por un sendero, y lo que falta no se disfraza.
 
    La web de la iguana se rige por un manual de marca institucional ajeno. Este semillero es un proyecto personal de Néstor Andrés Paipa, así que no hereda ni su tipografía ni sus colores. Las dos publicaciones conviven sin parecerse, y el sitio del semillero no lleva crédito ni marca de ninguna institución.
 
@@ -18,49 +18,49 @@
 
 :root {
   /* --- color, tema claro --- */
-  --papel: #F3EFE4;
+  --papel: #EFF3FA;
   --superficie: #FFFFFF;
-  --superficie2: #FBF9F3;
-  --tinta: #1C1710;
-  --tinta-suave: #5D5243;
-  --filete: #D9D0BC;
-  --filete-sutil: #E8E2D3;
-  --panel: #16202E;
-  --panel-2: #233449;
-  --sobre-panel: #EEF2F7;
-  --sobre-panel-suave: #A2B2C6;
+  --superficie2: #F6F9FD;
+  --tinta: #0A0E1A;
+  --tinta-suave: #4F5C75;
+  --filete: #D2DAE9;
+  --filete-sutil: #E5EBF5;
+  --panel: #070B18;
+  --panel-2: #141D3D;
+  --sobre-panel: #E9EEFB;
+  --sobre-panel-suave: #94A4C6;
   --sobre-relleno: #FFFFFF;
-  --velo: #1C1710A3;
-  --cian: #2A4C9B;
-  --cian-vivo: #1F3B7D;
-  --cian-panel: #9CB6F2;
-  --verde-fill: #1F7A3D;
-  --verde-texto: #15602E;
-  --verde-panel: #6FD398;
-  --ambar-fill: #BF8609;
-  --ambar-texto: #7A5305;
-  --ambar-panel: #EFC765;
-  --gris-fill: #8E8578;
-  --gris-texto: #5A5144;
-  --gris-panel: #B3BECE;
-  --linea: #2A4C9B;
-  --linea-software: #2A4C9B;
-  --linea-unity: #6B2F96;
-  --linea-audiovisual: #A3176B;
-  --linea-electronica: #9A3B17;
-  --linea-software-panel: #9CB6F2;
-  --linea-unity-panel: #CBA3F2;
-  --linea-audiovisual-panel: #F08FC4;
-  --linea-electronica-panel: #F0A184;
-  --verde-tenue: #1F7A3D21;
-  --ambar-tenue: #BF860921;
-  --gris-tenue: #8E857821;
-  --cian-tenue: #2A4C9B21;
-  --linea-software-tenue: #2A4C9B24;
-  --linea-unity-tenue: #6B2F9624;
-  --linea-electronica-tenue: #9A3B1724;
-  --linea-audiovisual-tenue: #A3176B24;
-  --linea-t: #2A4C9B24;
+  --velo: #070B18A8;
+  --cian: #1F43E8;
+  --cian-vivo: #1134C7;
+  --cian-panel: #8FA8FF;
+  --verde-fill: #0A8546;
+  --verde-texto: #097A41;
+  --verde-panel: #4FE39A;
+  --ambar-fill: #C97F00;
+  --ambar-texto: #875A00;
+  --ambar-panel: #FFC94D;
+  --gris-fill: #8793A8;
+  --gris-texto: #4E596C;
+  --gris-panel: #AFBBD1;
+  --linea: #1F43E8;
+  --linea-software: #1F43E8;
+  --linea-unity: #7317C9;
+  --linea-audiovisual: #B30D67;
+  --linea-electronica: #AD2C0B;
+  --linea-software-panel: #8FA8FF;
+  --linea-unity-panel: #C59BFF;
+  --linea-audiovisual-panel: #FF7ABD;
+  --linea-electronica-panel: #FF8A6B;
+  --verde-tenue: #0A854621;
+  --ambar-tenue: #C97F0021;
+  --gris-tenue: #8793A821;
+  --cian-tenue: #1F43E821;
+  --linea-software-tenue: #1F43E824;
+  --linea-unity-tenue: #7317C924;
+  --linea-electronica-tenue: #AD2C0B24;
+  --linea-audiovisual-tenue: #B30D6724;
+  --linea-t: #1F43E824;
 
   /* --- tipografía y escala --- */
   --fuente-titulos: "Fraunces", Georgia, "Times New Roman", serif;
@@ -97,49 +97,49 @@
    gane sobre la preferencia del sistema. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --papel: #14110C;
-    --superficie: #201C15;
-    --superficie2: #1B1811;
-    --tinta: #F2EDE2;
-    --tinta-suave: #AFA592;
-    --filete: #383226;
-    --filete-sutil: #2A251C;
-    --panel: #0B111A;
-    --panel-2: #1A2737;
-    --sobre-panel: #EEF2F7;
-    --sobre-panel-suave: #A2B2C6;
-    --sobre-relleno: #14110C;
-    --velo: #0B0906BD;
-    --cian: #9CB6F2;
-    --cian-vivo: #BBCCF8;
-    --cian-panel: #9CB6F2;
-    --verde-fill: #3FAE6B;
-    --verde-texto: #6FD398;
-    --verde-panel: #6FD398;
-    --ambar-fill: #D6A32B;
-    --ambar-texto: #EFC765;
-    --ambar-panel: #EFC765;
-    --gris-fill: #757063;
-    --gris-texto: #AFA592;
-    --gris-panel: #B3BECE;
-    --linea: #9CB6F2;
-    --linea-software: #9CB6F2;
-    --linea-unity: #CBA3F2;
-    --linea-audiovisual: #F08FC4;
-    --linea-electronica: #F0A184;
-    --linea-software-panel: #9CB6F2;
-    --linea-unity-panel: #CBA3F2;
-    --linea-audiovisual-panel: #F08FC4;
-    --linea-electronica-panel: #F0A184;
-    --verde-tenue: #3FAE6B21;
-    --ambar-tenue: #D6A32B21;
-    --gris-tenue: #75706321;
-    --cian-tenue: #9CB6F221;
-    --linea-software-tenue: #9CB6F224;
-    --linea-unity-tenue: #CBA3F224;
-    --linea-electronica-tenue: #F0A18424;
-    --linea-audiovisual-tenue: #F08FC424;
-    --linea-t: #9CB6F224;
+    --papel: #070A14;
+    --superficie: #0F1424;
+    --superficie2: #141A2E;
+    --tinta: #EAEEF8;
+    --tinta-suave: #95A2BC;
+    --filete: #242C47;
+    --filete-sutil: #1A2135;
+    --panel: #04060E;
+    --panel-2: #141D3D;
+    --sobre-panel: #E9EEFB;
+    --sobre-panel-suave: #94A4C6;
+    --sobre-relleno: #070A14;
+    --velo: #04060EC2;
+    --cian: #8FA8FF;
+    --cian-vivo: #AFC0FF;
+    --cian-panel: #8FA8FF;
+    --verde-fill: #1FC46B;
+    --verde-texto: #5BE39E;
+    --verde-panel: #4FE39A;
+    --ambar-fill: #F0A818;
+    --ambar-texto: #FFC94D;
+    --ambar-panel: #FFC94D;
+    --gris-fill: #5A6681;
+    --gris-texto: #95A2BC;
+    --gris-panel: #AFBBD1;
+    --linea: #8FA8FF;
+    --linea-software: #8FA8FF;
+    --linea-unity: #C59BFF;
+    --linea-audiovisual: #FF7ABD;
+    --linea-electronica: #FF8A6B;
+    --linea-software-panel: #8FA8FF;
+    --linea-unity-panel: #C59BFF;
+    --linea-audiovisual-panel: #FF7ABD;
+    --linea-electronica-panel: #FF8A6B;
+    --verde-tenue: #1FC46B21;
+    --ambar-tenue: #F0A81821;
+    --gris-tenue: #5A668121;
+    --cian-tenue: #8FA8FF21;
+    --linea-software-tenue: #8FA8FF24;
+    --linea-unity-tenue: #C59BFF24;
+    --linea-electronica-tenue: #FF8A6B24;
+    --linea-audiovisual-tenue: #FF7ABD24;
+    --linea-t: #8FA8FF24;
 
     --alzado-1: 0 1px 2px rgba(0, 0, 0, .45);
     --alzado-2: 0 4px 16px rgba(0, 0, 0, .5);
@@ -151,49 +151,49 @@
 /* La misma paleta oscura por elección explícita, para que el selector
    de tema gane en los dos sentidos. */
 :root[data-theme="dark"] {
-  --papel: #14110C;
-  --superficie: #201C15;
-  --superficie2: #1B1811;
-  --tinta: #F2EDE2;
-  --tinta-suave: #AFA592;
-  --filete: #383226;
-  --filete-sutil: #2A251C;
-  --panel: #0B111A;
-  --panel-2: #1A2737;
-  --sobre-panel: #EEF2F7;
-  --sobre-panel-suave: #A2B2C6;
-  --sobre-relleno: #14110C;
-  --velo: #0B0906BD;
-  --cian: #9CB6F2;
-  --cian-vivo: #BBCCF8;
-  --cian-panel: #9CB6F2;
-  --verde-fill: #3FAE6B;
-  --verde-texto: #6FD398;
-  --verde-panel: #6FD398;
-  --ambar-fill: #D6A32B;
-  --ambar-texto: #EFC765;
-  --ambar-panel: #EFC765;
-  --gris-fill: #757063;
-  --gris-texto: #AFA592;
-  --gris-panel: #B3BECE;
-  --linea: #9CB6F2;
-  --linea-software: #9CB6F2;
-  --linea-unity: #CBA3F2;
-  --linea-audiovisual: #F08FC4;
-  --linea-electronica: #F0A184;
-  --linea-software-panel: #9CB6F2;
-  --linea-unity-panel: #CBA3F2;
-  --linea-audiovisual-panel: #F08FC4;
-  --linea-electronica-panel: #F0A184;
-  --verde-tenue: #3FAE6B21;
-  --ambar-tenue: #D6A32B21;
-  --gris-tenue: #75706321;
-  --cian-tenue: #9CB6F221;
-  --linea-software-tenue: #9CB6F224;
-  --linea-unity-tenue: #CBA3F224;
-  --linea-electronica-tenue: #F0A18424;
-  --linea-audiovisual-tenue: #F08FC424;
-  --linea-t: #9CB6F224;
+  --papel: #070A14;
+  --superficie: #0F1424;
+  --superficie2: #141A2E;
+  --tinta: #EAEEF8;
+  --tinta-suave: #95A2BC;
+  --filete: #242C47;
+  --filete-sutil: #1A2135;
+  --panel: #04060E;
+  --panel-2: #141D3D;
+  --sobre-panel: #E9EEFB;
+  --sobre-panel-suave: #94A4C6;
+  --sobre-relleno: #070A14;
+  --velo: #04060EC2;
+  --cian: #8FA8FF;
+  --cian-vivo: #AFC0FF;
+  --cian-panel: #8FA8FF;
+  --verde-fill: #1FC46B;
+  --verde-texto: #5BE39E;
+  --verde-panel: #4FE39A;
+  --ambar-fill: #F0A818;
+  --ambar-texto: #FFC94D;
+  --ambar-panel: #FFC94D;
+  --gris-fill: #5A6681;
+  --gris-texto: #95A2BC;
+  --gris-panel: #AFBBD1;
+  --linea: #8FA8FF;
+  --linea-software: #8FA8FF;
+  --linea-unity: #C59BFF;
+  --linea-audiovisual: #FF7ABD;
+  --linea-electronica: #FF8A6B;
+  --linea-software-panel: #8FA8FF;
+  --linea-unity-panel: #C59BFF;
+  --linea-audiovisual-panel: #FF7ABD;
+  --linea-electronica-panel: #FF8A6B;
+  --verde-tenue: #1FC46B21;
+  --ambar-tenue: #F0A81821;
+  --gris-tenue: #5A668121;
+  --cian-tenue: #8FA8FF21;
+  --linea-software-tenue: #8FA8FF24;
+  --linea-unity-tenue: #C59BFF24;
+  --linea-electronica-tenue: #FF8A6B24;
+  --linea-audiovisual-tenue: #FF7ABD24;
+  --linea-t: #8FA8FF24;
 
   --alzado-1: 0 1px 2px rgba(0, 0, 0, .45);
   --alzado-2: 0 4px 16px rgba(0, 0, 0, .5);

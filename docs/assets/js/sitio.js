@@ -15,6 +15,7 @@
      9. Hacer que las cifras cuenten hasta su valor al entrar en pantalla.
     10. Abrir las lecciones en ventana emergente, sin sacar de la pagina.
     11. Plegar los paneles laterales y recordar la eleccion.
+    12. Cambiar entre tema claro, oscuro y el del sistema.
 
    Las dos librerias se eligieron por una razon concreta: ninguna esconde
    contenido desde el CSS. Si no cargan, la pagina se ve completa, solo que
@@ -402,6 +403,42 @@
       window.dispatchEvent(new Event('resize'));
     });
   });
+
+
+  /* ---- 13. Selector de tema ---- */
+  /* Tres estados en rueda: el del sistema, claro y oscuro. Empieza en el del
+     sistema, que es lo que respeta la configuracion de quien entra; quien
+     quiera otra cosa, la elige y se recuerda en ese navegador. */
+  var btnTema = document.getElementById('tema');
+  if (btnTema) {
+    var ORDEN = ['sistema', 'claro', 'oscuro'];
+    var ROTULO = { sistema: 'Tema del sistema', claro: 'Tema claro', oscuro: 'Tema oscuro' };
+
+    function leerTema() {
+      try { return localStorage.getItem('tema') || 'sistema'; } catch (e) { return 'sistema'; }
+    }
+    function aplicar(t) {
+      var raiz = document.documentElement;
+      if (t === 'claro') { raiz.setAttribute('data-theme', 'light'); }
+      else if (t === 'oscuro') { raiz.setAttribute('data-theme', 'dark'); }
+      else { raiz.removeAttribute('data-theme'); }
+      btnTema.setAttribute('data-tema', t);
+      btnTema.setAttribute('title', ROTULO[t] + '. Pulsa para cambiar.');
+      btnTema.setAttribute('aria-label', ROTULO[t] + '. Pulsa para cambiar de tema.');
+      var txt = btnTema.querySelector('.tema-txt');
+      if (txt) { txt.textContent = t === 'sistema' ? 'Sistema' : (t === 'claro' ? 'Claro' : 'Oscuro'); }
+    }
+
+    aplicar(leerTema());
+    btnTema.addEventListener('click', function () {
+      var ahora = leerTema();
+      var siguiente = ORDEN[(ORDEN.indexOf(ahora) + 1) % ORDEN.length];
+      try { localStorage.setItem('tema', siguiente); } catch (e) { }
+      aplicar(siguiente);
+      // Las animaciones midieron colores y alturas del tema anterior.
+      if (window.ScrollTrigger) { ScrollTrigger.refresh(); }
+    });
+  }
 
   /* El sistema duplicado de aparicion se retiro aqui: escondia el contenido
      desde el CSS y peleaba con GSAP por la misma propiedad. Ver la nota en

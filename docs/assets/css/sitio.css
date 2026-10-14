@@ -1879,3 +1879,32 @@ details.mas > div { min-width: 0; }
   [data-izq="cerrado"] .lateral-izq,
   [data-izq="cerrado"] .indice-portal { display: flex; }
 }
+
+/* ============ 29. Selector de tema ============ */
+/* Tres estados en rueda: el del sistema, claro y oscuro. Solo se ve el
+   icono del estado actual; los otros dos se quedan ocultos en el mismo
+   botón para que no salte de tamaño al cambiar. */
+
+.tema {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-left: 10px; padding: 8px 13px;
+  border: 1px solid var(--panel-2);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--sobre-panel-suave);
+  font-family: var(--fuente-datos); font-size: 11px; font-weight: 600;
+  letter-spacing: .07em; text-transform: uppercase;
+  cursor: pointer; white-space: nowrap;
+}
+.tema:hover { border-color: var(--cian); color: var(--sobre-panel); }
+.tema .tema-ico { display: none; }
+.tema[data-tema="sistema"] .tema-ico[data-t="sistema"],
+.tema[data-tema="claro"]   .tema-ico[data-t="claro"],
+.tema[data-tema="oscuro"]  .tema-ico[data-t="oscuro"] { display: inline-flex; }
+/* Antes de que corra el script no hay data-tema: se muestra el del sistema */
+.tema:not([data-tema]) .tema-ico[data-t="sistema"] { display: inline-flex; }
+
+@media (max-width: 760px) {
+  .tema { margin-left: 0; }
+  .tema .tema-txt { display: none; }
+}

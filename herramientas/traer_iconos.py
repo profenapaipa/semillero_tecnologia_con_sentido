@@ -39,6 +39,8 @@ ICONOS = [
     'clock', 'folder', 'key-round', 'flask-conical', 'wrench',
     'graduation-cap', 'book-open', 'video', 'circle-help', 'trending-up',
     'git-branch', 'globe', 'pencil-ruler', 'list-checks',
+    # selector de tema claro, oscuro o el del sistema
+    'sun', 'moon', 'monitor', 'panel-left-close', 'panel-right-close',
 ]
 
 

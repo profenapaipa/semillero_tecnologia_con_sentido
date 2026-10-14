@@ -1,6 +1,6 @@
 # Manual de marca
 
-**Semillero Maker de Tecnología con Sentido** · versión 6.0 · 2026-10-13
+**Semillero Maker de Tecnología con Sentido** · versión 7.0 · 2026-10-13
 
 > Este documento y `datos/marca.json` son lo mismo dicho de dos maneras.
 > Para cambiar la identidad se edita el **JSON** y se corre
@@ -11,9 +11,9 @@
 
 ## 1. De qué va esta identidad
 
-**Concepto: Cuaderno de expedicion.**
+**Concepto: Laboratorio.**
 
-El semillero no es una marca de colegio ni un panel de control: es un taller que sale a campo. La pagina se ve como el cuaderno de esa expedicion y se recorre como un sendero: papel marfil con curvas de nivel dibujadas al fondo, tinta sepia, anotaciones en monoespaciada, y un trazo que marca lo recorrido y lo que falta. El avance no se cuenta, se camina.
+El semillero construye y mide. La pagina se ve como el tablero de ese laboratorio: papel frio y limpio, tinta azul profunda, y acentos electricos que marcan de que oficio es cada cosa. Nada de crema ni de tonos tierra: eso pertenece a otra clase de documento. El avance se camina por un sendero, y lo que falta no se disfraza.
 
 ### Por qué no se parece a la de la iguana
 
@@ -62,44 +62,44 @@ La web de la iguana se rige por un manual de marca institucional ajeno. Este sem
 
 ## 3. Color
 
-IDENTIDAD. Papel de cuaderno de campo, no panel de control. El fondo es marfil calido con curvas de nivel dibujadas con gradientes repetidos, y la tinta es sepia profunda: por eso se ve elegido y no heredado. Los cuatro colores de linea tecnica son pigmentos con nombre propio: anil, chicha, orquidea y achiote. Ninguno pisa el verde ni el ambar, reservados al semaforo de estado. ESTRUCTURA. Cada acento tiene dos versiones: la oscura para leerse sobre papel, y la clara terminada en -panel para leerse sobre el panel oscuro, que existe tambien en el tema claro. Y hay un token aparte, sobre-relleno, para el texto que va encima de un color saturado; se invierte con el tema, porque lo que cambia es el relleno.
+IDENTIDAD. Papel frio y limpio, no crema. El fondo esta en el azul muy desaturado, fuera de la franja de 20 a 60 grados de matiz donde viven las plantillas calidas; el negro del tema oscuro es azul profundo y no pardo. Los cuatro colores de linea tecnica son electricos, todos por encima del 75% de saturacion, que es donde un color se percibe vivo, y separados entre si por mas de 45 grados de matiz para que no se confundan de un vistazo. Son lo bastante oscuros para leerse sobre blanco: vivo y legible no estan renidos, lo que se sube es la saturacion y no la claridad. Ninguno pisa el verde ni el ambar, reservados al semaforo. ESTRUCTURA. Cada acento tiene dos versiones: la oscura para leerse sobre papel, y la clara terminada en -panel para leerse sobre el panel oscuro, que existe tambien en el tema claro. Y hay un token aparte, sobre-relleno, para el texto que va encima de un color saturado; se invierte con el tema, porque lo que cambia es el relleno.
 
 | Token | Claro | Oscuro | Para qué |
 |---|---|---|---|
-| `--papel` | `#F3EFE4` | `#14110C` | Fondo de la página |
-| `--superficie` | `#FFFFFF` | `#201C15` | Tarjetas y paneles |
-| `--superficie2` | `#FBF9F3` | `#1B1811` | Fondos hundidos, cabeceras de tabla |
-| `--tinta` | `#1C1710` | `#F2EDE2` | Texto principal |
-| `--tinta-suave` | `#5D5243` | `#AFA592` | Texto secundario y rótulos |
-| `--filete` | `#D9D0BC` | `#383226` | Bordes |
-| `--filete-sutil` | `#E8E2D3` | `#2A251C` | Separadores internos |
-| `--panel` | `#16202E` | `#0B111A` | Franjas oscuras: barra, portada, pie |
-| `--panel-2` | `#233449` | `#1A2737` | Segundo tono del panel oscuro |
-| `--sobre-panel` | `#EEF2F7` | `#EEF2F7` | Texto sobre el panel oscuro |
-| `--sobre-panel-suave` | `#A2B2C6` | `#A2B2C6` | Texto secundario sobre el panel |
-| `--sobre-relleno` | `#FFFFFF` | `#14110C` |  |
-| `--velo` | `#1C1710A3` | `#0B0906BD` |  |
-| `--cian` | `#2A4C9B` | `#9CB6F2` | Lo que se puede tocar: enlaces y botones |
-| `--cian-vivo` | `#1F3B7D` | `#BBCCF8` | El mismo, al pasar el cursor |
-| `--cian-panel` | `#9CB6F2` | `#9CB6F2` |  |
-| `--verde-fill` | `#1F7A3D` | `#3FAE6B` | SEMÁFORO: nivel superado |
-| `--verde-texto` | `#15602E` | `#6FD398` | SEMÁFORO: el mismo, legible como texto |
-| `--verde-panel` | `#6FD398` | `#6FD398` |  |
-| `--ambar-fill` | `#BF8609` | `#D6A32B` | SEMÁFORO: nivel en curso |
-| `--ambar-texto` | `#7A5305` | `#EFC765` | SEMÁFORO: el mismo, legible como texto |
-| `--ambar-panel` | `#EFC765` | `#EFC765` |  |
-| `--gris-fill` | `#8E8578` | `#757063` | SEMÁFORO: nivel sin empezar |
-| `--gris-texto` | `#5A5144` | `#AFA592` | SEMÁFORO: el mismo, legible como texto |
-| `--gris-panel` | `#B3BECE` | `#B3BECE` |  |
-| `--linea` | `#2A4C9B` | `#9CB6F2` |  |
-| `--linea-software` | `#2A4C9B` | `#9CB6F2` | Línea técnica: desarrollo de software |
-| `--linea-unity` | `#6B2F96` | `#CBA3F2` | Línea técnica: Unity |
-| `--linea-audiovisual` | `#A3176B` | `#F08FC4` | Línea técnica: producción audiovisual |
-| `--linea-electronica` | `#9A3B17` | `#F0A184` | Línea técnica: electrónica y robótica |
-| `--linea-software-panel` | `#9CB6F2` | `#9CB6F2` |  |
-| `--linea-unity-panel` | `#CBA3F2` | `#CBA3F2` |  |
-| `--linea-audiovisual-panel` | `#F08FC4` | `#F08FC4` |  |
-| `--linea-electronica-panel` | `#F0A184` | `#F0A184` |  |
+| `--papel` | `#EFF3FA` | `#070A14` | Fondo de la página |
+| `--superficie` | `#FFFFFF` | `#0F1424` | Tarjetas y paneles |
+| `--superficie2` | `#F6F9FD` | `#141A2E` | Fondos hundidos, cabeceras de tabla |
+| `--tinta` | `#0A0E1A` | `#EAEEF8` | Texto principal |
+| `--tinta-suave` | `#4F5C75` | `#95A2BC` | Texto secundario y rótulos |
+| `--filete` | `#D2DAE9` | `#242C47` | Bordes |
+| `--filete-sutil` | `#E5EBF5` | `#1A2135` | Separadores internos |
+| `--panel` | `#070B18` | `#04060E` | Franjas oscuras: barra, portada, pie |
+| `--panel-2` | `#141D3D` | `#141D3D` | Segundo tono del panel oscuro |
+| `--sobre-panel` | `#E9EEFB` | `#E9EEFB` | Texto sobre el panel oscuro |
+| `--sobre-panel-suave` | `#94A4C6` | `#94A4C6` | Texto secundario sobre el panel |
+| `--sobre-relleno` | `#FFFFFF` | `#070A14` |  |
+| `--velo` | `#070B18A8` | `#04060EC2` |  |
+| `--cian` | `#1F43E8` | `#8FA8FF` | Lo que se puede tocar: enlaces y botones |
+| `--cian-vivo` | `#1134C7` | `#AFC0FF` | El mismo, al pasar el cursor |
+| `--cian-panel` | `#8FA8FF` | `#8FA8FF` |  |
+| `--verde-fill` | `#0A8546` | `#1FC46B` | SEMÁFORO: nivel superado |
+| `--verde-texto` | `#097A41` | `#5BE39E` | SEMÁFORO: el mismo, legible como texto |
+| `--verde-panel` | `#4FE39A` | `#4FE39A` |  |
+| `--ambar-fill` | `#C97F00` | `#F0A818` | SEMÁFORO: nivel en curso |
+| `--ambar-texto` | `#875A00` | `#FFC94D` | SEMÁFORO: el mismo, legible como texto |
+| `--ambar-panel` | `#FFC94D` | `#FFC94D` |  |
+| `--gris-fill` | `#8793A8` | `#5A6681` | SEMÁFORO: nivel sin empezar |
+| `--gris-texto` | `#4E596C` | `#95A2BC` | SEMÁFORO: el mismo, legible como texto |
+| `--gris-panel` | `#AFBBD1` | `#AFBBD1` |  |
+| `--linea` | `#1F43E8` | `#8FA8FF` |  |
+| `--linea-software` | `#1F43E8` | `#8FA8FF` | Línea técnica: desarrollo de software |
+| `--linea-unity` | `#7317C9` | `#C59BFF` | Línea técnica: Unity |
+| `--linea-audiovisual` | `#B30D67` | `#FF7ABD` | Línea técnica: producción audiovisual |
+| `--linea-electronica` | `#AD2C0B` | `#FF8A6B` | Línea técnica: electrónica y robótica |
+| `--linea-software-panel` | `#8FA8FF` | `#8FA8FF` |  |
+| `--linea-unity-panel` | `#C59BFF` | `#C59BFF` |  |
+| `--linea-audiovisual-panel` | `#FF7ABD` | `#FF7ABD` |  |
+| `--linea-electronica-panel` | `#FF8A6B` | `#FF8A6B` |  |
 
 Los tintes (`--verde-tenue`, `--linea-unity-tenue`, etc.) **no se escriben**: los
 calcula el generador al 13% y 14% de opacidad sobre el color base.

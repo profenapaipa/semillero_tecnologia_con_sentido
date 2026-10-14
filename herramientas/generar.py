@@ -125,6 +125,8 @@ ALIAS = {
     'llave-inglesa': 'wrench', 'birrete': 'graduation-cap', 'libro': 'book-open',
     'video': 'video', 'ayuda': 'circle-help', 'tendencia': 'trending-up',
     'play': 'play', 'punteado': 'circle-dashed', 'listo': 'circle-check-big',
+    'sol': 'sun', 'luna': 'moon', 'monitor': 'monitor',
+    'cerrar-izq': 'panel-left-close', 'cerrar-der': 'panel-right-close',
 }
 
 _cache_iconos = {}
@@ -460,6 +462,17 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
 <link rel="stylesheet" href="%(pre)sassets/css/marca.css?v=%(v)s">
 <link rel="stylesheet" href="%(swiper_css)s">
 <link rel="stylesheet" href="%(pre)sassets/css/sitio.css?v=%(v)s">
+<script>
+/* El tema elegido se aplica antes de pintar: si se hiciera despues, la
+   pagina parpadearia del tema del sistema al elegido. */
+(function () {
+  try {
+    var t = localStorage.getItem('tema');
+    if (t === 'claro') { document.documentElement.setAttribute('data-theme', 'light'); }
+    else if (t === 'oscuro') { document.documentElement.setAttribute('data-theme', 'dark'); }
+  } catch (e) { /* sin permiso para recordar: queda el del sistema */ }
+}());
+</script>
 <script src="%(swiper_js)s" defer></script>
 <script src="%(gsap)s" defer></script>
 <script src="%(gsap_st)s" defer></script>
@@ -474,11 +487,19 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
 <span>Tecnologia con Sentido<small>Semillero Maker</small></span>
 </a>
 <ul class="menu">%(menu)s</ul>
+<button class="tema" type="button" id="tema" aria-label="Cambiar entre tema claro y oscuro">
+<span class="tema-ico" data-t="sistema">%(ico_sis)s</span>
+<span class="tema-ico" data-t="claro">%(ico_sol)s</span>
+<span class="tema-ico" data-t="oscuro">%(ico_luna)s</span>
+<span class="tema-txt">Tema</span>
+</button>
 </div></nav>
 %(mapa)s</div>
 """ % {'tit': e(titulo), 'desc': e(desc), 'pre': pre, 'fuentes': FUENTES_WEB,
        'menu': ''.join(menu), 'logo': ico('capas', 18),
        'v': VERSION_ASSETS, 'mapa': mapa or '',
+       'ico_sis': ico('monitor', 16), 'ico_sol': ico('sol', 16),
+       'ico_luna': ico('luna', 16),
        'swiper_css': SWIPER_CSS, 'swiper_js': SWIPER_JS,
        'gsap': GSAP_JS, 'gsap_st': GSAP_ST,
        'linea': ' data-linea="%s"' % e(linea) if linea else ''}
