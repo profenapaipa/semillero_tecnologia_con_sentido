@@ -246,3 +246,63 @@ de servicio de todos modos.
    decidido en 4.2.
 3. Nombre exacto del repositorio nuevo del portal y si arranca público o privado.
    GitHub Pages con cuenta gratuita solo publica repositorios públicos.
+
+---
+
+## 6. Hallazgo: un ReferenceError tenía apagadas cinco funciones
+
+Fecha: 14 de octubre de 2026.
+
+### 6.1 El síntoma y la causa
+
+El síntoma reportado fue que el selector de tema no hacía nada. Medido en el
+navegador, el botón estaba puesto en la página pero nunca recibía su atributo
+`data-tema`, señal de que su código no llegaba a correr.
+
+La causa estaba lejos del botón. En `docs/assets/js/sitio.js` se usaba la
+variable `cabecera` sin haberla declarado nunca. Todo el archivo vive dentro de
+una sola función anónima en modo estricto, y en modo estricto leer una variable
+inexistente lanza `ReferenceError`. La ejecución moría ahí y se llevaba por
+delante todo lo que venía después:
+
+| Sección | Qué dejó de funcionar |
+|---|---|
+| 9 | La barra de avance de lectura |
+| 10 | Las cifras que cuentan hasta su valor |
+| 11 | Las lecciones en ventana emergente |
+| 12 | El plegado de los paneles laterales |
+| 13 | El selector de tema |
+
+Esto explica también la queja anterior de que las diapositivas y los vídeos de
+los módulos no abrían: era la sección 11, muerta por la misma línea.
+
+### 6.2 Por qué costó encontrarlo
+
+Tres auditorías pasaban limpias, porque el HTML y el CSS estaban bien: el fallo
+era de ejecución. Y abriendo la página como archivo local, Chrome enmascara el
+error como `Script error.` sin archivo ni línea, por política de origen cruzado.
+Hubo que instrumentar `sitio.js` sección por sección, dejando una marca antes de
+cada una, para ver hasta dónde llegaba.
+
+Lección: `node --check` no sirve para esto. La sintaxis era válida; el fallo solo
+existe en tiempo de ejecución.
+
+### 6.3 Qué se hizo
+
+1. Se declaró `cabecera` apuntando a `.cabecera-fija`, que es el envoltorio
+   pegado arriba y además está en `position: sticky`, o sea que sirve de
+   referencia para la barra de avance, que va en `position: absolute`.
+2. Se agregó `herramientas/auditar_js.py`, que abre páginas reales sin ventana y
+   exige dos cosas: que exista `window.__sitioCompleto`, la señal que `sitio.js`
+   deja en su última línea, y que no se haya registrado ningún error. Probada al
+   revés: reintroduciendo el error, canta 16 fallas en 4 páginas.
+3. Por eso `sitio.js` termina con `window.__sitioCompleto = true`. No se borra.
+
+### 6.4 El tema oscuro quedó por defecto
+
+`data-theme="dark"` va escrito en la etiqueta `<html>` de cada página, no solo
+puesto desde el script, para que el tema oscuro valga también si el navegador
+tiene JavaScript desactivado. El script del `<head>` solo corrige cuando hay una
+elección guardada, y corre antes de pintar para que no haya parpadeo. La rueda
+del botón es: oscuro, claro, sistema. Una regla nueva de `auditar.py` verifica
+que el atributo esté en las 76 páginas.

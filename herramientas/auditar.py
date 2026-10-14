@@ -71,7 +71,12 @@ for p in paginas:
     s = leer(p)
     rel = os.path.relpath(p, RAIZ)
     for patron, queja in [
-            (r'<html lang="es">', 'falta lang="es"'),
+            # El atributo, no la etiqueta entera: en <html> van tambien el
+            # data-theme del tema por defecto y lo que venga despues.
+            (r'<html[^>]*\slang="es"', 'falta lang="es"'),
+            (r'<html[^>]*\sdata-theme="dark"',
+             'falta data-theme="dark": el oscuro es el tema por defecto y debe '
+             'quedar puesto en el HTML para que valga tambien sin JavaScript'),
             (r'name="viewport"', 'falta el viewport'),
             (r'<title>.+?</title>', 'falta el título'),
             (r'marca\.css', 'no enlaza marca.css'),

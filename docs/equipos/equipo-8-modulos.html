@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,24 +8,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/css/marca.css?v=0eb0a846">
+<link rel="stylesheet" href="../assets/css/marca.css?v=fe8b9ba5">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.css">
-<link rel="stylesheet" href="../assets/css/sitio.css?v=0eb0a846">
+<link rel="stylesheet" href="../assets/css/sitio.css?v=fe8b9ba5">
 <script>
-/* El tema elegido se aplica antes de pintar: si se hiciera despues, la
-   pagina parpadearia del tema del sistema al elegido. */
+/* El documento ya viene con data-theme="dark" en la etiqueta html, asi que
+   el tema oscuro es el de por defecto incluso sin JavaScript. Aqui solo se
+   corrige cuando hay una eleccion guardada, y se hace antes de pintar: si
+   se hiciera despues, la pagina parpadearia del oscuro al elegido. */
 (function () {
   try {
     var t = localStorage.getItem('tema');
     if (t === 'claro') { document.documentElement.setAttribute('data-theme', 'light'); }
-    else if (t === 'oscuro') { document.documentElement.setAttribute('data-theme', 'dark'); }
-  } catch (e) { /* sin permiso para recordar: queda el del sistema */ }
+    else if (t === 'sistema') { document.documentElement.removeAttribute('data-theme'); }
+  } catch (e) { /* sin permiso para recordar: queda el oscuro */ }
 }());
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="../assets/js/sitio.js?v=0eb0a846" defer></script>
+<script src="../assets/js/sitio.js?v=fe8b9ba5" defer></script>
 </head>
 <body data-linea="electronica" class="no-js">
 <script>document.body.classList.remove('no-js');</script>

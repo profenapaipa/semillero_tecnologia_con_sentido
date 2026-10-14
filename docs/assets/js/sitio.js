@@ -11,11 +11,11 @@
      5. Cerrar los menus desplegables al salirse o con Escape.
      6. Mover el carrusel de diapositivas (Swiper).
      7. Animar las secciones al bajar (GSAP ScrollTrigger).
-     8. Pintar la barra de avance de lectura.
-     9. Hacer que las cifras cuenten hasta su valor al entrar en pantalla.
-    10. Abrir las lecciones en ventana emergente, sin sacar de la pagina.
-    11. Plegar los paneles laterales y recordar la eleccion.
-    12. Cambiar entre tema claro, oscuro y el del sistema.
+     9. Pintar la barra de avance de lectura.
+    10. Hacer que las cifras cuenten hasta su valor al entrar en pantalla.
+    11. Abrir las lecciones en ventana emergente, sin sacar de la pagina.
+    12. Plegar los paneles laterales y recordar la eleccion.
+    13. Cambiar entre oscuro, claro y el tema del sistema.
 
    Las dos librerias se eligieron por una razon concreta: ninguna esconde
    contenido desde el CSS. Si no cargan, la pagina se ve completa, solo que
@@ -304,6 +304,12 @@
   /* ---- 9. Barra de avance de lectura ---- */
   /* Dice cuanto falta de la pagina. En paginas largas como la de modulos,
      saber que queda poco evita el abandono. */
+  /* Esta variable faltaba. Se usaba sin declarar, y como el archivo corre en
+     modo estricto eso lanzaba ReferenceError y mataba todo lo que venia
+     despues: las cifras, las ventanas emergentes de las lecciones, el
+     plegado de los paneles y el selector de tema. Si vuelves a tocar este
+     archivo, declara cada variable donde la uses. */
+  var cabecera = document.querySelector('.cabecera-fija');
   if (cabecera) {
     var barraLec = document.createElement('div');
     barraLec.className = 'progreso-lectura';
@@ -406,16 +412,18 @@
 
 
   /* ---- 13. Selector de tema ---- */
-  /* Tres estados en rueda: el del sistema, claro y oscuro. Empieza en el del
-     sistema, que es lo que respeta la configuracion de quien entra; quien
-     quiera otra cosa, la elige y se recuerda en ese navegador. */
+  /* Tres estados en rueda: oscuro, claro y el del sistema. Arranca en oscuro
+     porque es el tema de la casa; quien prefiera otra cosa la elige y se
+     recuerda en ese navegador. El estado "sistema" sigue estando para quien
+     quiera que la pagina siga la configuracion de su equipo. */
   var btnTema = document.getElementById('tema');
   if (btnTema) {
-    var ORDEN = ['sistema', 'claro', 'oscuro'];
+    var ORDEN = ['oscuro', 'claro', 'sistema'];
     var ROTULO = { sistema: 'Tema del sistema', claro: 'Tema claro', oscuro: 'Tema oscuro' };
 
     function leerTema() {
-      try { return localStorage.getItem('tema') || 'sistema'; } catch (e) { return 'sistema'; }
+      /* Sin nada guardado, oscuro: es el tema por defecto del sitio. */
+      try { return localStorage.getItem('tema') || 'oscuro'; } catch (e) { return 'oscuro'; }
     }
     function aplicar(t) {
       var raiz = document.documentElement;
@@ -443,5 +451,13 @@
   /* El sistema duplicado de aparicion se retiro aqui: escondia el contenido
      desde el CSS y peleaba con GSAP por la misma propiedad. Ver la nota en
      sitio.css, regla .revelar. */
+
+
+  /* Senal de que el archivo corrio hasta el final. No la borres: la usa
+     herramientas/auditar_js.py para detectar que una excepcion a mitad de
+     camino dejo muertas las secciones de abajo sin que se note en la
+     pagina. Asi se encontro el ReferenceError de la variable cabecera, que
+     tenia apagadas cinco cosas a la vez. */
+  window.__sitioCompleto = true;
 
 }());

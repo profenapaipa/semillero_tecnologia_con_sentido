@@ -450,7 +450,7 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
     menu.append('<li><a href="%sindex.html#publicados">%s Publicados</a></li>'
                 % (pre, ico('cohete', 15)))
     return """<!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -463,14 +463,16 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
 <link rel="stylesheet" href="%(swiper_css)s">
 <link rel="stylesheet" href="%(pre)sassets/css/sitio.css?v=%(v)s">
 <script>
-/* El tema elegido se aplica antes de pintar: si se hiciera despues, la
-   pagina parpadearia del tema del sistema al elegido. */
+/* El documento ya viene con data-theme="dark" en la etiqueta html, asi que
+   el tema oscuro es el de por defecto incluso sin JavaScript. Aqui solo se
+   corrige cuando hay una eleccion guardada, y se hace antes de pintar: si
+   se hiciera despues, la pagina parpadearia del oscuro al elegido. */
 (function () {
   try {
     var t = localStorage.getItem('tema');
     if (t === 'claro') { document.documentElement.setAttribute('data-theme', 'light'); }
-    else if (t === 'oscuro') { document.documentElement.setAttribute('data-theme', 'dark'); }
-  } catch (e) { /* sin permiso para recordar: queda el del sistema */ }
+    else if (t === 'sistema') { document.documentElement.removeAttribute('data-theme'); }
+  } catch (e) { /* sin permiso para recordar: queda el oscuro */ }
 }());
 </script>
 <script src="%(swiper_js)s" defer></script>
