@@ -573,13 +573,13 @@ def migas(items):
 def pie(meta):
     return """<footer class="pie"><div class="envoltura">
 <span class="nombre">Semillero Maker de Tecnología con Sentido</span>
-<p>%(doc)s · %(col)s · Semestre %(sem)s. Última revisión: %(rev)s.</p>
+<p>%(doc)s · Semestre %(sem)s. Última revisión: %(rev)s.</p>
 <p>Tres espacios con nombre propio: el Semillero Maker de Tecnología con Sentido,
 Filosofartec y Un Café con la Iguana.</p>
 </div></footer>
 </body>
 </html>
-""" % {'doc': e(meta['docente']), 'col': e(meta['colegio']),
+""" % {'doc': e(meta['docente']),
        'sem': e(meta['semestre']), 'rev': e(fecha_larga(meta['revisado']))}
 
 
@@ -620,8 +620,8 @@ def pagina_portal(datos):
         glob_t += tt
 
     h = [cabeza('Semillero Maker de Tecnología con Sentido',
-                'Portal del Semillero Maker de Tecnología con Sentido: catorce proyectos, '
-                'su ruta por niveles y acceso a los que ya están publicados.',
+                'Portal del Semillero Maker de Tecnología con Sentido: %d proyectos, '
+                'su ruta por niveles y acceso a los que ya están publicados.' % n,
                 '', 'inicio', datos=datos,
                 mapa=mapa_portal([('como', 'Como funciona', 'ayuda'),
                                   ('numeros', 'Diagnostico', 'tendencia'),
@@ -633,9 +633,9 @@ def pagina_portal(datos):
     h.append('<header class="portada"><div class="envoltura">')
     h.append('<p class="rotulo">Semestre %s · grados 9°, 10° y 11°</p>' % e(meta['semestre']))
     h.append('<h1>Semillero Maker de Tecnología con Sentido</h1>')
-    h.append('<p class="bajada">Catorce equipos construyen algo que sirve y lo documentan como '
+    h.append('<p class="bajada">%d equipos construyen algo que sirve y lo documentan como '
              'investigación. Aquí cada uno ve en qué nivel va, qué le falta y dónde está lo que '
-             'ya publicó.</p>')
+             'ya publicó.</p>' % n)
     h.append('<ul class="portada-cifras">')
     for cifra, pie_ in [(n, 'subequipos'), (len(datos['lineas']), 'líneas técnicas'),
                         ('%d%%' % pct(glob_h, glob_t), 'avance del semillero'),
@@ -723,10 +723,11 @@ def pagina_portal(datos):
     # --- proyectos por línea ---
     h.append('<section class="bloque sobre-superficie" id="proyectos" data-tinte="indigo">'
              '<div class="envoltura">')
-    h.append('<div class="cab-seccion"><span class="rotulo">Los proyectos</span>'
-             '<h2>Catorce equipos, cuatro líneas técnicas</h2>'
-             '<p>Cada tarjeta trae el avance de la ruta completa y el del artículo. '
-             'Entra a la del equipo para ver su nivel actual y qué sigue.</p></div>')
+    h.append(('<div class="cab-seccion"><span class="rotulo">Los proyectos</span>'
+              '<h2>%d proyectos, %d líneas técnicas</h2>'
+              '<p>Cada tarjeta trae el avance de la ruta completa y el del artículo. '
+              'Entra a la del equipo para ver su nivel actual y qué sigue.</p></div>')
+             % (len(datos['equipos']), len(datos['lineas'])))
     h.append('<div class="buscador">')
     h.append('<label class="campo" for="q">%s'
              '<input type="search" id="q" placeholder="Busca por numero, nombre, '

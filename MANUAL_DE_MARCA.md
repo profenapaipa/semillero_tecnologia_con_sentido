@@ -17,7 +17,7 @@ El semillero no es una marca de colegio ni una app de productividad: es un talle
 
 ### Por qué no se parece a la de la iguana
 
-La web de la iguana se rige por el manual de marca del INJUV. Este semillero es un proyecto personal de Néstor Andrés Paipa, no del colegio, así que no hereda ni su tipografía ni sus colores institucionales. Las dos publicaciones conviven sin parecerse.
+La web de la iguana se rige por un manual de marca institucional ajeno. Este semillero es un proyecto personal de Néstor Andrés Paipa, así que no hereda ni su tipografía ni sus colores. Las dos publicaciones conviven sin parecerse, y el sitio del semillero no lleva crédito ni marca de ninguna institución.
 
 ---
 

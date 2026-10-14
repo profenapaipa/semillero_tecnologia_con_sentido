@@ -2,7 +2,7 @@
   "meta": {
     "semillero": "Semillero Maker de Tecnología con Sentido",
     "docente": "Néstor Andrés Paipa",
-    "colegio": "Instituto Infantil y Juvenil, Bogotá",
+    "colegio": "Bogotá",
     "semestre": "2026-II",
     "revisado": "2026-10-13",
     "sesionesRestantes": [
@@ -16,7 +16,8 @@
       "Contenido de los .docx y de los documentos de Google, medidos contra la plantilla"
     ],
     "repo": "https://github.com/profenapaipa/semillero_tecnologia_con_sentido",
-    "sitio": "https://profenapaipa.github.io/semillero_tecnologia_con_sentido/"
+    "sitio": "https://profenapaipa.github.io/semillero_tecnologia_con_sentido/",
+    "_nota_colegio": "El semillero es un proyecto personal de Néstor Andrés Paipa. El sitio no lleva credito ni marca de ninguna institución."
   },
   "fases": [
     {

@@ -15,15 +15,14 @@ está decidida.
 
 El Semillero Maker de Tecnología con Sentido es un espacio extracurricular
 concebido, dirigido y documentado por Néstor Andrés Paipa, docente de
-tecnología e informática del Instituto Infantil y Juvenil de Bogotá.
+tecnología e informática en Bogotá.
 
-**El semillero es suyo, no es un producto del colegio.** El colegio presta el
+**El semillero es suyo, no es un producto del colegio.** La institución donde trabaja presta el
 espacio y los estudiantes; la propiedad intelectual del proceso, del nombre y de
 la metodología es personal.
 
-Consecuencia directa para el sitio: no lleva marca institucional del colegio como
-emisor. El logo del colegio puede aparecer como contexto de dónde ocurre el
-semillero, nunca como dueño del espacio. El pie va a nombre de Néstor y del
+Consecuencia directa para el sitio: no lleva marca ni crédito de ninguna institución.
+Ni como emisor ni como contexto: el semillero es de Néstor. El pie va a nombre de Néstor y del
 semillero.
 
 **Ningún contenido visible se atribuye a una inteligencia artificial.** Ni en
