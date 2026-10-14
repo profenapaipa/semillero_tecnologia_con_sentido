@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" data-theme="dark">
+<html lang="es" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,26 +8,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/css/marca.css?v=fe8b9ba5">
+<link rel="stylesheet" href="../assets/css/marca.css?v=18be753d">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.css">
-<link rel="stylesheet" href="../assets/css/sitio.css?v=fe8b9ba5">
+<link rel="stylesheet" href="../assets/css/sitio.css?v=18be753d">
 <script>
-/* El documento ya viene con data-theme="dark" en la etiqueta html, asi que
-   el tema oscuro es el de por defecto incluso sin JavaScript. Aqui solo se
-   corrige cuando hay una eleccion guardada, y se hace antes de pintar: si
-   se hiciera despues, la pagina parpadearia del oscuro al elegido. */
+/* El documento ya viene con data-theme="light" en la etiqueta html, asi que
+   el tema claro es el de por defecto incluso sin JavaScript. El atributo
+   tiene que estar escrito: sin el, un equipo configurado en oscuro entraria
+   en oscuro por la regla @media (prefers-color-scheme: dark).
+   Aqui solo se corrige cuando hay una eleccion guardada, y se hace antes de
+   pintar: si se hiciera despues, la pagina parpadearia del claro al
+   elegido. */
 (function () {
   try {
     var t = localStorage.getItem('tema');
-    if (t === 'claro') { document.documentElement.setAttribute('data-theme', 'light'); }
+    if (t === 'oscuro') { document.documentElement.setAttribute('data-theme', 'dark'); }
     else if (t === 'sistema') { document.documentElement.removeAttribute('data-theme'); }
-  } catch (e) { /* sin permiso para recordar: queda el oscuro */ }
+  } catch (e) { /* sin permiso para recordar: queda el claro */ }
 }());
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="../assets/js/sitio.js?v=fe8b9ba5" defer></script>
+<script src="../assets/js/sitio.js?v=18be753d" defer></script>
 </head>
 <body data-linea="software" class="no-js">
 <script>document.body.classList.remove('no-js');</script>

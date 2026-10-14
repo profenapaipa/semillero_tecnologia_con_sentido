@@ -15,7 +15,7 @@
     10. Hacer que las cifras cuenten hasta su valor al entrar en pantalla.
     11. Abrir las lecciones en ventana emergente, sin sacar de la pagina.
     12. Plegar los paneles laterales y recordar la eleccion.
-    13. Cambiar entre oscuro, claro y el tema del sistema.
+    13. Cambiar entre claro, oscuro y el tema del sistema.
 
    Las dos librerias se eligieron por una razon concreta: ninguna esconde
    contenido desde el CSS. Si no cargan, la pagina se ve completa, solo que
@@ -30,6 +30,34 @@
 
 (function () {
   'use strict';
+
+  /* ---- 0. Cuanto mide de verdad la cabecera pegada ---- */
+  /* Contra este numero se colocan el buscador pegado, los dos paneles
+     laterales y el salto de ancla. Estaba escrito a mano en 128px, pero la
+     cabecera no mide igual en todas las paginas: en el portal es solo la
+     barra, 57px, y en la pagina de un equipo lleva ademas el mapa del
+     recorrido. Por eso en el portal quedaban 71px de pagina colandose entre
+     la cabecera y el buscador. Ahora se mide y se reescribe. */
+  var cabeceraFija = document.querySelector('.cabecera-fija');
+  if (cabeceraFija) {
+    var medirCabecera = function () {
+      var alto = Math.round(cabeceraFija.getBoundingClientRect().height);
+      if (alto > 0) {
+        document.documentElement.style.setProperty('--alto-fijo', alto + 'px');
+      }
+    };
+    medirCabecera();
+    window.addEventListener('resize', medirCabecera);
+    // El alto cambia tambien sin que cambie la ventana: al desplegar un menu
+    // de la barra, o cuando las fuentes terminan de cargar y reacomodan.
+    if (window.ResizeObserver) {
+      new ResizeObserver(medirCabecera).observe(cabeceraFija);
+    }
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(medirCabecera);
+    }
+  }
+
 
   /* ---- 1. Dónde estoy: resalta en el mapa la sección visible ---- */
   var mapa = document.getElementById('indice-portal') ||
@@ -104,7 +132,23 @@
 
     caja.addEventListener('input', filtrar);
     caja.addEventListener('keydown', function (ev) {
-      if (ev.key === 'Escape') { caja.value = ''; filtrar(); }
+      if (ev.key === 'Escape') { caja.value = ''; filtrar(); return; }
+      /* Enter no estaba atendido y el campo no vive dentro de un formulario,
+         asi que la tecla no hacia nada: el filtro ya corria al escribir, pero
+         quien presiona Enter espera una respuesta. Ahora aplica el filtro,
+         baja la vista a los resultados y deja el foco en la primera tarjeta
+         encontrada, para poder seguir con el teclado. */
+      if (ev.key === 'Enter') {
+        ev.preventDefault();
+        filtrar();
+        var primera = document.querySelector('a.equipo:not([hidden])');
+        if (primera) {
+          primera.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          primera.focus({ preventScroll: true });
+        } else if (vacio && !vacio.hidden) {
+          vacio.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
     });
     if (limpiar) {
       limpiar.addEventListener('click', function () { caja.value = ''; filtrar(); caja.focus(); });
@@ -412,18 +456,18 @@
 
 
   /* ---- 13. Selector de tema ---- */
-  /* Tres estados en rueda: oscuro, claro y el del sistema. Arranca en oscuro
+  /* Tres estados en rueda: claro, oscuro y el del sistema. Arranca en claro
      porque es el tema de la casa; quien prefiera otra cosa la elige y se
      recuerda en ese navegador. El estado "sistema" sigue estando para quien
      quiera que la pagina siga la configuracion de su equipo. */
   var btnTema = document.getElementById('tema');
   if (btnTema) {
-    var ORDEN = ['oscuro', 'claro', 'sistema'];
+    var ORDEN = ['claro', 'oscuro', 'sistema'];
     var ROTULO = { sistema: 'Tema del sistema', claro: 'Tema claro', oscuro: 'Tema oscuro' };
 
     function leerTema() {
-      /* Sin nada guardado, oscuro: es el tema por defecto del sitio. */
-      try { return localStorage.getItem('tema') || 'oscuro'; } catch (e) { return 'oscuro'; }
+      /* Sin nada guardado, claro: es el tema por defecto del sitio. */
+      try { return localStorage.getItem('tema') || 'claro'; } catch (e) { return 'claro'; }
     }
     function aplicar(t) {
       var raiz = document.documentElement;

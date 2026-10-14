@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" data-theme="dark">
+<html lang="es" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,26 +8,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="assets/css/marca.css?v=fe8b9ba5">
+<link rel="stylesheet" href="assets/css/marca.css?v=18be753d">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.css">
-<link rel="stylesheet" href="assets/css/sitio.css?v=fe8b9ba5">
+<link rel="stylesheet" href="assets/css/sitio.css?v=18be753d">
 <script>
-/* El documento ya viene con data-theme="dark" en la etiqueta html, asi que
-   el tema oscuro es el de por defecto incluso sin JavaScript. Aqui solo se
-   corrige cuando hay una eleccion guardada, y se hace antes de pintar: si
-   se hiciera despues, la pagina parpadearia del oscuro al elegido. */
+/* El documento ya viene con data-theme="light" en la etiqueta html, asi que
+   el tema claro es el de por defecto incluso sin JavaScript. El atributo
+   tiene que estar escrito: sin el, un equipo configurado en oscuro entraria
+   en oscuro por la regla @media (prefers-color-scheme: dark).
+   Aqui solo se corrige cuando hay una eleccion guardada, y se hace antes de
+   pintar: si se hiciera despues, la pagina parpadearia del claro al
+   elegido. */
 (function () {
   try {
     var t = localStorage.getItem('tema');
-    if (t === 'claro') { document.documentElement.setAttribute('data-theme', 'light'); }
+    if (t === 'oscuro') { document.documentElement.setAttribute('data-theme', 'dark'); }
     else if (t === 'sistema') { document.documentElement.removeAttribute('data-theme'); }
-  } catch (e) { /* sin permiso para recordar: queda el oscuro */ }
+  } catch (e) { /* sin permiso para recordar: queda el claro */ }
 }());
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/sitio.js?v=fe8b9ba5" defer></script>
+<script src="assets/js/sitio.js?v=18be753d" defer></script>
 </head>
 <body class="no-js">
 <script>document.body.classList.remove('no-js');</script>
@@ -100,7 +103,7 @@
 </button>
 </div></nav>
 </div>
-<header class="portada"><div class="envoltura"><p class="rotulo">Semestre 2026-II · grados 9°, 10° y 11°</p><h1>Semillero Maker de Tecnología con Sentido</h1><p class="bajada">15 equipos construyen algo que sirve y lo documentan como investigación. Aquí cada uno ve en qué nivel va, qué le falta y dónde está lo que ya publicó.</p><ul class="portada-cifras"><li><span class="cifra">15</span><span class="pie">subequipos</span></li><li><span class="cifra">4</span><span class="pie">líneas técnicas</span></li><li><span class="cifra">29%</span><span class="pie">avance del semillero</span></li><li><span class="cifra">3</span><span class="pie">sesiones restantes</span></li></ul><div class="botones portada-acciones"><a class="boton principal" href="#proyectos"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" />
+<header class="portada portada-inicio"><div class="envoltura"><p class="rotulo">Semestre 2026-II · grados 9°, 10° y 11°</p><h1>Semillero Maker de Tecnología con Sentido</h1><p class="bajada">15 equipos construyen algo que sirve y lo documentan como investigación. Aquí cada uno ve en qué nivel va, qué le falta y dónde está lo que ya publicó.</p><ul class="portada-cifras"><li><span class="cifra">15</span><span class="pie">subequipos</span></li><li><span class="cifra">4</span><span class="pie">líneas técnicas</span></li><li><span class="cifra">29%</span><span class="pie">avance del semillero</span></li><li><span class="cifra">3</span><span class="pie">sesiones restantes</span></li></ul><div class="botones portada-acciones"><a class="boton principal" href="#proyectos"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" />
   <path d="m12 5 7 7-7 7" /></svg> Ver los proyectos</a><a class="boton" href="#como">Cómo funciona esto</a></div></div></header><div class="portal-cuerpo"><nav class="indice-portal" id="panel-izq" aria-label="Secciones del portal"><span id="indice-portal" hidden></span><div class="cab-ind"><span class="rotulo">Portal del semillero</span><b>15 proyectos</b></div><a href="#como" data-seccion="como"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" />
   <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
   <path d="M12 17h.01" /></svg><span>Cómo funciona</span><em>4</em></a><a href="#numeros" data-seccion="numeros"><svg class="ico " width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6" />

@@ -74,9 +74,10 @@ for p in paginas:
             # El atributo, no la etiqueta entera: en <html> van tambien el
             # data-theme del tema por defecto y lo que venga despues.
             (r'<html[^>]*\slang="es"', 'falta lang="es"'),
-            (r'<html[^>]*\sdata-theme="dark"',
-             'falta data-theme="dark": el oscuro es el tema por defecto y debe '
-             'quedar puesto en el HTML para que valga tambien sin JavaScript'),
+            (r'<html[^>]*\sdata-theme="light"',
+             'falta data-theme="light": el claro es el tema por defecto y debe '
+             'quedar puesto en el HTML, tanto para que valga sin JavaScript '
+             'como para que un equipo configurado en oscuro no entre en oscuro'),
             (r'name="viewport"', 'falta el viewport'),
             (r'<title>.+?</title>', 'falta el título'),
             (r'marca\.css', 'no enlaza marca.css'),

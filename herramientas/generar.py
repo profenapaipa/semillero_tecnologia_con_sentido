@@ -450,7 +450,7 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
     menu.append('<li><a href="%sindex.html#publicados">%s Publicados</a></li>'
                 % (pre, ico('cohete', 15)))
     return """<!doctype html>
-<html lang="es" data-theme="dark">
+<html lang="es" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -463,16 +463,19 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
 <link rel="stylesheet" href="%(swiper_css)s">
 <link rel="stylesheet" href="%(pre)sassets/css/sitio.css?v=%(v)s">
 <script>
-/* El documento ya viene con data-theme="dark" en la etiqueta html, asi que
-   el tema oscuro es el de por defecto incluso sin JavaScript. Aqui solo se
-   corrige cuando hay una eleccion guardada, y se hace antes de pintar: si
-   se hiciera despues, la pagina parpadearia del oscuro al elegido. */
+/* El documento ya viene con data-theme="light" en la etiqueta html, asi que
+   el tema claro es el de por defecto incluso sin JavaScript. El atributo
+   tiene que estar escrito: sin el, un equipo configurado en oscuro entraria
+   en oscuro por la regla @media (prefers-color-scheme: dark).
+   Aqui solo se corrige cuando hay una eleccion guardada, y se hace antes de
+   pintar: si se hiciera despues, la pagina parpadearia del claro al
+   elegido. */
 (function () {
   try {
     var t = localStorage.getItem('tema');
-    if (t === 'claro') { document.documentElement.setAttribute('data-theme', 'light'); }
+    if (t === 'oscuro') { document.documentElement.setAttribute('data-theme', 'dark'); }
     else if (t === 'sistema') { document.documentElement.removeAttribute('data-theme'); }
-  } catch (e) { /* sin permiso para recordar: queda el oscuro */ }
+  } catch (e) { /* sin permiso para recordar: queda el claro */ }
 }());
 </script>
 <script src="%(swiper_js)s" defer></script>
@@ -747,7 +750,10 @@ def pagina_portal(datos):
                 '', 'inicio', datos=datos)]
 
     # --- portada oscura ---
-    h.append('<header class="portada"><div class="envoltura">')
+    # portada-inicio: solo esta va centrada. Las de los equipos usan la misma
+    # clase portada pero llevan insignia de equipo y anillo de avance, que se
+    # leen alineados a la izquierda.
+    h.append('<header class="portada portada-inicio"><div class="envoltura">')
     h.append('<p class="rotulo">Semestre %s · grados 9°, 10° y 11°</p>' % e(meta['semestre']))
     h.append('<h1>Semillero Maker de Tecnología con Sentido</h1>')
     h.append('<p class="bajada">%d equipos construyen algo que sirve y lo documentan como '

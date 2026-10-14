@@ -27,6 +27,11 @@
   /* Alto real de la cabecera fija. El script lo mide y lo actualiza al
      cambiar el tamano de la ventana. El valor de aqui es solo el arranque,
      para que nada se vea mal antes de que el script corra. */
+  /* Valor de respaldo. El real lo mide sitio.js al cargar y lo reescribe
+     aqui, porque la cabecera no mide lo mismo en todas las paginas: en el
+     portal es solo la barra, y en la pagina de un equipo lleva ademas el
+     mapa del recorrido. Contra este numero se colocan el buscador pegado,
+     los dos paneles laterales y el salto de ancla. */
   --alto-fijo: 128px;
 }
 
@@ -95,7 +100,13 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
   font-family: var(--fuente-datos); font-size: var(--t-rotulo); font-weight: 600;
   letter-spacing: .15em; text-transform: uppercase;
 }
-.envoltura { max-width: var(--ancho); margin: 0 auto; padding-inline: var(--margen); }
+/* El armazon de la pagina usa un solo ancho, para que el logo de la barra,
+   la portada y el panel izquierdo del cuerpo arranquen en la misma linea.
+   Antes la barra y la portada iban en 1180px y el cuerpo en 1760px, y de
+   arriba abajo no coincidia ningun borde.
+   --ancho sobrevive, pero ya solo como ancho de lectura de la prosa. */
+:root { --ancho-total: 1760px; }
+.envoltura { max-width: var(--ancho-total); margin: 0 auto; padding-inline: var(--margen); }
 
 /* Cada bloque declara su línea técnica y todo lo de adentro toma ese color. */
 [data-linea="software"]    { --linea: var(--linea-software);    --linea-t: var(--linea-software-tenue); }
@@ -242,6 +253,38 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
   pointer-events: none;
 }
 .portada > .envoltura { position: relative; padding-block: 44px 38px; }
+
+/* Solo la portada del portal va centrada. Las paginas de equipo usan la
+   misma clase portada pero llevan insignia de equipo, insignia de linea
+   tecnica y anillo de avance: centrarlas dejaba el titulo en el medio y las
+   insignias contra el borde, que es peor que no centrar nada. */
+.portada-inicio > .envoltura { text-align: center; }
+/* Cada bloque se centra y se queda en el ancho de lectura, para que los
+   renglones no se estiren de un borde de la pantalla al otro. */
+.portada-inicio > .envoltura > * {
+  max-width: var(--ancho);
+  margin-inline: auto;
+}
+.portada-inicio .bajada { max-width: 62ch; }
+.portada-inicio .portada-cifras,
+.portada-inicio .portada-acciones { justify-content: center; }
+/* El peso visual estaba contra la esquina superior derecha. Centrado el
+   texto, la textura tambien se centra, o la composicion vuelve a verse
+   cargada hacia un lado. */
+.portada-inicio::before {
+  background-image:
+    repeating-radial-gradient(circle at 50% 0%,
+      transparent 0 calc(var(--retic) * 1.4 - 1px),
+      var(--panel-2) calc(var(--retic) * 1.4 - 1px) calc(var(--retic) * 1.4),
+      transparent calc(var(--retic) * 1.4) calc(var(--retic) * 2.8));
+  mask-image: radial-gradient(ellipse 110% 125% at 50% 0%, #000 30%, transparent 78%);
+}
+.portada-inicio::after {
+  top: 0; right: auto; left: 50%; width: 120%; height: 100%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse 60% 100% at 50% 0%,
+              var(--linea-t, transparent) 0%, transparent 70%);
+}
 .portada.compacta > .envoltura { padding-block: 26px 26px; }
 .portada h1 {
   font-size: var(--t-titulo1); font-weight: 700; letter-spacing: -.012em;
@@ -786,13 +829,17 @@ details.diapos > summary { font-size: var(--t-chico); }
    seccion de proyectos: con quince tarjetas, al bajar ya no se alcanzaba. */
 .buscador {
   position: sticky;
-  top: calc(var(--alto-fijo) + 10px);
+  /* Pegado a la cabecera, sin separacion: antes tenia +10px y al quedar
+     fijo se veia una franja de pagina colandose entre las dos barras. */
+  top: var(--alto-fijo);
   z-index: 30;
   display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px;
   margin-bottom: 22px;
   padding: 12px 14px;
   margin-inline: -14px;
-  border-radius: var(--radio);
+  /* Arriba a ras y abajo redondeado: pegado a la cabecera se lee como una
+     continuacion de ella, no como una tarjeta suelta flotando. */
+  border-radius: 0 0 var(--radio) var(--radio);
   background: color-mix(in srgb, var(--superficie) 92%, transparent);
   backdrop-filter: blur(8px);
   border: 1px solid var(--filete-sutil);
@@ -884,7 +931,7 @@ a.equipo .titular h3 { padding-top: 2px; }
      margen muerto a cada lado mientras la columna de lectura se quedaba en
      50 caracteres. Ahora la rejilla ocupa el ancho util y los paneles se
      pegan al borde: ese margen se convierte en texto legible. */
-  max-width: 1760px;
+  max-width: var(--ancho-total);
   margin: 0 auto;
   padding-inline: var(--margen);
   display: grid;
@@ -912,6 +959,12 @@ a.equipo .titular h3 { padding-top: 2px; }
   flex-direction: column;
   gap: 13px;
   padding-top: 34px;
+  /* Se desplaza solo, igual que el panel izquierdo. Medido antes: este panel
+     llegaba a 901px de alto contra un hueco de 758px bajo la cabecera, asi
+     que al quedar pegado su parte de abajo no se alcanzaba nunca. */
+  max-height: calc(100vh - var(--alto-fijo) - 36px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .caja-lat {
   background: var(--superficie);
@@ -1461,7 +1514,7 @@ details.texto-diapos { margin-top: 4px; }
    las páginas de equipo se recorren de la misma manera. */
 
 .portal-cuerpo {
-  max-width: 1760px;
+  max-width: var(--ancho-total);
   margin: 0 auto;
   padding-inline: var(--margen);
   display: grid;
@@ -1875,6 +1928,9 @@ details.mas > div { min-width: 0; }
   .con-lateral aside.lateral {
     grid-column: 1 / -1; position: static; padding-top: 0; padding-bottom: 34px;
     display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    /* Aqui ya no esta pegado, asi que no se le limita el alto ni se le pone
+       scroll propio: se lee entero, en fila. */
+    max-height: none; overflow-y: visible;
   }
   [data-der="cerrado"] aside.lateral { display: grid; }
 }

@@ -306,3 +306,79 @@ tiene JavaScript desactivado. El script del `<head>` solo corrige cuando hay una
 elección guardada, y corre antes de pintar para que no haya parpadeo. La rueda
 del botón es: oscuro, claro, sistema. Una regla nueva de `auditar.py` verifica
 que el atributo esté en las 76 páginas.
+
+---
+
+## 7. Cinco correcciones de maquetación e interacción
+
+Fecha: 14 de octubre de 2026.
+
+### 7.1 La cabecera fija ahora se mide, ya no se adivina
+
+Era la causa de fondo de dos de los cinco reportes. `--alto-fijo` estaba escrito a
+mano en 128 px, y contra ese número se colocan el buscador pegado, los dos
+paneles laterales y el salto de ancla. Pero la cabecera no mide lo mismo en todas
+las páginas:
+
+| Página | Cabecera real | Lo que se asumía |
+|---|---|---|
+| Portal | 57 px | 128 px |
+| Equipo | 183 px | 128 px |
+
+De ahí salían los 71 px de hueco entre la cabecera y el buscador, medidos con el
+buscador ya pegado. Ahora `sitio.js` mide `.cabecera-fija` al cargar, al cambiar
+el tamaño de la ventana, cuando un `ResizeObserver` detecta que cambió de alto y
+cuando terminan de cargar las fuentes, y reescribe el token. El 128 px del CSS
+queda solo como valor de respaldo si no corre JavaScript. Medido después: hueco
+de 0 px.
+
+### 7.2 El panel derecho se desplaza solo
+
+Medido en `equipo-1.html` a 1582 × 904: el izquierdo tenía `max-height: 740px` y
+`overflow-y: auto`; el derecho, ninguno de los dos, y medía 901 px contra un
+hueco de 758 px bajo la cabecera, así que su parte de abajo no se alcanzaba
+nunca. Se le puso la misma regla. En pantallas de menos de 1240 px el panel deja
+de estar pegado y se lee en fila, así que ahí se le quita el límite de alto.
+
+### 7.3 Enter en el buscador
+
+El filtro ya corría al escribir, medido: de 15 tarjetas a 2 escribiendo "unity".
+Lo que no hacía nada era la tecla Enter, porque no estaba atendida y el campo no
+vive dentro de un formulario. Ahora Enter aplica el filtro, baja la vista a los
+resultados y deja el foco en la primera tarjeta encontrada, para poder seguir con
+el teclado. Sin resultados, lleva al aviso.
+
+### 7.4 Un solo ancho para el armazón
+
+Medido en el portal a 1582 px: la barra y la portada vivían en 1180 px y el
+cuerpo en 1567 px, así que de arriba abajo no coincidía ningún borde. La portada
+sí estaba centrada, con 194 px iguales a cada lado; lo que fallaba era eso.
+
+Se unificó en el token `--ancho-total` (1760 px), que ahora usan la barra, la
+portada, el cuerpo del portal y las páginas de equipo. `--ancho` sobrevive, pero
+ya solo como ancho de lectura. Verificado: el logo de la barra y el panel
+izquierdo arrancan en la misma línea, a 1600 px y a 1920 px.
+
+### 7.5 La portada del portal va centrada
+
+Decidido con Néstor. Solo la del portal, marcada con la clase `portada-inicio`
+desde el generador. Las 15 páginas de equipo usan la misma clase `portada` pero
+llevan insignia de equipo, insignia de línea técnica y anillo de avance:
+centrarlas dejaba el título en el medio y las insignias contra el borde, peor que
+no centrar nada. La textura del fondo también se volvió simétrica, porque estaba
+apoyada contra la esquina superior derecha.
+
+### 7.6 El tema claro vuelve a ser el de por defecto
+
+`data-theme="light"` escrito en la etiqueta `<html>`. El atributo tiene que estar:
+sin él, un equipo configurado en oscuro entraría en oscuro por la regla
+`@media (prefers-color-scheme: dark)`. La rueda del botón es: claro, oscuro,
+sistema.
+
+### 7.7 Pendiente encontrado de paso, no corregido
+
+A 390 px de ancho, la página se desplaza de lado: el portal llega a 510 px de
+contenido contra 489 px de ventana, y la de equipo a 542 px. Culpables medidos:
+las tarjetas de proyecto hermano en el portal, y en la página de equipo la vista
+previa incrustada. Comprobado contra la versión anterior: **ya existía**, no lo
+introdujeron estos cambios. Queda por decidir si se corrige.
