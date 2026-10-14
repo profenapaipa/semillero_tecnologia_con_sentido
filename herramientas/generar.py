@@ -410,7 +410,7 @@ def desplegable_secciones(pre):
     return ''.join(p)
 
 
-def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None):
+def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
     menu = ['<li><a href="%sindex.html"%s>%s Inicio</a></li>'
             % (pre, ' aria-current="page"' if activo == 'inicio' else '', ico('inicio', 15))]
     if datos:
@@ -438,6 +438,7 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None):
 </head>
 <body%(linea)s class="no-js">
 <script>document.body.classList.remove('no-js');</script>
+<div class="cabecera-fija">
 <nav class="barra" aria-label="Navegacion principal"><div class="envoltura">
 <a class="marca-sitio" href="%(pre)sindex.html">
 <span class="sigla">%(logo)s</span>
@@ -445,9 +446,10 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None):
 </a>
 <ul class="menu">%(menu)s</ul>
 </div></nav>
+%(mapa)s</div>
 """ % {'tit': e(titulo), 'desc': e(desc), 'pre': pre, 'fuentes': FUENTES_WEB,
        'menu': ''.join(menu), 'logo': ico('capas', 18),
-       'v': VERSION_ASSETS,
+       'v': VERSION_ASSETS, 'mapa': mapa or '',
        'swiper_css': SWIPER_CSS, 'swiper_js': SWIPER_JS,
        'gsap': GSAP_JS, 'gsap_st': GSAP_ST,
        'linea': ' data-linea="%s"' % e(linea) if linea else ''}
@@ -620,12 +622,12 @@ def pagina_portal(datos):
     h = [cabeza('Semillero Maker de Tecnología con Sentido',
                 'Portal del Semillero Maker de Tecnología con Sentido: catorce proyectos, '
                 'su ruta por niveles y acceso a los que ya están publicados.',
-                '', 'inicio', datos=datos)]
-    h.append(mapa_portal([('como', 'Como funciona', 'ayuda'),
-                          ('numeros', 'Diagnostico', 'tendencia'),
-                          ('proyectos', 'Los proyectos', 'tablero'),
-                          ('publicados', 'Publicados', 'cohete'),
-                          ('hermanos', 'Hermanos', 'globo')]))
+                '', 'inicio', datos=datos,
+                mapa=mapa_portal([('como', 'Como funciona', 'ayuda'),
+                                  ('numeros', 'Diagnostico', 'tendencia'),
+                                  ('proyectos', 'Los proyectos', 'tablero'),
+                                  ('publicados', 'Publicados', 'cohete'),
+                                  ('hermanos', 'Hermanos', 'globo')]))]
 
     # --- portada oscura ---
     h.append('<header class="portada"><div class="envoltura">')
@@ -670,6 +672,27 @@ def pagina_portal(datos):
          'vivo de cómo se ven hoy.'),
     ]))
     h.append('<div class="tras-intro">%s</div>' % LEYENDA)
+
+    h.append('<div class="componentes"><h3>%s Como esta modelado este ambiente</h3>'
+             '<p class="dato">Modelar un ambiente de aprendizaje, presencial o virtual, '
+             'es modelar cuatro componentes y las relaciones entre ellos. Asi se '
+             'reparten en este sitio.</p><div class="rejilla c4">' % ico('capas', 18))
+    for icono, titulo, texto in [
+            ('birrete', 'Pedagogico',
+             'Las siete fases del Design Thinking anidadas con el metodo cientifico. '
+             'Son las paradas del camino y el orden en que se aprende.'),
+            ('diana', 'Cognitivo',
+             'Tarea binaria, fase con semaforo y evidencia citada debajo. El estudiante '
+             'sabe en todo momento que sabe hacer y que no.'),
+            ('ayuda', 'Comunicativo',
+             'La hoja de barreras, los tutoriales que se piden al docente y el articulo. '
+             'El ambiente es una conversacion, no un tablero de anuncios.'),
+            ('software', 'Tecnologico',
+             'Drive, GitHub y este generador. La herramienta se nombra, no se esconde: '
+             'eso tambien se aprende.')]:
+        h.append('<div class="celda"><span class="icono-comp">%s</span>'
+                 '<h4>%s</h4><p>%s</p></div>' % (ico(icono, 20), e(titulo), e(texto)))
+    h.append('</div></div>')
     h.append('</div></section>')
 
     # --- números ---
@@ -843,8 +866,8 @@ def pagina_equipo(datos, equipo):
 
     h = [cabeza('%s · Semillero Maker' % equipo['nombre'],
                 'Ruta por niveles, desarrollo tecnológico y estado del artículo del equipo %s.'
-                % equipo['numero'], '../', linea=equipo['linea'], datos=datos)]
-    h.append(mapa_fijo(datos, equipo, nv, act, ''))
+                % equipo['numero'], '../', linea=equipo['linea'], datos=datos,
+                mapa=mapa_fijo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), ''))]
     h.append(portada_equipo(datos, equipo, hh, tt))
     h.append('<div class="con-lateral">')
     h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '', _mods_lat))
@@ -1194,6 +1217,62 @@ def panel_derecho(datos, equipo, nv, act, hh, tt):
     return ''.join(p)
 
 
+
+# Los nueve eventos de Gagne, en los que este sitio usa. El rotulo se imprime
+# junto a cada parte del modulo: es senalizacion en el sentido de Mayer, y
+# ademas le sirve al docente para ver que la secuencia esta completa.
+EVENTOS = {
+    'objetivo':   ('2', 'Informar el objetivo'),
+    'previo':     ('3', 'Recordar lo anterior'),
+    'contenido':  ('4', 'Presentar el contenido'),
+    'guia':       ('5', 'Guiar el aprendizaje'),
+    'ejecucion':  ('6', 'Provocar la ejecucion'),
+    'realimenta': ('7', 'Dar realimentacion'),
+    'evaluacion': ('8', 'Evaluar el desempeno'),
+    'transfer':   ('9', 'Retener y transferir'),
+}
+
+
+def rotulo_evento(clave):
+    n, texto = EVENTOS[clave]
+    return ('<span class="evento" title="Evento %s de los nueve de Gagne">'
+            '<i>%s</i>%s</span>' % (n, n, e(texto)))
+
+
+def objetivo_de(m):
+    """
+    El objetivo del modulo, sacado de su primera diapositiva.
+
+    No se inventa: las sesiones ya abren diciendo que se va a lograr. Se
+    separa el titular, que viene partido en dos lineas por el diseno de la
+    diapositiva, de las metas numeradas.
+    """
+    if not m.get('diapositivas'):
+        return None
+    d = m['diapositivas'][0]
+    lineas = [x for x in d['cuerpo'] if x.strip()]
+    titular, metas, nota = [], [], ''
+    esperando = False
+    for x in lineas:
+        if x.strip().isdigit():
+            esperando = True
+            continue
+        if len(x) > 110:
+            if not nota:
+                nota = x
+            continue
+        if esperando or metas:
+            metas.append(x)
+            esperando = False
+        elif len(titular) < 2:
+            titular.append(x)
+        else:
+            metas.append(x)
+    return {'titular': ' '.join(titular).strip(),
+            'metas': [x for x in metas if x][:4],
+            'nota': nota}
+
+
 def carrusel(m, diapos, pre='../'):
     """
     Carrusel de las diapositivas de una sesion, con Swiper.
@@ -1272,8 +1351,8 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
     h = [cabeza('Modulos - %s' % equipo['nombre'],
                 'Ruta de aprendizaje semana por semana del equipo %s, con las diapositivas de '
                 'cada sesion y lo que se pidio.' % equipo['numero'],
-                '../', linea=equipo['linea'], datos=datos)]
-    h.append(mapa_fijo(datos, equipo, nv, act, '-modulos'))
+                '../', linea=equipo['linea'], datos=datos,
+                mapa=mapa_fijo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-modulos'))]
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
     h.append('<div class="con-lateral">')
@@ -1322,17 +1401,31 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
         h.append('<div class="titulo"><h3>%s</h3><p class="dato">%s</p></div>'
                  % (e(m['sesion']), e(detalle)))
         if m['_total']:
-            h.append('<div class="medida">%s</div>'
-                     % progreso('Lo que se pidio', m['_hechas'], m['_total']))
+            h.append('<div class="medida">%s%s</div>'
+                     % (progreso('Lo que se pidio', m['_hechas'], m['_total']),
+                        rotulo_evento('evaluacion')))
         else:
             h.append('<div class="medida">%s</div>'
                      % chip('gris', 'sin entregable medible'))
         h.append('</div>')
 
         h.append('<div class="modulo-cuerpo">')
+
+        obj = objetivo_de(m)
+        if obj and (obj['titular'] or obj['metas']):
+            h.append('<div class="objetivo-modulo">%s' % rotulo_evento('objetivo'))
+            if obj['titular']:
+                h.append('<h4>%s</h4>' % e(obj['titular']))
+            if obj['metas']:
+                h.append('<ul class="metas">%s</ul>'
+                         % ''.join('<li>%s%s</li>' % (ico('check', 14), e(x)) for x in obj['metas']))
+            if obj['nota']:
+                h.append('<p class="dato">%s</p>' % e(obj['nota']))
+            h.append('</div>')
+
         if m['_ent']:
-            h.append('<div class="modulo-parte"><h4>%s Lo que se pidio esta semana</h4>'
-                     '<ul class="tareas">' % ico('lista', 16))
+            h.append('<div class="modulo-parte"><h4>%s Lo que se pidio esta semana %s</h4>'
+                     '<ul class="tareas">' % (ico('lista', 16), rotulo_evento('ejecucion')))
             for _id, texto, hecha, fuente in m['_ent']:
                 h.append('<li class="%s"><span class="casilla">%s</span><span class="texto">'
                          '<b>%s</b><span class="fuente dato">%s</span></span></li>'
@@ -1341,6 +1434,8 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
             h.append('</ul></div>')
 
         if diapos:
+            h.append('<div class="modulo-parte"><h4>%s Material de la sesion %s</h4></div>'
+                     % (ico('libro', 16), rotulo_evento('contenido')))
             h.append('<details class="mas diapos" open><summary>%s Ver las %d diapositivas de '
                      'la sesion</summary><div>' % (ico('chevron', 14), len(diapos)))
             h.append('<p class="dato">Se muestran las de tu linea y las que eran para todos. '
@@ -1372,8 +1467,8 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
         pend_v = [v for v in (videos or {}).get('pendientes', [])
                   if v.get('modulo') == m['letra'] and linea_eq in v.get('para', [])]
         if rec.get('recursos') or rec.get('porGrabar') or pend_v or (vids and m['letra'] == 'A'):
-            h.append('<div class="modulo-parte"><h4>%s Para repasar por fuera de la presentacion</h4>'
-                     % ico('birrete', 16))
+            h.append('<div class="modulo-parte"><h4>%s Para repasar por fuera de la presentacion %s</h4>'
+                     % (ico('birrete', 16), rotulo_evento('guia')))
             if bloqueado:
                 h.append('<div class="nota-caja ambar candado-aviso">'
                          '<span class="titulo">%s Recursos bloqueados</span>'
@@ -1424,9 +1519,9 @@ def pagina_ruta(datos, equipo):
 
     h = [cabeza('Ruta · %s' % equipo['nombre'],
                 'Los siete niveles del semestre para el equipo %s, con las tareas de cada uno.'
-                % equipo['numero'], '../', linea=equipo['linea'], datos=datos)]
+                % equipo['numero'], '../', linea=equipo['linea'], datos=datos,
+                mapa=mapa_fijo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-ruta'))]
     _hh, _tt, _nv = totales(datos, equipo)
-    h.append(mapa_fijo(datos, equipo, _nv, nivel_actual(_nv), '-ruta'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
     h.append('<div class="con-lateral">')
@@ -1480,9 +1575,9 @@ def pagina_desarrollo(datos, equipo):
 
     h = [cabeza('Desarrollo · %s' % equipo['nombre'],
                 'Hitos técnicos del equipo %s, con orientación y tutoriales.' % equipo['numero'],
-                '../', linea=equipo['linea'], datos=datos)]
+                '../', linea=equipo['linea'], datos=datos,
+                mapa=mapa_fijo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-desarrollo'))]
     _hh, _tt, _nv = totales(datos, equipo)
-    h.append(mapa_fijo(datos, equipo, _nv, nivel_actual(_nv), '-desarrollo'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
     h.append('<div class="con-lateral">')
@@ -1553,9 +1648,9 @@ def pagina_articulo(datos, equipo):
 
     h = [cabeza('Artículo · %s' % equipo['nombre'],
                 'Estado del artículo de desarrollo tecnológico del equipo %s, sección por sección.'
-                % equipo['numero'], '../', linea=equipo['linea'], datos=datos)]
+                % equipo['numero'], '../', linea=equipo['linea'], datos=datos,
+                mapa=mapa_fijo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-articulo'))]
     _hh, _tt, _nv = totales(datos, equipo)
-    h.append(mapa_fijo(datos, equipo, _nv, nivel_actual(_nv), '-articulo'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
     h.append('<div class="con-lateral">')

@@ -171,6 +171,76 @@ Sin vocabulario que suene a texto generado.
 Lo que no funciona se dice, no se esconde. Un equipo con el artículo en blanco lee
 "el artículo está en blanco", no "el artículo está en proceso".
 
+---
+
+## 5.bis Marco del ambiente de aprendizaje
+
+El sitio no es un tablero de anuncios con buena tipografía: es un **ambiente
+virtual de aprendizaje**, y está modelado como tal. Estas son las referencias de
+las que salen sus decisiones de estructura, no de adorno.
+
+### Los cuatro componentes
+
+Modelar un ambiente de aprendizaje, presencial o virtual, significa modelar
+cuatro componentes y las relaciones entre ellos: **pedagógico, cognitivo,
+comunicativo y tecnológico** (Universidad Pedagógica Nacional, *Modelamiento
+pedagógico de Ambientes Virtuales de Aprendizaje*, revista Tecné, Episteme y
+Didaxis n.º 44, 2018). Así se reparten aquí:
+
+| Componente | Dónde está en el sitio |
+|---|---|
+| **Pedagógico** | Las siete fases del Design Thinking anidadas con el método científico. Son las paradas del camino y el orden en que se aprende. |
+| **Cognitivo** | Tarea binaria, fase con semáforo, evidencia citada debajo. El estudiante sabe en todo momento qué sabe hacer y qué no. |
+| **Comunicativo** | La hoja de barreras, los tutoriales que se le piden al docente y el artículo. El ambiente es una conversación, no un anuncio. |
+| **Tecnológico** | Drive, GitHub y el generador. La herramienta se nombra, no se esconde: eso también se aprende. |
+
+Esa misma línea describe el aula virtual como un **sistema interactivo de
+transacciones comunicativas** donde las **e-actividades son el núcleo
+estructural** del diseño. Por eso el centro de cada módulo no es el contenido
+sino **lo que se pidió hacer esa semana**, y el contenido va alrededor.
+
+### Los nueve eventos de la instrucción
+
+Cada módulo sigue la secuencia de Gagné, y **el rótulo va impreso en la página**
+junto a cada parte, para que el estudiante sepa qué está haciendo y el docente
+vea que la secuencia está completa:
+
+| Evento | Dónde |
+|---|---|
+| 2 · Informar el objetivo | El recuadro que abre el módulo, sacado de la primera diapositiva de la sesión |
+| 4 · Presentar el contenido | El carrusel de diapositivas |
+| 5 · Guiar el aprendizaje | La orientación de cada hito y los recursos externos |
+| 6 · Provocar la ejecución | Lo que se pidió esa semana |
+| 7 · Dar realimentación | El estado de cada tarea, con el archivo que lo demuestra |
+| 8 · Evaluar el desempeño | El semáforo y los puntos |
+| 9 · Retener y transferir | El artículo, donde todo se escribe |
+
+Gagné admite que el orden se puede alterar y que no todos los eventos tienen que
+estar en cada lección. Aquí se usan los que la sesión realmente ejecuta.
+
+### Carga cognitiva y multimedia
+
+De los principios de aprendizaje multimedia de Mayer, construidos sobre tres
+supuestos (procesamiento activo, doble canal y **capacidad limitada**), el sitio
+aplica tres de forma deliberada:
+
+- **Segmentación.** Una sesión, un módulo. Nunca se muestra el semestre entero
+  de golpe.
+- **Señalización.** Los rótulos de evento, el semáforo y el color por línea
+  marcan qué es cada cosa. Procesar la página cuesta menos y queda cabeza para
+  el contenido.
+- **Coherencia.** A cada equipo se le muestran solo las diapositivas de su línea
+  más las que eran para todos, como indica la propia sesión. Lo que no le sirve,
+  no se le pone enfrente.
+
+### Cultura maker y tecnología con sentido
+
+El semillero construye para aprender, no aprende para después construir. Por eso
+el sitio mide **evidencia de lo construido**, no asistencia ni intención, y por
+eso una tarea sin archivo que la respalde no está hecha. La herramienta se nombra
+con su versión exacta, y lo que no funciona se dice: un ambiente que esconde sus
+límites no enseña a pensar la técnica, solo a usarla.
+
 ## 6. Restricciones técnicas
 
 - **GitHub Pages solo sirve archivos estáticos.** No hay backend. Las páginas se

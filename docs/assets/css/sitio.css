@@ -24,10 +24,23 @@
    sin su style inline no quede roto. */
 :root {
   --desvio: 0;
+  /* Alto real de la cabecera fija. El script lo mide y lo actualiza al
+     cambiar el tamano de la ventana. El valor de aqui es solo el arranque,
+     para que nada se vea mal antes de que el script corra. */
+  --alto-fijo: 128px;
+}
+
+/* La barra y el mapa se quedan arriba como un solo bloque. Antes la barra
+   se iba al desplazar y, al abrir un desplegable, la lista se cortaba
+   contra el borde de la ventana. */
+.cabecera-fija {
+  position: sticky;
+  top: 0;
+  z-index: 70;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 160px; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--alto-fijo) + 18px); }
 
 body {
   margin: 0;
@@ -648,6 +661,7 @@ footer.pie a { color: var(--cian-vivo); }
 
 @media (max-width: 600px) {
   .bloque { padding-block: 32px; }
+  html { scroll-padding-top: calc(var(--alto-fijo) + 14px); }
   .portada > .envoltura { padding-block: 30px 28px; }
   .nivel-actual, .hermano, .origen { padding: 18px 18px; }
   .menu a { padding: 7px 10px; font-size: 13px; }
@@ -852,7 +866,7 @@ a.equipo .titular h3 { padding-top: 2px; }
 
 .lateral {
   position: sticky;
-  top: 148px;
+  top: calc(var(--alto-fijo) + 18px);
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -1023,7 +1037,7 @@ a.equipo .titular h3 { padding-top: 2px; }
   box-shadow: var(--alzado-3);
   padding: 14px;
   min-width: 300px;
-  max-height: min(70vh, 540px);
+  max-height: calc(100vh - var(--alto-fijo) - 28px);
   overflow-y: auto;
 }
 .panel-desplegable.estrecho-menu { min-width: 280px; }
@@ -1211,14 +1225,25 @@ details.texto-diapos { margin-top: 4px; }
 
 .lateral-izq {
   position: sticky;
-  top: 148px;
+  top: calc(var(--alto-fijo) + 18px);
   padding-top: 34px;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  max-height: calc(100vh - 170px);
+  /* Se mide contra la cabecera real, no contra un numero inventado: por eso
+     la lista de proyectos ya no queda cortada al desplegarse. */
+  max-height: calc(100vh - var(--alto-fijo) - 36px);
   overflow-y: auto;
+  overscroll-behavior: contain;
   scrollbar-width: thin;
+  scrollbar-color: var(--filete) transparent;
+}
+/* Aviso de que hay mas abajo: un velo al pie de la columna */
+.lateral-izq::after {
+  content: ""; position: sticky; bottom: 0; display: block;
+  height: 22px; margin-top: -22px; flex: none;
+  background: linear-gradient(transparent, var(--papel));
+  pointer-events: none;
 }
 .izq-cab { padding: 0 10px 12px; border-bottom: 2px solid var(--linea, var(--cian)); margin-bottom: 8px; }
 .izq-cab .rotulo { display: block; color: var(--tinta-suave); margin-bottom: 4px; }
@@ -1303,4 +1328,70 @@ details.texto-diapos { margin-top: 4px; }
     background: var(--superficie); border: 1px solid var(--filete);
     border-radius: var(--radio); padding-inline: 10px; margin-top: 20px;
   }
+}
+
+/* ============ 22. Diseño instruccional visible ============ */
+/* El rótulo del evento de Gagné junto a cada parte. Es señalización en el
+   sentido de Mayer: marcar qué es cada cosa baja la carga de procesar la
+   página y deja la cabeza libre para el contenido. */
+
+.evento {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--fuente-datos); font-size: 10px; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--tinta-suave); background: var(--superficie2);
+  border: 1px solid var(--filete-sutil); border-radius: 999px;
+  padding: 2px 9px 2px 3px; white-space: nowrap;
+}
+.evento i {
+  display: grid; place-items: center; width: 17px; height: 17px;
+  border-radius: 50%; font-style: normal; font-size: 9.5px;
+  background: var(--linea, var(--cian)); color: var(--superficie);
+}
+.modulo-parte h4 .evento { margin-left: auto; letter-spacing: .06em; }
+.modulo-cab .medida { display: flex; flex-direction: column; gap: 7px; align-items: flex-start; }
+
+.objetivo-modulo {
+  background: var(--linea-t, var(--cian-tenue));
+  border-left: 5px solid var(--linea, var(--cian));
+  border-radius: var(--radio-chico);
+  padding: 16px 18px 17px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.objetivo-modulo > .evento { align-self: flex-start; background: var(--superficie); }
+.objetivo-modulo h4 {
+  font-family: var(--fuente-titulos); font-size: var(--t-titulo3);
+  font-weight: 700; line-height: 1.18;
+}
+.metas { display: flex; flex-direction: column; gap: 7px; }
+.metas li { display: flex; align-items: flex-start; gap: 9px; font-size: 14.5px; font-weight: 500; }
+.metas .ico { color: var(--linea, var(--cian)); margin-top: 3px; }
+
+/* Los cuatro componentes del ambiente */
+.componentes {
+  margin-top: 26px; padding-top: 24px; border-top: 1px solid var(--filete);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.componentes h3 {
+  display: flex; align-items: center; gap: 10px;
+  font-size: var(--t-titulo3); font-weight: 700;
+}
+.componentes .dato { max-width: 74ch; margin-bottom: 12px; }
+.componentes .celda { display: flex; flex-direction: column; gap: 9px; }
+.componentes .icono-comp {
+  display: grid; place-items: center; width: 38px; height: 38px;
+  border-radius: 11px; background: var(--cian-tenue); color: var(--cian);
+}
+.componentes h4 { font-size: var(--t-titulo4); font-weight: 700; }
+.componentes p { font-size: 13.5px; color: var(--tinta-suave); }
+.componentes .celda:nth-child(1) .icono-comp { background: var(--linea-software-tenue); color: var(--linea-software); }
+.componentes .celda:nth-child(2) .icono-comp { background: var(--linea-unity-tenue); color: var(--linea-unity); }
+.componentes .celda:nth-child(3) .icono-comp { background: var(--linea-audiovisual-tenue); color: var(--linea-audiovisual); }
+.componentes .celda:nth-child(4) .icono-comp { background: var(--linea-electronica-tenue); color: var(--linea-electronica); }
+
+/* Barra de avance de lectura, en el borde de la cabecera fija */
+.progreso-lectura {
+  position: absolute; left: 0; bottom: -1px; height: 3px;
+  width: 0; background: var(--linea, var(--cian));
+  transition: width .08s linear; z-index: 2;
 }

@@ -10,6 +10,8 @@
      5. Cerrar los menus desplegables al salirse o con Escape.
      6. Mover el carrusel de diapositivas (Swiper).
      7. Animar las secciones al bajar (GSAP ScrollTrigger).
+     8. Pintar la barra de avance de lectura.
+     9. Hacer que las cifras cuenten hasta su valor al entrar en pantalla.
 
    Las dos librerias se eligieron por una razon concreta: ninguna esconde
    contenido desde el CSS. Si no cargan, la pagina se ve completa, solo que
@@ -237,6 +239,46 @@
         scrollTrigger: { trigger: g.parentNode, start: 'top bottom', end: 'bottom top', scrub: true }
       });
     });
+  }
+
+
+  /* ---- 9. Barra de avance de lectura ---- */
+  /* Dice cuanto falta de la pagina. En paginas largas como la de modulos,
+     saber que queda poco evita el abandono. */
+  if (cabecera) {
+    var barraLec = document.createElement('div');
+    barraLec.className = 'progreso-lectura';
+    cabecera.appendChild(barraLec);
+    var pintarLec = function () {
+      var alto = document.documentElement.scrollHeight - window.innerHeight;
+      var y = window.scrollY || window.pageYOffset;
+      barraLec.style.width = (alto > 0 ? Math.min(100, (y / alto) * 100) : 0) + '%';
+    };
+    pintarLec();
+    window.addEventListener('scroll', pintarLec, { passive: true });
+    window.addEventListener('resize', pintarLec);
+  }
+
+  /* ---- 10. Las cifras cuentan hasta su valor ---- */
+  /* Solo las que son un numero puro. El puntaje y las cifras del tablero
+     suben al entrar en pantalla, que es lo que vuelve visible el logro. */
+  if (window.gsap && !quietos2) {
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.marcador b, .celda .cifra, .portada-cifras .cifra'),
+      function (el) {
+        var texto = el.textContent.trim();
+        var m = texto.match(/^(\d+)(.*)$/);
+        if (!m) { return; }
+        var fin = parseInt(m[1], 10);
+        var cola = m[2];
+        if (fin < 2) { return; }
+        var obj = { n: 0 };
+        gsap.to(obj, {
+          n: fin, duration: 1.1, ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 92%', once: true },
+          onUpdate: function () { el.textContent = Math.round(obj.n) + cola; }
+        });
+      });
   }
 
   /* ---- 4. Aparecer al desplazar, respaldo sin librerias ---- */
