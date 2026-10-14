@@ -258,7 +258,8 @@
     }
    ],
    "titulo": "SESIÓN DEL 29 Y 30 DE JULIO · 90 MINUTOS Hoy dejamos lista",
-   "imagenes": 11
+   "imagenes": 11,
+   "pdf": true
   },
   {
    "letra": "B",
@@ -568,7 +569,8 @@
     }
    ],
    "titulo": "SESIÓN DEL 5 Y 6 DE AGOSTO · PASO A PASO Qué necesito, qué debo",
-   "imagenes": 12
+   "imagenes": 12,
+   "pdf": true
   },
   {
    "letra": "C",
@@ -785,7 +787,8 @@
     }
    ],
    "titulo": "12 Y 13 DE AGOSTO · 90 MINUTOS Revisar, completar",
-   "imagenes": 9
+   "imagenes": 9,
+   "pdf": true
   },
   {
    "letra": "D",
@@ -1206,7 +1209,8 @@
     }
    ],
    "titulo": "26 Y 27 DE AGOSTO Empezar a construir",
-   "imagenes": 22
+   "imagenes": 22,
+   "pdf": true
   },
   {
    "letra": "F",
@@ -1432,7 +1436,8 @@
     }
    ],
    "titulo": "9 Y 10 DE SEPTIEMBRE Ponerle nombre",
-   "imagenes": 12
+   "imagenes": 12,
+   "pdf": true
   },
   {
    "letra": "G",
@@ -1641,7 +1646,8 @@
     }
    ],
    "titulo": "16 Y 17 DE SEPTIEMBRE Dos equipos van a la",
-   "imagenes": 9
+   "imagenes": 9,
+   "pdf": true
   }
  ]
 }

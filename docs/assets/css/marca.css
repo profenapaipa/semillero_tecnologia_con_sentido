@@ -2,7 +2,7 @@
    Sale de datos/marca.json con  python herramientas/generar_marca.py
    Cualquier cambio hecho aquí se pierde en la próxima generación. */
 
-/* Semillero Maker de Tecnología con Sentido · manual de marca v5.0 · 2026-10-13
+/* Semillero Maker de Tecnología con Sentido · manual de marca v5.1 · 2026-10-13
    Concepto: Bitacora de taller, con pigmentos de aqui
 
    El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller, y se recorre como un camino: papel con retícula, anotaciones en monoespaciada, cifras enormes y una franja de color por cada oficio. El avance no se cuenta, se camina: cada fase es una parada del camino, y lo que falta no se disfraza.
@@ -27,6 +27,7 @@
   --panel-2: #242C4E;
   --sobre-panel: #EDEFF7;
   --sobre-panel-suave: #A8AFCA;
+  --sobre-relleno: #FFFFFF;
   --cian: #234A9E;
   --cian-vivo: #1B3B80;
   --cian-panel: #93B5FF;
@@ -104,6 +105,7 @@
     --panel-2: #1C2240;
     --sobre-panel: #EDEFF7;
     --sobre-panel-suave: #A8AFCA;
+    --sobre-relleno: #0E0E16;
     --cian: #93B5FF;
     --cian-vivo: #B4CCFF;
     --cian-panel: #93B5FF;
@@ -156,6 +158,7 @@
   --panel-2: #1C2240;
   --sobre-panel: #EDEFF7;
   --sobre-panel-suave: #A8AFCA;
+  --sobre-relleno: #0E0E16;
   --cian: #93B5FF;
   --cian-vivo: #B4CCFF;
   --cian-panel: #93B5FF;

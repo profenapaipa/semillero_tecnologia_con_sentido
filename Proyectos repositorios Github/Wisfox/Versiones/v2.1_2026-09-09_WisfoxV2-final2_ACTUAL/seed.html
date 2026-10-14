@@ -1,0 +1,27 @@
+<!doctype html>
+<!--
+  seed.html — página temporal para subir lecciones y quizzes a Firestore
+  =========================================================================
+  Por qué existe: subir el contenido desde una terminal de Node.js (con
+  scripts/seed-firestore.js) daba un error de conexión ("NOT_FOUND") en
+  esta red/compu. El SDK de Firebase para JavaScript está pensado sobre
+  todo para correr en un navegador, así que esta página hace la misma
+  subida, pero corriendo en Chrome/Edge en vez de en la terminal.
+
+  Uso: con la app corriendo (npm run dev), abrir en el navegador:
+    http://localhost:5173/seed.html
+  Mirar el registro en pantalla hasta que diga "¡LISTO!". Después se
+  puede cerrar esta pestaña y borrar este archivo si se quiere — no es
+  parte de la app en sí, es una herramienta de una sola vez.
+-->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wisfox — Cargar contenido a Firestore</title>
+  </head>
+  <body style="font-family: monospace; background: #111; color: #6cff8a; padding: 24px; line-height: 1.5;">
+    <h2 style="color: #fff;">Subiendo lecciones y quizzes a Firestore…</h2>
+    <div id="log"></div>
+    <script type="module" src="/src/seed-runner.js"></script>
+  </body>
+</html>

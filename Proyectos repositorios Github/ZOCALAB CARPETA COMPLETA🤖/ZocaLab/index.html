@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZocaLab — Educación Ancestral Digital</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ====== SPLASH SCREEN ====== */
+    body {
+      margin: 0;
+      background: var(--crema);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Fondo decorativo */
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Patrón geométrico muisca */
+    .bg-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.035;
+      background-image:
+        repeating-linear-gradient(45deg,  var(--dorado) 0, var(--dorado) 1px, transparent 0, transparent 28px),
+        repeating-linear-gradient(-45deg, var(--verde)  0, var(--verde)  1px, transparent 0, transparent 28px);
+    }
+
+    /* Círculos decorativos */
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.06;
+    }
+    .bc-1 { width: 700px; height: 700px; background: var(--verde);     top: -250px;  right: -200px; animation: spinSlow 60s linear infinite; }
+    .bc-2 { width: 500px; height: 500px; background: var(--dorado);    bottom:-200px; left: -150px;  animation: spinReverse 45s linear infinite; }
+    .bc-3 { width: 260px; height: 260px; background: var(--terracota); top: 40%;     left: 6%; }
+    .bc-4 { width: 180px; height: 180px; background: var(--azul);      bottom: 20%;  right: 8%; }
+
+    /* Partículas flotantes */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: particleFly linear infinite;
+      opacity: 0;
+    }
+
+    /* ====== CONTENIDO SPLASH ====== */
+    .splash-wrapper {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+      animation: fadeIn 0.5s ease;
+    }
+
+    /* Contenedor del logo */
+    .logo-container {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Logotipo oficial de la marca */
+    .brand-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      animation: hexGlow 3s ease-in-out infinite, floatLogo 5s ease-in-out infinite;
+    }
+
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+
+    /* Elementos flotantes muiscas */
+    .float-items {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .fi {
+      position: absolute;
+      font-size: 28px;
+      animation: float ease-in-out infinite;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .fi.show { opacity: 0.55; }
+    .fi-1 { top: 10%; left:  8%; animation-duration: 5s; animation-delay: 0.2s; }
+    .fi-2 { top: 14%; right: 9%; animation-duration: 4s; animation-delay: 0.8s; }
+    .fi-3 { top: 42%; left:  4%; animation-duration: 6s; animation-delay: 1.2s; }
+    .fi-4 { top: 45%; right: 5%; animation-duration: 5s; animation-delay: 0.5s; }
+    .fi-5 { bottom:14%; left:10%; animation-duration: 4.5s; animation-delay:1.8s; }
+    .fi-6 { bottom:12%; right:9%; animation-duration: 5.5s; animation-delay: 0s; }
+    .fi-7 { top: 68%; left: 18%; animation-duration: 4s; animation-delay: 2s; }
+    .fi-8 { top: 20%; left: 22%; animation-duration: 5s; animation-delay: 1s; }
+
+    /* Nombre de marca */
+    .brand-wrap {
+      animation: fadeUp 0.8s ease 0.4s both;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 68px;
+      font-weight: 900;
+      color: var(--verde-oscuro);
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .brand-name .highlight { color: var(--verde); }
+
+    .brand-tagline {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--dorado-texto); /* var(--dorado) no llega a 4.5:1 sobre crema en texto pequeño */
+      margin-top: 8px;
+    }
+
+    .brand-slogan {
+      font-size: 18px;
+      color: var(--gris);
+      font-weight: 600;
+      margin-top: 10px;
+      letter-spacing: 0.01em;
+    }
+
+    .brand-slogan em {
+      font-style: normal;
+      color: var(--verde-oscuro);
+      font-weight: 800;
+    }
+
+    /* Barra de progreso */
+    .loading-wrap {
+      margin-top: 52px;
+      width: 280px;
+      animation: fadeUp 0.8s ease 0.7s both;
+    }
+
+    .loading-status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .loading-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gris);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .loading-pct {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--verde-oscuro); /* var(--verde) no llega a 4.5:1 sobre crema en texto pequeño */
+    }
+
+    .loading-track {
+      height: 6px;
+      background: var(--crema-dark);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+
+    .loading-fill {
+      height: 100%;
+      border-radius: var(--radius-full);
+      background: linear-gradient(90deg, var(--verde-oscuro), var(--verde), var(--dorado));
+      background-size: 200% auto;
+      animation: loadProgress 3.5s ease forwards, shimmer 2s linear infinite;
+      width: 0%;
+    }
+
+    /* Puntos de carga */
+    .loading-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--crema-dark);
+      animation: dotPulse 1.2s ease-in-out infinite;
+    }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes dotPulse {
+      0%, 100% { background: var(--crema-dark); transform: scale(1); }
+      50%       { background: var(--verde);       transform: scale(1.3); }
+    }
+
+    /* Skip button */
+    .skip-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gris);
+      background: rgba(255,255,255,0.7);
+      border: 1.5px solid var(--crema-dark);
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+      animation: fadeIn 1s ease 1s both;
+      z-index: 100;
+    }
+    .skip-btn:hover { color: var(--verde-oscuro); border-color: var(--verde); }
+
+    /* Transición de salida */
+    .splash-exit {
+      animation: fadeIn 0.6s ease reverse forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo -->
+  <div class="bg-layer">
+    <div class="bg-pattern"></div>
+    <div class="bg-circle bc-1"></div>
+    <div class="bg-circle bc-2"></div>
+    <div class="bg-circle bc-3"></div>
+    <div class="bg-circle bc-4"></div>
+  </div>
+
+  <!-- Elementos flotantes muiscas -->
+  <div class="float-items">
+    <div class="fi fi-1">🌿</div>
+    <div class="fi fi-2">⭐</div>
+    <div class="fi fi-3">🏺</div>
+    <div class="fi fi-4">💎</div>
+    <div class="fi fi-5">☀️</div>
+    <div class="fi fi-6">🌱</div>
+    <div class="fi fi-7">🦋</div>
+    <div class="fi fi-8">🌸</div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="splash-wrapper" id="splashWrapper">
+
+    <!-- Logo animado -->
+    <div class="logo-container">
+      <img class="brand-logo-img" src="assets/logo-icon.png" alt="Logotipo de ZocaLab: hexágono verde con símbolos ancestrales muiscas rodeado de un marco dorado de espirales">
+    </div>
+
+    <!-- Nombre y eslogan -->
+    <div class="brand-wrap">
+      <div class="brand-name">Zoca<span class="highlight">Lab</span></div>
+      <div class="brand-tagline">Educación Ancestral Digital</div>
+      <div class="brand-slogan"><em>El quinto elemento</em> eres tú</div>
+    </div>
+
+    <!-- Barra de carga -->
+    <div class="loading-wrap">
+      <div class="loading-status">
+        <span class="loading-text" id="loadingText">Iniciando tu lab...</span>
+        <span class="loading-pct" id="loadingPct">0%</span>
+      </div>
+      <div class="loading-track">
+        <div class="loading-fill" id="loadingFill"></div>
+      </div>
+      <div class="loading-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Botón saltar -->
+  <button class="skip-btn" onclick="goToLogin()">Saltar →</button>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Mostrar elementos flotantes
+    document.querySelectorAll('.fi').forEach((el, i) => {
+      setTimeout(() => el.classList.add('show'), 600 + i * 200);
+    });
+
+    // Actualizar porcentaje y textos de carga
+    const messages = [
+      'Iniciando tu lab...',
+      'Cargando ciclos muiscas...',
+      'Activando el Zocam...',
+      'Despertando el quinto elemento...',
+      '¡Listo para aprender!'
+    ];
+
+    let msgIdx = 0;
+    const textEl = document.getElementById('loadingText');
+    const pctEl  = document.getElementById('loadingPct');
+
+    const msgInterval = setInterval(() => {
+      msgIdx = Math.min(msgIdx + 1, messages.length - 1);
+      textEl.textContent = messages[msgIdx];
+    }, 700);
+
+    // Actualizar porcentaje sincronizado con la animación CSS
+    let pct = 0;
+    const pctInterval = setInterval(() => {
+      pct = Math.min(pct + Math.random() * 4, 100);
+      pctEl.textContent = Math.floor(pct) + '%';
+      if (pct >= 100) {
+        clearInterval(pctInterval);
+        clearInterval(msgInterval);
+        setTimeout(goToLogin, 500);
+      }
+    }, 120);
+
+    function goToLogin() {
+      document.getElementById('splashWrapper').classList.add('splash-exit');
+      setTimeout(() => { window.location.href = 'pages/login.html'; }, 600);
+    }
+  </script>
+</body>
+</html>

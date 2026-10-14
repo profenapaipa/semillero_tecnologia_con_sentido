@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisfo - Tu plataforma de aprendizaje</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --accent: #10b981;
+            --xp-bg: #e0e7ff;
+            --xp-text: #4338ca;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: var(--card-bg);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            transition: background 0.2s;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background-color: #eef2ff;
+            color: var(--primary);
+        }
+
+        .streak {
+            background: #fff7ed;
+            color: #c2410c;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .xp-card {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+        }
+        
+        .xp-card h3 { color: rgba(255,255,255,0.8); }
+
+        .mission {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .mission:last-child { border-bottom: none; }
+        
+        .mission.done { color: var(--accent); }
+
+        .btn-ai {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">W Wisfo</div>
+        <div class="nav-item">🏠 Inicio</div>
+        <div class="nav-item">📖 Lecciones</div>
+        <div class="nav-item">🧭 Rutas de aprendizaje</div>
+        <div class="nav-item">📚 Recursos</div>
+        <div class="nav-item active">🤖 IA Tutora <span style="font-size:10px; background:#dcfce7; color:#166534; padding:2px 4px; border-radius:4px;">Nuevo</span></div>
+        <div class="nav-item">📝 Quiz</div>
+        <div class="nav-item">🏆 Logros</div>
+        <div class="nav-item">💬 Comunidad</div>
+        
+        <div class="streak">
+            🔥 7 días de racha
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <div class="header">
+            <div>
+                <h1 style="margin:0;">¡Hola, Alex! 👋</h1>
+                <p style="margin:5px 0 0; color:var(--text-muted);">Continúa aprendiendo. Tú puedes lograrlo.</p>
+            </div>
+            <div class="user-profile">
+                <span>AL</span>
+                <div class="avatar">AL</div>
+                <div>
+                    <div style="font-weight:bold;">Alex López</div>
+                    <div style="font-size:12px; color:var(--text-muted);">Nivel 5 · Explorador</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <!-- Progress Card -->
+            <div class="card">
+                <h3>Tu progreso</h3>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <h2 style="margin:0;">🏔️ Nivel 5</h2>
+                    <span style="color:var(--primary); font-weight:bold;">68%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 68%;"></div>
+                </div>
+                <p style="margin:5px 0; font-size:12px; color:var(--text-muted);">XP: 340 / 500</p>
+            </div>
+
+            <!-- Stats Card -->
+            <div class="card xp-card">
+                <h3>Estadísticas Semanales</h3>
+                <div class="stat-row">
+                    <span>📗 Lecciones</span>
+                    <span>24 completadas</span>
+                </div>
+                <div class="stat-row">
+                    <span>🎯 Temas</span>
+                    <span>9 dominados</span>
+                </div>
+                <div class="stat-row">
+                    <span>⏱️ Tiempo</span>
+                    <span>4.2h de estudio</span>
+                </div>
+                <div class="stat-row" style="margin-top:15px; border-top:1px solid rgba(255,255,255,0.2); padding-top:10px;">
+                    <span>⚡ XP Total</span>
+                    <span>+340</span>
+                </div>
+            </div>
+
+            <!-- Subjects Card -->
+            <div class="card">
+                <h3>Explora, aprende y domina</h3>
+                <div class="stat-row">
+                    <span>🧮 Matemáticas</span>
+                    <span>62%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width:62%; background:#3b82f6;"></div></div>
+                
+                <div class="stat-row">
+                    <span>🏛️ Historia</span>
+                    <span>78%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width:78%; background:#10b981;"></div></div>
+
+                <div class="stat-row">
+                    <span>🌍 Inglés</span>
+                    <span>45%</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" style="width:45%; background:#f59e0b;"></div></div>
+            </div>
+
+            <!-- Missions Card -->
+            <div class="card">
+                <h3>Misiones diarias</h3>
+                <div class="mission">
+                    <span>📗 Completa 3 lecciones</span>
+                    <span style="color:var(--primary); font-weight:bold;">2/3</span>
+                </div>
+                <div class="mission">
+                    <span>⏰ Estudia 30 min</span>
+                    <span style="color:var(--primary); font-weight:bold;">20/30</span>
+                </div>
+                <div class="mission done">
+                    <span>🎯 Responde 10 quiz</span>
+                    <span>✅</span>
+                </div>
+                <div style="margin-top:15px; text-align:center; font-size:14px; color:var(--primary); cursor:pointer;">
+                    Ver todas
+                </div>
+            </div>
+
+            <!-- Events & AI -->
+            <div class="card">
+                <h3>Próximos eventos</h3>
+                <div style="background:#f0fdf4; padding:10px; border-radius:8px; border-left:4px solid #22c55e; margin-bottom:15px;">
+                    <strong>📅 Quiz de Matemáticas</strong><br>
+                    <span style="font-size:12px; color:var(--text-muted);">Hoy, 4:00 PM</span>
+                </div>
+                
+                <h3>¿Necesitas ayuda?</h3>
+                <p style="font-size:14px; color:var(--text-muted);">Pregúntale a Wisfo</p>
+                <button class="btn-ai">🤖 Hablar con IA Tutora</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

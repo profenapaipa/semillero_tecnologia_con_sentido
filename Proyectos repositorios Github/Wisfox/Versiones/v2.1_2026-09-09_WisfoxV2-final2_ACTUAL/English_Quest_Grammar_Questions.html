@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English Quest — Basic Grammar & Questions</title>
+<style>
+:root{--navy:#17324d;--blue:#2b6f9f;--pale:#eaf4fa;--bg:#f6f9fb;--card:#fff;--line:#d8e4ec;--green:#2f7d5a;--red:#b44d4d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--navy);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+header{background:linear-gradient(135deg,#17324d,#2b6f9f);color:#fff;padding:42px 6%;text-align:center}
+h1{font-size:clamp(30px,5vw,50px);margin:0 0 8px}h2{font-size:30px;margin:8px 0}.sub{opacity:.9}
+nav{position:sticky;top:0;z-index:5;background:white;border-bottom:1px solid var(--line);padding:9px 4%;display:flex;gap:8px;overflow:auto}
+nav a{padding:9px 12px;background:#edf3f7;border-radius:10px;text-decoration:none;color:var(--navy);font-weight:750;white-space:nowrap}
+main{max-width:1150px;margin:auto;padding:25px 5%}section{margin:35px 0 55px;scroll-margin-top:70px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:21px;box-shadow:0 5px 18px #17324d0b;margin:15px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.badge{display:inline-block;background:var(--pale);color:var(--blue);font-weight:800;padding:5px 10px;border-radius:999px;font-size:13px}
+.example{font-size:22px;font-weight:800}.translation{color:#607487}
+button{border:0;border-radius:10px;padding:10px 14px;background:var(--blue);color:#fff;font-weight:800;cursor:pointer;margin:4px}
+button.secondary{background:#edf3f7;color:var(--navy)}button:hover{filter:brightness(.96)}
+input,select{font:inherit;padding:10px;border:2px solid #b9cad7;border-radius:10px;background:#fff;color:var(--navy)}
+.quiz button{display:block;width:100%;text-align:left;background:#edf3f7;color:var(--navy)}
+.feedback{font-weight:800;margin-top:9px}.good{color:var(--green)}.bad{color:var(--red)}
+.wordbank{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.chip{background:#edf3f7;padding:8px 11px;border-radius:9px;font-weight:750;cursor:pointer}
+.build{min-height:55px;border:2px dashed #aac1d2;border-radius:12px;padding:10px;margin:10px 0}
+.scene{font-size:55px;text-align:center;padding:8px}.big{font-size:38px;font-weight:900;text-align:center}
+.score{position:fixed;right:18px;bottom:18px;background:var(--navy);color:white;padding:12px 17px;border-radius:14px;font-weight:900;box-shadow:0 5px 20px #0002;z-index:8}
+table{border-collapse:collapse;width:100%}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left}th{background:#edf3f7}
+footer{background:var(--navy);color:#fff;padding:30px 6%;margin-top:50px}.small{font-size:13px;color:#607487}
+</style>
+</head>
+<body>
+<header>
+<h1>🎮 English Quest</h1>
+<p class="sub">Grammar básica + preguntas esenciales para comunicarnos en inglés</p>
+<p>Aprende → construye → pregunta → juega → habla</p>
+</header>
+<nav>
+<a href="#mapa">🗺️ Mapa</a><a href="#verbos">⚙️ Verbos</a><a href="#preguntas">❓ Questions</a><a href="#do">🥊 Do / Does</a><a href="#wh">🔎 WH</a><a href="#reto">🏆 Reto final</a>
+</nav>
+
+<div class="score">⭐ Puntos: <span id="score">0</span></div>
+<main>
+
+<section id="mapa">
+<h2>🗺️ 1. El mapa secreto de una oración</h2>
+<div class="card">
+<p>Una oración básica en inglés suele organizarse así:</p>
+<div class="grid">
+<div><span class="badge">1 · SUBJECT</span><p class="example">I / You / He / She / We / They</p><p class="translation">¿Quién realiza la acción?</p></div>
+<div><span class="badge">2 · VERB</span><p class="example">play / like / study</p><p class="translation">¿Qué hace?</p></div>
+<div><span class="badge">3 · COMPLEMENT</span><p class="example">football / English</p><p class="translation">¿Qué, dónde, cuándo?</p></div>
+</div>
+<p class="example">I + study + English.</p>
+<button onclick="speak('I study English')">🔊 Escuchar</button>
+</div>
+
+<div class="card">
+<span class="badge">⚠️ Regla clave</span>
+<p>Con <strong>he, she, it</strong>, en presente simple normalmente añadimos <strong>-s / -es</strong> al verbo:</p>
+<p class="example">I play → She plays</p>
+<p class="example">I watch → He watches</p>
+<p class="example">I study → She studies</p>
+</div>
+
+<div class="quiz card">
+<span class="badge">🎯 Mini reto</span><h3>Choose the correct sentence:</h3>
+<button onclick="q(this,true)">She likes music.</button>
+<button onclick="q(this,false)">She like music.</button>
+<button onclick="q(this,false)">She liking music.</button>
+<div class="feedback"></div>
+</div>
+</section>
+
+<section id="verbos">
+<h2>⚙️ 2. El verbo <em>to be</em>: el comodín</h2>
+<div class="card">
+<table>
+<tr><th>Subject</th><th>To be</th><th>Example</th></tr>
+<tr><td>I</td><td>am</td><td>I am happy.</td></tr>
+<tr><td>You / We / They</td><td>are</td><td>They are students.</td></tr>
+<tr><td>He / She / It</td><td>is</td><td>She is tired.</td></tr>
+</table>
+<p>Se usa para identidad, características, ubicación y estados:</p>
+<p><span class="example">I am a student.</span> · <span class="example">She is happy.</span> · <span class="example">They are at school.</span></p>
+</div>
+
+<div class="card quiz">
+<span class="badge">🧠 Completa</span>
+<h3>She ___ happy.</h3>
+<button onclick="q(this,false)">am</button><button onclick="q(this,true)">is</button><button onclick="q(this,false)">are</button>
+<div class="feedback"></div>
+</div>
+
+<div class="card">
+<h3>🚦 Semáforo gramatical</h3>
+<p>Piensa: <strong>I → am</strong> · <strong>He/She/It → is</strong> · <strong>You/We/They → are</strong>.</p>
+<button onclick="speak('I am happy. You are happy. She is happy.')">🔊 Escuchar las tres</button>
+</div>
+</section>
+
+<section id="preguntas">
+<h2>❓ 3. ¿Cómo convertir una oración en pregunta?</h2>
+<div class="card">
+<p>En inglés, el orden cambia. Para muchas preguntas del presente simple usamos un <strong>auxiliar</strong> (verbo que ayuda a formar la pregunta): <strong>do / does</strong>.</p>
+<div class="grid">
+<div><span class="badge">Statement</span><p class="example">You like pizza.</p></div>
+<div><span class="badge">Question</span><p class="example">Do you like pizza?</p></div>
+</div>
+<p>Con <strong>he / she / it</strong>:</p>
+<div class="grid">
+<div><p class="example">She likes cats.</p></div>
+<div><p class="example">Does she like cats?</p><p class="small">Observa: la -s desaparece de <em>like</em> porque ya está marcada en <strong>does</strong>.</p></div>
+</div>
+</div>
+
+<div class="card">
+<h3>🧩 Construye la pregunta</h3>
+<p>Haz clic en las palabras en el orden correcto:</p>
+<div id="build1" class="build"></div>
+<div class="wordbank">
+<span class="chip" onclick="addWord('Do')">Do</span><span class="chip" onclick="addWord('you')">you</span><span class="chip" onclick="addWord('like')">like</span><span class="chip" onclick="addWord('animals?')">animals?</span>
+</div>
+<button class="secondary" onclick="resetBuild()">↺ Reiniciar</button>
+<button onclick="checkBuild()">✓ Comprobar</button><div id="buildFeedback" class="feedback"></div>
+</div>
+</section>
+
+<section id="do">
+<h2>🥊 4. Do vs. Does: la batalla</h2>
+<div class="card">
+<div class="grid">
+<div><span class="badge">DO</span><p><strong>I, you, we, they</strong></p><p>Do you like music?</p><p>Do they play football?</p></div>
+<div><span class="badge">DOES</span><p><strong>he, she, it</strong></p><p>Does she like music?</p><p>Does he play football?</p></div>
+</div>
+</div>
+<div class="quiz card">
+<span class="badge">🥊 Round 1</span><h3>___ he like dogs?</h3>
+<button onclick="q(this,false)">Do</button><button onclick="q(this,true)">Does</button>
+<div class="feedback"></div>
+</div>
+<div class="quiz card">
+<span class="badge">🥊 Round 2</span><h3>___ they go to school by bus?</h3>
+<button onclick="q(this,true)">Do</button><button onclick="q(this,false)">Does</button>
+<div class="feedback"></div>
+</div>
+</section>
+
+<section id="wh">
+<h2>🔎 5. Las preguntas WH</h2>
+<div class="grid">
+<div class="card"><div class="scene">👤</div><div class="example">WHO?</div><p>¿Quién?</p><p>Who is your teacher?</p><button onclick="speak('Who is your teacher?')">🔊</button></div>
+<div class="card"><div class="scene">📦</div><div class="example">WHAT?</div><p>¿Qué?</p><p>What do you like?</p><button onclick="speak('What do you like?')">🔊</button></div>
+<div class="card"><div class="scene">📍</div><div class="example">WHERE?</div><p>¿Dónde?</p><p>Where do you live?</p><button onclick="speak('Where do you live?')">🔊</button></div>
+<div class="card"><div class="scene">⏰</div><div class="example">WHEN?</div><p>¿Cuándo?</p><p>When do you study?</p><button onclick="speak('When do you study?')">🔊</button></div>
+<div class="card"><div class="scene">❓</div><div class="example">WHY?</div><p>¿Por qué?</p><p>Why do you like it?</p><button onclick="speak('Why do you like it?')">🔊</button></div>
+<div class="card"><div class="scene">🛠️</div><div class="example">HOW?</div><p>¿Cómo?</p><p>How do you go to school?</p><button onclick="speak('How do you go to school?')">🔊</button></div>
+</div>
+
+<div class="card quiz">
+<span class="badge">🔎 Detective</span><h3>“___ do you live?” → ¿Dónde vives?</h3>
+<button onclick="q(this,false)">Who</button><button onclick="q(this,true)">Where</button><button onclick="q(this,false)">When</button>
+<div class="feedback"></div>
+</div>
+
+<div class="card quiz">
+<span class="badge">🔎 Detective</span><h3>“___ is your favourite animal?”</h3>
+<button onclick="q(this,true)">What</button><button onclick="q(this,false)">Where</button><button onclick="q(this,false)">Why</button>
+<div class="feedback"></div>
+</div>
+</section>
+
+<section id="reto">
+<h2>🏆 6. Reto final — Interview Challenge</h2>
+<div class="card">
+<p>Ahora eres periodista. Formula preguntas básicas a un compañero y registra sus respuestas.</p>
+<div class="grid">
+<div><span class="badge">❤️ Likes</span><p class="example">What do you like?</p></div>
+<div><span class="badge">🕒 Routine</span><p class="example">What time do you wake up?</p></div>
+<div><span class="badge">😊 Emotion</span><p class="example">How are you today?</p></div>
+<div><span class="badge">🐾 Animal</span><p class="example">What is your favourite animal?</p></div>
+<div><span class="badge">🚌 Transport</span><p class="example">How do you go to school?</p></div>
+<div><span class="badge">🎵 Preference</span><p class="example">Do you like music?</p></div>
+</div>
+</div>
+
+<div class="card">
+<h3>🎲 Generador de pregunta</h3>
+<div id="randomQuestion" class="big">?</div>
+<button onclick="randomQuestion()">🎲 Nueva pregunta</button>
+<button onclick="speak(document.getElementById('randomQuestion').textContent)">🔊 Escuchar</button>
+</div>
+
+<div class="card">
+<h3>🧪 Constructor libre</h3>
+<p>Escribe una pregunta básica y comprueba si empieza con una estructura reconocible.</p>
+<input id="freeQ" style="width:min(100%,600px)" placeholder="Ej. Do you like animals?">
+<button onclick="checkFree()">Analizar</button>
+<div id="freeFeedback" class="feedback"></div>
+</div>
+</section>
+
+<section>
+<h2>📌 Chuleta inteligente</h2>
+<div class="card">
+<table>
+<tr><th>Quiero preguntar...</th><th>Inicio recomendado</th><th>Ejemplo</th></tr>
+<tr><td>Qué</td><td>What</td><td>What do you like?</td></tr>
+<tr><td>Quién</td><td>Who</td><td>Who is your friend?</td></tr>
+<tr><td>Dónde</td><td>Where</td><td>Where do you live?</td></tr>
+<tr><td>Cuándo</td><td>When</td><td>When do you study?</td></tr>
+<tr><td>Por qué</td><td>Why</td><td>Why do you like dogs?</td></tr>
+<tr><td>Cómo</td><td>How</td><td>How do you go to school?</td></tr>
+<tr><td>Pregunta sí/no</td><td>Do / Does</td><td>Do you like music?</td></tr>
+</table>
+</div>
+</section>
+
+</main>
+<footer>
+<strong>English Quest</strong>
+<p>Recurso interactivo de apoyo para gramática básica y formulación de preguntas.</p>
+<p class="small" style="color:#d9e4ec">La propuesta prioriza comunicación, participación y práctica contextualizada antes que la memorización aislada de reglas.</p>
+</footer>
+
+<script>
+let points=0;
+function addPoints(n=1){points+=n;document.getElementById('score').textContent=points}
+function speak(text){if(!('speechSynthesis'in window)){alert('Tu navegador no tiene síntesis de voz disponible.');return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.82;speechSynthesis.speak(u)}
+function q(btn,correct){let f=btn.parentElement.querySelector('.feedback');if(correct){f.textContent='✓ Correct!';f.className='feedback good';btn.parentElement.dataset.done='1';addPoints()}else{f.textContent='✗ Try again!';f.className='feedback bad'}}
+let build=[];
+function addWord(w){if(build.length<4){build.push(w);document.getElementById('build1').textContent=build.join(' ');}}
+function resetBuild(){build=[];document.getElementById('build1').textContent='';document.getElementById('buildFeedback').textContent=''}
+function checkBuild(){let f=document.getElementById('buildFeedback');if(build.join(' ')==='Do you like animals?'){f.textContent='✓ Perfect question!';f.className='feedback good';addPoints(2)}else{f.textContent='✗ Check the word order.';f.className='feedback bad'}}
+const qs=['What do you like?','Do you like animals?','Where do you live?','What is your favourite animal?','How do you go to school?','When do you wake up?','Does she like music?','Why do you like football?'];
+function randomQuestion(){document.getElementById('randomQuestion').textContent=qs[Math.floor(Math.random()*qs.length)]}
+function checkFree(){let s=document.getElementById('freeQ').value.trim();let f=document.getElementById('freeFeedback');if(!s){f.textContent='Escribe una pregunta primero.';return}let ok=/^(Do|Does|What|Where|When|Who|Why|How|Is|Are|Am)\b/i.test(s)&&s.endsWith('?');if(ok){f.textContent='✓ Buena señal: empieza con una estructura interrogativa y termina con ?';f.className='feedback good';addPoints(2)}else{f.textContent='✗ Revisa el inicio: prueba con What, Where, When, Who, Why, How, Do, Does, Is o Are.';f.className='feedback bad'}}
+</script>
+</body>
+</html>

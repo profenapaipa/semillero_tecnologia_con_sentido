@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZocaLab</title>
+
+  <!--
+    ============================================
+    REDIRECCIÓN PERMANENTE A bosque.html
+
+    inicio.html fue la pantalla temporal que se usó
+    mientras el bosque estaba en construcción. Ahora
+    que pages/bosque.html existe, este archivo solo
+    reenvía allí.
+
+    Se conserva para que cualquier enlace antiguo a
+    inicio.html (un favorito del navegador, una
+    pestaña abierta, el historial) siga funcionando
+    en vez de dar "Cannot GET".
+    ============================================
+  -->
+  <meta http-equiv="refresh" content="0; url=bosque.html">
+  <link rel="canonical" href="bosque.html">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #F2EDE0;
+      font-family: 'Nunito', 'Segoe UI', sans-serif;
+      color: #1B5E3B;
+      font-weight: 700;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <span aria-hidden="true">🌳</span>
+  <span>Llevándote a tu bosque…</span>
+  <noscript>
+    <a href="bosque.html" style="color:#1B5E3B">Entrar a mi bosque</a>
+  </noscript>
+
+  <script>
+    // replace() en lugar de href: así el botón "atrás" del
+    // navegador no queda atrapado en un bucle de redirección.
+    window.location.replace('bosque.html');
+  </script>
+
+</body>
+</html>

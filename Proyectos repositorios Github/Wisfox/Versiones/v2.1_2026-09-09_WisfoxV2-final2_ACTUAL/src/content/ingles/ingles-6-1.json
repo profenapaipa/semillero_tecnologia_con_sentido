@@ -1,0 +1,282 @@
+{
+  "id": "ingles-6-1",
+  "materia": "ingles",
+  "grado": "6",
+  "grado_nombre": "Sexto",
+  "periodo": 1,
+  "periodo_label": { "es": "Periodo I", "en": "Term I" },
+  "titulo": "This Is Me: School Life and Daily Routines",
+  "titulo_es": "Este soy yo: vida escolar y rutinas diarias",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Comprendo información personal que dan mis compañeros y mi profesor. Identifico elementos culturales como nombres propios y lugares en textos sencillos. Leo y entiendo textos auténticos sencillos sobre hechos concretos asociados a tradiciones culturales que conozco.",
+  "competencias": "Leer y escribir textos cortos con Wh- questions y demostrativos; crear oraciones y diálogos simples con saludos y rutinas en presente simple; hablar y escuchar para pedir y dar información específica sobre personas, lugares y actividades.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "All About Me Lap Book",
+    "descripcion_es": "Cada estudiante arma un lap book (cuadernillo desplegable) con secciones: mi información personal, mi apariencia, mi rutina diaria en presente simple, mis amigos y datos curiosos sobre mí.",
+    "descripcion_en": "Each student builds a lap book with sections: my personal information, my appearance, my daily routine in simple present, my friends and fun facts about me."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-6-1-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Verbo to be",
+      "t_en": "Verb to be",
+      "d": "12 min",
+      "content_es": "<h4>El verbo más usado del inglés</h4><p><b>To be</b> significa <i>ser</i> y <i>estar</i>. Cambia según la persona: <b>I am</b>, <b>you are</b>, <b>he/she/it is</b>, <b>we/you/they are</b>.</p><h4>Las tres formas</h4><ul><li>Afirmativa: <i>I am a student.</i> (I'm)</li><li>Negativa: <i>She is not tired.</i> (isn't)</li><li>Interrogativa: <i>Are you ready?</i> — se invierte el orden.</li></ul><h4>Cuidado</h4><p>En español decimos «tengo 12 años», pero en inglés se usa to be: <b>I am 12 years old</b>, nunca <i>I have 12 years</i>.</p>",
+      "content_en": "<h4>The most used verb in English</h4><p><b>To be</b> works as both <i>ser</i> and <i>estar</i> in Spanish. It changes with the person: <b>I am</b>, <b>you are</b>, <b>he/she/it is</b>, <b>we/you/they are</b>.</p><h4>The three forms</h4><ul><li>Affirmative: <i>I am a student.</i> (I'm)</li><li>Negative: <i>She is not tired.</i> (isn't)</li><li>Question: <i>Are you ready?</i> — the order is inverted.</li></ul><h4>Watch out</h4><p>Age uses to be, not have: <b>I am 12 years old</b>, never <i>I have 12 years</i>.</p>",
+      "fichas": [
+        { "t": "I am", "d": "Yo soy / yo estoy. Contracción: I'm.", "d_en": "First person singular of to be. Contraction: I'm." },
+        { "t": "He / She / It is", "d": "Tercera persona singular: is. Contracción: he's, she's, it's.", "d_en": "Third person singular: is. Contraction: he's, she's, it's." },
+        { "t": "isn't / aren't", "d": "Negaciones contraídas de is not y are not.", "d_en": "Contracted negatives of is not and are not." },
+        { "t": "Are you…?", "d": "Pregunta con to be: el verbo va antes del sujeto.", "d_en": "Question with to be: the verb goes before the subject." },
+        { "t": "I am 12 years old", "d": "La edad se dice con to be, no con have.", "d_en": "Age is expressed with to be, not with have." }
+      ],
+      "quiz": [
+        { "q": "Completa: «My sister ___ twelve years old.»", "q_en": "Complete: \"My sister ___ twelve years old.\"", "o": ["am", "is", "are", "be"], "o_en": ["am", "is", "are", "be"], "a": 1, "why": "My sister es tercera persona singular, así que usa is.", "why_en": "My sister is third person singular, so it takes is." },
+        { "q": "¿Cuál es la forma negativa correcta de «They are late»?", "q_en": "Which is the correct negative form of \"They are late\"?", "o": ["They aren't late", "They don't late", "They isn't late", "They not are late"], "o_en": ["They aren't late", "They don't late", "They isn't late", "They not are late"], "a": 0, "why": "Con to be la negación se hace agregando not al verbo: are not / aren't.", "why_en": "With to be you negate by adding not to the verb: are not / aren't." },
+        { "q": "¿Cómo se pregunta «¿Eres colombiano?»?", "q_en": "How do you ask \"Are you Colombian?\"", "o": ["You are Colombian?", "Do you Colombian?", "Are you Colombian?", "Is you Colombian?"], "o_en": ["You are Colombian?", "Do you Colombian?", "Are you Colombian?", "Is you Colombian?"], "a": 2, "why": "En preguntas con to be el verbo se pone antes del sujeto: Are you…?", "why_en": "In to be questions the verb goes before the subject: Are you…?" }
+      ]
+    },
+    {
+      "id": "ingles-6-1-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Pronombres personales (sujeto)",
+      "t_en": "Subject pronouns",
+      "d": "10 min",
+      "content_es": "<h4>¿Para qué sirven?</h4><p>Reemplazan al sujeto para no repetir el nombre: <i>Ana is my friend. <b>She</b> is funny.</i></p><h4>Los siete</h4><ul><li><b>I</b> – yo (siempre en mayúscula)</li><li><b>you</b> – tú / usted / ustedes</li><li><b>he</b> – él · <b>she</b> – ella · <b>it</b> – ello (cosas y animales)</li><li><b>we</b> – nosotros · <b>they</b> – ellos/ellas</li></ul><h4>Regla de oro</h4><p>En inglés el sujeto <b>nunca se omite</b>. No se dice <i>Is my friend</i>, se dice <b>He is my friend</b>.</p>",
+      "content_en": "<h4>What are they for?</h4><p>They replace the subject so you don't repeat the name: <i>Ana is my friend. <b>She</b> is funny.</i></p><h4>The seven</h4><ul><li><b>I</b> – always capitalized</li><li><b>you</b> – singular and plural</li><li><b>he</b> · <b>she</b> · <b>it</b> (things and animals)</li><li><b>we</b> · <b>they</b></li></ul><h4>Golden rule</h4><p>English <b>never drops the subject</b>. Not <i>Is my friend</i>, but <b>He is my friend</b>.</p>",
+      "fichas": [
+        { "t": "I", "d": "Yo. Se escribe siempre con mayúscula, vaya donde vaya.", "d_en": "First person singular. Always written with a capital letter." },
+        { "t": "it", "d": "Se usa para cosas, animales y el clima: It is cold.", "d_en": "Used for things, animals and the weather: It is cold." },
+        { "t": "they", "d": "Ellos o ellas, para personas y también para cosas en plural.", "d_en": "Used for people and also for plural things." },
+        { "t": "Sujeto obligatorio", "d": "El inglés siempre necesita sujeto explícito en la oración.", "d_en": "English always needs an explicit subject in the sentence." }
+      ],
+      "quiz": [
+        { "q": "«Carlos and I go to school.» ¿Qué pronombre reemplaza a «Carlos and I»?", "q_en": "\"Carlos and I go to school.\" Which pronoun replaces \"Carlos and I\"?", "o": ["They", "We", "You", "He"], "o_en": ["They", "We", "You", "He"], "a": 1, "why": "Cuando el hablante se incluye en el grupo, el pronombre es we.", "why_en": "When the speaker is part of the group, the pronoun is we." },
+        { "q": "¿Qué pronombre usamos para «the dog»?", "q_en": "Which pronoun do we use for \"the dog\"?", "o": ["he", "she", "it", "they"], "o_en": ["he", "she", "it", "they"], "a": 2, "why": "Los animales y las cosas en singular toman it.", "why_en": "Singular animals and things take it." },
+        { "q": "¿Cuál oración está bien escrita?", "q_en": "Which sentence is correct?", "o": ["Is my teacher.", "She is my teacher.", "My teacher is she.", "Her is my teacher."], "o_en": ["Is my teacher.", "She is my teacher.", "My teacher is she.", "Her is my teacher."], "a": 1, "why": "El sujeto va primero y no se puede omitir: She is my teacher.", "why_en": "The subject comes first and cannot be dropped: She is my teacher." }
+      ]
+    },
+    {
+      "id": "ingles-6-1-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Adjetivos posesivos",
+      "t_en": "Possessive adjectives",
+      "d": "10 min",
+      "content_es": "<h4>De quién es</h4><p>Van <b>antes del sustantivo</b> y dicen a quién pertenece: <i><b>my</b> book</i>, <i><b>her</b> bag</i>.</p><h4>La pareja de cada pronombre</h4><ul><li>I → <b>my</b> · you → <b>your</b> · he → <b>his</b></li><li>she → <b>her</b> · it → <b>its</b></li><li>we → <b>our</b> · they → <b>their</b></li></ul><h4>El error clásico</h4><p><b>its</b> (su, de ello) no lleva apóstrofe. <b>it's</b> con apóstrofe significa <i>it is</i>.</p><p>Además, el posesivo <b>no cambia</b> si el objeto es plural: <i>my books</i>, no <i>mys books</i>.</p>",
+      "content_en": "<h4>Showing who owns something</h4><p>They go <b>before the noun</b> and tell who it belongs to: <i><b>my</b> book</i>, <i><b>her</b> bag</i>.</p><h4>The pair for each pronoun</h4><ul><li>I → <b>my</b> · you → <b>your</b> · he → <b>his</b></li><li>she → <b>her</b> · it → <b>its</b></li><li>we → <b>our</b> · they → <b>their</b></li></ul><h4>The classic mistake</h4><p><b>its</b> has no apostrophe. <b>it's</b> with an apostrophe means <i>it is</i>.</p><p>Possessives <b>never take -s</b>: <i>my books</i>, not <i>mys books</i>.</p>",
+      "fichas": [
+        { "t": "my / your", "d": "Mi y tu(s). Van antes del sustantivo: my pencil.", "d_en": "They go before the noun: my pencil, your pencil." },
+        { "t": "his vs her", "d": "his = de él; her = de ella. Depende del dueño, no del objeto.", "d_en": "his = of him; her = of her. It depends on the owner, not the object." },
+        { "t": "its vs it's", "d": "its = su (de ello). it's = it is.", "d_en": "its = possessive. it's = it is." },
+        { "t": "our / their", "d": "Nuestro y de ellos: our school, their books.", "d_en": "our school, their books." }
+      ],
+      "quiz": [
+        { "q": "«Sofía lost ___ notebook.» ¿Qué falta?", "q_en": "\"Sofía lost ___ notebook.\" What is missing?", "o": ["his", "her", "she", "hers"], "o_en": ["his", "her", "she", "hers"], "a": 1, "why": "El dueño es Sofía, mujer, así que el posesivo es her.", "why_en": "The owner is Sofía, so the possessive is her." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["Their are my friends", "They're books are new", "Our classroom is big", "Ours classroom is big"], "o_en": ["Their are my friends", "They're books are new", "Our classroom is big", "Ours classroom is big"], "a": 2, "why": "Our es el adjetivo posesivo que acompaña al sustantivo classroom.", "why_en": "Our is the possessive adjective that goes with the noun classroom." },
+        { "q": "«The cat is cleaning ___ paws.»", "q_en": "\"The cat is cleaning ___ paws.\"", "o": ["it's", "its", "his", "her"], "o_en": ["it's", "its", "his", "her"], "a": 1, "why": "Para un animal usamos its, sin apóstrofe.", "why_en": "For an animal we use its, with no apostrophe." }
+      ]
+    },
+    {
+      "id": "ingles-6-1-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Presente simple: afirmativo",
+      "t_en": "Simple present: affirmative",
+      "d": "12 min",
+      "content_es": "<h4>¿Cuándo se usa?</h4><p>Para hábitos, rutinas y verdades generales: <i>I study English every day.</i></p><h4>La -s de la tercera persona</h4><p>Con <b>he, she, it</b> el verbo lleva <b>-s</b>: <i>She play<b>s</b> soccer.</i></p><ul><li>Verbos en -ch, -sh, -ss, -x, -o → <b>-es</b>: watch → watche<b>s</b>, go → goe<b>s</b></li><li>Consonante + y → <b>-ies</b>: study → stud<b>ies</b></li><li>have → <b>has</b> (irregular)</li></ul><h4>Palabras que lo acompañan</h4><p>every day, always, usually, on Mondays, in the morning.</p>",
+      "content_en": "<h4>When do we use it?</h4><p>For habits, routines and general truths: <i>I study English every day.</i></p><h4>The third person -s</h4><p>With <b>he, she, it</b> the verb takes <b>-s</b>: <i>She play<b>s</b> soccer.</i></p><ul><li>Verbs ending in -ch, -sh, -ss, -x, -o → <b>-es</b>: watch → watche<b>s</b>, go → goe<b>s</b></li><li>Consonant + y → <b>-ies</b>: study → stud<b>ies</b></li><li>have → <b>has</b> (irregular)</li></ul><h4>Signal words</h4><p>every day, always, usually, on Mondays, in the morning.</p>",
+      "fichas": [
+        { "t": "-s en he/she/it", "d": "Solo la tercera persona singular lleva -s en presente simple.", "d_en": "Only third person singular takes -s in the simple present." },
+        { "t": "study → studies", "d": "Consonante + y se convierte en -ies.", "d_en": "Consonant + y becomes -ies." },
+        { "t": "go → goes / watch → watches", "d": "Verbos en -o, -ch, -sh, -ss, -x agregan -es.", "d_en": "Verbs ending in -o, -ch, -sh, -ss, -x add -es." },
+        { "t": "have → has", "d": "Único verbo totalmente irregular en la tercera persona.", "d_en": "The only fully irregular verb in the third person." },
+        { "t": "every day", "d": "Expresión típica del presente simple: todos los días.", "d_en": "Typical simple present time expression." }
+      ],
+      "quiz": [
+        { "q": "«My brother ___ TV after lunch.»", "q_en": "\"My brother ___ TV after lunch.\"", "o": ["watch", "watchs", "watches", "watching"], "o_en": ["watch", "watchs", "watches", "watching"], "a": 2, "why": "Watch termina en -ch, así que en tercera persona agrega -es.", "why_en": "Watch ends in -ch, so the third person adds -es." },
+        { "q": "«They ___ in Bogotá.»", "q_en": "\"They ___ in Bogotá.\"", "o": ["lives", "live", "living", "lifes"], "o_en": ["lives", "live", "living", "lifes"], "a": 1, "why": "They es plural: el verbo va sin -s.", "why_en": "They is plural: the verb takes no -s." },
+        { "q": "¿Cuál es la tercera persona de «study»?", "q_en": "What is the third person of \"study\"?", "o": ["studys", "studies", "studyes", "studing"], "o_en": ["studys", "studies", "studyes", "studing"], "a": 1, "why": "Consonante + y → se cambia la y por -ies.", "why_en": "Consonant + y → change the y to -ies." }
+      ]
+    },
+    {
+      "id": "ingles-6-1-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "Presente simple: negativo e interrogativo",
+      "t_en": "Simple present: negative and interrogative",
+      "d": "12 min",
+      "content_es": "<h4>El ayudante do / does</h4><p>Para negar y preguntar en presente simple usamos <b>do</b> (I, you, we, they) y <b>does</b> (he, she, it).</p><h4>Negación</h4><ul><li><i>I <b>don't</b> like fish.</i></li><li><i>He <b>doesn't</b> like fish.</i></li></ul><h4>Pregunta</h4><ul><li><i><b>Do</b> you play chess?</i> → Yes, I do. / No, I don't.</li><li><i><b>Does</b> she play chess?</i> → Yes, she does. / No, she doesn't.</li></ul><h4>Clave</h4><p>Cuando aparece <b>does</b>, el verbo principal <b>pierde la -s</b>: <i>Does he play?</i>, no <i>Does he plays?</i></p>",
+      "content_en": "<h4>The helper do / does</h4><p>To make negatives and questions in the simple present we use <b>do</b> (I, you, we, they) and <b>does</b> (he, she, it).</p><h4>Negative</h4><ul><li><i>I <b>don't</b> like fish.</i></li><li><i>He <b>doesn't</b> like fish.</i></li></ul><h4>Question</h4><ul><li><i><b>Do</b> you play chess?</i> → Yes, I do. / No, I don't.</li><li><i><b>Does</b> she play chess?</i> → Yes, she does. / No, she doesn't.</li></ul><h4>Key point</h4><p>When <b>does</b> appears, the main verb <b>loses the -s</b>: <i>Does he play?</i>, not <i>Does he plays?</i></p>",
+      "fichas": [
+        { "t": "don't / doesn't", "d": "Negación del presente simple: do not y does not.", "d_en": "Simple present negatives: do not and does not." },
+        { "t": "Does he play?", "d": "Con does el verbo principal va sin -s.", "d_en": "With does the main verb takes no -s." },
+        { "t": "Short answers", "d": "Yes, I do. / No, she doesn't. Nunca se repite el verbo principal.", "d_en": "Yes, I do. / No, she doesn't. The main verb is never repeated." },
+        { "t": "Orden de la pregunta", "d": "Do/Does + sujeto + verbo base + complemento.", "d_en": "Do/Does + subject + base verb + complement." }
+      ],
+      "quiz": [
+        { "q": "«___ your sister speak English?»", "q_en": "\"___ your sister speak English?\"", "o": ["Do", "Does", "Is", "Are"], "o_en": ["Do", "Does", "Is", "Are"], "a": 1, "why": "Your sister es he/she/it, así que la pregunta empieza con Does.", "why_en": "Your sister is third person singular, so the question starts with Does." },
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["He doesn't likes math", "He don't like math", "He doesn't like math", "He not like math"], "o_en": ["He doesn't likes math", "He don't like math", "He doesn't like math", "He not like math"], "a": 2, "why": "Doesn't ya marca la tercera persona; el verbo queda en forma base.", "why_en": "Doesn't already carries the third person; the verb stays in base form." },
+        { "q": "Respuesta corta a «Do you live here?»", "q_en": "Short answer to \"Do you live here?\"", "o": ["Yes, I live", "Yes, I am", "Yes, I do", "Yes, I does"], "o_en": ["Yes, I live", "Yes, I am", "Yes, I do", "Yes, I does"], "a": 2, "why": "La respuesta corta repite el auxiliar: Yes, I do.", "why_en": "The short answer repeats the auxiliary: Yes, I do." }
+      ]
+    },
+    {
+      "id": "ingles-6-1-6",
+      "num": 6,
+      "tipo": "grammar",
+      "t": "There is / There are",
+      "t_en": "There is / There are",
+      "d": "10 min",
+      "content_es": "<h4>Para decir qué hay</h4><p><b>There is</b> + singular · <b>There are</b> + plural.</p><ul><li><i>There is a board in the classroom.</i></li><li><i>There are 30 students.</i></li></ul><h4>Negativo y pregunta</h4><ul><li><i>There isn't a computer.</i> / <i>There aren't any maps.</i></li><li><i>Is there a library?</i> → Yes, there is. / No, there isn't.</li><li><i>Are there any windows?</i> → Yes, there are.</li></ul><h4>Truco</h4><p>El verbo concuerda con lo que viene <b>después</b>: <i>There is a pencil and two books</i> (mira el primer elemento).</p>",
+      "content_en": "<h4>Saying what exists</h4><p><b>There is</b> + singular · <b>There are</b> + plural.</p><ul><li><i>There is a board in the classroom.</i></li><li><i>There are 30 students.</i></li></ul><h4>Negative and question</h4><ul><li><i>There isn't a computer.</i> / <i>There aren't any maps.</i></li><li><i>Is there a library?</i> → Yes, there is. / No, there isn't.</li><li><i>Are there any windows?</i> → Yes, there are.</li></ul><h4>Tip</h4><p>The verb agrees with what comes <b>next</b>: <i>There is a pencil and two books</i>.</p>",
+      "fichas": [
+        { "t": "There is", "d": "Hay (singular): There is a chair.", "d_en": "Used with singular nouns: There is a chair." },
+        { "t": "There are", "d": "Hay (plural): There are two chairs.", "d_en": "Used with plural nouns: There are two chairs." },
+        { "t": "Is there…? / Are there…?", "d": "Preguntas: se invierte there y el verbo.", "d_en": "Questions: there and the verb swap places." },
+        { "t": "There aren't any…", "d": "Negación en plural, normalmente con any.", "d_en": "Plural negative, usually with any." }
+      ],
+      "quiz": [
+        { "q": "«___ four windows in my classroom.»", "q_en": "\"___ four windows in my classroom.\"", "o": ["There is", "There are", "It is", "They are"], "o_en": ["There is", "There are", "It is", "They are"], "a": 1, "why": "Four windows es plural, así que se usa There are.", "why_en": "Four windows is plural, so we use There are." },
+        { "q": "¿Cómo se pregunta si hay una biblioteca?", "q_en": "How do you ask if there is a library?", "o": ["There is a library?", "Is there a library?", "Are there a library?", "Has there a library?"], "o_en": ["There is a library?", "Is there a library?", "Are there a library?", "Has there a library?"], "a": 1, "why": "En la pregunta el verbo is se pone antes de there.", "why_en": "In the question the verb is goes before there." },
+        { "q": "«There ___ a teacher and two students.»", "q_en": "\"There ___ a teacher and two students.\"", "o": ["is", "are", "am", "be"], "o_en": ["is", "are", "am", "be"], "a": 0, "why": "El verbo concuerda con el primer elemento de la lista: a teacher.", "why_en": "The verb agrees with the first item in the list: a teacher." }
+      ]
+    },
+    {
+      "id": "ingles-6-1-7",
+      "num": 7,
+      "tipo": "grammar",
+      "t": "Wh- questions",
+      "t_en": "Wh- questions",
+      "d": "12 min",
+      "content_es": "<h4>Preguntas de información</h4><p>No se responden con sí o no: piden un dato.</p><ul><li><b>What</b> – qué · <b>Who</b> – quién · <b>Where</b> – dónde</li><li><b>When</b> – cuándo · <b>Why</b> – por qué · <b>How</b> – cómo</li></ul><h4>El orden</h4><p><b>Wh- + auxiliar + sujeto + verbo</b>: <i>Where <b>do</b> you live?</i> · <i>What <b>does</b> she study?</i></p><p>Con to be no hay auxiliar: <i>Who <b>is</b> your teacher?</i></p><h4>Demostrativos que suelen acompañarlas</h4><p><b>this</b> / <b>that</b> (singular), <b>these</b> / <b>those</b> (plural): <i>What is this? What are those?</i></p>",
+      "content_en": "<h4>Information questions</h4><p>They are not answered with yes or no: they ask for a piece of information.</p><ul><li><b>What</b> · <b>Who</b> · <b>Where</b></li><li><b>When</b> · <b>Why</b> · <b>How</b></li></ul><h4>The order</h4><p><b>Wh- + auxiliary + subject + verb</b>: <i>Where <b>do</b> you live?</i> · <i>What <b>does</b> she study?</i></p><p>With to be there is no auxiliary: <i>Who <b>is</b> your teacher?</i></p><h4>Demonstratives that go with them</h4><p><b>this</b> / <b>that</b> (singular), <b>these</b> / <b>those</b> (plural): <i>What is this? What are those?</i></p>",
+      "fichas": [
+        { "t": "What / Who / Where", "d": "Qué, quién, dónde. Abren preguntas de información.", "d_en": "They open information questions." },
+        { "t": "When / Why / How", "d": "Cuándo, por qué, cómo.", "d_en": "Time, reason and manner questions." },
+        { "t": "Wh- + do/does + sujeto + verbo", "d": "Orden fijo de la pregunta en presente simple.", "d_en": "Fixed word order for simple present questions." },
+        { "t": "this / that / these / those", "d": "Demostrativos: cerca/lejos, singular/plural.", "d_en": "Demonstratives: near/far, singular/plural." }
+      ],
+      "quiz": [
+        { "q": "«___ do you go to school?» — «By bus.»", "q_en": "\"___ do you go to school?\" — \"By bus.\"", "o": ["What", "Where", "How", "Who"], "o_en": ["What", "Where", "How", "Who"], "a": 2, "why": "By bus responde al modo, y el modo se pregunta con How.", "why_en": "By bus answers manner, and manner is asked with How." },
+        { "q": "¿Cuál pregunta está bien formada?", "q_en": "Which question is well formed?", "o": ["Where you live?", "Where do you live?", "Where does you live?", "Where live you?"], "o_en": ["Where you live?", "Where do you live?", "Where does you live?", "Where live you?"], "a": 1, "why": "Wh- + auxiliar do + sujeto + verbo base.", "why_en": "Wh- + auxiliary do + subject + base verb." },
+        { "q": "«___ are those?» — «They are my books.»", "q_en": "\"___ are those?\" — \"They are my books.\"", "o": ["What", "Who", "When", "Why"], "o_en": ["What", "Who", "When", "Why"], "a": 0, "why": "Se pregunta por cosas, así que se usa What con el plural those.", "why_en": "We are asking about things, so we use What with the plural those." }
+      ]
+    },
+    {
+      "id": "ingles-6-1-8",
+      "num": 8,
+      "tipo": "vocabulary",
+      "t": "Saludos, fechas y comandos de clase",
+      "t_en": "Greetings, dates and classroom commands",
+      "d": "10 min",
+      "content_es": "<h4>Saludos y despedidas</h4><p>Formales: <i>Good morning / Good afternoon / Good evening</i>. Informales: <i>Hi! Hello! What's up?</i> Al despedirse: <i>Goodbye, See you later, Have a nice day.</i></p><h4>La fecha</h4><p>Se dice con número ordinal: <i>March 5th, 2026</i> → <i>March the fifth</i>. Días y meses van <b>siempre en mayúscula</b>: <i>Monday, July</i>.</p><h4>Comandos de clase</h4><ul><li><i>Open your book / Close the door</i></li><li><i>Listen and repeat / Raise your hand</i></li><li><i>Work in pairs / Be quiet, please</i></li></ul>",
+      "content_en": "<h4>Greetings and farewells</h4><p>Formal: <i>Good morning / Good afternoon / Good evening</i>. Informal: <i>Hi! Hello! What's up?</i> Saying goodbye: <i>Goodbye, See you later, Have a nice day.</i></p><h4>The date</h4><p>It uses an ordinal number: <i>March 5th, 2026</i> → <i>March the fifth</i>. Days and months are <b>always capitalized</b>: <i>Monday, July</i>.</p><h4>Classroom commands</h4><ul><li><i>Open your book / Close the door</i></li><li><i>Listen and repeat / Raise your hand</i></li><li><i>Work in pairs / Be quiet, please</i></li></ul>",
+      "fichas": [
+        { "t": "Good morning / afternoon / evening", "d": "Saludos formales según la hora del día.", "d_en": "Formal greetings depending on the time of day." },
+        { "t": "See you later", "d": "Despedida informal: nos vemos luego.", "d_en": "Informal farewell." },
+        { "t": "Monday, July", "d": "Días y meses siempre con mayúscula inicial en inglés.", "d_en": "Days and months are always capitalized in English." },
+        { "t": "Raise your hand", "d": "Levanta la mano: comando típico de clase.", "d_en": "A typical classroom command." },
+        { "t": "March 5th", "d": "La fecha usa número ordinal: the fifth.", "d_en": "The date uses an ordinal number: the fifth." }
+      ],
+      "quiz": [
+        { "q": "Son las 8 de la mañana. ¿Cómo saludas formalmente?", "q_en": "It is 8 a.m. How do you greet someone formally?", "o": ["Good night", "Good morning", "Good evening", "Good afternoon"], "o_en": ["Good night", "Good morning", "Good evening", "Good afternoon"], "a": 1, "why": "Good morning se usa desde el amanecer hasta el mediodía.", "why_en": "Good morning is used from sunrise until noon." },
+        { "q": "¿Cuál fecha está bien escrita en inglés?", "q_en": "Which date is correctly written in English?", "o": ["5 of march", "march 5th", "March 5th", "March five"], "o_en": ["5 of march", "march 5th", "March 5th", "March five"], "a": 2, "why": "El mes va en mayúscula y el día en ordinal: March 5th.", "why_en": "The month is capitalized and the day is ordinal: March 5th." },
+        { "q": "¿Qué significa «Work in pairs»?", "q_en": "What does \"Work in pairs\" mean?", "o": ["Trabajen solos", "Trabajen en parejas", "Trabajen rápido", "Guarden silencio"], "o_en": ["Work alone", "Work in twos", "Work fast", "Keep quiet"], "a": 1, "why": "Pair significa pareja: trabajar de a dos.", "why_en": "Pair means two people working together." }
+      ]
+    },
+    {
+      "id": "ingles-6-1-9",
+      "num": 9,
+      "tipo": "vocabulary",
+      "t": "Las asignaturas del colegio",
+      "t_en": "School subjects",
+      "d": "8 min",
+      "content_es": "<h4>Materias</h4><ul><li><b>Math</b> – matemáticas · <b>Science</b> – ciencias · <b>Biology</b> – biología</li><li><b>History</b> – historia · <b>Geography</b> – geografía · <b>Spanish</b> – español</li><li><b>English</b> – inglés · <b>Art</b> – artes · <b>P.E.</b> (Physical Education) – educación física</li><li><b>Music</b> – música · <b>Computer Science</b> – informática</li></ul><h4>Cómo hablar de ellas</h4><p><i>My favorite subject is Art.</i> · <i>I have English on Mondays and Wednesdays.</i> · <i>I'm good at Math.</i></p><p>Los nombres de las materias que son idiomas o países van con mayúscula: <b>English, Spanish, French</b>.</p>",
+      "content_en": "<h4>Subjects</h4><ul><li><b>Math</b> · <b>Science</b> · <b>Biology</b></li><li><b>History</b> · <b>Geography</b> · <b>Spanish</b></li><li><b>English</b> · <b>Art</b> · <b>P.E.</b> (Physical Education)</li><li><b>Music</b> · <b>Computer Science</b></li></ul><h4>How to talk about them</h4><p><i>My favorite subject is Art.</i> · <i>I have English on Mondays and Wednesdays.</i> · <i>I'm good at Math.</i></p><p>Subjects that are languages or countries are capitalized: <b>English, Spanish, French</b>.</p>",
+      "fichas": [
+        { "t": "P.E.", "d": "Physical Education: educación física.", "d_en": "Physical Education." },
+        { "t": "My favorite subject is…", "d": "Estructura para decir cuál es tu materia preferida.", "d_en": "Structure to say which subject you prefer." },
+        { "t": "I'm good at…", "d": "Soy bueno en… Se usa con la materia: I'm good at Science.", "d_en": "Used with a subject: I'm good at Science." },
+        { "t": "on Mondays", "d": "Los lunes. Días en plural para hablar de rutina.", "d_en": "Plural days to talk about a routine." }
+      ],
+      "quiz": [
+        { "q": "¿Qué materia es «P.E.»?", "q_en": "Which subject is \"P.E.\"?", "o": ["Educación física", "Programación", "Física", "Preescolar"], "o_en": ["Physical Education", "Programming", "Physics", "Preschool"], "a": 0, "why": "P.E. es la sigla de Physical Education.", "why_en": "P.E. stands for Physical Education." },
+        { "q": "Completa: «I'm good ___ Math.»", "q_en": "Complete: \"I'm good ___ Math.\"", "o": ["in", "at", "on", "with"], "o_en": ["in", "at", "on", "with"], "a": 1, "why": "La expresión fija es to be good at something.", "why_en": "The fixed expression is to be good at something." },
+        { "q": "¿Cuál está escrita correctamente?", "q_en": "Which one is correctly written?", "o": ["I study english", "I study English", "I study The English", "i study English"], "o_en": ["I study english", "I study English", "I study The English", "i study English"], "a": 1, "why": "Los idiomas siempre llevan mayúscula inicial.", "why_en": "Languages are always capitalized." }
+      ]
+    },
+    {
+      "id": "ingles-6-1-10",
+      "num": 10,
+      "tipo": "vocabulary",
+      "t": "La familia",
+      "t_en": "Family",
+      "d": "10 min",
+      "content_es": "<h4>Miembros de la familia</h4><ul><li><b>mother/mom</b> – mamá · <b>father/dad</b> – papá · <b>parents</b> – padres</li><li><b>sister</b> – hermana · <b>brother</b> – hermano · <b>siblings</b> – hermanos</li><li><b>grandmother</b> – abuela · <b>grandfather</b> – abuelo</li><li><b>aunt</b> – tía · <b>uncle</b> – tío · <b>cousin</b> – primo o prima</li><li><b>son</b> – hijo · <b>daughter</b> – hija</li></ul><h4>Presentarlos</h4><p><i>This is my sister. Her name is Laura. She is 15 years old.</i></p><p>Ojo: <b>cousin</b> sirve para primo y prima; <b>parents</b> son los padres, no los parientes (esos son <i>relatives</i>).</p>",
+      "content_en": "<h4>Family members</h4><ul><li><b>mother/mom</b> · <b>father/dad</b> · <b>parents</b></li><li><b>sister</b> · <b>brother</b> · <b>siblings</b></li><li><b>grandmother</b> · <b>grandfather</b></li><li><b>aunt</b> · <b>uncle</b> · <b>cousin</b></li><li><b>son</b> · <b>daughter</b></li></ul><h4>Introducing them</h4><p><i>This is my sister. Her name is Laura. She is 15 years old.</i></p><p>Careful: <b>cousin</b> is used for both genders; <b>parents</b> means mother and father, while other family members are <i>relatives</i>.</p>",
+      "fichas": [
+        { "t": "parents", "d": "Padres (mamá y papá). No significa parientes.", "d_en": "Mother and father, not relatives in general." },
+        { "t": "siblings", "d": "Hermanos y hermanas en conjunto.", "d_en": "Brothers and sisters together." },
+        { "t": "cousin", "d": "Primo o prima: la misma palabra para ambos.", "d_en": "The same word for male and female." },
+        { "t": "This is my…", "d": "Fórmula para presentar a alguien.", "d_en": "Formula to introduce someone." }
+      ],
+      "quiz": [
+        { "q": "La hermana de mi mamá es mi…", "q_en": "My mother's sister is my…", "o": ["cousin", "aunt", "niece", "grandmother"], "o_en": ["cousin", "aunt", "niece", "grandmother"], "a": 1, "why": "Aunt es tía; cousin es primo o prima.", "why_en": "Aunt is the sister of a parent; cousin is the child of an aunt or uncle." },
+        { "q": "¿Qué significa «siblings»?", "q_en": "What does \"siblings\" mean?", "o": ["Primos", "Abuelos", "Hermanos y hermanas", "Padres"], "o_en": ["Cousins", "Grandparents", "Brothers and sisters", "Parents"], "a": 2, "why": "Siblings agrupa a hermanos y hermanas sin distinguir género.", "why_en": "Siblings covers brothers and sisters without marking gender." },
+        { "q": "«___ is my brother. ___ name is Juan.»", "q_en": "\"___ is my brother. ___ name is Juan.\"", "o": ["This / His", "This / Her", "These / His", "That / Their"], "o_en": ["This / His", "This / Her", "These / His", "That / Their"], "a": 0, "why": "This presenta a una persona cercana y his es el posesivo masculino.", "why_en": "This introduces someone close and his is the masculine possessive." }
+      ]
+    },
+    {
+      "id": "ingles-6-1-11",
+      "num": 11,
+      "tipo": "vocabulary",
+      "t": "Adjetivos y artículos",
+      "t_en": "Adjectives and articles",
+      "d": "10 min",
+      "content_es": "<h4>Adjetivos</h4><p>Describen al sustantivo y en inglés van <b>antes</b> de él: <i>a <b>tall</b> boy</i>, no <i>a boy tall</i>. Además <b>nunca cambian</b>: <i>tall boys</i>, no <i>talls boys</i>.</p><ul><li>Apariencia: tall, short, thin, strong</li><li>Carácter: kind, funny, shy, smart</li><li>Cosas: big, small, new, old, expensive</li></ul><h4>Artículos</h4><ul><li><b>a</b> antes de sonido consonante: <i>a book</i></li><li><b>an</b> antes de sonido vocal: <i>an apple, an hour</i></li><li><b>the</b> cuando ya se sabe de cuál hablamos: <i>the teacher of my class</i></li></ul>",
+      "content_en": "<h4>Adjectives</h4><p>They describe the noun and in English they go <b>before</b> it: <i>a <b>tall</b> boy</i>, not <i>a boy tall</i>. They also <b>never change</b>: <i>tall boys</i>, not <i>talls boys</i>.</p><ul><li>Appearance: tall, short, thin, strong</li><li>Character: kind, funny, shy, smart</li><li>Things: big, small, new, old, expensive</li></ul><h4>Articles</h4><ul><li><b>a</b> before a consonant sound: <i>a book</i></li><li><b>an</b> before a vowel sound: <i>an apple, an hour</i></li><li><b>the</b> when we both know which one: <i>the teacher of my class</i></li></ul>",
+      "fichas": [
+        { "t": "Adjetivo antes del sustantivo", "d": "a red car, no a car red.", "d_en": "a red car, not a car red." },
+        { "t": "Adjetivos invariables", "d": "No tienen plural: two big houses.", "d_en": "They have no plural form: two big houses." },
+        { "t": "a vs an", "d": "an va antes de sonido vocálico: an apple, an hour.", "d_en": "an goes before a vowel sound: an apple, an hour." },
+        { "t": "the", "d": "Artículo definido: algo ya conocido o único.", "d_en": "Definite article: something known or unique." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["a house big", "a big house", "a big houses", "big a house"], "o_en": ["a house big", "a big house", "a big houses", "big a house"], "a": 1, "why": "El adjetivo va antes del sustantivo y en singular con a.", "why_en": "The adjective goes before the noun and stays singular after a." },
+        { "q": "Completa: «I have ___ umbrella.»", "q_en": "Complete: \"I have ___ umbrella.\"", "o": ["a", "an", "the", "any"], "o_en": ["a", "an", "the", "any"], "a": 1, "why": "Umbrella empieza con sonido vocálico, así que lleva an.", "why_en": "Umbrella starts with a vowel sound, so it takes an." },
+        { "q": "¿Cuál adjetivo describe el carácter?", "q_en": "Which adjective describes character?", "o": ["tall", "kind", "old", "red"], "o_en": ["tall", "kind", "old", "red"], "a": 1, "why": "Kind (amable) describe la personalidad, no el aspecto físico.", "why_en": "Kind describes personality, not physical appearance." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-6-1-repaso",
+    "titulo": "Repaso — This Is Me: School Life and Daily Routines",
+    "titulo_en": "Review — This Is Me: School Life and Daily Routines",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Aprendiste a presentarte y a describir tu vida escolar. El motor del periodo es el <b>presente simple</b>: se usa para rutinas y verdades generales, agrega <b>-s</b> en he/she/it y necesita <b>do/does</b> para negar y preguntar.</p><h4>Herramientas</h4><ul><li><b>To be</b> para identidad, edad y estados: I am, you are, he is.</li><li><b>Pronombres</b> (I, you, he…) y <b>posesivos</b> (my, your, his…): el sujeto nunca se omite.</li><li><b>There is / There are</b> para decir qué hay en un lugar.</li><li><b>Wh- questions</b> para pedir información: Wh- + auxiliar + sujeto + verbo.</li></ul><h4>Vocabulario</h4><p>Saludos, fechas y comandos de clase; asignaturas; familia; adjetivos y artículos a/an/the.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>You learned to introduce yourself and describe your school life. The engine of the term is the <b>simple present</b>: it is used for routines and general truths, adds <b>-s</b> with he/she/it, and needs <b>do/does</b> for negatives and questions.</p><h4>Tools</h4><ul><li><b>To be</b> for identity, age and states: I am, you are, he is.</li><li><b>Pronouns</b> (I, you, he…) and <b>possessives</b> (my, your, his…): the subject is never dropped.</li><li><b>There is / There are</b> to say what a place contains.</li><li><b>Wh- questions</b> to ask for information: Wh- + auxiliary + subject + verb.</li></ul><h4>Vocabulary</h4><p>Greetings, dates and classroom commands; school subjects; family; adjectives and the articles a/an/the.</p>",
+    "puntos_clave": [
+      ["La edad se dice con to be: I am 12 years old.", "Age uses to be: I am 12 years old."],
+      ["Solo he/she/it lleva -s en presente simple.", "Only he/she/it takes -s in the simple present."],
+      ["Con do/does el verbo principal vuelve a su forma base.", "With do/does the main verb goes back to its base form."],
+      ["There is + singular, There are + plural.", "There is + singular, There are + plural."],
+      ["El adjetivo va antes del sustantivo y no tiene plural.", "The adjective goes before the noun and has no plural."],
+      ["its = posesivo; it's = it is.", "its = possessive; it's = it is."]
+    ],
+    "preguntas": [
+      { "q": "«My cousins ___ from Cali.»", "q_en": "\"My cousins ___ from Cali.\"", "o": ["is", "am", "are", "be"], "o_en": ["is", "am", "are", "be"], "a": 2, "why": "My cousins es plural: le corresponde are.", "why_en": "My cousins is plural: it takes are." },
+      { "q": "«She ___ breakfast at 6 a.m.»", "q_en": "\"She ___ breakfast at 6 a.m.\"", "o": ["have", "has", "haves", "is have"], "o_en": ["have", "has", "haves", "is have"], "a": 1, "why": "Have es irregular en tercera persona: has.", "why_en": "Have is irregular in the third person: has." },
+      { "q": "«___ they study French?»", "q_en": "\"___ they study French?\"", "o": ["Does", "Do", "Are", "Is"], "o_en": ["Does", "Do", "Are", "Is"], "a": 1, "why": "They usa el auxiliar do.", "why_en": "They takes the auxiliary do." },
+      { "q": "«There ___ any chairs in the room.»", "q_en": "\"There ___ any chairs in the room.\"", "o": ["isn't", "aren't", "not are", "doesn't"], "o_en": ["isn't", "aren't", "not are", "doesn't"], "a": 1, "why": "Chairs es plural, y con any la negación es aren't.", "why_en": "Chairs is plural, and with any the negative is aren't." },
+      { "q": "«___ is your English teacher?»", "q_en": "\"___ is your English teacher?\"", "o": ["What", "Where", "Who", "How"], "o_en": ["What", "Where", "Who", "How"], "a": 2, "why": "Se pregunta por una persona: Who.", "why_en": "We are asking about a person: Who." },
+      { "q": "«Pedro forgot ___ notebook at home.»", "q_en": "\"Pedro forgot ___ notebook at home.\"", "o": ["her", "his", "he", "its"], "o_en": ["her", "his", "he", "its"], "a": 1, "why": "El dueño es Pedro: el posesivo masculino es his.", "why_en": "The owner is Pedro: the masculine possessive is his." },
+      { "q": "¿Cuál oración no tiene errores?", "q_en": "Which sentence has no mistakes?", "o": ["He don't likes science", "He doesn't like science", "He doesn't likes science", "He not like science"], "o_en": ["He don't likes science", "He doesn't like science", "He doesn't likes science", "He not like science"], "a": 1, "why": "Doesn't marca la tercera persona y el verbo queda en base.", "why_en": "Doesn't carries the third person and the verb stays in base form." },
+      { "q": "«I have ___ art class on Fridays.»", "q_en": "\"I have ___ art class on Fridays.\"", "o": ["a", "an", "the", "any"], "o_en": ["a", "an", "the", "any"], "a": 1, "why": "Art empieza con sonido vocálico, así que se usa an.", "why_en": "Art starts with a vowel sound, so it takes an." }
+    ]
+  }
+}

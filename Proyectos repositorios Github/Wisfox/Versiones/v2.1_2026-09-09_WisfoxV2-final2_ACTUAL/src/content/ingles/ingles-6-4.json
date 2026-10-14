@@ -1,0 +1,238 @@
+{
+  "id": "ingles-6-4",
+  "materia": "ingles",
+  "grado": "6",
+  "grado_nombre": "Sexto",
+  "periodo": 4,
+  "periodo_label": { "es": "Periodo IV", "en": "Term IV" },
+  "titulo": "Action Time! Doing Things with Style",
+  "titulo_es": "¡Hora de actuar! Habilidades, acciones y estilo",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Expreso lo que puedo y no puedo hacer, doy instrucciones sencillas y describo acciones que ocurren en el momento. Explico razones con estructuras simples.",
+  "competencias": "Expresar habilidad y permiso con can; dar instrucciones con imperativos; describir acciones en curso con presente progresivo; describir cómo se hace algo con adverbios de modo; justificar con why / because.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Talent Show Poster",
+    "descripcion_es": "Cada estudiante crea el afiche de un show de talentos: presenta lo que puede hacer con can, describe qué está haciendo cada participante en presente progresivo y explica por qué debería ganar.",
+    "descripcion_en": "Each student creates a talent show poster: they present what they can do with can, describe what each participant is doing in the present progressive and explain why they should win."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-6-4-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Can: habilidad y permiso",
+      "t_en": "Can: ability and permission",
+      "d": "12 min",
+      "content_es": "<h4>Qué expresa</h4><ul><li>Habilidad: <i>I <b>can</b> swim.</i></li><li>Permiso: <i><b>Can</b> I go to the bathroom?</i></li><li>Petición: <i><b>Can</b> you help me, please?</i></li></ul><h4>Cómo se usa</h4><p>Es un verbo modal: <b>no cambia nunca</b> (no existe <i>cans</i>) y va seguido del verbo en <b>forma base</b>, sin <i>to</i>.</p><ul><li>Negativo: <b>can't</b> (cannot) — <i>She can't drive.</i></li><li>Pregunta: se invierte — <i>Can he play the guitar?</i></li><li>Respuesta corta: <i>Yes, I can. / No, I can't.</i></li></ul>",
+      "content_en": "<h4>What it expresses</h4><ul><li>Ability: <i>I <b>can</b> swim.</i></li><li>Permission: <i><b>Can</b> I go to the bathroom?</i></li><li>Request: <i><b>Can</b> you help me, please?</i></li></ul><h4>How to use it</h4><p>It is a modal verb: it <b>never changes</b> (there is no <i>cans</i>) and it is followed by the <b>base verb</b>, with no <i>to</i>.</p><ul><li>Negative: <b>can't</b> (cannot) — <i>She can't drive.</i></li><li>Question: invert — <i>Can he play the guitar?</i></li><li>Short answer: <i>Yes, I can. / No, I can't.</i></li></ul>",
+      "fichas": [
+        { "t": "can + verbo base", "d": "Nunca lleva to: I can swim, no I can to swim.", "d_en": "Never takes to: I can swim, not I can to swim." },
+        { "t": "can't", "d": "Negación de can. También se escribe cannot, todo junto.", "d_en": "Negative of can. Also written cannot, in one word." },
+        { "t": "Can I…?", "d": "Pedir permiso de forma educada.", "d_en": "Asking for permission politely." },
+        { "t": "Can no cambia", "d": "No existe cans ni canned en presente: es igual para todos.", "d_en": "There is no cans: the form is the same for every person." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["She cans dance", "She can dances", "She can dance", "She can to dance"], "o_en": ["She cans dance", "She can dances", "She can dance", "She can to dance"], "a": 2, "why": "Can no cambia y va seguido del verbo en forma base.", "why_en": "Can never changes and is followed by the base verb." },
+        { "q": "«___ you repeat that, please?»", "q_en": "\"___ you repeat that, please?\"", "o": ["Do", "Are", "Can", "Does"], "o_en": ["Do", "Are", "Can", "Does"], "a": 2, "why": "Es una petición educada: se usa Can.", "why_en": "It is a polite request: we use Can." },
+        { "q": "Respuesta corta a «Can he cook?» (no puede)", "q_en": "Short answer to \"Can he cook?\" (he cannot)", "o": ["No, he doesn't", "No, he can't", "No, he isn't", "No, he not can"], "o_en": ["No, he doesn't", "No, he can't", "No, he isn't", "No, he not can"], "a": 1, "why": "La respuesta corta repite el modal: No, he can't.", "why_en": "The short answer repeats the modal: No, he can't." }
+      ]
+    },
+    {
+      "id": "ingles-6-4-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Imperativos",
+      "t_en": "Imperatives",
+      "d": "10 min",
+      "content_es": "<h4>Para dar instrucciones</h4><p>Se usa el <b>verbo en forma base</b>, sin sujeto: <i><b>Open</b> the window.</i> · <i><b>Listen</b> carefully.</i></p><h4>Negativo</h4><p>Se antepone <b>don't</b>: <i><b>Don't</b> run in the hallway.</i></p><h4>Dónde aparecen</h4><ul><li>Órdenes de clase: <i>Sit down. Be quiet.</i></li><li>Instrucciones y recetas: <i>Mix the eggs and add the sugar.</i></li><li>Indicaciones de camino: <i>Turn left and go straight.</i></li></ul><h4>Para sonar amable</h4><p>Se agrega <b>please</b> o se usa <i>Let's</i> para incluirse: <i><b>Let's</b> start!</i></p>",
+      "content_en": "<h4>To give instructions</h4><p>Use the <b>base verb</b>, with no subject: <i><b>Open</b> the window.</i> · <i><b>Listen</b> carefully.</i></p><h4>Negative</h4><p>Put <b>don't</b> in front: <i><b>Don't</b> run in the hallway.</i></p><h4>Where they appear</h4><ul><li>Classroom orders: <i>Sit down. Be quiet.</i></li><li>Instructions and recipes: <i>Mix the eggs and add the sugar.</i></li><li>Directions: <i>Turn left and go straight.</i></li></ul><h4>To sound polite</h4><p>Add <b>please</b>, or use <i>Let's</i> to include yourself: <i><b>Let's</b> start!</i></p>",
+      "fichas": [
+        { "t": "Verbo base sin sujeto", "d": "Open the door. No se dice You open the door como orden.", "d_en": "Open the door: the subject is not stated." },
+        { "t": "Don't + verbo", "d": "Imperativo negativo: Don't touch that.", "d_en": "Negative imperative: Don't touch that." },
+        { "t": "Let's + verbo", "d": "Propuesta que incluye al hablante: Let's go.", "d_en": "A suggestion that includes the speaker: Let's go." },
+        { "t": "please", "d": "Suaviza la orden y la vuelve petición.", "d_en": "Softens the order into a request." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál es un imperativo correcto?", "q_en": "Which is a correct imperative?", "o": ["You close the door", "Closing the door", "Close the door", "To close the door"], "o_en": ["You close the door", "Closing the door", "Close the door", "To close the door"], "a": 2, "why": "El imperativo usa el verbo base sin sujeto.", "why_en": "The imperative uses the base verb with no subject." },
+        { "q": "¿Cómo se dice «no corras»?", "q_en": "How do you say a negative order about running?", "o": ["No run", "Don't run", "Not run", "Doesn't run"], "o_en": ["No run", "Don't run", "Not run", "Doesn't run"], "a": 1, "why": "El imperativo negativo se forma con don't + verbo.", "why_en": "The negative imperative is formed with don't + verb." },
+        { "q": "«___ study together tonight!»", "q_en": "\"___ study together tonight!\"", "o": ["Let's", "Lets us", "We let", "Let us to"], "o_en": ["Let's", "Lets us", "We let", "Let us to"], "a": 0, "why": "Let's propone una acción conjunta con el verbo en base.", "why_en": "Let's proposes a joint action with the base verb." }
+      ]
+    },
+    {
+      "id": "ingles-6-4-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Presente progresivo",
+      "t_en": "Present progressive",
+      "d": "14 min",
+      "content_es": "<h4>Acciones en este momento</h4><p>Se forma con <b>to be + verbo-ing</b>: <i>I <b>am studying</b> right now.</i></p><ul><li>Negativo: <i>She <b>isn't</b> sleeping.</i></li><li>Pregunta: <i><b>Are</b> they playing?</i></li></ul><h4>Reglas del -ing</h4><ul><li>General: <i>play → playing</i></li><li>Termina en -e muda: se quita la e — <i>write → writing</i></li><li>Consonante-vocal-consonante corta: se dobla — <i>run → running</i>, <i>swim → swimming</i></li></ul><h4>Diferencia con el presente simple</h4><p><i>I play soccer on Saturdays</i> (rutina) vs. <i>I'm playing soccer now</i> (ahora mismo). Palabras clave: <b>now, at the moment, right now, look!</b></p>",
+      "content_en": "<h4>Actions happening now</h4><p>It is formed with <b>to be + verb-ing</b>: <i>I <b>am studying</b> right now.</i></p><ul><li>Negative: <i>She <b>isn't</b> sleeping.</i></li><li>Question: <i><b>Are</b> they playing?</i></li></ul><h4>-ing rules</h4><ul><li>General: <i>play → playing</i></li><li>Silent -e: drop the e — <i>write → writing</i></li><li>Short consonant-vowel-consonant: double it — <i>run → running</i>, <i>swim → swimming</i></li></ul><h4>Difference from the simple present</h4><p><i>I play soccer on Saturdays</i> (routine) vs. <i>I'm playing soccer now</i> (at this moment). Signal words: <b>now, at the moment, right now, look!</b></p>",
+      "fichas": [
+        { "t": "to be + verbo-ing", "d": "Estructura del presente progresivo: I am reading.", "d_en": "Structure of the present progressive: I am reading." },
+        { "t": "write → writing", "d": "Los verbos con -e muda pierden la e antes de -ing.", "d_en": "Verbs with a silent -e drop it before -ing." },
+        { "t": "run → running", "d": "Se dobla la consonante final en verbos cortos.", "d_en": "The final consonant doubles in short verbs." },
+        { "t": "now / right now", "d": "Palabras que anuncian el presente progresivo.", "d_en": "Words that signal the present progressive." },
+        { "t": "Simple vs progresivo", "d": "Rutina = simple; acción de este momento = progresivo.", "d_en": "Routine = simple; action right now = progressive." }
+      ],
+      "quiz": [
+        { "q": "«Look! The baby ___.»", "q_en": "\"Look! The baby ___.\"", "o": ["sleeps", "is sleeping", "sleep", "sleeping"], "o_en": ["sleeps", "is sleeping", "sleep", "sleeping"], "a": 1, "why": "Look! indica una acción que ocurre ahora: presente progresivo.", "why_en": "Look! signals an action happening now: present progressive." },
+        { "q": "El -ing de «run» es…", "q_en": "The -ing form of \"run\" is…", "o": ["runing", "running", "runnning", "runing g"], "o_en": ["runing", "running", "runnning", "runing g"], "a": 1, "why": "Se dobla la n final por ser consonante-vocal-consonante corta.", "why_en": "The final n doubles because it is a short consonant-vowel-consonant verb." },
+        { "q": "«I ___ soccer every Sunday.»", "q_en": "\"I ___ soccer every Sunday.\"", "o": ["am playing", "play", "playing", "plays"], "o_en": ["am playing", "play", "playing", "plays"], "a": 1, "why": "Every Sunday indica rutina: presente simple.", "why_en": "Every Sunday signals a routine: simple present." }
+      ]
+    },
+    {
+      "id": "ingles-6-4-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Adverbios de modo",
+      "t_en": "Adverbs of manner",
+      "d": "10 min",
+      "content_es": "<h4>Cómo se hace algo</h4><p>Se forman agregando <b>-ly</b> al adjetivo: <i>slow → slowly</i>, <i>careful → carefully</i>, <i>quick → quickly</i>.</p><h4>Reglas de escritura</h4><ul><li>Consonante + y → <b>-ily</b>: <i>happy → happily</i></li><li>Termina en -le → <b>-ly</b> reemplaza la e: <i>simple → simply</i></li></ul><h4>Irregulares</h4><p><i>good → <b>well</b></i>, <i>fast → <b>fast</b></i>, <i>hard → <b>hard</b></i>.</p><h4>Dónde van</h4><p>Normalmente después del verbo o al final: <i>She sings <b>beautifully</b>.</i> · <i>He speaks English <b>well</b>.</i></p>",
+      "content_en": "<h4>How something is done</h4><p>They are formed by adding <b>-ly</b> to the adjective: <i>slow → slowly</i>, <i>careful → carefully</i>, <i>quick → quickly</i>.</p><h4>Spelling rules</h4><ul><li>Consonant + y → <b>-ily</b>: <i>happy → happily</i></li><li>Ending in -le → <b>-ly</b> replaces the e: <i>simple → simply</i></li></ul><h4>Irregular ones</h4><p><i>good → <b>well</b></i>, <i>fast → <b>fast</b></i>, <i>hard → <b>hard</b></i>.</p><h4>Where they go</h4><p>Usually after the verb or at the end: <i>She sings <b>beautifully</b>.</i> · <i>He speaks English <b>well</b>.</i></p>",
+      "fichas": [
+        { "t": "-ly", "d": "Terminación típica del adverbio de modo: quickly.", "d_en": "Typical ending of manner adverbs: quickly." },
+        { "t": "good → well", "d": "El adverbio de good es well, no goodly.", "d_en": "The adverb of good is well, not goodly." },
+        { "t": "fast / hard", "d": "Son iguales como adjetivo y como adverbio.", "d_en": "They are the same as adjective and adverb." },
+        { "t": "happy → happily", "d": "Consonante + y se convierte en -ily.", "d_en": "Consonant + y becomes -ily." }
+      ],
+      "quiz": [
+        { "q": "«He drives ___.» (con cuidado)", "q_en": "\"He drives ___.\" (with care)", "o": ["careful", "carefuly", "carefully", "care"], "o_en": ["careful", "carefuly", "carefully", "care"], "a": 2, "why": "El adverbio de careful es carefully, con doble l.", "why_en": "The adverb of careful is carefully, with a double l." },
+        { "q": "«She speaks English very ___.»", "q_en": "\"She speaks English very ___.\"", "o": ["good", "goodly", "well", "welly"], "o_en": ["good", "goodly", "well", "welly"], "a": 2, "why": "El adverbio irregular de good es well.", "why_en": "The irregular adverb of good is well." },
+        { "q": "El adverbio de «happy» es…", "q_en": "The adverb of \"happy\" is…", "o": ["happyly", "happily", "happly", "happy"], "o_en": ["happyly", "happily", "happly", "happy"], "a": 1, "why": "Consonante + y cambia a -ily: happily.", "why_en": "Consonant + y changes to -ily: happily." }
+      ]
+    },
+    {
+      "id": "ingles-6-4-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "Why? / Because…",
+      "t_en": "Why? / Because…",
+      "d": "8 min",
+      "content_es": "<h4>Preguntar la razón</h4><p><i><b>Why</b> do you like soccer?</i> — <i><b>Because</b> it's exciting.</i></p><h4>La estructura</h4><p>La pregunta sigue el orden normal: <b>Why + do/does + sujeto + verbo</b>. La respuesta empieza con <b>because</b> y trae una oración completa (sujeto + verbo).</p><h4>Cuidado</h4><ul><li><b>because</b> va seguido de oración: <i>because I am tired</i>.</li><li><b>because of</b> va seguido de sustantivo: <i>because of the rain</i>.</li></ul><p>Y no se confunda <b>why</b> (por qué) con <b>what for</b> (para qué).</p>",
+      "content_en": "<h4>Asking for a reason</h4><p><i><b>Why</b> do you like soccer?</i> — <i><b>Because</b> it's exciting.</i></p><h4>The structure</h4><p>The question follows the normal order: <b>Why + do/does + subject + verb</b>. The answer starts with <b>because</b> and carries a full clause (subject + verb).</p><h4>Careful</h4><ul><li><b>because</b> is followed by a clause: <i>because I am tired</i>.</li><li><b>because of</b> is followed by a noun: <i>because of the rain</i>.</li></ul>",
+      "fichas": [
+        { "t": "Why…?", "d": "Pregunta la razón de algo.", "d_en": "Asks for the reason for something." },
+        { "t": "because + oración", "d": "because I am tired: sujeto y verbo.", "d_en": "because I am tired: subject and verb." },
+        { "t": "because of + sustantivo", "d": "because of the rain: solo un sustantivo.", "d_en": "because of the rain: just a noun." },
+        { "t": "Orden de la pregunta", "d": "Why + do/does + sujeto + verbo base.", "d_en": "Why + do/does + subject + base verb." }
+      ],
+      "quiz": [
+        { "q": "«___ are you happy?» — «Because it's my birthday.»", "q_en": "\"___ are you happy?\" — \"Because it's my birthday.\"", "o": ["What", "Where", "Why", "How"], "o_en": ["What", "Where", "Why", "How"], "a": 2, "why": "La respuesta da una razón, así que la pregunta es Why.", "why_en": "The answer gives a reason, so the question is Why." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["We stayed home because the rain", "We stayed home because of the rain", "We stayed home because of it rains", "We stayed home for because rain"], "o_en": ["We stayed home because the rain", "We stayed home because of the rain", "We stayed home because of it rains", "We stayed home for because rain"], "a": 1, "why": "Antes de un sustantivo se usa because of.", "why_en": "Before a noun we use because of." },
+        { "q": "«Why ___ she study so much?»", "q_en": "\"Why ___ she study so much?\"", "o": ["do", "does", "is", "are"], "o_en": ["do", "does", "is", "are"], "a": 1, "why": "She es tercera persona: el auxiliar es does.", "why_en": "She is third person: the auxiliary is does." }
+      ]
+    },
+    {
+      "id": "ingles-6-4-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "El alfabeto y el deletreo",
+      "t_en": "The alphabet and spelling",
+      "d": "10 min",
+      "content_es": "<h4>26 letras</h4><p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z.</p><h4>Las que más cuestan</h4><ul><li><b>E</b> suena /i/ y <b>I</b> suena /ai/: es el error más común.</li><li><b>G</b> /dʒi/ vs <b>J</b> /dʒei/</li><li><b>Y</b> /wai/ · <b>W</b> «double u» · <b>H</b> /eitʃ/</li></ul><h4>Deletrear</h4><p><i>How do you spell your name?</i> — <i>M-A-R-I-A.</i></p><p>Para letras repetidas se dice <b>double</b>: <i>Anna → A-double N-A.</i></p>",
+      "content_en": "<h4>26 letters</h4><p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z.</p><h4>The tricky ones</h4><ul><li><b>E</b> sounds /i/ and <b>I</b> sounds /ai/: the most common mistake.</li><li><b>G</b> /dʒi/ vs <b>J</b> /dʒei/</li><li><b>Y</b> /wai/ · <b>W</b> \"double u\" · <b>H</b> /eitʃ/</li></ul><h4>Spelling out</h4><p><i>How do you spell your name?</i> — <i>M-A-R-I-A.</i></p><p>For repeated letters we say <b>double</b>: <i>Anna → A-double N-A.</i></p>",
+      "fichas": [
+        { "t": "How do you spell…?", "d": "Pregunta para pedir el deletreo de una palabra.", "d_en": "Question used to ask how a word is spelled." },
+        { "t": "E vs I", "d": "E suena /i/ e I suena /ai/: se confunden con el español.", "d_en": "E sounds /i/ and I sounds /ai/." },
+        { "t": "double", "d": "Para letras repetidas: double L, double N.", "d_en": "Used for repeated letters: double L, double N." },
+        { "t": "W", "d": "Se lee double u, no doble ve.", "d_en": "It is read double u." }
+      ],
+      "quiz": [
+        { "q": "¿Cómo se pregunta el deletreo de una palabra?", "q_en": "How do you ask for the spelling of a word?", "o": ["How do you write it?", "How do you spell it?", "How do you say it?", "What is it?"], "o_en": ["How do you write it?", "How do you spell it?", "How do you say it?", "What is it?"], "a": 1, "why": "Spell es específicamente deletrear letra por letra.", "why_en": "Spell specifically means to say the letters one by one." },
+        { "q": "«Anna» se deletrea…", "q_en": "\"Anna\" is spelled…", "o": ["A-N-A", "A-double N-A", "A-N-N", "double A-N"], "o_en": ["A-N-A", "A-double N-A", "A-N-N", "double A-N"], "a": 1, "why": "Las letras repetidas se agrupan con double.", "why_en": "Repeated letters are grouped with double." },
+        { "q": "¿Cuántas letras tiene el alfabeto inglés?", "q_en": "How many letters does the English alphabet have?", "o": ["24", "25", "26", "27"], "o_en": ["24", "25", "26", "27"], "a": 2, "why": "El alfabeto inglés tiene 26 letras, sin la ñ.", "why_en": "The English alphabet has 26 letters." }
+      ]
+    },
+    {
+      "id": "ingles-6-4-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Deportes",
+      "t_en": "Sports",
+      "d": "10 min",
+      "content_es": "<h4>Deportes comunes</h4><p><b>soccer</b> (fútbol), <b>basketball</b>, <b>volleyball</b>, <b>baseball</b>, <b>tennis</b>, <b>swimming</b>, <b>cycling</b>, <b>running</b>, <b>skating</b>, <b>gymnastics</b>.</p><h4>Los tres verbos</h4><ul><li><b>play</b> + deportes con pelota: <i>play soccer, play tennis</i></li><li><b>go</b> + deportes terminados en -ing: <i>go swimming, go running</i></li><li><b>do</b> + artes marciales y gimnasia: <i>do karate, do gymnastics</i></li></ul><h4>Lugares y personas</h4><p><b>field</b> (cancha), <b>court</b> (cancha de tenis o baloncesto), <b>pool</b> (piscina), <b>team</b>, <b>player</b>, <b>coach</b> (entrenador).</p>",
+      "content_en": "<h4>Common sports</h4><p><b>soccer</b>, <b>basketball</b>, <b>volleyball</b>, <b>baseball</b>, <b>tennis</b>, <b>swimming</b>, <b>cycling</b>, <b>running</b>, <b>skating</b>, <b>gymnastics</b>.</p><h4>The three verbs</h4><ul><li><b>play</b> + ball sports: <i>play soccer, play tennis</i></li><li><b>go</b> + sports ending in -ing: <i>go swimming, go running</i></li><li><b>do</b> + martial arts and gymnastics: <i>do karate, do gymnastics</i></li></ul><h4>Places and people</h4><p><b>field</b>, <b>court</b>, <b>pool</b>, <b>team</b>, <b>player</b>, <b>coach</b>.</p>",
+      "fichas": [
+        { "t": "play + deporte de pelota", "d": "play soccer, play basketball.", "d_en": "play soccer, play basketball." },
+        { "t": "go + -ing", "d": "go swimming, go running, go cycling.", "d_en": "go swimming, go running, go cycling." },
+        { "t": "do + gimnasia o artes marciales", "d": "do gymnastics, do karate.", "d_en": "do gymnastics, do karate." },
+        { "t": "coach", "d": "Entrenador del equipo.", "d_en": "The person who trains the team." }
+      ],
+      "quiz": [
+        { "q": "«I ___ swimming every Saturday.»", "q_en": "\"I ___ swimming every Saturday.\"", "o": ["play", "do", "go", "make"], "o_en": ["play", "do", "go", "make"], "a": 2, "why": "Los deportes en -ing van con go.", "why_en": "Sports ending in -ing take go." },
+        { "q": "«She ___ volleyball on the school team.»", "q_en": "\"She ___ volleyball on the school team.\"", "o": ["goes", "plays", "does", "makes"], "o_en": ["goes", "plays", "does", "makes"], "a": 1, "why": "Los deportes con pelota van con play.", "why_en": "Ball sports take play." },
+        { "q": "¿Qué es un «coach»?", "q_en": "What is a \"coach\"?", "o": ["Un jugador", "Un entrenador", "Una cancha", "Un árbitro"], "o_en": ["A player", "A trainer", "A field", "A referee"], "a": 1, "why": "Coach es quien entrena y dirige al equipo.", "why_en": "A coach trains and leads the team." }
+      ]
+    },
+    {
+      "id": "ingles-6-4-8",
+      "num": 8,
+      "tipo": "vocabulary",
+      "t": "La ropa",
+      "t_en": "Clothes",
+      "d": "10 min",
+      "content_es": "<h4>Prendas</h4><p><b>shirt</b> (camisa), <b>T-shirt</b> (camiseta), <b>pants</b> (pantalón), <b>jeans</b>, <b>shorts</b>, <b>skirt</b> (falda), <b>dress</b> (vestido), <b>jacket</b>, <b>coat</b> (abrigo), <b>sweater</b> (suéter), <b>shoes</b>, <b>boots</b>, <b>socks</b>, <b>cap</b> (gorra), <b>hat</b> (sombrero), <b>scarf</b> (bufanda).</p><h4>Plurales especiales</h4><p><b>pants, jeans, shorts, shoes, socks, glasses</b> son siempre plurales: <i>My jeans <b>are</b> new</i>. Para contarlos: <i>a pair of jeans</i>.</p><h4>Verbos</h4><p><b>wear</b> (llevar puesto), <b>put on</b> (ponerse), <b>take off</b> (quitarse), <b>try on</b> (probarse).</p>",
+      "content_en": "<h4>Garments</h4><p><b>shirt</b>, <b>T-shirt</b>, <b>pants</b>, <b>jeans</b>, <b>shorts</b>, <b>skirt</b>, <b>dress</b>, <b>jacket</b>, <b>coat</b>, <b>sweater</b>, <b>shoes</b>, <b>boots</b>, <b>socks</b>, <b>cap</b>, <b>hat</b>, <b>scarf</b>.</p><h4>Special plurals</h4><p><b>pants, jeans, shorts, shoes, socks, glasses</b> are always plural: <i>My jeans <b>are</b> new</i>. To count them: <i>a pair of jeans</i>.</p><h4>Verbs</h4><p><b>wear</b>, <b>put on</b>, <b>take off</b>, <b>try on</b>.</p>",
+      "fichas": [
+        { "t": "a pair of jeans", "d": "Las prendas de dos piernas se cuentan con pair.", "d_en": "Two-legged garments are counted with pair." },
+        { "t": "wear vs put on", "d": "wear es llevar puesto; put on es la acción de ponerse.", "d_en": "wear is to have on; put on is the action of dressing." },
+        { "t": "cap vs hat", "d": "Cap es gorra con visera; hat es sombrero con ala.", "d_en": "A cap has a visor; a hat has a brim." },
+        { "t": "Prendas siempre plurales", "d": "pants, jeans, shorts, glasses: llevan verbo en plural.", "d_en": "pants, jeans, shorts, glasses: they take a plural verb." }
+      ],
+      "quiz": [
+        { "q": "«My new jeans ___ very comfortable.»", "q_en": "\"My new jeans ___ very comfortable.\"", "o": ["is", "are", "am", "be"], "o_en": ["is", "are", "am", "be"], "a": 1, "why": "Jeans es siempre plural, así que el verbo es are.", "why_en": "Jeans is always plural, so the verb is are." },
+        { "q": "«It's cold. ___ your coat.»", "q_en": "\"It's cold. ___ your coat.\"", "o": ["Take off", "Put on", "Try in", "Wear off"], "o_en": ["Take off", "Put on", "Try in", "Wear off"], "a": 1, "why": "Put on es ponerse una prenda.", "why_en": "Put on means to start wearing a garment." },
+        { "q": "¿Qué prenda usas en los pies?", "q_en": "Which garment do you wear on your feet?", "o": ["scarf", "socks", "cap", "skirt"], "o_en": ["scarf", "socks", "cap", "skirt"], "a": 1, "why": "Socks son las medias que van en los pies.", "why_en": "Socks go on your feet." }
+      ]
+    },
+    {
+      "id": "ingles-6-4-9",
+      "num": 9,
+      "tipo": "vocabulary",
+      "t": "Las estaciones y el clima",
+      "t_en": "Seasons and weather",
+      "d": "10 min",
+      "content_es": "<h4>Las cuatro estaciones</h4><p><b>spring</b> (primavera), <b>summer</b> (verano), <b>fall / autumn</b> (otoño), <b>winter</b> (invierno).</p><h4>El clima</h4><p><i>What's the weather like?</i> — <i>It's sunny / rainy / cloudy / windy / snowy / hot / cold / warm / cool.</i></p><h4>Estaciones y ropa</h4><p><i>In winter it's cold, so I wear a coat and a scarf.</i> · <i>In summer it's hot, so I wear shorts and a T-shirt.</i></p><h4>Ojo</h4><p>El clima se dice con <b>it's</b>: <i>It's raining</i> (está lloviendo, ahora) o <i>It's rainy</i> (es lluvioso, en general). Con las estaciones se usa <b>in</b>: <i>in summer</i>.</p>",
+      "content_en": "<h4>The four seasons</h4><p><b>spring</b>, <b>summer</b>, <b>fall / autumn</b>, <b>winter</b>.</p><h4>The weather</h4><p><i>What's the weather like?</i> — <i>It's sunny / rainy / cloudy / windy / snowy / hot / cold / warm / cool.</i></p><h4>Seasons and clothes</h4><p><i>In winter it's cold, so I wear a coat and a scarf.</i> · <i>In summer it's hot, so I wear shorts and a T-shirt.</i></p><h4>Careful</h4><p>The weather uses <b>it's</b>: <i>It's raining</i> (right now) or <i>It's rainy</i> (in general). With seasons we use <b>in</b>: <i>in summer</i>.</p>",
+      "fichas": [
+        { "t": "What's the weather like?", "d": "Pregunta estándar por el clima.", "d_en": "Standard question about the weather." },
+        { "t": "It's raining vs It's rainy", "d": "Acción de este momento vs característica general.", "d_en": "Action right now vs general characteristic." },
+        { "t": "fall / autumn", "d": "Otoño: fall en inglés americano, autumn en británico.", "d_en": "Fall in American English, autumn in British English." },
+        { "t": "in summer", "d": "Las estaciones llevan la preposición in.", "d_en": "Seasons take the preposition in." }
+      ],
+      "quiz": [
+        { "q": "«___ the weather like today?»", "q_en": "\"___ the weather like today?\"", "o": ["How is", "What's", "Which is", "Where is"], "o_en": ["How is", "What's", "Which is", "Where is"], "a": 1, "why": "La expresión fija es What's the weather like?", "why_en": "The fixed expression is What's the weather like?" },
+        { "q": "«___ winter it snows in Canada.»", "q_en": "\"___ winter it snows in Canada.\"", "o": ["On", "At", "In", "For"], "o_en": ["On", "At", "In", "For"], "a": 2, "why": "Las estaciones del año van con in.", "why_en": "Seasons take in." },
+        { "q": "Hace mucho calor. ¿Qué te pones?", "q_en": "It is very hot. What do you wear?", "o": ["A coat and boots", "Shorts and a T-shirt", "A scarf and a sweater", "Gloves"], "o_en": ["A coat and boots", "Shorts and a T-shirt", "A scarf and a sweater", "Gloves"], "a": 1, "why": "Con calor se usa ropa ligera: shorts y camiseta.", "why_en": "In hot weather you wear light clothes: shorts and a T-shirt." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-6-4-repaso",
+    "titulo": "Repaso — Action Time! Doing Things with Style",
+    "titulo_en": "Review — Action Time! Doing Things with Style",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El periodo se trata de <b>acciones</b>: lo que puedes hacer (<b>can</b>), lo que otros deben hacer (<b>imperativos</b>), lo que está pasando ahora (<b>presente progresivo</b>) y <b>cómo</b> se hace (<b>adverbios de modo</b>).</p><h4>Puntos gramaticales</h4><ul><li>can + verbo base, sin to y sin -s. Negativo can't.</li><li>Imperativo: verbo base sin sujeto; negativo con don't.</li><li>Presente progresivo: to be + verbo-ing (writing, running).</li><li>Adverbios de modo: adjetivo + -ly; irregular good → well.</li><li>Why…? se responde con because + oración.</li></ul><h4>Vocabulario</h4><p>Alfabeto y deletreo, deportes (play / go / do), ropa y prendas siempre plurales, estaciones y clima.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The term is about <b>actions</b>: what you can do (<b>can</b>), what others should do (<b>imperatives</b>), what is happening now (<b>present progressive</b>) and <b>how</b> it is done (<b>adverbs of manner</b>).</p><h4>Grammar points</h4><ul><li>can + base verb, no to and no -s. Negative can't.</li><li>Imperative: base verb with no subject; negative with don't.</li><li>Present progressive: to be + verb-ing (writing, running).</li><li>Adverbs of manner: adjective + -ly; irregular good → well.</li><li>Why…? is answered with because + clause.</li></ul><h4>Vocabulary</h4><p>Alphabet and spelling, sports (play / go / do), clothes and always-plural garments, seasons and weather.</p>",
+    "puntos_clave": [
+      ["can nunca cambia y va con el verbo en base.", "can never changes and takes the base verb."],
+      ["El imperativo no lleva sujeto: Open the book.", "The imperative has no subject: Open the book."],
+      ["Presente simple = rutina; presente progresivo = ahora.", "Simple present = routine; present progressive = right now."],
+      ["run → running, write → writing.", "run → running, write → writing."],
+      ["good → well; fast y hard no cambian.", "good → well; fast and hard do not change."],
+      ["play + pelota, go + -ing, do + gimnasia.", "play + ball sports, go + -ing, do + gymnastics."]
+    ],
+    "preguntas": [
+      { "q": "«___ you play the piano?»", "q_en": "\"___ you play the piano?\"", "o": ["Do can", "Can", "Are", "Does"], "o_en": ["Do can", "Can", "Are", "Does"], "a": 1, "why": "Can forma la pregunta por sí solo, sin auxiliar.", "why_en": "Can forms the question by itself, with no auxiliary." },
+      { "q": "«___ talk during the exam.»", "q_en": "\"___ talk during the exam.\"", "o": ["No", "Not", "Don't", "Doesn't"], "o_en": ["No", "Not", "Don't", "Doesn't"], "a": 2, "why": "El imperativo negativo se forma con don't.", "why_en": "The negative imperative is formed with don't." },
+      { "q": "«They ___ lunch right now.»", "q_en": "\"They ___ lunch right now.\"", "o": ["have", "has", "are having", "having"], "o_en": ["have", "has", "are having", "having"], "a": 2, "why": "Right now pide presente progresivo: are having.", "why_en": "Right now calls for the present progressive: are having." },
+      { "q": "El -ing de «write» es…", "q_en": "The -ing form of \"write\" is…", "o": ["writeing", "writing", "writting", "writng"], "o_en": ["writeing", "writing", "writting", "writng"], "a": 1, "why": "Se quita la -e muda antes de agregar -ing.", "why_en": "The silent -e is dropped before adding -ing." },
+      { "q": "«She dances very ___.»", "q_en": "\"She dances very ___.\"", "o": ["beautiful", "beautifuly", "beautifully", "beauty"], "o_en": ["beautiful", "beautifuly", "beautifully", "beauty"], "a": 2, "why": "Se describe cómo baila: adverbio beautifully.", "why_en": "It describes how she dances: the adverb beautifully." },
+      { "q": "«I ___ karate on Tuesdays.»", "q_en": "\"I ___ karate on Tuesdays.\"", "o": ["play", "go", "do", "make"], "o_en": ["play", "go", "do", "make"], "a": 2, "why": "Las artes marciales van con do.", "why_en": "Martial arts take do." },
+      { "q": "«My shoes ___ dirty.»", "q_en": "\"My shoes ___ dirty.\"", "o": ["is", "are", "am", "was"], "o_en": ["is", "are", "am", "was"], "a": 1, "why": "Shoes es plural: el verbo es are.", "why_en": "Shoes is plural: the verb is are." },
+      { "q": "«We stayed inside ___ it was raining.»", "q_en": "\"We stayed inside ___ it was raining.\"", "o": ["because of", "because", "so", "why"], "o_en": ["because of", "because", "so", "why"], "a": 1, "why": "Sigue una oración completa, así que va because sin of.", "why_en": "A full clause follows, so it takes because without of." }
+    ]
+  }
+}

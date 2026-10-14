@@ -120,11 +120,14 @@
     var marco = document.createElement('iframe');
     marco.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
     marco.title = boton.getAttribute('aria-label') || 'Video';
-    marco.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+    marco.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
     marco.allowFullscreen = true;
-    boton.innerHTML = '';
-    boton.appendChild(marco);
-    boton.removeAttribute('data-video');
+    // Un <button> no puede contener un <iframe>: es HTML invalido y varios
+    // navegadores se niegan a mostrarlo. Se reemplaza el boton entero.
+    var caja = document.createElement('div');
+    caja.className = 'lienzo-video reproduciendo';
+    caja.appendChild(marco);
+    boton.parentNode.replaceChild(caja, boton);
   });
 
   /* ---- 6. Un solo desplegable abierto a la vez ---- */
@@ -164,7 +167,13 @@
         freeMode: true,
         watchSlidesProgress: true
       }) : null;
-      new Swiper(principal, {
+      var sw = new Swiper(principal, {
+        // Dentro de un <details> el contenido puede estar oculto al
+        // arrancar, y entonces Swiper mide cero de ancho y se ve roto.
+        // observer lo hace recalcular cuando el DOM cambia de tamano.
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
         spaceBetween: 12,
         keyboard: { enabled: true },
         navigation: {
@@ -177,6 +186,16 @@
         },
         thumbs: swTira ? { swiper: swTira } : undefined
       });
+      // Y al desplegar el bloque se recalcula, por si acaso.
+      var plegable = caja.closest('details');
+      if (plegable) {
+        plegable.addEventListener('toggle', function () {
+          if (plegable.open) {
+            sw.update();
+            if (swTira) { swTira.update(); }
+          }
+        });
+      }
     });
   }
 

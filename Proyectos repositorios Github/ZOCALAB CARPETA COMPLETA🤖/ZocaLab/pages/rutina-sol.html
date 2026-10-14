@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZocaLab — Rutina del sol</title>
+
+  <!-- Tipografías: Playfair Display para títulos, Nunito para el cuerpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/zocalab.css">
+  <link rel="stylesheet" href="../css/muisca.css">
+
+  <style>
+    /* ============================================
+       FONDO — la escena del sol (js/escenas.js) va detrás;
+       el contenido queda por encima.
+       ============================================ */
+    .sol-contenido { position: relative; z-index: 1; }
+
+    /* ====== CABECERA DE LA PÁGINA ====== */
+    .sol-fecha {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gris);
+      margin-top: 8px;
+    }
+    .sol-luna-fase {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(201, 152, 42, 0.14);
+      color: var(--zl-dorado-texto);
+      padding: 5px 13px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    /* ====== CONTADOR DE RACHA ====== */
+    .sol-racha {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--zl-verde-oscuro);
+      background: rgba(27, 94, 59, 0.08);
+      padding: 9px 16px;
+      border-radius: 999px;
+    }
+
+    /* ====== LOS CINCO BLOQUES ====== */
+    .sol-bloques {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .sol-bloque-cabeza {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      margin-bottom: 14px;
+    }
+    .sol-bloque-icono {
+      font-size: 27px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .sol-bloque-nombre {
+      font-family: var(--zl-font-titulo);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--zl-dorado-texto);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+    .sol-bloque-titulo {
+      font-family: var(--zl-font-titulo);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--zl-verde-oscuro);
+      line-height: 1.35;
+    }
+
+    /* Marca de completado en la esquina */
+    .sol-bloque-estado {
+      margin-left: auto;
+      font-size: 22px;
+      line-height: 1;
+      flex-shrink: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .zl-card.completada .sol-bloque-estado { opacity: 1; }
+
+    /* ====== BOTÓN FINAL ====== */
+    .sol-final { margin-top: 26px; }
+
+    /* Sol que sube al terminar la rutina */
+    .sol-celebra {
+      position: fixed;
+      left: 50%;
+      bottom: 30%;
+      transform: translateX(-50%);
+      font-size: 84px;
+      z-index: 600;
+      pointer-events: none;
+      animation: zlSolSube 1.5s ease forwards;
+    }
+
+    .sol-mensaje-final {
+      position: fixed;
+      left: 50%;
+      top: 45%;
+      transform: translateX(-50%);
+      background: rgba(27, 94, 59, 0.95);
+      color: #fff;
+      padding: 18px 30px;
+      border-radius: 16px;
+      font-family: var(--zl-font-titulo);
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      z-index: 601;
+      animation: zlFadeUp 0.5s ease both;
+      box-shadow: var(--zl-sombra-flota);
+    }
+  </style>
+</head>
+<body class="tema-muisca tema-escena">
+
+<div class="zl-page sol-page">
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="zl-header">
+    <div class="zl-marca">
+      <img src="../assets/logo-icon.png" alt="" onerror="this.style.display='none'">
+      <span>ZocaLab</span>
+    </div>
+
+    <div class="zl-saludo" id="saludo">Cargando...</div>
+
+    <button class="zl-avatar" id="avatarBtn" title="Ir a mi perfil" aria-label="Ir a mi perfil">Z</button>
+  </header>
+
+  <!-- ============================================
+       CONTENIDO
+       ============================================ -->
+  <main class="zl-content sol-contenido">
+    <div class="zl-container zl-container-angosto">
+
+      <!-- ====== SALUDO PRINCIPAL ====== -->
+      <h1 class="zl-titulo zl-titulo-xl zl-anim-entrada zl-disco-solar" id="tituloPrincipal">
+        ¿Cómo quieres vivir hoy?
+      </h1>
+
+      <div class="sol-fecha zl-anim-entrada zl-d1">
+        <span id="fechaHoy">—</span>
+        <span class="sol-luna-fase" id="faseLunar">🌙 —</span>
+      </div>
+
+      <div class="sol-racha zl-anim-entrada zl-d2" id="contadorRacha">
+        <span aria-hidden="true">🔥</span>
+        <span>—</span>
+      </div>
+
+      <!-- ====== LOS CINCO BLOQUES DE LA RUTINA ====== -->
+      <div class="sol-bloques">
+
+        <!-- BLOQUE 1 — Suamanecer (Intención) -->
+        <section class="zl-card zl-marco-oro zl-anim-entrada zl-d1" id="bloque-intencion">
+          <div class="sol-bloque-cabeza">
+            <span class="sol-bloque-icono" aria-hidden="true">☀️</span>
+            <div>
+              <div class="sol-bloque-nombre">Suamanecer</div>
+              <h2 class="sol-bloque-titulo">Mi intención de hoy</h2>
+            </div>
+            <span class="sol-bloque-estado" aria-hidden="true">✅</span>
+          </div>
+
+          <label class="zl-sr" for="campoIntencion">Mi intención de hoy</label>
+          <textarea class="zl-textarea zl-textarea-sm" id="campoIntencion"
+                    maxlength="120" data-bloque="intencion"
+                    placeholder="¿Qué quieres lograr hoy?"></textarea>
+          <div class="zl-contador" id="contadorIntencion">0 / 120</div>
+        </section>
+
+        <!-- BLOQUE 2 — Mue activo (Cuerpo) -->
+        <section class="zl-card zl-marco-oro zl-anim-entrada zl-d2" id="bloque-cuerpo">
+          <div class="sol-bloque-cabeza">
+            <span class="sol-bloque-icono" aria-hidden="true">🌿</span>
+            <div>
+              <div class="sol-bloque-nombre">Mue activo</div>
+              <h2 class="sol-bloque-titulo">Actividad para mi cuerpo</h2>
+            </div>
+            <span class="sol-bloque-estado" aria-hidden="true">✅</span>
+          </div>
+
+          <div class="zl-chips" id="chipsCuerpo" role="group" aria-label="Actividad para mi cuerpo">
+            <button type="button" class="zl-chip" data-valor="Caminar">Caminar</button>
+            <button type="button" class="zl-chip" data-valor="Estirar">Estirar</button>
+            <button type="button" class="zl-chip" data-valor="Ejercicio">Ejercicio</button>
+            <button type="button" class="zl-chip" data-valor="Respirar">Respirar</button>
+            <button type="button" class="zl-chip" data-valor="Otro">Otro</button>
+          </div>
+
+          <!-- Solo aparece si se elige "Otro" -->
+          <div class="zl-mt-16 zl-oculto" id="otroCuerpoWrap">
+            <label class="zl-sr" for="campoOtroCuerpo">¿Cuál actividad?</label>
+            <input type="text" class="zl-input" id="campoOtroCuerpo"
+                   maxlength="60" placeholder="¿Cuál actividad?">
+          </div>
+        </section>
+
+        <!-- BLOQUE 3 — Chyquy (Aprendizaje) -->
+        <section class="zl-card zl-marco-oro zl-anim-entrada zl-d3" id="bloque-aprendizaje">
+          <div class="sol-bloque-cabeza">
+            <span class="sol-bloque-icono" aria-hidden="true">📖</span>
+            <div>
+              <div class="sol-bloque-nombre">Chyquy</div>
+              <h2 class="sol-bloque-titulo">¿Qué voy a aprender o estudiar hoy?</h2>
+            </div>
+            <span class="sol-bloque-estado" aria-hidden="true">✅</span>
+          </div>
+
+          <label class="zl-sr" for="campoAprendizaje">¿Qué voy a aprender o estudiar hoy?</label>
+          <input type="text" class="zl-input" id="campoAprendizaje"
+                 maxlength="140" data-bloque="aprendizaje"
+                 placeholder="Ej: repasar álgebra, leer el capítulo 3...">
+        </section>
+
+        <!-- BLOQUE 4 — Bachué (Gratitud) -->
+        <section class="zl-card zl-marco-oro zl-anim-entrada zl-d4" id="bloque-gratitud">
+          <div class="sol-bloque-cabeza">
+            <span class="sol-bloque-icono" aria-hidden="true">🏺</span>
+            <div>
+              <div class="sol-bloque-nombre">Bachué</div>
+              <h2 class="sol-bloque-titulo">Hoy estoy agradecido/a por...</h2>
+            </div>
+            <span class="sol-bloque-estado" aria-hidden="true">✅</span>
+          </div>
+
+          <p class="mz-gracias-ayuda">Elige todo lo que quieras. Si es otra cosa, usa «Otro».</p>
+
+          <div class="mz-gracias" id="chipsGratitud" role="group" aria-label="Hoy estoy agradecido o agradecida por">
+            <button type="button" class="mz-gracia" data-valor="Mi salud"><span class="ico" aria-hidden="true">💚</span>Mi salud</button>
+            <button type="button" class="mz-gracia" data-valor="Mi familia"><span class="ico" aria-hidden="true">👨‍👩‍👧</span>Mi familia</button>
+            <button type="button" class="mz-gracia" data-valor="Mis estudios"><span class="ico" aria-hidden="true">📚</span>Mis estudios</button>
+            <button type="button" class="mz-gracia" data-valor="Las personas que quiero"><span class="ico" aria-hidden="true">🤝</span>Las personas que quiero</button>
+            <button type="button" class="mz-gracia" data-valor="Mis amigos"><span class="ico" aria-hidden="true">🫂</span>Mis amigos</button>
+            <button type="button" class="mz-gracia" data-valor="Mi hogar"><span class="ico" aria-hidden="true">🏡</span>Mi hogar</button>
+            <button type="button" class="mz-gracia" data-valor="Mi alimento"><span class="ico" aria-hidden="true">🌽</span>Mi alimento</button>
+            <button type="button" class="mz-gracia" data-valor="La naturaleza"><span class="ico" aria-hidden="true">🌿</span>La naturaleza</button>
+            <button type="button" class="mz-gracia" data-valor="Un nuevo día"><span class="ico" aria-hidden="true">🌅</span>Un nuevo día</button>
+            <button type="button" class="mz-gracia" id="chipOtroGratitud"><span class="ico" aria-hidden="true">✨</span>Otro</button>
+          </div>
+
+          <!-- Solo aparece si se elige "Otro" -->
+          <div class="zl-mt-16 zl-oculto" id="otroGratitudWrap">
+            <label class="zl-sr" for="campoOtroGratitud">¿Por qué otra cosa estás agradecido o agradecida?</label>
+            <input type="text" class="zl-input" id="campoOtroGratitud"
+                   maxlength="120" placeholder="¿Por qué otra cosa estás agradecido/a?">
+          </div>
+        </section>
+
+        <!-- BLOQUE 5 — Nom del día (Meta) -->
+        <section class="zl-card zl-marco-oro zl-anim-entrada zl-d5" id="bloque-meta">
+          <div class="sol-bloque-cabeza">
+            <span class="sol-bloque-icono" aria-hidden="true">🎯</span>
+            <div>
+              <div class="sol-bloque-nombre">Nom del día</div>
+              <h2 class="sol-bloque-titulo">Mi meta principal de hoy</h2>
+            </div>
+            <span class="sol-bloque-estado" aria-hidden="true">✅</span>
+          </div>
+
+          <label class="zl-sr" for="campoMeta">Mi meta principal de hoy</label>
+          <input type="text" class="zl-input" id="campoMeta"
+                 maxlength="140" data-bloque="meta"
+                 placeholder="Una sola cosa que sí o sí quieres cumplir">
+        </section>
+
+      </div>
+
+      <!-- ====== BOTÓN FINAL ====== -->
+      <div class="sol-final">
+        <button class="zl-btn-primario" id="btnTerminar" disabled>
+          Completa los bloques para terminar
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============================================
+       NAVEGACIÓN INFERIOR
+       ============================================ -->
+  <nav class="zl-nav">
+    <a class="zl-nav-item" href="bosque.html">
+      <span aria-hidden="true">🌳</span><span>Bosque</span>
+    </a>
+    <a class="zl-nav-item active" href="rutina-sol.html">
+      <span aria-hidden="true">☀️</span><span>Mi día</span>
+    </a>
+    <a class="zl-nav-item" href="mi-espacio.html">
+      <span aria-hidden="true">📋</span><span>Mi espacio</span>
+    </a>
+    <a class="zl-nav-item" href="rutina-luna.html">
+      <span aria-hidden="true">🌙</span><span>Cerrar día</span>
+    </a>
+    <a class="zl-nav-item" href="perfil.html">
+      <span aria-hidden="true">👤</span><span>Perfil</span>
+    </a>
+  </nav>
+</div>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+<script src="../js/datos.js"></script>
+<script src="../js/sonidos.js"></script>
+<script src="../js/animaciones.js"></script>
+<script src="../js/escenas.js"></script>
+<script src="../js/condor.js"></script>
+
+<script>
+  /* ============================================
+     PROTECCIÓN DE RUTA
+     ============================================ */
+  if (!verificarSesion()) {
+    throw new Error('Sin sesión activa');
+  }
+
+  const D = window.ZocaDatos;
+
+  /* ============================================
+     HEADER
+     ============================================ */
+  document.getElementById('saludo').textContent = D.saludoSegunHora();
+  D.pintarAvatar(document.getElementById('avatarBtn'));
+  document.getElementById('avatarBtn').addEventListener('click', function () {
+    window.location.href = 'perfil.html';
+  });
+
+  /* ============================================
+     ESCENA ANIMADA: sol, nubes, aves y plantas despiertas
+     ============================================ */
+  ZocaEscenas.montar('sol');
+
+  /* ============================================
+     SALUDO, FECHA Y FASE LUNAR
+     ============================================ */
+  const horaActual = new Date().getHours();
+
+  // Antes del mediodía la invitación es a planear; después, a retomar
+  document.getElementById('tituloPrincipal').textContent =
+    (horaActual < 12) ? '¿Cómo quieres vivir hoy?' : 'Nunca es tarde para comenzar';
+
+  document.getElementById('fechaHoy').textContent = D.fechaLarga();
+
+  const fase = D.faseLunar();
+  document.getElementById('faseLunar').innerHTML =
+    '<span aria-hidden="true">' + fase.icono + '</span>' +
+    '<span>' + fase.nombre + ' — ' + fase.mensaje + '</span>';
+
+  /* ============================================
+     CONTADOR DE RACHA DE RUTINAS DEL SOL
+     ============================================ */
+  function pintarRacha() {
+    const rutinas = D.leerDato(D.CLAVES.RUTINAS);
+    const racha = rutinas.sol.racha || 0;
+    const nodo = document.getElementById('contadorRacha');
+
+    if (racha <= 0) {
+      nodo.innerHTML = '<span aria-hidden="true">🌅</span><span>Es tu primer día. ¡Empieza bien!</span>';
+    } else {
+      nodo.innerHTML = '<span aria-hidden="true">🔥</span><span>' + racha +
+        (racha === 1 ? ' día' : ' días') + ' seguidos completando tu rutina del sol</span>';
+    }
+  }
+
+  /* ============================================
+     ESTADO DE LA RUTINA EN CURSO
+     Se guarda en memoria y se persiste al terminar.
+     Si la rutina de hoy ya está completa, se recupera
+     del historial para que el usuario vea lo que escribió.
+     ============================================ */
+  const respuestas = {
+    intencion: '',
+    cuerpo: '',
+    aprendizaje: '',
+    gratitud: '',
+    meta: ''
+  };
+
+  const BLOQUES = ['intencion', 'cuerpo', 'aprendizaje', 'gratitud', 'meta'];
+
+  // Relaciona cada bloque con su tarjeta en el HTML
+  const TARJETAS = {
+    intencion:   'bloque-intencion',
+    cuerpo:      'bloque-cuerpo',
+    aprendizaje: 'bloque-aprendizaje',
+    gratitud:    'bloque-gratitud',
+    meta:        'bloque-meta'
+  };
+
+  // Marca visualmente la tarjeta como completada
+  function marcarTarjeta(bloque) {
+    const tarjeta = document.getElementById(TARJETAS[bloque]);
+    if (!tarjeta) return;
+    const lleno = String(respuestas[bloque]).trim().length > 0;
+    tarjeta.classList.toggle('completada', lleno);
+  }
+
+  // Habilita el botón final solo cuando los 5 bloques tienen contenido
+  function revisarCompleto() {
+    const faltan = BLOQUES.filter(function (b) {
+      return String(respuestas[b]).trim().length === 0;
+    });
+
+    const boton = document.getElementById('btnTerminar');
+    if (faltan.length === 0) {
+      boton.disabled = false;
+      boton.textContent = '🌱 Mi día está listo';
+    } else {
+      boton.disabled = true;
+      boton.textContent = 'Completa los bloques para terminar';
+    }
+  }
+
+  // Cada cambio actualiza el estado del bloque
+  function registrar(bloque, valor) {
+    respuestas[bloque] = valor;
+    marcarTarjeta(bloque);
+    revisarCompleto();
+  }
+
+  /* ============================================
+     BLOQUE 1 — INTENCIÓN (con contador de caracteres)
+     ============================================ */
+  const campoIntencion = document.getElementById('campoIntencion');
+  const contadorIntencion = document.getElementById('contadorIntencion');
+
+  campoIntencion.addEventListener('input', function () {
+    const largo = campoIntencion.value.length;
+    contadorIntencion.textContent = largo + ' / 120';
+    contadorIntencion.classList.toggle('limite', largo >= 110);
+    registrar('intencion', campoIntencion.value);
+  });
+
+  /* ============================================
+     BLOQUE 2 — CUERPO (chips + "Otro")
+     ============================================ */
+  const chipsCuerpo = document.getElementById('chipsCuerpo');
+  const otroWrap = document.getElementById('otroCuerpoWrap');
+  const campoOtro = document.getElementById('campoOtroCuerpo');
+
+  chipsCuerpo.addEventListener('click', function (evento) {
+    const chip = evento.target.closest('.zl-chip');
+    if (!chip) return;
+
+    // Solo una actividad a la vez
+    chipsCuerpo.querySelectorAll('.zl-chip').forEach(function (c) {
+      c.classList.remove('active');
+    });
+    chip.classList.add('active');
+
+    if (chip.dataset.valor === 'Otro') {
+      // Con "Otro", el bloque queda completo cuando se escribe algo
+      otroWrap.classList.remove('zl-oculto');
+      campoOtro.focus();
+      registrar('cuerpo', campoOtro.value.trim());
+    } else {
+      otroWrap.classList.add('zl-oculto');
+      campoOtro.value = '';
+      registrar('cuerpo', chip.dataset.valor);
+    }
+  });
+
+  campoOtro.addEventListener('input', function () {
+    registrar('cuerpo', campoOtro.value);
+  });
+
+  /* ============================================
+     BLOQUE 4 — GRATITUD (opciones múltiples + "Otro")
+     Se guarda como texto ("Mi salud, Mi familia") para que la
+     bitácora de Mi espacio siga leyéndolo igual, y además como
+     lista (gratitudItems) para poder restaurar cada opción.
+     ============================================ */
+  const chipsGratitud = document.getElementById('chipsGratitud');
+  const chipOtroGratitud = document.getElementById('chipOtroGratitud');
+  const otroGratitudWrap = document.getElementById('otroGratitudWrap');
+  const campoOtroGratitud = document.getElementById('campoOtroGratitud');
+
+  function itemsGratitud() {
+    const items = Array.prototype.slice.call(chipsGratitud.querySelectorAll('.mz-gracia.active[data-valor]'))
+      .map(function (c) { return c.dataset.valor; });
+    const otro = campoOtroGratitud.value.trim();
+    if (chipOtroGratitud.classList.contains('active') && otro) items.push(otro);
+    return items;
+  }
+
+  function actualizarGratitud() {
+    registrar('gratitud', itemsGratitud().join(', '));
+  }
+
+  chipsGratitud.addEventListener('click', function (evento) {
+    const chip = evento.target.closest('.mz-gracia');
+    if (!chip) return;
+
+    chip.classList.toggle('active');
+    if (chip === chipOtroGratitud) {
+      const activo = chip.classList.contains('active');
+      otroGratitudWrap.classList.toggle('zl-oculto', !activo);
+      if (activo) campoOtroGratitud.focus();
+    }
+    actualizarGratitud();
+  });
+
+  campoOtroGratitud.addEventListener('input', actualizarGratitud);
+
+  /* ============================================
+     BLOQUES 3 y 5 — campos de texto simples
+     ============================================ */
+  ['campoAprendizaje', 'campoMeta'].forEach(function (id) {
+    const campo = document.getElementById(id);
+    campo.addEventListener('input', function () {
+      registrar(campo.dataset.bloque, campo.value);
+    });
+  });
+
+  /* ============================================
+     SI LA RUTINA DE HOY YA ESTÁ COMPLETA
+     Se muestran las respuestas guardadas y se bloquea
+     el botón: una rutina del sol por día.
+     ============================================ */
+  function cargarRutinaDeHoy() {
+    const rutinas = D.leerDato(D.CLAVES.RUTINAS);
+    if (!rutinas.sol.completadaHoy || !D.esHoy(rutinas.sol.fechaUltima)) return false;
+
+    // El registro de hoy es el último del historial
+    const registro = rutinas.sol.historial[rutinas.sol.historial.length - 1];
+    if (!registro || !D.esHoy(registro.fecha)) return false;
+
+    campoIntencion.value = registro.intencion || '';
+    contadorIntencion.textContent = campoIntencion.value.length + ' / 120';
+    document.getElementById('campoAprendizaje').value = registro.aprendizaje || '';
+    // Gratitud: cada opción vuelve a marcarse; lo demás va a "Otro"
+    const guardadas = Array.isArray(registro.gratitudItems)
+      ? registro.gratitudItems
+      : String(registro.gratitud || '').split(',').map(function (t) { return t.trim(); }).filter(Boolean);
+    const extras = [];
+    guardadas.forEach(function (texto) {
+      const chip = Array.prototype.slice.call(chipsGratitud.querySelectorAll('.mz-gracia[data-valor]'))
+        .filter(function (c) { return c.dataset.valor === texto; })[0];
+      if (chip) chip.classList.add('active'); else extras.push(texto);
+    });
+    if (extras.length) {
+      chipOtroGratitud.classList.add('active');
+      otroGratitudWrap.classList.remove('zl-oculto');
+      campoOtroGratitud.value = extras.join(', ');
+    }
+    document.getElementById('campoMeta').value = registro.meta || '';
+
+    // Se vuelve a marcar el chip elegido, o se usa el campo "Otro"
+    let chipEncontrado = false;
+    chipsCuerpo.querySelectorAll('.zl-chip').forEach(function (chip) {
+      if (chip.dataset.valor === registro.cuerpo) {
+        chip.classList.add('active');
+        chipEncontrado = true;
+      }
+    });
+    if (!chipEncontrado && registro.cuerpo) {
+      chipsCuerpo.querySelector('[data-valor="Otro"]').classList.add('active');
+      otroWrap.classList.remove('zl-oculto');
+      campoOtro.value = registro.cuerpo;
+    }
+
+    BLOQUES.forEach(function (b) {
+      respuestas[b] = registro[b] || '';
+      marcarTarjeta(b);
+    });
+
+    const boton = document.getElementById('btnTerminar');
+    boton.disabled = true;
+    boton.textContent = '✅ Tu día ya está listo';
+    return true;
+  }
+
+  /* ============================================
+     TERMINAR LA RUTINA
+     ============================================ */
+  document.getElementById('btnTerminar').addEventListener('click', function () {
+    const rutinas = D.leerDato(D.CLAVES.RUTINAS);
+
+    // Doble seguro: nunca dos rutinas del sol el mismo día
+    if (rutinas.sol.completadaHoy && D.esHoy(rutinas.sol.fechaUltima)) return;
+
+    const hoy = D.hoyISO();
+
+    // ====== La racha ======
+    // Si la rutina anterior fue ayer, la racha sigue; si no, empieza en 1.
+    if (D.esAyer(rutinas.sol.fechaUltima)) {
+      rutinas.sol.racha = (rutinas.sol.racha || 0) + 1;
+    } else {
+      rutinas.sol.racha = 1;
+    }
+
+    rutinas.sol.completadaHoy = true;
+    rutinas.sol.fechaUltima = hoy;
+    rutinas.sol.historial.push({
+      fecha: hoy,
+      intencion: respuestas.intencion.trim(),
+      cuerpo: respuestas.cuerpo.trim(),
+      aprendizaje: respuestas.aprendizaje.trim(),
+      gratitud: respuestas.gratitud.trim(),
+      gratitudItems: itemsGratitud(),
+      meta: respuestas.meta.trim()
+    });
+
+    D.guardarDato(D.CLAVES.RUTINAS, rutinas);
+
+    // ====== Celebración: el sol sube ======
+    try {
+      if (window.zocaSound) window.zocaSound.nivelCompleto();
+      if (window.zocaAnim)  window.zocaAnim.lanzarConfeti(30);
+    } catch (e) {
+      console.error('Rutina del sol: falló la celebración', e);
+    }
+
+    const sol = document.createElement('div');
+    sol.className = 'sol-celebra';
+    sol.textContent = '☀️';
+    sol.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(sol);
+
+    const mensaje = document.createElement('div');
+    mensaje.className = 'sol-mensaje-final';
+    mensaje.setAttribute('role', 'status');
+    mensaje.textContent = '¡Tu día comienza con intención!';
+    document.body.appendChild(mensaje);
+
+    this.disabled = true;
+
+    // Al bosque, donde ya puede plantar su árbol de hoy
+    setTimeout(function () {
+      window.location.href = 'bosque.html';
+    }, 1500);
+  });
+
+  /* ============================================
+     ARRANQUE
+     ============================================ */
+  pintarRacha();
+  cargarRutinaDeHoy();
+  revisarCompleto();
+
+  // El Cóndor vigila el tiempo en pantalla
+  ZocaCondor.init();
+</script>
+
+</body>
+</html>

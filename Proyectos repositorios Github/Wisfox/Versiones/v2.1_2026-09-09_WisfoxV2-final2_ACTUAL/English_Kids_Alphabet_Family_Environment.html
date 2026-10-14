@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Kids: Alphabet, Family & Environment</title>
+<style>
+:root{--ink:#243047;--blue:#4f7cff;--green:#48a868;--yellow:#ffd95a;--pink:#ff7b9c;--bg:#f5f8ff;--card:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:linear-gradient(135deg,#4f7cff,#7c5cff);color:#fff;padding:34px 20px;text-align:center}
+header h1{font-size:clamp(2rem,5vw,3.5rem);margin:0 0 8px} header p{margin:0;font-size:1.1rem}
+nav{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 2px 10px #0001;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px}
+nav a{color:var(--ink);text-decoration:none;font-weight:700;padding:8px 13px;border-radius:20px;background:#eef2ff}
+main{max-width:1100px;margin:auto;padding:24px 16px}.section{margin:26px 0}.section h2{font-size:2rem;margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 5px 20px #22305a12;border:1px solid #e6eaff}
+.card h3{margin:6px 0}.word{font-size:1.35rem;font-weight:800}.translation{color:#65708a}.img{font-size:4rem;text-align:center;background:#f1f5ff;border-radius:14px;padding:12px}
+button,.link{border:0;border-radius:12px;padding:10px 14px;background:var(--blue);color:#fff;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;margin:4px 2px}
+button.alt{background:var(--green)} button.light{background:#eef2ff;color:var(--ink)}
+.flash{min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer}
+.flash .big{font-size:3rem;font-weight:900}.flash small{display:block;margin-top:8px}
+.quiz{background:#fff;border-radius:18px;padding:20px;box-shadow:0 5px 20px #22305a12;margin-top:14px}
+.option{display:block;width:100%;text-align:left;background:#f1f4ff;color:var(--ink);margin:8px 0}.option:hover{background:#dfe7ff}
+.feedback{font-weight:800;min-height:28px}.score{font-size:1.2rem;font-weight:800}
+.tip{background:#fff8d9;border-left:6px solid var(--yellow);padding:14px;border-radius:10px}
+.resources a{margin:6px}.footer{font-size:.9rem;color:#667085;border-top:1px solid #ddd;padding:25px 0;margin-top:35px}
+.alphabet{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:10px}.letter{background:#fff;border-radius:14px;padding:12px;text-align:center;box-shadow:0 3px 12px #0000000d}.letter b{font-size:2rem;color:var(--blue)}
+.family-tree{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}.person{padding:13px 18px;border-radius:16px;background:#fff;box-shadow:0 4px 12px #0001;text-align:center;font-weight:700}
+@media print{nav,button,.resources{display:none}body{background:white}.card,.quiz{box-shadow:none;border:1px solid #ddd}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🌈 English Kids</h1>
+  <p>Alphabet • Family • My Environment • Games</p>
+  <p style="margin-top:12px;font-size:.95rem">Material introductorio para niños · inglés básico con apoyo visual e interacción</p>
+</header>
+
+<nav>
+<a href="#alphabet">🔤 Alphabet</a><a href="#family">👨‍👩‍👧 Family</a><a href="#environment">🏠 Environment</a><a href="#games">🎮 Games</a><a href="#resources">🌐 Resources</a>
+</nav>
+
+<main>
+<section class="section" id="alphabet">
+<h2>🔤 1. The Alphabet</h2>
+<p>Aprende las letras, relaciónalas con palabras sencillas y escucha su pronunciación usando el botón de voz del navegador.</p>
+<div class="alphabet" id="alphabetGrid"></div>
+<div class="card" style="margin-top:16px">
+  <h3>🎧 Listen & repeat</h3>
+  <p>Haz clic en una letra o palabra para escucharla. Después, repítela en voz alta.</p>
+  <button onclick="speak('A, apple')">🔊 A — apple</button>
+  <button onclick="speak('B, ball')">🔊 B — ball</button>
+  <button onclick="speak('C, cat')">🔊 C — cat</button>
+  <button onclick="speak('D, dog')">🔊 D — dog</button>
+  <button class="light" onclick="speak('The alphabet')">🔊 Alphabet</button>
+</div>
+</section>
+
+<section class="section" id="family">
+<h2>👨‍👩‍👧 2. My Family</h2>
+<p>Vocabulario esencial para nombrar personas de la familia. Las familias pueden ser diferentes y todas merecen respeto.</p>
+<div class="family-tree">
+<div class="person">👴 Grandfather<br><small>Abuelo</small></div>
+<div class="person">👵 Grandmother<br><small>Abuela</small></div>
+<div class="person">👨 Father<br><small>Padre</small></div>
+<div class="person">👩 Mother<br><small>Madre</small></div>
+<div class="person">👦 Brother<br><small>Hermano</small></div>
+<div class="person">👧 Sister<br><small>Hermana</small></div>
+<div class="person">🧒 Child<br><small>Niño/a</small></div>
+<div class="person">👶 Baby<br><small>Bebé</small></div>
+</div>
+<div class="grid" style="margin-top:16px">
+<div class="card"><div class="img">👨‍👩‍👧‍👦</div><div class="word">family</div><div class="translation">familia</div><button onclick="speak('family')">🔊 Hear</button></div>
+<div class="card"><div class="img">👦</div><div class="word">brother</div><div class="translation">hermano</div><button onclick="speak('brother')">🔊 Hear</button></div>
+<div class="card"><div class="img">👧</div><div class="word">sister</div><div class="translation">hermana</div><button onclick="speak('sister')">🔊 Hear</button></div>
+<div class="card"><div class="img">👵</div><div class="word">grandmother</div><div class="translation">abuela</div><button onclick="speak('grandmother')">🔊 Hear</button></div>
+</div>
+<div class="tip"><strong>Mini speaking:</strong> “This is my family.” · “This is my mother.” · “This is my brother/sister.”</div>
+</section>
+
+<section class="section" id="environment">
+<h2>🏠 3. My Environment</h2>
+<p>Palabras que el niño puede reconocer en su casa, colegio y entorno cercano.</p>
+<div class="grid">
+<div class="card"><div class="img">🏠</div><div class="word">house</div><div class="translation">casa</div><button onclick="speak('house')">🔊</button></div>
+<div class="card"><div class="img">🛏️</div><div class="word">bedroom</div><div class="translation">habitación</div><button onclick="speak('bedroom')">🔊</button></div>
+<div class="card"><div class="img">🍳</div><div class="word">kitchen</div><div class="translation">cocina</div><button onclick="speak('kitchen')">🔊</button></div>
+<div class="card"><div class="img">🛋️</div><div class="word">living room</div><div class="translation">sala</div><button onclick="speak('living room')">🔊</button></div>
+<div class="card"><div class="img">🚪</div><div class="word">door</div><div class="translation">puerta</div><button onclick="speak('door')">🔊</button></div>
+<div class="card"><div class="img">🪟</div><div class="word">window</div><div class="translation">ventana</div><button onclick="speak('window')">🔊</button></div>
+<div class="card"><div class="img">🌳</div><div class="word">tree</div><div class="translation">árbol</div><button onclick="speak('tree')">🔊</button></div>
+<div class="card"><div class="img">🌞</div><div class="word">sun</div><div class="translation">sol</div><button onclick="speak('sun')">🔊</button></div>
+<div class="card"><div class="img">💧</div><div class="word">water</div><div class="translation">agua</div><button onclick="speak('water')">🔊</button></div>
+<div class="card"><div class="img">🏫</div><div class="word">school</div><div class="translation">colegio</div><button onclick="speak('school')">🔊</button></div>
+</div>
+<div class="tip"><strong>Challenge:</strong> Walk around your home and find 5 things. Say their names in English: “door”, “window”, “table”, etc.</div>
+</section>
+
+<section class="section" id="games">
+<h2>🎮 4. Interactive Games</h2>
+
+<div class="quiz">
+<h3>Game 1 — What is it?</h3>
+<p id="qText">Pregunta</p>
+<div id="options"></div>
+<div class="feedback" id="feedback"></div>
+<div class="score" id="score">Score: 0</div>
+<button class="alt" onclick="nextQuestion()">➡️ Next</button>
+</div>
+
+<div class="quiz">
+<h3>Game 2 — Flashcard</h3>
+<div class="flash" id="flash" onclick="flipFlash()">
+  <div><div class="big" id="flashMain">🍎</div><div id="flashWord">apple</div><small>Haz clic para cambiar</small></div>
+</div>
+<button onclick="speak(document.getElementById('flashWord').textContent)">🔊 Listen</button>
+<button class="light" onclick="randomFlash()">🎲 Random</button>
+</div>
+
+<div class="quiz">
+<h3>Game 3 — Complete the sentence</h3>
+<p><strong>This is my ______.</strong></p>
+<button class="option" onclick="sentence(false)">A. window</button>
+<button class="option" onclick="sentence(true)">B. family</button>
+<button class="option" onclick="sentence(false)">C. tree</button>
+<div class="feedback" id="sentenceFeedback"></div>
+</div>
+
+<div class="quiz">
+<h3>🧠 Mini challenge</h3>
+<p>Di en inglés:</p>
+<ul>
+<li>3 miembros de tu familia.</li>
+<li>3 objetos de tu casa.</li>
+<li>3 letras del alphabet.</li>
+</ul>
+<button onclick="speak('My family. My house. The alphabet.')">🔊 Example</button>
+</div>
+</section>
+
+<section class="section" id="resources">
+<h2>🌐 5. Recursos externos recomendados</h2>
+<p>Se incluyen recursos de instituciones educativas reconocidas. Funcionan como ampliación del material y pueden abrirse desde este mismo archivo.</p>
+<div class="card resources">
+<a class="link" target="_blank" href="https://learnenglishkids.britishcouncil.org/">British Council — LearnEnglish Kids</a>
+<a class="link" target="_blank" href="https://learnenglishkids.britishcouncil.org/category/topics/family">British Council — Family</a>
+<a class="link" target="_blank" href="https://learnenglishkids.britishcouncil.org/category/topics/homes-and-furniture">British Council — Homes & Furniture</a>
+<a class="link" target="_blank" href="https://learnenglishkids.britishcouncil.org/fun-games/games">British Council — Games</a>
+<a class="link" target="_blank" href="https://www.cambridgeenglish.org/es/learning-english/z-parents-and-children/activities-for-children/">Cambridge English — Activities for Children</a>
+<a class="link" target="_blank" href="https://www.cambridgeenglish.org/learning-english/activities-for-learners/a1v053-vocabulary-for-the-house-and-home">Cambridge — House & Home vocabulary</a>
+</div>
+</section>
+
+<div class="footer">
+<strong>Uso educativo:</strong> material introductorio para acompañar clases de inglés básico. La pronunciación automática depende del navegador y del dispositivo.
+<br><br>
+<strong>Fuentes de referencia:</strong> British Council LearnEnglish Kids y Cambridge English. Consultadas en septiembre de 2026.
+</div>
+</main>
+
+<script>
+const letters=[
+['A','apple','🍎'],['B','ball','⚽'],['C','cat','🐱'],['D','dog','🐶'],['E','egg','🥚'],['F','fish','🐟'],
+['G','grape','🍇'],['H','house','🏠'],['I','ice cream','🍦'],['J','juice','🧃'],['K','kite','🪁'],['L','lion','🦁'],
+['M','moon','🌙'],['N','nose','👃'],['O','orange','🍊'],['P','pencil','✏️'],['Q','queen','👑'],['R','rabbit','🐰'],
+['S','sun','☀️'],['T','tree','🌳'],['U','umbrella','☂️'],['V','van','🚐'],['W','water','💧'],['X','xylophone','🎼'],
+['Y','yellow','💛'],['Z','zebra','🦓']
+];
+document.getElementById('alphabetGrid').innerHTML=letters.map(x=>`<div class="letter" onclick="speak('${x[0]}, ${x[1]}')"><b>${x[0]}</b><div>${x[2]}</div><strong>${x[1]}</strong></div>`).join('');
+
+function speak(text){
+ if('speechSynthesis' in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.8;speechSynthesis.speak(u);}
+ else alert('La síntesis de voz no está disponible en este navegador.');
+}
+
+const questions=[
+{q:'Which word means “familia”?',o:['family','window','school'],a:0},
+{q:'Which word means “abuela”?',o:['sister','grandmother','brother'],a:1},
+{q:'Which word means “casa”?',o:['house','water','sun'],a:0},
+{q:'Which word means “árbol”?',o:['door','tree','bedroom'],a:1},
+{q:'Which word begins with B?',o:['apple','ball','cat'],a:1},
+{q:'Which word means “hermana”?',o:['sister','mother','father'],a:0}
+];
+let qi=0,score=0;
+function renderQ(){
+ let q=questions[qi];document.getElementById('qText').textContent=q.q;
+ document.getElementById('options').innerHTML=q.o.map((x,i)=>`<button class="option" onclick="answer(${i})">${x}</button>`).join('');
+ document.getElementById('feedback').textContent='';
+}
+function answer(i){
+ let q=questions[qi], f=document.getElementById('feedback');
+ if(i===q.a){score++;f.textContent='✅ Correct!';}else f.textContent='❌ Try again.';
+ document.getElementById('score').textContent='Score: '+score;
+}
+function nextQuestion(){qi=(qi+1)%questions.length;renderQ()}
+renderQ();
+
+const flashcards=[['🍎','apple'],['⚽','ball'],['🐱','cat'],['🏠','house'],['👩','mother'],['👦','brother'],['🌳','tree'],['💧','water'],['🏫','school'],['🌞','sun']];
+let fi=0;
+function showFlash(){document.getElementById('flashMain').textContent=flashcards[fi][0];document.getElementById('flashWord').textContent=flashcards[fi][1]}
+function flipFlash(){fi=(fi+1)%flashcards.length;showFlash()}
+function randomFlash(){fi=Math.floor(Math.random()*flashcards.length);showFlash()}
+function sentence(ok){document.getElementById('sentenceFeedback').textContent=ok?'✅ Excellent!':'❌ Try again.'}
+</script>
+</body>
+</html>

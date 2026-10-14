@@ -1,0 +1,218 @@
+{
+  "id": "ingles-8-2",
+  "materia": "ingles",
+  "grado": "8",
+  "grado_nombre": "Octavo",
+  "periodo": 2,
+  "periodo_label": { "es": "Periodo II", "en": "Term II" },
+  "titulo": "Expressing Experiences and Connections Through Time and Place",
+  "titulo_es": "Experiencias y conexiones a través del tiempo y el lugar",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Narro experiencias personales conectadas con el presente. Relaciono ideas en el tiempo y por contraste, y ubico personas y hechos en el espacio.",
+  "competencias": "Usar el presente perfecto para experiencias; confirmar información con tag questions; enlazar ideas con cláusulas de tiempo y contraste; describir personas, lugares de la casa y ocupaciones.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Family Interview",
+    "descripcion_es": "Cada estudiante entrevista a un familiar sobre sus experiencias de vida y escribe un perfil: qué ha hecho (present perfect), cuándo y dónde, y qué rasgos de personalidad y oficio lo definen.",
+    "descripcion_en": "Each student interviews a relative about their life experiences and writes a profile: what they have done (present perfect), when and where, and which personality traits and occupation define them."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-8-2-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Present perfect: forma y usos",
+      "t_en": "Present perfect: form and uses",
+      "d": "14 min",
+      "content_es": "<h4>Cómo se forma</h4><p><b>have / has + participio pasado</b>: <i>I <b>have visited</b> Cartagena.</i> · <i>She <b>has finished</b> the project.</i></p><h4>Para qué sirve</h4><ul><li>Experiencias sin decir cuándo: <i>I've been to Peru.</i></li><li>Acciones pasadas con efecto en el presente: <i>I've lost my keys</i> (y sigo sin ellas).</li><li>Acciones que continúan: <i>We've lived here <b>for</b> five years.</i></li></ul><h4>Palabras clave</h4><p><b>ever, never, already, yet, just, so far, since, for</b>.<br><i>Have you <b>ever</b> tried sushi? · I haven't finished <b>yet</b>. · She has <b>just</b> arrived.</i></p><h4>La diferencia con el pasado simple</h4><p>Si dices <b>cuándo</b> exactamente, va pasado simple: <i>I visited Cartagena <b>in 2023</b></i>. Sin momento concreto: <i>I have visited Cartagena.</i></p>",
+      "content_en": "<h4>How it is formed</h4><p><b>have / has + past participle</b>: <i>I <b>have visited</b> Cartagena.</i> · <i>She <b>has finished</b> the project.</i></p><h4>What it is for</h4><ul><li>Experiences with no stated time: <i>I've been to Peru.</i></li><li>Past actions with a present effect: <i>I've lost my keys</i> (and I still don't have them).</li><li>Actions that continue: <i>We've lived here <b>for</b> five years.</i></li></ul><h4>Key words</h4><p><b>ever, never, already, yet, just, so far, since, for</b>.<br><i>Have you <b>ever</b> tried sushi? · I haven't finished <b>yet</b>. · She has <b>just</b> arrived.</i></p><h4>The difference from the simple past</h4><p>If you say <b>exactly when</b>, use the simple past: <i>I visited Cartagena <b>in 2023</b></i>. With no specific moment: <i>I have visited Cartagena.</i></p>",
+      "fichas": [
+        { "t": "have/has + participio", "d": "Estructura del presente perfecto: has gone, have seen.", "d_en": "Structure of the present perfect: has gone, have seen." },
+        { "t": "for vs since", "d": "for + duración (for five years); since + punto de inicio (since 2020).", "d_en": "for + duration; since + starting point." },
+        { "t": "already / yet", "d": "already en afirmativo; yet en negativo y pregunta, al final.", "d_en": "already in affirmatives; yet in negatives and questions, at the end." },
+        { "t": "just", "d": "Acción muy reciente: She has just left.", "d_en": "A very recent action: She has just left." },
+        { "t": "Sin tiempo concreto", "d": "Si dices when exacto, va pasado simple, no perfecto.", "d_en": "If you state the exact time, use the simple past." }
+      ],
+      "quiz": [
+        { "q": "«I ___ my homework already.»", "q_en": "\"I ___ my homework already.\"", "o": ["finish", "finished", "have finished", "am finishing"], "o_en": ["finish", "finished", "have finished", "am finishing"], "a": 2, "why": "Already es una palabra clave del presente perfecto.", "why_en": "Already is a present perfect key word." },
+        { "q": "«She has lived here ___ 2019.»", "q_en": "\"She has lived here ___ 2019.\"", "o": ["for", "since", "from", "ago"], "o_en": ["for", "since", "from", "ago"], "a": 1, "why": "2019 es un punto de inicio: since.", "why_en": "2019 is a starting point: since." },
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["I have seen him yesterday", "I saw him yesterday", "I have saw him yesterday", "I seen him yesterday"], "o_en": ["I have seen him yesterday", "I saw him yesterday", "I have saw him yesterday", "I seen him yesterday"], "a": 1, "why": "Yesterday es un momento concreto: pasado simple.", "why_en": "Yesterday is a specific moment: simple past." }
+      ]
+    },
+    {
+      "id": "ingles-8-2-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Tag questions",
+      "t_en": "Tag questions",
+      "d": "14 min",
+      "content_es": "<h4>La coletilla de confirmación</h4><p>Es la pregunta corta al final: <i>You're from Cali, <b>aren't you</b>?</i> Equivale a «¿verdad?».</p><h4>La regla</h4><p>Si la oración es <b>afirmativa</b>, la coletilla es <b>negativa</b>, y al revés:</p><ul><li><i>She is a teacher, <b>isn't she</b>?</i></li><li><i>You don't smoke, <b>do you</b>?</i></li><li><i>They have finished, <b>haven't they</b>?</i></li></ul><h4>Cómo elegir el auxiliar</h4><p>Se repite el auxiliar de la oración. Si no hay, se usa <b>do/does/did</b>: <i>He plays guitar, <b>doesn't he</b>?</i></p><h4>Casos especiales</h4><ul><li><i>I am late, <b>aren't I</b>?</i></li><li><i>Let's go, <b>shall we</b>?</i></li><li><i>Open the door, <b>will you</b>?</i></li></ul>",
+      "content_en": "<h4>The confirmation tag</h4><p>It is the short question at the end: <i>You're from Cali, <b>aren't you</b>?</i></p><h4>The rule</h4><p>If the sentence is <b>affirmative</b>, the tag is <b>negative</b>, and the other way round:</p><ul><li><i>She is a teacher, <b>isn't she</b>?</i></li><li><i>You don't smoke, <b>do you</b>?</i></li><li><i>They have finished, <b>haven't they</b>?</i></li></ul><h4>Choosing the auxiliary</h4><p>You repeat the auxiliary of the sentence. If there is none, use <b>do/does/did</b>: <i>He plays guitar, <b>doesn't he</b>?</i></p><h4>Special cases</h4><ul><li><i>I am late, <b>aren't I</b>?</i></li><li><i>Let's go, <b>shall we</b>?</i></li><li><i>Open the door, <b>will you</b>?</i></li></ul>",
+      "fichas": [
+        { "t": "Afirmativa → tag negativa", "d": "She is nice, isn't she?", "d_en": "She is nice, isn't she?" },
+        { "t": "Negativa → tag afirmativa", "d": "You don't like it, do you?", "d_en": "You don't like it, do you?" },
+        { "t": "Sin auxiliar → do/does/did", "d": "He works here, doesn't he?", "d_en": "He works here, doesn't he?" },
+        { "t": "Let's…, shall we?", "d": "Coletilla especial para propuestas.", "d_en": "Special tag for suggestions." },
+        { "t": "I am…, aren't I?", "d": "Excepción: no existe amn't en inglés estándar.", "d_en": "Exception: there is no amn't in standard English." }
+      ],
+      "quiz": [
+        { "q": "«You are coming to the party, ___?»", "q_en": "\"You are coming to the party, ___?\"", "o": ["are you", "aren't you", "don't you", "isn't it"], "o_en": ["are you", "aren't you", "don't you", "isn't it"], "a": 1, "why": "La oración es afirmativa, así que la coletilla es negativa.", "why_en": "The sentence is affirmative, so the tag is negative." },
+        { "q": "«She doesn't eat meat, ___?»", "q_en": "\"She doesn't eat meat, ___?\"", "o": ["doesn't she", "does she", "is she", "did she"], "o_en": ["doesn't she", "does she", "is she", "did she"], "a": 1, "why": "La oración es negativa: la coletilla va en afirmativo.", "why_en": "The sentence is negative: the tag is affirmative." },
+        { "q": "«Let's take a break, ___?»", "q_en": "\"Let's take a break, ___?\"", "o": ["don't we", "shall we", "will we", "aren't we"], "o_en": ["don't we", "shall we", "will we", "aren't we"], "a": 1, "why": "Con Let's la coletilla siempre es shall we.", "why_en": "With Let's the tag is always shall we." }
+      ]
+    },
+    {
+      "id": "ingles-8-2-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Cláusulas adverbiales de tiempo",
+      "t_en": "Adverbial clauses of time",
+      "d": "12 min",
+      "content_es": "<h4>Conectar dos momentos</h4><p>Los conectores de tiempo unen dos acciones: <b>when</b>, <b>while</b>, <b>before</b>, <b>after</b>, <b>as soon as</b>, <b>until</b>, <b>since</b>, <b>whenever</b>.</p><ul><li><i><b>When</b> I got home, my mom was cooking.</i></li><li><i><b>While</b> she was studying, the phone rang.</i></li><li><i><b>As soon as</b> the bell rings, we leave.</i></li></ul><h4>La regla del futuro</h4><p>Después de un conector de tiempo <b>no se usa will</b>, aunque el sentido sea futuro: <i>I'll call you <b>when I arrive</b></i>, no <i>when I will arrive</i>.</p><h4>La coma</h4><p>Si la cláusula va primero, se separa con coma: <i><b>After</b> we finished, we went out.</i> Si va al final, no lleva coma.</p>",
+      "content_en": "<h4>Connecting two moments</h4><p>Time connectors join two actions: <b>when</b>, <b>while</b>, <b>before</b>, <b>after</b>, <b>as soon as</b>, <b>until</b>, <b>since</b>, <b>whenever</b>.</p><ul><li><i><b>When</b> I got home, my mom was cooking.</i></li><li><i><b>While</b> she was studying, the phone rang.</i></li><li><i><b>As soon as</b> the bell rings, we leave.</i></li></ul><h4>The future rule</h4><p>After a time connector <b>you do not use will</b>, even if the meaning is future: <i>I'll call you <b>when I arrive</b></i>, not <i>when I will arrive</i>.</p><h4>The comma</h4><p>If the clause comes first, separate it with a comma: <i><b>After</b> we finished, we went out.</i> If it comes last, no comma.</p>",
+      "fichas": [
+        { "t": "Sin will tras when", "d": "I'll call you when I arrive, no when I will arrive.", "d_en": "I'll call you when I arrive, not when I will arrive." },
+        { "t": "as soon as", "d": "Tan pronto como: acción inmediata.", "d_en": "Immediately after something happens." },
+        { "t": "while", "d": "Mientras: dos acciones simultáneas.", "d_en": "During the time that: two simultaneous actions." },
+        { "t": "until", "d": "Hasta que: marca el límite de la acción.", "d_en": "Up to the moment when the action stops." }
+      ],
+      "quiz": [
+        { "q": "«I'll text you as soon as I ___ home.»", "q_en": "\"I'll text you as soon as I ___ home.\"", "o": ["will get", "get", "got", "will be get"], "o_en": ["will get", "get", "got", "will be get"], "a": 1, "why": "Después de as soon as no se usa will.", "why_en": "After as soon as we do not use will." },
+        { "q": "«___ she was cooking, I set the table.»", "q_en": "\"___ she was cooking, I set the table.\"", "o": ["Until", "While", "As soon as", "Since"], "o_en": ["Until", "While", "As soon as", "Since"], "a": 1, "why": "Son dos acciones simultáneas: while.", "why_en": "They are two simultaneous actions: while." },
+        { "q": "«Wait here ___ I come back.»", "q_en": "\"Wait here ___ I come back.\"", "o": ["while", "until", "after", "since"], "o_en": ["while", "until", "after", "since"], "a": 1, "why": "Until marca el límite de la espera.", "why_en": "Until marks the limit of the waiting." }
+      ]
+    },
+    {
+      "id": "ingles-8-2-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Cláusulas adverbiales de contraste",
+      "t_en": "Adverbial clauses of contrast",
+      "d": "12 min",
+      "content_es": "<h4>Contraponer dos ideas</h4><ul><li><b>although / even though / though</b> + oración: <i><b>Although</b> it was raining, we went out.</i></li><li><b>while / whereas</b> para comparar dos sujetos: <i>He likes rock, <b>whereas</b> she prefers pop.</i></li><li><b>but</b> une dos oraciones: <i>It was raining, <b>but</b> we went out.</i></li><li><b>however</b> abre una oración nueva, con punto y coma o punto: <i>It was raining. <b>However</b>, we went out.</i></li></ul><h4>Error frecuente</h4><p>No se usan <b>although</b> y <b>but</b> en la misma oración: <i>Although it was raining, but we went out</i> es incorrecto. Se elige uno.</p><h4>Con sustantivo</h4><p><b>despite / in spite of</b> van seguidos de sustantivo o gerundio: <i><b>Despite</b> the rain, we went out.</i></p>",
+      "content_en": "<h4>Contrasting two ideas</h4><ul><li><b>although / even though / though</b> + clause: <i><b>Although</b> it was raining, we went out.</i></li><li><b>while / whereas</b> to compare two subjects: <i>He likes rock, <b>whereas</b> she prefers pop.</i></li><li><b>but</b> joins two clauses: <i>It was raining, <b>but</b> we went out.</i></li><li><b>however</b> opens a new sentence: <i>It was raining. <b>However</b>, we went out.</i></li></ul><h4>Common mistake</h4><p>Do not use <b>although</b> and <b>but</b> in the same sentence: <i>Although it was raining, but we went out</i> is wrong. Choose one.</p><h4>With a noun</h4><p><b>despite / in spite of</b> are followed by a noun or gerund: <i><b>Despite</b> the rain, we went out.</i></p>",
+      "fichas": [
+        { "t": "although + oración", "d": "Aunque: introduce una idea que contrasta.", "d_en": "Introduces a contrasting clause." },
+        { "t": "despite + sustantivo", "d": "A pesar de + sustantivo o gerundio, sin of después de despite.", "d_en": "Followed by a noun or gerund; no of after despite." },
+        { "t": "whereas", "d": "Mientras que: compara dos sujetos distintos.", "d_en": "Compares two different subjects." },
+        { "t": "however", "d": "Sin embargo: abre oración y va seguido de coma.", "d_en": "Opens a sentence and is followed by a comma." }
+      ],
+      "quiz": [
+        { "q": "«___ he studied a lot, he failed the test.»", "q_en": "\"___ he studied a lot, he failed the test.\"", "o": ["Because", "Although", "So", "Despite"], "o_en": ["Because", "Although", "So", "Despite"], "a": 1, "why": "Hay contraste entre estudiar y perder: although.", "why_en": "There is a contrast between studying and failing: although." },
+        { "q": "«___ the traffic, we arrived on time.»", "q_en": "\"___ the traffic, we arrived on time.\"", "o": ["Although", "Even though", "Despite", "Whereas"], "o_en": ["Although", "Even though", "Despite", "Whereas"], "a": 2, "why": "Le sigue un sustantivo, así que va despite.", "why_en": "A noun follows, so it takes despite." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["Although it rained, we played", "It rained, but we played", "Although it rained, but we played", "It rained. However, we played"], "o_en": ["Although it rained, we played", "It rained, but we played", "Although it rained, but we played", "It rained. However, we played"], "a": 2, "why": "No se pueden usar although y but juntos.", "why_en": "although and but cannot be used together." }
+      ]
+    },
+    {
+      "id": "ingles-8-2-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "Preposiciones de lugar y de tiempo",
+      "t_en": "Prepositions of place and time",
+      "d": "12 min",
+      "content_es": "<h4>Tiempo: in, on, at</h4><ul><li><b>in</b>: meses, años, siglos, partes del día — <i>in July, in 2026, in the morning</i></li><li><b>on</b>: días y fechas — <i>on Monday, on May 3rd, on my birthday</i></li><li><b>at</b>: horas y momentos puntuales — <i>at 7 o'clock, at night, at Christmas</i></li></ul><h4>Lugar: in, on, at</h4><ul><li><b>in</b>: espacios cerrados y áreas — <i>in the room, in Bogotá, in Colombia</i></li><li><b>on</b>: superficies y líneas — <i>on the table, on the wall, on the second floor</i></li><li><b>at</b>: puntos exactos y direcciones — <i>at the bus stop, at home, at 25 Fifth Street</i></li></ul><h4>Movimiento</h4><p><b>to</b> (hacia), <b>into</b> (hacia adentro), <b>onto</b>, <b>from</b>, <b>through</b> (a través), <b>across</b> (al otro lado), <b>along</b> (a lo largo).</p>",
+      "content_en": "<h4>Time: in, on, at</h4><ul><li><b>in</b>: months, years, centuries, parts of the day — <i>in July, in 2026, in the morning</i></li><li><b>on</b>: days and dates — <i>on Monday, on May 3rd, on my birthday</i></li><li><b>at</b>: clock times and points — <i>at 7 o'clock, at night, at Christmas</i></li></ul><h4>Place: in, on, at</h4><ul><li><b>in</b>: enclosed spaces and areas — <i>in the room, in Bogotá, in Colombia</i></li><li><b>on</b>: surfaces and lines — <i>on the table, on the wall, on the second floor</i></li><li><b>at</b>: exact points and addresses — <i>at the bus stop, at home, at 25 Fifth Street</i></li></ul><h4>Movement</h4><p><b>to</b>, <b>into</b>, <b>onto</b>, <b>from</b>, <b>through</b>, <b>across</b>, <b>along</b>.</p>",
+      "fichas": [
+        { "t": "in the morning / at night", "d": "Excepción: night lleva at, no in.", "d_en": "Exception: night takes at, not in." },
+        { "t": "on Monday / in July", "d": "Días con on; meses con in.", "d_en": "Days take on; months take in." },
+        { "t": "at home / in the house", "d": "at home es un punto; in the house es el espacio físico.", "d_en": "at home is a point; in the house is the physical space." },
+        { "t": "through vs across", "d": "through atraviesa por dentro; across pasa al otro lado.", "d_en": "through goes inside; across goes to the other side." }
+      ],
+      "quiz": [
+        { "q": "«The class starts ___ 8 a.m.»", "q_en": "\"The class starts ___ 8 a.m.\"", "o": ["in", "on", "at", "by"], "o_en": ["in", "on", "at", "by"], "a": 2, "why": "Las horas exactas llevan at.", "why_en": "Clock times take at." },
+        { "q": "«We live ___ the third floor.»", "q_en": "\"We live ___ the third floor.\"", "o": ["in", "on", "at", "to"], "o_en": ["in", "on", "at", "to"], "a": 1, "why": "Los pisos de un edificio llevan on.", "why_en": "Floors of a building take on." },
+        { "q": "«I always read ___ night.»", "q_en": "\"I always read ___ night.\"", "o": ["in", "on", "at", "during of"], "o_en": ["in", "on", "at", "during of"], "a": 2, "why": "Night es la excepción: at night.", "why_en": "Night is the exception: at night." }
+      ]
+    },
+    {
+      "id": "ingles-8-2-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Lugares de la casa y miembros de la familia",
+      "t_en": "Places in the house and family members",
+      "d": "10 min",
+      "content_es": "<h4>La casa</h4><p><b>hallway</b> (pasillo), <b>living room</b>, <b>dining room</b>, <b>kitchen</b>, <b>bedroom</b>, <b>bathroom</b>, <b>study</b> (estudio), <b>attic</b> (ático), <b>basement</b> (sótano), <b>balcony</b>, <b>backyard</b> (patio trasero), <b>roof</b> (techo), <b>fence</b> (cerca).</p><h4>La familia extendida</h4><p><b>nephew</b> (sobrino), <b>niece</b> (sobrina), <b>grandchild</b>, <b>in-laws</b>: <i>mother-in-law, brother-in-law</i>. <b>stepfather / stepmother</b> (padrastro y madrastra), <b>half-brother</b>, <b>only child</b> (hijo único), <b>twins</b> (gemelos), <b>relatives</b> (parientes).</p><h4>Ojo</h4><p>El plural de los compuestos con guion va en la primera palabra: <b>mothers-in-law</b>, no <i>mother-in-laws</i>.</p>",
+      "content_en": "<h4>The house</h4><p><b>hallway</b>, <b>living room</b>, <b>dining room</b>, <b>kitchen</b>, <b>bedroom</b>, <b>bathroom</b>, <b>study</b>, <b>attic</b>, <b>basement</b>, <b>balcony</b>, <b>backyard</b>, <b>roof</b>, <b>fence</b>.</p><h4>The extended family</h4><p><b>nephew</b>, <b>niece</b>, <b>grandchild</b>, <b>in-laws</b>: <i>mother-in-law, brother-in-law</i>. <b>stepfather / stepmother</b>, <b>half-brother</b>, <b>only child</b>, <b>twins</b>, <b>relatives</b>.</p><h4>Careful</h4><p>The plural of hyphenated compounds goes on the first word: <b>mothers-in-law</b>, not <i>mother-in-laws</i>.</p>",
+      "fichas": [
+        { "t": "attic vs basement", "d": "Ático (arriba) vs sótano (abajo).", "d_en": "The space under the roof vs the space under the house." },
+        { "t": "nephew / niece", "d": "Sobrino y sobrina.", "d_en": "The son and daughter of your sibling." },
+        { "t": "in-laws", "d": "Familia política: mother-in-law, brother-in-law.", "d_en": "Family by marriage: mother-in-law, brother-in-law." },
+        { "t": "mothers-in-law", "d": "El plural va en la primera palabra del compuesto.", "d_en": "The plural goes on the first word of the compound." }
+      ],
+      "quiz": [
+        { "q": "El hijo de mi hermana es mi…", "q_en": "My sister's son is my…", "o": ["cousin", "nephew", "niece", "grandchild"], "o_en": ["cousin", "nephew", "niece", "grandchild"], "a": 1, "why": "Nephew es el sobrino; niece es la sobrina.", "why_en": "Nephew is a male sibling's child; niece is female." },
+        { "q": "¿Cuál es el plural correcto?", "q_en": "Which is the correct plural?", "o": ["brother-in-laws", "brothers-in-law", "brothers-in-laws", "brother-in-law's"], "o_en": ["brother-in-laws", "brothers-in-law", "brothers-in-laws", "brother-in-law's"], "a": 1, "why": "El plural va en la primera palabra del compuesto.", "why_en": "The plural goes on the first word of the compound." },
+        { "q": "¿Qué es el «basement»?", "q_en": "What is the \"basement\"?", "o": ["El ático", "El sótano", "El pasillo", "El balcón"], "o_en": ["The attic", "The floor below ground level", "The hallway", "The balcony"], "a": 1, "why": "El basement está debajo del nivel del suelo.", "why_en": "The basement is below ground level." }
+      ]
+    },
+    {
+      "id": "ingles-8-2-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Personalidad: sinónimos y antónimos",
+      "t_en": "Personality: synonyms and antonyms",
+      "d": "12 min",
+      "content_es": "<h4>Rasgos positivos</h4><p><b>kind</b> (amable), <b>generous</b>, <b>honest</b>, <b>reliable</b> (confiable), <b>hard-working</b>, <b>outgoing</b> (extrovertido), <b>patient</b>, <b>funny</b>, <b>confident</b> (seguro de sí).</p><h4>Rasgos negativos</h4><p><b>selfish</b> (egoísta), <b>rude</b> (grosero), <b>lazy</b> (perezoso), <b>arrogant</b>, <b>stubborn</b> (terco), <b>moody</b> (temperamental), <b>unreliable</b>.</p><h4>Sinónimos</h4><p>kind = <i>nice, friendly, caring</i> · smart = <i>clever, bright, intelligent</i> · shy = <i>reserved, quiet, timid</i>.</p><h4>Antónimos con prefijo</h4><p><b>un-</b>: friendly → <i>unfriendly</i>, reliable → <i>unreliable</i>.<br><b>im-/in-/dis-</b>: patient → <i>impatient</i>, polite → <i>impolite</i>, honest → <i>dishonest</i>, tolerant → <i>intolerant</i>.</p>",
+      "content_en": "<h4>Positive traits</h4><p><b>kind</b>, <b>generous</b>, <b>honest</b>, <b>reliable</b>, <b>hard-working</b>, <b>outgoing</b>, <b>patient</b>, <b>funny</b>, <b>confident</b>.</p><h4>Negative traits</h4><p><b>selfish</b>, <b>rude</b>, <b>lazy</b>, <b>arrogant</b>, <b>stubborn</b>, <b>moody</b>, <b>unreliable</b>.</p><h4>Synonyms</h4><p>kind = <i>nice, friendly, caring</i> · smart = <i>clever, bright, intelligent</i> · shy = <i>reserved, quiet, timid</i>.</p><h4>Antonyms with prefixes</h4><p><b>un-</b>: friendly → <i>unfriendly</i>, reliable → <i>unreliable</i>.<br><b>im-/in-/dis-</b>: patient → <i>impatient</i>, polite → <i>impolite</i>, honest → <i>dishonest</i>, tolerant → <i>intolerant</i>.</p>",
+      "fichas": [
+        { "t": "reliable", "d": "Confiable: se puede contar con esa persona.", "d_en": "Someone you can count on." },
+        { "t": "outgoing vs shy", "d": "Extrovertido vs tímido: son antónimos.", "d_en": "Sociable vs timid: they are antonyms." },
+        { "t": "im- antes de p o m", "d": "impatient, impolite, impossible.", "d_en": "impatient, impolite, impossible." },
+        { "t": "stubborn", "d": "Terco: no cambia de opinión fácilmente.", "d_en": "Someone who refuses to change their mind." }
+      ],
+      "quiz": [
+        { "q": "El antónimo de «patient» es…", "q_en": "The antonym of \"patient\" is…", "o": ["unpatient", "impatient", "dispatient", "inpatient"], "o_en": ["unpatient", "impatient", "dispatient", "inpatient"], "a": 1, "why": "Antes de p se usa el prefijo im-.", "why_en": "Before p we use the prefix im-." },
+        { "q": "¿Cuál es sinónimo de «smart»?", "q_en": "Which is a synonym of \"smart\"?", "o": ["lazy", "clever", "rude", "moody"], "o_en": ["lazy", "clever", "rude", "moody"], "a": 1, "why": "Clever significa inteligente, igual que smart.", "why_en": "Clever means intelligent, like smart." },
+        { "q": "«He never helps anyone. He's very ___.»", "q_en": "\"He never helps anyone. He's very ___.\"", "o": ["generous", "selfish", "reliable", "outgoing"], "o_en": ["generous", "selfish", "reliable", "outgoing"], "a": 1, "why": "No ayudar a nadie describe a alguien egoísta.", "why_en": "Never helping anyone describes a selfish person." }
+      ]
+    },
+    {
+      "id": "ingles-8-2-8",
+      "num": 8,
+      "tipo": "vocabulary",
+      "t": "Ocupaciones y oficios",
+      "t_en": "Occupations",
+      "d": "10 min",
+      "content_es": "<h4>Profesiones</h4><p><b>teacher</b>, <b>doctor</b>, <b>nurse</b>, <b>engineer</b>, <b>lawyer</b> (abogado), <b>accountant</b> (contador), <b>architect</b>, <b>journalist</b>, <b>chef</b>, <b>mechanic</b>, <b>electrician</b>, <b>farmer</b> (agricultor), <b>firefighter</b>, <b>police officer</b>, <b>salesperson</b>, <b>designer</b>, <b>programmer</b>.</p><h4>Hablar del trabajo</h4><ul><li><i>What do you do?</i> — <i>I'm a nurse.</i> (siempre con <b>a/an</b>)</li><li><i>She works <b>as</b> an engineer <b>for</b> a construction company.</i></li><li><i>He works <b>in</b> education / <b>in</b> a hospital.</i></li></ul><h4>Sufijos frecuentes</h4><p><b>-er</b>: teacher, farmer · <b>-or</b>: doctor, actor · <b>-ist</b>: dentist, journalist · <b>-ian</b>: musician, electrician.</p>",
+      "content_en": "<h4>Professions</h4><p><b>teacher</b>, <b>doctor</b>, <b>nurse</b>, <b>engineer</b>, <b>lawyer</b>, <b>accountant</b>, <b>architect</b>, <b>journalist</b>, <b>chef</b>, <b>mechanic</b>, <b>electrician</b>, <b>farmer</b>, <b>firefighter</b>, <b>police officer</b>, <b>salesperson</b>, <b>designer</b>, <b>programmer</b>.</p><h4>Talking about work</h4><ul><li><i>What do you do?</i> — <i>I'm a nurse.</i> (always with <b>a/an</b>)</li><li><i>She works <b>as</b> an engineer <b>for</b> a construction company.</i></li><li><i>He works <b>in</b> education / <b>in</b> a hospital.</i></li></ul><h4>Frequent suffixes</h4><p><b>-er</b>: teacher, farmer · <b>-or</b>: doctor, actor · <b>-ist</b>: dentist, journalist · <b>-ian</b>: musician, electrician.</p>",
+      "fichas": [
+        { "t": "I'm a teacher", "d": "Las profesiones llevan a/an en inglés.", "d_en": "Professions take a/an in English." },
+        { "t": "work as", "d": "Trabajar como: work as a designer.", "d_en": "To be employed in a role: work as a designer." },
+        { "t": "-ist / -ian", "d": "Sufijos de profesión: journalist, electrician.", "d_en": "Profession suffixes: journalist, electrician." },
+        { "t": "What do you do?", "d": "Pregunta estándar por la profesión.", "d_en": "Standard question about someone's job." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["I am teacher", "I am a teacher", "I am the teacher of English always", "I teacher"], "o_en": ["I am teacher", "I am a teacher", "I am the teacher of English always", "I teacher"], "a": 1, "why": "Las profesiones siempre llevan artículo a/an.", "why_en": "Professions always take the article a/an." },
+        { "q": "«She works ___ a journalist.»", "q_en": "\"She works ___ a journalist.\"", "o": ["like", "as", "for", "in"], "o_en": ["like", "as", "for", "in"], "a": 1, "why": "Work as + profesión.", "why_en": "Work as + profession." },
+        { "q": "¿Quién repara instalaciones eléctricas?", "q_en": "Who repairs electrical installations?", "o": ["a mechanic", "an electrician", "an engineer", "an architect"], "o_en": ["a mechanic", "an electrician", "an engineer", "an architect"], "a": 1, "why": "El electrician trabaja con la electricidad.", "why_en": "An electrician works with electricity." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-8-2-repaso",
+    "titulo": "Repaso — Expressing Experiences and Connections",
+    "titulo_en": "Review — Expressing Experiences and Connections",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El <b>presente perfecto</b> conecta el pasado con el ahora: sirve para experiencias, resultados presentes y acciones que continúan. Las <b>cláusulas adverbiales</b> ordenan las ideas en el tiempo y las contraponen, y las <b>tag questions</b> piden confirmación.</p><h4>Puntos gramaticales</h4><ul><li>have/has + participio. for + duración, since + punto de inicio.</li><li>Si se dice cuándo exacto, va pasado simple.</li><li>Tag: afirmativa → negativa; se repite el auxiliar.</li><li>Sin will después de when, as soon as, until.</li><li>although + oración; despite + sustantivo. Nunca los dos con but.</li></ul><h4>Vocabulario</h4><p>Preposiciones in/on/at de tiempo y lugar, partes de la casa, familia extendida, rasgos de personalidad con prefijos negativos y profesiones con a/an.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The <b>present perfect</b> links the past with now: it serves for experiences, present results and actions that continue. <b>Adverbial clauses</b> order ideas in time and contrast them, and <b>tag questions</b> ask for confirmation.</p><h4>Grammar points</h4><ul><li>have/has + participle. for + duration, since + starting point.</li><li>If the exact time is stated, use the simple past.</li><li>Tag: affirmative → negative; the auxiliary is repeated.</li><li>No will after when, as soon as, until.</li><li>although + clause; despite + noun. Never both with but.</li></ul><h4>Vocabulary</h4><p>Prepositions in/on/at for time and place, parts of the house, extended family, personality traits with negative prefixes and professions with a/an.</p>",
+    "puntos_clave": [
+      ["for + duración; since + momento de inicio.", "for + duration; since + starting point."],
+      ["yet va al final en negativos y preguntas.", "yet goes at the end in negatives and questions."],
+      ["La tag repite el auxiliar y cambia de signo.", "The tag repeats the auxiliary and flips the polarity."],
+      ["Después de when o as soon as no va will.", "After when or as soon as there is no will."],
+      ["despite + sustantivo; although + oración.", "despite + noun; although + clause."],
+      ["at night, on Monday, in July.", "at night, on Monday, in July."]
+    ],
+    "preguntas": [
+      { "q": "«They ___ in this city since 2015.»", "q_en": "\"They ___ in this city since 2015.\"", "o": ["live", "lived", "have lived", "are living"], "o_en": ["live", "lived", "have lived", "are living"], "a": 2, "why": "Since pide presente perfecto: acción que continúa.", "why_en": "Since calls for the present perfect: an action that continues." },
+      { "q": "«Have you ___ been to the coast?»", "q_en": "\"Have you ___ been to the coast?\"", "o": ["yet", "already", "ever", "just"], "o_en": ["yet", "already", "ever", "just"], "a": 2, "why": "Ever pregunta por una experiencia alguna vez en la vida.", "why_en": "Ever asks about an experience at any time in life." },
+      { "q": "«You've finished the report, ___?»", "q_en": "\"You've finished the report, ___?\"", "o": ["have you", "haven't you", "didn't you", "don't you"], "o_en": ["have you", "haven't you", "didn't you", "don't you"], "a": 1, "why": "Oración afirmativa con have: la tag es haven't you.", "why_en": "Affirmative sentence with have: the tag is haven't you." },
+      { "q": "«I'll help you when I ___ free.»", "q_en": "\"I'll help you when I ___ free.\"", "o": ["will be", "am", "was", "will have"], "o_en": ["will be", "am", "was", "will have"], "a": 1, "why": "Después de when no se usa will.", "why_en": "After when we do not use will." },
+      { "q": "«___ being tired, she finished the race.»", "q_en": "\"___ being tired, she finished the race.\"", "o": ["Although", "Despite", "However", "Whereas"], "o_en": ["Although", "Despite", "However", "Whereas"], "a": 1, "why": "Le sigue un gerundio, así que va despite.", "why_en": "A gerund follows, so it takes despite." },
+      { "q": "«The meeting is ___ Friday ___ 3 p.m.»", "q_en": "\"The meeting is ___ Friday ___ 3 p.m.\"", "o": ["in / on", "on / at", "at / in", "on / in"], "o_en": ["in / on", "on / at", "at / in", "on / in"], "a": 1, "why": "Días con on y horas con at.", "why_en": "Days take on and clock times take at." },
+      { "q": "El antónimo de «reliable» es…", "q_en": "The antonym of \"reliable\" is…", "o": ["disreliable", "inreliable", "unreliable", "imreliable"], "o_en": ["disreliable", "inreliable", "unreliable", "imreliable"], "a": 2, "why": "Reliable forma su antónimo con el prefijo un-.", "why_en": "Reliable forms its antonym with the prefix un-." },
+      { "q": "«My aunt works ___ an architect.»", "q_en": "\"My aunt works ___ an architect.\"", "o": ["like", "as", "of", "by"], "o_en": ["like", "as", "of", "by"], "a": 1, "why": "La estructura es work as + profesión.", "why_en": "The structure is work as + profession." }
+    ]
+  }
+}

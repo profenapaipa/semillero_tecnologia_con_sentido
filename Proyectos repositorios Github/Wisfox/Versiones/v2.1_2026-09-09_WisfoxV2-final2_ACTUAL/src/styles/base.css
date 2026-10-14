@@ -1,0 +1,38 @@
+/*
+ * base.css — Tokens de diseño + reset global
+ * ==============================================
+ * Origen: extraído textualmente de wisfo_19.backup.html líneas 14-27.
+ *
+ * Qué vive aquí:
+ *   - Propiedades personalizadas :root: paleta de colores (--green*, --amber,
+ *     --coral, --teal, --blue, --purple), colores de superficie (--bg, --card,
+ *     --text, --muted, --border), y tokens de forma (--radius, --shadow).
+ *   - Reset global (*), tipografía base de body/button, estilo del scrollbar.
+ *   - .app — el grid CSS de nivel superior (barra lateral + columna principal).
+ *
+ * TODO para desarrolladores:
+ *   - refinements.css (se carga al final, ver main.css) vuelve a declarar
+ *     :root con un segundo par --radius/--shadow y agrega una variante de
+ *     sombra para [data-theme="dark"]. Eso fue un parche acumulativo en el
+ *     prototipo original. Sigue funcionando porque se carga después de este
+ *     archivo, pero los dos bloques de tokens deberían fusionarse en un
+ *     único conjunto canónico aquí cuando estés listo para tocar la cascada.
+ *   - Este es el lugar indicado para agregar nuevos tokens de diseño (escala
+ *     de espaciado, tamaños de fuente) si/cuando la app crezca más allá de
+ *     los valores en píxeles ad-hoc actuales.
+ */
+
+:root{
+  --green:#3d9960; --green-dark:#2e7d4f; --green-light:#e8f3ec; --green-soft:#f0f7f2;
+  --bg:#f6f8f4; --card:#ffffff; --text:#26352b; --muted:#7b8a80; --border:#e5ece7;
+  --amber:#e8a13c; --coral:#e8746a; --teal:#3aa8a0; --blue:#5b8dd9; --purple:#9b7bd9;
+  --radius:18px; --shadow:0 4px 18px rgba(46,125,79,.07);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--text)}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:8px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+.app{display:grid;grid-template-columns:250px 1fr;min-height:100dvh}

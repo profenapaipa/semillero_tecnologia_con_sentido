@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Interactive Resource — Likes, Routines, Emotions, Animals & Transportation</title>
+<style>
+:root{--ink:#17324d;--muted:#5d7184;--bg:#f5f8fb;--card:#fff;--line:#d9e4ec;--accent:#2b6f9f;--accent2:#e5f2fa;--good:#2f7d5a;--bad:#b44d4d}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header{background:linear-gradient(135deg,#17324d,#2b6f9f);color:white;padding:42px 7%;text-align:center}
+header h1{margin:0 0 8px;font-size:clamp(28px,5vw,48px)} header p{margin:0;opacity:.92}
+nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);padding:10px 4%;display:flex;gap:8px;overflow:auto}
+nav a{white-space:nowrap;text-decoration:none;color:var(--ink);font-weight:700;padding:9px 12px;border-radius:10px;background:#eef4f8}
+main{max-width:1200px;margin:auto;padding:28px 5%}
+section{scroll-margin-top:70px;margin:28px 0 50px}.intro,.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 18px #17324d0c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.grid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+h2{font-size:30px;margin-bottom:8px}.tag{display:inline-block;background:var(--accent2);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:13px;font-weight:800}
+.word{font-size:20px;font-weight:800}.translation{color:var(--muted)}
+.illus{height:120px;display:flex;align-items:center;justify-content:center;font-size:72px;margin-bottom:8px}
+button{border:0;border-radius:10px;padding:10px 14px;background:var(--accent);color:#fff;font-weight:750;cursor:pointer}button.secondary{background:#edf3f7;color:var(--ink)}
+button:active{transform:translateY(1px)}
+.flash{min-height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer}
+.flash .big{font-size:42px;font-weight:900}.hidden{display:none}
+.quiz{margin-top:18px}.option{display:block;width:100%;text-align:left;background:#f1f5f8;color:var(--ink);margin:8px 0}.feedback{font-weight:800;margin-top:10px}
+.sequence{display:flex;flex-wrap:wrap;gap:10px}.step{padding:12px 15px;background:#edf3f7;border-radius:12px;cursor:grab;font-weight:700}
+.dropzone{min-height:60px;border:2px dashed #aac1d2;border-radius:12px;padding:10px;margin-top:10px}
+.pill{display:inline-block;padding:7px 10px;border-radius:999px;background:#f0f5f8;margin:4px}
+footer{padding:30px 7%;background:#17324d;color:#fff}.small{font-size:13px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}th,td{padding:11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#edf3f7}
+@media(max-width:650px){header{padding:32px 5%}main{padding:20px 4%}}
+</style>
+</head>
+<body>
+<header>
+  <h1>English Around Me</h1>
+  <p>Likes & Dislikes · Daily Routines · Emotions · Animals · Transportation</p>
+  <p style="margin-top:10px;font-size:14px">Recurso interactivo consolidado a partir de la Malla Curricular de Inglés 2026 del Instituto Infantil y Juvenil.</p>
+</header>
+
+<nav>
+<a href="#gustos">❤️ Gustos</a><a href="#rutinas">🕒 Rutinas</a><a href="#emociones">😊 Emociones</a><a href="#animales">🐾 Animales</a><a href="#transporte">🚌 Transporte</a><a href="#integrador">🎯 Integrador</a>
+</nav>
+
+<main>
+<div class="intro">
+<h2>¿Qué reúne este archivo?</h2>
+<p>Este documento organiza en un solo recurso vocabulario, estructuras, ejemplos, imágenes visuales e interacciones para trabajar cinco campos recurrentes de la malla: <strong>preferences</strong>, <strong>daily routines</strong>, <strong>feelings/emotions</strong>, <strong>animals</strong> y <strong>means of transportation</strong>.</p>
+<p>La propuesta mantiene el enfoque comunicativo, el aprendizaje activo y el trabajo con situaciones familiares. Incluye lectura, producción oral, asociación imagen-palabra, práctica de pronunciación y pequeños retos.</p>
+</div>
+
+<section id="gustos">
+<h2>❤️ 1. Likes & Dislikes — Gustos y preferencias</h2>
+<div class="grid">
+<div class="card"><div class="illus">🍎</div><div class="word">I like apples.</div><div class="translation">Me gustan las manzanas.</div><button onclick="speak('I like apples')">🔊 Escuchar</button></div>
+<div class="card"><div class="illus">⚽</div><div class="word">I like playing football.</div><div class="translation">Me gusta jugar fútbol.</div><button onclick="speak('I like playing football')">🔊 Escuchar</button></div>
+<div class="card"><div class="illus">🎮</div><div class="word">I don't like video games.</div><div class="translation">No me gustan los videojuegos.</div><button onclick="speak('I don’t like video games')">🔊 Escuchar</button></div>
+<div class="card"><div class="illus">🎵</div><div class="word">I enjoy listening to music.</div><div class="translation">Disfruto escuchar música.</div><button onclick="speak('I enjoy listening to music')">🔊 Escuchar</button></div>
+</div>
+<div class="card" style="margin-top:16px">
+<span class="tag">Structures</span>
+<p><span class="pill">I like + noun</span><span class="pill">I like + verb-ing</span><span class="pill">I don't like...</span><span class="pill">My favourite ... is...</span><span class="pill">Do you like ...?</span></p>
+<p><strong>Ejemplos:</strong> “I like cats.” · “I like riding a bike.” · “My favourite animal is the dog.”</p>
+</div>
+<div class="card quiz">
+<span class="tag">Reto rápido</span><h3>Choose the correct sentence:</h3>
+<button class="option" onclick="answer(this,true)">I like playing tennis.</button>
+<button class="option" onclick="answer(this,false)">I like play tennis.</button>
+<button class="option" onclick="answer(this,false)">I liking play tennis.</button>
+<div class="feedback"></div>
+</div>
+</section>
+
+<section id="rutinas">
+<h2>🕒 2. Daily Routines — Rutinas</h2>
+<div class="grid5">
+<div class="card"><div class="illus">🌅</div><div class="word">wake up</div><div class="translation">despertarse</div><button onclick="speak('wake up')">🔊</button></div>
+<div class="card"><div class="illus">🪥</div><div class="word">brush my teeth</div><div class="translation">cepillarme los dientes</div><button onclick="speak('brush my teeth')">🔊</button></div>
+<div class="card"><div class="illus">🍳</div><div class="word">have breakfast</div><div class="translation">desayunar</div><button onclick="speak('have breakfast')">🔊</button></div>
+<div class="card"><div class="illus">🏫</div><div class="word">go to school</div><div class="translation">ir al colegio</div><button onclick="speak('go to school')">🔊</button></div>
+<div class="card"><div class="illus">📚</div><div class="word">do homework</div><div class="translation">hacer tareas</div><button onclick="speak('do homework')">🔊</button></div>
+<div class="card"><div class="illus">🌙</div><div class="word">go to bed</div><div class="translation">acostarse</div><button onclick="speak('go to bed')">🔊</button></div>
+</div>
+<div class="card" style="margin-top:16px">
+<span class="tag">Grammar</span>
+<p><strong>Present Simple:</strong> I wake up at 6:00. · I usually go to school at 7:00.</p>
+<p><strong>Frequency:</strong> <span class="pill">always</span><span class="pill">usually</span><span class="pill">sometimes</span><span class="pill">never</span></p>
+<p><strong>Present Continuous:</strong> I am doing my homework now.</p>
+</div>
+<div class="card" style="margin-top:16px">
+<h3>🔀 Ordena una rutina</h3>
+<p>Arrastra mentalmente o usa los botones para construir la secuencia.</p>
+<div class="sequence" id="routine"></div>
+<button onclick="shuffleRoutine()">🔄 Mezclar</button>
+<button class="secondary" onclick="checkRoutine()">✓ Comprobar</button>
+<div id="routineFeedback" class="feedback"></div>
+</div>
+</section>
+
+<section id="emociones">
+<h2>😊 3. Feelings & Emotions — Emociones</h2>
+<div class="grid5">
+<div class="card"><div class="illus">😄</div><div class="word">happy</div><div class="translation">feliz</div><button onclick="speak('happy')">🔊</button></div>
+<div class="card"><div class="illus">😢</div><div class="word">sad</div><div class="translation">triste</div><button onclick="speak('sad')">🔊</button></div>
+<div class="card"><div class="illus">😴</div><div class="word">sleepy</div><div class="translation">con sueño</div><button onclick="speak('sleepy')">🔊</button></div>
+<div class="card"><div class="illus">🍽️</div><div class="word">hungry</div><div class="translation">hambriento/a</div><button onclick="speak('hungry')">🔊</button></div>
+<div class="card"><div class="illus">💧</div><div class="word">thirsty</div><div class="translation">sediento/a</div><button onclick="speak('thirsty')">🔊</button></div>
+<div class="card"><div class="illus">😡</div><div class="word">angry</div><div class="translation">enojado/a</div><button onclick="speak('angry')">🔊</button></div>
+</div>
+<div class="card" style="margin-top:16px">
+<span class="tag">Useful language</span>
+<p><span class="pill">I am happy.</span><span class="pill">I am sad.</span><span class="pill">I am sleepy.</span><span class="pill">How are you?</span><span class="pill">I feel...</span></p>
+<p>La malla trabaja las emociones como un contexto comunicativo cercano y también como oportunidad para reconocer y expresar estados emocionales.</p>
+</div>
+<div class="card quiz">
+<span class="tag">Reto visual</span><h3>Which word matches 😴?</h3>
+<button class="option" onclick="answer(this,false)">angry</button>
+<button class="option" onclick="answer(this,true)">sleepy</button>
+<button class="option" onclick="answer(this,false)">happy</button>
+<div class="feedback"></div>
+</div>
+</section>
+
+<section id="animales">
+<h2>🐾 4. Animals — Animales</h2>
+<div class="grid5">
+<div class="card"><div class="illus">🐶</div><div class="word">dog</div><div class="translation">perro</div><button onclick="speak('dog')">🔊</button></div>
+<div class="card"><div class="illus">🐱</div><div class="word">cat</div><div class="translation">gato</div><button onclick="speak('cat')">🔊</button></div>
+<div class="card"><div class="illus">🐟</div><div class="word">fish</div><div class="translation">pez</div><button onclick="speak('fish')">🔊</button></div>
+<div class="card"><div class="illus">🐦</div><div class="word">bird</div><div class="translation">pájaro</div><button onclick="speak('bird')">🔊</button></div>
+<div class="card"><div class="illus">🐄</div><div class="word">cow</div><div class="translation">vaca</div><button onclick="speak('cow')">🔊</button></div>
+<div class="card"><div class="illus">🦒</div><div class="word">giraffe</div><div class="translation">jirafa</div><button onclick="speak('giraffe')">🔊</button></div>
+<div class="card"><div class="illus">🐯</div><div class="word">tiger</div><div class="translation">tigre</div><button onclick="speak('tiger')">🔊</button></div>
+<div class="card"><div class="illus">🦥</div><div class="word">sloth</div><div class="translation">perezoso</div><button onclick="speak('sloth')">🔊</button></div>
+</div>
+<div class="card" style="margin-top:16px">
+<span class="tag">Structures</span>
+<p><span class="pill">It is a...</span><span class="pill">It lives in...</span><span class="pill">It eats...</span><span class="pill">It can...</span><span class="pill">My favourite animal is...</span></p>
+<p><strong>Habitats:</strong> water · land · air · farm · rainforest · mountains · desert</p>
+<p><strong>Examples:</strong> “A fish can swim.” · “A bird can fly.” · “A cow lives on a farm.”</p>
+</div>
+<div class="card quiz">
+<span class="tag">Clasificación</span><h3>Where does a fish live?</h3>
+<button class="option" onclick="answer(this,true)">In water.</button>
+<button class="option" onclick="answer(this,false)">In the desert.</button>
+<button class="option" onclick="answer(this,false)">In the mountains.</button>
+<div class="feedback"></div>
+</div>
+</section>
+
+<section id="transporte">
+<h2>🚌 5. Transportation — Medios de transporte</h2>
+<div class="grid5">
+<div class="card"><div class="illus">🚲</div><div class="word">bike</div><div class="translation">bicicleta</div><button onclick="speak('bike')">🔊</button></div>
+<div class="card"><div class="illus">🛴</div><div class="word">scooter</div><div class="translation">patinete</div><button onclick="speak('scooter')">🔊</button></div>
+<div class="card"><div class="illus">🚌</div><div class="word">bus</div><div class="translation">bus</div><button onclick="speak('bus')">🔊</button></div>
+<div class="card"><div class="illus">🚗</div><div class="word">car</div><div class="translation">carro</div><button onclick="speak('car')">🔊</button></div>
+<div class="card"><div class="illus">🚆</div><div class="word">train</div><div class="translation">tren</div><button onclick="speak('train')">🔊</button></div>
+<div class="card"><div class="illus">✈️</div><div class="word">plane</div><div class="translation">avión</div><button onclick="speak('plane')">🔊</button></div>
+<div class="card"><div class="illus">🚢</div><div class="word">boat</div><div class="translation">barco</div><button onclick="speak('boat')">🔊</button></div>
+<div class="card"><div class="illus">🚕</div><div class="word">taxi</div><div class="translation">taxi</div><button onclick="speak('taxi')">🔊</button></div>
+</div>
+<div class="card" style="margin-top:16px">
+<span class="tag">Useful language</span>
+<p><span class="pill">I go by bus.</span><span class="pill">I ride a bike.</span><span class="pill">How do you get around?</span><span class="pill">Go straight on.</span><span class="pill">Turn left/right.</span></p>
+<p>En la malla, transporte aparece vinculado con ciudad, direcciones, viajes, exploración y experiencias.</p>
+</div>
+<div class="card quiz">
+<span class="tag">Reto</span><h3>Choose the best sentence:</h3>
+<button class="option" onclick="answer(this,true)">I go to school by bus.</button>
+<button class="option" onclick="answer(this,false)">I go to school by busing.</button>
+<button class="option" onclick="answer(this,false)">I go school bus.</button>
+<div class="feedback"></div>
+</div>
+</section>
+
+<section id="integrador">
+<h2>🎯 6. Actividad integradora — My Life, My World</h2>
+<div class="card">
+<h3>Mini proyecto</h3>
+<p>Construye una presentación de 5 partes. Cada estudiante puede elegir una imagen, dibujo o fotografía para cada apartado.</p>
+<table>
+<tr><th>Parte</th><th>Pregunta guía</th><th>Modelo en inglés</th></tr>
+<tr><td>❤️ Likes</td><td>What do you like?</td><td>I like music and football.</td></tr>
+<tr><td>🕒 Routine</td><td>What do you do every day?</td><td>I usually go to school at seven.</td></tr>
+<tr><td>😊 Emotion</td><td>How do you feel?</td><td>I am happy today.</td></tr>
+<tr><td>🐾 Animal</td><td>What is your favourite animal?</td><td>My favourite animal is a dog.</td></tr>
+<tr><td>🚌 Transport</td><td>How do you get around?</td><td>I go by bus.</td></tr>
+</table>
+<p style="margin-top:16px"><button onclick="speak('I like music and football. I usually go to school at seven. I am happy today. My favourite animal is a dog. I go by bus.')">🔊 Escuchar ejemplo completo</button></p>
+</div>
+<div class="card" style="margin-top:16px">
+<h3>🃏 Flashcard aleatoria</h3>
+<div id="flash" class="flash" onclick="nextFlash()">
+<div class="big">Click aquí</div><div>para comenzar</div>
+</div>
+<button onclick="nextFlash()">➡️ Siguiente</button>
+</div>
+</section>
+
+<section>
+<h2>📚 Progresión curricular resumida</h2>
+<div class="card">
+<table>
+<tr><th>Campo</th><th>Primeros niveles</th><th>Progresión posterior</th></tr>
+<tr><td>Gustos</td><td>I like..., favourite...</td><td>likes/dislikes, enjoy + -ing, prefer to, opiniones y preferencias</td></tr>
+<tr><td>Rutinas</td><td>acciones cotidianas y secuencias</td><td>Present Simple, Present Continuous y adverbios de frecuencia</td></tr>
+<tr><td>Emociones</td><td>happy, sad, hungry, sleepy, thirsty</td><td>descripción de emociones, experiencias personales y actitudes</td></tr>
+<tr><td>Animales</td><td>pets, farm animals, land/water/air</td><td>hábitats, características, acciones, conservación y presentaciones</td></tr>
+<tr><td>Transporte</td><td>vocabulario básico</td><td>direcciones, viajes, experiencias y formas de desplazamiento</td></tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>📝 Fuente y criterio de consolidación</h2>
+<div class="card">
+<p>La base principal es <strong>Malla_Curricular_Ingles_2026_para_VSCode.md</strong>, documento convertido desde la malla curricular de Inglés 2026. Allí se plantea un enfoque comunicativo, constructivista, cooperativo y basado en proyectos, con integración de tecnología y aprendizaje activo.</p>
+<p>Los cinco campos fueron seleccionados porque aparecen de forma recurrente en diferentes grados y periodos, aunque con distinto nivel de complejidad gramatical y comunicativa.</p>
+<p class="small">Nota: las ilustraciones de este archivo son representaciones visuales mediante emojis para mantener el recurso autocontenido y evitar depender de descargas externas. Los botones de pronunciación usan la función de síntesis de voz disponible en el navegador.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<strong>English Around Me · Recurso interactivo</strong>
+<p style="opacity:.85">Diseñado para lectura, exploración, pronunciación y actividades de aula. Puede abrirse directamente en Chrome, Edge, Firefox u otros navegadores modernos.</p>
+</footer>
+
+<script>
+function speak(text){
+  if(!('speechSynthesis' in window)){alert('Este navegador no dispone de síntesis de voz.');return;}
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.82;u.pitch=1;
+  speechSynthesis.speak(u);
+}
+function answer(btn,correct){
+  const box=btn.parentElement.querySelector('.feedback');
+  box.textContent=correct?'✓ Correct!':'✗ Try again.';
+  box.style.color=correct?'#2f7d5a':'#b44d4d';
+}
+const routineItems=['wake up','brush my teeth','have breakfast','go to school','do homework','go to bed'];
+function renderRoutine(items){
+ const el=document.getElementById('routine');el.innerHTML='';
+ items.forEach((x,i)=>{const b=document.createElement('div');b.className='step';b.textContent=x;b.draggable=true;b.dataset.v=x;
+ b.addEventListener('dragstart',e=>e.dataTransfer.setData('text/plain',i));
+ b.addEventListener('dragover',e=>e.preventDefault());
+ b.addEventListener('drop',e=>{e.preventDefault();const from=+e.dataTransfer.getData('text/plain');const arr=[...document.querySelectorAll('.step')].map(n=>n.dataset.v);[arr[from],arr[i]]=[arr[i],arr[from]];renderRoutine(arr)});
+ el.appendChild(b);});
+}
+function shuffleRoutine(){renderRoutine([...routineItems].sort(()=>Math.random()-.5));document.getElementById('routineFeedback').textContent='';}
+function checkRoutine(){
+ const arr=[...document.querySelectorAll('.step')].map(n=>n.dataset.v);
+ const ok=arr.every((v,i)=>v===routineItems[i]);
+ const f=document.getElementById('routineFeedback');f.textContent=ok?'✓ Excellent! Routine in order.':'✗ Not quite. Think about the order of a normal day.';f.style.color=ok?'#2f7d5a':'#b44d4d';
+}
+renderRoutine([...routineItems]);
+const flashcards=[
+['❤️','I like music.','Gustos'],['⚽','I like playing football.','Gustos'],
+['🌅','I wake up early.','Rutinas'],['📚','I do my homework.','Rutinas'],
+['😄','I am happy.','Emociones'],['😴','I am sleepy.','Emociones'],
+['🐶','It is a dog.','Animales'],['🐟','A fish can swim.','Animales'],
+['🚲','I ride a bike.','Transporte'],['🚌','I go by bus.','Transporte']
+];
+let fi=-1;
+function nextFlash(){fi=(fi+1)%flashcards.length;const [icon,text,cat]=flashcards[fi];document.getElementById('flash').innerHTML='<div class="big">'+icon+'</div><div><strong>'+text+'</strong></div><div class="small">'+cat+' · haz clic para escuchar</div>';document.getElementById('flash').onclick=()=>speak(text);}
+</script>
+</body>
+</html>

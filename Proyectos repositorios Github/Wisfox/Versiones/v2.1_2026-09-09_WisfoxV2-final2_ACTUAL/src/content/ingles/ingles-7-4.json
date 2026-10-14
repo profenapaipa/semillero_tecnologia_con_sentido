@@ -1,0 +1,216 @@
+{
+  "id": "ingles-7-4",
+  "materia": "ingles",
+  "grado": "7",
+  "grado_nombre": "Séptimo",
+  "periodo": 4,
+  "periodo_label": { "es": "Periodo IV", "en": "Term IV" },
+  "titulo": "Yummy and Happy!",
+  "titulo_es": "Rico y feliz: alimentación y emociones",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Hablo de alimentación y bienestar comparando opciones y expresando preferencias. Describo emociones y estados de ánimo con vocabulario preciso.",
+  "competencias": "Distinguir sustantivos contables e incontables; preguntar por cantidades; comparar y establecer superlativos con adjetivos regulares e irregulares; expresar gustos, emociones y hábitos saludables.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "The Healthiest Menu",
+    "descripcion_es": "En grupos, los estudiantes diseñan el menú de una semana y lo presentan comparando platos (healthier, the most nutritious) y explicando cómo se sienten con cada tipo de comida.",
+    "descripcion_en": "In groups, students design a one-week menu and present it comparing dishes (healthier, the most nutritious) and explaining how each type of food makes them feel."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-7-4-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Sustantivos contables e incontables",
+      "t_en": "Count and noncount nouns",
+      "d": "12 min",
+      "content_es": "<h4>La diferencia</h4><ul><li><b>Contables</b>: se pueden contar y tienen plural. <i>an apple, two apples</i></li><li><b>Incontables</b>: no se cuentan en unidades y no tienen plural. <i>rice, water, milk, bread, sugar, money, information, advice</i></li></ul><h4>Cómo medir los incontables</h4><p>Con recipientes o porciones: <i>a glass of water, a piece of bread, a cup of coffee, a bottle of milk, a kilo of rice, a slice of cheese.</i></p><h4>Concordancia</h4><p>Los incontables llevan verbo en <b>singular</b>: <i>The news <b>is</b> good.</i> · <i>The information <b>is</b> useful.</i></p><h4>Trampa</h4><p>Algunas palabras que en español son contables, en inglés no lo son: <b>advice</b>, <b>furniture</b>, <b>homework</b>, <b>bread</b>, <b>money</b>.</p>",
+      "content_en": "<h4>The difference</h4><ul><li><b>Countable</b>: they can be counted and have a plural. <i>an apple, two apples</i></li><li><b>Uncountable</b>: they are not counted in units and have no plural. <i>rice, water, milk, bread, sugar, money, information, advice</i></li></ul><h4>How to measure uncountables</h4><p>With containers or portions: <i>a glass of water, a piece of bread, a cup of coffee, a bottle of milk, a kilo of rice, a slice of cheese.</i></p><h4>Agreement</h4><p>Uncountables take a <b>singular</b> verb: <i>The news <b>is</b> good.</i> · <i>The information <b>is</b> useful.</i></p><h4>Trap</h4><p>Some words that are countable in Spanish are not in English: <b>advice</b>, <b>furniture</b>, <b>homework</b>, <b>bread</b>, <b>money</b>.</p>",
+      "fichas": [
+        { "t": "Incontables", "d": "rice, water, money, advice: sin plural.", "d_en": "rice, water, money, advice: no plural form." },
+        { "t": "a piece of…", "d": "Porción para medir incontables: a piece of bread.", "d_en": "Portion used to measure uncountables: a piece of bread." },
+        { "t": "Verbo en singular", "d": "The information is useful, no are useful.", "d_en": "The information is useful, not are useful." },
+        { "t": "advice / furniture", "d": "Son incontables aunque en español se pluralicen.", "d_en": "They are uncountable in English." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál palabra es incontable?", "q_en": "Which word is uncountable?", "o": ["apple", "chair", "advice", "book"], "o_en": ["apple", "chair", "advice", "book"], "a": 2, "why": "Advice no tiene plural: se dice a piece of advice.", "why_en": "Advice has no plural: we say a piece of advice." },
+        { "q": "«The information ___ very clear.»", "q_en": "\"The information ___ very clear.\"", "o": ["are", "is", "were", "have"], "o_en": ["are", "is", "were", "have"], "a": 1, "why": "Los incontables llevan verbo en singular.", "why_en": "Uncountables take a singular verb." },
+        { "q": "«Can I have ___ of bread?»", "q_en": "\"Can I have ___ of bread?\"", "o": ["a", "one", "a piece", "two"], "o_en": ["a", "one", "a piece", "two"], "a": 2, "why": "El pan se mide en porciones: a piece of bread.", "why_en": "Bread is measured in portions: a piece of bread." }
+      ]
+    },
+    {
+      "id": "ingles-7-4-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "How much / How many y cuantificadores en preguntas",
+      "t_en": "How much / How many and quantifiers in questions",
+      "d": "12 min",
+      "content_es": "<h4>La pregunta correcta</h4><ul><li><b>How many</b> + contable plural: <i>How many eggs do we need?</i></li><li><b>How much</b> + incontable: <i>How much milk is there?</i></li></ul><h4>Respuestas típicas</h4><p><i>A lot. / Not much. / Only a few. / None. / Two kilos.</i></p><h4>Cuantificadores en preguntas y negaciones</h4><ul><li><b>any</b>: <i>Do we have <b>any</b> sugar?</i> · <i>There isn't <b>any</b> juice.</i></li><li><b>enough</b>: <i>Is there <b>enough</b> rice for everyone?</i></li><li><b>too much / too many</b> (demasiado): <i>You eat too much sugar. / Too many cookies.</i></li></ul><h4>Ojo</h4><p><b>How much</b> también sirve para preguntar precios: <i>How much is it?</i></p>",
+      "content_en": "<h4>The right question</h4><ul><li><b>How many</b> + plural countable: <i>How many eggs do we need?</i></li><li><b>How much</b> + uncountable: <i>How much milk is there?</i></li></ul><h4>Typical answers</h4><p><i>A lot. / Not much. / Only a few. / None. / Two kilos.</i></p><h4>Quantifiers in questions and negatives</h4><ul><li><b>any</b>: <i>Do we have <b>any</b> sugar?</i> · <i>There isn't <b>any</b> juice.</i></li><li><b>enough</b>: <i>Is there <b>enough</b> rice for everyone?</i></li><li><b>too much / too many</b>: <i>You eat too much sugar. / Too many cookies.</i></li></ul><h4>Careful</h4><p><b>How much</b> is also used to ask prices: <i>How much is it?</i></p>",
+      "fichas": [
+        { "t": "How many + contable", "d": "How many students are there?", "d_en": "How many students are there?" },
+        { "t": "How much + incontable", "d": "How much water do you drink?", "d_en": "How much water do you drink?" },
+        { "t": "enough", "d": "Suficiente. Va antes del sustantivo: enough time.", "d_en": "Sufficient. It goes before the noun: enough time." },
+        { "t": "too much / too many", "d": "Demasiado: cantidad excesiva y negativa.", "d_en": "An excessive, negative amount." }
+      ],
+      "quiz": [
+        { "q": "«___ cheese do you want on your pizza?»", "q_en": "\"___ cheese do you want on your pizza?\"", "o": ["How many", "How much", "How long", "How often"], "o_en": ["How many", "How much", "How long", "How often"], "a": 1, "why": "Cheese es incontable: how much.", "why_en": "Cheese is uncountable: how much." },
+        { "q": "«You drink ___ soda. It's not healthy.»", "q_en": "\"You drink ___ soda. It's not healthy.\"", "o": ["too many", "too much", "enough", "a few"], "o_en": ["too many", "too much", "enough", "a few"], "a": 1, "why": "Soda es incontable y la cantidad es excesiva: too much.", "why_en": "Soda is uncountable and the amount is excessive: too much." },
+        { "q": "«Are there ___ apples left?»", "q_en": "\"Are there ___ apples left?\"", "o": ["some", "any", "much", "a little"], "o_en": ["some", "any", "much", "a little"], "a": 1, "why": "En preguntas se usa any.", "why_en": "In questions we use any." }
+      ]
+    },
+    {
+      "id": "ingles-7-4-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Adjetivos comparativos",
+      "t_en": "Comparative adjectives",
+      "d": "14 min",
+      "content_es": "<h4>Comparar dos cosas</h4><p>Estructura: <b>adjetivo comparativo + than</b>. <i>Apples are <b>healthier than</b> chips.</i></p><h4>Cómo se forman</h4><ul><li>Adjetivos cortos (1 sílaba) → <b>-er</b>: <i>tall → taller</i>, <i>cheap → cheaper</i></li><li>Termina en -e → solo <b>-r</b>: <i>large → larger</i></li><li>Consonante + y → <b>-ier</b>: <i>happy → happier</i>, <i>healthy → healthier</i></li><li>Consonante-vocal-consonante corta → se dobla: <i>big → bigger</i>, <i>hot → hotter</i></li><li>Adjetivos largos (2+ sílabas) → <b>more</b> + adjetivo: <i>more expensive, more interesting</i></li></ul><h4>Otras comparaciones</h4><ul><li>Igualdad: <b>as … as</b> — <i>She is <b>as tall as</b> her brother.</i></li><li>Desigualdad: <b>not as … as</b> — <i>Soda isn't as healthy as water.</i></li></ul>",
+      "content_en": "<h4>Comparing two things</h4><p>Structure: <b>comparative adjective + than</b>. <i>Apples are <b>healthier than</b> chips.</i></p><h4>How they are formed</h4><ul><li>Short adjectives (1 syllable) → <b>-er</b>: <i>tall → taller</i>, <i>cheap → cheaper</i></li><li>Ending in -e → just <b>-r</b>: <i>large → larger</i></li><li>Consonant + y → <b>-ier</b>: <i>happy → happier</i>, <i>healthy → healthier</i></li><li>Short consonant-vowel-consonant → double it: <i>big → bigger</i>, <i>hot → hotter</i></li><li>Long adjectives (2+ syllables) → <b>more</b> + adjective: <i>more expensive, more interesting</i></li></ul><h4>Other comparisons</h4><ul><li>Equality: <b>as … as</b> — <i>She is <b>as tall as</b> her brother.</i></li><li>Inequality: <b>not as … as</b> — <i>Soda isn't as healthy as water.</i></li></ul>",
+      "fichas": [
+        { "t": "-er + than", "d": "Adjetivos cortos: cheaper than, faster than.", "d_en": "Short adjectives: cheaper than, faster than." },
+        { "t": "more + adjetivo largo", "d": "more expensive, more delicious. Nunca more cheaper.", "d_en": "more expensive, more delicious. Never more cheaper." },
+        { "t": "big → bigger", "d": "Se dobla la consonante final en adjetivos cortos.", "d_en": "The final consonant doubles in short adjectives." },
+        { "t": "as … as", "d": "Compara dos cosas iguales: as tall as.", "d_en": "Compares two equal things: as tall as." }
+      ],
+      "quiz": [
+        { "q": "«Fruit is ___ than candy.»", "q_en": "\"Fruit is ___ than candy.\"", "o": ["healthy", "healthier", "more healthy", "healthiest"], "o_en": ["healthy", "healthier", "more healthy", "healthiest"], "a": 1, "why": "Healthy termina en consonante + y: healthier.", "why_en": "Healthy ends in consonant + y: healthier." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["more cheaper", "cheaper", "cheapest than", "most cheap"], "o_en": ["more cheaper", "cheaper", "cheapest than", "most cheap"], "a": 1, "why": "No se combinan more y -er en el mismo adjetivo.", "why_en": "more and -er are never combined on the same adjective." },
+        { "q": "«This restaurant is ___ than that one.»", "q_en": "\"This restaurant is ___ than that one.\"", "o": ["expensiver", "more expensive", "expensivest", "most expensive"], "o_en": ["expensiver", "more expensive", "expensivest", "most expensive"], "a": 1, "why": "Expensive es largo: se usa more.", "why_en": "Expensive is a long adjective: it takes more." }
+      ]
+    },
+    {
+      "id": "ingles-7-4-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Adjetivos superlativos",
+      "t_en": "Superlative adjectives",
+      "d": "12 min",
+      "content_es": "<h4>El máximo del grupo</h4><p>Estructura: <b>the + superlativo</b>. <i>This is <b>the best</b> restaurant in town.</i></p><h4>Cómo se forman</h4><ul><li>Cortos → <b>the -est</b>: <i>tall → the tallest</i>, <i>big → the biggest</i></li><li>Consonante + y → <b>the -iest</b>: <i>happy → the happiest</i></li><li>Largos → <b>the most</b> + adjetivo: <i>the most delicious</i></li></ul><h4>El artículo the es obligatorio</h4><p>Siempre se dice <i>the tallest</i>, no <i>tallest</i> solo.</p><h4>Complementos frecuentes</h4><p><b>in</b> + lugar: <i>the biggest city <b>in</b> Colombia</i>.<br><b>of</b> + grupo: <i>the youngest <b>of</b> my cousins</i>.<br>Con presente perfecto: <i>the best movie I have ever seen</i>.</p>",
+      "content_en": "<h4>The top of the group</h4><p>Structure: <b>the + superlative</b>. <i>This is <b>the best</b> restaurant in town.</i></p><h4>How they are formed</h4><ul><li>Short → <b>the -est</b>: <i>tall → the tallest</i>, <i>big → the biggest</i></li><li>Consonant + y → <b>the -iest</b>: <i>happy → the happiest</i></li><li>Long → <b>the most</b> + adjective: <i>the most delicious</i></li></ul><h4>The article the is compulsory</h4><p>We always say <i>the tallest</i>, never just <i>tallest</i>.</p><h4>Frequent complements</h4><p><b>in</b> + place: <i>the biggest city <b>in</b> Colombia</i>.<br><b>of</b> + group: <i>the youngest <b>of</b> my cousins</i>.<br>With the present perfect: <i>the best movie I have ever seen</i>.</p>",
+      "fichas": [
+        { "t": "the + -est", "d": "Superlativo de adjetivos cortos: the fastest.", "d_en": "Superlative of short adjectives: the fastest." },
+        { "t": "the most + adjetivo largo", "d": "the most interesting, the most expensive.", "d_en": "the most interesting, the most expensive." },
+        { "t": "the es obligatorio", "d": "Siempre se dice the best, nunca best solo.", "d_en": "We always say the best, never just best." },
+        { "t": "in + lugar / of + grupo", "d": "the tallest in the class, the oldest of the three.", "d_en": "the tallest in the class, the oldest of the three." }
+      ],
+      "quiz": [
+        { "q": "«Bogotá is ___ city in Colombia.»", "q_en": "\"Bogotá is ___ city in Colombia.\"", "o": ["the bigger", "biggest", "the biggest", "most big"], "o_en": ["the bigger", "biggest", "the biggest", "most big"], "a": 2, "why": "Superlativo de adjetivo corto con el artículo the.", "why_en": "Superlative of a short adjective with the article the." },
+        { "q": "«That was ___ movie of the year.»", "q_en": "\"That was ___ movie of the year.\"", "o": ["the most exciting", "the excitingest", "more exciting", "most exciting than"], "o_en": ["the most exciting", "the excitingest", "more exciting", "most exciting than"], "a": 0, "why": "Exciting es largo: the most exciting.", "why_en": "Exciting is long: the most exciting." },
+        { "q": "«She is the ___ student in the class.»", "q_en": "\"She is the ___ student in the class.\"", "o": ["happyest", "happiest", "most happy", "happier"], "o_en": ["happyest", "happiest", "most happy", "happier"], "a": 1, "why": "Consonante + y cambia a -iest.", "why_en": "Consonant + y changes to -iest." }
+      ]
+    },
+    {
+      "id": "ingles-7-4-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "Comparativos y superlativos irregulares",
+      "t_en": "Irregular comparatives and superlatives",
+      "d": "10 min",
+      "content_es": "<h4>Los que no siguen la regla</h4><ul><li>good → <b>better</b> → <b>the best</b></li><li>bad → <b>worse</b> → <b>the worst</b></li><li>far → <b>farther / further</b> → <b>the farthest / the furthest</b></li><li>little → <b>less</b> → <b>the least</b></li><li>much / many → <b>more</b> → <b>the most</b></li></ul><h4>Errores comunes</h4><p>No existe <i>gooder</i>, <i>more better</i> ni <i>baddest</i>. Se dice <b>better than</b> y <b>the worst</b>.</p><h4>En contexto</h4><p><i>Vegetables are <b>better</b> for you <b>than</b> fried food.</i><br><i>That was <b>the worst</b> day of my life.</i><br><i>I eat <b>less</b> sugar now.</i></p>",
+      "content_en": "<h4>The ones that break the rule</h4><ul><li>good → <b>better</b> → <b>the best</b></li><li>bad → <b>worse</b> → <b>the worst</b></li><li>far → <b>farther / further</b> → <b>the farthest / the furthest</b></li><li>little → <b>less</b> → <b>the least</b></li><li>much / many → <b>more</b> → <b>the most</b></li></ul><h4>Common mistakes</h4><p>There is no <i>gooder</i>, <i>more better</i> or <i>baddest</i>. We say <b>better than</b> and <b>the worst</b>.</p><h4>In context</h4><p><i>Vegetables are <b>better</b> for you <b>than</b> fried food.</i><br><i>That was <b>the worst</b> day of my life.</i><br><i>I eat <b>less</b> sugar now.</i></p>",
+      "fichas": [
+        { "t": "good → better → the best", "d": "El irregular más frecuente del inglés.", "d_en": "The most frequent irregular in English." },
+        { "t": "bad → worse → the worst", "d": "No existe badder ni baddest.", "d_en": "There is no badder or baddest." },
+        { "t": "little → less → the least", "d": "Se usa con incontables: less sugar.", "d_en": "Used with uncountables: less sugar." },
+        { "t": "many → more → the most", "d": "Se usa con contables e incontables.", "d_en": "Used with countables and uncountables." }
+      ],
+      "quiz": [
+        { "q": "«This soup is ___ than the other one.»", "q_en": "\"This soup is ___ than the other one.\"", "o": ["gooder", "more good", "better", "the best"], "o_en": ["gooder", "more good", "better", "the best"], "a": 2, "why": "El comparativo de good es better.", "why_en": "The comparative of good is better." },
+        { "q": "«It was ___ movie I've ever seen.»", "q_en": "\"It was ___ movie I've ever seen.\"", "o": ["the worse", "the worst", "the baddest", "worse"], "o_en": ["the worse", "the worst", "the baddest", "worse"], "a": 1, "why": "El superlativo de bad es the worst.", "why_en": "The superlative of bad is the worst." },
+        { "q": "«I drink ___ coffee than before.»", "q_en": "\"I drink ___ coffee than before.\"", "o": ["littler", "less", "fewer", "the least"], "o_en": ["littler", "less", "fewer", "the least"], "a": 1, "why": "Coffee es incontable: el comparativo es less.", "why_en": "Coffee is uncountable: the comparative is less." }
+      ]
+    },
+    {
+      "id": "ingles-7-4-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "El alfabeto y el deletreo aplicado",
+      "t_en": "The alphabet and spelling in practice",
+      "d": "8 min",
+      "content_es": "<h4>Deletrear en situaciones reales</h4><p>Se usa para dar tu nombre, un correo o un ingrediente que el otro no conoce.</p><ul><li><i>My name is Yeimi. Y-E-I-M-I.</i></li><li><i>My email is ana punto lopez arroba mail punto com</i> → <i>ana dot lopez at mail dot com</i>.</li></ul><h4>Símbolos</h4><p><b>@</b> = <i>at</i> · <b>.</b> = <i>dot</i> · <b>_</b> = <i>underscore</i> · <b>-</b> = <i>hyphen o dash</i> · <b>/</b> = <i>slash</i>.</p><h4>Palabras difíciles de comida</h4><p><i>vegetable, restaurant, chocolate, sandwich, receipt, biscuit</i> — todas tienen letras que no se pronuncian.</p><p>Frases: <i>Could you spell that, please? · How do you spell it? · It's spelled with a double L.</i></p>",
+      "content_en": "<h4>Spelling in real situations</h4><p>You use it to give your name, an email address or an ingredient the other person does not know.</p><ul><li><i>My name is Yeimi. Y-E-I-M-I.</i></li><li><i>My email is ana dot lopez at mail dot com.</i></li></ul><h4>Symbols</h4><p><b>@</b> = <i>at</i> · <b>.</b> = <i>dot</i> · <b>_</b> = <i>underscore</i> · <b>-</b> = <i>hyphen or dash</i> · <b>/</b> = <i>slash</i>.</p><h4>Tricky food words</h4><p><i>vegetable, restaurant, chocolate, sandwich, receipt, biscuit</i> — they all have silent letters.</p><p>Phrases: <i>Could you spell that, please? · How do you spell it? · It's spelled with a double L.</i></p>",
+      "fichas": [
+        { "t": "@ = at", "d": "El símbolo de arroba se lee at en un correo.", "d_en": "The symbol is read at in an email address." },
+        { "t": ". = dot", "d": "El punto de una dirección web o correo se lee dot.", "d_en": "The dot in a web or email address." },
+        { "t": "_ = underscore", "d": "El guion bajo se llama underscore.", "d_en": "The low line is called underscore." },
+        { "t": "Could you spell that?", "d": "Petición educada para que deletreen algo.", "d_en": "Polite request to have something spelled out." }
+      ],
+      "quiz": [
+        { "q": "¿Cómo se lee «@» en un correo?", "q_en": "How is \"@\" read in an email address?", "o": ["arroba", "at", "and", "a"], "o_en": ["arroba", "at", "and", "a"], "a": 1, "why": "En inglés el símbolo se lee at.", "why_en": "In English the symbol is read at." },
+        { "q": "¿Cómo se lee «_»?", "q_en": "How is \"_\" read?", "o": ["dash", "underscore", "slash", "dot"], "o_en": ["dash", "underscore", "slash", "dot"], "a": 1, "why": "El guion bajo es underscore.", "why_en": "The low line is called underscore." },
+        { "q": "¿Cuál petición es correcta?", "q_en": "Which request is correct?", "o": ["How do you write that letter by letter?", "Could you spell that, please?", "Could you write that with letters?", "How is that in letters?"], "o_en": ["How do you write that letter by letter?", "Could you spell that, please?", "Could you write that with letters?", "How is that in letters?"], "a": 1, "why": "Spell es el verbo específico para deletrear.", "why_en": "Spell is the specific verb for saying letters one by one." }
+      ]
+    },
+    {
+      "id": "ingles-7-4-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Comida y bebidas",
+      "t_en": "Food and drinks",
+      "d": "12 min",
+      "content_es": "<h4>Grupos de alimentos</h4><p><b>fruits</b>: apple, banana, orange, grapes, pineapple, watermelon.<br><b>vegetables</b>: carrot, tomato, onion, lettuce, potato, spinach.<br><b>proteins</b>: chicken, beef, pork, fish, eggs, beans, lentils.<br><b>dairy</b>: milk, cheese, yogurt, butter.<br><b>grains</b>: rice, pasta, bread, cereal, corn.</p><h4>Formas de preparar</h4><p><b>fried</b> (frito), <b>boiled</b> (hervido), <b>baked</b> (al horno), <b>grilled</b> (a la parrilla), <b>raw</b> (crudo), <b>roasted</b> (asado).</p><h4>Sabores</h4><p><b>sweet</b>, <b>salty</b>, <b>sour</b> (ácido), <b>bitter</b> (amargo), <b>spicy</b> (picante), <b>tasty / delicious</b>.</p><h4>Alimentación saludable</h4><p><i>A balanced diet includes fruits, vegetables and proteins. You should avoid fried food and sugary drinks.</i></p>",
+      "content_en": "<h4>Food groups</h4><p><b>fruits</b>: apple, banana, orange, grapes, pineapple, watermelon.<br><b>vegetables</b>: carrot, tomato, onion, lettuce, potato, spinach.<br><b>proteins</b>: chicken, beef, pork, fish, eggs, beans, lentils.<br><b>dairy</b>: milk, cheese, yogurt, butter.<br><b>grains</b>: rice, pasta, bread, cereal, corn.</p><h4>Ways of cooking</h4><p><b>fried</b>, <b>boiled</b>, <b>baked</b>, <b>grilled</b>, <b>raw</b>, <b>roasted</b>.</p><h4>Flavors</h4><p><b>sweet</b>, <b>salty</b>, <b>sour</b>, <b>bitter</b>, <b>spicy</b>, <b>tasty / delicious</b>.</p><h4>Healthy eating</h4><p><i>A balanced diet includes fruits, vegetables and proteins. You should avoid fried food and sugary drinks.</i></p>",
+      "fichas": [
+        { "t": "dairy", "d": "Lácteos: leche, queso, yogur, mantequilla.", "d_en": "Milk, cheese, yogurt and butter." },
+        { "t": "grilled vs fried", "d": "A la parrilla vs frito en aceite.", "d_en": "Cooked on a grill vs cooked in oil." },
+        { "t": "sour vs bitter", "d": "Ácido (limón) vs amargo (café sin azúcar).", "d_en": "Sour like lemon vs bitter like black coffee." },
+        { "t": "balanced diet", "d": "Dieta equilibrada con todos los grupos.", "d_en": "A diet with all the food groups." }
+      ],
+      "quiz": [
+        { "q": "¿A qué grupo pertenece el yogur?", "q_en": "Which group does yogurt belong to?", "o": ["grains", "dairy", "proteins", "fruits"], "o_en": ["grains", "dairy", "proteins", "fruits"], "a": 1, "why": "El yogur es un lácteo: dairy.", "why_en": "Yogurt is a dairy product." },
+        { "q": "El limón es…", "q_en": "A lemon is…", "o": ["sweet", "sour", "bitter", "salty"], "o_en": ["sweet", "sour", "bitter", "salty"], "a": 1, "why": "Sour describe el sabor ácido del limón.", "why_en": "Sour describes the acid taste of lemon." },
+        { "q": "«I prefer ___ chicken to fried chicken.»", "q_en": "\"I prefer ___ chicken to fried chicken.\"", "o": ["grilled", "raw", "sour", "salty"], "o_en": ["grilled", "raw", "sour", "salty"], "a": 0, "why": "Grilled es a la parrilla, la alternativa saludable a lo frito.", "why_en": "Grilled is the healthier alternative to fried." }
+      ]
+    },
+    {
+      "id": "ingles-7-4-8",
+      "num": 8,
+      "tipo": "vocabulary",
+      "t": "Sentimientos y emociones",
+      "t_en": "Feelings and emotions",
+      "d": "12 min",
+      "content_es": "<h4>Emociones básicas</h4><p><b>happy</b>, <b>sad</b>, <b>angry</b>, <b>scared</b>, <b>surprised</b>, <b>tired</b>, <b>excited</b> (emocionado), <b>nervous</b>, <b>bored</b> (aburrido), <b>worried</b> (preocupado), <b>proud</b> (orgulloso), <b>relaxed</b>, <b>confused</b>, <b>disappointed</b> (decepcionado).</p><h4>-ed vs -ing</h4><p>El adjetivo en <b>-ed</b> describe cómo <b>te sientes</b>; el que termina en <b>-ing</b> describe la <b>causa</b>:</p><ul><li><i>I am <b>bored</b>.</i> (yo me aburro) vs. <i>The class is <b>boring</b>.</i> (la clase aburre)</li><li><i>I'm <b>interested</b> in music</i> vs. <i>Music is <b>interesting</b></i></li></ul><h4>Expresar cómo te sientes</h4><p><i>How do you feel?</i> — <i>I feel great. / I'm a bit nervous. / I'm really excited about the trip.</i></p>",
+      "content_en": "<h4>Basic emotions</h4><p><b>happy</b>, <b>sad</b>, <b>angry</b>, <b>scared</b>, <b>surprised</b>, <b>tired</b>, <b>excited</b>, <b>nervous</b>, <b>bored</b>, <b>worried</b>, <b>proud</b>, <b>relaxed</b>, <b>confused</b>, <b>disappointed</b>.</p><h4>-ed vs -ing</h4><p>The <b>-ed</b> adjective describes how <b>you feel</b>; the <b>-ing</b> one describes the <b>cause</b>:</p><ul><li><i>I am <b>bored</b>.</i> vs. <i>The class is <b>boring</b>.</i></li><li><i>I'm <b>interested</b> in music</i> vs. <i>Music is <b>interesting</b></i></li></ul><h4>Expressing how you feel</h4><p><i>How do you feel?</i> — <i>I feel great. / I'm a bit nervous. / I'm really excited about the trip.</i></p>",
+      "fichas": [
+        { "t": "-ed = cómo me siento", "d": "I'm bored, I'm tired, I'm excited.", "d_en": "I'm bored, I'm tired, I'm excited." },
+        { "t": "-ing = qué lo causa", "d": "The movie is boring, the trip is exciting.", "d_en": "The movie is boring, the trip is exciting." },
+        { "t": "excited about", "d": "Emocionado por algo: la preposición es about.", "d_en": "Excited about something: the preposition is about." },
+        { "t": "worried vs scared", "d": "Preocupado por algo futuro vs asustado por algo presente.", "d_en": "Worried about something ahead vs scared of something now." }
+      ],
+      "quiz": [
+        { "q": "«That documentary was really ___.»", "q_en": "\"That documentary was really ___.\"", "o": ["interested", "interesting", "interest", "interests"], "o_en": ["interested", "interesting", "interest", "interests"], "a": 1, "why": "El documental causa el interés: adjetivo en -ing.", "why_en": "The documentary causes the interest: -ing adjective." },
+        { "q": "«I'm ___ about the exam tomorrow.»", "q_en": "\"I'm ___ about the exam tomorrow.\"", "o": ["worrying", "worried", "worry", "worries"], "o_en": ["worrying", "worried", "worry", "worries"], "a": 1, "why": "Describe cómo se siente la persona: adjetivo en -ed.", "why_en": "It describes how the person feels: -ed adjective." },
+        { "q": "¿Qué significa «proud»?", "q_en": "What does \"proud\" mean?", "o": ["Aburrido", "Orgulloso", "Asustado", "Confundido"], "o_en": ["Bored", "Feeling satisfaction for an achievement", "Scared", "Confused"], "a": 1, "why": "Proud es el orgullo por un logro propio o ajeno.", "why_en": "Proud is the satisfaction you feel for an achievement." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-7-4-repaso",
+    "titulo": "Repaso — Yummy and Happy!",
+    "titulo_en": "Review — Yummy and Happy!",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El periodo combina <b>cantidad</b> y <b>comparación</b>. Primero decides si el sustantivo es contable o incontable; eso determina el cuantificador y la pregunta (how many / how much). Después comparas con <b>-er / more … than</b> y marcas el máximo con <b>the -est / the most</b>.</p><h4>Puntos gramaticales</h4><ul><li>Incontables: sin plural, verbo en singular, se miden con a piece of, a glass of.</li><li>Comparativo: adjetivo corto + -er + than; adjetivo largo con more.</li><li>Superlativo: siempre con the.</li><li>Irregulares: good-better-the best, bad-worse-the worst, little-less-the least.</li></ul><h4>Vocabulario</h4><p>Deletreo y símbolos (@ at, . dot, _ underscore), grupos de alimentos, formas de preparación, sabores y emociones con -ed / -ing.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The term combines <b>quantity</b> and <b>comparison</b>. First you decide whether the noun is countable or uncountable; that determines the quantifier and the question (how many / how much). Then you compare with <b>-er / more … than</b> and mark the top with <b>the -est / the most</b>.</p><h4>Grammar points</h4><ul><li>Uncountables: no plural, singular verb, measured with a piece of, a glass of.</li><li>Comparative: short adjective + -er + than; long adjective with more.</li><li>Superlative: always with the.</li><li>Irregulars: good-better-the best, bad-worse-the worst, little-less-the least.</li></ul><h4>Vocabulary</h4><p>Spelling and symbols (@ at, . dot, _ underscore), food groups, cooking methods, flavors and emotions with -ed / -ing.</p>",
+    "puntos_clave": [
+      ["how many + contable; how much + incontable.", "how many + countable; how much + uncountable."],
+      ["Nunca more cheaper: o -er o more, no los dos.", "Never more cheaper: either -er or more, not both."],
+      ["El superlativo siempre lleva the.", "The superlative always takes the."],
+      ["good → better → the best; bad → worse → the worst.", "good → better → the best; bad → worse → the worst."],
+      ["Los incontables llevan verbo en singular.", "Uncountables take a singular verb."],
+      ["-ed dice cómo me siento; -ing dice qué lo causa.", "-ed says how I feel; -ing says what causes it."]
+    ],
+    "preguntas": [
+      { "q": "«___ people came to the party?»", "q_en": "\"___ people came to the party?\"", "o": ["How much", "How many", "How long", "How often"], "o_en": ["How much", "How many", "How long", "How often"], "a": 1, "why": "People es contable: how many.", "why_en": "People is countable: how many." },
+      { "q": "«My backpack is ___ than yours.»", "q_en": "\"My backpack is ___ than yours.\"", "o": ["heavyer", "heavier", "more heavy", "heaviest"], "o_en": ["heavyer", "heavier", "more heavy", "heaviest"], "a": 1, "why": "Consonante + y cambia a -ier.", "why_en": "Consonant + y changes to -ier." },
+      { "q": "«It's ___ song on the album.»", "q_en": "\"It's ___ song on the album.\"", "o": ["the better", "the best", "best", "more good"], "o_en": ["the better", "the best", "best", "more good"], "a": 1, "why": "Superlativo irregular de good con el artículo the.", "why_en": "Irregular superlative of good with the article the." },
+      { "q": "«There isn't ___ milk left.»", "q_en": "\"There isn't ___ milk left.\"", "o": ["many", "any", "a few", "some"], "o_en": ["many", "any", "a few", "some"], "a": 1, "why": "Es negativo y milk es incontable: any.", "why_en": "It is negative and milk is uncountable: any." },
+      { "q": "«The trip was ___. I want to go again.»", "q_en": "\"The trip was ___. I want to go again.\"", "o": ["excited", "exciting", "excite", "excitement"], "o_en": ["excited", "exciting", "excite", "excitement"], "a": 1, "why": "El viaje causa la emoción: adjetivo en -ing.", "why_en": "The trip causes the emotion: -ing adjective." },
+      { "q": "«I'd like a ___ of water, please.»", "q_en": "\"I'd like a ___ of water, please.\"", "o": ["piece", "slice", "glass", "loaf"], "o_en": ["piece", "slice", "glass", "loaf"], "a": 2, "why": "El agua se mide en vasos: a glass of water.", "why_en": "Water is measured in glasses: a glass of water." },
+      { "q": "«Today was ___ day of the week.»", "q_en": "\"Today was ___ day of the week.\"", "o": ["the worse", "the baddest", "the worst", "worse"], "o_en": ["the worse", "the baddest", "the worst", "worse"], "a": 2, "why": "Superlativo irregular de bad: the worst.", "why_en": "Irregular superlative of bad: the worst." },
+      { "q": "«This exercise is ___ than the last one.»", "q_en": "\"This exercise is ___ than the last one.\"", "o": ["difficulter", "more difficult", "most difficult", "the difficultest"], "o_en": ["difficulter", "more difficult", "most difficult", "the difficultest"], "a": 1, "why": "Difficult es adjetivo largo: comparativo con more.", "why_en": "Difficult is a long adjective: comparative with more." }
+    ]
+  }
+}

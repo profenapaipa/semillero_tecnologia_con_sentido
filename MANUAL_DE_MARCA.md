@@ -1,6 +1,6 @@
 # Manual de marca
 
-**Semillero Maker de Tecnología con Sentido** · versión 5.0 · 2026-10-13
+**Semillero Maker de Tecnología con Sentido** · versión 5.1 · 2026-10-13
 
 > Este documento y `datos/marca.json` son lo mismo dicho de dos maneras.
 > Para cambiar la identidad se edita el **JSON** y se corre
@@ -62,7 +62,7 @@ La web de la iguana se rige por el manual de marca del INJUV. Este semillero es 
 
 ## 3. Color
 
-IDENTIDAD. No es una paleta de catalogo tecnologico. Sale de tres cosas de aqui: el oro de la orfebreria muisca, la piedra clara de la sabana de Bogota y el anil de los textiles. Por eso el papel no es un gris azulado frio como el de cualquier panel de control, sino una piedra calida; y el panel oscuro no es negro sino anil de noche. Los cuatro colores de linea tecnica son pigmentos con nombre propio: anil, chicha, orquidea y achiote. Ninguno pisa el verde ni el ambar, reservados al semaforo. ESTRUCTURA. Cada color de acento tiene DOS versiones: la oscura, para leerse sobre papel, y la clara terminada en -panel, para leerse sobre el anil oscuro. Esa separacion es la que faltaba: el panel oscuro existe tambien en el tema claro, y ahi un color pensado para fondo blanco no contrasta.
+IDENTIDAD. No es una paleta de catalogo tecnologico. Sale de tres cosas de aqui: el oro de la orfebreria muisca, la piedra clara de la sabana de Bogota y el anil de los textiles. Por eso el papel no es un gris azulado frio como el de cualquier panel de control, sino una piedra calida; y el panel oscuro no es negro sino anil de noche. Los cuatro colores de linea tecnica son pigmentos con nombre propio: anil, chicha, orquidea y achiote. Ninguno pisa el verde ni el ambar, reservados al semaforo. ESTRUCTURA. Cada color de acento tiene DOS versiones: la oscura, para leerse sobre papel, y la clara terminada en -panel, para leerse sobre el anil oscuro. Esa separacion es la que faltaba: el panel oscuro existe tambien en el tema claro, y ahi un color pensado para fondo blanco no contrasta. TEXTO SOBRE RELLENO. Hay un token aparte, sobre-relleno, para el texto que va encima de un color saturado o del panel oscuro: el numero dentro de un nodo verde, la etiqueta de un boton principal, el titulo de la portada. Antes se usaba la superficie, que es blanca en tema claro pero OSCURA en tema oscuro, y por eso habia titulos oscuros sobre fondo oscuro. Ese token se invierte con el tema y no es un descuido: en tema claro los rellenos son oscuros y encima va blanco; en tema oscuro los rellenos son claros y encima va casi negro.
 
 | Token | Claro | Oscuro | Para qué |
 |---|---|---|---|
@@ -77,6 +77,7 @@ IDENTIDAD. No es una paleta de catalogo tecnologico. Sale de tres cosas de aqui:
 | `--panel-2` | `#242C4E` | `#1C2240` | Segundo tono del panel oscuro |
 | `--sobre-panel` | `#EDEFF7` | `#EDEFF7` | Texto sobre el panel oscuro |
 | `--sobre-panel-suave` | `#A8AFCA` | `#A8AFCA` | Texto secundario sobre el panel |
+| `--sobre-relleno` | `#FFFFFF` | `#0E0E16` |  |
 | `--cian` | `#234A9E` | `#93B5FF` | Lo que se puede tocar: enlaces y botones |
 | `--cian-vivo` | `#1B3B80` | `#B4CCFF` | El mismo, al pasar el cursor |
 | `--cian-panel` | `#93B5FF` | `#93B5FF` |  |

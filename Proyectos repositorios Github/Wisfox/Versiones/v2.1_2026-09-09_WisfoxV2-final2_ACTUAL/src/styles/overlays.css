@@ -1,0 +1,195 @@
+/*
+ * overlays.css — Modales, hojas, toasts, overrides de tema/accesibilidad,
+ * y algunas pantallas superpuestas sobre las bases
+ * ============================================================================
+ * Origen: extraído textualmente de wisfo_19.backup.html líneas 323-527,
+ * menos el bloque del SVG "árbol" de "ÁRBOL DE INICIO" (líneas originales
+ * ~372-421). Esa era una segunda visualización, sin usar, para la
+ * pantalla de Inicio — `renderTree` siempre fue solo un alias directo de
+ * `renderOrbit()` (ver components/orbit.js), así que el marcado/CSS del
+ * árbol nunca se renderizaba. Se eliminó por decisión del proyecto en vez
+ * de dejarse como código muerto; el mapa orbital es la única
+ * implementación real.
+ *
+ * Qué vive aquí (en el orden original del código fuente):
+ *   - MODALES: .overlay/.modal/.modal-close/.lesson-modal-body — el modal
+ *     de detalle de lección (ver components/modal.js).
+ *   - .toast — la notificación transitoria inferior (ver components/toast.js).
+ *   - OVERRIDES DE TEMA OSCURO: reglas [data-theme="dark"] que recolorean
+ *     fondos de íconos, degradados y algunos estados. Se aplican encima de
+ *     screens.css porque los selectores de atributo superan a las clases
+ *     simples — es seguro cargarlas en cualquier lugar después de
+ *     screens.css, el orden no es determinante aquí.
+ *   - DALTONISMO (modos de daltonismo): tokens de color semánticos
+ *     --ok/--bad/--warn, remapeados según html[data-dalt="..."]
+ *     (protanopia, deuteranopia, tritanopia). Ver `aplicarDalt()` en
+ *     theme/theme.js y data/... para la lista de modos. Todo lo que deba
+ *     leerse como "correcto/incorrecto/pendiente" (opciones de quiz,
+ *     estado de logros, barras de progreso) debería usar estos tokens en
+ *     vez de --green/--coral/--amber directamente, para que siga siendo
+ *     legible bajo cualquier modo de visión de color.
+ *   - RUTA DENTRO DE LECCIONES: breadcrumb + grilla .tema-card mostrada al
+ *     elegir una materia dentro de Lecciones.
+ *   - MODAL GRANDE (perfil/config/logros): .sheet/.sheet-box/.tabs/.fieldset/
+ *     .inp/.optrow/.avatar-pick/.emoji-pick — la hoja de perfil y
+ *     configuración y la hoja de logros comparten este componente "sheet".
+ *   - BIENVENIDA: .welcome — pantalla de bienvenida de primer uso.
+ *   - NOTAS (v1): estilos tempranos de la grilla de notas — ver NOTAS (v2)
+ *     en refinements.css para el layout que realmente reemplaza a este.
+ *   - VOZ: .speak-btn/.wave — botón de texto-a-voz (ver services/speech.js).
+ */
+
+/* ============ MODALS ============ */
+.overlay{position:fixed;inset:0;background:rgba(20,28,23,.5);backdrop-filter:blur(3px);display:none;place-items:center;z-index:50;padding:24px}
+.overlay.open{display:grid}
+.modal{background:var(--card);border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.3);width:min(1020px,100%);max-height:92vh;overflow:auto;position:relative;animation:pop .25s ease}
+@keyframes pop{from{transform:scale(.94);opacity:0}to{transform:none;opacity:1}}
+.modal-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:50%;background:var(--card);border:1px solid var(--border);font-size:15px;z-index:5}
+
+.lesson-modal-body{padding:34px 38px}
+.lesson-modal-body h2{font-size:22px;margin-bottom:4px}
+.lesson-modal-body .lm-meta{font-size:12.5px;color:var(--muted);font-weight:700;margin-bottom:18px}
+.lesson-modal-body article{font-size:14.5px;line-height:1.8;color:var(--text)}
+.lesson-modal-body article h4{margin:16px 0 6px;font-size:15.5px;color:var(--text)}
+.lesson-modal-body article ul{margin:6px 0 6px 20px}
+.lm-foot{display:flex;justify-content:flex-end;gap:10px;margin-top:22px;flex-wrap:wrap}
+
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--text);color:var(--card);font-size:13.5px;font-weight:700;padding:12px 22px;border-radius:30px;opacity:0;transition:.3s;z-index:99;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:90vw;text-align:center}
+.toast.show{transform:translateX(-50%);opacity:1}
+
+/* ============ DARK THEME OVERRIDES ============ */
+[data-theme="dark"] .stat .sicon,
+[data-theme="dark"] .mission .micon,
+[data-theme="dark"] .event .eicon,
+[data-theme="dark"] .lesson-top .licon,
+[data-theme="dark"] .route-head .ricon,
+[data-theme="dark"] .resource .ricon{background:rgba(255,255,255,.09)!important}
+[data-theme="dark"] .quote,
+[data-theme="dark"] .help-card{background:linear-gradient(100deg,var(--green-soft),var(--green-light))}
+[data-theme="dark"] .tag-pending{background:#3d3424;color:#e8c07a}
+[data-theme="dark"] .quiz-opt.wrong{background:#3d2a28}
+[data-theme="dark"] .achv.locked .state{background:#333;color:#888}
+[data-theme="dark"] .overlay{background:rgba(0,0,0,.6)}
+[data-theme="dark"] .fox-side .fox{filter:drop-shadow(0 4px 6px rgba(0,0,0,.4))}
+
+
+/* ============ DALTONISMO ============ */
+:root{ --ok:var(--green); --ok-soft:var(--green-light); --bad:#e8746a; --bad-soft:#fcebe8; --warn:#e8a13c; }
+html[data-dalt="protanopia"],html[data-dalt="deuteranopia"]{
+  --ok:#2f6fd0; --ok-soft:#e3edfb; --bad:#d98218; --bad-soft:#fdf0df; --warn:#7a5bd0;
+}
+html[data-dalt="tritanopia"]{
+  --ok:#1f8a70; --ok-soft:#e0f2ee; --bad:#c8443f; --bad-soft:#fbe9e8; --warn:#b0511f;
+}
+html[data-dalt]:not([data-dalt="ninguno"]) .tag-done,
+html[data-dalt]:not([data-dalt="ninguno"]) .achv.on .state{ background:var(--ok-soft);color:var(--ok) }
+html[data-dalt]:not([data-dalt="ninguno"]) .quiz-opt.wrong{ border-color:var(--bad);background:var(--bad-soft) }
+html[data-dalt]:not([data-dalt="ninguno"]) .quiz-opt.right{ border-color:var(--ok);background:var(--ok-soft) }
+html[data-dalt]:not([data-dalt="ninguno"]) .pbar i,
+html[data-dalt]:not([data-dalt="ninguno"]) .tip-bar i{ background:var(--ok) }
+
+/* ============ RUTA DENTRO DE LECCIONES ============ */
+.ruta-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.crumb{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:var(--muted)}
+.crumb button{background:none;border:0;font:inherit;color:var(--green);cursor:pointer;padding:0}
+.crumb button:hover{text-decoration:underline}
+.ruta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:12px}
+.tema-card{position:relative;cursor:pointer;transition:transform .18s,box-shadow .18s;overflow:hidden}
+.tema-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(46,125,79,.14)}
+.tema-card .tc-top{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.tema-card .tc-ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:18px;flex:none}
+.tema-card .tc-top b{font-size:13px;font-weight:900;line-height:1.3}
+.tema-card .tc-sub{font-size:10.5px;color:var(--muted);font-weight:700;margin-bottom:9px}
+.tema-card .tc-bar{height:6px;border-radius:99px;background:var(--border);overflow:hidden}
+.tema-card .tc-bar i{display:block;height:100%;border-radius:99px;background:var(--green);
+  transition:width .8s cubic-bezier(.22,1,.36,1)}
+.tema-card .tc-foot{display:flex;justify-content:space-between;margin-top:7px;font-size:10.5px;
+  font-weight:800;color:var(--muted)}
+.tema-card.lock{opacity:.62}
+.tema-card .tc-lock{position:absolute;top:10px;right:10px;font-size:13px}
+
+/* ============ MODAL GRANDE (perfil, config, logros) ============ */
+.sheet{position:fixed;inset:0;background:rgba(20,32,24,.42);backdrop-filter:blur(3px);
+  display:none;place-items:center;z-index:120;padding:16px}
+.sheet.open{display:grid}
+.sheet-box{background:var(--card);border-radius:20px;width:min(560px,100%);max-height:88vh;overflow:auto;
+  box-shadow:0 24px 60px rgba(0,0,0,.22);animation:pop .28s cubic-bezier(.22,1,.36,1)}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.sheet-head{display:flex;align-items:center;gap:10px;padding:15px 18px;border-bottom:1px solid var(--border);
+  position:sticky;top:0;background:var(--card);z-index:2}
+.sheet-head h3{font-size:15px;font-weight:900;flex:1}
+.sheet-x{background:var(--green-soft);border:0;width:30px;height:30px;border-radius:9px;cursor:pointer;
+  font-size:15px;color:var(--muted);display:grid;place-items:center}
+.sheet-x:hover{background:var(--green-light);color:var(--text)}
+.sheet-body{padding:16px 18px 20px}
+.tabs{display:flex;gap:6px;padding:12px 18px 0}
+.tabs button{flex:1;padding:9px;border-radius:11px;border:1px solid var(--border);background:var(--card);
+  font:inherit;font-size:12px;font-weight:800;color:var(--muted);cursor:pointer;transition:.18s}
+.tabs button.on{background:var(--green-light);border-color:var(--green);color:var(--green-dark)}
+.fieldset{margin-bottom:16px}
+.fieldset > label{display:block;font-size:11px;font-weight:900;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.05em;margin-bottom:7px}
+.inp{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:11px;background:var(--bg);
+  font:inherit;font-size:13px;color:var(--text)}
+.inp:focus{outline:2px solid var(--green-light);border-color:var(--green)}
+.optrow{display:flex;gap:7px;flex-wrap:wrap}
+.optrow button{padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:var(--card);
+  font:inherit;font-size:12px;font-weight:800;color:var(--text);cursor:pointer;transition:.18s}
+.optrow button:hover{border-color:var(--green)}
+.optrow button.on{background:var(--green-light);border-color:var(--green);color:var(--green-dark)}
+.avatar-pick{display:flex;align-items:center;gap:13px;margin-bottom:15px}
+.avatar-big{width:66px;height:66px;border-radius:20px;background:var(--green-light);display:grid;
+  place-items:center;font-size:30px;flex:none;overflow:hidden;border:2px solid var(--border)}
+.avatar-big img{width:100%;height:100%;object-fit:cover}
+.emoji-pick{display:flex;gap:5px;flex-wrap:wrap}
+.emoji-pick button{width:33px;height:33px;border-radius:10px;border:1px solid var(--border);
+  background:var(--card);font-size:16px;cursor:pointer;line-height:1}
+.emoji-pick button.on{border-color:var(--green);background:var(--green-light)}
+
+/* ============ BIENVENIDA ============ */
+.welcome{position:fixed;inset:0;background:linear-gradient(160deg,var(--green-soft),var(--bg));
+  display:none;place-items:center;z-index:200;padding:18px}
+.welcome.open{display:grid}
+.welcome-box{background:var(--card);border-radius:24px;padding:30px 26px;width:min(430px,100%);
+  text-align:center;box-shadow:0 24px 60px rgba(46,125,79,.2);animation:pop .4s cubic-bezier(.22,1,.36,1)}
+.welcome-box .fox{font-size:52px;display:block;margin-bottom:10px;animation:bob 3s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.welcome-box h2{font-size:20px;font-weight:900;margin-bottom:6px}
+.welcome-box p{font-size:12.5px;color:var(--muted);font-weight:700;margin-bottom:18px;line-height:1.5}
+.welcome-box .inp{text-align:center;margin-bottom:12px}
+
+/* ============ NOTAS ============ */
+.notas-new{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:20px}
+.nn-card{text-align:left;cursor:pointer;transition:transform .18s,box-shadow .18s}
+.nn-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(46,125,79,.14)}
+.nn-card .ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:20px;margin-bottom:9px}
+.nn-card b{display:block;font-size:13px;font-weight:900;margin-bottom:3px}
+.nn-card p{font-size:11px;color:var(--muted);font-weight:700;line-height:1.45}
+.notas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:12px}
+.nota{position:relative;cursor:pointer;transition:transform .18s,box-shadow .18s}
+.nota:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(46,125,79,.14)}
+.nota .nic{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;font-size:16px;margin-bottom:8px}
+.nota b{display:block;font-size:12.5px;font-weight:900;margin-bottom:3px;line-height:1.35}
+.nota small{font-size:10.5px;color:var(--muted);font-weight:700}
+.nota .kind{display:inline-block;margin-top:8px;padding:2px 8px;border-radius:99px;font-size:9.5px;font-weight:900}
+.nota .del{position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:7px;border:0;
+  background:var(--bg);color:var(--muted);cursor:pointer;font-size:12px;opacity:0;transition:.18s}
+.nota:hover .del{opacity:1}
+.nota .del:hover{background:var(--bad-soft);color:var(--bad)}
+.empty-state{text-align:center;padding:38px 18px;color:var(--muted)}
+.empty-state .big{font-size:42px;display:block;margin-bottom:10px;opacity:.75}
+.empty-state p{font-size:12.5px;font-weight:700;line-height:1.55}
+
+/* ============ VOZ ============ */
+.speak-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:10px;
+  border:1px solid var(--border);background:var(--card);font:inherit;font-size:11.5px;font-weight:800;
+  color:var(--text);cursor:pointer;transition:.18s}
+.speak-btn:hover{border-color:var(--green);color:var(--green-dark)}
+.speak-btn.on{background:var(--green-light);border-color:var(--green);color:var(--green-dark)}
+.speak-btn.on .wave{display:inline-flex}
+.wave{display:none;gap:2px;align-items:flex-end;height:11px}
+.wave i{width:2.5px;background:var(--green);border-radius:2px;animation:eq .9s ease-in-out infinite}
+.wave i:nth-child(2){animation-delay:-.25s}
+.wave i:nth-child(3){animation-delay:-.5s}
+@keyframes eq{0%,100%{height:3px}50%{height:11px}}
+

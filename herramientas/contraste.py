@@ -80,9 +80,15 @@ def pares(c):
         P.append(('texto %s sobre superficie' % est, c['%s-texto' % est], sup, 4.5))
         P.append(('relleno %s sobre superficie (borde)' % est, c['%s-fill' % est], sup, 3.0))
 
-    # Relleno del semaforo con texto encima: el nodo del camino y la marca
-    P.append(('numero sobre verde', sup, c['verde-fill'], 4.5))
+    # Texto encima de un relleno saturado. Este es el caso que fallaba: se
+    # usaba la superficie, blanca en claro pero oscura en oscuro.
+    rell = c['sobre-relleno']
+    P.append(('texto sobre relleno verde', rell, c['verde-fill'], 4.5))
+    P.append(('texto sobre relleno cian', rell, c['cian'], 4.5))
+    P.append(('texto sobre panel (titulo)', c['sobre-panel'], panel, 4.5))
     P.append(('numero sobre ambar', panel, c['ambar-fill'], 4.5))
+    for ln in LINEAS:
+        P.append(('texto sobre relleno de %s' % ln, rell, c['linea-%s' % ln], 4.5))
 
     # Lineas tecnicas: sobre superficie, sobre su tenue, y como relleno
     for ln in LINEAS:

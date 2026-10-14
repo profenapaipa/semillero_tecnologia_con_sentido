@@ -1,0 +1,70 @@
+/*
+ * responsive.css — Media queries (breakpoints móvil / tablet)
+ * ================================================================
+ * Origen: extraído textualmente de wisfo_19.backup.html líneas 528-579.
+ *
+ * Breakpoints usados: 1100px (tablet: colapsa la grilla de dos columnas
+ * de Inicio, angosta la barra lateral), 860px (celular: oculta la barra
+ * lateral en favor de .mobilebar + .bottomnav de layout.css), 380px
+ * (celulares muy pequeños: grillas de una sola columna para stats/logros).
+ *
+ * Nota: este archivo se importa ANTES de refinements.css en main.css,
+ * igual que su posición original en el prototipo. refinements.css no
+ * agrega ninguna otra media query propia salvo una pequeña en línea
+ * (layout de notas a 1100px) — ver la cabecera de ese archivo para más
+ * detalles. Si agregas nuevas reglas responsivas, prefiere ponerlas aquí
+ * para que los breakpoints queden en un solo lugar.
+ */
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1100px){
+  .inicio-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  #achvGrid{grid-template-columns:repeat(3,1fr)}
+  .app{grid-template-columns:220px 1fr}
+}
+@media (max-width:860px){
+  .app{grid-template-columns:1fr}
+  .sidebar{display:none}
+  .mobilebar{display:flex}
+  .bottomnav{display:flex}
+  .content{padding:8px 14px calc(86px + env(safe-area-inset-bottom))}
+  .topbar{padding:10px 14px 6px;gap:10px}
+  .greet h2{font-size:19px}
+  .greet p{display:none}
+  .search{order:5;width:100%;margin-left:0}
+  .search kbd{display:none}
+  .iconbtn{width:36px;height:36px;font-size:14px}
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  #achvGrid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr);gap:10px}
+  .stat{padding:12px}
+  .stat b{font-size:18px}
+  .orbit-wrap{height:360px}
+  .orbit-hint{display:none}
+  .center-orb{width:96px;height:96px;font-size:32px}
+  .bubble-wrap{width:60px;height:60px}
+  .subject-node .bubble{inset:7px;font-size:19px}
+  .subject-node b{font-size:11.5px}
+  .subject-node > span{font-size:11px}
+  .node-tip{width:190px;margin-left:-95px;padding:10px 11px}
+  .tip-topics span{font-size:11px;padding:4px 8px}
+  .quote{padding:16px 18px;gap:14px}
+  .quote .fox{font-size:38px}
+  .quote p{font-size:14px}
+  .page-title{font-size:19px}
+  .chat-wrap{height:calc(100dvh - 330px);min-height:340px}
+  .msg{max-width:86%}
+  .quiz-box{padding:18px}
+  .quiz-q{font-size:16px}
+  .overlay{padding:10px}
+  .modal{max-height:94vh;border-radius:18px}
+  .lesson-modal-body{padding:24px 18px}
+  .theme-panel{right:12px;top:60px}
+  .toast{bottom:calc(84px + env(safe-area-inset-bottom))}
+}
+@media (max-width:380px){
+  #achvGrid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+}

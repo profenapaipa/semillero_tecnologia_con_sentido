@@ -1,0 +1,281 @@
+{
+  "id": "ingles-6-2",
+  "materia": "ingles",
+  "grado": "6",
+  "grado_nombre": "Sexto",
+  "periodo": 2,
+  "periodo_label": { "es": "Periodo II", "en": "Term II" },
+  "titulo": "All About My Home and What I Love",
+  "titulo_es": "Todo sobre mi casa y lo que me gusta",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Describo con oraciones simples mi casa, mi entorno y los objetos que me rodean. Identifico la cantidad y la ubicación de las cosas en textos y descripciones cortas.",
+  "competencias": "Describir lugares y objetos usando preposiciones de lugar, plurales y expresiones de cantidad; preguntar y responder sobre lo que hay en un espacio; escribir descripciones cortas de la casa y de las cosas favoritas.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "My Dream House",
+    "descripcion_es": "Cada estudiante diseña el plano de una casa y la describe por escrito y en voz alta: qué habitaciones tiene, qué muebles hay en cada una y dónde está cada objeto.",
+    "descripcion_en": "Each student designs the plan of a house and describes it in writing and out loud: which rooms it has, what furniture is in each one and where every object is."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-6-2-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Preposiciones de lugar",
+      "t_en": "Prepositions of place",
+      "d": "12 min",
+      "content_es": "<h4>¿Dónde está?</h4><p>Las preposiciones de lugar dicen la posición exacta de una cosa.</p><ul><li><b>in</b> – dentro de: <i>The keys are in the drawer.</i></li><li><b>on</b> – sobre una superficie: <i>The lamp is on the table.</i></li><li><b>under</b> – debajo · <b>behind</b> – detrás · <b>in front of</b> – delante</li><li><b>next to</b> – al lado · <b>between</b> – entre dos · <b>near</b> – cerca</li></ul><h4>Cómo se usan</h4><p>Siempre van antes del lugar: <i>The cat is <b>under</b> the bed.</i></p><p>Diferencia clave: <b>in</b> es adentro de un espacio cerrado, <b>on</b> es apoyado encima de algo.</p>",
+      "content_en": "<h4>Where is it?</h4><p>Prepositions of place tell the exact position of something.</p><ul><li><b>in</b> – inside: <i>The keys are in the drawer.</i></li><li><b>on</b> – on a surface: <i>The lamp is on the table.</i></li><li><b>under</b> · <b>behind</b> · <b>in front of</b></li><li><b>next to</b> · <b>between</b> (two things) · <b>near</b></li></ul><h4>How to use them</h4><p>They always come before the place: <i>The cat is <b>under</b> the bed.</i></p><p>Key difference: <b>in</b> means inside a closed space, <b>on</b> means resting on a surface.</p>",
+      "fichas": [
+        { "t": "in", "d": "Dentro de un espacio cerrado: in the box.", "d_en": "Inside a closed space: in the box." },
+        { "t": "on", "d": "Sobre una superficie: on the table.", "d_en": "On a surface: on the table." },
+        { "t": "between", "d": "Entre dos cosas: between the sofa and the door.", "d_en": "Between two things: between the sofa and the door." },
+        { "t": "next to", "d": "Al lado de: next to the window.", "d_en": "Beside: next to the window." },
+        { "t": "in front of / behind", "d": "Delante de / detrás de.", "d_en": "In front of / behind." }
+      ],
+      "quiz": [
+        { "q": "«The books are ___ the shelf.» (apoyados encima)", "q_en": "\"The books are ___ the shelf.\" (resting on it)", "o": ["in", "on", "under", "between"], "o_en": ["in", "on", "under", "between"], "a": 1, "why": "On indica que algo está apoyado sobre una superficie.", "why_en": "On means something rests on a surface." },
+        { "q": "«My house is ___ the school and the park.»", "q_en": "\"My house is ___ the school and the park.\"", "o": ["next to", "between", "behind", "near"], "o_en": ["next to", "between", "behind", "near"], "a": 1, "why": "Between se usa cuando algo está en medio de dos lugares.", "why_en": "Between is used when something is in the middle of two places." },
+        { "q": "¿Qué significa «behind»?", "q_en": "What does \"behind\" mean?", "o": ["Delante de", "Detrás de", "Debajo de", "Al lado de"], "o_en": ["In front of", "At the back of", "Below", "Beside"], "a": 1, "why": "Behind indica que algo está en la parte de atrás.", "why_en": "Behind means something is at the back." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Sustantivos en plural",
+      "t_en": "Plural nouns",
+      "d": "12 min",
+      "content_es": "<h4>La regla general</h4><p>Se agrega <b>-s</b>: <i>book → books</i>, <i>chair → chairs</i>.</p><h4>Casos especiales</h4><ul><li>-s, -ss, -sh, -ch, -x, -o → <b>-es</b>: <i>box → boxes</i>, <i>watch → watches</i></li><li>consonante + y → <b>-ies</b>: <i>city → cities</i></li><li>-f / -fe → <b>-ves</b>: <i>knife → knives</i>, <i>shelf → shelves</i></li></ul><h4>Irregulares</h4><p><i>man → men</i>, <i>woman → women</i>, <i>child → children</i>, <i>foot → feet</i>, <i>tooth → teeth</i>, <i>person → people</i>. Y algunos no cambian: <i>fish → fish</i>, <i>sheep → sheep</i>.</p>",
+      "content_en": "<h4>The general rule</h4><p>Add <b>-s</b>: <i>book → books</i>, <i>chair → chairs</i>.</p><h4>Special cases</h4><ul><li>-s, -ss, -sh, -ch, -x, -o → <b>-es</b>: <i>box → boxes</i>, <i>watch → watches</i></li><li>consonant + y → <b>-ies</b>: <i>city → cities</i></li><li>-f / -fe → <b>-ves</b>: <i>knife → knives</i>, <i>shelf → shelves</i></li></ul><h4>Irregular ones</h4><p><i>man → men</i>, <i>woman → women</i>, <i>child → children</i>, <i>foot → feet</i>, <i>tooth → teeth</i>, <i>person → people</i>. Some do not change: <i>fish → fish</i>, <i>sheep → sheep</i>.</p>",
+      "fichas": [
+        { "t": "city → cities", "d": "Consonante + y se convierte en -ies.", "d_en": "Consonant + y becomes -ies." },
+        { "t": "knife → knives", "d": "Palabras en -f o -fe cambian a -ves.", "d_en": "Words ending in -f or -fe change to -ves." },
+        { "t": "child → children", "d": "Plural irregular: no lleva -s.", "d_en": "Irregular plural: it takes no -s." },
+        { "t": "person → people", "d": "El plural de person es people, no persons.", "d_en": "The plural of person is people, not persons." },
+        { "t": "fish → fish", "d": "Algunos sustantivos no cambian en plural.", "d_en": "Some nouns do not change in the plural." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál es el plural de «box»?", "q_en": "What is the plural of \"box\"?", "o": ["boxs", "boxes", "boxies", "box"], "o_en": ["boxs", "boxes", "boxies", "box"], "a": 1, "why": "Las palabras terminadas en -x agregan -es.", "why_en": "Words ending in -x add -es." },
+        { "q": "¿Cuál es el plural de «child»?", "q_en": "What is the plural of \"child\"?", "o": ["childs", "childes", "children", "childrens"], "o_en": ["childs", "childes", "children", "childrens"], "a": 2, "why": "Child es irregular: su plural es children, sin -s adicional.", "why_en": "Child is irregular: its plural is children, with no extra -s." },
+        { "q": "¿Cuál plural está mal escrito?", "q_en": "Which plural is misspelled?", "o": ["cities", "shelves", "familys", "watches"], "o_en": ["cities", "shelves", "familys", "watches"], "a": 2, "why": "Family termina en consonante + y, así que es families.", "why_en": "Family ends in consonant + y, so it becomes families." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Cantidad: there is / there are en negativo y pregunta",
+      "t_en": "Quantity: there is / there are in negatives and questions",
+      "d": "12 min",
+      "content_es": "<h4>Decir cuánto hay</h4><ul><li>Afirmativo: <i>There is a sofa. / There are three chairs.</i></li><li>Negativo: <i>There isn't a TV. / There aren't any lamps.</i></li><li>Pregunta: <i>Is there a garden? / Are there any pictures?</i></li></ul><h4>Respuestas cortas</h4><p><i>Yes, there is. / No, there isn't.</i> — <i>Yes, there are. / No, there aren't.</i></p><h4>How many…?</h4><p>Para preguntar la cantidad exacta: <i><b>How many</b> rooms are there in your house?</i> → <i>There are five.</i></p>",
+      "content_en": "<h4>Saying how much there is</h4><ul><li>Affirmative: <i>There is a sofa. / There are three chairs.</i></li><li>Negative: <i>There isn't a TV. / There aren't any lamps.</i></li><li>Question: <i>Is there a garden? / Are there any pictures?</i></li></ul><h4>Short answers</h4><p><i>Yes, there is. / No, there isn't.</i> — <i>Yes, there are. / No, there aren't.</i></p><h4>How many…?</h4><p>To ask for the exact number: <i><b>How many</b> rooms are there in your house?</i> → <i>There are five.</i></p>",
+      "fichas": [
+        { "t": "There isn't a…", "d": "Negación en singular: no hay un/una.", "d_en": "Singular negative form." },
+        { "t": "There aren't any…", "d": "Negación en plural, casi siempre con any.", "d_en": "Plural negative, almost always with any." },
+        { "t": "How many…?", "d": "Pregunta por la cantidad exacta de cosas contables.", "d_en": "Asks for the exact number of countable things." },
+        { "t": "Yes, there are.", "d": "Respuesta corta afirmativa en plural.", "d_en": "Affirmative short answer in the plural." }
+      ],
+      "quiz": [
+        { "q": "«___ any chairs in the kitchen?»", "q_en": "\"___ any chairs in the kitchen?\"", "o": ["Is there", "Are there", "There are", "Have there"], "o_en": ["Is there", "Are there", "There are", "Have there"], "a": 1, "why": "Chairs es plural, así que la pregunta empieza con Are there.", "why_en": "Chairs is plural, so the question starts with Are there." },
+        { "q": "Respuesta corta a «Is there a garage?» (no hay)", "q_en": "Short answer to \"Is there a garage?\" (there isn't one)", "o": ["No, there aren't", "No, it isn't", "No, there isn't", "No, there is not any"], "o_en": ["No, there aren't", "No, it isn't", "No, there isn't", "No, there is not any"], "a": 2, "why": "La respuesta corta repite there + is en negativo.", "why_en": "The short answer repeats there + is in the negative." },
+        { "q": "«___ bedrooms are there?»", "q_en": "\"___ bedrooms are there?\"", "o": ["How much", "How many", "How long", "What many"], "o_en": ["How much", "How many", "How long", "What many"], "a": 1, "why": "Bedrooms es contable, así que se pregunta con How many.", "why_en": "Bedrooms is countable, so we ask with How many." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "some / any",
+      "t_en": "some / any",
+      "d": "10 min",
+      "content_es": "<h4>La regla básica</h4><ul><li><b>some</b> en oraciones <b>afirmativas</b>: <i>There are some books on the desk.</i></li><li><b>any</b> en <b>negativas</b> y <b>preguntas</b>: <i>There aren't any books. / Are there any books?</i></li></ul><h4>La excepción amable</h4><p>Cuando ofrecemos o pedimos algo se usa <b>some</b> aunque sea pregunta: <i>Would you like <b>some</b> juice?</i></p><h4>Con qué van</h4><p>Se usan con sustantivos <b>plurales</b> (some chairs) y con <b>incontables</b> (some water, some bread).</p>",
+      "content_en": "<h4>The basic rule</h4><ul><li><b>some</b> in <b>affirmative</b> sentences: <i>There are some books on the desk.</i></li><li><b>any</b> in <b>negatives</b> and <b>questions</b>: <i>There aren't any books. / Are there any books?</i></li></ul><h4>The polite exception</h4><p>When we offer or request something we use <b>some</b> even in questions: <i>Would you like <b>some</b> juice?</i></p><h4>What they go with</h4><p>They are used with <b>plural</b> nouns (some chairs) and with <b>uncountable</b> nouns (some water, some bread).</p>",
+      "fichas": [
+        { "t": "some", "d": "Algunos/algo, en oraciones afirmativas.", "d_en": "Used in affirmative sentences." },
+        { "t": "any", "d": "En negaciones y preguntas: any books?", "d_en": "Used in negatives and questions: any books?" },
+        { "t": "Would you like some…?", "d": "Excepción: ofrecimientos llevan some aunque sean preguntas.", "d_en": "Exception: offers take some even in questions." },
+        { "t": "some water", "d": "Con incontables no se usa número: some water, some bread.", "d_en": "With uncountable nouns there is no number: some water, some bread." }
+      ],
+      "quiz": [
+        { "q": "«There aren't ___ towels in the bathroom.»", "q_en": "\"There aren't ___ towels in the bathroom.\"", "o": ["some", "any", "a", "much"], "o_en": ["some", "any", "a", "much"], "a": 1, "why": "En oraciones negativas se usa any.", "why_en": "In negative sentences we use any." },
+        { "q": "«I have ___ posters in my room.»", "q_en": "\"I have ___ posters in my room.\"", "o": ["any", "some", "a", "an"], "o_en": ["any", "some", "a", "an"], "a": 1, "why": "Es una oración afirmativa con plural: some.", "why_en": "It is an affirmative sentence with a plural noun: some." },
+        { "q": "«Would you like ___ coffee?»", "q_en": "\"Would you like ___ coffee?\"", "o": ["any", "some", "a", "many"], "o_en": ["any", "some", "a", "many"], "a": 1, "why": "Es un ofrecimiento, y los ofrecimientos usan some.", "why_en": "It is an offer, and offers take some." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "they're / their / there",
+      "t_en": "they're / their / there",
+      "d": "10 min",
+      "content_es": "<h4>Suenan igual, significan distinto</h4><ul><li><b>they're</b> = <i>they are</i> (ellos son/están): <i>They're my cousins.</i></li><li><b>their</b> = posesivo (su, de ellos): <i>Their house is big.</i></li><li><b>there</b> = allí, o el «hay» de there is/are: <i>The park is over there.</i></li></ul><h4>Cómo no equivocarse</h4><p>Prueba a reemplazar por <i>they are</i>: si la oración sigue teniendo sentido, va <b>they're</b>. Si después viene un sustantivo del que se dice el dueño, va <b>their</b>. Si hablas de un lugar o de existencia, va <b>there</b>.</p>",
+      "content_en": "<h4>They sound the same, they mean different things</h4><ul><li><b>they're</b> = <i>they are</i>: <i>They're my cousins.</i></li><li><b>their</b> = possessive: <i>Their house is big.</i></li><li><b>there</b> = a place, or the there of there is/are: <i>The park is over there.</i></li></ul><h4>How to get it right</h4><p>Try replacing it with <i>they are</i>: if the sentence still makes sense, use <b>they're</b>. If a noun with an owner follows, use <b>their</b>. If you are talking about a place or existence, use <b>there</b>.</p>",
+      "fichas": [
+        { "t": "they're", "d": "Contracción de they are.", "d_en": "Contraction of they are." },
+        { "t": "their", "d": "Adjetivo posesivo: de ellos.", "d_en": "Possessive adjective: belonging to them." },
+        { "t": "there", "d": "Allí, o el sujeto de there is / there are.", "d_en": "There as a place, or in there is / there are." },
+        { "t": "Prueba del they are", "d": "Si puedes decir they are, entonces se escribe they're.", "d_en": "If you can say they are, then it is written they're." }
+      ],
+      "quiz": [
+        { "q": "«___ bikes are in the garage.»", "q_en": "\"___ bikes are in the garage.\"", "o": ["They're", "Their", "There", "Theirs"], "o_en": ["They're", "Their", "There", "Theirs"], "a": 1, "why": "Acompaña al sustantivo bikes y dice de quién son: their.", "why_en": "It goes with the noun bikes and says who owns them: their." },
+        { "q": "«___ is a big tree in my garden.»", "q_en": "\"___ is a big tree in my garden.\"", "o": ["Their", "They're", "There", "These"], "o_en": ["Their", "They're", "There", "These"], "a": 2, "why": "Es la estructura there is para decir que algo existe.", "why_en": "It is the there is structure used to say something exists." },
+        { "q": "«___ my best friends.»", "q_en": "\"___ my best friends.\"", "o": ["There", "Their", "They're", "Theirs"], "o_en": ["There", "Their", "They're", "Theirs"], "a": 2, "why": "Equivale a they are my best friends.", "why_en": "It is equivalent to they are my best friends." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-6",
+      "num": 6,
+      "tipo": "grammar",
+      "t": "Presente simple: reglas de escritura del verbo",
+      "t_en": "Simple present: verb spelling rules",
+      "d": "12 min",
+      "content_es": "<h4>Repaso rápido</h4><p>Afirmativo con <b>-s</b> en he/she/it; negativo e interrogativo con <b>do/does</b> y el verbo en forma base.</p><h4>Las reglas de escritura</h4><ul><li>Regla general: <i>work → works</i>, <i>read → reads</i></li><li>-o, -ch, -sh, -ss, -x → <b>-es</b>: <i>do → does</i>, <i>teach → teaches</i>, <i>fix → fixes</i></li><li>consonante + y → <b>-ies</b>: <i>cry → cries</i>, <i>fly → flies</i></li><li>vocal + y → solo <b>-s</b>: <i>play → plays</i>, <i>buy → buys</i></li><li>irregular: <i>have → has</i></li></ul><h4>Trampa frecuente</h4><p><i>play</i> lleva vocal antes de la y, por eso es <b>plays</b> y no <i>plaies</i>.</p>",
+      "content_en": "<h4>Quick review</h4><p>Affirmative with <b>-s</b> for he/she/it; negative and question with <b>do/does</b> and the base verb.</p><h4>Spelling rules</h4><ul><li>General rule: <i>work → works</i>, <i>read → reads</i></li><li>-o, -ch, -sh, -ss, -x → <b>-es</b>: <i>do → does</i>, <i>teach → teaches</i>, <i>fix → fixes</i></li><li>consonant + y → <b>-ies</b>: <i>cry → cries</i>, <i>fly → flies</i></li><li>vowel + y → just <b>-s</b>: <i>play → plays</i>, <i>buy → buys</i></li><li>irregular: <i>have → has</i></li></ul><h4>Common trap</h4><p><i>play</i> has a vowel before the y, so it is <b>plays</b> and not <i>plaies</i>.</p>",
+      "fichas": [
+        { "t": "teach → teaches", "d": "Verbos en -ch agregan -es.", "d_en": "Verbs ending in -ch add -es." },
+        { "t": "cry → cries", "d": "Consonante + y se convierte en -ies.", "d_en": "Consonant + y becomes -ies." },
+        { "t": "play → plays", "d": "Vocal + y solo agrega -s.", "d_en": "Vowel + y just adds -s." },
+        { "t": "do → does", "d": "Se escribe con -es y además funciona como auxiliar.", "d_en": "It takes -es and also works as the auxiliary." }
+      ],
+      "quiz": [
+        { "q": "«She ___ her homework every night.»", "q_en": "\"She ___ her homework every night.\"", "o": ["do", "dos", "does", "doies"], "o_en": ["do", "dos", "does", "doies"], "a": 2, "why": "Do termina en -o, así que en tercera persona es does.", "why_en": "Do ends in -o, so the third person is does." },
+        { "q": "¿Cuál está bien escrito?", "q_en": "Which one is correctly spelled?", "o": ["He plaies soccer", "He plays soccer", "He playes soccer", "He play soccer"], "o_en": ["He plaies soccer", "He plays soccer", "He playes soccer", "He play soccer"], "a": 1, "why": "Play tiene vocal antes de la y: solo se agrega -s.", "why_en": "Play has a vowel before the y: it only adds -s." },
+        { "q": "«My mother ___ delicious cakes.»", "q_en": "\"My mother ___ delicious cakes.\"", "o": ["bakes", "bake", "bakies", "bakeses"], "o_en": ["bakes", "bake", "bakies", "bakeses"], "a": 0, "why": "Regla general de tercera persona: se agrega -s.", "why_en": "General third person rule: add -s." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-7",
+      "num": 7,
+      "tipo": "grammar",
+      "t": "El genitivo sajón ('s)",
+      "t_en": "The possessive 's",
+      "d": "10 min",
+      "content_es": "<h4>Decir de quién es algo</h4><p>Se pone <b>'s</b> al dueño y luego el objeto: <i>Ana<b>'s</b> room</i> = el cuarto de Ana.</p><h4>Reglas</h4><ul><li>Dueño singular → <b>'s</b>: <i>my brother's bike</i></li><li>Plural terminado en -s → solo <b>'</b>: <i>my parents' car</i></li><li>Plural irregular → <b>'s</b>: <i>the children's toys</i></li><li>Varios dueños del mismo objeto → 's solo al último: <i>Ana and Luis's house</i></li></ul><h4>Ojo</h4><p>El genitivo se usa sobre todo con <b>personas y animales</b>. Con objetos se prefiere <i>of</i>: <i>the door <b>of</b> the house</i>.</p>",
+      "content_en": "<h4>Saying who owns something</h4><p>Add <b>'s</b> to the owner and then the object: <i>Ana<b>'s</b> room</i> = the room of Ana.</p><h4>Rules</h4><ul><li>Singular owner → <b>'s</b>: <i>my brother's bike</i></li><li>Plural ending in -s → just <b>'</b>: <i>my parents' car</i></li><li>Irregular plural → <b>'s</b>: <i>the children's toys</i></li><li>Two owners of the same thing → 's only on the last one: <i>Ana and Luis's house</i></li></ul><h4>Careful</h4><p>The possessive is used mostly with <b>people and animals</b>. With objects we prefer <i>of</i>: <i>the door <b>of</b> the house</i>.</p>",
+      "fichas": [
+        { "t": "Ana's room", "d": "'s indica el dueño: el cuarto de Ana.", "d_en": "'s marks the owner: the room of Ana." },
+        { "t": "my parents' car", "d": "Plural en -s: solo apóstrofe, sin s extra.", "d_en": "Plural ending in -s: apostrophe only, no extra s." },
+        { "t": "the children's toys", "d": "Plural irregular: sí lleva 's.", "d_en": "Irregular plural: it does take 's." },
+        { "t": "the door of the house", "d": "Con objetos se prefiere of en lugar del genitivo.", "d_en": "With objects we prefer of instead of the possessive." }
+      ],
+      "quiz": [
+        { "q": "¿Cómo se dice «el carro de mis padres»?", "q_en": "How do you say \"my parents' car\"?", "o": ["my parent's car", "my parents' car", "my parents car", "the car of my parents's"], "o_en": ["my parent's car", "my parents' car", "my parents car", "the car of my parents's"], "a": 1, "why": "Parents ya termina en -s, así que solo lleva apóstrofe.", "why_en": "Parents already ends in -s, so it takes only an apostrophe." },
+        { "q": "«This is ___ bedroom.» (de Miguel)", "q_en": "\"This is ___ bedroom.\" (Miguel's)", "o": ["Miguel bedroom", "Miguels'", "Miguel's", "of Miguel"], "o_en": ["Miguel bedroom", "Miguels'", "Miguel's", "of Miguel"], "a": 2, "why": "Dueño singular: se agrega 's.", "why_en": "Singular owner: add 's." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["the childrens' toys", "the children's toys", "the childrens toys", "the child's toys of them"], "o_en": ["the childrens' toys", "the children's toys", "the childrens toys", "the child's toys of them"], "a": 1, "why": "Children es plural irregular, así que lleva 's completo.", "why_en": "Children is an irregular plural, so it takes the full 's." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-8",
+      "num": 8,
+      "tipo": "vocabulary",
+      "t": "Los números",
+      "t_en": "Numbers",
+      "d": "10 min",
+      "content_es": "<h4>Cardinales</h4><p>one, two, three… <b>thirteen</b> (13), <b>twenty</b> (20), <b>thirty</b> (30), <b>fifty</b> (50), <b>one hundred</b> (100), <b>one thousand</b> (1000).</p><p>De 21 en adelante se une con guion: <b>twenty-one</b>, <b>forty-five</b>.</p><h4>Ordinales</h4><p>Dicen el orden: <b>first</b> (1st), <b>second</b> (2nd), <b>third</b> (3rd), y del cuarto en adelante se agrega <b>-th</b>: <b>fourth, fifth, twentieth</b>.</p><h4>Dónde se usan</h4><p>Fechas (<i>May 3rd</i>), pisos (<i>the second floor</i>), edad y cantidades (<i>There are twelve chairs</i>).</p>",
+      "content_en": "<h4>Cardinal numbers</h4><p>one, two, three… <b>thirteen</b> (13), <b>twenty</b> (20), <b>thirty</b> (30), <b>fifty</b> (50), <b>one hundred</b> (100), <b>one thousand</b> (1000).</p><p>From 21 on they are joined with a hyphen: <b>twenty-one</b>, <b>forty-five</b>.</p><h4>Ordinal numbers</h4><p>They give order: <b>first</b> (1st), <b>second</b> (2nd), <b>third</b> (3rd), and from fourth on you add <b>-th</b>: <b>fourth, fifth, twentieth</b>.</p><h4>Where they are used</h4><p>Dates (<i>May 3rd</i>), floors (<i>the second floor</i>), age and quantities (<i>There are twelve chairs</i>).</p>",
+      "fichas": [
+        { "t": "thirteen vs thirty", "d": "13 y 30: el acento cambia y la escritura también.", "d_en": "13 and 30: stress and spelling are different." },
+        { "t": "twenty-one", "d": "De 21 en adelante se escribe con guion.", "d_en": "From 21 on, numbers use a hyphen." },
+        { "t": "first / second / third", "d": "Los tres primeros ordinales son irregulares.", "d_en": "The first three ordinals are irregular." },
+        { "t": "-th", "d": "Terminación de la mayoría de los ordinales: fourth, tenth.", "d_en": "Ending of most ordinals: fourth, tenth." }
+      ],
+      "quiz": [
+        { "q": "¿Cómo se escribe el 45?", "q_en": "How do you write 45?", "o": ["fourty five", "forty-five", "four-five", "fortyfive"], "o_en": ["fourty five", "forty-five", "four-five", "fortyfive"], "a": 1, "why": "Se escribe forty (sin u) y con guion: forty-five.", "why_en": "It is spelled forty (no u) and hyphenated: forty-five." },
+        { "q": "El ordinal de «three» es…", "q_en": "The ordinal of \"three\" is…", "o": ["threeth", "thirth", "third", "threth"], "o_en": ["threeth", "thirth", "third", "threth"], "a": 2, "why": "Third es uno de los tres ordinales irregulares.", "why_en": "Third is one of the three irregular ordinals." },
+        { "q": "«I live on the ___ floor.» (piso 2)", "q_en": "\"I live on the ___ floor.\" (floor 2)", "o": ["two", "second", "twoth", "secondth"], "o_en": ["two", "second", "twoth", "secondth"], "a": 1, "why": "Los pisos se dicen con ordinal: second floor.", "why_en": "Floors use ordinals: second floor." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-9",
+      "num": 9,
+      "tipo": "vocabulary",
+      "t": "Habitaciones y muebles",
+      "t_en": "Rooms and furniture",
+      "d": "10 min",
+      "content_es": "<h4>Habitaciones</h4><p><b>living room</b> – sala · <b>dining room</b> – comedor · <b>kitchen</b> – cocina · <b>bedroom</b> – dormitorio · <b>bathroom</b> – baño · <b>garage</b> – garaje · <b>garden</b> – jardín · <b>stairs</b> – escaleras.</p><h4>Muebles</h4><p><b>sofa</b>, <b>armchair</b> (sillón), <b>table</b>, <b>chair</b>, <b>bed</b>, <b>wardrobe</b> (armario), <b>desk</b> (escritorio), <b>shelf</b> (repisa), <b>mirror</b> (espejo), <b>lamp</b>.</p><h4>Descripción típica</h4><p><i>In my bedroom there is a bed, a desk and a big wardrobe. The lamp is on the desk.</i></p>",
+      "content_en": "<h4>Rooms</h4><p><b>living room</b> · <b>dining room</b> · <b>kitchen</b> · <b>bedroom</b> · <b>bathroom</b> · <b>garage</b> · <b>garden</b> · <b>stairs</b>.</p><h4>Furniture</h4><p><b>sofa</b>, <b>armchair</b>, <b>table</b>, <b>chair</b>, <b>bed</b>, <b>wardrobe</b>, <b>desk</b>, <b>shelf</b>, <b>mirror</b>, <b>lamp</b>.</p><h4>A typical description</h4><p><i>In my bedroom there is a bed, a desk and a big wardrobe. The lamp is on the desk.</i></p>",
+      "fichas": [
+        { "t": "living room", "d": "Sala o salón, donde la familia se reúne.", "d_en": "The room where the family gets together." },
+        { "t": "wardrobe", "d": "Armario o clóset para la ropa.", "d_en": "A closet for clothes." },
+        { "t": "desk vs table", "d": "Desk es escritorio de estudio; table es mesa común.", "d_en": "A desk is for studying; a table is a general table." },
+        { "t": "stairs", "d": "Escaleras: siempre se usa en plural.", "d_en": "Stairs: always used in the plural." }
+      ],
+      "quiz": [
+        { "q": "¿Dónde cocinas?", "q_en": "Where do you cook?", "o": ["In the bathroom", "In the kitchen", "In the garage", "In the bedroom"], "o_en": ["In the bathroom", "In the kitchen", "In the garage", "In the bedroom"], "a": 1, "why": "Kitchen es la cocina.", "why_en": "Kitchen is where you cook." },
+        { "q": "¿Qué es un «wardrobe»?", "q_en": "What is a \"wardrobe\"?", "o": ["Un espejo", "Una repisa", "Un armario", "Una lámpara"], "o_en": ["A mirror", "A shelf", "A closet for clothes", "A lamp"], "a": 2, "why": "Wardrobe es el mueble donde se guarda la ropa.", "why_en": "A wardrobe is the piece of furniture where clothes are kept." },
+        { "q": "«There is a mirror ___ the wall.»", "q_en": "\"There is a mirror ___ the wall.\"", "o": ["in", "on", "under", "between"], "o_en": ["in", "on", "under", "between"], "a": 1, "why": "Los objetos colgados en la pared llevan on.", "why_en": "Objects hanging on a wall take on." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-10",
+      "num": 10,
+      "tipo": "vocabulary",
+      "t": "Objetos de la casa",
+      "t_en": "Objects in my house",
+      "d": "8 min",
+      "content_es": "<h4>Cosas de todos los días</h4><p><b>door</b> – puerta · <b>window</b> – ventana · <b>key</b> – llave · <b>clock</b> – reloj de pared · <b>fridge</b> – nevera · <b>stove</b> – estufa · <b>sink</b> – lavamanos o lavaplatos · <b>towel</b> – toalla · <b>pillow</b> – almohada · <b>blanket</b> – cobija · <b>curtains</b> – cortinas · <b>carpet</b> – alfombra.</p><h4>Aparatos</h4><p><b>TV</b>, <b>computer</b>, <b>washing machine</b> (lavadora), <b>microwave</b> (microondas), <b>fan</b> (ventilador).</p><h4>Para practicar</h4><p><i>Where are the keys?</i> — <i>They are on the table, next to the lamp.</i></p>",
+      "content_en": "<h4>Everyday things</h4><p><b>door</b> · <b>window</b> · <b>key</b> · <b>clock</b> · <b>fridge</b> · <b>stove</b> · <b>sink</b> · <b>towel</b> · <b>pillow</b> · <b>blanket</b> · <b>curtains</b> · <b>carpet</b>.</p><h4>Appliances</h4><p><b>TV</b>, <b>computer</b>, <b>washing machine</b>, <b>microwave</b>, <b>fan</b>.</p><h4>To practise</h4><p><i>Where are the keys?</i> — <i>They are on the table, next to the lamp.</i></p>",
+      "fichas": [
+        { "t": "fridge", "d": "Nevera. Forma corta de refrigerator.", "d_en": "Refrigerator, in its short form." },
+        { "t": "curtains", "d": "Cortinas: se usa en plural.", "d_en": "Curtains: used in the plural." },
+        { "t": "washing machine", "d": "Lavadora: dos palabras.", "d_en": "The machine that washes clothes: two words." },
+        { "t": "pillow / blanket", "d": "Almohada y cobija, objetos de la cama.", "d_en": "Bed items: a pillow and a blanket." }
+      ],
+      "quiz": [
+        { "q": "¿Dónde guardas la comida fría?", "q_en": "Where do you keep cold food?", "o": ["In the stove", "In the fridge", "In the sink", "In the microwave"], "o_en": ["In the stove", "In the fridge", "In the sink", "In the microwave"], "a": 1, "why": "Fridge es la nevera.", "why_en": "The fridge keeps food cold." },
+        { "q": "¿Qué significa «towel»?", "q_en": "What does \"towel\" mean?", "o": ["Cortina", "Toalla", "Alfombra", "Almohada"], "o_en": ["Curtain", "Towel", "Carpet", "Pillow"], "a": 1, "why": "Towel es la toalla del baño.", "why_en": "A towel is what you use to dry yourself." },
+        { "q": "«The keys ___ in my bag.»", "q_en": "\"The keys ___ in my bag.\"", "o": ["is", "are", "am", "be"], "o_en": ["is", "are", "am", "be"], "a": 1, "why": "Keys es plural, así que el verbo es are.", "why_en": "Keys is plural, so the verb is are." }
+      ]
+    },
+    {
+      "id": "ingles-6-2-11",
+      "num": 11,
+      "tipo": "vocabulary",
+      "t": "Mis cosas favoritas",
+      "t_en": "My favorite things",
+      "d": "10 min",
+      "content_es": "<h4>Hablar de gustos</h4><ul><li><i>I like…</i> / <i>I love…</i> / <i>I don't like…</i> / <i>I hate…</i></li><li><i>My favorite color is blue.</i></li><li><i>What's your favorite food?</i> — <i>It's pizza.</i></li></ul><h4>Categorías útiles</h4><p><b>colors</b>: red, blue, green, yellow, black, white, purple, orange.<br><b>hobbies</b>: reading, drawing, dancing, playing video games, listening to music.<br><b>things</b>: my phone, my bike, my guitar, my dog.</p><h4>Detalle importante</h4><p>Después de <i>like</i> el verbo va en <b>-ing</b>: <i>I like <b>reading</b>.</i></p>",
+      "content_en": "<h4>Talking about what you like</h4><ul><li><i>I like…</i> / <i>I love…</i> / <i>I don't like…</i> / <i>I hate…</i></li><li><i>My favorite color is blue.</i></li><li><i>What's your favorite food?</i> — <i>It's pizza.</i></li></ul><h4>Useful categories</h4><p><b>colors</b>: red, blue, green, yellow, black, white, purple, orange.<br><b>hobbies</b>: reading, drawing, dancing, playing video games, listening to music.<br><b>things</b>: my phone, my bike, my guitar, my dog.</p><h4>Important detail</h4><p>After <i>like</i> the verb takes <b>-ing</b>: <i>I like <b>reading</b>.</i></p>",
+      "fichas": [
+        { "t": "I like + verbo-ing", "d": "Después de like el verbo lleva -ing: I like dancing.", "d_en": "After like the verb takes -ing: I like dancing." },
+        { "t": "favorite", "d": "Favorito. Va antes del sustantivo: my favorite song.", "d_en": "It goes before the noun: my favorite song." },
+        { "t": "I don't like…", "d": "Negación de gustos con el auxiliar do.", "d_en": "Negative of likes, with the auxiliary do." },
+        { "t": "What's your favorite…?", "d": "Pregunta estándar sobre preferencias.", "d_en": "Standard question about preferences." }
+      ],
+      "quiz": [
+        { "q": "«I like ___ comics.»", "q_en": "\"I like ___ comics.\"", "o": ["read", "reads", "reading", "to reading"], "o_en": ["read", "reads", "reading", "to reading"], "a": 2, "why": "Después de like el verbo va en -ing.", "why_en": "After like the verb takes the -ing form." },
+        { "q": "¿Cuál pregunta es correcta?", "q_en": "Which question is correct?", "o": ["What is your favorite sport?", "Which is your sport favorite?", "What your favorite sport is?", "How is your favorite sport?"], "o_en": ["What is your favorite sport?", "Which is your sport favorite?", "What your favorite sport is?", "How is your favorite sport?"], "a": 0, "why": "Favorite va antes del sustantivo y el orden es What is…?", "why_en": "Favorite goes before the noun and the order is What is…?" },
+        { "q": "«She ___ like horror movies.»", "q_en": "\"She ___ like horror movies.\"", "o": ["don't", "doesn't", "isn't", "not"], "o_en": ["don't", "doesn't", "isn't", "not"], "a": 1, "why": "She es tercera persona: la negación es doesn't.", "why_en": "She is third person: the negative is doesn't." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-6-2-repaso",
+    "titulo": "Repaso — All About My Home and What I Love",
+    "titulo_en": "Review — All About My Home and What I Love",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Este periodo se trata de <b>describir espacios y cosas</b>. Para eso combinas tres herramientas: las <b>preposiciones de lugar</b> (in, on, under, between…), el <b>plural</b> de los sustantivos y las expresiones de <b>cantidad</b> (there is/are, some/any, how many).</p><h4>Puntos gramaticales</h4><ul><li>Plural: -s, -es, -ies, -ves, más los irregulares (children, people, feet).</li><li>some en afirmativo; any en negativo y pregunta; some en ofrecimientos.</li><li>they're (they are) / their (posesivo) / there (lugar o existencia).</li><li>Genitivo sajón: Ana's room, my parents' car, the children's toys.</li></ul><h4>Vocabulario</h4><p>Números cardinales y ordinales, habitaciones, muebles, objetos de la casa y cosas favoritas.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>This term is about <b>describing spaces and things</b>. You combine three tools: <b>prepositions of place</b> (in, on, under, between…), noun <b>plurals</b>, and <b>quantity</b> expressions (there is/are, some/any, how many).</p><h4>Grammar points</h4><ul><li>Plurals: -s, -es, -ies, -ves, plus irregulars (children, people, feet).</li><li>some in affirmatives; any in negatives and questions; some in offers.</li><li>they're (they are) / their (possessive) / there (place or existence).</li><li>Possessive 's: Ana's room, my parents' car, the children's toys.</li></ul><h4>Vocabulary</h4><p>Cardinal and ordinal numbers, rooms, furniture, household objects and favorite things.</p>",
+    "puntos_clave": [
+      ["in = adentro; on = sobre una superficie.", "in = inside; on = on a surface."],
+      ["some en afirmativo, any en negativo y pregunta.", "some in affirmatives, any in negatives and questions."],
+      ["Consonante + y → -ies; vocal + y → solo -s.", "Consonant + y → -ies; vowel + y → just -s."],
+      ["Plural en -s ya escrito: solo apóstrofe (my parents').", "Plural already ending in -s: apostrophe only (my parents')."],
+      ["they're = they are; their = posesivo; there = allí / hay.", "they're = they are; their = possessive; there = place / existence."],
+      ["Después de like el verbo va en -ing.", "After like the verb takes the -ing form."]
+    ],
+    "preguntas": [
+      { "q": "«The cat is ___ the sofa and the wall.»", "q_en": "\"The cat is ___ the sofa and the wall.\"", "o": ["next to", "between", "on", "in"], "o_en": ["next to", "between", "on", "in"], "a": 1, "why": "Hay dos referencias, así que se usa between.", "why_en": "There are two references, so we use between." },
+      { "q": "¿Cuál plural es correcto?", "q_en": "Which plural is correct?", "o": ["knifes", "knives", "knifs", "knivies"], "o_en": ["knifes", "knives", "knifs", "knivies"], "a": 1, "why": "Las palabras en -fe cambian a -ves.", "why_en": "Words ending in -fe change to -ves." },
+      { "q": "«Are there ___ eggs in the fridge?»", "q_en": "\"Are there ___ eggs in the fridge?\"", "o": ["some", "any", "a", "much"], "o_en": ["some", "any", "a", "much"], "a": 1, "why": "Es una pregunta, así que se usa any.", "why_en": "It is a question, so we use any." },
+      { "q": "«___ house is the blue one.» (de ellos)", "q_en": "\"___ house is the blue one.\" (belonging to them)", "o": ["There", "They're", "Their", "Theirs"], "o_en": ["There", "They're", "Their", "Theirs"], "a": 2, "why": "Acompaña al sustantivo house: el posesivo their.", "why_en": "It goes with the noun house: the possessive their." },
+      { "q": "«This is ___ bike.» (de mi hermano)", "q_en": "\"This is ___ bike.\" (my brother's)", "o": ["my brothers", "my brother's", "my brothers'", "of my brother"], "o_en": ["my brothers", "my brother's", "my brothers'", "of my brother"], "a": 1, "why": "Dueño singular: brother + 's.", "why_en": "Singular owner: brother + 's." },
+      { "q": "«How ___ chairs are there in the dining room?»", "q_en": "\"How ___ chairs are there in the dining room?\"", "o": ["much", "many", "long", "old"], "o_en": ["much", "many", "long", "old"], "a": 1, "why": "Chairs es contable: how many.", "why_en": "Chairs is countable: how many." },
+      { "q": "«My father ___ the dishes every day.»", "q_en": "\"My father ___ the dishes every day.\"", "o": ["wash", "washs", "washes", "washies"], "o_en": ["wash", "washs", "washes", "washies"], "a": 2, "why": "Wash termina en -sh, así que agrega -es.", "why_en": "Wash ends in -sh, so it adds -es." },
+      { "q": "«I love ___ music before sleeping.»", "q_en": "\"I love ___ music before sleeping.\"", "o": ["listen", "listens", "listening to", "to listening"], "o_en": ["listen", "listens", "listening to", "to listening"], "a": 2, "why": "Después de love el verbo va en -ing y listen pide la preposición to.", "why_en": "After love the verb takes -ing, and listen needs the preposition to." }
+    ]
+  }
+}

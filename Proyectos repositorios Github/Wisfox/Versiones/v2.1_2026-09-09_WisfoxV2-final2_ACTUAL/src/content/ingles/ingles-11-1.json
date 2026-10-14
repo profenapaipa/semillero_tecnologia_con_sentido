@@ -1,0 +1,177 @@
+{
+  "id": "ingles-11-1",
+  "materia": "ingles",
+  "grado": "11",
+  "grado_nombre": "Once",
+  "periodo": 1,
+  "periodo_label": { "es": "Periodo I", "en": "Term I" },
+  "titulo": "Understanding the Past and Human Experiences",
+  "titulo_es": "Comprender el pasado y la experiencia humana",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Relaciono experiencias pasadas con el presente y las ordeno en el tiempo con precisión. Reflexiono sobre mi trayectoria personal y la de otros usando estructuras complejas.",
+  "competencias": "Distinguir presente perfecto y pasado perfecto en sus formas simple y continua; emplear con precisión for, since, already, yet, just, ever y never; describir carácter, emociones y experiencias.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "A Life in Three Chapters",
+    "descripcion_es": "Cada estudiante escribe y presenta la trayectoria de una persona (real o propia) en tres capítulos: lo que había ocurrido antes, lo que ha vivido hasta hoy y cómo eso lo define.",
+    "descripcion_en": "Each student writes and presents the trajectory of a person (real or their own) in three chapters: what had happened before, what they have lived through until today and how that defines them."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-11-1-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Presente perfecto simple y continuo",
+      "t_en": "Present perfect simple and continuous",
+      "d": "16 min",
+      "content_es": "<h4>Simple: have/has + participio</h4><p>Se enfoca en el <b>resultado</b> o en la experiencia: <i>I <b>have written</b> three essays this semester.</i></p><h4>Continuo: have/has been + -ing</h4><p>Se enfoca en la <b>duración</b> o en el proceso, que puede seguir: <i>I <b>have been writing</b> all afternoon.</i></p><h4>Cómo elegir</h4><ul><li>Con cantidad exacta → simple: <i>She has read four books.</i></li><li>Con duración (for, since, all day, lately) → continuo: <i>She has been reading since noon.</i></li><li>Con efecto visible en el presente → continuo: <i>You've been crying, haven't you?</i></li><li>Con verbos de estado (know, be, have) → siempre simple.</li></ul><h4>Con live, work y study</h4><p>Ambas formas son equivalentes: <i>I've worked here for five years = I've been working here for five years.</i></p>",
+      "content_en": "<h4>Simple: have/has + participle</h4><p>It focuses on the <b>result</b> or the experience: <i>I <b>have written</b> three essays this semester.</i></p><h4>Continuous: have/has been + -ing</h4><p>It focuses on the <b>duration</b> or the process, which may still be going: <i>I <b>have been writing</b> all afternoon.</i></p><h4>How to choose</h4><ul><li>With an exact quantity → simple: <i>She has read four books.</i></li><li>With duration (for, since, all day, lately) → continuous: <i>She has been reading since noon.</i></li><li>With a visible present effect → continuous: <i>You've been crying, haven't you?</i></li><li>With state verbs (know, be, have) → always simple.</li></ul><h4>With live, work and study</h4><p>Both forms are equivalent: <i>I've worked here for five years = I've been working here for five years.</i></p>",
+      "fichas": [
+        { "t": "Simple = resultado", "d": "Importa qué quedó hecho, no cuánto duró.", "d_en": "What matters is what got done, not how long it took." },
+        { "t": "Continuo = proceso", "d": "Importa la duración o que la acción siga.", "d_en": "What matters is the duration or that it continues." },
+        { "t": "Cantidad → simple", "d": "I've sent five emails, no I've been sending five.", "d_en": "I've sent five emails, not I've been sending five." },
+        { "t": "lately / recently", "d": "Expresiones que suelen ir con el perfecto continuo.", "d_en": "Expressions that usually take the perfect continuous." },
+        { "t": "Verbos de estado", "d": "know, be, own: solo forma simple.", "d_en": "know, be, own: simple form only." }
+      ],
+      "quiz": [
+        { "q": "«She's exhausted. She ___ all day.»", "q_en": "\"She's exhausted. She ___ all day.\"", "o": ["has studied", "has been studying", "studied", "studies"], "o_en": ["has studied", "has been studying", "studied", "studies"], "a": 1, "why": "All day enfatiza la duración del proceso.", "why_en": "All day emphasizes the duration of the process." },
+        { "q": "«I ___ six chapters so far.»", "q_en": "\"I ___ six chapters so far.\"", "o": ["have been reading", "have read", "read", "am reading"], "o_en": ["have been reading", "have read", "read", "am reading"], "a": 1, "why": "Hay una cantidad concreta: perfecto simple.", "why_en": "There is a specific quantity: perfect simple." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["I've known her for years", "I've been knowing her for years", "I've been waiting for an hour", "I've finished the task"], "o_en": ["I've known her for years", "I've been knowing her for years", "I've been waiting for an hour", "I've finished the task"], "a": 1, "why": "Know es verbo de estado: no admite forma continua.", "why_en": "Know is a state verb: it has no continuous form." }
+      ]
+    },
+    {
+      "id": "ingles-11-1-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Pasado perfecto simple y continuo",
+      "t_en": "Past perfect simple and continuous",
+      "d": "14 min",
+      "content_es": "<h4>Simple: had + participio</h4><p>Una acción terminada antes de otro momento pasado: <i>When she arrived, they <b>had left</b>.</i></p><h4>Continuo: had been + -ing</h4><p>Una acción en curso <b>hasta</b> ese momento pasado, con énfasis en la duración: <i>She was tired because she <b>had been working</b> for ten hours.</i></p><h4>La misma lógica de siempre</h4><ul><li>Resultado o cantidad → simple: <i>He had sent three messages before she replied.</i></li><li>Duración o causa visible → continuo: <i>The ground was wet; it <b>had been raining</b>.</i></li></ul><h4>Con for y since</h4><p><i>By 2020 they <b>had been living</b> abroad <b>for</b> a decade.</i></p><h4>Ojo</h4><p>Los verbos de estado tampoco admiten el continuo aquí: <i>She had known him since childhood.</i></p>",
+      "content_en": "<h4>Simple: had + participle</h4><p>An action finished before another past moment: <i>When she arrived, they <b>had left</b>.</i></p><h4>Continuous: had been + -ing</h4><p>An action in progress <b>up to</b> that past moment, with the focus on duration: <i>She was tired because she <b>had been working</b> for ten hours.</i></p><h4>The same logic as always</h4><ul><li>Result or quantity → simple: <i>He had sent three messages before she replied.</i></li><li>Duration or visible cause → continuous: <i>The ground was wet; it <b>had been raining</b>.</i></li></ul><h4>With for and since</h4><p><i>By 2020 they <b>had been living</b> abroad <b>for</b> a decade.</i></p><h4>Careful</h4><p>State verbs take no continuous here either: <i>She had known him since childhood.</i></p>",
+      "fichas": [
+        { "t": "had been + -ing", "d": "Duración hasta un punto del pasado.", "d_en": "Duration up to a point in the past." },
+        { "t": "Causa visible en el pasado", "d": "The ground was wet; it had been raining.", "d_en": "The ground was wet; it had been raining." },
+        { "t": "Cantidad → simple", "d": "He had written two reports before noon.", "d_en": "He had written two reports before noon." },
+        { "t": "Sin continuo con estados", "d": "had known, no had been knowing.", "d_en": "had known, not had been knowing." }
+      ],
+      "quiz": [
+        { "q": "«His hands were dirty; he ___ in the garden.»", "q_en": "\"His hands were dirty; he ___ in the garden.\"", "o": ["had worked", "had been working", "worked", "has worked"], "o_en": ["had worked", "had been working", "worked", "has worked"], "a": 1, "why": "El efecto visible viene de un proceso: perfecto continuo en pasado.", "why_en": "The visible effect comes from a process: past perfect continuous." },
+        { "q": "«By the time we called, they ___ the decision.»", "q_en": "\"By the time we called, they ___ the decision.\"", "o": ["had made", "had been making", "made", "have made"], "o_en": ["had made", "had been making", "made", "have made"], "a": 0, "why": "Es una acción terminada antes: pasado perfecto simple.", "why_en": "It is an action finished before: past perfect simple." },
+        { "q": "«She ___ him since they were children.»", "q_en": "\"She ___ him since they were children.\"", "o": ["had been knowing", "had known", "was knowing", "had know"], "o_en": ["had been knowing", "had known", "was knowing", "had know"], "a": 1, "why": "Know es verbo de estado: solo la forma simple.", "why_en": "Know is a state verb: simple form only." }
+      ]
+    },
+    {
+      "id": "ingles-11-1-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Presente perfecto vs pasado perfecto vs pasado simple",
+      "t_en": "Present perfect vs past perfect vs past simple",
+      "d": "16 min",
+      "content_es": "<h4>Cada uno con su punto de referencia</h4><ul><li><b>Pasado simple</b> → un momento terminado del pasado: <i>I graduated in 2024.</i></li><li><b>Presente perfecto</b> → conecta con el ahora: <i>I have graduated</i> (ya soy graduado, importa hoy).</li><li><b>Pasado perfecto</b> → antes de otro momento pasado: <i>By 2024 I had already graduated.</i></li></ul><h4>La prueba del tiempo</h4><p>Si hay una expresión de <b>tiempo terminado</b> (yesterday, in 2020, last year, when I was a child) → pasado simple. Si el periodo <b>sigue abierto</b> (today, this week, so far, this year) → presente perfecto.</p><h4>En narración</h4><p><i>She <b>moved</b> to Bogotá in 2019 (simple). She <b>had lived</b> in Cali before that (perfecto de pasado). She <b>has lived</b> there ever since (perfecto de presente).</i></p><h4>Error frecuente</h4><p>No se combina el presente perfecto con un momento pasado concreto: <i>I have seen him yesterday</i> es incorrecto.</p>",
+      "content_en": "<h4>Each with its reference point</h4><ul><li><b>Past simple</b> → a finished past moment: <i>I graduated in 2024.</i></li><li><b>Present perfect</b> → connects with now: <i>I have graduated</i> (I am a graduate, it matters today).</li><li><b>Past perfect</b> → before another past moment: <i>By 2024 I had already graduated.</i></li></ul><h4>The time test</h4><p>If there is a <b>finished time</b> expression (yesterday, in 2020, last year, when I was a child) → past simple. If the period is <b>still open</b> (today, this week, so far, this year) → present perfect.</p><h4>In narration</h4><p><i>She <b>moved</b> to Bogotá in 2019 (simple). She <b>had lived</b> in Cali before that (past perfect). She <b>has lived</b> there ever since (present perfect).</i></p><h4>Common mistake</h4><p>The present perfect is never combined with a specific past moment: <i>I have seen him yesterday</i> is wrong.</p>",
+      "fichas": [
+        { "t": "Periodo cerrado → simple", "d": "yesterday, in 2020, last week.", "d_en": "yesterday, in 2020, last week." },
+        { "t": "Periodo abierto → perfecto", "d": "today, this week, so far, this year.", "d_en": "today, this week, so far, this year." },
+        { "t": "Pasado perfecto = antes", "d": "Retrocede desde un punto ya pasado.", "d_en": "Steps back from a point already in the past." },
+        { "t": "ever since", "d": "Desde entonces hasta ahora: pide presente perfecto.", "d_en": "From then until now: it calls for the present perfect." }
+      ],
+      "quiz": [
+        { "q": "«I ___ my project last Friday.»", "q_en": "\"I ___ my project last Friday.\"", "o": ["have finished", "finished", "had finished", "finish"], "o_en": ["have finished", "finished", "had finished", "finish"], "a": 1, "why": "Last Friday es un momento terminado: pasado simple.", "why_en": "Last Friday is a finished moment: past simple." },
+        { "q": "«I ___ three interviews so far this month.»", "q_en": "\"I ___ three interviews so far this month.\"", "o": ["had", "have had", "had had", "was having"], "o_en": ["had", "have had", "had had", "was having"], "a": 1, "why": "So far this month es un periodo abierto: presente perfecto.", "why_en": "So far this month is an open period: present perfect." },
+        { "q": "«When the show started, we ___ already ___ our seats.»", "q_en": "\"When the show started, we ___ already ___ our seats.\"", "o": ["have / taken", "had / taken", "did / take", "were / taking"], "o_en": ["have / taken", "had / taken", "did / take", "were / taking"], "a": 1, "why": "Ocurrió antes de otro hecho pasado: pasado perfecto.", "why_en": "It happened before another past event: past perfect." }
+      ]
+    },
+    {
+      "id": "ingles-11-1-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "for, since, already, yet, just, ever, never",
+      "t_en": "for, since, already, yet, just, ever, never",
+      "d": "14 min",
+      "content_es": "<h4>Duración</h4><ul><li><b>for</b> + periodo: <i>for two years, for a long time</i></li><li><b>since</b> + punto de inicio: <i>since 2020, since I was ten</i></li></ul><h4>Posición y uso</h4><ul><li><b>already</b>: afirmativas, entre auxiliar y participio: <i>I've <b>already</b> sent it.</i></li><li><b>yet</b>: negativas y preguntas, al final: <i>Haven't you finished <b>yet</b>?</i></li><li><b>just</b>: acción muy reciente: <i>She has <b>just</b> called.</i></li><li><b>ever</b>: preguntas de experiencia: <i>Have you <b>ever</b> lived abroad?</i></li><li><b>never</b>: negativo por sí mismo: <i>I've <b>never</b> tried it.</i></li><li><b>still</b>: algo que continúa: <i>I <b>still</b> haven't finished.</i></li></ul><h4>Ojo</h4><p><b>since</b> también puede introducir una oración: <i>since I moved here</i>. Y <b>for</b> se omite a veces con all: <i>all my life</i>, no <i>for all my life</i>.</p>",
+      "content_en": "<h4>Duration</h4><ul><li><b>for</b> + period: <i>for two years, for a long time</i></li><li><b>since</b> + starting point: <i>since 2020, since I was ten</i></li></ul><h4>Position and use</h4><ul><li><b>already</b>: affirmatives, between auxiliary and participle: <i>I've <b>already</b> sent it.</i></li><li><b>yet</b>: negatives and questions, at the end: <i>Haven't you finished <b>yet</b>?</i></li><li><b>just</b>: a very recent action: <i>She has <b>just</b> called.</i></li><li><b>ever</b>: experience questions: <i>Have you <b>ever</b> lived abroad?</i></li><li><b>never</b>: negative on its own: <i>I've <b>never</b> tried it.</i></li><li><b>still</b>: something that continues: <i>I <b>still</b> haven't finished.</i></li></ul><h4>Careful</h4><p><b>since</b> can also introduce a clause: <i>since I moved here</i>. And <b>for</b> is dropped with all: <i>all my life</i>, not <i>for all my life</i>.</p>",
+      "fichas": [
+        { "t": "for vs since", "d": "for mide el tramo; since marca el inicio.", "d_en": "for measures the span; since marks the start." },
+        { "t": "already vs yet", "d": "already en afirmativo; yet en negativo y pregunta.", "d_en": "already in affirmatives; yet in negatives and questions." },
+        { "t": "still haven't", "d": "Still va antes del auxiliar en negativos.", "d_en": "Still goes before the auxiliary in negatives." },
+        { "t": "ever", "d": "Alguna vez, en preguntas de experiencia.", "d_en": "At any time, in experience questions." },
+        { "t": "all my life", "d": "No lleva for delante.", "d_en": "It takes no for before it." }
+      ],
+      "quiz": [
+        { "q": "«They've lived here ___ 2018.»", "q_en": "\"They've lived here ___ 2018.\"", "o": ["for", "since", "ago", "from"], "o_en": ["for", "since", "ago", "from"], "a": 1, "why": "2018 es un punto de inicio: since.", "why_en": "2018 is a starting point: since." },
+        { "q": "«Have you sent the form ___?»", "q_en": "\"Have you sent the form ___?\"", "o": ["already", "yet", "just", "still"], "o_en": ["already", "yet", "just", "still"], "a": 1, "why": "En preguntas se usa yet, al final.", "why_en": "In questions we use yet, at the end." },
+        { "q": "«I ___ haven't received an answer.»", "q_en": "\"I ___ haven't received an answer.\"", "o": ["yet", "already", "still", "ever"], "o_en": ["yet", "already", "still", "ever"], "a": 2, "why": "Still va antes del auxiliar en oraciones negativas.", "why_en": "Still goes before the auxiliary in negative sentences." }
+      ]
+    },
+    {
+      "id": "ingles-11-1-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Saludos y comandos en registro académico",
+      "t_en": "Greetings and commands in an academic register",
+      "d": "10 min",
+      "content_es": "<h4>Registro formal escrito</h4><p><i>Dear Ms. Ramírez, · I am writing to… · I would appreciate it if you could… · Thank you for your time. · Kind regards,</i></p><h4>Registro oral formal</h4><p><i>Good afternoon. Thank you for having me. · Allow me to introduce myself. · I would like to begin by…</i></p><h4>Comandos académicos</h4><p><i>Analyze the argument. · Evaluate the evidence. · Contrast both positions. · Justify your choice. · Cite the source. · Revise and edit your draft. · Proofread before submitting.</i></p><h4>Ojo con el registro</h4><ul><li>Formal: <i>I would like to…</i> · Informal: <i>I wanna…</i> (no se usa por escrito)</li><li>Formal: <i>Could you please…?</i> · Informal: <i>Can you…?</i></li></ul><p><b>Proofread</b> es revisar la ortografía y el formato; <b>revise</b> es reescribir el contenido.</p>",
+      "content_en": "<h4>Formal written register</h4><p><i>Dear Ms. Ramírez, · I am writing to… · I would appreciate it if you could… · Thank you for your time. · Kind regards,</i></p><h4>Formal spoken register</h4><p><i>Good afternoon. Thank you for having me. · Allow me to introduce myself. · I would like to begin by…</i></p><h4>Academic commands</h4><p><i>Analyze the argument. · Evaluate the evidence. · Contrast both positions. · Justify your choice. · Cite the source. · Revise and edit your draft. · Proofread before submitting.</i></p><h4>Careful with register</h4><ul><li>Formal: <i>I would like to…</i> · Informal: <i>I wanna…</i> (never in writing)</li><li>Formal: <i>Could you please…?</i> · Informal: <i>Can you…?</i></li></ul><p><b>Proofread</b> is checking spelling and format; <b>revise</b> is rewriting the content.</p>",
+      "fichas": [
+        { "t": "proofread vs revise", "d": "Corregir la forma vs reescribir el contenido.", "d_en": "Checking the form vs rewriting the content." },
+        { "t": "Kind regards", "d": "Cierre formal estándar de un correo.", "d_en": "Standard formal email closing." },
+        { "t": "I would appreciate it if…", "d": "Petición muy formal y educada.", "d_en": "A very formal, polite request." },
+        { "t": "Justify your choice", "d": "Sustentar con razones la opción elegida.", "d_en": "To give reasons for the option chosen." }
+      ],
+      "quiz": [
+        { "q": "¿Qué significa «proofread»?", "q_en": "What does \"proofread\" mean?", "o": ["Reescribir el contenido", "Revisar ortografía y formato", "Citar fuentes", "Traducir"], "o_en": ["Rewrite the content", "Check spelling and format", "Cite sources", "Translate"], "a": 1, "why": "Proofread es la revisión final de forma.", "why_en": "Proofread is the final check of form." },
+        { "q": "¿Cuál cierre es formal?", "q_en": "Which closing is formal?", "o": ["See ya", "Kind regards", "Bye!", "Later"], "o_en": ["See ya", "Kind regards", "Bye!", "Later"], "a": 1, "why": "Kind regards es el cierre estándar de un correo formal.", "why_en": "Kind regards is the standard formal email closing." },
+        { "q": "En un correo formal se escribe…", "q_en": "In a formal email you write…", "o": ["I wanna ask you", "I would like to ask you", "Gimme a hand", "Can u help"], "o_en": ["I wanna ask you", "I would like to ask you", "Gimme a hand", "Can u help"], "a": 1, "why": "Las contracciones informales no se usan por escrito formal.", "why_en": "Informal contractions are not used in formal writing." }
+      ]
+    },
+    {
+      "id": "ingles-11-1-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Carácter, emociones y autorreflexión",
+      "t_en": "Character, emotions and self-reflection",
+      "d": "14 min",
+      "content_es": "<h4>Rasgos de carácter</h4><p><b>resilient</b> (resiliente), <b>disciplined</b>, <b>adaptable</b>, <b>reliable</b>, <b>self-aware</b>, <b>humble</b>, <b>assertive</b> (que se expresa con firmeza y respeto), <b>persistent</b>, <b>open-minded</b>, <b>overwhelmed</b>, <b>indecisive</b>.</p><h4>Emociones con matiz</h4><p><b>grateful</b>, <b>hopeful</b>, <b>uncertain</b>, <b>proud</b>, <b>ashamed</b>, <b>relieved</b>, <b>nostalgic</b>, <b>determined</b>, <b>fulfilled</b> (realizado).</p><h4>Reflexionar sobre la trayectoria</h4><p><i>Looking back, I realize that… · What I've learned is… · That experience taught me to… · I used to be…, but I've become… · If I could go back, I would…</i></p><h4>Estructuras útiles</h4><ul><li><b>have + participio</b> para el balance: <i>I have grown a lot.</i></li><li><b>used to</b> para el contraste con antes.</li><li><b>I wish / If only</b> para el arrepentimiento.</li></ul>",
+      "content_en": "<h4>Character traits</h4><p><b>resilient</b>, <b>disciplined</b>, <b>adaptable</b>, <b>reliable</b>, <b>self-aware</b>, <b>humble</b>, <b>assertive</b>, <b>persistent</b>, <b>open-minded</b>, <b>overwhelmed</b>, <b>indecisive</b>.</p><h4>Nuanced emotions</h4><p><b>grateful</b>, <b>hopeful</b>, <b>uncertain</b>, <b>proud</b>, <b>ashamed</b>, <b>relieved</b>, <b>nostalgic</b>, <b>determined</b>, <b>fulfilled</b>.</p><h4>Reflecting on your path</h4><p><i>Looking back, I realize that… · What I've learned is… · That experience taught me to… · I used to be…, but I've become… · If I could go back, I would…</i></p><h4>Useful structures</h4><ul><li><b>have + participle</b> for the balance: <i>I have grown a lot.</i></li><li><b>used to</b> for the contrast with the past.</li><li><b>I wish / If only</b> for regret.</li></ul>",
+      "fichas": [
+        { "t": "resilient", "d": "Capaz de recuperarse tras una dificultad.", "d_en": "Able to recover after a difficulty." },
+        { "t": "assertive", "d": "Que expresa lo que piensa con firmeza y respeto.", "d_en": "Expressing your view firmly and respectfully." },
+        { "t": "self-aware", "d": "Consciente de las propias fortalezas y límites.", "d_en": "Aware of your own strengths and limits." },
+        { "t": "fulfilled", "d": "Realizado: satisfecho con lo que uno hace.", "d_en": "Satisfied with what you do with your life." },
+        { "t": "Looking back…", "d": "Abre una reflexión sobre el propio pasado.", "d_en": "Opens a reflection about your own past." }
+      ],
+      "quiz": [
+        { "q": "«She's very ___: she recovers quickly from setbacks.»", "q_en": "\"She's very ___: she recovers quickly from setbacks.\"", "o": ["indecisive", "resilient", "humble", "nostalgic"], "o_en": ["indecisive", "resilient", "humble", "nostalgic"], "a": 1, "why": "Recuperarse de las dificultades es ser resiliente.", "why_en": "Recovering from difficulties is being resilient." },
+        { "q": "¿Qué significa «assertive»?", "q_en": "What does \"assertive\" mean?", "o": ["Agresivo", "Que se expresa con firmeza y respeto", "Tímido", "Terco"], "o_en": ["Aggressive", "Expressing yourself firmly and respectfully", "Shy", "Stubborn"], "a": 1, "why": "Assertive no es agresivo: es firme y respetuoso.", "why_en": "Assertive is not aggressive: it is firm and respectful." },
+        { "q": "«___, I realize how much I've changed.»", "q_en": "\"___, I realize how much I've changed.\"", "o": ["Looking back", "Looking after", "Looking for", "Looking up"], "o_en": ["Looking back", "Looking after", "Looking for", "Looking up"], "a": 0, "why": "Looking back introduce una reflexión sobre el pasado.", "why_en": "Looking back introduces a reflection about the past." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-11-1-repaso",
+    "titulo": "Repaso — Understanding the Past and Human Experiences",
+    "titulo_en": "Review — Understanding the Past and Human Experiences",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Tres tiempos compiten y cada uno tiene su punto de referencia: el <b>pasado simple</b> para lo cerrado, el <b>presente perfecto</b> para lo que conecta con hoy y el <b>pasado perfecto</b> para lo anterior a otro pasado. Las formas continuas añaden la idea de duración.</p><h4>Puntos gramaticales</h4><ul><li>Con cantidad exacta → forma simple; con duración → forma continua.</li><li>Los verbos de estado no admiten formas continuas.</li><li>for + periodo; since + punto de inicio.</li><li>already en afirmativo, yet al final en negativos y preguntas, still antes del auxiliar.</li><li>El presente perfecto nunca va con un momento pasado concreto.</li></ul><h4>Vocabulario</h4><p>Registro académico formal, comandos de análisis, rasgos de carácter y fórmulas de autorreflexión.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>Three tenses compete and each has its reference point: the <b>past simple</b> for what is closed, the <b>present perfect</b> for what connects with today and the <b>past perfect</b> for what came before another past. The continuous forms add the idea of duration.</p><h4>Grammar points</h4><ul><li>With an exact quantity → simple form; with duration → continuous form.</li><li>State verbs take no continuous forms.</li><li>for + period; since + starting point.</li><li>already in affirmatives, yet at the end in negatives and questions, still before the auxiliary.</li><li>The present perfect never goes with a specific past moment.</li></ul><h4>Vocabulary</h4><p>Formal academic register, analysis commands, character traits and self-reflection formulas.</p>",
+    "puntos_clave": [
+      ["Periodo cerrado → pasado simple; abierto → presente perfecto.", "Closed period → past simple; open period → present perfect."],
+      ["Cantidad exacta pide la forma simple, no la continua.", "An exact quantity calls for the simple form, not the continuous."],
+      ["for + duración; since + inicio.", "for + duration; since + starting point."],
+      ["still haven't, no haven't still.", "still haven't, not haven't still."],
+      ["I have seen him yesterday es incorrecto.", "I have seen him yesterday is incorrect."],
+      ["proofread es forma; revise es contenido.", "proofread is form; revise is content."]
+    ],
+    "preguntas": [
+      { "q": "«We ___ in this house since I was born.»", "q_en": "\"We ___ in this house since I was born.\"", "o": ["live", "lived", "have lived", "had lived"], "o_en": ["live", "lived", "have lived", "had lived"], "a": 2, "why": "Since con acción que continúa: presente perfecto.", "why_en": "Since with an ongoing action: present perfect." },
+      { "q": "«He was out of breath; he ___.»", "q_en": "\"He was out of breath; he ___.\"", "o": ["had run", "had been running", "ran", "has run"], "o_en": ["had run", "had been running", "ran", "has run"], "a": 1, "why": "El efecto visible viene de un proceso previo.", "why_en": "The visible effect comes from a previous process." },
+      { "q": "«I ___ my application two weeks ago.»", "q_en": "\"I ___ my application two weeks ago.\"", "o": ["have sent", "sent", "had sent", "have been sending"], "o_en": ["have sent", "sent", "had sent", "have been sending"], "a": 1, "why": "Ago marca un momento cerrado: pasado simple.", "why_en": "Ago marks a closed moment: past simple." },
+      { "q": "«Have you ___ traveled outside the country?»", "q_en": "\"Have you ___ traveled outside the country?\"", "o": ["yet", "already", "ever", "still"], "o_en": ["yet", "already", "ever", "still"], "a": 2, "why": "Ever pregunta por una experiencia alguna vez.", "why_en": "Ever asks about an experience at any time." },
+      { "q": "«She's read ___ four novels this month.»", "q_en": "\"She's read ___ four novels this month.\"", "o": ["yet", "already", "still", "since"], "o_en": ["yet", "already", "still", "since"], "a": 1, "why": "Already va en oraciones afirmativas.", "why_en": "Already goes in affirmative sentences." },
+      { "q": "«By the time I got there, the talk ___.»", "q_en": "\"By the time I got there, the talk ___.\"", "o": ["has ended", "ended", "had ended", "was ending"], "o_en": ["has ended", "ended", "had ended", "was ending"], "a": 2, "why": "Terminó antes de otro hecho pasado: pasado perfecto.", "why_en": "It ended before another past event: past perfect." },
+      { "q": "«He's known for being ___: he admits his mistakes.»", "q_en": "\"He's known for being ___: he admits his mistakes.\"", "o": ["arrogant", "humble", "indecisive", "assertive"], "o_en": ["arrogant", "humble", "indecisive", "assertive"], "a": 1, "why": "Reconocer los errores propios es ser humilde.", "why_en": "Admitting your own mistakes is being humble." },
+      { "q": "«Please ___ your essay before submitting it.»", "q_en": "\"Please ___ your essay before submitting it.\"", "o": ["proofread", "translate", "cite", "contrast"], "o_en": ["proofread", "translate", "cite", "contrast"], "a": 0, "why": "Proofread es la revisión final antes de entregar.", "why_en": "Proofread is the final check before submitting." }
+    ]
+  }
+}

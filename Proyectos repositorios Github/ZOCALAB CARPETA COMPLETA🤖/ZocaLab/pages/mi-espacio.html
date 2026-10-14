@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZocaLab — Mi espacio</title>
+
+  <!-- Tipografías: Playfair Display para títulos, Nunito para el cuerpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/zocalab.css">
+  <link rel="stylesheet" href="../css/muisca.css">
+
+  <style>
+    /* ============================================
+       ZOCALAB — Mi espacio
+       Centro de organización personal del usuario
+       ============================================ */
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #F2EDE0;
+      min-height: 100vh;
+    }
+
+    /* ====== HEADER ====== */
+    .header {
+      position: fixed; top: 0; width: 100%; height: 60px;
+      background: rgba(242,237,224,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(27,94,59,0.1);
+      display: flex; align-items: center;
+      justify-content: space-between; padding: 0 24px;
+      z-index: 100;
+    }
+    .header-logo { display: flex; align-items: center; gap: 10px; }
+    .header-logo img { width: 32px; height: 32px; }
+    .header-logo span {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700; color: #1B5E3B;
+    }
+    .header-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: #1B5E3B; color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800; cursor: pointer;
+      border: none; font-family: 'Nunito', sans-serif;
+    }
+
+    /* ====== CONTENIDO ====== */
+    .contenido {
+      padding: 76px 20px 80px;
+      max-width: 600px; margin: 0 auto;
+    }
+
+    /* ====== NAVEGACIÓN INFERIOR ====== */
+    .nav-inferior {
+      position: fixed; bottom: 0; width: 100%; height: 64px;
+      background: rgba(242,237,224,0.97);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(27,94,59,0.1);
+      display: flex; align-items: center;
+      justify-content: space-around; z-index: 100;
+    }
+    .nav-item {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 3px;
+      font-size: 10px; font-weight: 700; color: #8a8a8a;
+      cursor: pointer; padding: 8px 12px;
+      border-radius: 12px; transition: all 0.2s;
+      text-decoration: none;
+    }
+    .nav-item.activo { color: #1B5E3B; background: rgba(27,94,59,0.08); }
+    .nav-item span:first-child { font-size: 20px; }
+
+    /* ====== COMPONENTES BASE ====== */
+    .zl-card {
+      background: white; border-radius: 16px;
+      padding: 20px; margin-bottom: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border: 1px solid rgba(27,94,59,0.06);
+    }
+    .zl-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 900;
+      color: #1B5E3B; margin-bottom: 4px;
+    }
+    .zl-btn {
+      background: #1B5E3B; color: white; border: none;
+      border-radius: 12px; padding: 14px 24px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px; font-weight: 800;
+      cursor: pointer; width: 100%; transition: all 0.2s;
+    }
+    .zl-btn:hover { background: #2D9B5A; transform: translateY(-1px); }
+
+    /* Botón pequeño de barra de herramientas */
+    .zl-btn-sm {
+      padding: 10px 16px; width: auto; font-size: 13px;
+    }
+
+    /* Botón contorneado */
+    .zl-btn-outline {
+      background: transparent; color: #1B5E3B;
+      border: 1.5px solid #1B5E3B; border-radius: 12px;
+      padding: 10px 16px; font-family: 'Nunito', sans-serif;
+      font-size: 13px; font-weight: 800; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .zl-btn-outline:hover { background: rgba(27,94,59,0.08); }
+    .zl-btn-outline-full { width: 100%; padding: 13px 20px; font-size: 14px; }
+
+    .zl-input {
+      width: 100%; padding: 13px 16px;
+      border-radius: 12px; border: 1.5px solid #ddd5c8;
+      background: white; font-family: 'Nunito', sans-serif;
+      font-size: 14px; color: #1A1A1A; outline: none;
+      transition: border-color 0.2s;
+    }
+    .zl-input:focus {
+      border-color: #1B5E3B;
+      box-shadow: 0 0 0 3px rgba(27,94,59,0.1);
+    }
+
+    /* Foco visible en todo control interactivo (accesibilidad) */
+    .zl-btn:focus-visible, .zl-btn-outline:focus-visible,
+    .tab:focus-visible, .filtro-pill:focus-visible,
+    .tarea-check:focus-visible, .meta-check:focus-visible,
+    .color-opt:focus-visible, .dia-agregar:focus-visible,
+    .header-avatar:focus-visible {
+      outline: 3px solid rgba(27,94,59,0.45); outline-offset: 2px;
+    }
+
+    /* ====== TABS INTERNOS ====== */
+    .tabs {
+      display: flex; gap: 4px; margin-bottom: 20px;
+      background: rgba(27,94,59,0.06);
+      border-radius: 12px; padding: 4px;
+    }
+    .tab {
+      flex: 1; padding: 10px 8px; border: none;
+      border-radius: 10px; font-family: 'Nunito', sans-serif;
+      font-size: 12px; font-weight: 700; color: #6b6b6b;
+      background: transparent; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab.activo {
+      background: white; color: #1B5E3B;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .tab-contenido { display: none; }
+    .tab-contenido.activo { display: block; animation: fadeUp 0.3s ease; }
+
+    /* ====== BARRA DE HERRAMIENTAS DE CADA TAB ====== */
+    .barra {
+      display: flex; gap: 10px; align-items: center;
+      margin-bottom: 16px; flex-wrap: wrap;
+    }
+    .barra .zl-input { flex: 1; min-width: 160px; }
+
+    /* ============================================
+       TAB 1 — NOTAS
+       ============================================ */
+    .notas-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .nota-card {
+      border-radius: 14px; padding: 14px;
+      cursor: pointer; transition: all 0.2s; min-height: 100px;
+      border: 1px solid rgba(0,0,0,0.06);
+      text-align: left; font-family: 'Nunito', sans-serif;
+      display: flex; flex-direction: column;
+    }
+    .nota-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .nota-titulo { font-weight: 800; font-size: 14px; color: #1A1A1A; margin-bottom: 6px; }
+    .nota-preview { font-size: 12px; color: #6b6b6b; line-height: 1.5; flex: 1; }
+    .nota-fecha { font-size: 10px; color: #8a8a8a; margin-top: 8px; text-align: right; }
+
+    /* ====== ESTADO VACÍO ====== */
+    .vacio {
+      text-align: center; padding: 40px 20px;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 6px;
+    }
+    .vacio-titulo { font-size: 15px; font-weight: 800; color: #1B5E3B; }
+    .vacio-texto { font-size: 13px; color: #6b6b6b; margin-bottom: 10px; }
+
+    /* ====== SELECTOR DE COLOR ====== */
+    .colores { display: flex; gap: 10px; align-items: center; }
+    .color-opt {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 2px solid rgba(0,0,0,0.12); cursor: pointer;
+      transition: all 0.2s; padding: 0;
+    }
+    .color-opt:hover { transform: scale(1.12); }
+    .color-opt.elegido {
+      border-color: #1B5E3B; transform: scale(1.12);
+      box-shadow: 0 0 0 3px rgba(27,94,59,0.15);
+    }
+
+    /* ====== MODALES ====== */
+    .modal {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      z-index: 300; display: none;
+      overflow-y: auto; padding: 0 20px 40px;
+    }
+    .modal.abierto { display: block; }
+    .modal-caja {
+      background: white; border-radius: 20px;
+      padding: 24px; max-width: 480px;
+      margin: 10vh auto 0;
+      animation: fadeUp 0.3s ease;
+      position: relative;
+    }
+    .modal-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 900;
+      color: #1B5E3B; margin-bottom: 18px;
+      padding-right: 34px;
+    }
+    .modal-cerrar {
+      position: absolute; top: 18px; right: 18px;
+      width: 30px; height: 30px; border-radius: 50%;
+      border: none; background: rgba(27,94,59,0.08);
+      color: #1B5E3B; font-size: 15px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .modal-cerrar:hover { background: rgba(27,94,59,0.16); }
+    .modal-campo { margin-bottom: 14px; }
+    .modal-label {
+      display: block; font-size: 13px; font-weight: 800;
+      color: #1B5E3B; margin-bottom: 7px;
+    }
+    .modal-acciones { display: flex; gap: 10px; margin-top: 20px; }
+
+    /* Textarea de contenido de la nota */
+    .textarea-nota { min-height: 200px; resize: vertical; line-height: 1.6; }
+
+    /* Botón eliminar en rojo suave */
+    .btn-eliminar {
+      background: rgba(196,82,42,0.1); color: #9E3D1C;
+      border: 1.5px solid rgba(196,82,42,0.4);
+      border-radius: 12px; padding: 14px 20px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 14px; font-weight: 800; cursor: pointer;
+      transition: all 0.2s; white-space: nowrap;
+    }
+    .btn-eliminar:hover { background: rgba(196,82,42,0.18); }
+
+    /* ============================================
+       TAB 2 — TAREAS
+       ============================================ */
+    .filtros { display: flex; gap: 6px; }
+    .filtro-pill {
+      padding: 7px 14px; border-radius: 50px;
+      border: 1.5px solid rgba(27,94,59,0.15);
+      background: white; font-family: 'Nunito', sans-serif;
+      font-size: 12px; font-weight: 700; color: #6b6b6b;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .filtro-pill.activo {
+      background: #1B5E3B; border-color: #1B5E3B; color: white;
+    }
+
+    .categoria-bloque { margin-bottom: 20px; }
+    .categoria-nombre {
+      font-weight: 800; font-size: 14px; color: #1B5E3B; flex: 1;
+    }
+    .categoria-contador { font-size: 11px; color: #8a8a8a; font-weight: 600; }
+    .categoria-chevron {
+      font-size: 11px; color: #1B5E3B;
+      transition: transform 0.25s;
+    }
+    .categoria-bloque.colapsado .categoria-chevron { transform: rotate(-90deg); }
+    .categoria-bloque.colapsado .categoria-lista { display: none; }
+
+    .tarea-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 0; border-bottom: 1px solid #f0ebe0;
+      animation: fadeUp 0.25s ease;
+    }
+    .tarea-check {
+      width: 20px; height: 20px; border-radius: 6px;
+      border: 2px solid #ddd5c8; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: all 0.2s;
+      background: white; color: transparent;
+      font-size: 12px; padding: 0;
+    }
+    .tarea-check.hecho {
+      background: #1B5E3B; border-color: #1B5E3B; color: white;
+    }
+    .tarea-texto { flex: 1; font-size: 14px; color: #1A1A1A; }
+    .tarea-texto.tachado { text-decoration: line-through; color: #8a8a8a; }
+    .tarea-fecha { font-size: 11px; color: #8a8a8a; white-space: nowrap; }
+
+    /* Botón discreto para borrar una tarea */
+    .tarea-borrar {
+      background: none; border: none; cursor: pointer;
+      color: #c4b9a5; font-size: 15px; padding: 2px 4px;
+      line-height: 1; transition: color 0.2s; flex-shrink: 0;
+    }
+    .tarea-borrar:hover { color: #C4522A; }
+
+    /* ============================================
+       TAB 3 — METAS
+       ============================================ */
+    .ciclo-card {
+      background: linear-gradient(135deg, #1B5E3B, #2D9B5A);
+      border-radius: 16px; padding: 20px;
+      margin-bottom: 18px; color: white;
+      position: relative; overflow: hidden;
+    }
+    .ciclo-card::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(45deg,
+        rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px,
+        transparent 0, transparent 22px);
+      pointer-events: none;
+    }
+    .ciclo-label {
+      font-size: 12px; font-weight: 800;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .ciclo-fase {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 900;
+      margin: 6px 0 2px; display: flex;
+      align-items: center; gap: 10px;
+    }
+    .ciclo-restante { font-size: 13px; color: rgba(255,255,255,0.8); }
+    .ciclo-barra {
+      height: 8px; border-radius: 50px; margin-top: 14px;
+      background: rgba(255,255,255,0.25); overflow: hidden;
+    }
+    .ciclo-barra-fill {
+      height: 100%; border-radius: 50px;
+      background: rgba(255,255,255,0.85);
+      transition: width 0.6s ease;
+    }
+    .ciclo-progreso-metas {
+      font-size: 13px; font-weight: 800;
+      color: rgba(255,255,255,0.92); margin-top: 12px;
+    }
+
+    .meta-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 14px; background: white; border-radius: 12px;
+      margin-bottom: 10px; border: 1px solid rgba(27,94,59,0.08);
+      animation: fadeUp 0.25s ease;
+    }
+    .meta-check {
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 2px solid #ddd5c8; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: all 0.2s;
+      background: white; color: transparent;
+      font-size: 11px; padding: 0; margin-top: 1px;
+    }
+    .meta-check.hecho {
+      background: #1B5E3B; border-color: #1B5E3B; color: white;
+    }
+    .meta-texto { flex: 1; font-size: 14px; color: #1A1A1A; line-height: 1.5; }
+    .meta-texto.tachado { text-decoration: line-through; color: #8a8a8a; }
+
+    /* Estrella que salta al completar una meta */
+    .estrella-pop {
+      position: fixed; font-size: 30px;
+      pointer-events: none; z-index: 500;
+      animation: estrellaPop 0.9s ease forwards;
+    }
+    @keyframes estrellaPop {
+      0%   { transform: scale(0) rotate(-45deg); opacity: 0; }
+      55%  { transform: scale(1.5) rotate(12deg); opacity: 1; }
+      100% { transform: scale(0.4) rotate(45deg); opacity: 0; }
+    }
+
+    /* ============================================
+       TAB 4 — SEMANA
+       ============================================ */
+    .semana-scroll { overflow-x: auto; padding-bottom: 8px; }
+    .semana-grid {
+      display: grid; grid-template-columns: repeat(7, 1fr);
+      gap: 6px; min-width: 742px;
+    }
+    .dia-col {
+      min-width: 100px; border-radius: 12px;
+      background: white; padding: 10px 8px;
+      border: 1.5px solid rgba(27,94,59,0.08);
+    }
+    .dia-col.hoy { border-color: #1B5E3B; }
+    .dia-header {
+      font-size: 11px; font-weight: 800; color: #1B5E3B;
+      text-align: center; margin-bottom: 2px;
+    }
+    .dia-num {
+      font-size: 10px; color: #8a8a8a;
+      text-align: center; margin-bottom: 8px;
+    }
+    .bloque {
+      border-radius: 8px; padding: 6px 8px;
+      margin-bottom: 6px; font-size: 11px;
+      font-weight: 700; cursor: pointer;
+      border: none; width: 100%; text-align: left;
+      font-family: 'Nunito', sans-serif;
+      border-left: 3px solid;
+      transition: transform 0.15s;
+    }
+    .bloque:hover { transform: translateX(2px); }
+    .bloque-hora { display: block; font-size: 10px; opacity: 0.8; font-weight: 600; }
+    .dia-agregar {
+      width: 100%; border: 1.5px dashed #ddd5c8;
+      border-radius: 8px; padding: 8px; font-size: 18px;
+      color: #b8ad99; background: none; cursor: pointer;
+      transition: all 0.2s; line-height: 1;
+    }
+    .dia-agregar:hover { border-color: #1B5E3B; color: #1B5E3B; }
+
+    /* Casillas de días en el modal de bloque */
+    .dias-check { display: flex; flex-wrap: wrap; gap: 8px; }
+    .dia-check-item {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px 12px; border-radius: 10px;
+      border: 1.5px solid #ddd5c8; cursor: pointer;
+      font-size: 13px; font-weight: 700; color: #1A1A1A;
+      transition: all 0.2s; background: white;
+    }
+    .dia-check-item.elegido {
+      border-color: #1B5E3B; background: rgba(27,94,59,0.07); color: #1B5E3B;
+    }
+    .dia-check-item input { accent-color: #1B5E3B; cursor: pointer; }
+
+    /* Aviso de error dentro de un modal */
+    .modal-error {
+      font-size: 13px; font-weight: 700; color: #9E3D1C;
+      background: rgba(196,82,42,0.1);
+      border-radius: 10px; padding: 10px 14px;
+      margin-bottom: 12px; display: none;
+    }
+    .modal-error.visible { display: block; }
+
+    /* ====== ANIMACIONES ====== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ====== ADAPTACIÓN A VENTANAS ANGOSTAS ====== */
+    @media (max-width: 620px) {
+      .notas-grid { grid-template-columns: 1fr; }
+      .barra { flex-direction: column; align-items: stretch; }
+      .barra .zl-btn-sm, .barra .zl-btn-outline { width: 100%; }
+    }
+
+    /* ============================================
+       FONDO — la escena de Mi espacio (js/escenas.js) va detrás.
+       IMPORTANTE: aquí solo el contenido lleva position:relative.
+       El header y la navegación inferior deben quedarse "fixed"
+       (antes se les aplicaba position:relative y la navegación
+       subía hasta la mitad de la página).
+       ============================================ */
+    .contenido { position: relative; z-index: 1; }
+
+    /* ====== TABS — ahora son 5: con scroll horizontal en vez de apretarse ====== */
+    .tabs { overflow-x: auto; }
+    .tab { flex: 0 0 auto; min-width: 84px; }
+
+    /* El selector de íconos (.iconos / .icono-opt) ya lo trae css/zocalab.css */
+
+    /* ====== CATEGORÍAS CON COLOR PROPIO ====== */
+    .categoria-bloque {
+      border-radius: 14px; padding: 4px 14px 4px;
+      margin-bottom: 14px;
+      border-left: 4px solid var(--cat-color, #1B5E3B);
+      background: var(--cat-tinte, rgba(27,94,59,0.04));
+    }
+    .categoria-header {
+      display: flex; align-items: center; gap: 6px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(27,94,59,0.1);
+      margin-bottom: 8px;
+    }
+    .categoria-toggle {
+      display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0;
+      background: none; border: none; cursor: pointer; padding: 0;
+      font-family: 'Nunito', sans-serif; text-align: left;
+    }
+    .categoria-editar {
+      background: none; border: none; cursor: pointer;
+      color: #8a8a8a; font-size: 12px; font-weight: 700;
+      padding: 5px 8px; border-radius: 8px; transition: all 0.2s;
+      flex-shrink: 0; white-space: nowrap;
+    }
+    .categoria-editar:hover { color: #1B5E3B; background: rgba(27,94,59,0.08); }
+
+    /* ====== ETIQUETA DE PLAZO EN METAS ====== */
+    .meta-item { flex-wrap: wrap; }
+    .meta-fila { display: flex; align-items: center; flex: 1; min-width: 0; gap: 8px; flex-wrap: wrap; }
+    .meta-plazo {
+      display: inline-block; font-size: 11px; font-weight: 800;
+      padding: 3px 10px; border-radius: 50px; white-space: nowrap;
+    }
+    .meta-plazo.vencida { background: rgba(196,82,42,0.14); color: #9E3D1C; }
+    .meta-plazo.pronto  { background: rgba(201,152,42,0.18); color: #8A671A; }
+    .meta-plazo.encurso { background: rgba(27,94,59,0.10);   color: #1B5E3B; }
+
+    /* ============================================
+       TAB — MES (calendario)
+       ============================================ */
+    .mes-cabecera {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .mes-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px; font-weight: 800; color: #1B5E3B;
+      text-transform: capitalize;
+    }
+    .mes-nav {
+      display: flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: 50%;
+      border: 1.5px solid rgba(27,94,59,0.2); background: #fff;
+      color: #1B5E3B; font-size: 15px; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .mes-nav:hover { background: rgba(27,94,59,0.08); }
+    .mes-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; }
+    .mes-diasemana {
+      font-size: 11px; font-weight: 800; color: #8a8a8a;
+      text-align: center; padding-bottom: 4px; text-transform: uppercase;
+    }
+    .mes-celda {
+      min-height: 74px; border-radius: 10px; padding: 5px;
+      border: 1.5px solid rgba(27,94,59,0.08); background: #fff;
+      cursor: pointer; transition: all 0.2s;
+      display: flex; flex-direction: column; gap: 3px;
+      text-align: left; font-family: 'Nunito', sans-serif;
+    }
+    .mes-celda:hover { border-color: #1B5E3B; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .mes-celda.vacia { background: transparent; border-color: transparent; cursor: default; box-shadow: none; }
+    .mes-celda.hoy { border-color: #C9982A; border-width: 2px; background: rgba(201,152,42,0.06); }
+    .mes-celda-num { font-size: 12px; font-weight: 800; color: #1A1A1A; }
+    .mes-celda.hoy .mes-celda-num { color: #8A671A; }
+    .mes-evento {
+      font-size: 10px; font-weight: 700; padding: 2px 5px;
+      border-radius: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .mes-mas { font-size: 10px; color: #8a8a8a; font-weight: 700; }
+
+    /* Modal del día: lista de eventos de esa fecha */
+    .dia-evento-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 0; border-bottom: 1px solid #f0ebe0;
+    }
+    .dia-evento-item:last-child { border-bottom: none; }
+    .dia-evento-icono { font-size: 18px; flex-shrink: 0; }
+    .dia-evento-texto { flex: 1; font-size: 14px; min-width: 0; }
+    .dia-evento-hora { font-size: 11px; color: #8a8a8a; }
+
+    /* ============================================
+       TAB — DIARIO
+       ============================================ */
+    .diario-dia {
+      background: white; border-radius: 14px;
+      margin-bottom: 10px; border: 1px solid rgba(27,94,59,0.08);
+      overflow: hidden;
+    }
+    .diario-dia summary {
+      padding: 14px 16px; cursor: pointer; font-weight: 800;
+      color: #1B5E3B; font-size: 14px; list-style: none;
+    }
+    .diario-dia summary::-webkit-details-marker { display: none; }
+    .diario-dia summary::before { content: '▸  '; }
+    .diario-dia[open] summary::before { content: '▾  '; }
+    .diario-detalle { padding: 0 16px 16px; }
+    .diario-bloque { margin-bottom: 10px; font-size: 13px; color: #4a4a4a; line-height: 1.6; }
+    .diario-bloque strong { display: block; color: #1B5E3B; margin-bottom: 4px; }
+    .diario-bloque p { margin: 0 0 2px; }
+  </style>
+</head>
+<body class="tema-muisca tema-escena">
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="header">
+    <div class="header-logo">
+      <img src="../assets/logo-icon.png" alt="ZocaLab"
+           onerror="this.style.display='none'">
+      <span>ZocaLab</span>
+    </div>
+    <button class="header-avatar" id="avatarBtn" title="Ir a mi perfil"
+            aria-label="Ir a mi perfil">?</button>
+  </header>
+
+  <!-- ============================================
+       CONTENIDO
+       ============================================ -->
+  <main class="contenido">
+
+    <div class="zl-titulo">Mi espacio</div>
+    <div style="font-size:13px;color:#6b6b6b">
+      Tu espacio personal de organización
+    </div>
+    <div class="mz-divisor" aria-hidden="true" style="margin-bottom:16px"><span></span></div>
+
+    <!-- ====== TABS ====== -->
+    <div class="tabs" role="tablist">
+      <button class="tab activo" role="tab" data-tab="notas"  aria-selected="true">📝 Notas</button>
+      <button class="tab"        role="tab" data-tab="tareas" aria-selected="false">✅ Tareas</button>
+      <button class="tab"        role="tab" data-tab="metas"  aria-selected="false">🎯 Metas</button>
+      <button class="tab"        role="tab" data-tab="mes"    aria-selected="false">📅 Mes</button>
+      <button class="tab"        role="tab" data-tab="diario" aria-selected="false">📖 Diario</button>
+    </div>
+
+    <!-- ============================================
+         TAB 1 — NOTAS
+         ============================================ -->
+    <section class="tab-contenido activo" id="tab-notas" role="tabpanel">
+      <div class="barra">
+        <label class="sr-only" for="buscarNota" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Buscar nota</label>
+        <input type="text" class="zl-input" id="buscarNota" placeholder="Buscar nota...">
+        <button class="zl-btn zl-btn-sm" id="btnNuevaNota">+ Nueva nota</button>
+      </div>
+      <div id="notasContenedor"></div>
+    </section>
+
+    <!-- ============================================
+         TAB 2 — TAREAS
+         ============================================ -->
+    <section class="tab-contenido" id="tab-tareas" role="tabpanel">
+      <div class="barra">
+        <button class="zl-btn zl-btn-sm" id="btnNuevaTarea">+ Nueva tarea</button>
+        <button class="zl-btn-outline" id="btnNuevaCategoria">+ Categoría</button>
+      </div>
+      <div class="filtros" style="margin-bottom:18px" role="group" aria-label="Filtrar tareas">
+        <button class="filtro-pill activo" data-filtro="todas">Todas</button>
+        <button class="filtro-pill" data-filtro="pendientes">Pendientes</button>
+        <button class="filtro-pill" data-filtro="completadas">Completadas</button>
+      </div>
+      <div id="tareasContenedor"></div>
+    </section>
+
+    <!-- ============================================
+         TAB 3 — METAS
+         ============================================ -->
+    <section class="tab-contenido" id="tab-metas" role="tabpanel">
+      <div class="ciclo-card" id="cicloCard"></div>
+      <div id="metasContenedor"></div>
+      <button class="zl-btn-outline zl-btn-outline-full" id="btnNuevaMeta"
+              style="margin-top:6px">+ Agregar meta a este ciclo</button>
+    </section>
+
+    <!-- ============================================
+         TAB 4 — MES (calendario)
+         ============================================ -->
+    <section class="tab-contenido" id="tab-mes" role="tabpanel">
+      <div class="mes-cabecera">
+        <button class="mes-nav" id="mesAnterior" aria-label="Mes anterior">‹</button>
+        <div class="mes-titulo" id="mesTitulo">—</div>
+        <button class="mes-nav" id="mesSiguiente" aria-label="Mes siguiente">›</button>
+      </div>
+      <div class="mes-grid" id="mesDiasSemana"></div>
+      <div class="mes-grid" id="mesGrid" style="margin-top:5px"></div>
+    </section>
+
+    <!-- ============================================
+         TAB 5 — DIARIO
+         ============================================ -->
+    <section class="tab-contenido" id="tab-diario" role="tabpanel">
+      <div class="barra">
+        <label class="sr-only" for="buscarDiario" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Buscar en tu bitácora</label>
+        <input type="text" class="zl-input" id="buscarDiario" placeholder="Buscar en tu bitácora...">
+      </div>
+      <div id="diarioContenedor"></div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       NAVEGACIÓN INFERIOR
+       ============================================ -->
+  <nav class="nav-inferior">
+    <a class="nav-item" href="bosque.html">
+      <span>🌳</span><span>Bosque</span>
+    </a>
+    <a class="nav-item" href="rutina-sol.html">
+      <span>☀️</span><span>Mi día</span>
+    </a>
+    <a class="nav-item activo" href="mi-espacio.html">
+      <span>📋</span><span>Mi espacio</span>
+    </a>
+    <a class="nav-item" href="rutina-luna.html">
+      <span>🌙</span><span>Cerrar día</span>
+    </a>
+    <a class="nav-item" href="perfil.html">
+      <span>👤</span><span>Perfil</span>
+    </a>
+  </nav>
+
+  <!-- ============================================
+       MODAL — NOTA
+       ============================================ -->
+  <div class="modal" id="modalNota" role="dialog" aria-modal="true" aria-labelledby="modalNotaTitulo">
+    <div class="modal-caja">
+      <button class="modal-cerrar" data-cerrar="modalNota" aria-label="Cerrar">✕</button>
+      <div class="modal-titulo" id="modalNotaTitulo">Nueva nota</div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="notaTitulo">Título</label>
+        <input type="text" class="zl-input" id="notaTitulo"
+               maxlength="80" placeholder="Título de la nota">
+      </div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="notaContenido">Contenido</label>
+        <textarea class="zl-input textarea-nota" id="notaContenido"
+                  placeholder="Escribe aquí..."></textarea>
+      </div>
+
+      <div class="modal-campo">
+        <span class="modal-label">Color</span>
+        <div class="colores" id="notaColores" role="group" aria-label="Color de la nota"></div>
+      </div>
+
+      <div class="modal-campo">
+        <span class="modal-label">Ícono</span>
+        <div class="iconos" id="notaIconos" role="group" aria-label="Ícono de la nota"></div>
+      </div>
+
+      <div class="modal-acciones">
+        <button class="zl-btn" id="btnGuardarNota">Guardar</button>
+        <button class="btn-eliminar" id="btnEliminarNota">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       MODAL — TAREA
+       ============================================ -->
+  <div class="modal" id="modalTarea" role="dialog" aria-modal="true" aria-labelledby="modalTareaTitulo">
+    <div class="modal-caja">
+      <button class="modal-cerrar" data-cerrar="modalTarea" aria-label="Cerrar">✕</button>
+      <div class="modal-titulo" id="modalTareaTitulo">Nueva tarea</div>
+
+      <div class="modal-error" id="errorTarea"></div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="tareaTexto">¿Qué hay que hacer?</label>
+        <input type="text" class="zl-input" id="tareaTexto"
+               maxlength="140" placeholder="Ej: terminar el informe">
+      </div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="tareaCategoria">Categoría</label>
+        <select class="zl-input" id="tareaCategoria"></select>
+      </div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="tareaFecha">Fecha límite (opcional)</label>
+        <input type="date" class="zl-input" id="tareaFecha">
+      </div>
+
+      <div class="modal-acciones">
+        <button class="zl-btn" id="btnGuardarTarea">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       MODAL — CATEGORÍA
+       ============================================ -->
+  <div class="modal" id="modalCategoria" role="dialog" aria-modal="true" aria-labelledby="modalCategoriaTitulo">
+    <div class="modal-caja">
+      <button class="modal-cerrar" data-cerrar="modalCategoria" aria-label="Cerrar">✕</button>
+      <div class="modal-titulo" id="modalCategoriaTitulo">Nueva categoría</div>
+
+      <div class="modal-error" id="errorCategoria"></div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="categoriaNombre">Nombre</label>
+        <input type="text" class="zl-input" id="categoriaNombre"
+               maxlength="30" placeholder="Ej: Estudio">
+      </div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="categoriaEmoji">Ícono</label>
+        <input type="text" class="zl-input" id="categoriaEmoji"
+               maxlength="2" placeholder="📚">
+      </div>
+
+      <div class="modal-campo">
+        <span class="modal-label">Color</span>
+        <div class="colores" id="categoriaColores" role="group" aria-label="Color de la categoría"></div>
+      </div>
+
+      <div class="modal-acciones">
+        <button class="zl-btn" id="btnGuardarCategoria">Crear</button>
+        <button class="btn-eliminar" id="btnEliminarCategoria" style="display:none">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       MODAL — META
+       ============================================ -->
+  <div class="modal" id="modalMeta" role="dialog" aria-modal="true" aria-labelledby="modalMetaTitulo">
+    <div class="modal-caja">
+      <button class="modal-cerrar" data-cerrar="modalMeta" aria-label="Cerrar">✕</button>
+      <div class="modal-titulo" id="modalMetaTitulo">Nueva meta</div>
+
+      <div class="modal-error" id="errorMeta"></div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="metaTexto">¿Qué quieres lograr?</label>
+        <input type="text" class="zl-input" id="metaTexto"
+               maxlength="140" placeholder="Ej: terminar el curso de álgebra">
+      </div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="metaFechaLimite">Plazo (opcional)</label>
+        <input type="date" class="zl-input" id="metaFechaLimite">
+      </div>
+
+      <div class="modal-acciones">
+        <button class="zl-btn" id="btnGuardarMeta">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       MODAL — DÍA DEL CALENDARIO (lista de eventos)
+       ============================================ -->
+  <div class="modal" id="modalDia" role="dialog" aria-modal="true" aria-labelledby="modalDiaTitulo">
+    <div class="modal-caja">
+      <button class="modal-cerrar" data-cerrar="modalDia" aria-label="Cerrar">✕</button>
+      <div class="modal-titulo" id="modalDiaTitulo">—</div>
+      <div id="diaEventosContenedor"></div>
+      <div class="modal-acciones">
+        <button class="zl-btn" id="btnNuevoEvento">+ Agregar evento</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       MODAL — EVENTO DEL CALENDARIO
+       ============================================ -->
+  <div class="modal" id="modalEvento" role="dialog" aria-modal="true" aria-labelledby="modalEventoTitulo">
+    <div class="modal-caja">
+      <button class="modal-cerrar" data-cerrar="modalEvento" aria-label="Cerrar">✕</button>
+      <div class="modal-titulo" id="modalEventoTitulo">Nuevo evento</div>
+
+      <div class="modal-error" id="errorEvento"></div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="eventoEtiqueta">¿Qué vas a hacer?</label>
+        <input type="text" class="zl-input" id="eventoEtiqueta"
+               maxlength="60" placeholder="Ej: Estudiar matemáticas">
+      </div>
+
+      <div class="modal-campo">
+        <label class="modal-label" for="eventoHora">Hora (opcional)</label>
+        <input type="time" class="zl-input" id="eventoHora">
+      </div>
+
+      <div class="modal-campo">
+        <span class="modal-label">Ícono</span>
+        <div class="iconos" id="eventoIconos" role="group" aria-label="Ícono del evento"></div>
+      </div>
+
+      <div class="modal-campo">
+        <span class="modal-label">Color</span>
+        <div class="colores" id="eventoColores" role="group" aria-label="Color del evento"></div>
+      </div>
+
+      <div class="modal-acciones">
+        <button class="zl-btn" id="btnGuardarEvento">Guardar</button>
+        <button class="btn-eliminar" id="btnEliminarEvento" style="display:none">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+<script src="../js/sonidos.js"></script>
+<script src="../js/animaciones.js"></script>
+<script src="../js/escenas.js"></script>
+
+<script>
+/* ============================================
+   ZOCALAB — Mi espacio
+   Toda la lógica de notas, tareas, metas y semana.
+   ============================================ */
+
+/* ============================================
+   VERIFICAR SESIÓN
+   Si no hay sesión activa, se vuelve al login.
+   Va en try/catch porque una sesión corrupta no
+   debe dejar la pantalla en blanco.
+   ============================================ */
+var sesion = null;
+try {
+  sesion = JSON.parse(localStorage.getItem('zocalab_sesion') || 'null');
+} catch (e) {
+  console.error('Mi espacio: la sesión guardada está corrupta', e);
+  sesion = null;
+}
+if (!sesion) window.location.href = 'login.html';
+
+var nombre = (sesion && sesion.nombre) ? sesion.nombre : '';
+var inicial = nombre.charAt(0).toUpperCase() || 'Z';
+document.getElementById('avatarBtn').textContent = inicial;
+// Foto de perfil muisca (se elige en Perfil). Los archivos son assets/perfil/<id>.jpg
+try {
+  var cuentas = JSON.parse(localStorage.getItem('zocalab_usuarios') || '[]');
+  var cuenta = cuentas.filter(function (u) { return sesion && u.id === sesion.usuarioId; })[0];
+  if (cuenta && /^[a-z]+$/.test(cuenta.avatarImagen || '')) {
+    var botonAvatar = document.getElementById('avatarBtn');
+    botonAvatar.textContent = '';
+    botonAvatar.style.backgroundImage = 'url("../assets/perfil/' + cuenta.avatarImagen + '.jpg")';
+    botonAvatar.classList.add('con-foto');
+  }
+} catch (e) { /* sin foto elegida: se queda la inicial */ }
+document.getElementById('avatarBtn').addEventListener('click', function () {
+  window.location.href = 'perfil.html';
+});
+
+/* ============================================
+   ACCESO A localStorage
+   Siempre con try/catch: si falla, la app sigue
+   funcionando con datos vacíos en lugar de romperse.
+   ============================================ */
+var CLAVE_ESPACIO = 'zocalab_espacio';
+
+// Estructura por defecto de Mi espacio
+function espacioVacio() {
+  return {
+    notas: [],
+    tareas: [],
+    categorias: [],
+    metas: [],
+    semana: {
+      lunes: [], martes: [], miercoles: [], jueves: [],
+      viernes: [], sabado: [], domingo: []
+    },
+    // Calendario mensual real: llave 'AAAA-MM-DD' -> [{id, etiqueta, icono, color, hora}]
+    // Reemplaza a "semana" como vista de planificación (esta se conserva
+    // en el storage por compatibilidad, pero ya no se lee ni se pinta).
+    calendario: {},
+    ultimoRecordatorio: null // última fecha en que se mostró el aviso de metas
+  };
+}
+
+function leerEspacio() {
+  var base = espacioVacio();
+  try {
+    var crudo = localStorage.getItem(CLAVE_ESPACIO);
+    if (!crudo) return base;
+    var guardado = JSON.parse(crudo);
+
+    base.notas      = Array.isArray(guardado.notas)      ? guardado.notas      : [];
+    base.tareas     = Array.isArray(guardado.tareas)     ? guardado.tareas     : [];
+    base.categorias = Array.isArray(guardado.categorias) ? guardado.categorias : [];
+    base.metas      = Array.isArray(guardado.metas)      ? guardado.metas      : [];
+
+    // La vista semanal se guarda en "semana". Versiones anteriores de
+    // la app usaban "planificador": si aparece, se aprovecha su contenido.
+    var fuente = guardado.semana || guardado.planificador || {};
+    DIAS_CLAVE.forEach(function (dia) {
+      base.semana[dia] = Array.isArray(fuente[dia]) ? fuente[dia] : [];
+    });
+
+    // Calendario mensual: objeto plano fecha -> lista de eventos
+    if (guardado.calendario && typeof guardado.calendario === 'object' && !Array.isArray(guardado.calendario)) {
+      Object.keys(guardado.calendario).forEach(function (fecha) {
+        base.calendario[fecha] = Array.isArray(guardado.calendario[fecha]) ? guardado.calendario[fecha] : [];
+      });
+    }
+
+    base.ultimoRecordatorio = guardado.ultimoRecordatorio || null;
+
+    return base;
+  } catch (e) {
+    console.error('Mi espacio: no se pudo leer el espacio, se empieza vacío', e);
+    return base;
+  }
+}
+
+function guardarEspacio(datos) {
+  try {
+    // Se conserva lo que otras pantallas hayan guardado en la misma clave
+    var previo = {};
+    try {
+      previo = JSON.parse(localStorage.getItem(CLAVE_ESPACIO) || '{}') || {};
+    } catch (e) { previo = {}; }
+
+    var fusion = Object.assign({}, previo, datos);
+    // "planificador" se mantiene sincronizado con "semana" por compatibilidad
+    fusion.planificador = datos.semana;
+
+    localStorage.setItem(CLAVE_ESPACIO, JSON.stringify(fusion));
+    return true;
+  } catch (e) {
+    console.error('Mi espacio: no se pudo guardar', e);
+    alert('No pudimos guardar los cambios. Revisa el espacio de tu navegador.');
+    return false;
+  }
+}
+
+// Identificador único para notas, tareas, metas y bloques
+function generarId() {
+  return Date.now().toString(36) + Math.random().toString(36).substr(2);
+}
+
+/* ============================================
+   FECHAS
+   ============================================ */
+var DIAS_CLAVE  = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+var DIAS_CORTOS = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
+var DIAS_LARGOS = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+var MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun',
+             'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+var MESES_LARGOS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                     'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+// Íconos muiscas disponibles para eventos del calendario
+var ICONOS_EVENTO = ['🌞', '🌙', '🏺', '💎', '🌾', '🦅', '🐸', '🌀', '⛰️', '🔥', '💧', '🌬️'];
+
+// "Martes, 17 de septiembre" — fecha larga a partir de 'AAAA-MM-DD'
+function fechaLargaLocal(iso) {
+  var partes = String(iso).slice(0, 10).split('-');
+  if (partes.length < 3) return String(iso);
+  var f = new Date(Number(partes[0]), Number(partes[1]) - 1, Number(partes[2]));
+  var diaSemana = DIAS_LARGOS[(f.getDay() + 6) % 7];
+  return diaSemana + ', ' + Number(partes[2]) + ' de ' + MESES_LARGOS[Number(partes[1]) - 1];
+}
+
+// Fecha local 'AAAA-MM-DD'. No se usa toISOString para no desfasarse
+// por la zona horaria de Colombia (UTC-5).
+function fechaISO(fecha) {
+  var f = fecha ? new Date(fecha) : new Date();
+  var mes = String(f.getMonth() + 1).padStart(2, '0');
+  var dia = String(f.getDate()).padStart(2, '0');
+  return f.getFullYear() + '-' + mes + '-' + dia;
+}
+
+// "17 sep"
+function fechaCorta(iso) {
+  if (!iso) return '';
+  var partes = String(iso).slice(0, 10).split('-');
+  if (partes.length < 3) return '';
+  return Number(partes[2]) + ' ' + MESES[Number(partes[1]) - 1];
+}
+
+// Días completos entre dos fechas 'AAAA-MM-DD' (puede dar negativo si iso ya pasó)
+function diasHasta(iso, hoyIso) {
+  var p1 = String(iso).slice(0, 10).split('-');
+  var p2 = String(hoyIso).slice(0, 10).split('-');
+  if (p1.length < 3 || p2.length < 3) return Infinity;
+  var d1 = new Date(Number(p1[0]), Number(p1[1]) - 1, Number(p1[2]));
+  var d2 = new Date(Number(p2[0]), Number(p2[1]) - 1, Number(p2[2]));
+  return Math.round((d1 - d2) / 86400000);
+}
+
+// Índice del día de hoy en la semana Lun=0 ... Dom=6
+function indiceHoy() {
+  var d = new Date().getDay();   // Domingo = 0 en JavaScript
+  return (d === 0) ? 6 : d - 1;
+}
+
+/* ============================================
+   FASE LUNAR — cálculo con JS puro, sin API
+   ============================================ */
+var CICLO_LUNAR = 29.53058867;
+
+function faseLunar(fecha) {
+  var hoy = fecha ? new Date(fecha) : new Date();
+  var lunaNuevaConocida = new Date('2000-01-06T18:14:00Z');
+  var dias = (hoy - lunaNuevaConocida) / 86400000;
+
+  // Doble módulo: evita resultados negativos si el reloj del
+  // equipo está configurado antes del año 2000.
+  var resto = ((dias % CICLO_LUNAR) + CICLO_LUNAR) % CICLO_LUNAR;
+  var fase = resto / CICLO_LUNAR;
+
+  var info;
+  if      (fase < 0.07) info = { icono: '🌑', nombre: 'Luna nueva',       mensaje: 'Inicia un nuevo ciclo' };
+  else if (fase < 0.25) info = { icono: '🌒', nombre: 'Creciente',        mensaje: 'Momento de construir' };
+  else if (fase < 0.45) info = { icono: '🌓', nombre: 'Cuarto creciente', mensaje: 'Avanza con fuerza' };
+  else if (fase < 0.55) info = { icono: '🌕', nombre: 'Luna llena',       mensaje: 'Celebra lo logrado' };
+  else if (fase < 0.75) info = { icono: '🌖', nombre: 'Menguante',        mensaje: 'Reflexiona y suelta' };
+  else if (fase < 0.93) info = { icono: '🌘', nombre: 'Cuarto menguante', mensaje: 'Descansa y cierra' };
+  else                  info = { icono: '🌑', nombre: 'Luna nueva',       mensaje: 'El ciclo se renueva' };
+
+  info.fase = fase;
+  info.diasTranscurridos = resto;
+  info.diasRestantes = Math.max(0, Math.round(CICLO_LUNAR - resto));
+
+  // Fecha de inicio del ciclo actual: identifica a qué ciclo
+  // pertenece cada meta, para no mezclar ciclos distintos.
+  var inicio = new Date(hoy.getTime() - resto * 86400000);
+  info.cicloFecha = fechaISO(inicio);
+
+  return info;
+}
+
+/* ============================================
+   COLORES
+   ============================================ */
+// Colores de fondo disponibles para las notas
+var COLORES_NOTA = [
+  { id: 'crema',     fondo: '#FDF8F0', nombre: 'Crema' },
+  { id: 'verde',     fondo: '#F0F7F0', nombre: 'Verde' },
+  { id: 'dorado',    fondo: '#FDF5E0', nombre: 'Dorado' },
+  { id: 'azul',      fondo: '#F0F5FF', nombre: 'Azul' },
+  { id: 'rosa',      fondo: '#FDF0F3', nombre: 'Rosa' },
+  { id: 'lavanda',   fondo: '#F3F0FD', nombre: 'Lavanda' },
+  { id: 'terracota', fondo: '#FCF0EA', nombre: 'Terracota' },
+  { id: 'menta',     fondo: '#EFFBF5', nombre: 'Menta' },
+  { id: 'piedra',    fondo: '#F2F1ED', nombre: 'Piedra' }
+];
+
+// Íconos disponibles para notas y eventos del calendario
+var ICONOS_NOTA = ['📝', '💡', '🌱', '🏺', '⭐', '🎯', '📖', '🔥', '💧', '🌙', '☀️', '🦅'];
+
+// Colores de los bloques de la semana.
+// Se usa un tinte claro de fondo con el color fuerte en el texto:
+// texto blanco de 11px sobre dorado no alcanza el contraste WCAG AA.
+var COLORES_BLOQUE = [
+  { id: 'verde',     solido: '#1B5E3B', tinte: '#E8F1EC', nombre: 'Verde oscuro' },
+  { id: 'verdeclaro',solido: '#1F7A45', tinte: '#E9F5EE', nombre: 'Verde' },
+  { id: 'dorado',    solido: '#8A671A', tinte: '#FBF2DC', nombre: 'Dorado' },
+  { id: 'terracota', solido: '#9E3D1C', tinte: '#FAEAE3', nombre: 'Terracota' },
+  { id: 'azul',      solido: '#1C5B77', tinte: '#E6F0F6', nombre: 'Azul' }
+];
+
+function colorNota(id) {
+  for (var i = 0; i < COLORES_NOTA.length; i++) {
+    if (COLORES_NOTA[i].id === id) return COLORES_NOTA[i];
+  }
+  return COLORES_NOTA[0];
+}
+
+function colorBloque(id) {
+  for (var i = 0; i < COLORES_BLOQUE.length; i++) {
+    if (COLORES_BLOQUE[i].id === id) return COLORES_BLOQUE[i];
+  }
+  return COLORES_BLOQUE[0];
+}
+
+/* ============================================
+   TEXTO SEGURO
+   Todo lo que escribe el usuario pasa por aquí antes
+   de insertarse como HTML, para que un texto con
+   < o > no rompa la página.
+   ============================================ */
+function seguro(texto) {
+  return String(texto === undefined || texto === null ? '' : texto)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/* ============================================
+   MODALES — abrir y cerrar
+   ============================================ */
+function abrirModal(id) {
+  document.getElementById(id).classList.add('abierto');
+}
+function cerrarModal(id) {
+  document.getElementById(id).classList.remove('abierto');
+  // Se limpian los avisos de error al cerrar
+  var errores = document.getElementById(id).querySelectorAll('.modal-error');
+  for (var i = 0; i < errores.length; i++) errores[i].classList.remove('visible');
+}
+function mostrarError(id, mensaje) {
+  var nodo = document.getElementById(id);
+  nodo.textContent = mensaje;
+  nodo.classList.add('visible');
+}
+
+// Botones ✕ de todos los modales
+document.querySelectorAll('[data-cerrar]').forEach(function (boton) {
+  boton.addEventListener('click', function () {
+    cerrarModal(boton.dataset.cerrar);
+  });
+});
+
+// Clic en el fondo oscuro cierra el modal
+document.querySelectorAll('.modal').forEach(function (modal) {
+  modal.addEventListener('click', function (evento) {
+    if (evento.target === modal) cerrarModal(modal.id);
+  });
+});
+
+// La tecla Escape cierra el modal abierto
+document.addEventListener('keydown', function (evento) {
+  if (evento.key !== 'Escape') return;
+  document.querySelectorAll('.modal.abierto').forEach(function (modal) {
+    cerrarModal(modal.id);
+  });
+});
+
+/* ============================================
+   TABS
+   ============================================ */
+document.querySelectorAll('.tab').forEach(function (tab) {
+  tab.addEventListener('click', function () {
+    document.querySelectorAll('.tab').forEach(function (t) {
+      t.classList.remove('activo');
+      t.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-contenido').forEach(function (c) {
+      c.classList.remove('activo');
+    });
+
+    tab.classList.add('activo');
+    tab.setAttribute('aria-selected', 'true');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('activo');
+
+    sonar();
+  });
+});
+
+// Sonido de clic si el motor de sonido está disponible
+function sonar() {
+  try {
+    if (typeof zocaSound !== 'undefined') zocaSound.click();
+  } catch (e) { /* el sonido es un extra, nunca un error */ }
+}
+
+/* ============================================
+   ============ TAB 1 — NOTAS =================
+   ============================================ */
+var notaEditandoId = null;
+var notaColorElegido = 'crema';
+var notaIconoElegido = ICONOS_NOTA[0];
+
+// Círculos de color del modal de nota
+function pintarColoresNota() {
+  var cont = document.getElementById('notaColores');
+  cont.innerHTML = COLORES_NOTA.map(function (c) {
+    return '<button type="button" class="color-opt' +
+      (c.id === notaColorElegido ? ' elegido' : '') + '"' +
+      ' style="background:' + c.fondo + '"' +
+      ' data-color="' + c.id + '" title="' + c.nombre + '"' +
+      ' aria-label="Color ' + c.nombre + '"></button>';
+  }).join('');
+
+  cont.querySelectorAll('.color-opt').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      notaColorElegido = boton.dataset.color;
+      pintarColoresNota();
+    });
+  });
+}
+
+// Íconos del modal de nota
+function pintarIconosNota() {
+  var cont = document.getElementById('notaIconos');
+  cont.innerHTML = ICONOS_NOTA.map(function (icono) {
+    return '<button type="button" class="icono-opt' +
+      (icono === notaIconoElegido ? ' elegido' : '') + '"' +
+      ' data-icono="' + icono + '" aria-label="Ícono ' + icono + '">' + icono + '</button>';
+  }).join('');
+
+  cont.querySelectorAll('.icono-opt').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      notaIconoElegido = boton.dataset.icono;
+      pintarIconosNota();
+    });
+  });
+}
+
+// Ilustración del estado vacío: espiral muisca
+function svgEspiral() {
+  return '<svg width="76" height="76" viewBox="0 0 76 76" aria-hidden="true">' +
+    '<path d="M38 8 C 54 8, 68 22, 68 38 C 68 52, 56 64, 42 64 ' +
+            'C 30 64, 20 54, 20 42 C 20 32, 28 24, 38 24 ' +
+            'C 46 24, 53 31, 53 39 C 53 46, 47 52, 40 52 ' +
+            'C 34 52, 29 47, 29 41" ' +
+      'fill="none" stroke="#C9982A" stroke-width="3" ' +
+      'stroke-linecap="round" opacity="0.3"/>' +
+  '</svg>';
+}
+
+function pintarNotas() {
+  var espacio = leerEspacio();
+  var cont = document.getElementById('notasContenedor');
+  var busqueda = document.getElementById('buscarNota').value.trim().toLowerCase();
+
+  // Las notas más recientes primero
+  var lista = espacio.notas.slice().sort(function (a, b) {
+    return String(b.fecha).localeCompare(String(a.fecha));
+  });
+
+  // Filtro de búsqueda por título y contenido
+  if (busqueda) {
+    lista = lista.filter(function (n) {
+      return (String(n.titulo) + ' ' + String(n.contenido)).toLowerCase().indexOf(busqueda) !== -1;
+    });
+  }
+
+  // ====== Sin notas ======
+  if (lista.length === 0) {
+    if (busqueda) {
+      cont.innerHTML =
+        '<div class="vacio">' + svgEspiral() +
+          '<div class="vacio-titulo">Sin resultados</div>' +
+          '<div class="vacio-texto">Ninguna nota coincide con "' + seguro(busqueda) + '"</div>' +
+        '</div>';
+    } else {
+      cont.innerHTML =
+        '<div class="vacio">' + svgEspiral() +
+          '<div class="vacio-titulo">Aún no tienes notas</div>' +
+          '<div class="vacio-texto">Empieza a escribir lo que aprendes</div>' +
+          '<button class="zl-btn zl-btn-sm" id="btnPrimeraNota">Crear primera nota</button>' +
+        '</div>';
+      document.getElementById('btnPrimeraNota')
+        .addEventListener('click', function () { abrirNota(null); });
+    }
+    return;
+  }
+
+  // ====== Rejilla de notas ======
+  cont.innerHTML = '<div class="notas-grid">' + lista.map(function (nota) {
+    var color = colorNota(nota.color);
+    // Vista previa: las primeras dos líneas del contenido
+    var previa = String(nota.contenido || '').split('\n').slice(0, 2).join(' ');
+    if (previa.length > 80) previa = previa.slice(0, 80) + '…';
+
+    return '<button class="nota-card" data-id="' + nota.id + '" ' +
+             'style="background:' + color.fondo + '">' +
+             '<span class="nota-titulo">' + (nota.icono ? seguro(nota.icono) + ' ' : '') +
+               (seguro(nota.titulo) || 'Sin título') + '</span>' +
+             '<span class="nota-preview">' + seguro(previa) + '</span>' +
+             '<span class="nota-fecha">' + fechaCorta(nota.fecha) + '</span>' +
+           '</button>';
+  }).join('') + '</div>';
+
+  cont.querySelectorAll('.nota-card').forEach(function (tarjeta) {
+    tarjeta.addEventListener('click', function () {
+      abrirNota(tarjeta.dataset.id);
+    });
+  });
+}
+
+// Abre el modal: con id edita, sin id crea una nota nueva
+function abrirNota(id) {
+  var espacio = leerEspacio();
+  notaEditandoId = id;
+
+  var nota = null;
+  if (id) {
+    nota = espacio.notas.filter(function (n) { return n.id === id; })[0] || null;
+  }
+
+  document.getElementById('modalNotaTitulo').textContent = nota ? 'Editar nota' : 'Nueva nota';
+  document.getElementById('notaTitulo').value = nota ? (nota.titulo || '') : '';
+  document.getElementById('notaContenido').value = nota ? (nota.contenido || '') : '';
+  notaColorElegido = nota ? (nota.color || 'crema') : 'crema';
+  notaIconoElegido = nota ? (nota.icono || ICONOS_NOTA[0]) : ICONOS_NOTA[0];
+
+  // El botón eliminar solo tiene sentido en una nota existente
+  document.getElementById('btnEliminarNota').style.display = nota ? 'block' : 'none';
+
+  pintarColoresNota();
+  pintarIconosNota();
+  abrirModal('modalNota');
+  document.getElementById('notaTitulo').focus();
+}
+
+document.getElementById('btnNuevaNota').addEventListener('click', function () {
+  abrirNota(null);
+});
+
+document.getElementById('buscarNota').addEventListener('input', pintarNotas);
+
+document.getElementById('btnGuardarNota').addEventListener('click', function () {
+  var espacio = leerEspacio();
+  var titulo = document.getElementById('notaTitulo').value.trim();
+  var contenido = document.getElementById('notaContenido').value;
+
+  // Una nota completamente vacía no se guarda
+  if (!titulo && !contenido.trim()) {
+    cerrarModal('modalNota');
+    return;
+  }
+
+  if (notaEditandoId) {
+    espacio.notas.forEach(function (n) {
+      if (n.id === notaEditandoId) {
+        n.titulo = titulo;
+        n.contenido = contenido;
+        n.color = notaColorElegido;
+        n.icono = notaIconoElegido;
+      }
+    });
+  } else {
+    espacio.notas.push({
+      id: generarId(),
+      titulo: titulo,
+      contenido: contenido,
+      color: notaColorElegido,
+      icono: notaIconoElegido,
+      fecha: new Date().toISOString()
+    });
+  }
+
+  guardarEspacio(espacio);
+  cerrarModal('modalNota');
+  pintarNotas();
+  sonar();
+});
+
+document.getElementById('btnEliminarNota').addEventListener('click', function () {
+  if (!notaEditandoId) return;
+  if (!confirm('¿Eliminar esta nota? No se puede recuperar.')) return;
+
+  var espacio = leerEspacio();
+  espacio.notas = espacio.notas.filter(function (n) { return n.id !== notaEditandoId; });
+  guardarEspacio(espacio);
+  cerrarModal('modalNota');
+  pintarNotas();
+});
+
+/* ============================================
+   ============ TAB 2 — TAREAS ================
+   ============================================ */
+var filtroTareas = 'todas';
+
+// Pills de filtro
+document.querySelectorAll('.filtro-pill').forEach(function (pill) {
+  pill.addEventListener('click', function () {
+    document.querySelectorAll('.filtro-pill').forEach(function (p) {
+      p.classList.remove('activo');
+    });
+    pill.classList.add('activo');
+    filtroTareas = pill.dataset.filtro;
+    pintarTareas();
+  });
+});
+
+// Categorías colapsadas (solo durante esta visita)
+var categoriasColapsadas = {};
+
+function pintarTareas() {
+  var espacio = leerEspacio();
+  var cont = document.getElementById('tareasContenedor');
+
+  // ====== Sin categorías y sin tareas: invitar a empezar ======
+  if (espacio.categorias.length === 0 && espacio.tareas.length === 0) {
+    cont.innerHTML =
+      '<div class="vacio">' + svgEspiral() +
+        '<div class="vacio-titulo">Organiza tus tareas a tu manera</div>' +
+        '<div class="vacio-texto">' +
+          'Crea tu primera categoría: tú decides cómo se llama y con qué ícono.' +
+        '</div>' +
+        '<button class="zl-btn zl-btn-sm" id="btnPrimeraCategoria">Crear primera categoría</button>' +
+      '</div>';
+    document.getElementById('btnPrimeraCategoria')
+      .addEventListener('click', function () { abrirModalCategoria(); });
+    return;
+  }
+
+  // ====== Grupos: cada categoría del usuario + "Sin categoría" ======
+  var grupos = espacio.categorias.map(function (cat) {
+    var color = colorBloque(cat.color);
+    return {
+      id: cat.id, nombre: cat.nombre, emoji: cat.emoji || cat.icono || '📌',
+      color: color.solido, tinte: color.tinte
+    };
+  });
+  grupos.push({ id: '', nombre: 'Sin categoría', emoji: '📎', color: '#8a8a8a', tinte: 'rgba(138,138,138,0.06)' });
+
+  var html = '';
+
+  grupos.forEach(function (grupo) {
+    var delGrupo = espacio.tareas.filter(function (t) {
+      return (t.categoria || '') === grupo.id;
+    });
+
+    // "Sin categoría" solo aparece si tiene tareas
+    if (grupo.id === '' && delGrupo.length === 0) return;
+
+    var hechas = delGrupo.filter(function (t) { return t.completada; }).length;
+
+    // El filtro afecta lo que se lista, no el contador de la cabecera
+    var visibles = delGrupo.filter(function (t) {
+      if (filtroTareas === 'pendientes')  return !t.completada;
+      if (filtroTareas === 'completadas') return t.completada;
+      return true;
+    });
+
+    // Las completadas bajan al final de su categoría
+    visibles.sort(function (a, b) {
+      if (a.completada === b.completada) return 0;
+      return a.completada ? 1 : -1;
+    });
+
+    var colapsado = categoriasColapsadas[grupo.id] ? ' colapsado' : '';
+
+    html += '<div class="categoria-bloque' + colapsado + '" data-cat="' + seguro(grupo.id) + '" ' +
+      'style="--cat-color:' + grupo.color + ';--cat-tinte:' + grupo.tinte + '">' +
+      '<div class="categoria-header">' +
+        '<button class="categoria-toggle" data-toggle="' + seguro(grupo.id) + '">' +
+          '<span aria-hidden="true">' + seguro(grupo.emoji) + '</span>' +
+          '<span class="categoria-nombre">' + seguro(grupo.nombre) + '</span>' +
+          '<span class="categoria-contador">' + hechas + ' de ' + delGrupo.length + ' completadas</span>' +
+          '<span class="categoria-chevron" aria-hidden="true">▼</span>' +
+        '</button>' +
+        (grupo.id
+          ? '<button class="categoria-editar" data-editarcat="' + seguro(grupo.id) + '">✎ Editar</button>'
+          : '') +
+      '</div>' +
+      '<div class="categoria-lista">';
+
+    if (visibles.length === 0) {
+      html += '<div style="font-size:13px;color:#8a8a8a;padding:10px 0">' +
+                'Nada por aquí con este filtro.' +
+              '</div>';
+    } else {
+      visibles.forEach(function (tarea) {
+        html += '<div class="tarea-item">' +
+          '<button class="tarea-check' + (tarea.completada ? ' hecho' : '') + '" ' +
+                  'data-tarea="' + tarea.id + '" ' +
+                  'aria-label="' + (tarea.completada ? 'Marcar como pendiente' : 'Marcar como hecha') + '">✓</button>' +
+          '<span class="tarea-texto' + (tarea.completada ? ' tachado' : '') + '">' +
+            seguro(tarea.texto) + '</span>' +
+          (tarea.fecha ? '<span class="tarea-fecha">' + fechaCorta(tarea.fecha) + '</span>' : '') +
+          '<button class="tarea-borrar" data-borrar="' + tarea.id + '" ' +
+                  'aria-label="Eliminar tarea" title="Eliminar">✕</button>' +
+        '</div>';
+      });
+    }
+
+    html += '</div></div>';
+  });
+
+  cont.innerHTML = html;
+
+  // ====== Colapsar y expandir categorías ======
+  cont.querySelectorAll('[data-toggle]').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      var clave = boton.dataset.toggle;
+      categoriasColapsadas[clave] = !categoriasColapsadas[clave];
+      pintarTareas();
+    });
+  });
+
+  // ====== Editar categoría ======
+  cont.querySelectorAll('[data-editarcat]').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      abrirModalCategoria(boton.dataset.editarcat);
+    });
+  });
+
+  // ====== Marcar y desmarcar ======
+  cont.querySelectorAll('[data-tarea]').forEach(function (check) {
+    check.addEventListener('click', function () {
+      var espacioActual = leerEspacio();
+      espacioActual.tareas.forEach(function (t) {
+        if (t.id === check.dataset.tarea) t.completada = !t.completada;
+      });
+      guardarEspacio(espacioActual);
+      pintarTareas();
+      sonar();
+    });
+  });
+
+  // ====== Eliminar tarea ======
+  cont.querySelectorAll('[data-borrar]').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      if (!confirm('¿Eliminar esta tarea?')) return;
+      var espacioActual = leerEspacio();
+      espacioActual.tareas = espacioActual.tareas.filter(function (t) {
+        return t.id !== boton.dataset.borrar;
+      });
+      guardarEspacio(espacioActual);
+      pintarTareas();
+    });
+  });
+}
+
+// ====== Modal de nueva tarea ======
+document.getElementById('btnNuevaTarea').addEventListener('click', function () {
+  var espacio = leerEspacio();
+  var select = document.getElementById('tareaCategoria');
+
+  select.innerHTML = espacio.categorias.map(function (cat) {
+    return '<option value="' + seguro(cat.id) + '">' +
+             seguro((cat.emoji || cat.icono || '📌') + ' ' + cat.nombre) +
+           '</option>';
+  }).join('') + '<option value="">📎 Sin categoría</option>';
+
+  document.getElementById('tareaTexto').value = '';
+  document.getElementById('tareaFecha').value = '';
+  abrirModal('modalTarea');
+  document.getElementById('tareaTexto').focus();
+});
+
+document.getElementById('btnGuardarTarea').addEventListener('click', function () {
+  var texto = document.getElementById('tareaTexto').value.trim();
+  if (!texto) {
+    mostrarError('errorTarea', 'Escribe qué hay que hacer.');
+    return;
+  }
+
+  var espacio = leerEspacio();
+  espacio.tareas.push({
+    id: generarId(),
+    texto: texto,
+    categoria: document.getElementById('tareaCategoria').value,
+    completada: false,
+    fecha: document.getElementById('tareaFecha').value || ''
+  });
+
+  guardarEspacio(espacio);
+  cerrarModal('modalTarea');
+  pintarTareas();
+  sonar();
+});
+
+// ====== Modal de categoría (crear o editar) ======
+var categoriaEditando = null;
+var categoriaColorElegido = 'verde';
+
+// Círculos de color del modal de categoría (reutiliza la paleta de bloques)
+function pintarColoresCategoria() {
+  var cont = document.getElementById('categoriaColores');
+  cont.innerHTML = COLORES_BLOQUE.map(function (c) {
+    return '<button type="button" class="color-opt' +
+      (c.id === categoriaColorElegido ? ' elegido' : '') + '"' +
+      ' style="background:' + c.solido + '"' +
+      ' data-color="' + c.id + '" title="' + c.nombre + '"' +
+      ' aria-label="Color ' + c.nombre + '"></button>';
+  }).join('');
+
+  cont.querySelectorAll('.color-opt').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      categoriaColorElegido = boton.dataset.color;
+      pintarColoresCategoria();
+    });
+  });
+}
+
+// Con id edita una categoría existente; sin id crea una nueva
+function abrirModalCategoria(id) {
+  var espacio = leerEspacio();
+  categoriaEditando = id || null;
+
+  var categoria = null;
+  if (categoriaEditando) {
+    categoria = espacio.categorias.filter(function (c) { return c.id === categoriaEditando; })[0] || null;
+  }
+
+  document.getElementById('modalCategoriaTitulo').textContent = categoria ? 'Editar categoría' : 'Nueva categoría';
+  document.getElementById('categoriaNombre').value = categoria ? categoria.nombre : '';
+  document.getElementById('categoriaEmoji').value = categoria ? (categoria.emoji || '') : '';
+  categoriaColorElegido = categoria ? (categoria.color || 'verde') : 'verde';
+
+  document.getElementById('btnEliminarCategoria').style.display = categoria ? 'block' : 'none';
+
+  pintarColoresCategoria();
+  abrirModal('modalCategoria');
+  document.getElementById('categoriaNombre').focus();
+}
+
+document.getElementById('btnNuevaCategoria').addEventListener('click', function () { abrirModalCategoria(); });
+
+document.getElementById('btnGuardarCategoria').addEventListener('click', function () {
+  var nombre = document.getElementById('categoriaNombre').value.trim();
+  var emoji = document.getElementById('categoriaEmoji').value.trim();
+
+  if (!nombre) {
+    mostrarError('errorCategoria', 'Ponle un nombre a la categoría.');
+    return;
+  }
+
+  var espacio = leerEspacio();
+
+  // No se permiten dos categorías con el mismo nombre (salvo la que se edita)
+  var repetida = espacio.categorias.some(function (c) {
+    return c.id !== categoriaEditando && c.nombre.toLowerCase() === nombre.toLowerCase();
+  });
+  if (repetida) {
+    mostrarError('errorCategoria', 'Ya tienes una categoría con ese nombre.');
+    return;
+  }
+
+  if (categoriaEditando) {
+    espacio.categorias.forEach(function (c) {
+      if (c.id === categoriaEditando) {
+        c.nombre = nombre;
+        c.emoji = emoji || '📌';
+        c.color = categoriaColorElegido;
+      }
+    });
+  } else {
+    espacio.categorias.push({
+      id: generarId(),
+      nombre: nombre,
+      emoji: emoji || '📌',
+      color: categoriaColorElegido
+    });
+  }
+
+  guardarEspacio(espacio);
+  cerrarModal('modalCategoria');
+  pintarTareas();
+  sonar();
+});
+
+document.getElementById('btnEliminarCategoria').addEventListener('click', function () {
+  if (!categoriaEditando) return;
+  if (!confirm('¿Eliminar esta categoría? Sus tareas pasarán a "Sin categoría".')) return;
+
+  var espacio = leerEspacio();
+  espacio.categorias = espacio.categorias.filter(function (c) { return c.id !== categoriaEditando; });
+  espacio.tareas.forEach(function (t) {
+    if (t.categoria === categoriaEditando) t.categoria = '';
+  });
+
+  guardarEspacio(espacio);
+  cerrarModal('modalCategoria');
+  pintarTareas();
+});
+
+/* ============================================
+   ============ TAB 3 — METAS =================
+   ============================================ */
+function pintarMetas() {
+  var espacio = leerEspacio();
+  var luna = faseLunar();
+  var hoy = fechaISO();
+
+  // ====== Metas activas primero (por plazo más próximo), logradas al final ======
+  // Antes solo se mostraban las metas del ciclo lunar EXACTO en que se
+  // crearon: una meta a largo plazo desaparecía de la vista en cuanto
+  // cambiaba el ciclo (28 días). Ahora se ven todas hasta completarlas.
+  var todas = espacio.metas;
+  var completadas = todas.filter(function (m) { return m.completada; });
+  var activas = todas.filter(function (m) { return !m.completada; });
+
+  activas.sort(function (a, b) {
+    if (!a.fechaLimite && !b.fechaLimite) return 0;
+    if (!a.fechaLimite) return 1;
+    if (!b.fechaLimite) return -1;
+    return a.fechaLimite.localeCompare(b.fechaLimite);
+  });
+
+  var lista = activas.concat(completadas);
+
+  // Barra de progreso: metas logradas sobre el total. (Antes mostraba por
+  // error cuánto había avanzado el ciclo lunar, sin relación con las metas.)
+  var avance = todas.length ? (completadas.length / todas.length) * 100 : 0;
+
+  document.getElementById('cicloCard').innerHTML =
+    '<div class="ciclo-label">🌙 Ciclo lunar actual</div>' +
+    '<div class="ciclo-fase">' +
+      '<span aria-hidden="true">' + luna.icono + '</span>' +
+      '<span>' + luna.nombre + '</span>' +
+    '</div>' +
+    '<div class="ciclo-restante">' + luna.mensaje + ' · ' +
+      luna.diasRestantes + (luna.diasRestantes === 1 ? ' día restante' : ' días restantes') +
+      ' del ciclo</div>' +
+    '<div class="ciclo-barra">' +
+      '<div class="ciclo-barra-fill" style="width:' + avance.toFixed(1) + '%"></div>' +
+    '</div>' +
+    '<div class="ciclo-progreso-metas">' +
+      (todas.length === 0
+        ? 'Aún no tienes metas'
+        : completadas.length + ' de ' + todas.length + ' metas completadas') +
+    '</div>';
+
+  // ====== Lista de metas ======
+  var cont = document.getElementById('metasContenedor');
+
+  if (todas.length === 0) {
+    cont.innerHTML =
+      '<div class="vacio">' + svgEspiral() +
+        '<div class="vacio-titulo">Todavía no tienes metas</div>' +
+        '<div class="vacio-texto">' +
+          'Define qué quieres lograr, con o sin fecha límite.' +
+        '</div>' +
+      '</div>';
+    return;
+  }
+
+  cont.innerHTML = lista.map(function (meta) {
+    var etiquetaPlazo = '';
+    if (!meta.completada && meta.fechaLimite) {
+      var dias = diasHasta(meta.fechaLimite, hoy);
+      if (dias < 0) {
+        etiquetaPlazo = '<span class="meta-plazo vencida">⚠️ Vencida</span>';
+      } else if (dias <= 3) {
+        etiquetaPlazo = '<span class="meta-plazo pronto">⏳ ' +
+          (dias === 0 ? 'Vence hoy' : 'Vence en ' + dias + (dias === 1 ? ' día' : ' días')) + '</span>';
+      } else {
+        etiquetaPlazo = '<span class="meta-plazo encurso">📅 ' + fechaCorta(meta.fechaLimite) + '</span>';
+      }
+    }
+
+    return '<div class="meta-item">' +
+      '<button class="meta-check' + (meta.completada ? ' hecho' : '') + '" ' +
+              'data-meta="' + meta.id + '" ' +
+              'aria-label="' + (meta.completada ? 'Marcar como pendiente' : 'Marcar como lograda') + '">✓</button>' +
+      '<div class="meta-fila">' +
+        '<span class="meta-texto' + (meta.completada ? ' tachado' : '') + '">' +
+          seguro(meta.texto) + '</span>' +
+        etiquetaPlazo +
+      '</div>' +
+      '<button class="tarea-borrar" data-borrarmeta="' + meta.id + '" ' +
+              'aria-label="Eliminar meta" title="Eliminar">✕</button>' +
+    '</div>';
+  }).join('');
+
+  // ====== Completar una meta ======
+  cont.querySelectorAll('[data-meta]').forEach(function (check) {
+    check.addEventListener('click', function () {
+      var espacioActual = leerEspacio();
+      var quedaCompletada = false;
+
+      espacioActual.metas.forEach(function (m) {
+        if (m.id === check.dataset.meta) {
+          m.completada = !m.completada;
+          quedaCompletada = m.completada;
+        }
+      });
+
+      guardarEspacio(espacioActual);
+
+      // Estrella que aparece justo donde se hizo clic
+      if (quedaCompletada) {
+        var caja = check.getBoundingClientRect();
+        estrellaEn(caja.left + caja.width / 2, caja.top);
+        try {
+          if (typeof zocaSound !== 'undefined') zocaSound.logro();
+        } catch (e) { /* el sonido es un extra */ }
+      } else {
+        sonar();
+      }
+
+      pintarMetas();
+    });
+  });
+
+  // ====== Eliminar meta ======
+  cont.querySelectorAll('[data-borrarmeta]').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      if (!confirm('¿Eliminar esta meta?')) return;
+      var espacioActual = leerEspacio();
+      espacioActual.metas = espacioActual.metas.filter(function (m) {
+        return m.id !== boton.dataset.borrarmeta;
+      });
+      guardarEspacio(espacioActual);
+      pintarMetas();
+    });
+  });
+}
+
+// Estrella ⭐ que salta en unas coordenadas de la pantalla
+function estrellaEn(x, y) {
+  var estrella = document.createElement('div');
+  estrella.className = 'estrella-pop';
+  estrella.textContent = '⭐';
+  estrella.setAttribute('aria-hidden', 'true');
+  estrella.style.left = (x - 15) + 'px';
+  estrella.style.top = (y - 15) + 'px';
+  document.body.appendChild(estrella);
+  setTimeout(function () { estrella.remove(); }, 950);
+}
+
+document.getElementById('btnNuevaMeta').addEventListener('click', function () {
+  document.getElementById('metaTexto').value = '';
+  document.getElementById('metaFechaLimite').value = '';
+  abrirModal('modalMeta');
+  document.getElementById('metaTexto').focus();
+});
+
+document.getElementById('btnGuardarMeta').addEventListener('click', function () {
+  var texto = document.getElementById('metaTexto').value.trim();
+  if (!texto) {
+    mostrarError('errorMeta', 'Escribe tu meta.');
+    return;
+  }
+
+  var espacio = leerEspacio();
+  espacio.metas.push({
+    id: generarId(),
+    texto: texto,
+    cicloFecha: faseLunar().cicloFecha,
+    fechaLimite: document.getElementById('metaFechaLimite').value || '',
+    completada: false
+  });
+
+  guardarEspacio(espacio);
+  cerrarModal('modalMeta');
+  pintarMetas();
+  sonar();
+});
+
+/* ============================================
+   ============ TAB 4 — MES (calendario) ======
+   Calendario mensual real (fechas ISO como llave
+   en espacio.calendario), con navegación entre
+   meses e íconos muiscas por evento.
+   ============================================ */
+var mesVisible = new Date();
+mesVisible.setDate(1);
+mesVisible.setHours(0, 0, 0, 0);
+
+var diaSeleccionado = null;    // 'AAAA-MM-DD' del día abierto en modalDia
+var eventoEditando = null;     // { iso, id } cuando se edita un evento existente
+var eventoColorElegido = 'verde';
+var eventoIconoElegido = ICONOS_EVENTO[0];
+
+function pintarMes() {
+  var espacio = leerEspacio();
+  var hoy = fechaISO();
+  var anio = mesVisible.getFullYear();
+  var mes = mesVisible.getMonth();
+
+  document.getElementById('mesTitulo').textContent = MESES_LARGOS[mes] + ' ' + anio;
+
+  document.getElementById('mesDiasSemana').innerHTML = DIAS_CORTOS.map(function (d) {
+    return '<div class="mes-diasemana">' + d + '</div>';
+  }).join('');
+
+  var primerDia = new Date(anio, mes, 1);
+  var offset = (primerDia.getDay() + 6) % 7; // Lun=0 ... Dom=6
+  var diasEnMes = new Date(anio, mes + 1, 0).getDate();
+
+  var celdas = [];
+  for (var i = 0; i < offset; i++) celdas.push(null);
+  for (var dia = 1; dia <= diasEnMes; dia++) celdas.push(dia);
+  while (celdas.length % 7 !== 0) celdas.push(null);
+
+  var grid = document.getElementById('mesGrid');
+  grid.innerHTML = celdas.map(function (dia) {
+    if (!dia) return '<div class="mes-celda vacia"></div>';
+
+    var iso = anio + '-' + String(mes + 1).padStart(2, '0') + '-' + String(dia).padStart(2, '0');
+    var eventos = espacio.calendario[iso] || [];
+    var esHoy = iso === hoy;
+
+    var chips = eventos.slice(0, 2).map(function (ev) {
+      var color = colorBloque(ev.color);
+      return '<span class="mes-evento" style="background:' + color.tinte + ';color:' + color.solido + '">' +
+        (ev.icono || '') + ' ' + seguro(ev.etiqueta) + '</span>';
+    }).join('');
+
+    var mas = eventos.length > 2 ? '<span class="mes-mas">+' + (eventos.length - 2) + ' más</span>' : '';
+
+    return '<button class="mes-celda' + (esHoy ? ' hoy' : '') + '" data-fecha="' + iso + '">' +
+      '<span class="mes-celda-num">' + dia + '</span>' +
+      chips + mas +
+    '</button>';
+  }).join('');
+
+  grid.querySelectorAll('[data-fecha]').forEach(function (celda) {
+    celda.addEventListener('click', function () {
+      abrirModalDia(celda.dataset.fecha);
+    });
+  });
+}
+
+document.getElementById('mesAnterior').addEventListener('click', function () {
+  mesVisible.setMonth(mesVisible.getMonth() - 1);
+  pintarMes();
+});
+document.getElementById('mesSiguiente').addEventListener('click', function () {
+  mesVisible.setMonth(mesVisible.getMonth() + 1);
+  pintarMes();
+});
+
+// ====== MODAL DÍA — lista de eventos de una fecha ======
+function abrirModalDia(iso) {
+  diaSeleccionado = iso;
+  var espacio = leerEspacio();
+  var eventos = espacio.calendario[iso] || [];
+
+  document.getElementById('modalDiaTitulo').textContent = fechaLargaLocal(iso);
+
+  var cont = document.getElementById('diaEventosContenedor');
+  if (eventos.length === 0) {
+    cont.innerHTML = '<div style="font-size:13px;color:#8a8a8a;padding:10px 0">Sin eventos todavía.</div>';
+  } else {
+    cont.innerHTML = eventos.map(function (ev) {
+      var color = colorBloque(ev.color);
+      return '<div class="dia-evento-item">' +
+        '<span class="dia-evento-icono" aria-hidden="true">' + (ev.icono || '📌') + '</span>' +
+        '<span class="dia-evento-texto" style="color:' + color.solido + '">' + seguro(ev.etiqueta) + '</span>' +
+        (ev.hora ? '<span class="dia-evento-hora">' + seguro(ev.hora) + '</span>' : '') +
+        '<button class="tarea-borrar" data-editarevento="' + ev.id + '" aria-label="Editar evento" title="Editar">✎</button>' +
+      '</div>';
+    }).join('');
+
+    cont.querySelectorAll('[data-editarevento]').forEach(function (boton) {
+      boton.addEventListener('click', function () {
+        cerrarModal('modalDia');
+        abrirModalEvento(iso, boton.dataset.editarevento);
+      });
+    });
+  }
+
+  abrirModal('modalDia');
+}
+
+document.getElementById('btnNuevoEvento').addEventListener('click', function () {
+  var iso = diaSeleccionado;
+  cerrarModal('modalDia');
+  abrirModalEvento(iso, null);
+});
+
+// ====== MODAL EVENTO — crear o editar ======
+function pintarColoresEvento() {
+  var cont = document.getElementById('eventoColores');
+  cont.innerHTML = COLORES_BLOQUE.map(function (c) {
+    return '<button type="button" class="color-opt' +
+      (c.id === eventoColorElegido ? ' elegido' : '') + '"' +
+      ' style="background:' + c.solido + '"' +
+      ' data-color="' + c.id + '" title="' + c.nombre + '"' +
+      ' aria-label="Color ' + c.nombre + '"></button>';
+  }).join('');
+
+  cont.querySelectorAll('.color-opt').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      eventoColorElegido = boton.dataset.color;
+      pintarColoresEvento();
+    });
+  });
+}
+
+function pintarIconosEvento() {
+  var cont = document.getElementById('eventoIconos');
+  cont.innerHTML = ICONOS_EVENTO.map(function (icono) {
+    return '<button type="button" class="icono-opt' +
+      (icono === eventoIconoElegido ? ' elegido' : '') + '"' +
+      ' data-icono="' + icono + '" aria-label="Ícono ' + icono + '">' + icono + '</button>';
+  }).join('');
+
+  cont.querySelectorAll('.icono-opt').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      eventoIconoElegido = boton.dataset.icono;
+      pintarIconosEvento();
+    });
+  });
+}
+
+// Con id edita un evento existente; sin id crea uno nuevo en "iso"
+function abrirModalEvento(iso, id) {
+  diaSeleccionado = iso;
+  var espacio = leerEspacio();
+  var evento = null;
+
+  if (id) {
+    evento = (espacio.calendario[iso] || []).filter(function (e) { return e.id === id; })[0] || null;
+  }
+  eventoEditando = evento ? { iso: iso, id: id } : null;
+
+  document.getElementById('modalEventoTitulo').textContent =
+    (evento ? 'Editar evento' : 'Nuevo evento') + ' · ' + fechaLargaLocal(iso);
+  document.getElementById('eventoEtiqueta').value = evento ? (evento.etiqueta || '') : '';
+  document.getElementById('eventoHora').value = evento ? (evento.hora || '') : '';
+  eventoColorElegido = evento ? (evento.color || 'verde') : 'verde';
+  eventoIconoElegido = evento ? (evento.icono || ICONOS_EVENTO[0]) : ICONOS_EVENTO[0];
+
+  document.getElementById('btnEliminarEvento').style.display = evento ? 'block' : 'none';
+
+  pintarColoresEvento();
+  pintarIconosEvento();
+  abrirModal('modalEvento');
+  document.getElementById('eventoEtiqueta').focus();
+}
+
+document.getElementById('btnGuardarEvento').addEventListener('click', function () {
+  var etiqueta = document.getElementById('eventoEtiqueta').value.trim();
+  if (!etiqueta) {
+    mostrarError('errorEvento', 'Ponle un nombre al evento.');
+    return;
+  }
+
+  var hora = document.getElementById('eventoHora').value;
+  var espacio = leerEspacio();
+
+  if (eventoEditando) {
+    espacio.calendario[eventoEditando.iso] = (espacio.calendario[eventoEditando.iso] || []).filter(function (e) {
+      return e.id !== eventoEditando.id;
+    });
+  }
+
+  if (!espacio.calendario[diaSeleccionado]) espacio.calendario[diaSeleccionado] = [];
+  espacio.calendario[diaSeleccionado].push({
+    id: generarId(),
+    etiqueta: etiqueta,
+    hora: hora,
+    icono: eventoIconoElegido,
+    color: eventoColorElegido
+  });
+
+  // Dentro de cada día, los eventos se ordenan por hora; sin hora, al final
+  espacio.calendario[diaSeleccionado].sort(function (a, b) {
+    if (!a.hora && !b.hora) return 0;
+    if (!a.hora) return 1;
+    if (!b.hora) return -1;
+    return a.hora.localeCompare(b.hora);
+  });
+
+  guardarEspacio(espacio);
+  cerrarModal('modalEvento');
+  pintarMes();
+  sonar();
+});
+
+document.getElementById('btnEliminarEvento').addEventListener('click', function () {
+  if (!eventoEditando) return;
+  if (!confirm('¿Eliminar este evento?')) return;
+
+  var espacio = leerEspacio();
+  espacio.calendario[eventoEditando.iso] = (espacio.calendario[eventoEditando.iso] || []).filter(function (e) {
+    return e.id !== eventoEditando.id;
+  });
+
+  guardarEspacio(espacio);
+  cerrarModal('modalEvento');
+  pintarMes();
+});
+
+/* ============================================
+   ============ TAB 5 — DIARIO ================
+   Los datos ya se guardan para siempre en
+   zocalab_rutinas (historial de sol y luna);
+   esta pestaña solo los muestra y los deja buscar.
+   ============================================ */
+function leerRutinas() {
+  try {
+    var crudo = localStorage.getItem('zocalab_rutinas');
+    var datos = crudo ? JSON.parse(crudo) : {};
+    return {
+      sol:  { historial: Array.isArray(datos.sol  && datos.sol.historial)  ? datos.sol.historial  : [] },
+      luna: { historial: Array.isArray(datos.luna && datos.luna.historial) ? datos.luna.historial : [] }
+    };
+  } catch (e) {
+    console.error('Mi espacio: no se pudo leer la bitácora', e);
+    return { sol: { historial: [] }, luna: { historial: [] } };
+  }
+}
+
+function pintarDiario() {
+  var rutinas = leerRutinas();
+  var mapa = {};
+
+  rutinas.sol.historial.forEach(function (r) {
+    if (!r.fecha) return;
+    mapa[r.fecha] = mapa[r.fecha] || {};
+    mapa[r.fecha].sol = r;
+  });
+  rutinas.luna.historial.forEach(function (r) {
+    if (!r.fecha) return;
+    mapa[r.fecha] = mapa[r.fecha] || {};
+    mapa[r.fecha].luna = r;
+  });
+
+  var fechas = Object.keys(mapa).sort(function (a, b) { return b.localeCompare(a); });
+  var busqueda = document.getElementById('buscarDiario').value.trim().toLowerCase();
+
+  if (busqueda) {
+    fechas = fechas.filter(function (f) {
+      return JSON.stringify(mapa[f]).toLowerCase().indexOf(busqueda) !== -1;
+    });
+  }
+
+  var cont = document.getElementById('diarioContenedor');
+
+  if (fechas.length === 0) {
+    cont.innerHTML = '<div class="vacio">' + svgEspiral() +
+      '<div class="vacio-titulo">Tu bitácora está vacía</div>' +
+      '<div class="vacio-texto">Completa tu rutina del sol o de la luna para empezar a guardar tus días.</div>' +
+    '</div>';
+    return;
+  }
+
+  cont.innerHTML = fechas.map(function (f) {
+    var dia = mapa[f];
+    var partes = [];
+
+    if (dia.sol) {
+      var s = dia.sol;
+      var campos = [];
+      if (s.intencion)   campos.push('<p>🎯 Intención: ' + seguro(s.intencion) + '</p>');
+      if (s.cuerpo)      campos.push('<p>🌿 Cuerpo: ' + seguro(s.cuerpo) + '</p>');
+      if (s.aprendizaje) campos.push('<p>📖 Aprendizaje: ' + seguro(s.aprendizaje) + '</p>');
+      if (s.gratitud)    campos.push('<p>🏺 Gratitud: ' + seguro(s.gratitud) + '</p>');
+      if (s.meta)        campos.push('<p>🎯 Meta: ' + seguro(s.meta) + '</p>');
+      partes.push('<div class="diario-bloque"><strong>☀️ Rutina del sol</strong>' + campos.join('') + '</div>');
+    }
+
+    if (dia.luna) {
+      var l = dia.luna;
+      var hice = Array.isArray(l.hice) ? l.hice.join(', ') : '';
+      var campos2 = [];
+      if (hice)      campos2.push('<p>🌾 Hice: ' + seguro(hice) + '</p>');
+      if (l.aprendi) campos2.push('<p>📖 Aprendí: ' + seguro(l.aprendi) + '</p>');
+      if (l.emocion) campos2.push('<p>🌙 Sentí: ' + seguro(l.emocion) + '</p>');
+      if (l.manana)  campos2.push('<p>🌅 Para mañana: ' + seguro(l.manana) + '</p>');
+      partes.push('<div class="diario-bloque"><strong>🌙 Cierre del día</strong>' + campos2.join('') + '</div>');
+    }
+
+    return '<details class="diario-dia">' +
+      '<summary>' + fechaLargaLocal(f) + '</summary>' +
+      '<div class="diario-detalle">' + partes.join('') + '</div>' +
+    '</details>';
+  }).join('');
+}
+
+document.getElementById('buscarDiario').addEventListener('input', pintarDiario);
+
+/* ============================================
+   FONDO ANIMADO: vides, espirales de oro y sellos flotantes
+   ============================================ */
+if (window.ZocaEscenas) ZocaEscenas.montar('espacio');
+
+/* ============================================
+   ARRANQUE
+   ============================================ */
+pintarNotas();
+pintarTareas();
+pintarMetas();
+pintarMes();
+pintarDiario();
+
+// Enlace directo a una pestaña (ej. "?tab=diario" desde Cerrar día)
+try {
+  var parametros = new URLSearchParams(window.location.search);
+  var tabInicial = parametros.get('tab');
+  var botonTab = tabInicial && document.querySelector('.tab[data-tab="' + tabInicial + '"]');
+  if (botonTab) botonTab.click();
+} catch (e) { /* sin parámetro válido, se queda en la pestaña por defecto */ }
+</script>
+
+</body>
+</html>

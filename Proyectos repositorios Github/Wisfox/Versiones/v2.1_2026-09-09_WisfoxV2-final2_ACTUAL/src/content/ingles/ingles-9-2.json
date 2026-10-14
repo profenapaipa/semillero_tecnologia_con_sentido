@@ -1,0 +1,178 @@
+{
+  "id": "ingles-9-2",
+  "materia": "ingles",
+  "grado": "9",
+  "grado_nombre": "Noveno",
+  "periodo": 2,
+  "periodo_label": { "es": "Periodo II", "en": "Term II" },
+  "titulo": "What Could Have Happened? Phrasal Verbs and Scientific Discoveries in Biology",
+  "titulo_es": "¿Qué habría pasado? Phrasal verbs y descubrimientos en biología",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Analizo hechos pasados y sus posibles alternativas. Comprendo textos divulgativos sobre avances científicos y discuto sus implicaciones éticas.",
+  "competencias": "Construir el tercer condicional para hablar de lo que no ocurrió; usar phrasal verbs frecuentes; comprender y explicar avances en biología y bioética; escribir y decir fechas correctamente.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "What If Science Had Failed?",
+    "descripcion_es": "En parejas, los estudiantes eligen un descubrimiento biológico (la penicilina, el ADN, las vacunas) y presentan qué habría pasado si no se hubiera dado, usando el tercer condicional y al menos ocho phrasal verbs.",
+    "descripcion_en": "In pairs, students choose a biological discovery (penicillin, DNA, vaccines) and present what would have happened if it had never occurred, using the third conditional and at least eight phrasal verbs."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-9-2-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Tercer condicional",
+      "t_en": "Third conditional",
+      "d": "16 min",
+      "content_es": "<h4>Lo que no pasó</h4><p>Sirve para imaginar un pasado distinto al real: <i>If Fleming <b>hadn't left</b> the plate uncovered, he <b>wouldn't have discovered</b> penicillin.</i></p><h4>La fórmula</h4><p><b>If + past perfect (had + participio), would have + participio.</b></p><ul><li><i>If I <b>had studied</b>, I <b>would have passed</b>.</i> (no estudié y no pasé)</li><li><i>If they <b>had left</b> earlier, they <b>wouldn't have missed</b> the flight.</i></li></ul><h4>Contracciones</h4><p><i>If I'd known, I'd have told you.</i> — el primer <b>'d</b> es <i>had</i> y el segundo es <i>would</i>.</p><h4>Errores frecuentes</h4><ul><li>Después de <b>if</b> nunca va would: <i>If I would have known</i> es incorrecto.</li><li>Se dice <b>would have</b>, no <i>would of</i>, aunque suenen igual.</li></ul>",
+      "content_en": "<h4>What did not happen</h4><p>It imagines a past different from the real one: <i>If Fleming <b>hadn't left</b> the plate uncovered, he <b>wouldn't have discovered</b> penicillin.</i></p><h4>The formula</h4><p><b>If + past perfect (had + participle), would have + participle.</b></p><ul><li><i>If I <b>had studied</b>, I <b>would have passed</b>.</i> (I did not study and I did not pass)</li><li><i>If they <b>had left</b> earlier, they <b>wouldn't have missed</b> the flight.</i></li></ul><h4>Contractions</h4><p><i>If I'd known, I'd have told you.</i> — the first <b>'d</b> is <i>had</i> and the second is <i>would</i>.</p><h4>Common mistakes</h4><ul><li>After <b>if</b> there is never would: <i>If I would have known</i> is wrong.</li><li>It is <b>would have</b>, not <i>would of</i>, even though they sound alike.</li></ul>",
+      "fichas": [
+        { "t": "If + had + participio", "d": "La condición del tercer condicional va en pasado perfecto.", "d_en": "The condition of the third conditional is in the past perfect." },
+        { "t": "would have + participio", "d": "El resultado imaginario del pasado.", "d_en": "The imaginary result in the past." },
+        { "t": "would of es incorrecto", "d": "Suena igual que would have, pero no existe.", "d_en": "It sounds like would have but does not exist." },
+        { "t": "'d doble", "d": "If I'd known, I'd have called: had y would.", "d_en": "If I'd known, I'd have called: had and would." },
+        { "t": "Se refiere a lo irreal", "d": "Lo que se cuenta nunca ocurrió.", "d_en": "What is described never actually happened." }
+      ],
+      "quiz": [
+        { "q": "«If she ___ earlier, she wouldn't have missed the bus.»", "q_en": "\"If she ___ earlier, she wouldn't have missed the bus.\"", "o": ["left", "would leave", "had left", "leaves"], "o_en": ["left", "would leave", "had left", "leaves"], "a": 2, "why": "La condición del tercer condicional va en pasado perfecto.", "why_en": "The condition of the third conditional is in the past perfect." },
+        { "q": "«If we had known, we ___ you.»", "q_en": "\"If we had known, we ___ you.\"", "o": ["would help", "would have helped", "helped", "will help"], "o_en": ["would help", "would have helped", "helped", "will help"], "a": 1, "why": "El resultado del tercer condicional es would have + participio.", "why_en": "The result of the third conditional is would have + participle." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["If I had seen it, I'd have told you", "If I would have seen it, I'd have told you", "If they had asked, we'd have gone", "If it had rained, we'd have stayed"], "o_en": ["If I had seen it, I'd have told you", "If I would have seen it, I'd have told you", "If they had asked, we'd have gone", "If it had rained, we'd have stayed"], "a": 1, "why": "Después de if nunca va would.", "why_en": "After if there is never would." }
+      ]
+    },
+    {
+      "id": "ingles-9-2-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Modales perfectos: would have, could have, should have",
+      "t_en": "Perfect modals: would have, could have, should have",
+      "d": "14 min",
+      "content_es": "<h4>Hablar del pasado que no fue</h4><p>Todos siguen la fórmula <b>modal + have + participio</b>.</p><ul><li><b>would have</b> – lo que habría pasado: <i>I would have gone, but I was sick.</i></li><li><b>could have</b> – lo que era posible y no se hizo: <i>You could have asked for help.</i></li><li><b>should have</b> – reproche o arrepentimiento: <i>I should have studied more.</i></li><li><b>might have / may have</b> – suposición sobre el pasado: <i>He might have forgotten.</i></li><li><b>must have</b> – deducción casi segura: <i>She must have left early.</i></li><li><b>can't have</b> – deducción negativa: <i>He can't have finished so fast.</i></li></ul><h4>Ojo</h4><p>El modal <b>nunca</b> cambia y el verbo siempre va en <b>participio</b>, no en pasado simple: <i>should have gone</i>, no <i>should have went</i>.</p>",
+      "content_en": "<h4>Talking about the past that never was</h4><p>They all follow the formula <b>modal + have + participle</b>.</p><ul><li><b>would have</b> – what would have happened: <i>I would have gone, but I was sick.</i></li><li><b>could have</b> – what was possible but was not done: <i>You could have asked for help.</i></li><li><b>should have</b> – reproach or regret: <i>I should have studied more.</i></li><li><b>might have / may have</b> – a guess about the past: <i>He might have forgotten.</i></li><li><b>must have</b> – near-certain deduction: <i>She must have left early.</i></li><li><b>can't have</b> – negative deduction: <i>He can't have finished so fast.</i></li></ul><h4>Careful</h4><p>The modal <b>never</b> changes and the verb is always a <b>participle</b>, not a simple past: <i>should have gone</i>, not <i>should have went</i>.</p>",
+      "fichas": [
+        { "t": "should have + participio", "d": "Arrepentimiento: debí haberlo hecho.", "d_en": "Regret: I ought to have done it." },
+        { "t": "could have + participio", "d": "Era posible pero no ocurrió.", "d_en": "It was possible but it did not happen." },
+        { "t": "must have + participio", "d": "Deducción casi segura sobre el pasado.", "d_en": "Near-certain deduction about the past." },
+        { "t": "can't have + participio", "d": "Deducción negativa: seguro que no pasó.", "d_en": "Negative deduction: it surely did not happen." },
+        { "t": "Siempre participio", "d": "should have gone, no should have went.", "d_en": "should have gone, not should have went." }
+      ],
+      "quiz": [
+        { "q": "«I failed the test. I ___ more.»", "q_en": "\"I failed the test. I ___ more.\"", "o": ["should study", "should have studied", "should have study", "must study"], "o_en": ["should study", "should have studied", "should have study", "must study"], "a": 1, "why": "Es un arrepentimiento sobre el pasado: should have + participio.", "why_en": "It is a regret about the past: should have + participle." },
+        { "q": "«Her car isn't here. She ___ home.»", "q_en": "\"Her car isn't here. She ___ home.\"", "o": ["must have gone", "must have went", "can't have gone", "should have gone"], "o_en": ["must have gone", "must have went", "can't have gone", "should have gone"], "a": 0, "why": "La evidencia lleva a una deducción casi segura: must have gone.", "why_en": "The evidence leads to a near-certain deduction: must have gone." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["He could of helped", "He could have helped", "He could have help", "He could had helped"], "o_en": ["He could of helped", "He could have helped", "He could have help", "He could had helped"], "a": 1, "why": "La forma correcta es could have + participio.", "why_en": "The correct form is could have + participle." }
+      ]
+    },
+    {
+      "id": "ingles-9-2-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Phrasal verbs: cómo funcionan",
+      "t_en": "Phrasal verbs: how they work",
+      "d": "14 min",
+      "content_es": "<h4>Qué son</h4><p>Un verbo + una partícula (preposición o adverbio) que juntos significan algo distinto: <i>look</i> es mirar, pero <i>look after</i> es cuidar.</p><h4>Separables e inseparables</h4><ul><li><b>Separables</b>: el objeto puede ir en medio. <i>Turn <b>on</b> the light</i> = <i>Turn the light <b>on</b></i>. Si el objeto es un pronombre, va <b>obligatoriamente</b> en medio: <i>Turn <b>it</b> on</i>, nunca <i>turn on it</i>.</li><li><b>Inseparables</b>: la partícula no se separa. <i>Look after the baby</i>, no <i>look the baby after</i>.</li></ul><h4>Con tres palabras</h4><p><i>look forward to, get along with, come up with, run out of</i> — nunca se separan.</p><h4>Consejo</h4><p>No traduzcas la partícula por separado: memoriza el phrasal verb completo con un ejemplo.</p>",
+      "content_en": "<h4>What they are</h4><p>A verb + a particle (preposition or adverb) that together mean something different: <i>look</i> is to watch, but <i>look after</i> is to take care of.</p><h4>Separable and inseparable</h4><ul><li><b>Separable</b>: the object can go in the middle. <i>Turn <b>on</b> the light</i> = <i>Turn the light <b>on</b></i>. If the object is a pronoun, it <b>must</b> go in the middle: <i>Turn <b>it</b> on</i>, never <i>turn on it</i>.</li><li><b>Inseparable</b>: the particle never separates. <i>Look after the baby</i>, not <i>look the baby after</i>.</li></ul><h4>Three-word ones</h4><p><i>look forward to, get along with, come up with, run out of</i> — they never separate.</p><h4>Advice</h4><p>Do not translate the particle on its own: memorize the whole phrasal verb with an example.</p>",
+      "fichas": [
+        { "t": "Separable con pronombre", "d": "Turn it on: el pronombre va obligatoriamente en medio.", "d_en": "Turn it on: the pronoun must go in the middle." },
+        { "t": "look after", "d": "Cuidar de alguien o algo. Es inseparable.", "d_en": "To take care of someone. It is inseparable." },
+        { "t": "come up with", "d": "Ocurrírsele una idea. Tres palabras, inseparable.", "d_en": "To think of an idea. Three words, inseparable." },
+        { "t": "run out of", "d": "Quedarse sin algo: We ran out of time.", "d_en": "To have none left: We ran out of time." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["Turn on it", "Turn it on", "Turn on to it", "It turn on"], "o_en": ["Turn on it", "Turn it on", "Turn on to it", "It turn on"], "a": 1, "why": "Con pronombre, el objeto va obligatoriamente en medio.", "why_en": "With a pronoun, the object must go in the middle." },
+        { "q": "«She ___ her little brother while her mom works.»", "q_en": "\"She ___ her little brother while her mom works.\"", "o": ["looks after", "looks for", "looks up", "looks at"], "o_en": ["looks after", "looks for", "looks up", "looks at"], "a": 0, "why": "Look after significa cuidar de alguien.", "why_en": "Look after means to take care of someone." },
+        { "q": "«We ___ a great idea for the project.»", "q_en": "\"We ___ a great idea for the project.\"", "o": ["came up with", "came up", "came with", "came out"], "o_en": ["came up with", "came up", "came with", "came out"], "a": 0, "why": "Come up with es ocurrírsele una idea.", "why_en": "Come up with means to think of an idea." }
+      ]
+    },
+    {
+      "id": "ingles-9-2-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Phrasal verbs de estudio e investigación",
+      "t_en": "Phrasal verbs for study and research",
+      "d": "14 min",
+      "content_es": "<h4>Investigar y aprender</h4><ul><li><b>look up</b> – buscar un dato: <i>Look up the word in the dictionary.</i></li><li><b>find out</b> – descubrir información: <i>Scientists found out that…</i></li><li><b>figure out</b> – deducir, resolver: <i>We figured out the pattern.</i></li><li><b>point out</b> – señalar: <i>The article points out a risk.</i></li><li><b>carry out</b> – llevar a cabo: <i>They carried out an experiment.</i></li><li><b>bring about</b> – provocar un cambio: <i>The discovery brought about a revolution.</i></li></ul><h4>Proceso y resultado</h4><ul><li><b>go over</b> – repasar · <b>write down</b> – anotar</li><li><b>give up</b> – rendirse · <b>keep on</b> – seguir insistiendo</li><li><b>turn out</b> – resultar ser: <i>It turned out to be harmless.</i></li><li><b>rule out</b> – descartar: <i>They ruled out the other hypothesis.</i></li></ul>",
+      "content_en": "<h4>Researching and learning</h4><ul><li><b>look up</b> – to search for a piece of information: <i>Look up the word in the dictionary.</i></li><li><b>find out</b> – to discover information: <i>Scientists found out that…</i></li><li><b>figure out</b> – to work out, to solve: <i>We figured out the pattern.</i></li><li><b>point out</b> – to indicate: <i>The article points out a risk.</i></li><li><b>carry out</b> – to perform: <i>They carried out an experiment.</i></li><li><b>bring about</b> – to cause a change: <i>The discovery brought about a revolution.</i></li></ul><h4>Process and result</h4><ul><li><b>go over</b> – to review · <b>write down</b> – to note</li><li><b>give up</b> – to quit · <b>keep on</b> – to persist</li><li><b>turn out</b> – to prove to be: <i>It turned out to be harmless.</i></li><li><b>rule out</b> – to discard: <i>They ruled out the other hypothesis.</i></li></ul>",
+      "fichas": [
+        { "t": "carry out", "d": "Llevar a cabo un experimento o un plan.", "d_en": "To perform an experiment or a plan." },
+        { "t": "find out vs figure out", "d": "Descubrir un dato vs deducirlo razonando.", "d_en": "To discover a fact vs to work it out by reasoning." },
+        { "t": "rule out", "d": "Descartar una posibilidad.", "d_en": "To discard a possibility." },
+        { "t": "turn out", "d": "Resultar ser: It turned out to be true.", "d_en": "To prove to be: It turned out to be true." },
+        { "t": "bring about", "d": "Provocar o causar un cambio.", "d_en": "To cause a change." }
+      ],
+      "quiz": [
+        { "q": "«The team ___ several experiments last year.»", "q_en": "\"The team ___ several experiments last year.\"", "o": ["carried out", "carried on", "looked up", "gave up"], "o_en": ["carried out", "carried on", "looked up", "gave up"], "a": 0, "why": "Carry out es realizar o llevar a cabo.", "why_en": "Carry out means to perform." },
+        { "q": "«The tests ___ negative.» (resultaron)", "q_en": "\"The tests ___ negative.\" (they proved to be)", "o": ["found out", "turned out", "ruled out", "pointed out"], "o_en": ["found out", "turned out", "ruled out", "pointed out"], "a": 1, "why": "Turn out es resultar ser.", "why_en": "Turn out means to prove to be." },
+        { "q": "«They ___ that hypothesis after the data came in.»", "q_en": "\"They ___ that hypothesis after the data came in.\"", "o": ["ruled out", "brought about", "wrote down", "kept on"], "o_en": ["ruled out", "brought about", "wrote down", "kept on"], "a": 0, "why": "Rule out es descartar una hipótesis.", "why_en": "Rule out means to discard a hypothesis." }
+      ]
+    },
+    {
+      "id": "ingles-9-2-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Avances científicos: biología y bioética",
+      "t_en": "Scientific advances: biology and bioethics",
+      "d": "14 min",
+      "content_es": "<h4>Biología</h4><p><b>cell</b>, <b>gene</b>, <b>DNA</b>, <b>chromosome</b>, <b>species</b>, <b>evolution</b>, <b>bacteria</b>, <b>virus</b>, <b>vaccine</b>, <b>antibiotic</b>, <b>immune system</b>, <b>ecosystem</b>, <b>stem cells</b> (células madre), <b>cloning</b>, <b>genetic engineering</b>.</p><h4>El método científico</h4><p><b>hypothesis</b> (hipótesis), <b>experiment</b>, <b>evidence</b>, <b>data</b>, <b>sample</b> (muestra), <b>results</b>, <b>findings</b> (hallazgos), <b>peer review</b>, <b>breakthrough</b> (avance decisivo).</p><h4>Bioética</h4><p><b>ethics</b>, <b>consent</b> (consentimiento), <b>risk</b>, <b>benefit</b>, <b>regulation</b>, <b>responsibility</b>, <b>dilemma</b>, <b>harm</b> (daño), <b>welfare</b> (bienestar).</p><h4>Discutirla</h4><p><i>Should scientists be allowed to…? · The main benefit is… · However, there is a risk that… · In my view, the limit should be…</i></p><p>Ojo: <b>data</b> y <b>evidence</b> son incontables: <i>The evidence <b>is</b> clear</i>.</p>",
+      "content_en": "<h4>Biology</h4><p><b>cell</b>, <b>gene</b>, <b>DNA</b>, <b>chromosome</b>, <b>species</b>, <b>evolution</b>, <b>bacteria</b>, <b>virus</b>, <b>vaccine</b>, <b>antibiotic</b>, <b>immune system</b>, <b>ecosystem</b>, <b>stem cells</b>, <b>cloning</b>, <b>genetic engineering</b>.</p><h4>The scientific method</h4><p><b>hypothesis</b>, <b>experiment</b>, <b>evidence</b>, <b>data</b>, <b>sample</b>, <b>results</b>, <b>findings</b>, <b>peer review</b>, <b>breakthrough</b>.</p><h4>Bioethics</h4><p><b>ethics</b>, <b>consent</b>, <b>risk</b>, <b>benefit</b>, <b>regulation</b>, <b>responsibility</b>, <b>dilemma</b>, <b>harm</b>, <b>welfare</b>.</p><h4>Discussing it</h4><p><i>Should scientists be allowed to…? · The main benefit is… · However, there is a risk that… · In my view, the limit should be…</i></p><p>Careful: <b>data</b> and <b>evidence</b> are uncountable: <i>The evidence <b>is</b> clear</i>.</p>",
+      "fichas": [
+        { "t": "breakthrough", "d": "Avance decisivo que cambia un campo.", "d_en": "A decisive advance that changes a field." },
+        { "t": "evidence es incontable", "d": "The evidence is clear, no The evidences are.", "d_en": "The evidence is clear, not The evidences are." },
+        { "t": "consent", "d": "Consentimiento informado de un participante.", "d_en": "Informed agreement given by a participant." },
+        { "t": "findings", "d": "Los hallazgos de una investigación.", "d_en": "The results a piece of research produced." },
+        { "t": "peer review", "d": "Revisión de un estudio por otros científicos.", "d_en": "Review of a study by other scientists." }
+      ],
+      "quiz": [
+        { "q": "«The ___ is clear: the treatment works.»", "q_en": "\"The ___ is clear: the treatment works.\"", "o": ["evidences", "evidence", "evidents", "evidence are"], "o_en": ["evidences", "evidence", "evidents", "evidence are"], "a": 1, "why": "Evidence es incontable y lleva verbo en singular.", "why_en": "Evidence is uncountable and takes a singular verb." },
+        { "q": "¿Qué es un «breakthrough»?", "q_en": "What is a \"breakthrough\"?", "o": ["Un fracaso", "Un avance decisivo", "Una hipótesis", "Una muestra"], "o_en": ["A failure", "A decisive advance", "A hypothesis", "A sample"], "a": 1, "why": "Breakthrough es un descubrimiento que cambia el campo.", "why_en": "A breakthrough is a discovery that changes a field." },
+        { "q": "«Participants must give their ___ before the study.»", "q_en": "\"Participants must give their ___ before the study.\"", "o": ["harm", "welfare", "consent", "dilemma"], "o_en": ["harm", "welfare", "consent", "dilemma"], "a": 2, "why": "Consent es el permiso informado del participante.", "why_en": "Consent is the participant's informed permission." }
+      ]
+    },
+    {
+      "id": "ingles-9-2-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "La fecha: días, meses y números",
+      "t_en": "The date: days, months and numbers",
+      "d": "10 min",
+      "content_es": "<h4>Escribir la fecha</h4><ul><li>Americano: <b>month/day/year</b> — <i>03/15/2026</i> = March 15, 2026</li><li>Británico: <b>day/month/year</b> — <i>15/03/2026</i> = 15 March 2026</li></ul><p>Por eso, en textos internacionales conviene escribir el mes con letras para evitar confusiones.</p><h4>Decirla</h4><p><i>March the fifteenth, twenty twenty-six</i> o <i>the fifteenth of March</i>.</p><h4>Ordinales que cambian</h4><p>1st <i>first</i>, 2nd <i>second</i>, 3rd <i>third</i>, 5th <i>fifth</i>, 8th <i>eighth</i>, 9th <i>ninth</i>, 12th <i>twelfth</i>, 20th <i>twentieth</i>, 21st <i>twenty-first</i>.</p><h4>Preposiciones</h4><p><b>on</b> Monday, <b>on</b> March 15th · <b>in</b> March, <b>in</b> 2026 · <b>at</b> the weekend, <b>at</b> Christmas.</p><p>Días y meses siempre con mayúscula inicial.</p>",
+      "content_en": "<h4>Writing the date</h4><ul><li>American: <b>month/day/year</b> — <i>03/15/2026</i> = March 15, 2026</li><li>British: <b>day/month/year</b> — <i>15/03/2026</i> = 15 March 2026</li></ul><p>That is why in international texts it is safer to write the month in words.</p><h4>Saying it</h4><p><i>March the fifteenth, twenty twenty-six</i> or <i>the fifteenth of March</i>.</p><h4>Ordinals that change spelling</h4><p>1st <i>first</i>, 2nd <i>second</i>, 3rd <i>third</i>, 5th <i>fifth</i>, 8th <i>eighth</i>, 9th <i>ninth</i>, 12th <i>twelfth</i>, 20th <i>twentieth</i>, 21st <i>twenty-first</i>.</p><h4>Prepositions</h4><p><b>on</b> Monday, <b>on</b> March 15th · <b>in</b> March, <b>in</b> 2026 · <b>at</b> the weekend, <b>at</b> Christmas.</p><p>Days and months are always capitalized.</p>",
+      "fichas": [
+        { "t": "03/15 vs 15/03", "d": "Formato americano vs británico: cambia el orden.", "d_en": "American vs British format: the order changes." },
+        { "t": "ninth / twelfth", "d": "Ordinales irregulares en su escritura.", "d_en": "Ordinals with irregular spelling." },
+        { "t": "on + fecha", "d": "on March 15th, on Monday.", "d_en": "on March 15th, on Monday." },
+        { "t": "Mayúscula inicial", "d": "Los días y meses siempre van en mayúscula.", "d_en": "Days and months are always capitalized." }
+      ],
+      "quiz": [
+        { "q": "«07/04/2026» en formato americano es…", "q_en": "\"07/04/2026\" in American format is…", "o": ["7 de abril", "4 de julio", "7 de julio", "4 de abril"], "o_en": ["April 7th", "July 4th", "July 7th", "April 4th"], "a": 1, "why": "En formato americano el primer número es el mes.", "why_en": "In American format the first number is the month." },
+        { "q": "El ordinal de «nine» es…", "q_en": "The ordinal of \"nine\" is…", "o": ["nineth", "ninth", "ninenth", "nineith"], "o_en": ["nineth", "ninth", "ninenth", "nineith"], "a": 1, "why": "Nine pierde la e: ninth.", "why_en": "Nine drops the e: ninth." },
+        { "q": "«The conference is ___ May.»", "q_en": "\"The conference is ___ May.\"", "o": ["on", "at", "in", "of"], "o_en": ["on", "at", "in", "of"], "a": 2, "why": "Los meses llevan la preposición in.", "why_en": "Months take the preposition in." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-9-2-repaso",
+    "titulo": "Repaso — What Could Have Happened?",
+    "titulo_en": "Review — What Could Have Happened?",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El <b>tercer condicional</b> y los <b>modales perfectos</b> comparten la misma pieza: <b>have + participio</b>. Sirven para hablar de un pasado que no ocurrió, para lamentarlo o para deducir qué pasó. Los <b>phrasal verbs</b> son la otra mitad del periodo.</p><h4>Puntos gramaticales</h4><ul><li>If + had + participio, would have + participio.</li><li>should have (arrepentimiento), could have (posibilidad no usada), must have (deducción), can't have (deducción negativa).</li><li>Nunca would of; siempre would have.</li><li>Phrasal verbs separables: con pronombre, el objeto va en medio (turn it on).</li></ul><h4>Vocabulario</h4><p>Phrasal verbs de investigación (carry out, find out, rule out, turn out), léxico de biología y bioética, y la fecha en formato americano y británico.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The <b>third conditional</b> and <b>perfect modals</b> share the same piece: <b>have + participle</b>. They talk about a past that did not happen, regret it or deduce what happened. <b>Phrasal verbs</b> are the other half of the term.</p><h4>Grammar points</h4><ul><li>If + had + participle, would have + participle.</li><li>should have (regret), could have (unused possibility), must have (deduction), can't have (negative deduction).</li><li>Never would of; always would have.</li><li>Separable phrasal verbs: with a pronoun the object goes in the middle (turn it on).</li></ul><h4>Vocabulary</h4><p>Research phrasal verbs (carry out, find out, rule out, turn out), biology and bioethics vocabulary, and the date in American and British format.</p>",
+    "puntos_clave": [
+      ["Tercer condicional: If + had + participio, would have + participio.", "Third conditional: If + had + participle, would have + participle."],
+      ["Después de if nunca va would.", "After if there is never would."],
+      ["should have + participio expresa arrepentimiento.", "should have + participle expresses regret."],
+      ["Con pronombre: turn it on, nunca turn on it.", "With a pronoun: turn it on, never turn on it."],
+      ["evidence y data son incontables.", "evidence and data are uncountable."],
+      ["03/15 es americano; 15/03 es británico.", "03/15 is American; 15/03 is British."]
+    ],
+    "preguntas": [
+      { "q": "«If they ___ the data, they would have found the error.»", "q_en": "\"If they ___ the data, they would have found the error.\"", "o": ["checked", "had checked", "would check", "check"], "o_en": ["checked", "had checked", "would check", "check"], "a": 1, "why": "La condición del tercer condicional va en pasado perfecto.", "why_en": "The condition of the third conditional is in the past perfect." },
+      { "q": "«I'm sorry. I ___ you earlier.»", "q_en": "\"I'm sorry. I ___ you earlier.\"", "o": ["should call", "should have called", "should have call", "must call"], "o_en": ["should call", "should have called", "should have call", "must call"], "a": 1, "why": "Es un arrepentimiento sobre el pasado.", "why_en": "It is a regret about the past." },
+      { "q": "«He didn't answer. He ___ asleep.»", "q_en": "\"He didn't answer. He ___ asleep.\"", "o": ["must have been", "must be", "can't have been", "should have been"], "o_en": ["must have been", "must be", "can't have been", "should have been"], "a": 0, "why": "Deducción casi segura sobre el pasado.", "why_en": "A near-certain deduction about the past." },
+      { "q": "«Can you ___ the meaning in the dictionary?»", "q_en": "\"Can you ___ the meaning in the dictionary?\"", "o": ["look after", "look up", "look for", "look out"], "o_en": ["look after", "look up", "look for", "look out"], "a": 1, "why": "Look up es buscar un dato en una fuente.", "why_en": "Look up means to search a source for a piece of information." },
+      { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["Please write down it", "Please write it down", "Please write down them all it", "Please down write it"], "o_en": ["Please write down it", "Please write it down", "Please write down them all it", "Please down write it"], "a": 1, "why": "Con pronombre el objeto va en medio del phrasal verb.", "why_en": "With a pronoun the object goes in the middle of the phrasal verb." },
+      { "q": "«The study ___ new evidence about the virus.»", "q_en": "\"The study ___ new evidence about the virus.\"", "o": ["gave up", "brought about", "turned out", "ran out of"], "o_en": ["gave up", "brought about", "turned out", "ran out of"], "a": 1, "why": "Bring about es producir o provocar algo nuevo.", "why_en": "Bring about means to produce or cause something new." },
+      { "q": "«The data ___ conclusive.»", "q_en": "\"The data ___ conclusive.\"", "o": ["are being", "is", "are", "have"], "o_en": ["are being", "is", "are", "have"], "a": 1, "why": "En uso general data se trata como incontable singular.", "why_en": "In general use data is treated as singular uncountable." },
+      { "q": "«The discovery was made ___ 1953.»", "q_en": "\"The discovery was made ___ 1953.\"", "o": ["on", "at", "in", "of"], "o_en": ["on", "at", "in", "of"], "a": 2, "why": "Los años llevan in.", "why_en": "Years take in." }
+    ]
+  }
+}

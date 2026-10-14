@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZocaLab — Mi Muysca</title>
+
+  <!-- Tipografías: Playfair Display para títulos, Nunito para el cuerpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/zocalab.css">
+  <link rel="stylesheet" href="../css/muisca.css">
+
+  <style>
+    /* ====== Tarjeta de identidad ====== */
+    .perfil-identidad {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 6px;
+      margin-bottom: 22px;
+      padding: 28px 20px 24px;
+    }
+    .perfil-nombre {
+      font-family: var(--zl-font-titulo);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--zl-verde-oscuro);
+      margin-top: 10px;
+    }
+    .perfil-correo { font-size: 14px; color: var(--gris); }
+    .perfil-desde { font-size: 14px; color: var(--gris); margin-top: 2px; }
+
+    /* ====== Estadísticas ====== */
+    .perfil-stat {
+      text-align: center;
+      padding: 18px 10px;
+    }
+    .perfil-stat-num {
+      font-family: var(--zl-font-titulo);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--zl-verde-oscuro);
+      line-height: 1.1;
+    }
+    .perfil-stat-label {
+      font-size: 14px;
+      color: var(--gris);
+      margin-top: 4px;
+    }
+
+    /* ====== Ajuste del Cóndor con slider ====== */
+    .perfil-slider-fila { margin-top: 14px; }
+    .perfil-slider-etiqueta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: var(--gris);
+      margin-bottom: 8px;
+    }
+    .perfil-slider-etiqueta span:last-child {
+      font-weight: 800;
+      color: var(--zl-verde-oscuro);
+    }
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--zl-verde-oscuro);
+    }
+
+    /* Sobre fondos con imagen o muy oscuros, el botón de salir
+       necesita su propio fondo para leerse bien */
+    #btnCerrarSesion { background: #fff; }
+
+    /* El contenido y las capas fijas del fondo.
+       OJO: header y nav se quedan "fixed" (no se les da position:relative). */
+    .zl-content { position: relative; z-index: 1; }
+  </style>
+</head>
+<body class="tema-muisca">
+
+<!-- Estrellas y luna: solo se ven con el fondo "Noche estrellada" -->
+<div class="zl-estrellas zl-oculto" id="estrellasPerfil" aria-hidden="true"></div>
+<div class="zl-luna zl-oculto" id="lunaPerfil" aria-hidden="true">🌙</div>
+
+<div class="zl-page" id="paginaPerfil">
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="zl-header">
+    <div class="zl-marca">
+      <img src="../assets/logo-icon.png" alt="" onerror="this.style.display='none'">
+      <span>ZocaLab</span>
+    </div>
+
+    <div class="zl-saludo" id="saludo">Cargando...</div>
+
+    <button class="zl-avatar" id="avatarBtn" title="Mi Muysca" aria-label="Mi Muysca">Z</button>
+  </header>
+
+  <!-- ============================================
+       CONTENIDO
+       ============================================ -->
+  <main class="zl-content">
+    <div class="zl-container zl-container-angosto">
+
+      <!-- ====== IDENTIDAD ====== -->
+      <div class="zl-card perfil-identidad zl-marco-oro zl-anim-entrada">
+        <div class="zl-avatar zl-avatar-lg" id="perfilAvatar">Z</div>
+        <div class="perfil-nombre" id="perfilNombre">Cargando...</div>
+        <div class="perfil-correo" id="perfilCorreo"></div>
+        <span class="zl-badge zl-badge-dorado" id="perfilRol">Estudiante</span>
+        <div class="perfil-desde" id="perfilDesde"></div>
+      </div>
+
+      <!-- ====== ESTADÍSTICAS ====== -->
+      <div class="zl-grid zl-grid-4 zl-mb-24 zl-anim-entrada zl-d1">
+        <div class="zl-card perfil-stat">
+          <div class="perfil-stat-num" id="statArboles">0</div>
+          <div class="perfil-stat-label">🌳 Árboles</div>
+        </div>
+        <div class="zl-card perfil-stat">
+          <div class="perfil-stat-num" id="statRacha">0</div>
+          <div class="perfil-stat-label">🔥 Racha</div>
+        </div>
+        <div class="zl-card perfil-stat">
+          <div class="perfil-stat-num" id="statSol">0</div>
+          <div class="perfil-stat-label">☀️ Días de sol</div>
+        </div>
+        <div class="zl-card perfil-stat">
+          <div class="perfil-stat-num" id="statLuna">0</div>
+          <div class="perfil-stat-label">🌙 Cierres de día</div>
+        </div>
+      </div>
+
+      <!-- ====== EL CÓNDOR ====== -->
+      <div class="zl-card zl-mb-24 zl-anim-entrada zl-d2">
+        <div class="zl-card-titulo">🦅 El Cóndor</div>
+        <div class="zl-ajuste" style="border-bottom:none">
+          <div>
+            <div class="zl-ajuste-nombre">Activar El Cóndor</div>
+            <div class="zl-ajuste-desc">Avisos cuando llevas mucho tiempo en pantalla</div>
+          </div>
+          <button class="zl-toggle" id="toggleCondor" aria-label="Activar o desactivar El Cóndor"></button>
+        </div>
+        <div class="perfil-slider-fila" id="sliderFila">
+          <div class="perfil-slider-etiqueta">
+            <span>Avisar cada</span>
+            <span><span id="sliderValor">25</span> min</span>
+          </div>
+          <label class="zl-sr" for="sliderCondor">Minutos entre avisos</label>
+          <input type="range" id="sliderCondor" min="15" max="60" step="5" value="25">
+        </div>
+      </div>
+
+      <!-- ====== FOTO DE PERFIL ====== -->
+      <div class="zl-card zl-mb-24 zl-anim-entrada zl-d3">
+        <div class="zl-card-titulo">🪙 Tu foto Muisca</div>
+        <p class="zl-card-texto zl-mb-16">Elige la figura ancestral que te representa.</p>
+        <div class="mz-avatares" id="avataresGrid" role="group" aria-label="Elige tu foto de perfil"></div>
+        <div class="mz-avatar-nombre" id="avatarNombre"></div>
+        <button type="button" class="mz-enlace" id="btnUsarInicial">Usar mi inicial en vez de una foto</button>
+      </div>
+
+      <!-- ====== FONDO ====== -->
+      <div class="zl-card zl-mb-24 zl-anim-entrada zl-d4">
+        <div class="zl-card-titulo">🎨 Fondo de tu Muysca</div>
+        <p class="zl-card-texto zl-mb-16">Cambia el paisaje de esta pantalla.</p>
+        <div class="mz-fondos-grid" id="fondosGrid"></div>
+      </div>
+
+      <!-- ====== CERRAR SESIÓN ====== -->
+      <button class="zl-btn-peligro zl-anim-entrada zl-d5" id="btnCerrarSesion">
+        🚪 Cerrar sesión
+      </button>
+
+    </div>
+  </main>
+
+  <!-- ============================================
+       NAVEGACIÓN INFERIOR
+       ============================================ -->
+  <nav class="zl-nav">
+    <a class="zl-nav-item" href="bosque.html">
+      <span aria-hidden="true">🌳</span><span>Bosque</span>
+    </a>
+    <a class="zl-nav-item" href="rutina-sol.html">
+      <span aria-hidden="true">☀️</span><span>Mi día</span>
+    </a>
+    <a class="zl-nav-item" href="mi-espacio.html">
+      <span aria-hidden="true">📋</span><span>Mi espacio</span>
+    </a>
+    <a class="zl-nav-item" href="rutina-luna.html">
+      <span aria-hidden="true">🌙</span><span>Cerrar día</span>
+    </a>
+    <a class="zl-nav-item active" href="perfil.html">
+      <span aria-hidden="true">👤</span><span>Perfil</span>
+    </a>
+  </nav>
+</div>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+<script src="../js/datos.js"></script>
+<script src="../js/sonidos.js"></script>
+<script src="../js/animaciones.js"></script>
+<script src="../js/escenas.js"></script>
+<script src="../js/condor.js"></script>
+
+<script>
+  /* ============================================
+     PROTECCIÓN DE RUTA
+     ============================================ */
+  if (!verificarSesion()) {
+    throw new Error('Sin sesión activa');
+  }
+
+  const D = window.ZocaDatos;
+
+  /* ============================================
+     HEADER
+     ============================================ */
+  document.getElementById('saludo').textContent = D.saludoSegunHora();
+
+  /* ============================================
+     IDENTIDAD
+     ============================================ */
+  const usuario = D.obtenerUsuario() || {};
+
+  document.getElementById('perfilNombre').textContent = usuario.nombre || D.nombreCorto();
+  document.getElementById('perfilCorreo').textContent = usuario.correo || '';
+  document.getElementById('perfilRol').textContent = usuario.rol
+    ? usuario.rol.charAt(0).toUpperCase() + usuario.rol.slice(1)
+    : 'Estudiante';
+  document.getElementById('perfilDesde').textContent = 'Muysca desde: ' +
+    (usuario.fechaRegistro ? D.fechaLarga(usuario.fechaRegistro) : 'hoy');
+
+  /* ============================================
+     ESTADÍSTICAS
+     ============================================ */
+  const bosque = D.leerDato(D.CLAVES.BOSQUE);
+  const rutinas = D.leerDato(D.CLAVES.RUTINAS);
+
+  document.getElementById('statArboles').textContent = bosque.totalArboles || 0;
+  document.getElementById('statRacha').textContent = bosque.diasRacha || 0;
+  document.getElementById('statSol').textContent = (rutinas.sol.historial || []).length;
+  document.getElementById('statLuna').textContent = (rutinas.luna.historial || []).length;
+
+  /* ============================================
+     EL CÓNDOR — ajustes
+     ============================================ */
+  const condor = D.leerDato(D.CLAVES.CONDOR);
+  const toggleCondor = document.getElementById('toggleCondor');
+  const sliderFila = document.getElementById('sliderFila');
+  const sliderCondor = document.getElementById('sliderCondor');
+  const sliderValor = document.getElementById('sliderValor');
+
+  function pintarCondor() {
+    toggleCondor.classList.toggle('active', !!condor.activado);
+    sliderFila.classList.toggle('zl-oculto', !condor.activado);
+    sliderCondor.value = condor.intervaloMinutos || 25;
+    sliderValor.textContent = condor.intervaloMinutos || 25;
+  }
+  pintarCondor();
+
+  toggleCondor.addEventListener('click', function () {
+    condor.activado = !condor.activado;
+    D.actualizarDato(D.CLAVES.CONDOR, 'activado', condor.activado);
+    pintarCondor();
+  });
+
+  sliderCondor.addEventListener('input', function () {
+    condor.intervaloMinutos = parseInt(sliderCondor.value, 10);
+    sliderValor.textContent = condor.intervaloMinutos;
+    D.actualizarDato(D.CLAVES.CONDOR, 'intervaloMinutos', condor.intervaloMinutos);
+  });
+
+  /* ============================================
+     PERSONALIZACIÓN — foto de perfil y fondo
+     ============================================ */
+  const FONDOS_PERFIL = [
+    { id: 'textil',       nombre: 'Textil dorado',          muestra: 'muestra-textil',       clase: 'fondo-textil' },
+    { id: 'laguna',       nombre: 'Laguna sagrada',         muestra: 'muestra-laguna',       clase: 'fondo-laguna' },
+    { id: 'cordillera',   nombre: 'Cordillera al amanecer', muestra: 'muestra-cordillera',   clase: 'fondo-cordillera' },
+    { id: 'noche',        nombre: 'Noche estrellada',       muestra: 'muestra-noche',        clase: 'zl-noche-page', estrellas: true },
+    { id: 'atardecer',    nombre: 'Atardecer de El Dorado', muestra: 'muestra-atardecer',    clase: 'fondo-atardecer' },
+    { id: 'selva',        nombre: 'Selva esmeralda',        muestra: 'muestra-selva',        clase: 'fondo-selva' },
+    { id: 'paramo',       nombre: 'Páramo entre la niebla', muestra: 'muestra-paramo',       clase: 'fondo-paramo' },
+    { id: 'tierra',       nombre: 'Tierra ancestral',       muestra: 'muestra-tierra',       clase: 'fondo-tierra' },
+    { id: 'rio-dia',      nombre: 'Río sagrado (día)',      muestra: 'muestra-img-rio-dia',      clase: 'fondo-img-rio-dia' },
+    { id: 'rio-noche',    nombre: 'Río sagrado (noche)',    muestra: 'muestra-img-rio-noche',    clase: 'fondo-img-rio-noche' },
+    { id: 'laguna-dia',   nombre: 'Laguna (día)',           muestra: 'muestra-img-laguna-dia',   clase: 'fondo-img-laguna-dia' },
+    { id: 'laguna-noche', nombre: 'Laguna (noche)',         muestra: 'muestra-img-laguna-noche', clase: 'fondo-img-laguna-noche' }
+  ];
+
+  const paginaPerfil = document.getElementById('paginaPerfil');
+
+  // js/datos.js deja USUARIOS de solo lectura a propósito (lo dice su
+  // propio comentario), así que las preferencias personales se guardan
+  // aquí, en la página, siguiendo el mismo patrón que ya usa login.html.
+  function actualizarUsuarioActual(cambios) {
+    try {
+      const sesionActual = JSON.parse(localStorage.getItem('zocalab_sesion') || 'null');
+      if (!sesionActual || !sesionActual.usuarioId) return false;
+
+      const usuarios = JSON.parse(localStorage.getItem('zocalab_usuarios') || '[]');
+      const indice = usuarios.findIndex(function (u) { return u.id === sesionActual.usuarioId; });
+      if (indice === -1) return false;
+
+      Object.assign(usuarios[indice], cambios);
+      localStorage.setItem('zocalab_usuarios', JSON.stringify(usuarios));
+      return true;
+    } catch (e) {
+      console.error('Perfil: no se pudo guardar la preferencia', e);
+      return false;
+    }
+  }
+
+  function pintarAvatarElegido() {
+    D.pintarAvatar(document.getElementById('avatarBtn'));
+    D.pintarAvatar(document.getElementById('perfilAvatar'));
+    const elegido = D.AVATARES.filter(function (a) { return a.id === usuario.avatarImagen; })[0];
+    document.getElementById('avatarNombre').textContent = elegido ? elegido.nombre : '';
+    document.getElementById('btnUsarInicial').classList.toggle('zl-oculto', !elegido);
+  }
+
+  function pintarAvatares() {
+    const cont = document.getElementById('avataresGrid');
+    cont.innerHTML = D.AVATARES.map(function (a) {
+      return '<button type="button" class="mz-avatar-opt' +
+        (a.id === usuario.avatarImagen ? ' elegido' : '') + '" ' +
+        'data-avatar="' + a.id + '" title="' + a.nombre + '" aria-label="' + a.nombre + '" ' +
+        'aria-pressed="' + (a.id === usuario.avatarImagen) + '" ' +
+        'style="background-image:url(\'' + D.rutaAvatar(a.id) + '\')"></button>';
+    }).join('');
+
+    cont.querySelectorAll('[data-avatar]').forEach(function (boton) {
+      boton.addEventListener('click', function () {
+        usuario.avatarImagen = boton.dataset.avatar;
+        usuario.avatarIcono = null;
+        actualizarUsuarioActual({ avatarImagen: usuario.avatarImagen, avatarIcono: null });
+        pintarAvatarElegido();
+        pintarAvatares();
+        try { if (window.zocaSound) zocaSound.logro(); } catch (e) { /* opcional */ }
+      });
+    });
+  }
+
+  document.getElementById('btnUsarInicial').addEventListener('click', function () {
+    usuario.avatarImagen = null;
+    actualizarUsuarioActual({ avatarImagen: null });
+    pintarAvatarElegido();
+    pintarAvatares();
+  });
+
+  // Se pinta una sola vez: las posiciones aleatorias no deben cambiar
+  // cada vez que se alterna el fondo de noche.
+  function pintarEstrellasPerfil() {
+    const cont = document.getElementById('estrellasPerfil');
+    if (cont.dataset.pintado) return;
+    let html = '';
+    for (let i = 0; i < 40; i++) {
+      const tam = (Math.random() * 2 + 1).toFixed(1);
+      const top = (Math.random() * 100).toFixed(1);
+      const left = (Math.random() * 100).toFixed(1);
+      const retraso = (Math.random() * 3).toFixed(1);
+      html += '<span class="zl-estrella" style="width:' + tam + 'px;height:' + tam +
+        'px;top:' + top + '%;left:' + left + '%;animation-delay:' + retraso + 's"></span>';
+    }
+    cont.innerHTML = html;
+    cont.dataset.pintado = 'true';
+  }
+
+  function aplicarFondo(id) {
+    const fondo = FONDOS_PERFIL.filter(function (f) { return f.id === id; })[0] || FONDOS_PERFIL[0];
+
+    FONDOS_PERFIL.forEach(function (f) { paginaPerfil.classList.remove(f.clase); });
+    paginaPerfil.classList.add(fondo.clase);
+
+    const conCielo = !!fondo.estrellas;
+    document.getElementById('estrellasPerfil').classList.toggle('zl-oculto', !conCielo);
+    document.getElementById('lunaPerfil').classList.toggle('zl-oculto', !conCielo);
+    if (conCielo) pintarEstrellasPerfil();
+  }
+
+  function pintarFondos() {
+    const cont = document.getElementById('fondosGrid');
+    const elegido = usuario.fondoPerfil || 'textil';
+
+    cont.innerHTML = FONDOS_PERFIL.map(function (f) {
+      return '<button type="button" class="zl-arbol-opcion' + (f.id === elegido ? ' elegida' : '') +
+        '" data-fondo="' + f.id + '" aria-pressed="' + (f.id === elegido) + '">' +
+        '<span class="fondo-muestra ' + f.muestra + '"></span>' +
+        '<span class="nombre" style="font-size:15px">' + f.nombre + '</span>' +
+      '</button>';
+    }).join('');
+
+    cont.querySelectorAll('[data-fondo]').forEach(function (boton) {
+      boton.addEventListener('click', function () {
+        usuario.fondoPerfil = boton.dataset.fondo;
+        actualizarUsuarioActual({ fondoPerfil: usuario.fondoPerfil });
+        aplicarFondo(usuario.fondoPerfil);
+        pintarFondos();
+        try { if (window.zocaSound) zocaSound.logro(); } catch (e) { /* opcional */ }
+      });
+    });
+  }
+
+  /* ============================================
+     CERRAR SESIÓN
+     ============================================ */
+  document.getElementById('btnCerrarSesion').addEventListener('click', function () {
+    if (!confirm('¿Seguro que quieres salir de tu espacio?')) return;
+    ZocaCondor.detener();
+    D.cerrarSesion();
+  });
+
+  /* ============================================
+     ARRANQUE
+     ============================================ */
+  document.getElementById('avatarBtn').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  pintarAvatarElegido();
+  pintarAvatares();
+  aplicarFondo(usuario.fondoPerfil || 'textil');
+  pintarFondos();
+
+  // Espirales de oro y polen flotando detrás
+  ZocaEscenas.montar('perfil');
+
+  ZocaCondor.init();
+</script>
+
+</body>
+</html>

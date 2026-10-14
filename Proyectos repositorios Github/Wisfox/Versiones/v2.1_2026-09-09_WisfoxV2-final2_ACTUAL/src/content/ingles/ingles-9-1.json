@@ -1,0 +1,176 @@
+{
+  "id": "ingles-9-1",
+  "materia": "ingles",
+  "grado": "9",
+  "grado_nombre": "Noveno",
+  "periodo": 1,
+  "periodo_label": { "es": "Periodo I", "en": "Term I" },
+  "titulo": "Living the Moment: Talking About Feelings, Personality and Daily Life",
+  "titulo_es": "Vivir el momento: sentimientos, personalidad y vida diaria",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Expreso gustos, preferencias y emociones con estructuras variadas. Describo situaciones temporales y planes personales, y reflexiono sobre mi carácter y mis experiencias.",
+  "competencias": "Usar gerundio e infinitivo después de verbos de gusto; ubicar adverbios de frecuencia con precisión; emplear el presente continuo para lo temporal y para planes; describir personalidad y emociones con vocabulario preciso.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Who Am I Right Now",
+    "descripcion_es": "Cada estudiante elabora una autobiografía breve del momento presente: qué disfruta y qué evita, qué está haciendo esta temporada de su vida y qué planes tiene, usando gerundios y presente continuo.",
+    "descripcion_en": "Each student writes a short autobiography of their present moment: what they enjoy and what they avoid, what they are doing in this season of their life and what plans they have, using gerunds and the present continuous."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-9-1-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Gustos con gerundio e infinitivo",
+      "t_en": "Likes and dislikes with gerund and infinitive",
+      "d": "14 min",
+      "content_es": "<h4>Los que siempre piden gerundio</h4><p><b>enjoy, avoid, dislike, detest, don't mind, can't stand, keep, practice, finish, suggest</b>:<br><i>I <b>enjoy reading</b>. · She <b>avoids eating</b> late. · I <b>can't stand waiting</b>.</i></p><h4>Los que aceptan los dos</h4><p><b>like, love, hate, prefer, start, begin, continue</b> aceptan gerundio o <i>to</i> + infinitivo casi sin cambio de sentido:<br><i>I love <b>dancing</b> = I love <b>to dance</b>.</i></p><p>Matiz: el gerundio suele señalar un gusto general; el infinitivo, una preferencia o una elección puntual.</p><h4>Los que solo piden infinitivo</h4><p><b>want, need, decide, hope, plan, learn, promise, refuse, expect</b>: <i>I <b>want to learn</b> French.</i></p><h4>Preferencias comparadas</h4><p><i>I prefer swimming <b>to</b> running.</i> · <i>I'd rather <b>swim</b> than run.</i> (would rather va con verbo base, sin to)</p>",
+      "content_en": "<h4>Verbs that always take a gerund</h4><p><b>enjoy, avoid, dislike, detest, don't mind, can't stand, keep, practice, finish, suggest</b>:<br><i>I <b>enjoy reading</b>. · She <b>avoids eating</b> late. · I <b>can't stand waiting</b>.</i></p><h4>Verbs that take both</h4><p><b>like, love, hate, prefer, start, begin, continue</b> take either a gerund or <i>to</i> + infinitive with almost no change of meaning:<br><i>I love <b>dancing</b> = I love <b>to dance</b>.</i></p><p>Nuance: the gerund usually points to a general taste; the infinitive to a preference or a specific choice.</p><h4>Verbs that only take the infinitive</h4><p><b>want, need, decide, hope, plan, learn, promise, refuse, expect</b>: <i>I <b>want to learn</b> French.</i></p><h4>Compared preferences</h4><p><i>I prefer swimming <b>to</b> running.</i> · <i>I'd rather <b>swim</b> than run.</i> (would rather takes the base verb, no to)</p>",
+      "fichas": [
+        { "t": "enjoy / avoid / can't stand", "d": "Siempre van seguidos de gerundio.", "d_en": "They are always followed by a gerund." },
+        { "t": "want / decide / hope", "d": "Siempre van seguidos de to + infinitivo.", "d_en": "They are always followed by to + infinitive." },
+        { "t": "prefer A to B", "d": "Con prefer la comparación se hace con to.", "d_en": "With prefer the comparison uses to." },
+        { "t": "would rather + base", "d": "I'd rather stay, sin to y sin -ing.", "d_en": "I'd rather stay, with no to and no -ing." },
+        { "t": "can't stand", "d": "No soportar algo. Va con gerundio.", "d_en": "To be unable to tolerate. It takes a gerund." }
+      ],
+      "quiz": [
+        { "q": "«I can't stand ___ in line for hours.»", "q_en": "\"I can't stand ___ in line for hours.\"", "o": ["to wait", "waiting", "wait", "waited"], "o_en": ["to wait", "waiting", "wait", "waited"], "a": 1, "why": "Can't stand siempre va con gerundio.", "why_en": "Can't stand is always followed by a gerund." },
+        { "q": "«She decided ___ medicine.»", "q_en": "\"She decided ___ medicine.\"", "o": ["studying", "to study", "study", "studies"], "o_en": ["studying", "to study", "study", "studies"], "a": 1, "why": "Decide pide to + infinitivo.", "why_en": "Decide takes to + infinitive." },
+        { "q": "«I'd rather ___ at home tonight.»", "q_en": "\"I'd rather ___ at home tonight.\"", "o": ["staying", "to stay", "stay", "stayed"], "o_en": ["staying", "to stay", "stay", "stayed"], "a": 2, "why": "Would rather va con el verbo en forma base.", "why_en": "Would rather takes the base verb." }
+      ]
+    },
+    {
+      "id": "ingles-9-1-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Adverbios de frecuencia y precisión",
+      "t_en": "Frequency adverbs and precision",
+      "d": "12 min",
+      "content_es": "<h4>Escala y matices</h4><p><b>always</b> (100%) · <b>nearly always</b> · <b>usually / normally</b> (80%) · <b>often / frequently</b> (60%) · <b>sometimes</b> (40%) · <b>occasionally</b> (25%) · <b>seldom / rarely / hardly ever</b> (10%) · <b>never</b> (0%).</p><h4>Reglas de posición</h4><ul><li>Antes del verbo principal: <i>I <b>often</b> feel nervous before exams.</i></li><li>Después de to be: <i>She <b>is</b> <b>seldom</b> angry.</i></li><li>Entre auxiliar y verbo: <i>He has <b>never</b> apologized.</i></li><li><b>sometimes, usually, occasionally</b> también pueden abrir la oración: <i><b>Sometimes</b> I feel overwhelmed.</i></li></ul><h4>Énfasis</h4><p>Al inicio de la oración, <b>never, rarely y seldom</b> exigen inversión: <i><b>Never have I</b> seen something like that.</i> Es una estructura formal y enfática.</p>",
+      "content_en": "<h4>Scale and nuances</h4><p><b>always</b> (100%) · <b>nearly always</b> · <b>usually / normally</b> (80%) · <b>often / frequently</b> (60%) · <b>sometimes</b> (40%) · <b>occasionally</b> (25%) · <b>seldom / rarely / hardly ever</b> (10%) · <b>never</b> (0%).</p><h4>Position rules</h4><ul><li>Before the main verb: <i>I <b>often</b> feel nervous before exams.</i></li><li>After to be: <i>She <b>is</b> <b>seldom</b> angry.</i></li><li>Between auxiliary and verb: <i>He has <b>never</b> apologized.</i></li><li><b>sometimes, usually, occasionally</b> can also open the sentence: <i><b>Sometimes</b> I feel overwhelmed.</i></li></ul><h4>Emphasis</h4><p>At the start of a sentence, <b>never, rarely and seldom</b> require inversion: <i><b>Never have I</b> seen something like that.</i> It is a formal, emphatic structure.</p>",
+      "fichas": [
+        { "t": "seldom", "d": "Rara vez. Registro más formal que rarely.", "d_en": "Rarely, in a more formal register." },
+        { "t": "Inversión enfática", "d": "Never have I seen…: el auxiliar va antes del sujeto.", "d_en": "Never have I seen…: the auxiliary precedes the subject." },
+        { "t": "Después de to be", "d": "She is rarely late, no She rarely is late.", "d_en": "She is rarely late, not She rarely is late." },
+        { "t": "Sometimes al inicio", "d": "Solo algunos adverbios pueden abrir la oración.", "d_en": "Only some adverbs can open the sentence." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["He rarely is on time", "He is rarely on time", "Rarely he is on time", "He is on time rarely it"], "o_en": ["He rarely is on time", "He is rarely on time", "Rarely he is on time", "He is on time rarely it"], "a": 1, "why": "Con to be el adverbio va después del verbo.", "why_en": "With to be the adverb goes after the verb." },
+        { "q": "«Never ___ such a beautiful place.»", "q_en": "\"Never ___ such a beautiful place.\"", "o": ["I have seen", "have I seen", "I saw", "did I saw"], "o_en": ["I have seen", "have I seen", "I saw", "did I saw"], "a": 1, "why": "Never al inicio obliga a invertir auxiliar y sujeto.", "why_en": "Never at the start forces inversion of auxiliary and subject." },
+        { "q": "«She has ___ complained about it.»", "q_en": "\"She has ___ complained about it.\"", "o": ["never", "not never", "never not", "no"], "o_en": ["never", "not never", "never not", "no"], "a": 0, "why": "El adverbio va entre el auxiliar has y el participio.", "why_en": "The adverb goes between the auxiliary has and the participle." }
+      ]
+    },
+    {
+      "id": "ingles-9-1-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Presente continuo: lo temporal y los planes",
+      "t_en": "Present continuous: temporary situations and plans",
+      "d": "14 min",
+      "content_es": "<h4>Tres usos que conviene distinguir</h4><ul><li><b>Ahora mismo</b>: <i>She is talking on the phone.</i></li><li><b>Situación temporal</b> (esta semana, este mes, este año): <i>I'm working on a project <b>this month</b>.</i></li><li><b>Plan futuro ya concretado</b>: <i>We're meeting the counselor <b>on Friday</b>.</i></li></ul><h4>Cómo saber cuál es</h4><p>Las expresiones de tiempo lo definen: <i>right now</i> → ahora; <i>this week/month</i> → temporal; <i>tomorrow, on Friday, next week</i> → plan.</p><h4>Detalle importante</h4><p>Para que el continuo sirva como futuro, el plan debe estar <b>acordado</b>: hora, lugar o personas. Si es solo una intención, se prefiere <i>going to</i>; si es una predicción, <i>will</i>.</p><h4>Verbos de estado</h4><p>Siguen sin admitir el continuo: <i>I need help now</i>, no <i>I'm needing</i>.</p>",
+      "content_en": "<h4>Three uses worth distinguishing</h4><ul><li><b>Right now</b>: <i>She is talking on the phone.</i></li><li><b>Temporary situation</b> (this week, this month, this year): <i>I'm working on a project <b>this month</b>.</i></li><li><b>Fixed future plan</b>: <i>We're meeting the counselor <b>on Friday</b>.</i></li></ul><h4>How to tell them apart</h4><p>The time expressions decide: <i>right now</i> → now; <i>this week/month</i> → temporary; <i>tomorrow, on Friday, next week</i> → plan.</p><h4>Important detail</h4><p>For the continuous to work as a future, the plan must be <b>arranged</b>: a time, a place or people. If it is only an intention, prefer <i>going to</i>; if it is a prediction, <i>will</i>.</p><h4>State verbs</h4><p>They still take no continuous: <i>I need help now</i>, not <i>I'm needing</i>.</p>",
+      "fichas": [
+        { "t": "Situación temporal", "d": "this week, this year: algo que no es permanente.", "d_en": "this week, this year: something that is not permanent." },
+        { "t": "Plan acordado", "d": "Con hora y lugar definidos: I'm seeing her at 4.", "d_en": "With a set time and place: I'm seeing her at 4." },
+        { "t": "Continuo vs going to", "d": "Cita ya organizada vs simple intención.", "d_en": "Arranged appointment vs mere intention." },
+        { "t": "Verbos de estado", "d": "need, know, believe: nunca en continuo.", "d_en": "need, know, believe: never in the continuous." }
+      ],
+      "quiz": [
+        { "q": "«I ___ with my aunt this semester.»", "q_en": "\"I ___ with my aunt this semester.\"", "o": ["live", "am living", "lived", "will live"], "o_en": ["live", "am living", "lived", "will live"], "a": 1, "why": "This semester marca una situación temporal.", "why_en": "This semester marks a temporary situation." },
+        { "q": "«We ___ the doctor tomorrow at 10.»", "q_en": "\"We ___ the doctor tomorrow at 10.\"", "o": ["see", "will see", "are seeing", "sees"], "o_en": ["see", "will see", "are seeing", "sees"], "a": 2, "why": "Es una cita acordada: presente continuo con valor de futuro.", "why_en": "It is an arranged appointment: present continuous with future meaning." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["I'm needing your help", "I need your help", "I'm helping you now", "I'm staying here this week"], "o_en": ["I'm needing your help", "I need your help", "I'm helping you now", "I'm staying here this week"], "a": 0, "why": "Need es verbo de estado: no admite forma continua.", "why_en": "Need is a state verb: it has no continuous form." }
+      ]
+    },
+    {
+      "id": "ingles-9-1-4",
+      "num": 4,
+      "tipo": "vocabulary",
+      "t": "Adjetivos de personalidad",
+      "t_en": "Personality adjectives",
+      "d": "12 min",
+      "content_es": "<h4>Cómo eres con los demás</h4><p><b>empathetic</b> (empático), <b>supportive</b> (que apoya), <b>loyal</b>, <b>tolerant</b>, <b>respectful</b>, <b>sociable</b>, <b>reserved</b>, <b>talkative</b> (hablador), <b>bossy</b> (mandón), <b>jealous</b> (celoso).</p><h4>Cómo eres contigo y con el trabajo</h4><p><b>ambitious</b>, <b>determined</b> (decidido), <b>responsible</b>, <b>organized</b>, <b>creative</b>, <b>curious</b>, <b>perfectionist</b>, <b>impulsive</b>, <b>insecure</b>, <b>self-confident</b>.</p><h4>Matizar</h4><p><i>He's <b>quite</b> shy. · She's <b>a bit</b> stubborn. · He can be <b>rather</b> impatient <b>at times</b>. · She tends to be optimistic.</i></p><h4>Falsos amigos</h4><p><b>sensible</b> = sensato (sensible en español es <i>sensitive</i>). <b>sympathetic</b> = comprensivo (simpático es <i>nice</i> o <i>friendly</i>).</p>",
+      "content_en": "<h4>How you are with others</h4><p><b>empathetic</b>, <b>supportive</b>, <b>loyal</b>, <b>tolerant</b>, <b>respectful</b>, <b>sociable</b>, <b>reserved</b>, <b>talkative</b>, <b>bossy</b>, <b>jealous</b>.</p><h4>How you are with yourself and your work</h4><p><b>ambitious</b>, <b>determined</b>, <b>responsible</b>, <b>organized</b>, <b>creative</b>, <b>curious</b>, <b>perfectionist</b>, <b>impulsive</b>, <b>insecure</b>, <b>self-confident</b>.</p><h4>Softening</h4><p><i>He's <b>quite</b> shy. · She's <b>a bit</b> stubborn. · He can be <b>rather</b> impatient <b>at times</b>. · She tends to be optimistic.</i></p><h4>False friends</h4><p><b>sensible</b> means having good judgment; <b>sensitive</b> is the one that means easily affected emotionally. <b>sympathetic</b> means understanding, not likeable.</p>",
+      "fichas": [
+        { "t": "sensible vs sensitive", "d": "Sensato vs sensible emocionalmente: falsos amigos.", "d_en": "Having good judgment vs easily affected: false friends." },
+        { "t": "sympathetic", "d": "Comprensivo, que se solidariza. No significa simpático.", "d_en": "Understanding and caring, not likeable." },
+        { "t": "supportive", "d": "Que da apoyo cuando hace falta.", "d_en": "Someone who gives support when needed." },
+        { "t": "a bit / quite / rather", "d": "Matizadores que suavizan un adjetivo negativo.", "d_en": "Softeners that tone down a negative adjective." }
+      ],
+      "quiz": [
+        { "q": "«She's very ___; she always listens and understands.»", "q_en": "\"She's very ___; she always listens and understands.\"", "o": ["bossy", "empathetic", "jealous", "impulsive"], "o_en": ["bossy", "empathetic", "jealous", "impulsive"], "a": 1, "why": "Escuchar y comprender describe a alguien empático.", "why_en": "Listening and understanding describes an empathetic person." },
+        { "q": "«Sensible» en inglés significa…", "q_en": "\"Sensible\" in English means…", "o": ["Sensible emocionalmente", "Sensato", "Simpático", "Susceptible"], "o_en": ["Easily hurt", "Having good judgment", "Likeable", "Touchy"], "a": 1, "why": "Sensible es sensato; sensible en español es sensitive.", "why_en": "Sensible means having good judgment; the emotional one is sensitive." },
+        { "q": "«He's ___ stubborn, but he listens in the end.»", "q_en": "\"He's ___ stubborn, but he listens in the end.\"", "o": ["a bit", "a lot", "very much", "too many"], "o_en": ["a bit", "a lot", "very much", "too many"], "a": 0, "why": "A bit suaviza el adjetivo negativo.", "why_en": "A bit softens the negative adjective." }
+      ]
+    },
+    {
+      "id": "ingles-9-1-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Sentimientos, experiencias y autorreflexión",
+      "t_en": "Feelings, experiences and self-reflection",
+      "d": "14 min",
+      "content_es": "<h4>Emociones más precisas</h4><p><b>overwhelmed</b> (abrumado), <b>frustrated</b>, <b>anxious</b>, <b>grateful</b> (agradecido), <b>relieved</b> (aliviado), <b>hopeful</b>, <b>lonely</b> (solo), <b>motivated</b>, <b>disappointed</b>, <b>embarrassed</b> (avergonzado), <b>guilty</b> (culpable), <b>content</b> (satisfecho).</p><h4>Estructuras para expresarlas</h4><ul><li><i>I feel + adjetivo</i>: <i>I feel anxious about the exam.</i></li><li><i>It makes me feel…</i>: <i>Music makes me feel calm.</i></li><li><i>I'm afraid of / worried about / excited about…</i></li></ul><h4>Reflexionar sobre uno mismo</h4><p><i>I've learned that… · Looking back, I realize… · What I value most is… · One thing I'd like to improve is… · I used to be…, but now I'm…</i></p><h4>Falso amigo</h4><p><b>embarrassed</b> es avergonzado, no embarazada (que es <i>pregnant</i>).</p>",
+      "content_en": "<h4>More precise emotions</h4><p><b>overwhelmed</b>, <b>frustrated</b>, <b>anxious</b>, <b>grateful</b>, <b>relieved</b>, <b>hopeful</b>, <b>lonely</b>, <b>motivated</b>, <b>disappointed</b>, <b>embarrassed</b>, <b>guilty</b>, <b>content</b>.</p><h4>Structures to express them</h4><ul><li><i>I feel + adjective</i>: <i>I feel anxious about the exam.</i></li><li><i>It makes me feel…</i>: <i>Music makes me feel calm.</i></li><li><i>I'm afraid of / worried about / excited about…</i></li></ul><h4>Reflecting on yourself</h4><p><i>I've learned that… · Looking back, I realize… · What I value most is… · One thing I'd like to improve is… · I used to be…, but now I'm…</i></p><h4>False friend</h4><p><b>embarrassed</b> means ashamed, not expecting a baby (that is <i>pregnant</i>).</p>",
+      "fichas": [
+        { "t": "overwhelmed", "d": "Abrumado: sobrepasado por la cantidad de cosas.", "d_en": "Feeling that there is too much to handle." },
+        { "t": "relieved", "d": "Aliviado: la preocupación terminó.", "d_en": "Feeling that a worry is over." },
+        { "t": "embarrassed", "d": "Falso amigo: avergonzado, no embarazada.", "d_en": "False friend: it means ashamed." },
+        { "t": "make + persona + verbo base", "d": "It makes me feel better, sin to.", "d_en": "It makes me feel better, with no to." },
+        { "t": "Looking back…", "d": "Fórmula para introducir una reflexión sobre el pasado.", "d_en": "Formula to introduce a reflection about the past." }
+      ],
+      "quiz": [
+        { "q": "«After the exam I felt ___; the stress was over.»", "q_en": "\"After the exam I felt ___; the stress was over.\"", "o": ["anxious", "relieved", "guilty", "lonely"], "o_en": ["anxious", "relieved", "guilty", "lonely"], "a": 1, "why": "Relieved describe el alivio cuando pasa la preocupación.", "why_en": "Relieved describes the feeling when a worry ends." },
+        { "q": "«That song makes me ___ happy.»", "q_en": "\"That song makes me ___ happy.\"", "o": ["to feel", "feeling", "feel", "felt"], "o_en": ["to feel", "feeling", "feel", "felt"], "a": 2, "why": "Make + persona va con el verbo en forma base.", "why_en": "Make + person takes the base verb." },
+        { "q": "«Embarrassed» significa…", "q_en": "\"Embarrassed\" means…", "o": ["Embarazada", "Avergonzado", "Aburrido", "Enojado"], "o_en": ["Pregnant", "Ashamed", "Bored", "Angry"], "a": 1, "why": "Es un falso amigo clásico: significa avergonzado.", "why_en": "It is a classic false friend: it means ashamed." }
+      ]
+    },
+    {
+      "id": "ingles-9-1-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Saludos y comandos en contexto académico",
+      "t_en": "Greetings and commands in an academic context",
+      "d": "10 min",
+      "content_es": "<h4>Registro académico</h4><p><i>Good morning, everyone. · Could I ask a question? · Excuse me, I didn't catch that. · Would you mind repeating? · Thank you for your feedback.</i></p><h4>Comandos de trabajo avanzado</h4><p><i>Analyze the text. · Summarize the main idea. · Support your answer with evidence. · Compare and contrast the two positions. · Draft an outline. · Peer-review your partner's work. · Cite your sources.</i></p><h4>Participar en clase</h4><ul><li>Pedir la palabra: <i>May I add something?</i></li><li>Aclarar: <i>What I mean is… · Let me rephrase that.</i></li><li>Reconocer: <i>That's a good point. · I hadn't thought of that.</i></li></ul><h4>Ojo</h4><p><i>Would you mind…?</i> va seguido de gerundio: <i>Would you mind <b>explaining</b> that again?</i></p>",
+      "content_en": "<h4>Academic register</h4><p><i>Good morning, everyone. · Could I ask a question? · Excuse me, I didn't catch that. · Would you mind repeating? · Thank you for your feedback.</i></p><h4>Advanced task commands</h4><p><i>Analyze the text. · Summarize the main idea. · Support your answer with evidence. · Compare and contrast the two positions. · Draft an outline. · Peer-review your partner's work. · Cite your sources.</i></p><h4>Taking part in class</h4><ul><li>Asking for the floor: <i>May I add something?</i></li><li>Clarifying: <i>What I mean is… · Let me rephrase that.</i></li><li>Acknowledging: <i>That's a good point. · I hadn't thought of that.</i></li></ul><h4>Careful</h4><p><i>Would you mind…?</i> is followed by a gerund: <i>Would you mind <b>explaining</b> that again?</i></p>",
+      "fichas": [
+        { "t": "Would you mind + -ing", "d": "Petición muy educada. Siempre con gerundio.", "d_en": "A very polite request. Always with a gerund." },
+        { "t": "I didn't catch that", "d": "No alcancé a entender lo que dijiste.", "d_en": "I did not manage to hear or understand that." },
+        { "t": "Support your answer", "d": "Sustentar la respuesta con evidencia.", "d_en": "Back your answer with evidence." },
+        { "t": "Cite your sources", "d": "Citar las fuentes consultadas.", "d_en": "Name the sources you used." }
+      ],
+      "quiz": [
+        { "q": "«Would you mind ___ the instructions?»", "q_en": "\"Would you mind ___ the instructions?\"", "o": ["to repeat", "repeating", "repeat", "repeated"], "o_en": ["to repeat", "repeating", "repeat", "repeated"], "a": 1, "why": "Would you mind siempre va con gerundio.", "why_en": "Would you mind is always followed by a gerund." },
+        { "q": "¿Qué significa «I didn't catch that»?", "q_en": "What does \"I didn't catch that\" mean?", "o": ["No lo atrapé", "No alcancé a entender", "No estoy de acuerdo", "No lo hice"], "o_en": ["I didn't grab it", "I didn't manage to hear it", "I disagree", "I didn't do it"], "a": 1, "why": "Es la forma educada de decir que no se entendió.", "why_en": "It is the polite way of saying you did not understand." },
+        { "q": "«___ your answer with evidence.»", "q_en": "\"___ your answer with evidence.\"", "o": ["Supporting", "To support", "Support", "You support"], "o_en": ["Supporting", "To support", "Support", "You support"], "a": 2, "why": "Las instrucciones van en imperativo.", "why_en": "Instructions use the imperative." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-9-1-repaso",
+    "titulo": "Repaso — Living the Moment",
+    "titulo_en": "Review — Living the Moment",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Para hablar de ti mismo necesitas tres cosas: los <b>patrones verbales</b> (qué verbo pide gerundio y cuál infinitivo), los <b>adverbios de frecuencia</b> bien colocados y el <b>presente continuo</b> para lo temporal y lo planeado.</p><h4>Puntos gramaticales</h4><ul><li>enjoy, avoid, can't stand + gerundio. want, decide, hope + to.</li><li>like, love, hate y prefer aceptan los dos.</li><li>would rather + verbo base; prefer A to B.</li><li>Never al inicio obliga a invertir: Never have I seen…</li><li>Continuo para lo temporal (this month) y para citas ya acordadas.</li></ul><h4>Vocabulario</h4><p>Adjetivos de personalidad con sus falsos amigos (sensible, sympathetic), emociones precisas (overwhelmed, relieved, embarrassed) y fórmulas académicas de participación.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>To talk about yourself you need three things: <b>verb patterns</b> (which verb takes a gerund and which an infinitive), well-placed <b>frequency adverbs</b> and the <b>present continuous</b> for what is temporary and what is planned.</p><h4>Grammar points</h4><ul><li>enjoy, avoid, can't stand + gerund. want, decide, hope + to.</li><li>like, love, hate and prefer take both.</li><li>would rather + base verb; prefer A to B.</li><li>Never at the start forces inversion: Never have I seen…</li><li>Continuous for the temporary (this month) and for arranged appointments.</li></ul><h4>Vocabulary</h4><p>Personality adjectives with their false friends (sensible, sympathetic), precise emotions (overwhelmed, relieved, embarrassed) and academic participation formulas.</p>",
+    "puntos_clave": [
+      ["enjoy, avoid y can't stand siempre llevan gerundio.", "enjoy, avoid and can't stand always take a gerund."],
+      ["would rather va con el verbo en base, sin to.", "would rather takes the base verb, with no to."],
+      ["Con to be el adverbio de frecuencia va después.", "With to be the frequency adverb goes after."],
+      ["Presente continuo para planes ya acordados.", "Present continuous for already arranged plans."],
+      ["sensible = sensato; sensitive = sensible.", "sensible = having good judgment; sensitive = easily affected."],
+      ["Would you mind + gerundio.", "Would you mind + gerund."]
+    ],
+    "preguntas": [
+      { "q": "«He avoids ___ about his problems.»", "q_en": "\"He avoids ___ about his problems.\"", "o": ["to talk", "talking", "talk", "talked"], "o_en": ["to talk", "talking", "talk", "talked"], "a": 1, "why": "Avoid siempre va seguido de gerundio.", "why_en": "Avoid is always followed by a gerund." },
+      { "q": "«They hope ___ the scholarship.»", "q_en": "\"They hope ___ the scholarship.\"", "o": ["getting", "to get", "get", "got"], "o_en": ["getting", "to get", "get", "got"], "a": 1, "why": "Hope pide to + infinitivo.", "why_en": "Hope takes to + infinitive." },
+      { "q": "«I prefer reading ___ watching TV.»", "q_en": "\"I prefer reading ___ watching TV.\"", "o": ["than", "to", "that", "over than"], "o_en": ["than", "to", "that", "over than"], "a": 1, "why": "Con prefer la comparación se hace con to.", "why_en": "With prefer the comparison uses to." },
+      { "q": "«She ___ complains about anything.»", "q_en": "\"She ___ complains about anything.\"", "o": ["hardly ever", "doesn't hardly", "not ever", "never doesn't"], "o_en": ["hardly ever", "doesn't hardly", "not ever", "never doesn't"], "a": 0, "why": "Hardly ever ya es negativo por sí solo.", "why_en": "Hardly ever is already negative on its own." },
+      { "q": "«I ___ a summer course this July.»", "q_en": "\"I ___ a summer course this July.\"", "o": ["take", "am taking", "took", "will taking"], "o_en": ["take", "am taking", "took", "will taking"], "a": 1, "why": "This July marca una situación temporal o un plan.", "why_en": "This July marks a temporary situation or a plan." },
+      { "q": "«He was ___ when he tripped in front of everyone.»", "q_en": "\"He was ___ when he tripped in front of everyone.\"", "o": ["embarrassed", "pregnant", "relieved", "grateful"], "o_en": ["embarrassed", "pregnant", "relieved", "grateful"], "a": 0, "why": "Embarrassed es la vergüenza por lo ocurrido.", "why_en": "Embarrassed is the shame felt after what happened." },
+      { "q": "«That's a very ___ decision; you thought it through.»", "q_en": "\"That's a very ___ decision; you thought it through.\"", "o": ["sensitive", "sensible", "sympathetic", "insecure"], "o_en": ["sensitive", "sensible", "sympathetic", "insecure"], "a": 1, "why": "Sensible es sensato, basado en el buen juicio.", "why_en": "Sensible means based on good judgment." },
+      { "q": "«Would you mind ___ the window?»", "q_en": "\"Would you mind ___ the window?\"", "o": ["to close", "closing", "close", "closed"], "o_en": ["to close", "closing", "close", "closed"], "a": 1, "why": "Would you mind va seguido de gerundio.", "why_en": "Would you mind is followed by a gerund." }
+    ]
+  }
+}

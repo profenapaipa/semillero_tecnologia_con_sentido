@@ -1,0 +1,196 @@
+{
+  "id": "ingles-8-4",
+  "materia": "ingles",
+  "grado": "8",
+  "grado_nombre": "Octavo",
+  "periodo": 4,
+  "periodo_label": { "es": "Periodo IV", "en": "Term IV" },
+  "titulo": "Imagining the Future and Creating Solutions Through Technology",
+  "titulo_es": "Imaginar el futuro y crear soluciones con tecnología",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Hago predicciones, expreso planes e imagino situaciones hipotéticas. Comprendo y produzco textos sobre tecnología y sus efectos.",
+  "competencias": "Diferenciar will y be going to; construir condicionales de tipo cero, uno y dos; usar vocabulario tecnológico; deletrear con precisión direcciones y términos técnicos.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Tech Solution Pitch",
+    "descripcion_es": "En grupos, los estudiantes proponen un invento o una app que resuelva un problema de su colegio o barrio y lo presentan: qué va a hacer (going to), qué pasará si se usa (primer condicional) y qué harían con más recursos (segundo condicional).",
+    "descripcion_en": "In groups, students propose an invention or an app that solves a problem in their school or neighborhood and pitch it: what it is going to do, what will happen if it is used (first conditional) and what they would do with more resources (second conditional)."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-8-4-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Will: predicciones y decisiones espontáneas",
+      "t_en": "Will: predictions and spontaneous decisions",
+      "d": "12 min",
+      "content_es": "<h4>Forma</h4><p><b>will + verbo base</b>, igual para todas las personas: <i>I will help, she will help.</i></p><ul><li>Contracción: <b>'ll</b> — <i>I'll call you.</i></li><li>Negativo: <b>won't</b> — <i>He won't come.</i></li><li>Pregunta: <i><b>Will</b> you help me?</i></li></ul><h4>Cuándo se usa</h4><ul><li>Predicciones basadas en opinión o creencia: <i>I think robots will replace some jobs.</i></li><li>Decisiones que se toman en el momento: <i>It's cold. I'll close the window.</i></li><li>Promesas y ofrecimientos: <i>I'll always support you. / I'll carry that for you.</i></li></ul><h4>Con expresiones de opinión</h4><p><i>I think, I'm sure, probably, maybe, I hope, I expect</i> suelen acompañar a will.</p>",
+      "content_en": "<h4>Form</h4><p><b>will + base verb</b>, the same for every person: <i>I will help, she will help.</i></p><ul><li>Contraction: <b>'ll</b> — <i>I'll call you.</i></li><li>Negative: <b>won't</b> — <i>He won't come.</i></li><li>Question: <i><b>Will</b> you help me?</i></li></ul><h4>When to use it</h4><ul><li>Predictions based on opinion or belief: <i>I think robots will replace some jobs.</i></li><li>Decisions made at the moment of speaking: <i>It's cold. I'll close the window.</i></li><li>Promises and offers: <i>I'll always support you. / I'll carry that for you.</i></li></ul><h4>With opinion expressions</h4><p><i>I think, I'm sure, probably, maybe, I hope, I expect</i> usually go with will.</p>",
+      "fichas": [
+        { "t": "will + verbo base", "d": "Igual para todas las personas, sin -s.", "d_en": "The same for every person, with no -s." },
+        { "t": "won't", "d": "Negativo de will: will not.", "d_en": "Negative of will: will not." },
+        { "t": "Decisión espontánea", "d": "Se decide en el momento de hablar: I'll get it!", "d_en": "Decided at the moment of speaking: I'll get it!" },
+        { "t": "I think… will", "d": "Predicción basada en opinión personal.", "d_en": "A prediction based on personal opinion." }
+      ],
+      "quiz": [
+        { "q": "«The phone is ringing. I ___ answer it.»", "q_en": "\"The phone is ringing. I ___ answer it.\"", "o": ["am going to", "will", "going to", "am"], "o_en": ["am going to", "will", "going to", "am"], "a": 1, "why": "Es una decisión tomada en el momento: will.", "why_en": "It is a decision made at that moment: will." },
+        { "q": "¿Cuál es la negación de will?", "q_en": "What is the negative of will?", "o": ["willn't", "won't", "don't will", "not will"], "o_en": ["willn't", "won't", "don't will", "not will"], "a": 1, "why": "Will not se contrae en won't.", "why_en": "Will not contracts into won't." },
+        { "q": "«I think it ___ rain tomorrow.»", "q_en": "\"I think it ___ rain tomorrow.\"", "o": ["wills", "will", "will to", "is will"], "o_en": ["wills", "will", "will to", "is will"], "a": 1, "why": "Will nunca cambia ni lleva to.", "why_en": "Will never changes and takes no to." }
+      ]
+    },
+    {
+      "id": "ingles-8-4-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Be going to: planes e intenciones",
+      "t_en": "Be going to: plans and intentions",
+      "d": "12 min",
+      "content_es": "<h4>Forma</h4><p><b>am / is / are going to + verbo base</b>: <i>We <b>are going to</b> build an app.</i></p><ul><li>Negativo: <i>She isn't going to come.</i></li><li>Pregunta: <i>Are you going to study tonight?</i></li></ul><h4>Cuándo se usa</h4><ul><li><b>Planes ya decididos</b> antes de hablar: <i>I'm going to study engineering.</i></li><li><b>Predicciones con evidencia visible</b>: <i>Look at those clouds! It's going to rain.</i></li></ul><h4>La diferencia con will</h4><p>Con <b>going to</b> la decisión ya estaba tomada; con <b>will</b> se toma en ese instante. Y la predicción con <b>going to</b> se apoya en algo que se ve ahora, mientras que con <b>will</b> se apoya en una opinión.</p>",
+      "content_en": "<h4>Form</h4><p><b>am / is / are going to + base verb</b>: <i>We <b>are going to</b> build an app.</i></p><ul><li>Negative: <i>She isn't going to come.</i></li><li>Question: <i>Are you going to study tonight?</i></li></ul><h4>When to use it</h4><ul><li><b>Plans already decided</b> before speaking: <i>I'm going to study engineering.</i></li><li><b>Predictions with visible evidence</b>: <i>Look at those clouds! It's going to rain.</i></li></ul><h4>The difference from will</h4><p>With <b>going to</b> the decision was already made; with <b>will</b> it is made right then. And a <b>going to</b> prediction rests on something you can see now, while a <b>will</b> prediction rests on an opinion.</p>",
+      "fichas": [
+        { "t": "be going to + base", "d": "El verbo be se conjuga: am, is, are going to.", "d_en": "The verb be is conjugated: am, is, are going to." },
+        { "t": "Plan previo", "d": "La decisión ya estaba tomada antes de hablar.", "d_en": "The decision was made before speaking." },
+        { "t": "Evidencia visible", "d": "Look! It's going to fall: se ve venir.", "d_en": "Look! It's going to fall: you can see it coming." },
+        { "t": "going to vs will", "d": "Plan previo vs decisión del momento.", "d_en": "Prior plan vs on-the-spot decision." }
+      ],
+      "quiz": [
+        { "q": "«Look at that car! It ___ crash!»", "q_en": "\"Look at that car! It ___ crash!\"", "o": ["will", "is going to", "goes to", "will be"], "o_en": ["will", "is going to", "goes to", "will be"], "a": 1, "why": "Hay evidencia visible: going to.", "why_en": "There is visible evidence: going to." },
+        { "q": "«We ___ visit my grandparents this weekend. We bought the tickets.»", "q_en": "\"We ___ visit my grandparents this weekend. We bought the tickets.\"", "o": ["will", "are going to", "go to", "will going"], "o_en": ["will", "are going to", "go to", "will going"], "a": 1, "why": "El plan ya estaba decidido: going to.", "why_en": "The plan was already decided: going to." },
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["She going to travel", "She is going to travel", "She is going travel", "She goes to travel"], "o_en": ["She going to travel", "She is going to travel", "She is going travel", "She goes to travel"], "a": 1, "why": "Falta el verbo be conjugado antes de going to.", "why_en": "The conjugated verb be is needed before going to." }
+      ]
+    },
+    {
+      "id": "ingles-8-4-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Otras formas de hablar del futuro",
+      "t_en": "Other ways of talking about the future",
+      "d": "12 min",
+      "content_es": "<h4>Presente continuo para citas fijas</h4><p>Cuando ya hay una hora y un lugar acordados: <i>I <b>am meeting</b> the teacher at 3 p.m.</i></p><h4>Presente simple para horarios</h4><p>Con transporte, clases y eventos programados: <i>The train <b>leaves</b> at 7:30.</i></p><h4>Resumen práctico</h4><ul><li>Predicción con opinión → <b>will</b></li><li>Predicción con evidencia → <b>going to</b></li><li>Intención o plan → <b>going to</b></li><li>Cita concreta ya organizada → <b>presente continuo</b></li><li>Horario oficial → <b>presente simple</b></li></ul><h4>Expresiones de tiempo futuro</h4><p><i>tomorrow, next week, in two days, soon, later, tonight, in the future, by 2030.</i></p>",
+      "content_en": "<h4>Present continuous for fixed arrangements</h4><p>When a time and place are already agreed: <i>I <b>am meeting</b> the teacher at 3 p.m.</i></p><h4>Present simple for timetables</h4><p>With transport, classes and scheduled events: <i>The train <b>leaves</b> at 7:30.</i></p><h4>Practical summary</h4><ul><li>Prediction from opinion → <b>will</b></li><li>Prediction from evidence → <b>going to</b></li><li>Intention or plan → <b>going to</b></li><li>Fixed arrangement → <b>present continuous</b></li><li>Official timetable → <b>present simple</b></li></ul><h4>Future time expressions</h4><p><i>tomorrow, next week, in two days, soon, later, tonight, in the future, by 2030.</i></p>",
+      "fichas": [
+        { "t": "Presente continuo futuro", "d": "Cita ya organizada: I'm seeing the dentist tomorrow.", "d_en": "A fixed arrangement: I'm seeing the dentist tomorrow." },
+        { "t": "Presente simple futuro", "d": "Horarios: The flight departs at 6.", "d_en": "Timetables: The flight departs at 6." },
+        { "t": "in two days", "d": "Dentro de dos días: futuro con in.", "d_en": "Two days from now: future with in." },
+        { "t": "by 2030", "d": "Para el año 2030 o antes.", "d_en": "At some point before or in 2030." }
+      ],
+      "quiz": [
+        { "q": "«The bus ___ at 6:15 every morning.»", "q_en": "\"The bus ___ at 6:15 every morning.\"", "o": ["will leave", "is leaving", "leaves", "is going to leave"], "o_en": ["will leave", "is leaving", "leaves", "is going to leave"], "a": 2, "why": "Es un horario fijo: presente simple.", "why_en": "It is a fixed timetable: present simple." },
+        { "q": "«I ___ my cousin at the airport tonight. It's all arranged.»", "q_en": "\"I ___ my cousin at the airport tonight. It's all arranged.\"", "o": ["will meet", "am meeting", "meet", "meets"], "o_en": ["will meet", "am meeting", "meet", "meets"], "a": 1, "why": "Es una cita ya organizada: presente continuo.", "why_en": "It is a fixed arrangement: present continuous." },
+        { "q": "«___ two days I'll know the results.»", "q_en": "\"___ two days I'll know the results.\"", "o": ["On", "At", "In", "For"], "o_en": ["On", "At", "In", "For"], "a": 2, "why": "In + periodo indica cuánto falta para algo.", "why_en": "in + period says how long until something happens." }
+      ]
+    },
+    {
+      "id": "ingles-8-4-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Condicional cero y primer condicional",
+      "t_en": "Zero and first conditional",
+      "d": "14 min",
+      "content_es": "<h4>Condicional cero: verdades siempre ciertas</h4><p><b>If + presente simple, presente simple</b>: <i>If you heat water to 100 °C, it boils.</i></p><p>Se usa para leyes científicas e instrucciones. Se puede cambiar <i>if</i> por <i>when</i> sin alterar el sentido.</p><h4>Primer condicional: futuro posible</h4><p><b>If + presente simple, will + verbo base</b>: <i>If we recycle more, we <b>will</b> reduce pollution.</i></p><h4>La regla que más se falla</h4><p>Después de <b>if</b> <b>nunca</b> va will: <i>If it will rain</i> es incorrecto; lo correcto es <i>If it <b>rains</b></i>.</p><h4>Variantes</h4><ul><li>Con modales: <i>If you finish early, you <b>can</b> go.</i></li><li>Con imperativo: <i>If you see him, <b>tell</b> him to call me.</i></li><li><b>unless</b> = if not: <i><b>Unless</b> we act now, it will be too late.</i></li></ul><p>Si la condición va primero, se separa con coma.</p>",
+      "content_en": "<h4>Zero conditional: always-true facts</h4><p><b>If + present simple, present simple</b>: <i>If you heat water to 100 °C, it boils.</i></p><p>It is used for scientific laws and instructions. You can replace <i>if</i> with <i>when</i> without changing the meaning.</p><h4>First conditional: possible future</h4><p><b>If + present simple, will + base verb</b>: <i>If we recycle more, we <b>will</b> reduce pollution.</i></p><h4>The most common mistake</h4><p>After <b>if</b> there is <b>never</b> will: <i>If it will rain</i> is wrong; the correct form is <i>If it <b>rains</b></i>.</p><h4>Variants</h4><ul><li>With modals: <i>If you finish early, you <b>can</b> go.</i></li><li>With an imperative: <i>If you see him, <b>tell</b> him to call me.</i></li><li><b>unless</b> = if not: <i><b>Unless</b> we act now, it will be too late.</i></li></ul><p>If the condition comes first, separate it with a comma.</p>",
+      "fichas": [
+        { "t": "Condicional cero", "d": "If + presente, presente: verdades generales.", "d_en": "If + present, present: general truths." },
+        { "t": "Primer condicional", "d": "If + presente, will + base: futuro posible.", "d_en": "If + present, will + base: possible future." },
+        { "t": "Nunca will tras if", "d": "If it rains, no If it will rain.", "d_en": "If it rains, not If it will rain." },
+        { "t": "unless", "d": "A menos que: equivale a if not.", "d_en": "Unless: equivalent to if not." }
+      ],
+      "quiz": [
+        { "q": "«If you ___ hard, you'll pass the exam.»", "q_en": "\"If you ___ hard, you'll pass the exam.\"", "o": ["will study", "study", "studied", "would study"], "o_en": ["will study", "study", "studied", "would study"], "a": 1, "why": "Después de if va presente simple, nunca will.", "why_en": "After if we use the present simple, never will." },
+        { "q": "«If you mix blue and yellow, you ___ green.»", "q_en": "\"If you mix blue and yellow, you ___ green.\"", "o": ["will get", "get", "would get", "got"], "o_en": ["will get", "get", "would get", "got"], "a": 1, "why": "Es una verdad siempre cierta: condicional cero.", "why_en": "It is an always-true fact: zero conditional." },
+        { "q": "«___ we hurry, we'll miss the bus.»", "q_en": "\"___ we hurry, we'll miss the bus.\"", "o": ["If", "Unless", "When", "Although"], "o_en": ["If", "Unless", "When", "Although"], "a": 1, "why": "Unless significa si no: si no nos apuramos.", "why_en": "Unless means if not: if we do not hurry." }
+      ]
+    },
+    {
+      "id": "ingles-8-4-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "Segundo condicional",
+      "t_en": "Second conditional",
+      "d": "14 min",
+      "content_es": "<h4>Situaciones imaginarias</h4><p><b>If + pasado simple, would + verbo base</b>: <i>If I <b>had</b> more time, I <b>would learn</b> to code.</i></p><p>Se usa para lo hipotético o improbable en el presente o el futuro: no es real ahora.</p><h4>El caso especial de were</h4><p>Con to be se prefiere <b>were</b> para todas las personas: <i>If I <b>were</b> you, I would apologize.</i> Esa frase es la manera estándar de dar consejo.</p><h4>Primer vs segundo</h4><ul><li><i>If I have money, I will buy it.</i> → posible, quizá tenga dinero.</li><li><i>If I had money, I would buy it.</i> → imaginario, no tengo dinero.</li></ul><h4>Ojo</h4><p>Después de <b>if</b> no va <i>would</i>: <i>If I would have</i> es incorrecto.</p>",
+      "content_en": "<h4>Imaginary situations</h4><p><b>If + past simple, would + base verb</b>: <i>If I <b>had</b> more time, I <b>would learn</b> to code.</i></p><p>It is used for what is hypothetical or unlikely in the present or future: it is not real now.</p><h4>The special case of were</h4><p>With to be we prefer <b>were</b> for every person: <i>If I <b>were</b> you, I would apologize.</i> That phrase is the standard way of giving advice.</p><h4>First vs second</h4><ul><li><i>If I have money, I will buy it.</i> → possible, I may have money.</li><li><i>If I had money, I would buy it.</i> → imaginary, I do not have money.</li></ul><h4>Careful</h4><p>After <b>if</b> there is no <i>would</i>: <i>If I would have</i> is wrong.</p>",
+      "fichas": [
+        { "t": "If + pasado, would + base", "d": "Estructura del segundo condicional.", "d_en": "Structure of the second conditional." },
+        { "t": "If I were you", "d": "Fórmula estándar para dar consejo.", "d_en": "Standard formula for giving advice." },
+        { "t": "Nunca would tras if", "d": "If I had, no If I would have.", "d_en": "If I had, not If I would have." },
+        { "t": "Primero vs segundo", "d": "Posible real vs imaginario o improbable.", "d_en": "Real possibility vs imaginary or unlikely." }
+      ],
+      "quiz": [
+        { "q": "«If I ___ rich, I would travel the world.»", "q_en": "\"If I ___ rich, I would travel the world.\"", "o": ["am", "was being", "were", "will be"], "o_en": ["am", "was being", "were", "will be"], "a": 2, "why": "En el segundo condicional to be usa were para todas las personas.", "why_en": "In the second conditional to be uses were for every person." },
+        { "q": "«If she studied more, she ___ better grades.»", "q_en": "\"If she studied more, she ___ better grades.\"", "o": ["will get", "would get", "gets", "got"], "o_en": ["will get", "would get", "gets", "got"], "a": 1, "why": "La consecuencia hipotética va con would.", "why_en": "The hypothetical result takes would." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["If I had a car, I would drive", "If I would have a car, I would drive", "If I were you, I'd rest", "If it rains, we'll stay"], "o_en": ["If I had a car, I would drive", "If I would have a car, I would drive", "If I were you, I'd rest", "If it rains, we'll stay"], "a": 1, "why": "Después de if nunca va would.", "why_en": "After if there is never would." }
+      ]
+    },
+    {
+      "id": "ingles-8-4-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Vocabulario de tecnología",
+      "t_en": "Technology vocabulary",
+      "d": "12 min",
+      "content_es": "<h4>Dispositivos y partes</h4><p><b>device</b> (dispositivo), <b>laptop</b>, <b>tablet</b>, <b>screen</b>, <b>keyboard</b>, <b>charger</b> (cargador), <b>battery</b>, <b>headphones</b>, <b>speaker</b>, <b>hard drive</b>.</p><h4>Software y red</h4><p><b>app</b>, <b>software</b>, <b>update</b> (actualización), <b>password</b>, <b>username</b>, <b>account</b>, <b>cloud</b>, <b>network</b>, <b>browser</b> (navegador), <b>search engine</b> (buscador), <b>data</b>, <b>artificial intelligence</b>.</p><h4>Verbos</h4><p><b>download</b> / <b>upload</b>, <b>install</b> / <b>uninstall</b>, <b>log in</b> / <b>log out</b>, <b>plug in</b> (conectar), <b>charge</b>, <b>back up</b> (respaldar), <b>turn on / off</b>, <b>restart</b>, <b>crash</b> (bloquearse).</p><h4>Falsos amigos</h4><p><b>actually</b> = en realidad (no actualmente, que es <i>currently</i>). <b>library</b> en programación es una biblioteca de código, no una librería.</p>",
+      "content_en": "<h4>Devices and parts</h4><p><b>device</b>, <b>laptop</b>, <b>tablet</b>, <b>screen</b>, <b>keyboard</b>, <b>charger</b>, <b>battery</b>, <b>headphones</b>, <b>speaker</b>, <b>hard drive</b>.</p><h4>Software and network</h4><p><b>app</b>, <b>software</b>, <b>update</b>, <b>password</b>, <b>username</b>, <b>account</b>, <b>cloud</b>, <b>network</b>, <b>browser</b>, <b>search engine</b>, <b>data</b>, <b>artificial intelligence</b>.</p><h4>Verbs</h4><p><b>download</b> / <b>upload</b>, <b>install</b> / <b>uninstall</b>, <b>log in</b> / <b>log out</b>, <b>plug in</b>, <b>charge</b>, <b>back up</b>, <b>turn on / off</b>, <b>restart</b>, <b>crash</b>.</p><h4>False friends</h4><p><b>actually</b> means in fact, not at present (that is <i>currently</i>).</p>",
+      "fichas": [
+        { "t": "download vs upload", "d": "Descargar (traer) vs subir (enviar).", "d_en": "To bring in vs to send out." },
+        { "t": "back up", "d": "Hacer una copia de seguridad de los datos.", "d_en": "To make a safety copy of data." },
+        { "t": "crash", "d": "Cuando un programa o equipo se bloquea y se cierra.", "d_en": "When a program or device stops working suddenly." },
+        { "t": "actually", "d": "Falso amigo: significa en realidad, no actualmente.", "d_en": "False friend: it means in fact, not at present." },
+        { "t": "device", "d": "Dispositivo: cualquier aparato electrónico.", "d_en": "Any piece of electronic equipment." }
+      ],
+      "quiz": [
+        { "q": "¿Qué significa «upload»?", "q_en": "What does \"upload\" mean?", "o": ["Descargar", "Subir un archivo", "Actualizar", "Borrar"], "o_en": ["To download", "To send a file to a server", "To update", "To delete"], "a": 1, "why": "Upload es enviar un archivo desde tu equipo a la red.", "why_en": "Upload is sending a file from your device to the network." },
+        { "q": "«I need to ___ my files before the trip.»", "q_en": "\"I need to ___ my files before the trip.\"", "o": ["back up", "log out", "plug in", "crash"], "o_en": ["back up", "log out", "plug in", "crash"], "a": 0, "why": "Back up es hacer copia de seguridad.", "why_en": "Back up means to make a safety copy." },
+        { "q": "«Actually» significa…", "q_en": "\"Actually\" means…", "o": ["Actualmente", "En realidad", "Rápidamente", "Finalmente"], "o_en": ["At present", "In fact", "Quickly", "Finally"], "a": 1, "why": "Actually es en realidad; actualmente es currently.", "why_en": "Actually means in fact; at present is currently." }
+      ]
+    },
+    {
+      "id": "ingles-8-4-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Deletrear en contextos digitales",
+      "t_en": "Spelling in digital contexts",
+      "d": "10 min",
+      "content_es": "<h4>Los símbolos</h4><p><b>@</b> at · <b>.</b> dot · <b>_</b> underscore · <b>-</b> hyphen o dash · <b>/</b> slash · <b>//</b> double slash · <b>#</b> hash o hashtag · <b>&amp;</b> ampersand · <b>:</b> colon.</p><h4>Dictar una dirección</h4><p><i>www dot wisfox dot com slash login</i><br><i>ana_perez at mail dot com</i> → <i>A-N-A underscore P-E-R-E-Z at mail dot com</i>.</p><h4>Mayúsculas y minúsculas</h4><p><b>uppercase / capital letter</b> (mayúscula), <b>lowercase</b> (minúscula). <i>Capital A, lowercase b.</i></p><h4>Frases útiles</h4><p><i>Could you spell that for me? · Is that with one L or two? · All in lowercase, no spaces. · It's spelled with a capital M.</i></p>",
+      "content_en": "<h4>The symbols</h4><p><b>@</b> at · <b>.</b> dot · <b>_</b> underscore · <b>-</b> hyphen or dash · <b>/</b> slash · <b>//</b> double slash · <b>#</b> hash or hashtag · <b>&amp;</b> ampersand · <b>:</b> colon.</p><h4>Dictating an address</h4><p><i>www dot wisfox dot com slash login</i><br><i>A-N-A underscore P-E-R-E-Z at mail dot com</i>.</p><h4>Upper and lower case</h4><p><b>uppercase / capital letter</b>, <b>lowercase</b>. <i>Capital A, lowercase b.</i></p><h4>Useful phrases</h4><p><i>Could you spell that for me? · Is that with one L or two? · All in lowercase, no spaces. · It's spelled with a capital M.</i></p>",
+      "fichas": [
+        { "t": "slash", "d": "La barra / de una dirección web.", "d_en": "The / character in a web address." },
+        { "t": "hash", "d": "El símbolo #, también llamado hashtag en redes.", "d_en": "The # symbol, also called hashtag on social media." },
+        { "t": "uppercase / lowercase", "d": "Mayúscula y minúscula.", "d_en": "Capital and small letters." },
+        { "t": "Is that with one L or two?", "d": "Pregunta para confirmar una letra repetida.", "d_en": "Question used to confirm a doubled letter." }
+      ],
+      "quiz": [
+        { "q": "¿Cómo se lee «/»?", "q_en": "How do you read \"/\"?", "o": ["dash", "slash", "dot", "underscore"], "o_en": ["dash", "slash", "dot", "underscore"], "a": 1, "why": "La barra inclinada se llama slash.", "why_en": "The forward stroke is called slash." },
+        { "q": "¿Cómo se lee «#»?", "q_en": "How do you read \"#\"?", "o": ["at", "hash", "ampersand", "colon"], "o_en": ["at", "hash", "ampersand", "colon"], "a": 1, "why": "El símbolo # se llama hash o hashtag.", "why_en": "The # symbol is called hash or hashtag." },
+        { "q": "«Write it in ___.» (todo en minúscula)", "q_en": "\"Write it in ___.\" (all small letters)", "o": ["uppercase", "lowercase", "capital", "italics"], "o_en": ["uppercase", "lowercase", "capital", "italics"], "a": 1, "why": "Lowercase es la letra minúscula.", "why_en": "Lowercase means small letters." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-8-4-repaso",
+    "titulo": "Repaso — Imagining the Future and Creating Solutions",
+    "titulo_en": "Review — Imagining the Future and Creating Solutions",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Hay <b>varias formas de futuro</b> y cada una depende de la situación: opinión (will), plan o evidencia (going to), cita organizada (presente continuo), horario (presente simple). Los <b>condicionales</b> enlazan una condición con su consecuencia.</p><h4>Puntos gramaticales</h4><ul><li>will + base, sin -s. Negativo won't.</li><li>be going to se conjuga con am/is/are.</li><li>Condicional cero: presente + presente. Primero: presente + will. Segundo: pasado + would.</li><li>Después de if nunca va will ni would.</li><li>If I were you… para dar consejo.</li></ul><h4>Vocabulario</h4><p>Dispositivos, software y verbos tecnológicos; falsos amigos como actually; símbolos y deletreo de direcciones digitales.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>There are <b>several future forms</b> and each depends on the situation: opinion (will), plan or evidence (going to), fixed arrangement (present continuous), timetable (present simple). <b>Conditionals</b> link a condition with its consequence.</p><h4>Grammar points</h4><ul><li>will + base, no -s. Negative won't.</li><li>be going to is conjugated with am/is/are.</li><li>Zero conditional: present + present. First: present + will. Second: past + would.</li><li>After if there is never will or would.</li><li>If I were you… for giving advice.</li></ul><h4>Vocabulary</h4><p>Devices, software and technology verbs; false friends such as actually; symbols and spelling of digital addresses.</p>",
+    "puntos_clave": [
+      ["will = decisión del momento u opinión.", "will = on-the-spot decision or opinion."],
+      ["going to = plan previo o evidencia visible.", "going to = prior plan or visible evidence."],
+      ["Después de if nunca va will.", "After if there is never will."],
+      ["Segundo condicional: If + pasado, would + base.", "Second conditional: If + past, would + base."],
+      ["If I were you, no If I was you, para consejos.", "If I were you, not If I was you, for advice."],
+      ["actually = en realidad; currently = actualmente.", "actually = in fact; currently = at present."]
+    ],
+    "preguntas": [
+      { "q": "«The bag is heavy. I ___ help you.»", "q_en": "\"The bag is heavy. I ___ help you.\"", "o": ["am going to", "will", "go to", "would"], "o_en": ["am going to", "will", "go to", "would"], "a": 1, "why": "Es un ofrecimiento espontáneo: will.", "why_en": "It is a spontaneous offer: will." },
+      { "q": "«She's already packed. She ___ move to Cali.»", "q_en": "\"She's already packed. She ___ move to Cali.\"", "o": ["will", "is going to", "goes to", "would"], "o_en": ["will", "is going to", "goes to", "would"], "a": 1, "why": "El plan ya estaba decidido: going to.", "why_en": "The plan was already decided: going to." },
+      { "q": "«If you don't charge it, the battery ___ die.»", "q_en": "\"If you don't charge it, the battery ___ die.\"", "o": ["dies", "will die", "would die", "died"], "o_en": ["dies", "will die", "would die", "died"], "a": 1, "why": "Primer condicional: la consecuencia va con will.", "why_en": "First conditional: the consequence takes will." },
+      { "q": "«If I ___ a robot, I would send it to school for me.»", "q_en": "\"If I ___ a robot, I would send it to school for me.\"", "o": ["have", "will have", "had", "would have"], "o_en": ["have", "will have", "had", "would have"], "a": 2, "why": "Es imaginario: segundo condicional con pasado simple.", "why_en": "It is imaginary: second conditional with the past simple." },
+      { "q": "«Water freezes if the temperature ___ below zero.»", "q_en": "\"Water freezes if the temperature ___ below zero.\"", "o": ["will drop", "drops", "dropped", "would drop"], "o_en": ["will drop", "drops", "dropped", "would drop"], "a": 1, "why": "Condicional cero: presente en las dos partes.", "why_en": "Zero conditional: present in both halves." },
+      { "q": "«My flight ___ at 6:40 tomorrow.»", "q_en": "\"My flight ___ at 6:40 tomorrow.\"", "o": ["will leave", "leaves", "is going to leave", "would leave"], "o_en": ["will leave", "leaves", "is going to leave", "would leave"], "a": 1, "why": "Es un horario oficial: presente simple.", "why_en": "It is an official timetable: present simple." },
+      { "q": "«I forgot my ___, so I can't log in.»", "q_en": "\"I forgot my ___, so I can't log in.\"", "o": ["password", "browser", "charger", "screen"], "o_en": ["password", "browser", "charger", "screen"], "a": 0, "why": "Para iniciar sesión se necesita la contraseña.", "why_en": "You need the password to log in." },
+      { "q": "¿Cómo se lee «_» en un correo?", "q_en": "How do you read \"_\" in an email address?", "o": ["dash", "hyphen", "underscore", "slash"], "o_en": ["dash", "hyphen", "underscore", "slash"], "a": 2, "why": "El guion bajo es underscore.", "why_en": "The low line is called underscore." }
+    ]
+  }
+}

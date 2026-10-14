@@ -1,0 +1,201 @@
+{
+  "id": "ingles-11-4",
+  "materia": "ingles",
+  "grado": "11",
+  "grado_nombre": "Once",
+  "periodo": 4,
+  "periodo_label": { "es": "Periodo IV", "en": "Term IV" },
+  "titulo": "Mastering Communication and Public Speaking",
+  "titulo_es": "Dominar la comunicación y la oratoria",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Planeo, expreso y presento metas e ideas futuras con estructuras cohesionadas y lenguaje académico apropiado. Resumo y reporto información de manera efectiva.",
+  "competencias": "Usar los tiempos futuros para proyectar planes; producir textos cohesionados con conectores; resumir con estilo indirecto; desarrollar oratoria persuasiva y organizar el tiempo de trabajo.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Voices Behind the Letter",
+    "descripcion_es": "Cada estudiante prepara un discurso de cuatro a seis minutos en primera persona desde la perspectiva de un personaje literario o histórico: una decisión tomada, cómo afectó su futuro y qué cree que ocurrirá después, usando tiempos futuros, conectores y lenguaje persuasivo.",
+    "descripcion_en": "Each student prepares a four to six minute first-person speech from the perspective of a literary or historical character: a decision made, how it affected their future and what they believe will happen next, using future tenses, connectors and persuasive language."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-11-4-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Repaso de los tiempos futuros",
+      "t_en": "Future tenses review",
+      "d": "16 min",
+      "content_es": "<h4>Las cinco formas</h4><ul><li><b>will + base</b>: predicción por opinión, decisión del momento, promesa.</li><li><b>be going to</b>: intención decidida o predicción con evidencia.</li><li><b>Presente continuo</b>: cita ya acordada.</li><li><b>will be + -ing</b>: acción en curso en un momento futuro.</li><li><b>will have + participio</b>: acción terminada antes de una fecha futura.</li></ul><h4>Aplicadas a un proyecto de vida</h4><p><i>Next year I <b>am starting</b> university (ya está definido). I <b>am going to</b> study engineering (intención). By 2032 I <b>will have graduated</b> (terminado antes de esa fecha). In ten years I <b>will be working</b> in renewable energy (en curso entonces). I think it <b>will be</b> challenging (opinión).</i></p><h4>La regla que no cambia</h4><p>Después de <b>when, before, after, as soon as, until, by the time</b> se usa el presente: <i>When I <b>finish</b> school, I'll travel.</i></p>",
+      "content_en": "<h4>The five forms</h4><ul><li><b>will + base</b>: prediction from opinion, on-the-spot decision, promise.</li><li><b>be going to</b>: a decided intention or a prediction with evidence.</li><li><b>Present continuous</b>: an arranged appointment.</li><li><b>will be + -ing</b>: an action in progress at a future moment.</li><li><b>will have + participle</b>: an action finished before a future date.</li></ul><h4>Applied to a life project</h4><p><i>Next year I <b>am starting</b> university (already set). I <b>am going to</b> study engineering (intention). By 2032 I <b>will have graduated</b> (finished before that date). In ten years I <b>will be working</b> in renewable energy (in progress then). I think it <b>will be</b> challenging (opinion).</i></p><h4>The rule that never changes</h4><p>After <b>when, before, after, as soon as, until, by the time</b> use the present: <i>When I <b>finish</b> school, I'll travel.</i></p>",
+      "fichas": [
+        { "t": "Cinco formas de futuro", "d": "will, going to, presente continuo, continuo y perfecto.", "d_en": "will, going to, present continuous, continuous and perfect." },
+        { "t": "will have + participio", "d": "Ya estará terminado para esa fecha.", "d_en": "It will already be finished by that date." },
+        { "t": "will be + -ing", "d": "Estará ocurriendo en ese momento.", "d_en": "It will be happening at that moment." },
+        { "t": "Presente tras when", "d": "When I finish, no When I will finish.", "d_en": "When I finish, not When I will finish." }
+      ],
+      "quiz": [
+        { "q": "«By the end of the year I ___ all my applications.»", "q_en": "\"By the end of the year I ___ all my applications.\"", "o": ["will send", "will have sent", "will be sending", "send"], "o_en": ["will send", "will have sent", "will be sending", "send"], "a": 1, "why": "By + fecha con acción completada: futuro perfecto.", "why_en": "By + date with a completed action: future perfect." },
+        { "q": "«As soon as I ___ the results, I'll call you.»", "q_en": "\"As soon as I ___ the results, I'll call you.\"", "o": ["will get", "get", "got", "will have got"], "o_en": ["will get", "get", "got", "will have got"], "a": 1, "why": "Después de as soon as se usa el presente.", "why_en": "After as soon as we use the present." },
+        { "q": "«This time next year I ___ in another city.»", "q_en": "\"This time next year I ___ in another city.\"", "o": ["will live", "will be living", "will have lived", "live"], "o_en": ["will live", "will be living", "will have lived", "live"], "a": 1, "why": "This time next year pide futuro continuo.", "why_en": "This time next year calls for the future continuous." }
+      ]
+    },
+    {
+      "id": "ingles-11-4-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Conectores y cohesión",
+      "t_en": "Connectors and cohesion",
+      "d": "14 min",
+      "content_es": "<h4>Qué es la cohesión</h4><p>Es lo que hace que un texto se lea como una unidad y no como frases sueltas. Se logra con conectores, pronombres de referencia y repetición controlada.</p><h4>Conectores por función</h4><ul><li><b>Adición</b>: moreover, furthermore, in addition, besides</li><li><b>Contraste</b>: however, nevertheless, on the contrary, conversely</li><li><b>Causa y efecto</b>: therefore, consequently, thus, as a result, hence</li><li><b>Ejemplo</b>: for instance, namely, in particular</li><li><b>Énfasis</b>: indeed, in fact, above all</li><li><b>Conclusión</b>: in short, to sum up, overall, ultimately</li></ul><h4>Otros recursos de cohesión</h4><ul><li>Pronombres de referencia: <i>this, that, these, such</i>: <i>This approach solved the issue.</i></li><li>Sinónimos para no repetir: <i>the study → the research → the findings</i>.</li><li>Elipsis: <i>Some prefer speaking; others, writing.</i></li></ul><h4>Puntuación</h4><p>Los conectores adverbiales (<i>however, therefore</i>) van al inicio con coma, o entre punto y coma y coma: <i>…; however, …</i></p>",
+      "content_en": "<h4>What cohesion is</h4><p>It is what makes a text read as one unit instead of loose sentences. It is achieved with connectors, reference pronouns and controlled repetition.</p><h4>Connectors by function</h4><ul><li><b>Addition</b>: moreover, furthermore, in addition, besides</li><li><b>Contrast</b>: however, nevertheless, on the contrary, conversely</li><li><b>Cause and effect</b>: therefore, consequently, thus, as a result, hence</li><li><b>Example</b>: for instance, namely, in particular</li><li><b>Emphasis</b>: indeed, in fact, above all</li><li><b>Conclusion</b>: in short, to sum up, overall, ultimately</li></ul><h4>Other cohesion devices</h4><ul><li>Reference pronouns: <i>this, that, these, such</i>: <i>This approach solved the issue.</i></li><li>Synonyms to avoid repetition: <i>the study → the research → the findings</i>.</li><li>Ellipsis: <i>Some prefer speaking; others, writing.</i></li></ul><h4>Punctuation</h4><p>Adverbial connectors (<i>however, therefore</i>) open with a comma, or sit between a semicolon and a comma: <i>…; however, …</i></p>",
+      "fichas": [
+        { "t": "Cohesión", "d": "Lo que hace que el texto fluya como una unidad.", "d_en": "What makes a text flow as one unit." },
+        { "t": "conversely", "d": "Por el contrario: contraste formal.", "d_en": "On the contrary: a formal contrast." },
+        { "t": "hence / thus", "d": "Por lo tanto: consecuencia en registro formal.", "d_en": "Therefore: consequence in a formal register." },
+        { "t": "namely", "d": "Es decir, concretamente: precisa lo anterior.", "d_en": "That is to say: it specifies what came before." },
+        { "t": "; however,", "d": "Puntuación típica del conector adverbial.", "d_en": "Typical punctuation of an adverbial connector." }
+      ],
+      "quiz": [
+        { "q": "«The results were positive; ___, more testing is needed.»", "q_en": "\"The results were positive; ___, more testing is needed.\"", "o": ["moreover", "however", "namely", "thus"], "o_en": ["moreover", "however", "namely", "thus"], "a": 1, "why": "Hay contraste entre lo positivo y la necesidad de más pruebas.", "why_en": "There is a contrast between the positive result and the need for more testing." },
+        { "q": "«The budget was cut. ___, the project was delayed.»", "q_en": "\"The budget was cut. ___, the project was delayed.\"", "o": ["Consequently", "Nevertheless", "For instance", "Above all"], "o_en": ["Consequently", "Nevertheless", "For instance", "Above all"], "a": 0, "why": "El retraso es la consecuencia del recorte.", "why_en": "The delay is the consequence of the cut." },
+        { "q": "¿Cuál conector precisa lo dicho antes?", "q_en": "Which connector specifies what was said before?", "o": ["conversely", "namely", "besides", "nevertheless"], "o_en": ["conversely", "namely", "besides", "nevertheless"], "a": 1, "why": "Namely introduce la precisión concreta.", "why_en": "Namely introduces the specific precision." }
+      ]
+    },
+    {
+      "id": "ingles-11-4-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Estilo indirecto para resumir y reportar",
+      "t_en": "Reported speech for summarizing and reporting",
+      "d": "16 min",
+      "content_es": "<h4>Reportar sin repetir</h4><p>Al resumir una intervención no se copia lo dicho: se reformula con el verbo introductorio adecuado y el retroceso temporal.</p><h4>El retroceso</h4><p>presente → pasado · pasado y presente perfecto → pasado perfecto · will → would · can → could · must → had to.</p><h4>Verbos introductorios con matiz</h4><ul><li><b>state, explain, point out</b>: neutral e informativo</li><li><b>claim, allege</b>: afirmación sin prueba</li><li><b>admit, deny</b>: reconocer o negar</li><li><b>suggest, recommend</b>: proponer (con gerundio o that)</li><li><b>warn, remind, promise, refuse</b>: con to + infinitivo</li></ul><h4>Patrones</h4><ul><li><i>He <b>admitted making</b> a mistake.</i> (gerundio)</li><li><i>She <b>refused to comment</b>.</i> (to + infinitivo)</li><li><i>They <b>reminded us to submit</b> the form.</i> (persona + to)</li><li><i>He <b>explained that</b> the delay was unavoidable.</i> (that + oración)</li></ul><h4>Ojo</h4><p>Si lo reportado sigue siendo verdad, el retroceso es opcional: <i>She said the deadline <b>is</b> Friday.</i></p>",
+      "content_en": "<h4>Reporting without repeating</h4><p>When summarizing a contribution you do not copy the words: you rephrase with the right reporting verb and the tense backshift.</p><h4>The backshift</h4><p>present → past · past and present perfect → past perfect · will → would · can → could · must → had to.</p><h4>Reporting verbs with nuance</h4><ul><li><b>state, explain, point out</b>: neutral and informative</li><li><b>claim, allege</b>: an assertion without proof</li><li><b>admit, deny</b>: to acknowledge or reject</li><li><b>suggest, recommend</b>: to propose (with a gerund or that)</li><li><b>warn, remind, promise, refuse</b>: with to + infinitive</li></ul><h4>Patterns</h4><ul><li><i>He <b>admitted making</b> a mistake.</i> (gerund)</li><li><i>She <b>refused to comment</b>.</i> (to + infinitive)</li><li><i>They <b>reminded us to submit</b> the form.</i> (person + to)</li><li><i>He <b>explained that</b> the delay was unavoidable.</i> (that + clause)</li></ul><h4>Careful</h4><p>If what is reported is still true, the backshift is optional: <i>She said the deadline <b>is</b> Friday.</i></p>",
+      "fichas": [
+        { "t": "admit / deny + gerundio", "d": "He admitted making a mistake.", "d_en": "He admitted making a mistake." },
+        { "t": "refuse / promise + to", "d": "She refused to comment.", "d_en": "She refused to comment." },
+        { "t": "remind + persona + to", "d": "They reminded us to sign.", "d_en": "They reminded us to sign." },
+        { "t": "claim", "d": "Afirmar algo sin aportar prueba.", "d_en": "To assert something without providing proof." },
+        { "t": "Retroceso opcional", "d": "Si sigue siendo verdad, el tiempo puede quedarse igual.", "d_en": "If it is still true, the tense may stay the same." }
+      ],
+      "quiz": [
+        { "q": "«He ___ taking the file without permission.»", "q_en": "\"He ___ taking the file without permission.\"", "o": ["refused", "admitted", "promised", "reminded"], "o_en": ["refused", "admitted", "promised", "reminded"], "a": 1, "why": "Admit va seguido de gerundio.", "why_en": "Admit is followed by a gerund." },
+        { "q": "«She ___ to answer any questions.»", "q_en": "\"She ___ to answer any questions.\"", "o": ["admitted", "suggested", "refused", "denied"], "o_en": ["admitted", "suggested", "refused", "denied"], "a": 2, "why": "Refuse va con to + infinitivo.", "why_en": "Refuse takes to + infinitive." },
+        { "q": "«\"I can help.\"» → «He said he ___ help.»", "q_en": "\"I can help.\" → He said he ___ help.", "o": ["can", "could", "will", "would can"], "o_en": ["can", "could", "will", "would can"], "a": 1, "why": "En el retroceso can pasa a could.", "why_en": "In the backshift can becomes could." }
+      ]
+    },
+    {
+      "id": "ingles-11-4-4",
+      "num": 4,
+      "tipo": "vocabulary",
+      "t": "Frases para presentaciones y oratoria",
+      "t_en": "Phrases for presentations and public speaking",
+      "d": "14 min",
+      "content_es": "<h4>Abrir</h4><p><i>Good morning, everyone. Thank you for being here. · Today I'd like to talk about… · My presentation is divided into three parts. · By the end, you will understand…</i></p><h4>Avanzar</h4><p><i>Let's start with… · Moving on to my second point… · This brings me to… · As you can see in this slide… · Let me give you an example.</i></p><h4>Enfatizar</h4><p><i>I'd like to stress that… · The key point here is… · What really matters is… · Let me repeat that.</i></p><h4>Cerrar</h4><p><i>To sum up… · In conclusion… · Let me leave you with one idea. · Thank you for your attention. Are there any questions?</i></p><h4>Manejar preguntas</h4><p><i>That's a great question. · If I understood correctly, you're asking… · I'm afraid I don't have that data with me, but I can follow up.</i></p><h4>Consejo</h4><p>Marcar la estructura en voz alta (<i>first, second, finally</i>) es lo que más ayuda al oyente a seguir el hilo.</p>",
+      "content_en": "<h4>Opening</h4><p><i>Good morning, everyone. Thank you for being here. · Today I'd like to talk about… · My presentation is divided into three parts. · By the end, you will understand…</i></p><h4>Moving forward</h4><p><i>Let's start with… · Moving on to my second point… · This brings me to… · As you can see in this slide… · Let me give you an example.</i></p><h4>Emphasizing</h4><p><i>I'd like to stress that… · The key point here is… · What really matters is… · Let me repeat that.</i></p><h4>Closing</h4><p><i>To sum up… · In conclusion… · Let me leave you with one idea. · Thank you for your attention. Are there any questions?</i></p><h4>Handling questions</h4><p><i>That's a great question. · If I understood correctly, you're asking… · I'm afraid I don't have that data with me, but I can follow up.</i></p><h4>Advice</h4><p>Signposting the structure out loud (<i>first, second, finally</i>) is what most helps the listener follow you.</p>",
+      "fichas": [
+        { "t": "Signposting", "d": "Anunciar en voz alta la estructura de la presentación.", "d_en": "Announcing the structure of the talk out loud." },
+        { "t": "I'd like to stress that…", "d": "Fórmula para enfatizar el punto clave.", "d_en": "Formula to emphasize the key point." },
+        { "t": "This brings me to…", "d": "Transición fluida al siguiente punto.", "d_en": "A smooth transition to the next point." },
+        { "t": "follow up", "d": "Dar seguimiento después de la sesión.", "d_en": "To provide the answer after the session." },
+        { "t": "Are there any questions?", "d": "Cierre estándar que abre el turno de preguntas.", "d_en": "Standard closing that opens the question time." }
+      ],
+      "quiz": [
+        { "q": "¿Qué frase anuncia la estructura de la charla?", "q_en": "Which phrase announces the structure of the talk?", "o": ["Thank you for your attention", "My presentation is divided into three parts", "That's a great question", "Let me repeat that"], "o_en": ["Thank you for your attention", "My presentation is divided into three parts", "That's a great question", "Let me repeat that"], "a": 1, "why": "Anticipa cómo se organizará la exposición.", "why_en": "It previews how the talk will be organized." },
+        { "q": "«___ my second point…»", "q_en": "\"___ my second point…\"", "o": ["Moving on to", "In conclusion", "To sum up", "Thank you for"], "o_en": ["Moving on to", "In conclusion", "To sum up", "Thank you for"], "a": 0, "why": "Moving on to marca la transición al siguiente punto.", "why_en": "Moving on to marks the transition to the next point." },
+        { "q": "No sabes un dato en la sesión de preguntas. ¿Qué dices?", "q_en": "You do not know a fact during the Q&A. What do you say?", "o": ["I don't know", "I'm afraid I don't have that data with me, but I can follow up", "Next question", "That's not important"], "o_en": ["I don't know", "I'm afraid I don't have that data with me, but I can follow up", "Next question", "That's not important"], "a": 1, "why": "Reconoce el límite y ofrece una solución.", "why_en": "It acknowledges the limit and offers a solution." }
+      ]
+    },
+    {
+      "id": "ingles-11-4-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Lenguaje persuasivo y académico",
+      "t_en": "Persuasive and academic language",
+      "d": "14 min",
+      "content_es": "<h4>Recursos persuasivos</h4><ul><li>Pregunta retórica: <i>Can we afford to wait?</i></li><li>Regla de tres: <i>simpler, faster, fairer.</i></li><li>Contraste: <i>Not a cost, but an investment.</i></li><li>Inclusión: uso de <b>we</b> y <b>our</b> para crear comunidad.</li><li>Dato concreto: <i>Seven out of ten students say…</i></li><li>Llamado a la acción: <i>Let's start today.</i></li></ul><h4>Registro académico</h4><p>Se prefiere lo impersonal y lo matizado:</p><ul><li><i>It can be argued that… · The evidence suggests… · This tends to indicate…</i></li><li>Matizadores: <b>arguably, likely, to some extent, in most cases</b>.</li><li>Se evitan contracciones, <i>a lot of</i> (mejor <i>numerous</i> o <i>a considerable number of</i>) y el lenguaje coloquial.</li></ul><h4>Equilibrio</h4><p>Un buen discurso combina lo persuasivo con lo riguroso: convence con estructura y datos, no solo con emoción.</p>",
+      "content_en": "<h4>Persuasive devices</h4><ul><li>Rhetorical question: <i>Can we afford to wait?</i></li><li>Rule of three: <i>simpler, faster, fairer.</i></li><li>Contrast: <i>Not a cost, but an investment.</i></li><li>Inclusion: using <b>we</b> and <b>our</b> to build community.</li><li>A concrete figure: <i>Seven out of ten students say…</i></li><li>Call to action: <i>Let's start today.</i></li></ul><h4>Academic register</h4><p>The impersonal and the hedged are preferred:</p><ul><li><i>It can be argued that… · The evidence suggests… · This tends to indicate…</i></li><li>Hedges: <b>arguably, likely, to some extent, in most cases</b>.</li><li>Contractions, <i>a lot of</i> (prefer <i>numerous</i> or <i>a considerable number of</i>) and colloquial language are avoided.</li></ul><h4>Balance</h4><p>A good speech combines the persuasive with the rigorous: it convinces with structure and data, not only with emotion.</p>",
+      "fichas": [
+        { "t": "Regla de tres", "d": "Tres elementos paralelos crean ritmo persuasivo.", "d_en": "Three parallel items create a persuasive rhythm." },
+        { "t": "Matizadores", "d": "arguably, likely, to some extent: suavizan la afirmación.", "d_en": "arguably, likely, to some extent: they soften a claim." },
+        { "t": "The evidence suggests", "d": "Alternativa impersonal a I think.", "d_en": "Impersonal alternative to I think." },
+        { "t": "Call to action", "d": "Cierre que pide una acción concreta al público.", "d_en": "A closing that asks the audience for a specific action." },
+        { "t": "Sin contracciones", "d": "En registro académico se escribe do not, no don't.", "d_en": "In academic register write do not, not don't." }
+      ],
+      "quiz": [
+        { "q": "«Simpler, faster, fairer.» ¿Qué recurso es?", "q_en": "\"Simpler, faster, fairer.\" Which device is this?", "o": ["Pregunta retórica", "Regla de tres", "Matizador", "Cita"], "o_en": ["Rhetorical question", "Rule of three", "Hedge", "Quotation"], "a": 1, "why": "Tres elementos paralelos crean ritmo persuasivo.", "why_en": "Three parallel items create a persuasive rhythm." },
+        { "q": "¿Cuál es un matizador académico?", "q_en": "Which one is an academic hedge?", "o": ["definitely", "arguably", "totally", "for sure"], "o_en": ["definitely", "arguably", "totally", "for sure"], "a": 1, "why": "Arguably matiza la afirmación en registro formal.", "why_en": "Arguably softens the claim in a formal register." },
+        { "q": "En un ensayo académico se prefiere…", "q_en": "In an academic essay we prefer…", "o": ["I don't think so", "It can be argued that", "Tons of people say", "That's crazy"], "o_en": ["I don't think so", "It can be argued that", "Tons of people say", "That's crazy"], "a": 1, "why": "La forma impersonal corresponde al registro académico.", "why_en": "The impersonal form belongs to the academic register." }
+      ]
+    },
+    {
+      "id": "ingles-11-4-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Carácter, emociones y dilemas morales",
+      "t_en": "Character, emotions and moral issues",
+      "d": "14 min",
+      "content_es": "<h4>Rasgos y emociones</h4><p><b>integrity</b> (integridad), <b>courage</b>, <b>guilt</b> (culpa), <b>shame</b>, <b>remorse</b> (remordimiento), <b>forgiveness</b> (perdón), <b>redemption</b>, <b>hypocrisy</b>, <b>compassion</b>, <b>prejudice</b> (prejuicio), <b>dignity</b>.</p><h4>Asuntos sociales y morales</h4><p><b>social judgment</b>, <b>double standard</b> (doble rasero), <b>reputation</b>, <b>stigma</b>, <b>peer pressure</b>, <b>moral dilemma</b>, <b>consequence</b>, <b>responsibility</b>, <b>identity</b>, <b>personal values</b>.</p><h4>Discutir un dilema</h4><ul><li>Plantear: <i>The dilemma here is whether…</i></li><li>Empatizar: <i>From her perspective… · One could argue that she had no choice.</i></li><li>Juzgar con matiz: <i>It was understandable, though not justifiable.</i></li><li>Concluir: <i>Ultimately, the decision reveals…</i></li></ul><h4>Ojo</h4><p><b>guilt</b> es el sentimiento o la culpabilidad; <b>fault</b> es la responsabilidad por un error concreto: <i>It's not my fault.</i></p>",
+      "content_en": "<h4>Traits and emotions</h4><p><b>integrity</b>, <b>courage</b>, <b>guilt</b>, <b>shame</b>, <b>remorse</b>, <b>forgiveness</b>, <b>redemption</b>, <b>hypocrisy</b>, <b>compassion</b>, <b>prejudice</b>, <b>dignity</b>.</p><h4>Social and moral issues</h4><p><b>social judgment</b>, <b>double standard</b>, <b>reputation</b>, <b>stigma</b>, <b>peer pressure</b>, <b>moral dilemma</b>, <b>consequence</b>, <b>responsibility</b>, <b>identity</b>, <b>personal values</b>.</p><h4>Discussing a dilemma</h4><ul><li>Framing: <i>The dilemma here is whether…</i></li><li>Empathizing: <i>From her perspective… · One could argue that she had no choice.</i></li><li>Judging with nuance: <i>It was understandable, though not justifiable.</i></li><li>Concluding: <i>Ultimately, the decision reveals…</i></li></ul><h4>Careful</h4><p><b>guilt</b> is the feeling or the state of being guilty; <b>fault</b> is responsibility for a specific mistake: <i>It's not my fault.</i></p>",
+      "fichas": [
+        { "t": "guilt vs fault", "d": "El sentimiento de culpa vs la responsabilidad por un error.", "d_en": "The feeling of guilt vs responsibility for a mistake." },
+        { "t": "remorse", "d": "Remordimiento profundo por algo que se hizo.", "d_en": "Deep regret for something you did." },
+        { "t": "double standard", "d": "Juzgar lo mismo con dos varas distintas.", "d_en": "Judging the same thing by two different measures." },
+        { "t": "peer pressure", "d": "Presión del grupo de pares sobre las decisiones.", "d_en": "Pressure from your peer group on your decisions." },
+        { "t": "though not justifiable", "d": "Fórmula para matizar un juicio moral.", "d_en": "Formula to qualify a moral judgment." }
+      ],
+      "quiz": [
+        { "q": "«It's not my ___; I wasn't even there.»", "q_en": "\"It's not my ___; I wasn't even there.\"", "o": ["guilt", "fault", "shame", "remorse"], "o_en": ["guilt", "fault", "shame", "remorse"], "a": 1, "why": "La responsabilidad por un error concreto es fault.", "why_en": "Responsibility for a specific mistake is fault." },
+        { "q": "¿Qué es un «double standard»?", "q_en": "What is a \"double standard\"?", "o": ["Una norma internacional", "Juzgar lo mismo con dos criterios distintos", "Un dilema sin salida", "Una reputación doble"], "o_en": ["An international rule", "Judging the same thing by two different measures", "A dilemma with no way out", "A double reputation"], "a": 1, "why": "Es aplicar criterios distintos a situaciones equivalentes.", "why_en": "It is applying different criteria to equivalent situations." },
+        { "q": "«He felt deep ___ after realizing the harm he had caused.»", "q_en": "\"He felt deep ___ after realizing the harm he had caused.\"", "o": ["prejudice", "remorse", "dignity", "courage"], "o_en": ["prejudice", "remorse", "dignity", "courage"], "a": 1, "why": "Remorse es el remordimiento por el daño causado.", "why_en": "Remorse is the deep regret for the harm caused." }
+      ]
+    },
+    {
+      "id": "ingles-11-4-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Gestión del tiempo y organización",
+      "t_en": "Time management and organization",
+      "d": "12 min",
+      "content_es": "<h4>Vocabulario clave</h4><p><b>schedule</b> (agenda o programar), <b>deadline</b>, <b>priority</b>, <b>task</b>, <b>milestone</b> (hito), <b>workload</b> (carga de trabajo), <b>agenda</b>, <b>checklist</b>, <b>follow-up</b>, <b>procrastination</b>.</p><h4>Verbos y colocaciones</h4><p><b>set priorities</b>, <b>meet a deadline</b>, <b>miss a deadline</b>, <b>allocate time</b>, <b>break a task down</b>, <b>delegate</b>, <b>postpone / put off</b>, <b>catch up on</b>, <b>keep track of</b>, <b>stick to a plan</b>.</p><h4>Expresiones de tiempo en el trabajo</h4><p><i>ahead of schedule</i> (adelantado), <i>behind schedule</i> (atrasado), <i>on time</i> (puntual), <i>in time</i> (con tiempo suficiente), <i>at short notice</i> (con poca antelación), <i>round the clock</i> (sin parar).</p><h4>Ojo</h4><p><b>on time</b> es a la hora exacta; <b>in time</b> es con margen suficiente: <i>The train arrived <b>on time</b>. · We got there <b>in time</b> to see the opening.</i></p>",
+      "content_en": "<h4>Key vocabulary</h4><p><b>schedule</b>, <b>deadline</b>, <b>priority</b>, <b>task</b>, <b>milestone</b>, <b>workload</b>, <b>agenda</b>, <b>checklist</b>, <b>follow-up</b>, <b>procrastination</b>.</p><h4>Verbs and collocations</h4><p><b>set priorities</b>, <b>meet a deadline</b>, <b>miss a deadline</b>, <b>allocate time</b>, <b>break a task down</b>, <b>delegate</b>, <b>postpone / put off</b>, <b>catch up on</b>, <b>keep track of</b>, <b>stick to a plan</b>.</p><h4>Time expressions at work</h4><p><i>ahead of schedule</i>, <i>behind schedule</i>, <i>on time</i>, <i>in time</i>, <i>at short notice</i>, <i>round the clock</i>.</p><h4>Careful</h4><p><b>on time</b> means at the exact time; <b>in time</b> means with enough margin: <i>The train arrived <b>on time</b>. · We got there <b>in time</b> to see the opening.</i></p>",
+      "fichas": [
+        { "t": "on time vs in time", "d": "A la hora exacta vs con margen suficiente.", "d_en": "At the exact time vs with enough margin." },
+        { "t": "milestone", "d": "Hito: punto de control importante en un proyecto.", "d_en": "An important checkpoint in a project." },
+        { "t": "put off", "d": "Aplazar algo para más tarde.", "d_en": "To postpone something." },
+        { "t": "keep track of", "d": "Llevar el control o el registro de algo.", "d_en": "To monitor or record the progress of something." },
+        { "t": "at short notice", "d": "Con muy poca antelación.", "d_en": "With very little advance warning." }
+      ],
+      "quiz": [
+        { "q": "«The delivery arrived ___: exactly at 9:00.»", "q_en": "\"The delivery arrived ___: exactly at 9:00.\"", "o": ["in time", "on time", "at time", "by time"], "o_en": ["in time", "on time", "at time", "by time"], "a": 1, "why": "On time es a la hora exacta.", "why_en": "On time means at the exact time." },
+        { "q": "«Don't ___ the report until Friday.»", "q_en": "\"Don't ___ the report until Friday.\"", "o": ["put off", "put on", "put up", "put in"], "o_en": ["put off", "put on", "put up", "put in"], "a": 0, "why": "Put off es aplazar.", "why_en": "Put off means to postpone." },
+        { "q": "¿Qué es un «milestone» en un proyecto?", "q_en": "What is a \"milestone\" in a project?", "o": ["Un retraso", "Un hito o punto de control", "Una carga de trabajo", "Una lista de tareas"], "o_en": ["A delay", "An important checkpoint", "A workload", "A task list"], "a": 1, "why": "El milestone marca un avance importante del proyecto.", "why_en": "A milestone marks an important step of the project." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-11-4-repaso",
+    "titulo": "Repaso — Mastering Communication and Public Speaking",
+    "titulo_en": "Review — Mastering Communication and Public Speaking",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El cierre del ciclo integra tres competencias: <b>proyectar</b> con todos los tiempos futuros, <b>cohesionar</b> el discurso con conectores y <b>reportar</b> lo dicho con el verbo introductorio adecuado. Todo al servicio de una presentación clara y persuasiva.</p><h4>Puntos gramaticales</h4><ul><li>will, going to, presente continuo, futuro continuo y futuro perfecto: cada uno con su situación.</li><li>Después de when, as soon as y by the time va el presente.</li><li>Conectores adverbiales con coma; punto y coma cuando unen dos oraciones.</li><li>Estilo indirecto: retroceso temporal y patrones admit + gerundio, refuse + to, remind + persona + to.</li></ul><h4>Vocabulario</h4><p>Frases de presentación y manejo de preguntas, recursos persuasivos y matizadores académicos, carácter y dilemas morales, y gestión del tiempo con on time / in time.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The end of the cycle integrates three competences: <b>projecting</b> with all the future tenses, <b>cohering</b> the discourse with connectors and <b>reporting</b> what was said with the right reporting verb. All in the service of a clear, persuasive presentation.</p><h4>Grammar points</h4><ul><li>will, going to, present continuous, future continuous and future perfect: each with its situation.</li><li>After when, as soon as and by the time the present is used.</li><li>Adverbial connectors with a comma; a semicolon when they join two clauses.</li><li>Reported speech: tense backshift and the patterns admit + gerund, refuse + to, remind + person + to.</li></ul><h4>Vocabulary</h4><p>Presentation phrases and question handling, persuasive devices and academic hedges, character and moral dilemmas, and time management with on time / in time.</p>",
+    "puntos_clave": [
+      ["By + fecha futura pide will have + participio.", "By + a future date calls for will have + participle."],
+      ["Después de when y as soon as va el presente, no will.", "After when and as soon as use the present, not will."],
+      ["admit + gerundio; refuse + to; remind + persona + to.", "admit + gerund; refuse + to; remind + person + to."],
+      ["however y therefore van con coma al abrir oración.", "however and therefore take a comma when opening a sentence."],
+      ["En registro académico se evitan las contracciones.", "In academic register contractions are avoided."],
+      ["on time = puntual; in time = con margen.", "on time = punctual; in time = with margin."]
+    ],
+    "preguntas": [
+      { "q": "«By December I ___ the whole course.»", "q_en": "\"By December I ___ the whole course.\"", "o": ["will finish", "will have finished", "will be finishing", "finish"], "o_en": ["will finish", "will have finished", "will be finishing", "finish"], "a": 1, "why": "By + fecha con acción completada: futuro perfecto.", "why_en": "By + date with a completed action: future perfect." },
+      { "q": "«I'll send the summary as soon as the meeting ___.»", "q_en": "\"I'll send the summary as soon as the meeting ___.\"", "o": ["will end", "ends", "ended", "will have ended"], "o_en": ["will end", "ends", "ended", "will have ended"], "a": 1, "why": "Después de as soon as se usa el presente.", "why_en": "After as soon as we use the present." },
+      { "q": "«The data was incomplete; ___, the conclusions are provisional.»", "q_en": "\"The data was incomplete; ___, the conclusions are provisional.\"", "o": ["moreover", "therefore", "namely", "conversely"], "o_en": ["moreover", "therefore", "namely", "conversely"], "a": 1, "why": "Se introduce la consecuencia lógica.", "why_en": "The logical consequence is introduced." },
+      { "q": "«She ___ having missed the deadline.»", "q_en": "\"She ___ having missed the deadline.\"", "o": ["refused", "admitted", "reminded", "promised"], "o_en": ["refused", "admitted", "reminded", "promised"], "a": 1, "why": "Admit va seguido de gerundio.", "why_en": "Admit is followed by a gerund." },
+      { "q": "«They reminded us ___ the form before Friday.»", "q_en": "\"They reminded us ___ the form before Friday.\"", "o": ["submitting", "to submit", "submit", "that submit"], "o_en": ["submitting", "to submit", "submit", "that submit"], "a": 1, "why": "Remind + persona + to + infinitivo.", "why_en": "Remind + person + to + infinitive." },
+      { "q": "¿Cuál frase abre el turno de preguntas?", "q_en": "Which phrase opens the question time?", "o": ["Let's start with", "Moving on to", "Are there any questions?", "As you can see"], "o_en": ["Let's start with", "Moving on to", "Are there any questions?", "As you can see"], "a": 2, "why": "Es la fórmula estándar para cerrar e invitar preguntas.", "why_en": "It is the standard formula to close and invite questions." },
+      { "q": "«We arrived ___ to get good seats.»", "q_en": "\"We arrived ___ to get good seats.\"", "o": ["on time", "in time", "at time", "by the time"], "o_en": ["on time", "in time", "at time", "by the time"], "a": 1, "why": "In time indica que hubo margen suficiente.", "why_en": "In time indicates there was enough margin." },
+      { "q": "¿Cuál es un matizador propio del registro académico?", "q_en": "Which is a hedge typical of academic register?", "o": ["totally", "to some extent", "for sure", "obviously not"], "o_en": ["totally", "to some extent", "for sure", "obviously not"], "a": 1, "why": "To some extent matiza el alcance de la afirmación.", "why_en": "To some extent qualifies the scope of the claim." }
+    ]
+  }
+}

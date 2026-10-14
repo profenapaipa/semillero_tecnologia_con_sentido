@@ -1,0 +1,216 @@
+{
+  "id": "ingles-7-1",
+  "materia": "ingles",
+  "grado": "7",
+  "grado_nombre": "Séptimo",
+  "periodo": 1,
+  "periodo_label": { "es": "Periodo I", "en": "Term I" },
+  "titulo": "Always Doing Something!",
+  "titulo_es": "Siempre haciendo algo",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Distingo entre lo que hago habitualmente y lo que estoy haciendo en el momento. Hablo de estados y situaciones del pasado con el verbo to be y con have.",
+  "competencias": "Contrastar presente simple y presente progresivo; describir el pasado con was/were y had; formular preguntas con was/were y expresiones de tiempo pasado; describir el clima y la apariencia física de las personas.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Then and Now",
+    "descripcion_es": "Cada estudiante presenta dos fotos, una de su infancia y otra actual, y escribe un texto corto contrastando cómo era antes (was/were, had) y qué hace o está haciendo ahora.",
+    "descripcion_en": "Each student presents two photos, one from childhood and one from today, and writes a short text contrasting what they were like (was/were, had) and what they do or are doing now."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-7-1-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Presente simple vs presente progresivo",
+      "t_en": "Simple present vs present progressive",
+      "d": "14 min",
+      "content_es": "<h4>Dos tiempos, dos usos</h4><ul><li><b>Presente simple</b>: rutinas, hábitos y hechos permanentes. <i>She works at a bank.</i></li><li><b>Presente progresivo</b>: lo que ocurre ahora o en un periodo temporal. <i>She is working from home this week.</i></li></ul><h4>Palabras que los delatan</h4><p>Simple: <b>always, usually, every day, on Mondays, never</b>.<br>Progresivo: <b>now, right now, at the moment, today, this week, Look!</b></p><h4>Verbos que casi nunca van en progresivo</h4><p>Los verbos de estado: <b>know, like, love, hate, want, need, believe, understand, have</b> (cuando significa poseer). Se dice <i>I know the answer</i>, no <i>I am knowing</i>.</p>",
+      "content_en": "<h4>Two tenses, two uses</h4><ul><li><b>Simple present</b>: routines, habits and permanent facts. <i>She works at a bank.</i></li><li><b>Present progressive</b>: what is happening now or in a temporary period. <i>She is working from home this week.</i></li></ul><h4>Signal words</h4><p>Simple: <b>always, usually, every day, on Mondays, never</b>.<br>Progressive: <b>now, right now, at the moment, today, this week, Look!</b></p><h4>Verbs that rarely take the progressive</h4><p>State verbs: <b>know, like, love, hate, want, need, believe, understand, have</b> (when it means to own). We say <i>I know the answer</i>, not <i>I am knowing</i>.</p>",
+      "fichas": [
+        { "t": "Presente simple", "d": "Rutina o hecho permanente: I work every day.", "d_en": "Routine or permanent fact: I work every day." },
+        { "t": "Presente progresivo", "d": "Acción de ahora o temporal: I am working today.", "d_en": "Action happening now or temporarily: I am working today." },
+        { "t": "Verbos de estado", "d": "know, like, want, need: no se usan en -ing.", "d_en": "know, like, want, need: they are not used in -ing." },
+        { "t": "this week / at the moment", "d": "Expresiones que piden presente progresivo.", "d_en": "Expressions that call for the present progressive." }
+      ],
+      "quiz": [
+        { "q": "«Be quiet! The baby ___.»", "q_en": "\"Be quiet! The baby ___.\"", "o": ["sleeps", "is sleeping", "sleep", "slept"], "o_en": ["sleeps", "is sleeping", "sleep", "slept"], "a": 1, "why": "La acción ocurre en este momento: presente progresivo.", "why_en": "The action is happening right now: present progressive." },
+        { "q": "«My father ___ at a hospital.» (todos los días)", "q_en": "\"My father ___ at a hospital.\" (every day)", "o": ["is working", "works", "work", "working"], "o_en": ["is working", "works", "work", "working"], "a": 1, "why": "Es un hecho permanente: presente simple con -s.", "why_en": "It is a permanent fact: simple present with -s." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["I am reading a book now", "I know the answer", "I am knowing the answer", "I usually read at night"], "o_en": ["I am reading a book now", "I know the answer", "I am knowing the answer", "I usually read at night"], "a": 2, "why": "Know es verbo de estado: no admite forma progresiva.", "why_en": "Know is a state verb: it has no progressive form." }
+      ]
+    },
+    {
+      "id": "ingles-7-1-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Pasado simple del verbo to be: was / were",
+      "t_en": "Simple past of the verb to be: was / were",
+      "d": "12 min",
+      "content_es": "<h4>Solo dos formas</h4><ul><li><b>was</b>: I, he, she, it — <i>I was at home.</i></li><li><b>were</b>: you, we, they — <i>They were happy.</i></li></ul><h4>Negativo</h4><p><b>wasn't</b> / <b>weren't</b>: <i>She wasn't tired.</i> · <i>We weren't late.</i></p><h4>Para qué sirve</h4><ul><li>Estados y descripciones: <i>The movie was boring.</i></li><li>Lugar en el pasado: <i>We were in Cartagena last year.</i></li><li>Edad: <i>I was ten when I learned to swim.</i></li></ul><h4>Ojo</h4><p>No se necesita <i>did</i> con to be: la negación y la pregunta se hacen con el verbo mismo.</p>",
+      "content_en": "<h4>Only two forms</h4><ul><li><b>was</b>: I, he, she, it — <i>I was at home.</i></li><li><b>were</b>: you, we, they — <i>They were happy.</i></li></ul><h4>Negative</h4><p><b>wasn't</b> / <b>weren't</b>: <i>She wasn't tired.</i> · <i>We weren't late.</i></p><h4>What it is used for</h4><ul><li>States and descriptions: <i>The movie was boring.</i></li><li>Location in the past: <i>We were in Cartagena last year.</i></li><li>Age: <i>I was ten when I learned to swim.</i></li></ul><h4>Careful</h4><p>You do not need <i>did</i> with to be: negatives and questions are made with the verb itself.</p>",
+      "fichas": [
+        { "t": "was", "d": "Pasado de to be para I, he, she, it.", "d_en": "Past of to be for I, he, she, it." },
+        { "t": "were", "d": "Pasado de to be para you, we, they.", "d_en": "Past of to be for you, we, they." },
+        { "t": "wasn't / weren't", "d": "Negaciones: no llevan did.", "d_en": "Negatives: they do not take did." },
+        { "t": "I was ten years old", "d": "La edad en el pasado también usa to be.", "d_en": "Age in the past also uses to be." }
+      ],
+      "quiz": [
+        { "q": "«They ___ at the concert last night.»", "q_en": "\"They ___ at the concert last night.\"", "o": ["was", "were", "did", "are"], "o_en": ["was", "were", "did", "are"], "a": 1, "why": "They lleva were en pasado.", "why_en": "They takes were in the past." },
+        { "q": "«The test ___ difficult.» (negativo)", "q_en": "\"The test ___ difficult.\" (negative)", "o": ["didn't was", "wasn't", "weren't", "not was"], "o_en": ["didn't was", "wasn't", "weren't", "not was"], "a": 1, "why": "The test es singular: wasn't, sin auxiliar did.", "why_en": "The test is singular: wasn't, with no did auxiliary." },
+        { "q": "«I ___ born in 2012.»", "q_en": "\"I ___ born in 2012.\"", "o": ["was", "were", "did", "am"], "o_en": ["was", "were", "did", "am"], "a": 0, "why": "Con I el pasado de to be es was.", "why_en": "With I the past of to be is was." }
+      ]
+    },
+    {
+      "id": "ingles-7-1-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Expresiones de tiempo pasado",
+      "t_en": "Past time expressions",
+      "d": "10 min",
+      "content_es": "<h4>Las más usadas</h4><ul><li><b>yesterday</b> – ayer · <b>the day before yesterday</b> – anteayer</li><li><b>last</b> + periodo: <i>last night, last week, last month, last year, last summer</i></li><li><b>ago</b> (después de la cantidad): <i>two days ago, ten years ago</i></li><li><b>in</b> + año: <i>in 2020</i> · <b>when I was a child</b></li></ul><h4>Dónde se ponen</h4><p>Normalmente al final de la oración: <i>We visited my aunt <b>last weekend</b>.</i> También pueden ir al inicio, con coma: <i><b>Yesterday</b>, I was very tired.</i></p><h4>Ojo con ago</h4><p><b>ago</b> va <b>después</b> de la cantidad de tiempo: <i>three years ago</i>, nunca <i>ago three years</i>.</p>",
+      "content_en": "<h4>The most common ones</h4><ul><li><b>yesterday</b> · <b>the day before yesterday</b></li><li><b>last</b> + period: <i>last night, last week, last month, last year, last summer</i></li><li><b>ago</b> (after the amount): <i>two days ago, ten years ago</i></li><li><b>in</b> + year: <i>in 2020</i> · <b>when I was a child</b></li></ul><h4>Where they go</h4><p>Usually at the end of the sentence: <i>We visited my aunt <b>last weekend</b>.</i> They can also open the sentence, with a comma: <i><b>Yesterday</b>, I was very tired.</i></p><h4>Careful with ago</h4><p><b>ago</b> goes <b>after</b> the amount of time: <i>three years ago</i>, never <i>ago three years</i>.</p>",
+      "fichas": [
+        { "t": "yesterday", "d": "Ayer. La expresión de pasado más frecuente.", "d_en": "The most frequent past time expression." },
+        { "t": "last night / last week", "d": "last se usa sin the: last week, no the last week.", "d_en": "last is used without the: last week." },
+        { "t": "two days ago", "d": "ago va después de la cantidad de tiempo.", "d_en": "ago goes after the amount of time." },
+        { "t": "in 2020", "d": "Los años llevan la preposición in.", "d_en": "Years take the preposition in." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál expresión es correcta?", "q_en": "Which expression is correct?", "o": ["ago three years", "three years ago", "before three years", "three ago years"], "o_en": ["ago three years", "three years ago", "before three years", "three ago years"], "a": 1, "why": "Ago siempre va después de la cantidad de tiempo.", "why_en": "Ago always goes after the amount of time." },
+        { "q": "«We were in Medellín ___ summer.»", "q_en": "\"We were in Medellín ___ summer.\"", "o": ["the last", "last", "ago", "yesterday"], "o_en": ["the last", "last", "ago", "yesterday"], "a": 1, "why": "Last se usa sin artículo: last summer.", "why_en": "Last is used with no article: last summer." },
+        { "q": "«She was born ___ 2011.»", "q_en": "\"She was born ___ 2011.\"", "o": ["on", "at", "in", "ago"], "o_en": ["on", "at", "in", "ago"], "a": 2, "why": "Los años llevan in.", "why_en": "Years take in." }
+      ]
+    },
+    {
+      "id": "ingles-7-1-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Preguntas con was / were",
+      "t_en": "Questions with was / were",
+      "d": "12 min",
+      "content_es": "<h4>Preguntas de sí o no</h4><p>Se invierte el verbo y el sujeto: <i><b>Was</b> the movie good?</i> · <i><b>Were</b> you at school yesterday?</i></p><p>Respuestas cortas: <i>Yes, it was. / No, it wasn't.</i> — <i>Yes, we were. / No, we weren't.</i></p><h4>Con question words</h4><p><b>Wh- + was/were + sujeto</b>:</p><ul><li><i><b>Where were</b> you last night?</i></li><li><i><b>Why was</b> she absent?</i></li><li><i><b>How was</b> the trip?</i></li><li><i><b>Who was</b> your first teacher?</i> (aquí Who es el sujeto)</li></ul><h4>Recuerda</h4><p>Nunca se usa <i>did</i> junto a was/were: <i>Did you were?</i> es incorrecto.</p>",
+      "content_en": "<h4>Yes or no questions</h4><p>Invert the verb and the subject: <i><b>Was</b> the movie good?</i> · <i><b>Were</b> you at school yesterday?</i></p><p>Short answers: <i>Yes, it was. / No, it wasn't.</i> — <i>Yes, we were. / No, we weren't.</i></p><h4>With question words</h4><p><b>Wh- + was/were + subject</b>:</p><ul><li><i><b>Where were</b> you last night?</i></li><li><i><b>Why was</b> she absent?</i></li><li><i><b>How was</b> the trip?</i></li><li><i><b>Who was</b> your first teacher?</i></li></ul><h4>Remember</h4><p>Never use <i>did</i> together with was/were: <i>Did you were?</i> is wrong.</p>",
+      "fichas": [
+        { "t": "Was / Were + sujeto", "d": "Orden de la pregunta: el verbo va primero.", "d_en": "Question order: the verb comes first." },
+        { "t": "Yes, it was.", "d": "Respuesta corta: se repite el verbo, no el sujeto completo.", "d_en": "Short answer: the verb is repeated, not the full subject." },
+        { "t": "Where were you?", "d": "Wh- + was/were + sujeto.", "d_en": "Wh- + was/were + subject." },
+        { "t": "Sin did", "d": "was/were no admiten el auxiliar did.", "d_en": "was/were do not take the auxiliary did." }
+      ],
+      "quiz": [
+        { "q": "«___ your friends at the party?»", "q_en": "\"___ your friends at the party?\"", "o": ["Was", "Were", "Did", "Are"], "o_en": ["Was", "Were", "Did", "Are"], "a": 1, "why": "Your friends es plural: la pregunta empieza con Were.", "why_en": "Your friends is plural: the question starts with Were." },
+        { "q": "¿Cuál pregunta está bien formada?", "q_en": "Which question is well formed?", "o": ["Did you were tired?", "Were you tired?", "You were tired?", "Was you tired?"], "o_en": ["Did you were tired?", "Were you tired?", "You were tired?", "Was you tired?"], "a": 1, "why": "Con you el pasado de to be es were y se invierte con el sujeto.", "why_en": "With you the past of to be is were, inverted with the subject." },
+        { "q": "Respuesta corta a «Was the exam hard?» (sí)", "q_en": "Short answer to \"Was the exam hard?\" (yes)", "o": ["Yes, it did", "Yes, it was", "Yes, he was", "Yes, it were"], "o_en": ["Yes, it did", "Yes, it was", "Yes, he was", "Yes, it were"], "a": 1, "why": "The exam se reemplaza por it y se repite was.", "why_en": "The exam is replaced by it and was is repeated." }
+      ]
+    },
+    {
+      "id": "ingles-7-1-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "Pasado simple del verbo have: had",
+      "t_en": "Simple past of the verb have: had",
+      "d": "10 min",
+      "content_es": "<h4>Una sola forma</h4><p><b>had</b> sirve para todas las personas: <i>I had, you had, she had, they had.</i></p><h4>Negativo y pregunta</h4><p>Aquí sí se usa el auxiliar <b>did</b>, y have vuelve a su forma base:</p><ul><li><i>I <b>didn't have</b> breakfast.</i> (no <i>didn't had</i>)</li><li><i><b>Did</b> you <b>have</b> a good weekend?</i></li></ul><h4>Usos frecuentes</h4><ul><li>Posesión: <i>We had a small house.</i></li><li>Experiencias: <i>I had a great time.</i></li><li>Comidas: <i>She had lunch at two.</i></li></ul>",
+      "content_en": "<h4>One single form</h4><p><b>had</b> works for every person: <i>I had, you had, she had, they had.</i></p><h4>Negative and question</h4><p>Here you do use the auxiliary <b>did</b>, and have goes back to its base form:</p><ul><li><i>I <b>didn't have</b> breakfast.</i> (not <i>didn't had</i>)</li><li><i><b>Did</b> you <b>have</b> a good weekend?</i></li></ul><h4>Common uses</h4><ul><li>Possession: <i>We had a small house.</i></li><li>Experiences: <i>I had a great time.</i></li><li>Meals: <i>She had lunch at two.</i></li></ul>",
+      "fichas": [
+        { "t": "had", "d": "Pasado de have, igual para todas las personas.", "d_en": "Past of have, the same for every person." },
+        { "t": "didn't have", "d": "Negativo: did + have en base, nunca didn't had.", "d_en": "Negative: did + base have, never didn't had." },
+        { "t": "Did you have…?", "d": "Pregunta con auxiliar did y have en base.", "d_en": "Question with the auxiliary did and base have." },
+        { "t": "had a good time", "d": "Expresión fija: pasarla bien.", "d_en": "Fixed expression: to enjoy oneself." }
+      ],
+      "quiz": [
+        { "q": "«We ___ a party last Saturday.»", "q_en": "\"We ___ a party last Saturday.\"", "o": ["have", "has", "had", "haved"], "o_en": ["have", "has", "had", "haved"], "a": 2, "why": "Last Saturday indica pasado: had.", "why_en": "Last Saturday signals the past: had." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["I didn't had time", "I didn't have time", "I don't had time", "I not had time"], "o_en": ["I didn't had time", "I didn't have time", "I don't had time", "I not had time"], "a": 1, "why": "Después de didn't el verbo va en forma base.", "why_en": "After didn't the verb goes in its base form." },
+        { "q": "«___ she have a bike when she was young?»", "q_en": "\"___ she have a bike when she was young?\"", "o": ["Was", "Did", "Had", "Does"], "o_en": ["Was", "Did", "Had", "Does"], "a": 1, "why": "Have en pasado forma la pregunta con el auxiliar did.", "why_en": "Have in the past forms questions with the auxiliary did." }
+      ]
+    },
+    {
+      "id": "ingles-7-1-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Saludos y comandos de clase",
+      "t_en": "Greetings and classroom commands",
+      "d": "8 min",
+      "content_es": "<h4>Saludar y responder</h4><ul><li><i>How are you?</i> — <i>I'm fine, thanks. And you?</i></li><li><i>How's it going?</i> — <i>Pretty good.</i></li><li><i>Nice to meet you.</i> — <i>Nice to meet you too.</i></li><li><i>Long time no see!</i> — para alguien que no ves hace rato.</li></ul><h4>Comandos de clase</h4><p><i>Take out your notebook. Write down the date. Underline the verb. Match the columns. Circle the correct answer. Work in groups. Hand in your homework.</i></p><h4>Pedir ayuda</h4><p><i>Can you repeat, please? How do you say… in English? What does… mean?</i></p>",
+      "content_en": "<h4>Greeting and answering</h4><ul><li><i>How are you?</i> — <i>I'm fine, thanks. And you?</i></li><li><i>How's it going?</i> — <i>Pretty good.</i></li><li><i>Nice to meet you.</i> — <i>Nice to meet you too.</i></li><li><i>Long time no see!</i></li></ul><h4>Classroom commands</h4><p><i>Take out your notebook. Write down the date. Underline the verb. Match the columns. Circle the correct answer. Work in groups. Hand in your homework.</i></p><h4>Asking for help</h4><p><i>Can you repeat, please? How do you say… in English? What does… mean?</i></p>",
+      "fichas": [
+        { "t": "Nice to meet you", "d": "Se dice solo la primera vez que conoces a alguien.", "d_en": "Said only the first time you meet someone." },
+        { "t": "Hand in", "d": "Entregar un trabajo al profesor.", "d_en": "To give your work to the teacher." },
+        { "t": "Underline / Circle", "d": "Subrayar y encerrar en un círculo.", "d_en": "To draw a line under and to draw a circle around." },
+        { "t": "What does… mean?", "d": "Pregunta para pedir el significado de una palabra.", "d_en": "Question used to ask the meaning of a word." }
+      ],
+      "quiz": [
+        { "q": "¿Qué respondes a «Nice to meet you»?", "q_en": "What do you answer to \"Nice to meet you\"?", "o": ["You're welcome", "Nice to meet you too", "See you later", "I'm sorry"], "o_en": ["You're welcome", "Nice to meet you too", "See you later", "I'm sorry"], "a": 1, "why": "Se devuelve el saludo agregando too.", "why_en": "You return the greeting adding too." },
+        { "q": "«___ your homework tomorrow.» (entregar)", "q_en": "\"___ your homework tomorrow.\" (deliver it)", "o": ["Hand in", "Take out", "Write down", "Circle"], "o_en": ["Hand in", "Take out", "Write down", "Circle"], "a": 0, "why": "Hand in significa entregar el trabajo.", "why_en": "Hand in means to deliver your work." },
+        { "q": "¿Cómo preguntas el significado de una palabra?", "q_en": "How do you ask the meaning of a word?", "o": ["How do you write it?", "What does it mean?", "Where is it?", "How much is it?"], "o_en": ["How do you write it?", "What does it mean?", "Where is it?", "How much is it?"], "a": 1, "why": "Mean es significar: What does it mean?", "why_en": "Mean is the verb for meaning: What does it mean?" }
+      ]
+    },
+    {
+      "id": "ingles-7-1-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "El clima",
+      "t_en": "The weather",
+      "d": "10 min",
+      "content_es": "<h4>Describir el clima</h4><p><i>What's the weather like?</i> — <i>It's sunny, cloudy, rainy, windy, stormy, foggy, snowy.</i></p><p>Temperaturas: <b>hot</b> (caluroso), <b>warm</b> (templado), <b>cool</b> (fresco), <b>cold</b> (frío), <b>freezing</b> (helado).</p><h4>Sustantivo, adjetivo y verbo</h4><ul><li>Sustantivo: <i>rain, snow, wind, sun</i></li><li>Adjetivo: <i>rainy, snowy, windy, sunny</i></li><li>Verbo: <i>It's raining. It's snowing.</i></li></ul><h4>Frases útiles</h4><p><i>It's freezing today! · The weather was terrible yesterday. · It's 25 degrees.</i></p>",
+      "content_en": "<h4>Describing the weather</h4><p><i>What's the weather like?</i> — <i>It's sunny, cloudy, rainy, windy, stormy, foggy, snowy.</i></p><p>Temperatures: <b>hot</b>, <b>warm</b>, <b>cool</b>, <b>cold</b>, <b>freezing</b>.</p><h4>Noun, adjective and verb</h4><ul><li>Noun: <i>rain, snow, wind, sun</i></li><li>Adjective: <i>rainy, snowy, windy, sunny</i></li><li>Verb: <i>It's raining. It's snowing.</i></li></ul><h4>Useful phrases</h4><p><i>It's freezing today! · The weather was terrible yesterday. · It's 25 degrees.</i></p>",
+      "fichas": [
+        { "t": "sunny / rainy / windy", "d": "Adjetivos del clima: se forman con -y.", "d_en": "Weather adjectives: they are formed with -y." },
+        { "t": "It's raining", "d": "Verbo: la lluvia está cayendo en este momento.", "d_en": "Verb form: it is falling right now." },
+        { "t": "freezing", "d": "Muchísimo frío, bajo cero.", "d_en": "Extremely cold, below zero." },
+        { "t": "warm vs hot", "d": "warm es agradable y tibio; hot es realmente caluroso.", "d_en": "warm is pleasantly mild; hot is really high heat." }
+      ],
+      "quiz": [
+        { "q": "«Take an umbrella, it's ___.»", "q_en": "\"Take an umbrella, it's ___.\"", "o": ["sunny", "raining", "windy", "warm"], "o_en": ["sunny", "raining", "windy", "warm"], "a": 1, "why": "El paraguas se lleva cuando está lloviendo.", "why_en": "You take an umbrella when it is raining." },
+        { "q": "¿Cuál es el adjetivo de «wind»?", "q_en": "What is the adjective of \"wind\"?", "o": ["winding", "windy", "winded", "windful"], "o_en": ["winding", "windy", "winded", "windful"], "a": 1, "why": "Los adjetivos del clima se forman agregando -y.", "why_en": "Weather adjectives are formed by adding -y." },
+        { "q": "«It's ___ today: -5 degrees.»", "q_en": "\"It's ___ today: -5 degrees.\"", "o": ["warm", "cool", "freezing", "hot"], "o_en": ["warm", "cool", "freezing", "hot"], "a": 2, "why": "Bajo cero se describe con freezing.", "why_en": "Below zero is described as freezing." }
+      ]
+    },
+    {
+      "id": "ingles-7-1-8",
+      "num": 8,
+      "tipo": "vocabulary",
+      "t": "Apariencia física",
+      "t_en": "Physical appearance",
+      "d": "12 min",
+      "content_es": "<h4>Altura y contextura</h4><p><b>tall</b>, <b>short</b>, <b>thin/slim</b>, <b>heavy</b>, <b>strong</b>, <b>athletic</b>.</p><h4>Cabello</h4><p><b>long / short / medium-length</b> + <b>straight / curly / wavy</b> + <b>black / brown / blond / red</b> hair.<br><i>She has long curly brown hair.</i></p><h4>Cara</h4><p><b>eyes</b>: blue, green, brown eyes. <b>glasses</b> (gafas), <b>freckles</b> (pecas), <b>beard</b> (barba), <b>mustache</b> (bigote).</p><h4>Los dos verbos</h4><ul><li><b>be</b> + adjetivo: <i>He <b>is</b> tall.</i></li><li><b>have</b> + parte del cuerpo: <i>He <b>has</b> green eyes.</i></li></ul><p>Orden de los adjetivos: tamaño → forma → color. <i>long straight black hair.</i></p>",
+      "content_en": "<h4>Height and build</h4><p><b>tall</b>, <b>short</b>, <b>thin/slim</b>, <b>heavy</b>, <b>strong</b>, <b>athletic</b>.</p><h4>Hair</h4><p><b>long / short / medium-length</b> + <b>straight / curly / wavy</b> + <b>black / brown / blond / red</b> hair.<br><i>She has long curly brown hair.</i></p><h4>Face</h4><p><b>eyes</b>: blue, green, brown eyes. <b>glasses</b>, <b>freckles</b>, <b>beard</b>, <b>mustache</b>.</p><h4>The two verbs</h4><ul><li><b>be</b> + adjective: <i>He <b>is</b> tall.</i></li><li><b>have</b> + body feature: <i>He <b>has</b> green eyes.</i></li></ul><p>Adjective order: size → shape → color. <i>long straight black hair.</i></p>",
+      "fichas": [
+        { "t": "be vs have", "d": "He is tall (adjetivo) / He has blue eyes (rasgo).", "d_en": "He is tall (adjective) / He has blue eyes (feature)." },
+        { "t": "curly / straight / wavy", "d": "Cabello rizado, liso y ondulado.", "d_en": "Curly, straight and wavy hair." },
+        { "t": "Orden de adjetivos", "d": "Tamaño, forma y luego color: long curly black hair.", "d_en": "Size, shape and then color: long curly black hair." },
+        { "t": "hair es incontable", "d": "Se dice her hair is long, no her hairs are long.", "d_en": "We say her hair is long, not her hairs are long." }
+      ],
+      "quiz": [
+        { "q": "«My sister ___ long hair.»", "q_en": "\"My sister ___ long hair.\"", "o": ["is", "has", "have", "is having"], "o_en": ["is", "has", "have", "is having"], "a": 1, "why": "Los rasgos físicos se expresan con have/has.", "why_en": "Physical features are expressed with have/has." },
+        { "q": "¿Cuál orden de adjetivos es correcto?", "q_en": "Which adjective order is correct?", "o": ["black long curly hair", "long curly black hair", "curly black long hair", "black curly long hair"], "o_en": ["black long curly hair", "long curly black hair", "curly black long hair", "black curly long hair"], "a": 1, "why": "El orden es tamaño, forma y color.", "why_en": "The order is size, shape and color." },
+        { "q": "«He ___ very tall.»", "q_en": "\"He ___ very tall.\"", "o": ["has", "have", "is", "does"], "o_en": ["has", "have", "is", "does"], "a": 2, "why": "Tall es adjetivo, así que va con to be.", "why_en": "Tall is an adjective, so it goes with to be." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-7-1-repaso",
+    "titulo": "Repaso — Always Doing Something!",
+    "titulo_en": "Review — Always Doing Something!",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El periodo enfrenta <b>tres momentos</b>: lo que haces siempre (presente simple), lo que estás haciendo ahora (presente progresivo) y cómo eran las cosas antes (<b>was/were</b> y <b>had</b>).</p><h4>Puntos gramaticales</h4><ul><li>Verbos de estado (know, like, want) no van en -ing.</li><li>was para I/he/she/it; were para you/we/they. Sin did.</li><li>had es igual para todas las personas, pero el negativo y la pregunta sí usan did + have.</li><li>Expresiones de pasado: yesterday, last week, two days ago, in 2020.</li></ul><h4>Vocabulario</h4><p>Saludos y comandos de clase, clima (sustantivo, adjetivo y verbo) y apariencia física con be y have.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The term contrasts <b>three moments</b>: what you always do (simple present), what you are doing now (present progressive) and how things were before (<b>was/were</b> and <b>had</b>).</p><h4>Grammar points</h4><ul><li>State verbs (know, like, want) do not take -ing.</li><li>was for I/he/she/it; were for you/we/they. No did.</li><li>had is the same for every person, but negatives and questions do use did + have.</li><li>Past expressions: yesterday, last week, two days ago, in 2020.</li></ul><h4>Vocabulary</h4><p>Greetings and classroom commands, weather (noun, adjective and verb) and physical appearance with be and have.</p>",
+    "puntos_clave": [
+      ["Look! / right now → presente progresivo.", "Look! / right now → present progressive."],
+      ["I know, no I am knowing: los verbos de estado no llevan -ing.", "I know, not I am knowing: state verbs take no -ing."],
+      ["was/were no usan did en negativo ni en pregunta.", "was/were do not use did in negatives or questions."],
+      ["didn't have, nunca didn't had.", "didn't have, never didn't had."],
+      ["ago va después de la cantidad: five years ago.", "ago goes after the amount: five years ago."],
+      ["be + adjetivo, have + rasgo físico.", "be + adjective, have + physical feature."]
+    ],
+    "preguntas": [
+      { "q": "«Right now I ___ my homework.»", "q_en": "\"Right now I ___ my homework.\"", "o": ["do", "does", "am doing", "did"], "o_en": ["do", "does", "am doing", "did"], "a": 2, "why": "Right now pide presente progresivo.", "why_en": "Right now calls for the present progressive." },
+      { "q": "«She ___ at home yesterday.»", "q_en": "\"She ___ at home yesterday.\"", "o": ["were", "was", "is", "did"], "o_en": ["were", "was", "is", "did"], "a": 1, "why": "She lleva was en pasado.", "why_en": "She takes was in the past." },
+      { "q": "«They ___ a car ten years ago.»", "q_en": "\"They ___ a car ten years ago.\"", "o": ["have", "has", "had", "were"], "o_en": ["have", "has", "had", "were"], "a": 2, "why": "Ten years ago indica pasado: had.", "why_en": "Ten years ago signals the past: had." },
+      { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["I didn't have money", "Were you there?", "Did you were there?", "She wasn't happy"], "o_en": ["I didn't have money", "Were you there?", "Did you were there?", "She wasn't happy"], "a": 2, "why": "was/were nunca se combinan con did.", "why_en": "was/were are never combined with did." },
+      { "q": "«___ was your weekend?»", "q_en": "\"___ was your weekend?\"", "o": ["What", "How", "Who", "Where"], "o_en": ["What", "How", "Who", "Where"], "a": 1, "why": "Se pregunta por la calidad de la experiencia: How.", "why_en": "It asks about the quality of the experience: How." },
+      { "q": "«My brother ___ curly hair.»", "q_en": "\"My brother ___ curly hair.\"", "o": ["is", "has", "have", "was"], "o_en": ["is", "has", "have", "was"], "a": 1, "why": "El cabello es un rasgo: se usa has.", "why_en": "Hair is a feature: we use has." },
+      { "q": "«We visited the museum ___ month.»", "q_en": "\"We visited the museum ___ month.\"", "o": ["ago", "last", "the last", "yesterday"], "o_en": ["ago", "last", "the last", "yesterday"], "a": 1, "why": "Last month se escribe sin artículo.", "why_en": "Last month is written with no article." },
+      { "q": "«It ___ all night. The streets are wet.»", "q_en": "\"It ___ all night. The streets are wet.\"", "o": ["rain", "rainy", "rained", "is rain"], "o_en": ["rain", "rainy", "rained", "is rain"], "a": 2, "why": "All night indica una acción terminada en el pasado.", "why_en": "All night signals a finished past action." }
+    ]
+  }
+}

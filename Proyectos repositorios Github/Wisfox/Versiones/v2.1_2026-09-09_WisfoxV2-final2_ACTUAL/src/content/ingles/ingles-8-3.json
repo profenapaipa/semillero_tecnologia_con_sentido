@@ -1,0 +1,196 @@
+{
+  "id": "ingles-8-3",
+  "materia": "ingles",
+  "grado": "8",
+  "grado_nombre": "Octavo",
+  "periodo": 3,
+  "periodo_label": { "es": "Periodo III", "en": "Term III" },
+  "titulo": "Exploring Fashion and Expressing Opinions Through Time",
+  "titulo_es": "La moda a través del tiempo y la expresión de opiniones",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Describo procesos que empezaron en el pasado y continúan. Expreso, sustento y contrasto opiniones sobre gustos, estilos y cambios sociales.",
+  "competencias": "Usar el presente perfecto continuo para procesos en curso; emplear modales para expresar posibilidad y deducción; hablar de horas, fechas y siglos; describir ropa y accesorios; argumentar y responder a opiniones ajenas.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Fashion Through the Decades",
+    "descripcion_es": "En grupos, los estudiantes eligen una década (los 60, 80, 2000) y presentan cómo vestía la gente, qué ha cambiado desde entonces y sustentan con argumentos por qué ese estilo vuelve o no.",
+    "descripcion_en": "In groups, students choose a decade (the 60s, 80s, 2000s) and present how people dressed, what has changed since then, and argue why that style is or is not coming back."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-8-3-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Present perfect continuous",
+      "t_en": "Present perfect continuous",
+      "d": "14 min",
+      "content_es": "<h4>Cómo se forma</h4><p><b>have / has been + verbo-ing</b>: <i>I <b>have been studying</b> for two hours.</i></p><h4>Para qué sirve</h4><ul><li>Una acción que empezó antes y <b>sigue ocurriendo</b>: <i>She has been working here since March.</i></li><li>Una acción reciente cuyo <b>efecto se ve</b>: <i>You look tired. Have you been running?</i></li><li>Enfatizar la <b>duración</b>, no el resultado: <i>They've been waiting for an hour.</i></li></ul><h4>Con for y since</h4><p><b>for</b> + duración (for two hours, for a long time) · <b>since</b> + punto de inicio (since 2020, since Monday).</p><h4>Ojo</h4><p>Los verbos de estado (know, be, have de posesión) <b>no</b> usan esta forma: se dice <i>I have known her for years</i>, no <i>I have been knowing</i>.</p>",
+      "content_en": "<h4>How it is formed</h4><p><b>have / has been + verb-ing</b>: <i>I <b>have been studying</b> for two hours.</i></p><h4>What it is for</h4><ul><li>An action that started before and <b>is still going on</b>: <i>She has been working here since March.</i></li><li>A recent action whose <b>effect is visible</b>: <i>You look tired. Have you been running?</i></li><li>Emphasizing <b>duration</b>, not the result: <i>They've been waiting for an hour.</i></li></ul><h4>With for and since</h4><p><b>for</b> + duration (for two hours) · <b>since</b> + starting point (since 2020).</p><h4>Careful</h4><p>State verbs (know, be, have meaning possession) do <b>not</b> use this form: say <i>I have known her for years</i>, not <i>I have been knowing</i>.</p>",
+      "fichas": [
+        { "t": "have been + -ing", "d": "Estructura del presente perfecto continuo.", "d_en": "Structure of the present perfect continuous." },
+        { "t": "Énfasis en la duración", "d": "Importa cuánto tiempo lleva, no el resultado.", "d_en": "What matters is how long, not the result." },
+        { "t": "for / since", "d": "for + duración; since + momento de inicio.", "d_en": "for + duration; since + starting point." },
+        { "t": "Sin verbos de estado", "d": "I have known, no I have been knowing.", "d_en": "I have known, not I have been knowing." }
+      ],
+      "quiz": [
+        { "q": "«She ___ English for five years.»", "q_en": "\"She ___ English for five years.\"", "o": ["is studying", "has been studying", "studies", "was studying"], "o_en": ["is studying", "has been studying", "studies", "was studying"], "a": 1, "why": "For five years indica duración que continúa: perfecto continuo.", "why_en": "For five years marks an ongoing duration: present perfect continuous." },
+        { "q": "«Your hands are dirty. What ___?»", "q_en": "\"Your hands are dirty. What ___?\"", "o": ["do you do", "did you do", "have you been doing", "are you do"], "o_en": ["do you do", "did you do", "have you been doing", "are you do"], "a": 2, "why": "El efecto presente de una acción reciente pide el perfecto continuo.", "why_en": "The present effect of a recent action calls for the present perfect continuous." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["I've been waiting for an hour", "I've been knowing her for years", "I've known her for years", "He's been working since 8"], "o_en": ["I've been waiting for an hour", "I've been knowing her for years", "I've known her for years", "He's been working since 8"], "a": 1, "why": "Know es verbo de estado: no admite forma continua.", "why_en": "Know is a state verb: it has no continuous form." }
+      ]
+    },
+    {
+      "id": "ingles-8-3-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Present perfect simple vs continuous",
+      "t_en": "Present perfect simple vs continuous",
+      "d": "12 min",
+      "content_es": "<h4>Resultado o proceso</h4><ul><li><b>Simple</b> → el <b>resultado</b>, lo terminado: <i>I've written three emails.</i> (están hechos)</li><li><b>Continuo</b> → el <b>proceso</b>, la duración: <i>I've been writing emails all morning.</i> (quizá sigo)</li></ul><h4>Con cantidad, siempre simple</h4><p>Si dices <b>cuántos</b>, va el simple: <i>She has read <b>five books</b> this month</i>, no <i>has been reading five books</i>.</p><h4>Con duración, casi siempre continuo</h4><p><i>She has been reading <b>all afternoon</b>.</i></p><h4>Con live, work y study</h4><p>Con estos tres verbos y for/since los dos son válidos y significan casi lo mismo: <i>I've lived here for ten years</i> = <i>I've been living here for ten years.</i></p>",
+      "content_en": "<h4>Result or process</h4><ul><li><b>Simple</b> → the <b>result</b>, what is finished: <i>I've written three emails.</i></li><li><b>Continuous</b> → the <b>process</b>, the duration: <i>I've been writing emails all morning.</i></li></ul><h4>With a quantity, always simple</h4><p>If you say <b>how many</b>, use the simple: <i>She has read <b>five books</b> this month</i>, not <i>has been reading five books</i>.</p><h4>With a duration, usually continuous</h4><p><i>She has been reading <b>all afternoon</b>.</i></p><h4>With live, work and study</h4><p>With these three verbs and for/since both forms are valid and mean almost the same: <i>I've lived here for ten years</i> = <i>I've been living here for ten years.</i></p>",
+      "fichas": [
+        { "t": "Simple = resultado", "d": "I've painted the room: ya está pintado.", "d_en": "I've painted the room: it is finished." },
+        { "t": "Continuo = proceso", "d": "I've been painting: importa el tiempo invertido.", "d_en": "I've been painting: the time spent is what matters." },
+        { "t": "Con número → simple", "d": "I've read three chapters, no I've been reading three.", "d_en": "I've read three chapters, not I've been reading three." },
+        { "t": "live / work / study", "d": "Con for y since ambas formas son equivalentes.", "d_en": "With for and since both forms are equivalent." }
+      ],
+      "quiz": [
+        { "q": "«I've ___ four exercises so far.»", "q_en": "\"I've ___ four exercises so far.\"", "o": ["been doing", "done", "did", "do"], "o_en": ["been doing", "done", "did", "do"], "a": 1, "why": "Hay una cantidad concreta: presente perfecto simple.", "why_en": "There is a specific quantity: present perfect simple." },
+        { "q": "«He's tired because he ___ all day.»", "q_en": "\"He's tired because he ___ all day.\"", "o": ["has worked", "has been working", "works", "worked"], "o_en": ["has worked", "has been working", "works", "worked"], "a": 1, "why": "All day enfatiza la duración del proceso.", "why_en": "All day emphasizes the duration of the process." },
+        { "q": "«The room looks great. She ___ it.»", "q_en": "\"The room looks great. She ___ it.\"", "o": ["has been painting", "has painted", "paints", "is painting"], "o_en": ["has been painting", "has painted", "paints", "is painting"], "a": 1, "why": "Se ve el resultado terminado: perfecto simple.", "why_en": "The finished result is visible: present perfect simple." }
+      ]
+    },
+    {
+      "id": "ingles-8-3-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Modales de posibilidad y deducción",
+      "t_en": "Modals of possibility and deduction",
+      "d": "14 min",
+      "content_es": "<h4>Qué tan seguro estás</h4><ul><li><b>must</b> – casi seguro que sí: <i>She must be at home; the light is on.</i></li><li><b>may / might / could</b> – es posible: <i>It might rain later.</i></li><li><b>can't</b> – casi seguro que no: <i>He can't be 40; he looks much younger.</i></li></ul><h4>Ojo con la negación</h4><p>La deducción negativa es <b>can't</b>, no <i>mustn't</i>. <b>mustn't</b> significa prohibido, no «seguro que no».</p><h4>Otros usos</h4><ul><li>Consejo: <b>should / ought to</b> — <i>You should try that jacket.</i></li><li>Permiso formal: <b>may</b> — <i>May I try it on?</i></li><li>Petición educada: <b>could / would</b> — <i>Could you show me another size?</i></li></ul><p>Todos van con el <b>verbo en base</b> y no llevan -s ni to.</p>",
+      "content_en": "<h4>How sure you are</h4><ul><li><b>must</b> – almost certainly yes: <i>She must be at home; the light is on.</i></li><li><b>may / might / could</b> – it is possible: <i>It might rain later.</i></li><li><b>can't</b> – almost certainly not: <i>He can't be 40; he looks much younger.</i></li></ul><h4>Careful with the negative</h4><p>The negative deduction is <b>can't</b>, not <i>mustn't</i>. <b>mustn't</b> means forbidden, not \"surely not\".</p><h4>Other uses</h4><ul><li>Advice: <b>should / ought to</b> — <i>You should try that jacket.</i></li><li>Formal permission: <b>may</b> — <i>May I try it on?</i></li><li>Polite request: <b>could / would</b> — <i>Could you show me another size?</i></li></ul><p>They all take the <b>base verb</b> and never add -s or to.</p>",
+      "fichas": [
+        { "t": "must (deducción)", "d": "Casi seguro que sí, por la evidencia disponible.", "d_en": "Almost certainly true, based on evidence." },
+        { "t": "might / may / could", "d": "Posibilidad: puede que sí, puede que no.", "d_en": "Possibility: it may or may not be so." },
+        { "t": "can't (deducción)", "d": "Casi seguro que no. No confundir con mustn't.", "d_en": "Almost certainly not. Not to be confused with mustn't." },
+        { "t": "ought to", "d": "Consejo, equivalente a should. Es el único modal con to.", "d_en": "Advice, equivalent to should. The only modal with to." }
+      ],
+      "quiz": [
+        { "q": "«The lights are off. They ___ be out.»", "q_en": "\"The lights are off. They ___ be out.\"", "o": ["can't", "must", "should", "may not"], "o_en": ["can't", "must", "should", "may not"], "a": 1, "why": "La evidencia lleva a una conclusión casi segura: must.", "why_en": "The evidence leads to an almost certain conclusion: must." },
+        { "q": "«That ___ be Ana; she's in Medellín today.»", "q_en": "\"That ___ be Ana; she's in Medellín today.\"", "o": ["mustn't", "can't", "shouldn't", "may"], "o_en": ["mustn't", "can't", "shouldn't", "may"], "a": 1, "why": "La deducción negativa se hace con can't.", "why_en": "The negative deduction is made with can't." },
+        { "q": "«Take an umbrella; it ___ rain.»", "q_en": "\"Take an umbrella; it ___ rain.\"", "o": ["must", "can't", "might", "should"], "o_en": ["must", "can't", "might", "should"], "a": 2, "why": "Es una posibilidad, no una certeza: might.", "why_en": "It is a possibility, not a certainty: might." }
+      ]
+    },
+    {
+      "id": "ingles-8-3-4",
+      "num": 4,
+      "tipo": "vocabulary",
+      "t": "Horas, fechas, años y siglos",
+      "t_en": "Hours, dates, years and centuries",
+      "d": "12 min",
+      "content_es": "<h4>La hora</h4><p>Formal: <i>It's a quarter past nine. It's twenty to six.</i><br>Digital: <i>It's nine fifteen. It's five forty.</i><br><b>a.m.</b> antes del mediodía, <b>p.m.</b> después. <i>Noon</i> es mediodía y <i>midnight</i> medianoche.</p><h4>Fechas</h4><p><i>on August 7th, 1819</i> → <i>on August the seventh, eighteen nineteen</i>.</p><h4>Años</h4><ul><li>1985 → <i>nineteen eighty-five</i></li><li>1900 → <i>nineteen hundred</i></li><li>2008 → <i>two thousand eight</i></li><li>2026 → <i>twenty twenty-six</i></li></ul><h4>Siglos y décadas</h4><p><i>the 20th century</i> = del año 1901 al 2000. <i>the 1980s</i> (se lee <i>the nineteen eighties</i>) son «los ochenta».</p><p>Preposiciones: <b>in</b> the 90s, <b>in</b> the 19th century, <b>on</b> July 4th, <b>at</b> 8 p.m.</p>",
+      "content_en": "<h4>The time</h4><p>Formal: <i>It's a quarter past nine. It's twenty to six.</i><br>Digital: <i>It's nine fifteen. It's five forty.</i><br><b>a.m.</b> before noon, <b>p.m.</b> after. <i>Noon</i> is 12:00 and <i>midnight</i> is 00:00.</p><h4>Dates</h4><p><i>on August 7th, 1819</i> → <i>on August the seventh, eighteen nineteen</i>.</p><h4>Years</h4><ul><li>1985 → <i>nineteen eighty-five</i></li><li>1900 → <i>nineteen hundred</i></li><li>2008 → <i>two thousand eight</i></li><li>2026 → <i>twenty twenty-six</i></li></ul><h4>Centuries and decades</h4><p><i>the 20th century</i> covers 1901 to 2000. <i>the 1980s</i> (read <i>the nineteen eighties</i>) means the eighties.</p><p>Prepositions: <b>in</b> the 90s, <b>in</b> the 19th century, <b>on</b> July 4th, <b>at</b> 8 p.m.</p>",
+      "fichas": [
+        { "t": "noon / midnight", "d": "Mediodía y medianoche: no se dice 12 a.m. o p.m. sin más.", "d_en": "12:00 and 00:00, named with their own words." },
+        { "t": "the 1980s", "d": "Las décadas se escriben con -s y sin apóstrofe.", "d_en": "Decades are written with -s and no apostrophe." },
+        { "t": "the 20th century", "d": "El siglo XX va del 1901 al 2000.", "d_en": "The 20th century runs from 1901 to 2000." },
+        { "t": "in the 90s", "d": "Las décadas y siglos llevan la preposición in.", "d_en": "Decades and centuries take the preposition in." }
+      ],
+      "quiz": [
+        { "q": "¿Cómo se lee 1985?", "q_en": "How do you read 1985?", "o": ["one thousand nine hundred eighty-five", "nineteen eighty-five", "one nine eight five", "nineteen hundred eighty five"], "o_en": ["one thousand nine hundred eighty-five", "nineteen eighty-five", "one nine eight five", "nineteen hundred eighty five"], "a": 1, "why": "Los años del siglo XX se leen en dos pares.", "why_en": "Twentieth century years are read in two pairs." },
+        { "q": "«Rock was very popular ___ the 70s.»", "q_en": "\"Rock was very popular ___ the 70s.\"", "o": ["on", "at", "in", "of"], "o_en": ["on", "at", "in", "of"], "a": 2, "why": "Las décadas llevan in.", "why_en": "Decades take in." },
+        { "q": "«It's 5:40» también se dice…", "q_en": "\"It's 5:40\" can also be said…", "o": ["twenty past five", "twenty to six", "quarter to six", "half past five"], "o_en": ["twenty past five", "twenty to six", "quarter to six", "half past five"], "a": 1, "why": "Faltan veinte minutos para las seis.", "why_en": "It is twenty minutes before six." }
+      ]
+    },
+    {
+      "id": "ingles-8-3-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Ropa y accesorios",
+      "t_en": "Clothes and accessories",
+      "d": "12 min",
+      "content_es": "<h4>Prendas</h4><p><b>hoodie</b> (buzo con capucha), <b>blouse</b>, <b>suit</b> (traje), <b>tie</b> (corbata), <b>vest</b> (chaleco), <b>leggings</b>, <b>overalls</b> (overol), <b>sneakers</b> (tenis), <b>sandals</b>, <b>heels</b> (tacones), <b>raincoat</b>.</p><h4>Accesorios</h4><p><b>belt</b> (cinturón), <b>watch</b>, <b>earrings</b> (aretes), <b>necklace</b> (collar), <b>bracelet</b>, <b>ring</b>, <b>sunglasses</b>, <b>backpack</b>, <b>purse / handbag</b>.</p><h4>Describir un atuendo</h4><p>Orden: opinión → tamaño → edad → color → material.<br><i>a beautiful long black leather jacket.</i></p><h4>Materiales y estilos</h4><p><b>cotton</b> (algodón), <b>wool</b> (lana), <b>leather</b> (cuero), <b>denim</b> (mezclilla), <b>silk</b> (seda). Estilos: <b>casual</b>, <b>formal</b>, <b>sporty</b>, <b>vintage</b>, <b>trendy</b> (a la moda), <b>outfit</b> (conjunto).</p>",
+      "content_en": "<h4>Garments</h4><p><b>hoodie</b>, <b>blouse</b>, <b>suit</b>, <b>tie</b>, <b>vest</b>, <b>leggings</b>, <b>overalls</b>, <b>sneakers</b>, <b>sandals</b>, <b>heels</b>, <b>raincoat</b>.</p><h4>Accessories</h4><p><b>belt</b>, <b>watch</b>, <b>earrings</b>, <b>necklace</b>, <b>bracelet</b>, <b>ring</b>, <b>sunglasses</b>, <b>backpack</b>, <b>purse / handbag</b>.</p><h4>Describing an outfit</h4><p>Order: opinion → size → age → color → material.<br><i>a beautiful long black leather jacket.</i></p><h4>Materials and styles</h4><p><b>cotton</b>, <b>wool</b>, <b>leather</b>, <b>denim</b>, <b>silk</b>. Styles: <b>casual</b>, <b>formal</b>, <b>sporty</b>, <b>vintage</b>, <b>trendy</b>, <b>outfit</b>.</p>",
+      "fichas": [
+        { "t": "Orden de adjetivos", "d": "Opinión, tamaño, edad, color, material: a nice big old brown leather bag.", "d_en": "Opinion, size, age, color, material." },
+        { "t": "trendy", "d": "A la moda, actual.", "d_en": "Fashionable right now." },
+        { "t": "outfit", "d": "El conjunto completo de ropa que llevas.", "d_en": "The complete set of clothes you wear." },
+        { "t": "denim", "d": "La tela del jean: denim jacket.", "d_en": "The fabric jeans are made of: denim jacket." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál orden de adjetivos es correcto?", "q_en": "Which adjective order is correct?", "o": ["a leather black long jacket", "a long black leather jacket", "a black long leather jacket", "a leather long black jacket"], "o_en": ["a leather black long jacket", "a long black leather jacket", "a black long leather jacket", "a leather long black jacket"], "a": 1, "why": "El orden es tamaño, color y material.", "why_en": "The order is size, color and material." },
+        { "q": "¿Qué es un «belt»?", "q_en": "What is a \"belt\"?", "o": ["Un collar", "Un cinturón", "Una bufanda", "Un anillo"], "o_en": ["A necklace", "A strap worn around the waist", "A scarf", "A ring"], "a": 1, "why": "El belt se usa en la cintura.", "why_en": "A belt is worn around the waist." },
+        { "q": "«That jacket is very ___.» (a la moda)", "q_en": "\"That jacket is very ___.\" (fashionable)", "o": ["trendy", "formal", "vintage", "casual"], "o_en": ["trendy", "formal", "vintage", "casual"], "a": 0, "why": "Trendy significa que está de moda ahora.", "why_en": "Trendy means fashionable right now." }
+      ]
+    },
+    {
+      "id": "ingles-8-3-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Hablar de la moda a través del tiempo",
+      "t_en": "Talking about fashion through time",
+      "d": "12 min",
+      "content_es": "<h4>Used to: lo que antes era y ya no</h4><p><b>used to + verbo base</b> describe hábitos o estados pasados que ya terminaron: <i>People <b>used to</b> wear hats every day.</i></p><ul><li>Negativo: <i>They <b>didn't use to</b> wear jeans.</i> (sin -d)</li><li>Pregunta: <i><b>Did</b> people <b>use to</b> dress like that?</i></li></ul><h4>Verbos de cambio</h4><p><b>become</b> (volverse), <b>turn into</b>, <b>go out of fashion</b> (pasar de moda), <b>come back</b> (volver), <b>catch on</b> (ponerse de moda), <b>disappear</b>.</p><h4>Expresiones de época</h4><p><i>back then, in those days, nowadays, these days, ever since, over the years.</i></p><p><i>Back then everyone wore bell-bottoms; nowadays they're coming back.</i></p>",
+      "content_en": "<h4>Used to: what was true and is not anymore</h4><p><b>used to + base verb</b> describes past habits or states that are over: <i>People <b>used to</b> wear hats every day.</i></p><ul><li>Negative: <i>They <b>didn't use to</b> wear jeans.</i> (no -d)</li><li>Question: <i><b>Did</b> people <b>use to</b> dress like that?</i></li></ul><h4>Verbs of change</h4><p><b>become</b>, <b>turn into</b>, <b>go out of fashion</b>, <b>come back</b>, <b>catch on</b>, <b>disappear</b>.</p><h4>Time expressions</h4><p><i>back then, in those days, nowadays, these days, ever since, over the years.</i></p><p><i>Back then everyone wore bell-bottoms; nowadays they're coming back.</i></p>",
+      "fichas": [
+        { "t": "used to + verbo base", "d": "Hábito pasado que ya no ocurre.", "d_en": "A past habit that no longer happens." },
+        { "t": "didn't use to", "d": "En negativo se pierde la -d: use to.", "d_en": "In the negative the -d is dropped: use to." },
+        { "t": "go out of fashion", "d": "Pasar de moda.", "d_en": "To stop being fashionable." },
+        { "t": "nowadays vs back then", "d": "Hoy en día vs en aquella época.", "d_en": "These days vs at that time." }
+      ],
+      "quiz": [
+        { "q": "«She ___ wear glasses when she was a child.»", "q_en": "\"She ___ wear glasses when she was a child.\"", "o": ["use to", "used to", "is used to", "uses to"], "o_en": ["use to", "used to", "is used to", "uses to"], "a": 1, "why": "En afirmativo la forma es used to.", "why_en": "In the affirmative the form is used to." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["They didn't used to travel", "They didn't use to travel", "They not used to travel", "They don't used to travel"], "o_en": ["They didn't used to travel", "They didn't use to travel", "They not used to travel", "They don't used to travel"], "a": 1, "why": "Después de didn't se pierde la -d: use to.", "why_en": "After didn't the -d is dropped: use to." },
+        { "q": "¿Qué significa «go out of fashion»?", "q_en": "What does \"go out of fashion\" mean?", "o": ["Ponerse de moda", "Pasar de moda", "Salir a comprar ropa", "Volver a usarse"], "o_en": ["To become fashionable", "To stop being fashionable", "To go shopping", "To be worn again"], "a": 1, "why": "Go out of fashion es dejar de estar de moda.", "why_en": "Go out of fashion means to stop being fashionable." }
+      ]
+    },
+    {
+      "id": "ingles-8-3-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Argumentar y sustentar opiniones",
+      "t_en": "Arguing and supporting points of view",
+      "d": "14 min",
+      "content_es": "<h4>Dar tu opinión</h4><p><i>I think… · I believe… · In my opinion… · From my point of view… · As far as I'm concerned… · If you ask me…</i></p><h4>Estar de acuerdo</h4><p><i>I agree. · Exactly! · I couldn't agree more. · That's true. · You have a point there.</i></p><h4>Estar en desacuerdo</h4><p><i>I disagree. · I'm sorry, but I can't agree with that. · I see your point, but… · Perhaps, but… · I'm not so sure about that.</i></p><h4>Sustentar</h4><p><b>because, since, as</b> (razón) · <b>for example, for instance, such as</b> (ejemplo) · <b>therefore, that's why, as a result</b> (consecuencia) · <b>on the other hand</b> (por otro lado).</p><h4>Ojo con la cortesía</h4><p>Un desacuerdo directo (<i>You're wrong</i>) suena agresivo en inglés. Se suaviza: <i>I see your point, but I think…</i></p>",
+      "content_en": "<h4>Giving your opinion</h4><p><i>I think… · I believe… · In my opinion… · From my point of view… · As far as I'm concerned… · If you ask me…</i></p><h4>Agreeing</h4><p><i>I agree. · Exactly! · I couldn't agree more. · That's true. · You have a point there.</i></p><h4>Disagreeing</h4><p><i>I disagree. · I'm sorry, but I can't agree with that. · I see your point, but… · Perhaps, but… · I'm not so sure about that.</i></p><h4>Supporting</h4><p><b>because, since, as</b> (reason) · <b>for example, for instance, such as</b> (example) · <b>therefore, that's why, as a result</b> (consequence) · <b>on the other hand</b>.</p><h4>Careful with politeness</h4><p>A blunt disagreement (<i>You're wrong</i>) sounds aggressive in English. Soften it: <i>I see your point, but I think…</i></p>",
+      "fichas": [
+        { "t": "I couldn't agree more", "d": "Acuerdo total, no desacuerdo: estoy completamente de acuerdo.", "d_en": "Total agreement, not disagreement." },
+        { "t": "You have a point", "d": "Reconoce que el otro tiene razón en algo.", "d_en": "Acknowledges the other person is partly right." },
+        { "t": "I see your point, but…", "d": "Desacuerdo suavizado y educado.", "d_en": "A softened, polite disagreement." },
+        { "t": "for instance", "d": "Por ejemplo. Equivale a for example.", "d_en": "For example, in a slightly more formal register." },
+        { "t": "on the other hand", "d": "Introduce el lado contrario del argumento.", "d_en": "Introduces the opposite side of the argument." }
+      ],
+      "quiz": [
+        { "q": "«I couldn't agree more» significa…", "q_en": "\"I couldn't agree more\" means…", "o": ["Estoy en desacuerdo", "Estoy totalmente de acuerdo", "No entiendo", "Me da igual"], "o_en": ["I disagree", "I completely agree", "I don't understand", "I don't care"], "a": 1, "why": "Es una forma enfática de acuerdo total.", "why_en": "It is an emphatic way of expressing full agreement." },
+        { "q": "¿Cuál desacuerdo es el más educado?", "q_en": "Which disagreement is the most polite?", "o": ["You're wrong", "That's stupid", "I see your point, but…", "No way"], "o_en": ["You're wrong", "That's stupid", "I see your point, but…", "No way"], "a": 2, "why": "Reconoce el argumento del otro antes de discrepar.", "why_en": "It acknowledges the other's argument before disagreeing." },
+        { "q": "«Prices went up; ___, fewer people bought it.»", "q_en": "\"Prices went up; ___, fewer people bought it.\"", "o": ["for example", "therefore", "on the other hand", "such as"], "o_en": ["for example", "therefore", "on the other hand", "such as"], "a": 1, "why": "Se introduce una consecuencia: therefore.", "why_en": "A consequence is introduced: therefore." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-8-3-repaso",
+    "titulo": "Repaso — Exploring Fashion and Expressing Opinions",
+    "titulo_en": "Review — Exploring Fashion and Expressing Opinions",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Dos herramientas se combinan: el <b>presente perfecto continuo</b> para procesos que vienen ocurriendo, y los <b>modales</b> para decir qué tan seguro estás de algo. Con eso se describe cómo ha cambiado la moda y se sustenta una opinión.</p><h4>Puntos gramaticales</h4><ul><li>have been + -ing enfatiza duración; el perfecto simple enfatiza resultado.</li><li>Con cantidad exacta siempre va el simple.</li><li>must = casi seguro que sí; can't = casi seguro que no; might/may/could = posible.</li><li>used to + verbo base para hábitos pasados; en negativo, use to.</li></ul><h4>Vocabulario</h4><p>Horas, fechas, años y siglos; ropa, accesorios y orden de adjetivos; verbos de cambio; fórmulas para opinar, acordar y discrepar con cortesía.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>Two tools combine: the <b>present perfect continuous</b> for ongoing processes, and <b>modals</b> for how sure you are about something. With those you describe how fashion has changed and support an opinion.</p><h4>Grammar points</h4><ul><li>have been + -ing emphasizes duration; the perfect simple emphasizes result.</li><li>With an exact quantity always use the simple.</li><li>must = almost certainly yes; can't = almost certainly not; might/may/could = possible.</li><li>used to + base verb for past habits; in the negative, use to.</li></ul><h4>Vocabulary</h4><p>Hours, dates, years and centuries; clothes, accessories and adjective order; verbs of change; formulas to give opinions, agree and disagree politely.</p>",
+    "puntos_clave": [
+      ["Perfecto continuo = duración; perfecto simple = resultado.", "Perfect continuous = duration; perfect simple = result."],
+      ["Con número exacto siempre va el perfecto simple.", "With an exact number always use the perfect simple."],
+      ["La deducción negativa es can't, no mustn't.", "The negative deduction is can't, not mustn't."],
+      ["didn't use to, sin -d.", "didn't use to, with no -d."],
+      ["Orden: opinión, tamaño, edad, color, material.", "Order: opinion, size, age, color, material."],
+      ["I couldn't agree more = acuerdo total.", "I couldn't agree more = total agreement."]
+    ],
+    "preguntas": [
+      { "q": "«They ___ for two hours and they're still waiting.»", "q_en": "\"They ___ for two hours and they're still waiting.\"", "o": ["have waited", "have been waiting", "waited", "are waiting"], "o_en": ["have waited", "have been waiting", "waited", "are waiting"], "a": 1, "why": "La acción continúa y se enfatiza la duración.", "why_en": "The action continues and the duration is emphasized." },
+      { "q": "«I've ___ three chapters today.»", "q_en": "\"I've ___ three chapters today.\"", "o": ["been reading", "read", "reading", "readed"], "o_en": ["been reading", "read", "reading", "readed"], "a": 1, "why": "Hay una cantidad concreta: perfecto simple.", "why_en": "There is a specific quantity: perfect simple." },
+      { "q": "«He's not answering. He ___ be asleep.»", "q_en": "\"He's not answering. He ___ be asleep.\"", "o": ["can't", "must", "mustn't", "should"], "o_en": ["can't", "must", "mustn't", "should"], "a": 1, "why": "La evidencia sugiere una conclusión casi segura: must.", "why_en": "The evidence suggests an almost certain conclusion: must." },
+      { "q": "«That ___ be his car; he sold it last week.»", "q_en": "\"That ___ be his car; he sold it last week.\"", "o": ["mustn't", "can't", "may not", "shouldn't"], "o_en": ["mustn't", "can't", "may not", "shouldn't"], "a": 1, "why": "Deducción negativa: can't.", "why_en": "Negative deduction: can't." },
+      { "q": "«My grandmother ___ make her own clothes.»", "q_en": "\"My grandmother ___ make her own clothes.\"", "o": ["use to", "used to", "is used to", "uses to"], "o_en": ["use to", "used to", "is used to", "uses to"], "a": 1, "why": "Hábito pasado que ya no ocurre: used to.", "why_en": "A past habit that no longer happens: used to." },
+      { "q": "«That style ___ in the 90s.» (dejó de estar de moda)", "q_en": "\"That style ___ in the 90s.\" (stopped being fashionable)", "o": ["caught on", "came back", "went out of fashion", "turned into"], "o_en": ["caught on", "came back", "went out of fashion", "turned into"], "a": 2, "why": "Go out of fashion es pasar de moda.", "why_en": "Go out of fashion means to stop being fashionable." },
+      { "q": "«The concert is ___ November 12th ___ 8 p.m.»", "q_en": "\"The concert is ___ November 12th ___ 8 p.m.\"", "o": ["in / at", "on / at", "at / on", "on / in"], "o_en": ["in / at", "on / at", "at / on", "on / in"], "a": 1, "why": "Fechas con on y horas con at.", "why_en": "Dates take on and clock times take at." },
+      { "q": "«I see your point, ___ I still disagree.»", "q_en": "\"I see your point, ___ I still disagree.\"", "o": ["therefore", "but", "for instance", "such as"], "o_en": ["therefore", "but", "for instance", "such as"], "a": 1, "why": "Se introduce un contraste con la idea anterior.", "why_en": "A contrast with the previous idea is introduced." }
+    ]
+  }
+}

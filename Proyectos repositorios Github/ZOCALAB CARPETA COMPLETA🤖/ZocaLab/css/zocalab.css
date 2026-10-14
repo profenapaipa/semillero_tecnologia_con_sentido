@@ -1,0 +1,1539 @@
+/* ============================================
+   ZOCALAB — Hoja de estilos de la app
+   Organización personal y bienestar muisca
+   "El quinto elemento eres tú"
+
+   Se carga SIEMPRE después de css/style.css:
+   reutiliza sus variables (--crema, --carbon, --gris)
+   y agrega las propias de la nueva identidad (--zl-*).
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+/* ============================================
+   TOKENS DE LA NUEVA IDENTIDAD
+   ============================================ */
+:root {
+  /* ====== Paleta oficial ZocaLab ====== */
+  --zl-verde-oscuro: #1B5E3B;
+  --zl-verde:        #2D9B5A;
+  --zl-verde-claro:  #3AB56A;
+  --zl-dorado:       #C9982A;
+  --zl-terracota:    #C4522A;
+  --zl-azul:         #2B7EA1;
+  --zl-crema:        #F2EDE0;
+
+  /* Variante oscura del dorado SOLO para texto: el dorado #C9982A
+     sobre fondo claro se queda en 2.3:1 y no cumple WCAG AA.
+     Para texto usar --zl-dorado-texto; el dorado vivo queda
+     para bordes, íconos y fondos decorativos. */
+  --zl-dorado-texto: #8A671A;
+
+  /* ====== Tintes suaves de cada elemento ====== */
+  --zl-tinte-tierra: rgba(27, 94, 59, 0.08);
+  --zl-tinte-fuego:  rgba(196, 82, 42, 0.08);
+  --zl-tinte-agua:   rgba(43, 126, 161, 0.08);
+  --zl-tinte-aire:   rgba(58, 181, 106, 0.08);
+  --zl-tinte-dorado: rgba(201, 152, 42, 0.10);
+  --zl-tinte-flor:   rgba(224, 143, 168, 0.12);
+
+  /* ====== Colores que el usuario elige para notas y bloques ====== */
+  --zl-color-crema:  #F7F1E3;
+  --zl-color-verde:  #E3F0E7;
+  --zl-color-dorado: #FAF0D7;
+  --zl-color-azul:   #E1EEF5;
+  --zl-color-terra:  #F8E7E0;
+
+  /* ====== Noche (rutina de la luna) ====== */
+  --zl-noche:        #0f1b2d;
+  --zl-noche-clara:  #1a2c45;
+
+  /* ====== Tipografía ====== */
+  --zl-font-titulo: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --zl-font-texto:  'Nunito', 'Segoe UI', system-ui, sans-serif;
+
+  /* ====== Superficies y bordes ====== */
+  --zl-borde:        rgba(27, 94, 59, 0.10);
+  --zl-borde-input:  #ddd5c8;
+  --zl-sombra-card:  0 2px 12px rgba(0, 0, 0, 0.06);
+  --zl-sombra-flota: 0 8px 28px rgba(0, 0, 0, 0.14);
+
+  /* ====== Medidas del armazón ====== */
+  --zl-alto-header: 60px;
+  --zl-alto-nav:    64px;
+}
+
+/* ============================================
+   LAYOUT BASE
+   ============================================ */
+.zl-page {
+  min-height: 100vh;
+  background: var(--crema);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--zl-font-texto);
+  color: var(--carbon);
+}
+
+/* ====== HEADER FIJO ====== */
+.zl-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--zl-alto-header);
+  background: rgba(242, 237, 224, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--zl-borde);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 16px;
+  z-index: 100;
+}
+
+/* Marca: logo + nombre */
+.zl-marca {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+.zl-marca img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.zl-marca span {
+  font-family: var(--zl-font-titulo);
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--zl-verde-oscuro);
+  letter-spacing: -0.01em;
+}
+
+/* Saludo central según la hora real */
+.zl-saludo {
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--zl-verde-oscuro);
+  text-align: center;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Avatar circular con la inicial */
+.zl-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--zl-verde-oscuro);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--zl-font-texto);
+  font-size: 16px;
+  font-weight: 800;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.zl-avatar:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 14px rgba(27, 94, 59, 0.3);
+}
+.zl-avatar-lg {
+  width: 84px;
+  height: 84px;
+  font-size: 34px;
+  cursor: default;
+}
+.zl-avatar-lg:hover { transform: none; box-shadow: none; }
+
+/* Botón de volver (páginas sin nav: meditación, mundo muisca) */
+.zl-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: none;
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--zl-verde-oscuro);
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+.zl-volver:hover { background: rgba(27, 94, 59, 0.08); }
+
+/* ====== CONTENIDO ====== */
+.zl-content {
+  padding-top: var(--zl-alto-header);
+  padding-bottom: calc(var(--zl-alto-nav) + 6px);
+  flex: 1;
+  width: 100%;
+}
+
+/* Contenedor centrado para las páginas de lectura y formularios */
+.zl-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+.zl-container-angosto { max-width: 760px; }
+
+/* Páginas sin navegación inferior */
+.zl-content-sin-nav { padding-bottom: 32px; }
+
+/* ====== NAVEGACIÓN INFERIOR ====== */
+.zl-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--zl-alto-nav);
+  background: rgba(242, 237, 224, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--zl-borde);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+.zl-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  /* 10px es el tamaño definido para las etiquetas de navegación.
+     Son etiquetas de apoyo bajo un ícono grande, no texto de lectura;
+     todo el contenido real de la app se mantiene en 14px o más. */
+  font-size: 10px;
+  font-weight: 700;
+  font-family: var(--zl-font-texto);
+  color: var(--gris);
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  transition: all 0.2s;
+  text-align: center;
+  line-height: 1.2;
+}
+.zl-nav-item span:first-child { font-size: 20px; line-height: 1; }
+.zl-nav-item:hover { color: var(--zl-verde-oscuro); background: rgba(27, 94, 59, 0.05); }
+.zl-nav-item.active {
+  color: var(--zl-verde-oscuro);
+  background: rgba(27, 94, 59, 0.08);
+}
+.zl-nav-item:focus-visible {
+  outline: 2px solid var(--zl-verde-oscuro);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   TIPOGRAFÍA DE LA APP
+   ============================================ */
+.zl-titulo {
+  font-family: var(--zl-font-titulo);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--zl-verde-oscuro);
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+}
+.zl-titulo-xl { font-size: 38px; }
+.zl-subtitulo {
+  font-family: var(--zl-font-texto);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gris);
+  line-height: 1.55;
+}
+.zl-seccion-titulo {
+  font-family: var(--zl-font-titulo);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--zl-verde-oscuro);
+  margin-bottom: 4px;
+}
+.zl-texto { font-size: 15px; line-height: 1.65; color: var(--carbon); }
+.zl-texto-sm { font-size: 14px; line-height: 1.6; color: var(--gris); }
+.zl-etiqueta {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--zl-verde-oscuro);
+  margin-bottom: 8px;
+}
+
+/* ============================================
+   TARJETAS
+   ============================================ */
+.zl-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--zl-sombra-card);
+  border: 1px solid rgba(27, 94, 59, 0.06);
+}
+.zl-card-titulo {
+  font-family: var(--zl-font-titulo);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--zl-verde-oscuro);
+  margin-bottom: 4px;
+}
+.zl-card-texto { font-size: 14px; color: var(--gris); line-height: 1.55; }
+
+/* Tarjeta interactiva (se levanta al pasar el cursor) */
+.zl-card-click { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+.zl-card-click:hover { transform: translateY(-3px); box-shadow: var(--zl-sombra-flota); }
+
+/* Tarjeta de aviso en crema con borde dorado */
+.zl-card-aviso {
+  background: var(--zl-color-dorado);
+  border: 1.5px solid var(--zl-dorado);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* Tarjeta ya completada */
+.zl-card.completada {
+  border: 2px solid var(--zl-verde);
+  background: linear-gradient(180deg, #fff 0%, rgba(45, 155, 90, 0.05) 100%);
+}
+
+/* ====== REJILLAS ====== */
+.zl-grid { display: grid; gap: 16px; }
+.zl-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.zl-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.zl-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.zl-fila {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.zl-fila-entre { justify-content: space-between; }
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.zl-btn-primario {
+  background: var(--zl-verde-oscuro);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-family: var(--zl-font-texto);
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+}
+.zl-btn-primario:hover:not(:disabled) {
+  background: var(--zl-verde);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(27, 94, 59, 0.28);
+}
+.zl-btn-primario:disabled {
+  background: #c9c4b8;
+  color: #6b675e;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.zl-btn-secundario {
+  background: transparent;
+  color: var(--zl-verde-oscuro);
+  border: 2px solid var(--zl-verde-oscuro);
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+}
+.zl-btn-secundario:hover {
+  background: rgba(27, 94, 59, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Botón peligroso — cerrar sesión, eliminar */
+.zl-btn-peligro {
+  background: rgba(196, 82, 42, 0.10);
+  color: #9E3D1C;
+  border: 1.5px solid rgba(196, 82, 42, 0.45);
+  border-radius: 12px;
+  padding: 13px 24px;
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+}
+.zl-btn-peligro:hover { background: rgba(196, 82, 42, 0.18); }
+
+/* Botón que no ocupa todo el ancho */
+.zl-btn-auto { width: auto; }
+
+/* Botón pequeño para barras de herramientas */
+.zl-btn-sm {
+  padding: 9px 16px;
+  font-size: 14px;
+  border-radius: 10px;
+  width: auto;
+}
+
+/* Botón de ícono circular */
+.zl-btn-icono {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid var(--zl-borde-input);
+  background: #fff;
+  color: var(--zl-verde-oscuro);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.zl-btn-icono:hover { background: rgba(27, 94, 59, 0.08); border-color: var(--zl-verde-oscuro); }
+
+/* Foco visible en todo elemento interactivo (accesibilidad) */
+.zl-btn-primario:focus-visible,
+.zl-btn-secundario:focus-visible,
+.zl-btn-peligro:focus-visible,
+.zl-btn-icono:focus-visible,
+.zl-chip:focus-visible,
+.zl-tab:focus-visible {
+  outline: 3px solid rgba(27, 94, 59, 0.45);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   CAMPOS DE ENTRADA
+   ============================================ */
+.zl-input,
+.zl-textarea,
+.zl-select {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--zl-borde-input);
+  background: #fff;
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  color: var(--carbon);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.zl-input:focus,
+.zl-textarea:focus,
+.zl-select:focus {
+  border-color: var(--zl-verde-oscuro);
+  box-shadow: 0 0 0 3px rgba(27, 94, 59, 0.1);
+}
+.zl-input::placeholder,
+.zl-textarea::placeholder { color: #9a948a; }
+
+.zl-textarea {
+  resize: vertical;
+  min-height: 84px;
+  line-height: 1.6;
+}
+.zl-textarea-sm { min-height: 68px; }
+
+/* Contador de caracteres */
+.zl-contador {
+  font-size: 14px;
+  color: var(--gris);
+  text-align: right;
+  margin-top: 5px;
+}
+.zl-contador.limite { color: var(--zl-terracota); font-weight: 700; }
+
+/* ====== SELECTOR DE ÍCONOS (notas, categorías, eventos, avatar) ====== */
+.iconos { display: flex; gap: 8px; flex-wrap: wrap; }
+.icono-opt {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+}
+.icono-opt:hover { transform: scale(1.1); }
+.icono-opt.elegido {
+  border-color: var(--zl-verde-oscuro);
+  transform: scale(1.12);
+  box-shadow: 0 0 0 3px rgba(27, 94, 59, 0.15);
+}
+
+/* ====== CHIPS SELECCIONABLES ====== */
+.zl-chips { display: flex; flex-wrap: wrap; gap: 9px; }
+.zl-chip {
+  padding: 10px 17px;
+  border-radius: 999px;
+  border: 1.5px solid var(--zl-borde-input);
+  background: #fff;
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--carbon);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.zl-chip:hover { border-color: var(--zl-verde); }
+.zl-chip.active {
+  background: var(--zl-verde-oscuro);
+  border-color: var(--zl-verde-oscuro);
+  color: #fff;
+}
+
+/* ====== INTERRUPTOR (toggle) ====== */
+.zl-toggle {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  border-radius: 999px;
+  background: #cfc8ba;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.25s;
+}
+.zl-toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s;
+}
+.zl-toggle.active { background: var(--zl-verde); }
+.zl-toggle.active::after { transform: translateX(22px); }
+.zl-toggle:focus-visible { outline: 3px solid rgba(27, 94, 59, 0.45); outline-offset: 2px; }
+
+/* Fila de ajuste: etiqueta + control */
+.zl-ajuste {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--zl-borde);
+}
+.zl-ajuste:last-child { border-bottom: none; }
+.zl-ajuste-nombre { font-size: 14px; font-weight: 700; color: var(--carbon); }
+.zl-ajuste-desc { font-size: 14px; color: var(--gris); margin-top: 2px; }
+
+/* ====== CASILLA DE VERIFICACIÓN ====== */
+.zl-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  border: 2px solid var(--zl-borde-input);
+  background: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.2s;
+  padding: 0;
+}
+.zl-check:hover { border-color: var(--zl-verde); }
+.zl-check.marcada {
+  background: var(--zl-verde);
+  border-color: var(--zl-verde);
+}
+.zl-check:focus-visible { outline: 3px solid rgba(27, 94, 59, 0.45); outline-offset: 2px; }
+
+/* ====== BARRA DE PROGRESO ====== */
+.zl-progreso {
+  width: 100%;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(27, 94, 59, 0.12);
+  overflow: hidden;
+}
+.zl-progreso-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--zl-verde-oscuro), var(--zl-verde-claro));
+  transition: width 0.5s ease;
+}
+
+/* ============================================
+   PESTAÑAS INTERNAS (Mi espacio)
+   ============================================ */
+.zl-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.zl-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 18px;
+  border-radius: 12px;
+  border: 1.5px solid var(--zl-borde);
+  background: #fff;
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--zl-verde-oscuro);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.zl-tab:hover { background: rgba(27, 94, 59, 0.06); }
+.zl-tab.active {
+  background: var(--zl-verde-oscuro);
+  border-color: var(--zl-verde-oscuro);
+  color: #fff;
+}
+.zl-tab-panel { display: none; }
+.zl-tab-panel.active {
+  display: block;
+  animation: zlFadeIn 0.2s ease;
+}
+
+/* ============================================
+   MODALES
+   ============================================ */
+.zl-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 30, 24, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 300;
+}
+.zl-modal.abierto { display: flex; animation: zlFadeIn 0.25s ease; }
+.zl-modal-caja {
+  background: #fff;
+  border-radius: 20px;
+  padding: 26px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: var(--zl-sombra-flota);
+  animation: zlFadeUp 0.3s ease;
+}
+.zl-modal-titulo {
+  font-family: var(--zl-font-titulo);
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--zl-verde-oscuro);
+  margin-bottom: 18px;
+}
+.zl-modal-acciones {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+/* Modal a pantalla completa en crema (elección de árbol) */
+.zl-modal-pleno {
+  position: fixed;
+  inset: 0;
+  background: var(--zl-crema);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  z-index: 400;
+  overflow-y: auto;
+}
+.zl-modal-pleno.abierto { display: flex; }
+.zl-modal-pleno.cerrando { animation: zlFadeOut 0.5s ease forwards; }
+
+/* Campo dentro de un modal */
+.zl-campo { margin-bottom: 16px; }
+
+/* ====== SELECTOR DE COLOR ====== */
+.zl-colores { display: flex; gap: 11px; flex-wrap: wrap; }
+.zl-color-opcion {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  border: 2.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+.zl-color-opcion:hover { transform: scale(1.08); }
+.zl-color-opcion.active {
+  border-color: var(--zl-verde-oscuro);
+  transform: scale(1.08);
+  box-shadow: 0 0 0 3px rgba(27, 94, 59, 0.15);
+}
+
+/* ============================================
+   ESTADO VACÍO
+   ============================================ */
+.zl-vacio {
+  text-align: center;
+  padding: 44px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.zl-vacio svg { margin-bottom: 8px; opacity: 0.85; }
+.zl-vacio-texto {
+  font-size: 15px;
+  color: var(--gris);
+  font-weight: 600;
+  max-width: 380px;
+  line-height: 1.6;
+}
+
+/* ====== BADGE / PÍLDORA ====== */
+.zl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  background: rgba(27, 94, 59, 0.10);
+  color: var(--zl-verde-oscuro);
+}
+.zl-badge-dorado { background: rgba(201, 152, 42, 0.16); color: var(--zl-dorado-texto); }
+.zl-badge-terra  { background: rgba(196, 82, 42, 0.14);  color: #9E3D1C; }
+.zl-badge-azul   { background: rgba(43, 126, 161, 0.14); color: #1C5B77; }
+
+/* ============================================
+   ALERTA DEL CÓNDOR (js/condor.js)
+   ============================================ */
+.zl-condor {
+  position: fixed;
+  right: 20px;
+  bottom: calc(var(--zl-alto-nav) + 20px);
+  width: 330px;
+  max-width: calc(100vw - 40px);
+  background: rgba(27, 94, 59, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  z-index: 250;
+  animation: zlSlideInRight 0.5s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.zl-condor.cerrando { animation: zlSlideOutRight 0.35s ease forwards; }
+.zl-condor-icono {
+  font-size: 36px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+  animation: zlFloat 3s ease-in-out infinite;
+}
+.zl-condor-titulo {
+  font-family: var(--zl-font-titulo);
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 7px;
+  line-height: 1.3;
+}
+.zl-condor-texto {
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+.zl-condor-acciones { display: flex; flex-direction: column; gap: 9px; }
+.zl-condor-btn {
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: 11px;
+  border: none;
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.zl-condor-btn-claro { background: #fff; color: var(--zl-verde-oscuro); }
+.zl-condor-btn-claro:hover { background: var(--zl-crema); }
+.zl-condor-btn-borde {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+}
+.zl-condor-btn-borde:hover { background: rgba(255, 255, 255, 0.14); }
+
+/* Barra del modo enfoque */
+.zl-enfoque-barra {
+  position: fixed;
+  top: var(--zl-alto-header);
+  left: 0;
+  width: 100%;
+  padding: 9px 20px;
+  background: rgba(27, 94, 59, 0.94);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 99;
+  animation: zlFadeIn 0.3s ease;
+}
+.zl-enfoque-barra .zl-progreso { flex: 1; background: rgba(255, 255, 255, 0.25); }
+.zl-enfoque-barra .zl-progreso-fill { background: var(--zl-dorado); }
+.zl-enfoque-barra button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--zl-font-texto);
+}
+
+/* ============================================
+   RESPIRACIÓN GUIADA (compartida)
+   ============================================ */
+.zl-respiracion {
+  position: fixed;
+  inset: 0;
+  background: var(--zl-noche);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  z-index: 500;
+}
+.zl-respiracion.abierto { display: flex; animation: zlFadeIn 0.4s ease; }
+
+.zl-circulo-respira {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(circle, rgba(45, 155, 90, 0.35), rgba(45, 155, 90, 0.08));
+  /* La duración y la escala las fija el JS según la técnica elegida */
+  transition: transform 1s ease-in-out;
+}
+.zl-circulo-respira svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: zlGirarLento 40s linear infinite;
+}
+.zl-respira-fase {
+  font-family: var(--zl-font-titulo);
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.zl-respira-ciclo {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+}
+.zl-respira-nombre {
+  font-family: var(--zl-font-titulo);
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: center;
+}
+
+/* Botón de cierre discreto sobre pantallas inmersivas */
+.zl-cerrar-inmersivo {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.zl-cerrar-inmersivo:hover { background: rgba(255, 255, 255, 0.22); }
+
+/* ============================================
+   ÁRBOLES DEL BOSQUE — animaciones de cada elemento
+   ============================================ */
+.zl-arbol { transform-origin: bottom center; }
+
+/* Tierra (Mue) — roble: balanceo amplio y lento de ramas */
+.zl-arbol-tierra .copa { animation: branches-sway 4s ease-in-out infinite; transform-origin: bottom center; }
+
+/* Fuego (Sua) — araguaney: brillo pulsante */
+.zl-arbol-fuego .copa { animation: glow-pulse 2s ease-in-out infinite; transform-origin: center; }
+
+/* Agua (Sié) — sauce: ramas colgantes que se mecen */
+.zl-arbol-agua .ramas { animation: branches-swing 3s ease-in-out infinite; transform-origin: top center; }
+
+/* Aire (Chia) — bambú: caña que oscila rápido */
+.zl-arbol-aire { animation: bamboo-sway 2s ease-in-out infinite; }
+
+/* Oro (Guatavita) — brillo dorado pulsante */
+.zl-arbol-dorado .copa { animation: glow-pulse 3.4s ease-in-out infinite; transform-origin: center; }
+
+/* Vida (Bachué) — balanceo suave de la ceiba en flor */
+.zl-arbol-flor .copa { animation: branches-sway 5s ease-in-out infinite; transform-origin: bottom center; }
+
+@keyframes branches-sway {
+  0%, 100% { transform: rotate(-1.6deg); }
+  50%      { transform: rotate(1.6deg); }
+}
+@keyframes glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(201, 152, 42, 0.5)); }
+  50%      { filter: drop-shadow(0 0 17px rgba(196, 82, 42, 0.8)); }
+}
+@keyframes branches-swing {
+  0%, 100% { transform: rotate(-2.6deg); }
+  50%      { transform: rotate(2.6deg); }
+}
+@keyframes bamboo-sway {
+  0%, 100% { transform: rotate(-1deg) translateX(-1px); }
+  50%      { transform: rotate(1deg) translateX(1px); }
+}
+
+/* ====== ESCENARIO DEL BOSQUE ====== */
+.zl-bosque-escena {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  min-height: 320px;
+  overflow: hidden;
+  background: #7FB8E0;   /* color de respaldo si el canvas no pinta */
+}
+.zl-bosque-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Contenedor de los árboles: aquí actúa la cámara */
+.zl-bosque-arboles {
+  position: absolute;
+  inset: 0;
+  transform-origin: bottom center;
+  /* El zoom de la cámara se aplica desde JS */
+  transition: transform 2s ease;
+}
+
+/* Cada árbol se posiciona en su plano de profundidad */
+.zl-arbol-pos {
+  position: absolute;
+  transform: translateX(-50%);
+  transform-origin: bottom center;
+  line-height: 0;
+}
+
+/* Capa de las hojas que caen */
+.zl-bosque-hojas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 45;
+}
+
+/* Aviso flotante sobre el bosque */
+.zl-bosque-aviso {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(27, 94, 59, 0.9);
+  color: #fff;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  z-index: 60;
+  animation: zlFadeUp 0.6s ease both;
+  white-space: nowrap;
+}
+
+/* ====== TARJETAS DE SELECCIÓN DE ÁRBOL ====== */
+.zl-arbol-opcion {
+  border-radius: 18px;
+  padding: 20px 16px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.22s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--zl-font-texto);
+}
+.zl-arbol-opcion:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--zl-sombra-flota);
+}
+.zl-arbol-opcion.elegida {
+  border-color: var(--zl-verde-oscuro);
+  box-shadow: 0 0 0 4px rgba(27, 94, 59, 0.14);
+}
+.zl-arbol-opcion .vista {
+  height: 118px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  line-height: 0;
+}
+.zl-arbol-opcion .elemento { font-size: 26px; line-height: 1; }
+.zl-arbol-opcion .nombre {
+  font-family: var(--zl-font-titulo);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--zl-verde-oscuro);
+}
+.zl-arbol-opcion .descripcion {
+  font-size: 14px;
+  color: var(--gris);
+  line-height: 1.5;
+}
+
+/* ====== TARJETA BLOQUEADA (desbloqueables por racha/árboles) ====== */
+.zl-bloqueado {
+  opacity: 0.55;
+  filter: grayscale(0.6);
+  cursor: not-allowed;
+}
+.zl-arbol-opcion.zl-bloqueado:hover {
+  transform: none;
+  box-shadow: none;
+}
+.zl-bloqueado .descripcion {
+  color: var(--zl-terracota);
+  font-weight: 700;
+}
+
+/* ====== PANEL DE RACHA ====== */
+.zl-racha-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1.5px solid rgba(27, 94, 59, 0.18);
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: var(--zl-sombra-card);
+}
+.zl-racha-dato {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--zl-verde-oscuro);
+}
+.zl-racha-dato span:first-child { font-size: 23px; line-height: 1; }
+.zl-racha-sep {
+  width: 1px;
+  height: 30px;
+  background: var(--zl-borde);
+}
+
+/* ====== ESTADO DEL BOSQUE SEGÚN LA RACHA ====== */
+.zl-bosque-arboles.sin-racha-1 .zl-arbol { filter: saturate(0.7); }
+.zl-bosque-arboles.sin-racha-2 .zl-arbol { filter: saturate(0.5); }
+.zl-bosque-arboles.sin-racha-3 .zl-arbol { filter: saturate(0.3) grayscale(0.2); }
+
+/* Hoja que cae cuando se llevan 2 días sin actividad */
+.zl-hoja-cae {
+  position: absolute;
+  font-size: 15px;
+  pointer-events: none;
+  animation: zlHojaCae 6s linear infinite;
+}
+@keyframes zlHojaCae {
+  0%   { transform: translateY(0) rotate(0deg);      opacity: 0; }
+  10%  { opacity: 0.9; }
+  100% { transform: translateY(190px) rotate(320deg); opacity: 0; }
+}
+
+/* Árbol que brota al plantarlo */
+.zl-brotando { animation: zlBrotar 1.4s cubic-bezier(0.22, 1.2, 0.3, 1); }
+@keyframes zlBrotar {
+  0%   { transform: scale(0.1) translateY(24px); opacity: 0; }
+  55%  { transform: scale(1.14) translateY(-5px); opacity: 1; }
+  100% { transform: scale(1) translateY(0); }
+}
+
+/* ============================================
+   CIELO NOCTURNO (rutina de la luna)
+   ============================================ */
+.zl-noche-page { background: var(--zl-noche); color: #fff; }
+.zl-noche-page .zl-header {
+  background: rgba(15, 27, 45, 0.92);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+.zl-noche-page .zl-marca span,
+.zl-noche-page .zl-saludo { color: #fff; }
+.zl-noche-page .zl-nav {
+  background: rgba(15, 27, 45, 0.95);
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+.zl-noche-page .zl-nav-item { color: rgba(255, 255, 255, 0.62); }
+.zl-noche-page .zl-nav-item.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+.zl-noche-page .zl-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+}
+.zl-noche-page .zl-card-titulo,
+.zl-noche-page .zl-titulo,
+.zl-noche-page .zl-etiqueta { color: #fff; }
+.zl-noche-page .zl-card-texto,
+.zl-noche-page .zl-subtitulo,
+.zl-noche-page .zl-texto-sm { color: rgba(255, 255, 255, 0.72); }
+.zl-noche-page .zl-input,
+.zl-noche-page .zl-textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.zl-noche-page .zl-input::placeholder,
+.zl-noche-page .zl-textarea::placeholder { color: rgba(255, 255, 255, 0.45); }
+.zl-noche-page .zl-input:focus,
+.zl-noche-page .zl-textarea:focus {
+  border-color: var(--zl-dorado);
+  box-shadow: 0 0 0 3px rgba(201, 152, 42, 0.2);
+}
+.zl-noche-page .zl-card.completada {
+  border-color: var(--zl-dorado);
+  background: rgba(201, 152, 42, 0.10);
+}
+.zl-noche-page .zl-btn-icono {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* Campo de estrellas parpadeantes */
+.zl-estrellas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.zl-estrella {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  animation: zlTitilar 3s ease-in-out infinite;
+}
+@keyframes zlTitilar {
+  0%, 100% { opacity: 0.22; transform: scale(1); }
+  50%      { opacity: 1;    transform: scale(1.35); }
+}
+
+/* Luna en la esquina */
+.zl-luna {
+  position: fixed;
+  top: 78px;
+  right: 30px;
+  font-size: 52px;
+  line-height: 1;
+  z-index: 1;
+  animation: zlFloat 7s ease-in-out infinite;
+  filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.35));
+}
+
+/* ====== BOTONES DE EMOCIÓN ====== */
+.zl-emociones {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+.zl-emocion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 15px 8px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-family: var(--zl-font-texto);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.zl-emocion span:first-child { font-size: 29px; line-height: 1; }
+.zl-emocion:hover { background: rgba(255, 255, 255, 0.11); transform: translateY(-2px); }
+.zl-emocion.active {
+  border-color: var(--zl-dorado);
+  background: rgba(201, 152, 42, 0.18);
+  box-shadow: 0 0 0 3px rgba(201, 152, 42, 0.2);
+}
+
+/* ============================================
+   ANIMACIONES GENERALES
+   ============================================ */
+@keyframes zlFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes zlPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.04); }
+}
+@keyframes zlFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+@keyframes zlShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes zlFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes zlFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; visibility: hidden; }
+}
+@keyframes zlSlideInRight {
+  from { opacity: 0; transform: translateX(110%); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes zlSlideOutRight {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(110%); }
+}
+@keyframes zlGirarLento {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes zlStarPop {
+  0%   { transform: scale(0) rotate(-45deg); opacity: 0; }
+  60%  { transform: scale(1.5) rotate(10deg); opacity: 1; }
+  100% { transform: scale(0) rotate(45deg);  opacity: 0; }
+}
+@keyframes zlSolSube {
+  0%   { transform: translateY(160px) scale(0.5); opacity: 0; }
+  100% { transform: translateY(-60px) scale(1.25); opacity: 1; }
+}
+@keyframes zlLunaSube {
+  0%   { transform: translateY(130px) scale(0.6); opacity: 0; }
+  100% { transform: translateY(-70px) scale(1.15); opacity: 1; }
+}
+
+/* Utilidades de animación */
+.zl-anim-entrada { animation: zlFadeUp 0.5s ease both; }
+.zl-anim-pulso   { animation: zlPulse 2s ease-in-out infinite; }
+.zl-anim-flota   { animation: zlFloat 4s ease-in-out infinite; }
+.zl-brillo {
+  background: linear-gradient(90deg,
+    var(--zl-verde-oscuro) 20%, var(--zl-dorado) 50%, var(--zl-verde-oscuro) 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: zlShimmer 3.5s linear infinite;
+}
+
+/* Retrasos en cascada para listas que entran */
+.zl-d1 { animation-delay: 0.05s; }
+.zl-d2 { animation-delay: 0.10s; }
+.zl-d3 { animation-delay: 0.15s; }
+.zl-d4 { animation-delay: 0.20s; }
+.zl-d5 { animation-delay: 0.25s; }
+
+/* Estrella que salta al completar una meta */
+.zl-star-pop {
+  position: fixed;
+  font-size: 34px;
+  pointer-events: none;
+  z-index: 600;
+  animation: zlStarPop 0.9s ease forwards;
+}
+
+/* ============================================
+   MÓDULOS HEREDADOS — animaciones
+   Estos estilos vivían en css/estudio.css, que se
+   eliminó en la limpieza. Los usa js/animaciones.js,
+   así que se trasladaron aquí para que no queden sin estilo.
+   ============================================ */
+
+/* ====== CONFETI (js/animaciones.js) ====== */
+.zl-confeti-contenedor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+.zl-confeti-pieza {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.95;
+  animation-name: confettiDrop;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.zl-confeti-pieza.redonda { border-radius: 50%; }
+
+@keyframes confettiDrop {
+  0%   { transform: translateY(-20px) rotate(0deg);   opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* ====== TOAST DE LOGRO (js/animaciones.js) ====== */
+.zl-toast-logro {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #F0C061, var(--zl-dorado));
+  color: #fff;
+  padding: 16px 22px;
+  border-radius: 18px;
+  box-shadow: var(--zl-sombra-flota);
+  animation: slideInRight 0.4s ease both;
+  max-width: 330px;
+}
+.zl-toast-logro.zl-toast-saliendo { animation: slideOutRight 0.4s ease both; }
+.zl-toast-icono  { font-size: 32px; flex-shrink: 0; }
+.zl-toast-titulo { font-family: var(--zl-font-titulo); font-weight: 800; font-size: 15px; }
+.zl-toast-texto  { font-size: 14px; opacity: 0.95; font-weight: 600; }
+
+@keyframes slideInRight {
+  from { transform: translateX(40px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes slideOutRight {
+  from { transform: translateX(0);    opacity: 1; }
+  to   { transform: translateX(40px); opacity: 0; }
+}
+
+/* ====== PARTÍCULAS DE FONDO (js/animaciones.js) ====== */
+.zl-particulas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.zl-particula {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--zl-dorado);
+  opacity: 0.15;
+  animation: flotarLento linear infinite;
+}
+/* Variante con símbolo/emoji en vez de punto dorado */
+.zl-particula-simbolo {
+  width: auto;
+  height: auto;
+  background: none;
+  border-radius: 0;
+  font-size: 17px;
+  line-height: 1;
+  opacity: 0.32;
+}
+@keyframes flotarLento {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50%      { transform: translateY(-18px) translateX(6px); }
+}
+
+/* ====== ONDA AL PULSAR (js/animaciones.js) ====== */
+.zl-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  pointer-events: none;
+  animation: ripple 0.6s ease-out;
+}
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ============================================
+   ORNAMENTOS MUISCAS COMPARTIDOS
+   Utilidades reutilizables para diferenciar visualmente
+   secciones (Mi día, Mi espacio, Perfil) del home, sin
+   depender de imágenes: solo gradientes/CSS.
+   ============================================ */
+
+/* Patrón de fondo tipo tejido/orfebrería muisca — solo el
+   background-image, cada página decide dónde y cómo capa. */
+.zl-patron-textil {
+  background-image:
+    repeating-linear-gradient(60deg,  rgba(201,152,42,0.05) 0, rgba(201,152,42,0.05) 1px, transparent 0, transparent 24px),
+    repeating-linear-gradient(-60deg, rgba(27,94,59,0.04)  0, rgba(27,94,59,0.04)  1px, transparent 0, transparent 24px),
+    repeating-linear-gradient(0deg,   rgba(196,82,42,0.03) 0, rgba(196,82,42,0.03) 1px, transparent 0, transparent 48px);
+}
+
+/* Disco solar decorativo detrás de un título (motivo Balsa Muisca) */
+.zl-disco-solar { position: relative; }
+.zl-disco-solar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 120px;
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, rgba(201,152,42,0.35) 0%, rgba(201,152,42,0.12) 45%, transparent 70%),
+    repeating-conic-gradient(from 0deg, rgba(201,152,42,0.22) 0deg 6deg, transparent 6deg 18deg);
+}
+
+/* Marco tipo orfebrería dorada para tarjetas destacadas */
+.zl-marco-oro {
+  position: relative;
+  border: 1.5px solid rgba(201, 152, 42, 0.35) !important;
+  box-shadow: 0 0 0 4px rgba(201, 152, 42, 0.08), var(--zl-sombra-card);
+}
+.zl-marco-oro::before,
+.zl-marco-oro::after {
+  content: '✦';
+  position: absolute;
+  font-size: 13px;
+  color: var(--zl-dorado);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.zl-marco-oro::before { top: 6px; left: 8px; }
+.zl-marco-oro::after  { bottom: 6px; right: 8px; }
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+.zl-oculto { display: none !important; }
+.zl-centro { text-align: center; }
+.zl-mt-8  { margin-top: 8px; }
+.zl-mt-16 { margin-top: 16px; }
+.zl-mt-24 { margin-top: 24px; }
+.zl-mb-16 { margin-bottom: 16px; }
+.zl-mb-24 { margin-bottom: 24px; }
+.zl-gap-12 { gap: 12px; }
+.zl-flex-col { display: flex; flex-direction: column; }
+
+/* Texto solo para lectores de pantalla */
+.zl-sr {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================
+   ADAPTACIÓN DE ANCHOS
+   La app está pensada para 1024px o más; estas reglas
+   evitan que se rompa en ventanas más angostas.
+   ============================================ */
+@media (max-width: 1023px) {
+  .zl-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .zl-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .zl-grid-2, .zl-grid-3, .zl-grid-4 { grid-template-columns: 1fr; }
+  .zl-saludo { display: none; }
+  .zl-titulo { font-size: 25px; }
+  .zl-titulo-xl { font-size: 29px; }
+  .zl-nav-item { padding: 8px 10px; }
+  .zl-emociones { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .zl-condor { right: 12px; width: calc(100vw - 24px); }
+}
+
+/* Respeto por quien pide menos movimiento en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

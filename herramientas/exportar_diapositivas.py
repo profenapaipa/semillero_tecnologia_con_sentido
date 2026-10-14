@@ -45,6 +45,7 @@ DESTINO = os.path.join(RAIZ, 'docs', 'assets', 'diapositivas')
 MODULOS = os.path.join(RAIZ, 'datos', 'modulos.json')
 
 ANCHO, ALTO = 1600, 900      # 16:9, suficiente para verse nitido a pantalla completa
+PDF = os.path.join(RAIZ, 'docs', 'assets', 'pdf')   # la sesion completa, en PDF
 CALIDAD = 80                 # WebP: a partir de 80 la diferencia no se nota
 
 
@@ -56,6 +57,37 @@ def buscar(nombre):
             if nombre in archivos:
                 return os.path.join(r, nombre)
     return None
+
+
+def exportar_pdf(ruta_pptx, destino):
+    """
+    La sesion completa en un PDF.
+
+    Va aparte del carrusel por una razon practica: el PDF se puede abrir a
+    pantalla completa, ampliar, imprimir y guardar en el celular sin
+    conexion. Es el formato que un estudiante ya sabe usar.
+    """
+    import win32com.client
+    pp = win32com.client.Dispatch('PowerPoint.Application')
+    pres = None
+    try:
+        pres = pp.Presentations.Open(ruta_pptx, WithWindow=False, ReadOnly=True)
+        os.makedirs(os.path.dirname(destino), exist_ok=True)
+        pres.SaveAs(destino, 32)   # 32 = ppSaveAsPDF
+        pres.Close()
+        pres = None
+    finally:
+        try:
+            if pres is not None:
+                pres.Close()
+        except Exception:
+            pass
+        try:
+            if pp.Presentations.Count == 0:
+                pp.Quit()
+        except Exception:
+            pass
+    return os.path.exists(destino)
 
 
 def exportar(ruta_pptx, carpeta_salida):
@@ -141,6 +173,28 @@ def main():
             total_imgs += n
         except Exception as err:
             print('     falló: %s' % err)
+
+    # Y la sesion completa en PDF
+    print('')
+    print('PDF de cada sesion:')
+    for m in datos['modulos']:
+        if not m.get('encontrado'):
+            continue
+        ruta = buscar(m['archivo'])
+        destino = os.path.join(PDF, 'sesion-%s.pdf' % m['letra'])
+        if os.path.exists(destino):
+            print('  %s) ya estaba' % m['letra'])
+            m['pdf'] = True
+            continue
+        if not ruta:
+            m['pdf'] = False
+            continue
+        try:
+            m['pdf'] = exportar_pdf(ruta, destino)
+            print('  %s) %s' % (m['letra'], 'listo' if m['pdf'] else 'no se genero'))
+        except Exception as err:
+            m['pdf'] = False
+            print('  %s) falló: %s' % (m['letra'], err))
 
     # Se deja anotado en los datos que hay imagenes, para que el generador
     # sepa que puede mostrar el carrusel.

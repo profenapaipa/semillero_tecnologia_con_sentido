@@ -1,0 +1,176 @@
+{
+  "id": "ingles-9-3",
+  "materia": "ingles",
+  "grado": "9",
+  "grado_nombre": "Noveno",
+  "periodo": 3,
+  "periodo_label": { "es": "Periodo III", "en": "Term III" },
+  "titulo": "Think Before You Act! Grammar and Ethics in Medical Discoveries",
+  "titulo_es": "Piensa antes de actuar: gramática y ética en los descubrimientos médicos",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Ordeno hechos pasados distinguiendo cuál ocurrió primero. Doy instrucciones secuenciadas y argumento sobre dilemas éticos en el campo médico.",
+  "competencias": "Diferenciar pasado simple y pasado perfecto; secuenciar procesos con imperativos y conectores de orden; comprender textos sobre avances médicos; expresar y escribir la hora con precisión.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "The Ethics Case File",
+    "descripcion_es": "En grupos, los estudiantes reconstruyen un caso real de la historia de la medicina: narran en orden qué había pasado antes y qué ocurrió después, y proponen un protocolo ético en imperativos numerados.",
+    "descripcion_en": "In groups, students reconstruct a real case from the history of medicine: they narrate in order what had happened before and what happened next, and propose an ethical protocol written as numbered imperatives."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-9-3-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Pasado perfecto",
+      "t_en": "Past perfect",
+      "d": "14 min",
+      "content_es": "<h4>El pasado antes del pasado</h4><p>Se forma con <b>had + participio</b>, igual para todas las personas: <i>She <b>had finished</b> the report before the meeting.</i></p><ul><li>Negativo: <b>hadn't</b> — <i>They hadn't arrived yet.</i></li><li>Pregunta: <i><b>Had</b> you seen it before?</i></li></ul><h4>Para qué sirve</h4><p>Marca cuál de dos acciones pasadas ocurrió <b>primero</b>: <i>When I got to the lab, the experiment <b>had already started</b>.</i> (primero empezó el experimento)</p><h4>Palabras que lo acompañan</h4><p><b>already, just, never, before, by the time, after, when.</b></p><h4>Ojo</h4><p>Si el orden ya es evidente por los conectores <i>before</i> o <i>after</i>, muchos hablantes usan solo el pasado simple. El pasado perfecto se vuelve necesario cuando el orden no es obvio.</p>",
+      "content_en": "<h4>The past before the past</h4><p>It is formed with <b>had + participle</b>, the same for every person: <i>She <b>had finished</b> the report before the meeting.</i></p><ul><li>Negative: <b>hadn't</b> — <i>They hadn't arrived yet.</i></li><li>Question: <i><b>Had</b> you seen it before?</i></li></ul><h4>What it is for</h4><p>It marks which of two past actions happened <b>first</b>: <i>When I got to the lab, the experiment <b>had already started</b>.</i></p><h4>Words that go with it</h4><p><b>already, just, never, before, by the time, after, when.</b></p><h4>Careful</h4><p>If the order is already clear from <i>before</i> or <i>after</i>, many speakers use only the simple past. The past perfect becomes necessary when the order is not obvious.</p>",
+      "fichas": [
+        { "t": "had + participio", "d": "Igual para todas las personas: I had, she had.", "d_en": "The same for every person: I had, she had." },
+        { "t": "Acción anterior", "d": "Marca lo que pasó primero entre dos hechos pasados.", "d_en": "Marks which of two past events happened first." },
+        { "t": "By the time…", "d": "Introduce el momento límite: By the time we arrived, it had ended.", "d_en": "Introduces the cut-off moment." },
+        { "t": "hadn't", "d": "Negativo del pasado perfecto.", "d_en": "Negative of the past perfect." }
+      ],
+      "quiz": [
+        { "q": "«When we arrived, the movie ___ already ___.»", "q_en": "\"When we arrived, the movie ___ already ___.\"", "o": ["has / started", "had / started", "was / starting", "did / start"], "o_en": ["has / started", "had / started", "was / starting", "did / start"], "a": 1, "why": "La película empezó antes de que llegáramos: pasado perfecto.", "why_en": "The movie started before we arrived: past perfect." },
+        { "q": "«By the time the doctor came, the patient ___.»", "q_en": "\"By the time the doctor came, the patient ___.\"", "o": ["recovers", "has recovered", "had recovered", "recover"], "o_en": ["recovers", "has recovered", "had recovered", "recover"], "a": 2, "why": "By the time pide pasado perfecto en la acción anterior.", "why_en": "By the time calls for the past perfect in the earlier action." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["She had went home", "She had gone home", "She had go home", "She has had gone home"], "o_en": ["She had went home", "She had gone home", "She had go home", "She has had gone home"], "a": 1, "why": "Después de had va el participio, no el pasado simple.", "why_en": "After had we use the participle, not the simple past." }
+      ]
+    },
+    {
+      "id": "ingles-9-3-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Pasado simple vs pasado perfecto",
+      "t_en": "Past simple vs past perfect",
+      "d": "14 min",
+      "content_es": "<h4>La línea del tiempo</h4><p>El <b>pasado simple</b> cuenta los hechos en orden; el <b>pasado perfecto</b> retrocede a algo anterior.</p><p><i>The nurse <b>checked</b> the chart. The patient <b>had taken</b> the medicine an hour before.</i></p><h4>Cómo elegir</h4><ul><li>Si narras una secuencia normal, todo en <b>pasado simple</b>: <i>He woke up, got dressed and left.</i></li><li>Si haces un salto atrás dentro de la narración, usa <b>pasado perfecto</b>: <i>He was tired because he <b>hadn't slept</b>.</i></li></ul><h4>Con when</h4><p>La diferencia cambia el sentido:</p><ul><li><i>When I arrived, they <b>started</b> the meeting.</i> → empezaron después de que llegué.</li><li><i>When I arrived, they <b>had started</b> the meeting.</i> → ya había empezado.</li></ul>",
+      "content_en": "<h4>The timeline</h4><p>The <b>past simple</b> tells events in order; the <b>past perfect</b> steps back to something earlier.</p><p><i>The nurse <b>checked</b> the chart. The patient <b>had taken</b> the medicine an hour before.</i></p><h4>How to choose</h4><ul><li>For a normal sequence, everything in the <b>past simple</b>: <i>He woke up, got dressed and left.</i></li><li>For a jump back inside the narration, use the <b>past perfect</b>: <i>He was tired because he <b>hadn't slept</b>.</i></li></ul><h4>With when</h4><p>The difference changes the meaning:</p><ul><li><i>When I arrived, they <b>started</b> the meeting.</i> → they started after I arrived.</li><li><i>When I arrived, they <b>had started</b> the meeting.</i> → it had already begun.</li></ul>",
+      "fichas": [
+        { "t": "Secuencia normal", "d": "Todo en pasado simple si los hechos van en orden.", "d_en": "All in past simple if the events follow their order." },
+        { "t": "Salto atrás", "d": "El pasado perfecto retrocede a un hecho anterior.", "d_en": "The past perfect steps back to an earlier event." },
+        { "t": "when + simple", "d": "La segunda acción ocurre después de la primera.", "d_en": "The second action happens after the first." },
+        { "t": "when + perfecto", "d": "La segunda acción ya había ocurrido antes.", "d_en": "The second action had already happened before." }
+      ],
+      "quiz": [
+        { "q": "«He was exhausted because he ___ all night.»", "q_en": "\"He was exhausted because he ___ all night.\"", "o": ["worked", "had worked", "works", "has worked"], "o_en": ["worked", "had worked", "works", "has worked"], "a": 1, "why": "El cansancio es posterior al trabajo: pasado perfecto.", "why_en": "The tiredness comes after the work: past perfect." },
+        { "q": "«She woke up, ___ breakfast and left.»", "q_en": "\"She woke up, ___ breakfast and left.\"", "o": ["had had", "has", "had", "was having"], "o_en": ["had had", "has", "had", "was having"], "a": 2, "why": "Es una secuencia normal: todo en pasado simple.", "why_en": "It is a normal sequence: all in the past simple." },
+        { "q": "«When I called, she ___ already ___ the house.»", "q_en": "\"When I called, she ___ already ___ the house.\"", "o": ["has / left", "had / left", "did / leave", "was / leaving"], "o_en": ["has / left", "had / left", "did / leave", "was / leaving"], "a": 1, "why": "Ya se había ido antes de la llamada: pasado perfecto.", "why_en": "She had gone before the call: past perfect." }
+      ]
+    },
+    {
+      "id": "ingles-9-3-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Imperativos y palabras de secuencia",
+      "t_en": "Imperatives and sequence words",
+      "d": "12 min",
+      "content_es": "<h4>Instrucciones paso a paso</h4><p>El imperativo usa el <b>verbo en forma base</b>, sin sujeto: <i>Wash your hands. Wear gloves. Do not touch the sample.</i></p><p>Para instrucciones escritas y protocolos se prefiere <b>do not</b> completo en vez de <i>don't</i>.</p><h4>Conectores de secuencia</h4><p><b>First</b> · <b>Next</b> · <b>Then</b> · <b>After that</b> · <b>Meanwhile</b> (mientras tanto) · <b>Once</b> (una vez que) · <b>Finally</b>.</p><p><i><b>First</b>, sterilize the instruments. <b>Next</b>, prepare the sample. <b>Finally</b>, record the results.</i></p><h4>Alternativas al imperativo</h4><ul><li>Formal y neutral: <i>The sample <b>must be</b> refrigerated.</i></li><li>Con obligación: <i>You <b>have to</b> sign the consent form.</i></li><li>Con sugerencia: <i>It is advisable to…</i></li></ul>",
+      "content_en": "<h4>Step-by-step instructions</h4><p>The imperative uses the <b>base verb</b>, with no subject: <i>Wash your hands. Wear gloves. Do not touch the sample.</i></p><p>In written instructions and protocols the full <b>do not</b> is preferred over <i>don't</i>.</p><h4>Sequence connectors</h4><p><b>First</b> · <b>Next</b> · <b>Then</b> · <b>After that</b> · <b>Meanwhile</b> · <b>Once</b> · <b>Finally</b>.</p><p><i><b>First</b>, sterilize the instruments. <b>Next</b>, prepare the sample. <b>Finally</b>, record the results.</i></p><h4>Alternatives to the imperative</h4><ul><li>Formal and neutral: <i>The sample <b>must be</b> refrigerated.</i></li><li>With obligation: <i>You <b>have to</b> sign the consent form.</i></li><li>With a suggestion: <i>It is advisable to…</i></li></ul>",
+      "fichas": [
+        { "t": "Do not en protocolos", "d": "En textos formales se escribe completo, no don't.", "d_en": "In formal texts it is written in full, not don't." },
+        { "t": "Meanwhile", "d": "Mientras tanto: acción paralela a otra.", "d_en": "At the same time as another action." },
+        { "t": "Once + oración", "d": "Una vez que: Once it cools, add the reagent.", "d_en": "As soon as: Once it cools, add the reagent." },
+        { "t": "must be + participio", "d": "Forma pasiva impersonal típica de instrucciones.", "d_en": "Impersonal passive form typical of instructions." }
+      ],
+      "quiz": [
+        { "q": "«___, sterilize the instruments.»", "q_en": "\"___, sterilize the instruments.\"", "o": ["Finally", "First", "Meanwhile", "Once"], "o_en": ["Finally", "First", "Meanwhile", "Once"], "a": 1, "why": "First abre la secuencia de pasos.", "why_en": "First opens the sequence of steps." },
+        { "q": "«___ the mixture cools, add the reagent.»", "q_en": "\"___ the mixture cools, add the reagent.\"", "o": ["Once", "Finally", "Next", "After that"], "o_en": ["Once", "Finally", "Next", "After that"], "a": 0, "why": "Once introduce una condición temporal: una vez que.", "why_en": "Once introduces a time condition: as soon as." },
+        { "q": "¿Cuál es un imperativo correcto?", "q_en": "Which is a correct imperative?", "o": ["You must washing", "To wash your hands", "Wash your hands", "Washing your hands"], "o_en": ["You must washing", "To wash your hands", "Wash your hands", "Washing your hands"], "a": 2, "why": "El imperativo usa el verbo base sin sujeto.", "why_en": "The imperative uses the base verb with no subject." }
+      ]
+    },
+    {
+      "id": "ingles-9-3-4",
+      "num": 4,
+      "tipo": "vocabulary",
+      "t": "Avances médicos",
+      "t_en": "Medical advances",
+      "d": "14 min",
+      "content_es": "<h4>El campo médico</h4><p><b>treatment</b> (tratamiento), <b>cure</b>, <b>diagnosis</b> (diagnóstico), <b>symptom</b>, <b>disease</b> (enfermedad), <b>surgery</b> (cirugía), <b>transplant</b>, <b>therapy</b>, <b>drug</b> (medicamento), <b>dose</b>, <b>side effect</b> (efecto secundario), <b>patient</b>, <b>clinical trial</b> (ensayo clínico).</p><h4>Hitos históricos</h4><p><i>the discovery of penicillin, the first heart transplant, the polio vaccine, the mapping of the human genome.</i></p><h4>Verbos útiles</h4><p><b>discover</b>, <b>develop</b>, <b>test</b>, <b>approve</b>, <b>prescribe</b>, <b>prevent</b>, <b>treat</b>, <b>heal</b>, <b>recover from</b>.</p><h4>Ojo</h4><p><b>drug</b> en contexto médico es medicamento; <b>illness</b> es la experiencia de estar enfermo y <b>disease</b> la enfermedad como entidad clínica. <b>Sensible</b> aquí no aplica: la palabra para «sensible al dolor» es <i>sensitive</i>.</p>",
+      "content_en": "<h4>The medical field</h4><p><b>treatment</b>, <b>cure</b>, <b>diagnosis</b>, <b>symptom</b>, <b>disease</b>, <b>surgery</b>, <b>transplant</b>, <b>therapy</b>, <b>drug</b>, <b>dose</b>, <b>side effect</b>, <b>patient</b>, <b>clinical trial</b>.</p><h4>Historical milestones</h4><p><i>the discovery of penicillin, the first heart transplant, the polio vaccine, the mapping of the human genome.</i></p><h4>Useful verbs</h4><p><b>discover</b>, <b>develop</b>, <b>test</b>, <b>approve</b>, <b>prescribe</b>, <b>prevent</b>, <b>treat</b>, <b>heal</b>, <b>recover from</b>.</p><h4>Careful</h4><p><b>drug</b> in a medical context means medicine; <b>illness</b> is the experience of being unwell and <b>disease</b> the clinical condition.</p>",
+      "fichas": [
+        { "t": "side effect", "d": "Efecto secundario no deseado de un tratamiento.", "d_en": "An unwanted secondary effect of a treatment." },
+        { "t": "clinical trial", "d": "Ensayo clínico para probar un tratamiento.", "d_en": "A study to test a treatment on people." },
+        { "t": "disease vs illness", "d": "La enfermedad clínica vs la experiencia de estar enfermo.", "d_en": "The clinical condition vs the experience of being unwell." },
+        { "t": "recover from", "d": "Recuperarse de algo: siempre con from.", "d_en": "To get better after something: always with from." },
+        { "t": "prescribe", "d": "Recetar un medicamento.", "d_en": "To order a medicine for a patient." }
+      ],
+      "quiz": [
+        { "q": "«The medicine caused a mild ___.»", "q_en": "\"The medicine caused a mild ___.\"", "o": ["symptom", "side effect", "diagnosis", "dose"], "o_en": ["symptom", "side effect", "diagnosis", "dose"], "a": 1, "why": "El efecto no deseado de un medicamento es un side effect.", "why_en": "An unwanted effect of a medicine is a side effect." },
+        { "q": "«She's slowly recovering ___ the surgery.»", "q_en": "\"She's slowly recovering ___ the surgery.\"", "o": ["of", "from", "to", "by"], "o_en": ["of", "from", "to", "by"], "a": 1, "why": "Recover siempre va con la preposición from.", "why_en": "Recover always takes the preposition from." },
+        { "q": "¿Qué es un «clinical trial»?", "q_en": "What is a \"clinical trial\"?", "o": ["Un juicio legal", "Un ensayo para probar un tratamiento", "Un diagnóstico", "Una cirugía"], "o_en": ["A court case", "A study to test a treatment", "A diagnosis", "A surgery"], "a": 1, "why": "Trial aquí es ensayo, no juicio.", "why_en": "Trial here means a test, not a court case." }
+      ]
+    },
+    {
+      "id": "ingles-9-3-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Ética médica y dilemas",
+      "t_en": "Medical ethics and dilemmas",
+      "d": "14 min",
+      "content_es": "<h4>Conceptos clave</h4><p><b>informed consent</b> (consentimiento informado), <b>confidentiality</b>, <b>privacy</b>, <b>autonomy</b>, <b>fairness</b> (equidad), <b>access to healthcare</b>, <b>malpractice</b> (mala praxis), <b>consequence</b>, <b>accountability</b> (rendición de cuentas).</p><h4>Argumentar en un dilema</h4><ul><li>Plantear: <i>The question is whether…</i></li><li>A favor: <i>One argument in favor is that… · The main benefit is…</i></li><li>En contra: <i>On the other hand… · A serious concern is that… · This could lead to…</i></li><li>Concluir: <i>All things considered, I believe…</i></li></ul><h4>Modales de obligación moral</h4><p><i>Doctors <b>must</b> respect privacy. · Researchers <b>should</b> disclose risks. · Nobody <b>ought to</b> be tested without consent.</i></p>",
+      "content_en": "<h4>Key concepts</h4><p><b>informed consent</b>, <b>confidentiality</b>, <b>privacy</b>, <b>autonomy</b>, <b>fairness</b>, <b>access to healthcare</b>, <b>malpractice</b>, <b>consequence</b>, <b>accountability</b>.</p><h4>Arguing in a dilemma</h4><ul><li>Framing: <i>The question is whether…</i></li><li>In favor: <i>One argument in favor is that… · The main benefit is…</i></li><li>Against: <i>On the other hand… · A serious concern is that… · This could lead to…</i></li><li>Concluding: <i>All things considered, I believe…</i></li></ul><h4>Modals of moral obligation</h4><p><i>Doctors <b>must</b> respect privacy. · Researchers <b>should</b> disclose risks. · Nobody <b>ought to</b> be tested without consent.</i></p>",
+      "fichas": [
+        { "t": "informed consent", "d": "El paciente acepta después de conocer riesgos y beneficios.", "d_en": "The patient agrees after learning risks and benefits." },
+        { "t": "confidentiality", "d": "Deber de no revelar la información del paciente.", "d_en": "The duty not to reveal a patient's information." },
+        { "t": "accountability", "d": "Responder por las decisiones tomadas.", "d_en": "Being answerable for the decisions made." },
+        { "t": "This could lead to…", "d": "Fórmula para señalar una consecuencia negativa.", "d_en": "Formula to point out a negative consequence." },
+        { "t": "All things considered", "d": "Cierre de un argumento tras sopesar ambos lados.", "d_en": "Closing an argument after weighing both sides." }
+      ],
+      "quiz": [
+        { "q": "«No treatment should start without ___.»", "q_en": "\"No treatment should start without ___.\"", "o": ["malpractice", "informed consent", "accountability", "a symptom"], "o_en": ["malpractice", "informed consent", "accountability", "a symptom"], "a": 1, "why": "El consentimiento informado es requisito previo.", "why_en": "Informed consent is a prior requirement." },
+        { "q": "¿Qué expresión introduce una consecuencia negativa?", "q_en": "Which expression introduces a negative consequence?", "o": ["The main benefit is", "This could lead to", "One argument in favor", "All things considered"], "o_en": ["The main benefit is", "This could lead to", "One argument in favor", "All things considered"], "a": 1, "why": "Lead to introduce el resultado al que llevaría algo.", "why_en": "Lead to introduces the result something would produce." },
+        { "q": "«Doctors ___ keep patient information private.»", "q_en": "\"Doctors ___ keep patient information private.\"", "o": ["must", "musts", "must to", "are must"], "o_en": ["must", "musts", "must to", "are must"], "a": 0, "why": "Must no cambia y va con el verbo en base.", "why_en": "Must never changes and takes the base verb." }
+      ]
+    },
+    {
+      "id": "ingles-9-3-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "La hora: expresarla y escribirla",
+      "t_en": "The time: saying it and writing it",
+      "d": "12 min",
+      "content_es": "<h4>Las dos formas</h4><ul><li>Conversacional: <i>ten past three (3:10), quarter to eight (7:45), half past six (6:30)</i></li><li>Digital: <i>three ten, seven forty-five, six thirty</i></li></ul><h4>Reloj de 12 y de 24 horas</h4><p>En contextos médicos y aeronáuticos se usa el de 24 horas: <i>14:30 = fourteen thirty</i>. En la vida diaria, el de 12 con <b>a.m.</b> y <b>p.m.</b></p><h4>Momentos especiales</h4><p><i>noon</i> (12:00), <i>midnight</i> (00:00), <i>sharp</i> (en punto exacto): <i>at 9 o'clock sharp</i>.</p><h4>Preposiciones y duración</h4><ul><li><b>at</b> + hora exacta · <b>from … to …</b> · <b>until</b> · <b>by</b> (a más tardar)</li><li><i>The shift runs <b>from</b> 7 <b>to</b> 3.</i> · <i>Be there <b>by</b> 8.</i></li><li>Duración: <i>It takes two hours. It lasts 45 minutes.</i></li></ul>",
+      "content_en": "<h4>The two forms</h4><ul><li>Conversational: <i>ten past three (3:10), quarter to eight (7:45), half past six (6:30)</i></li><li>Digital: <i>three ten, seven forty-five, six thirty</i></li></ul><h4>12- and 24-hour clock</h4><p>In medical and aviation contexts the 24-hour clock is used: <i>14:30 = fourteen thirty</i>. In everyday life, the 12-hour clock with <b>a.m.</b> and <b>p.m.</b></p><h4>Special moments</h4><p><i>noon</i> (12:00), <i>midnight</i> (00:00), <i>sharp</i> (exactly): <i>at 9 o'clock sharp</i>.</p><h4>Prepositions and duration</h4><ul><li><b>at</b> + exact time · <b>from … to …</b> · <b>until</b> · <b>by</b> (no later than)</li><li><i>The shift runs <b>from</b> 7 <b>to</b> 3.</i> · <i>Be there <b>by</b> 8.</i></li><li>Duration: <i>It takes two hours. It lasts 45 minutes.</i></li></ul>",
+      "fichas": [
+        { "t": "sharp", "d": "En punto exacto: at 9 o'clock sharp.", "d_en": "Exactly on the hour: at 9 o'clock sharp." },
+        { "t": "by 8", "d": "A más tardar a las 8, no exactamente a las 8.", "d_en": "No later than 8, not exactly at 8." },
+        { "t": "until vs by", "d": "until marca duración; by marca un plazo límite.", "d_en": "until marks duration; by marks a deadline." },
+        { "t": "take vs last", "d": "take es lo que toma hacer algo; last es lo que dura.", "d_en": "take is how long something requires; last is how long it goes on." }
+      ],
+      "quiz": [
+        { "q": "«Please submit it ___ Friday.» (a más tardar)", "q_en": "\"Please submit it ___ Friday.\" (no later than)", "o": ["until", "by", "at", "in"], "o_en": ["until", "by", "at", "in"], "a": 1, "why": "By marca la fecha límite; until marca duración.", "why_en": "By marks a deadline; until marks duration." },
+        { "q": "«14:45» en el reloj de 12 horas es…", "q_en": "\"14:45\" on the 12-hour clock is…", "o": ["2:45 a.m.", "2:45 p.m.", "4:45 p.m.", "12:45 p.m."], "o_en": ["2:45 a.m.", "2:45 p.m.", "4:45 p.m.", "12:45 p.m."], "a": 1, "why": "14:45 son las 2:45 de la tarde.", "why_en": "14:45 is 2:45 in the afternoon." },
+        { "q": "«The surgery ___ three hours.»", "q_en": "\"The surgery ___ three hours.\"", "o": ["takes", "lasts", "spends", "makes"], "o_en": ["takes", "lasts", "spends", "makes"], "a": 1, "why": "Last describe cuánto tiempo dura un evento.", "why_en": "Last describes how long an event goes on." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-9-3-repaso",
+    "titulo": "Repaso — Think Before You Act!",
+    "titulo_en": "Review — Think Before You Act!",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El periodo se apoya en el <b>orden de los hechos</b>. El pasado perfecto (<b>had + participio</b>) retrocede a lo que ocurrió primero; el pasado simple narra la secuencia. Y para explicar un procedimiento se usan imperativos con conectores de orden.</p><h4>Puntos gramaticales</h4><ul><li>had + participio, igual para todas las personas.</li><li>When + pasado simple vs when + pasado perfecto cambian el orden de los hechos.</li><li>Imperativo: verbo base; en protocolos formales, do not completo.</li><li>Secuencia: First, Next, Then, After that, Meanwhile, Once, Finally.</li></ul><h4>Vocabulario</h4><p>Léxico médico (treatment, diagnosis, side effect, clinical trial), ética (informed consent, confidentiality, accountability) y la hora con at, by, until, take y last.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The term rests on the <b>order of events</b>. The past perfect (<b>had + participle</b>) steps back to what happened first; the past simple tells the sequence. And to explain a procedure you use imperatives with sequence connectors.</p><h4>Grammar points</h4><ul><li>had + participle, the same for every person.</li><li>When + past simple vs when + past perfect change the order of the events.</li><li>Imperative: base verb; in formal protocols, the full do not.</li><li>Sequence: First, Next, Then, After that, Meanwhile, Once, Finally.</li></ul><h4>Vocabulary</h4><p>Medical vocabulary (treatment, diagnosis, side effect, clinical trial), ethics (informed consent, confidentiality, accountability) and the time with at, by, until, take and last.</p>",
+    "puntos_clave": [
+      ["Después de had siempre va participio, no pasado simple.", "After had always use the participle, not the simple past."],
+      ["El pasado perfecto marca lo que ocurrió primero.", "The past perfect marks what happened first."],
+      ["By the time pide pasado perfecto.", "By the time calls for the past perfect."],
+      ["En protocolos se escribe do not, no don't.", "In protocols write do not, not don't."],
+      ["by = a más tardar; until = hasta.", "by = no later than; until = up to."],
+      ["recover from, siempre con from.", "recover from, always with from."]
+    ],
+    "preguntas": [
+      { "q": "«The patient ___ the medicine before the nurse arrived.»", "q_en": "\"The patient ___ the medicine before the nurse arrived.\"", "o": ["takes", "took", "had taken", "has taken"], "o_en": ["takes", "took", "had taken", "has taken"], "a": 2, "why": "Ocurrió antes del otro hecho pasado: pasado perfecto.", "why_en": "It happened before the other past event: past perfect." },
+      { "q": "«She was upset because she ___ the exam.»", "q_en": "\"She was upset because she ___ the exam.\"", "o": ["fails", "had failed", "has failed", "fail"], "o_en": ["fails", "had failed", "has failed", "fail"], "a": 1, "why": "La causa es anterior al estado: pasado perfecto.", "why_en": "The cause is earlier than the state: past perfect." },
+      { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["They had wrote the report", "They had written the report", "They had write the report", "They have had written it"], "o_en": ["They had wrote the report", "They had written the report", "They had write the report", "They have had written it"], "a": 1, "why": "El participio de write es written.", "why_en": "The participle of write is written." },
+      { "q": "«___, record the results in the log.»", "q_en": "\"___, record the results in the log.\"", "o": ["Finally", "Once", "Meanwhile", "By the time"], "o_en": ["Finally", "Once", "Meanwhile", "By the time"], "a": 0, "why": "Finally cierra la secuencia de pasos.", "why_en": "Finally closes the sequence of steps." },
+      { "q": "«The vaccine ___ millions of deaths.»", "q_en": "\"The vaccine ___ millions of deaths.\"", "o": ["prevented", "prescribed", "diagnosed", "recovered"], "o_en": ["prevented", "prescribed", "diagnosed", "recovered"], "a": 0, "why": "Prevent es evitar que algo ocurra.", "why_en": "Prevent means to stop something from happening." },
+      { "q": "«Every participant signed the ___ form.»", "q_en": "\"Every participant signed the ___ form.\"", "o": ["diagnosis", "consent", "dose", "therapy"], "o_en": ["diagnosis", "consent", "dose", "therapy"], "a": 1, "why": "El documento que se firma es el consent form.", "why_en": "The document that is signed is the consent form." },
+      { "q": "«Be at the lab ___ 7:30 sharp.»", "q_en": "\"Be at the lab ___ 7:30 sharp.\"", "o": ["in", "on", "at", "by until"], "o_en": ["in", "on", "at", "by until"], "a": 2, "why": "Las horas exactas llevan at.", "why_en": "Exact clock times take at." },
+      { "q": "«The procedure ___ about 40 minutes.»", "q_en": "\"The procedure ___ about 40 minutes.\"", "o": ["lasts", "spends", "makes", "does"], "o_en": ["lasts", "spends", "makes", "does"], "a": 0, "why": "Last describe la duración de un evento.", "why_en": "Last describes how long an event goes on." }
+    ]
+  }
+}

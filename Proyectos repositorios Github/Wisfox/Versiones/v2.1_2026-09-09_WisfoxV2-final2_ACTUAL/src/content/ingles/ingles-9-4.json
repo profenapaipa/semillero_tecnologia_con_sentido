@@ -1,0 +1,175 @@
+{
+  "id": "ingles-9-4",
+  "materia": "ingles",
+  "grado": "9",
+  "grado_nombre": "Noveno",
+  "periodo": 4,
+  "periodo_label": { "es": "Periodo IV", "en": "Term IV" },
+  "titulo": "How Will Technology Change Us? Grammar and Technoethics in the Future",
+  "titulo_es": "¿Cómo nos cambiará la tecnología? Gramática y tecnoética del futuro",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Describo con precisión personas, objetos y procesos, y comparo alternativas. Hago proyecciones sobre el futuro tecnológico y evalúo sus implicaciones.",
+  "competencias": "Distinguir adjetivos de adverbios; usar will y going to para proyectar el futuro; comparar y jerarquizar con comparativos y superlativos; discutir tecnología y tecnoética.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Technology in 2050",
+    "descripcion_es": "Cada grupo presenta una proyección del año 2050 en un ámbito (educación, salud, transporte): qué habrá cambiado, qué será mejor o peor que hoy y qué límites éticos deberían fijarse.",
+    "descripcion_en": "Each group presents a projection of the year 2050 in one field (education, health, transport): what will have changed, what will be better or worse than today and what ethical limits should be set."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-9-4-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Adjetivos y adverbios",
+      "t_en": "Adjectives and adverbs",
+      "d": "14 min",
+      "content_es": "<h4>Qué describe cada uno</h4><ul><li><b>Adjetivo</b> → describe un sustantivo: <i>a <b>quick</b> answer</i></li><li><b>Adverbio</b> → describe un verbo, un adjetivo u otro adverbio: <i>He answered <b>quickly</b></i></li></ul><h4>Formación</h4><p>Adjetivo + <b>-ly</b>: careful → carefully. Consonante + y → <b>-ily</b>: easy → easily. Termina en -le → <b>-ly</b>: possible → possibly.</p><h4>Irregulares y trampas</h4><ul><li>good → <b>well</b> · fast → <b>fast</b> · hard → <b>hard</b></li><li><b>hardly</b> NO es el adverbio de hard: significa «apenas». <i>I hardly slept</i> = casi no dormí.</li><li>Con verbos de percepción (<i>look, feel, smell, sound, taste, seem</i>) va <b>adjetivo</b>: <i>It looks <b>good</b></i>, no <i>looks well</i>.</li></ul><h4>Orden</h4><p>El adverbio de modo suele ir después del verbo o del objeto: <i>She explained the topic <b>clearly</b>.</i></p>",
+      "content_en": "<h4>What each one describes</h4><ul><li><b>Adjective</b> → describes a noun: <i>a <b>quick</b> answer</i></li><li><b>Adverb</b> → describes a verb, an adjective or another adverb: <i>He answered <b>quickly</b></i></li></ul><h4>Formation</h4><p>Adjective + <b>-ly</b>: careful → carefully. Consonant + y → <b>-ily</b>: easy → easily. Ending in -le → <b>-ly</b>: possible → possibly.</p><h4>Irregulars and traps</h4><ul><li>good → <b>well</b> · fast → <b>fast</b> · hard → <b>hard</b></li><li><b>hardly</b> is NOT the adverb of hard: it means \"barely\". <i>I hardly slept</i> = I almost did not sleep.</li><li>With perception verbs (<i>look, feel, smell, sound, taste, seem</i>) use an <b>adjective</b>: <i>It looks <b>good</b></i>, not <i>looks well</i>.</li></ul><h4>Order</h4><p>The manner adverb usually goes after the verb or the object: <i>She explained the topic <b>clearly</b>.</i></p>",
+      "fichas": [
+        { "t": "hard vs hardly", "d": "hard es duro o duramente; hardly es apenas.", "d_en": "hard means with effort; hardly means barely." },
+        { "t": "good → well", "d": "El adverbio de good es well, no goodly.", "d_en": "The adverb of good is well, not goodly." },
+        { "t": "Verbos de percepción", "d": "look, feel, sound + adjetivo: It sounds great.", "d_en": "look, feel, sound + adjective: It sounds great." },
+        { "t": "easy → easily", "d": "Consonante + y cambia a -ily.", "d_en": "Consonant + y changes to -ily." }
+      ],
+      "quiz": [
+        { "q": "«He works very ___.» (con esfuerzo)", "q_en": "\"He works very ___.\" (with effort)", "o": ["hardly", "hard", "hardy", "harder"], "o_en": ["hardly", "hard", "hardy", "harder"], "a": 1, "why": "Hard es adjetivo y adverbio; hardly significa apenas.", "why_en": "Hard is both adjective and adverb; hardly means barely." },
+        { "q": "«That idea sounds ___.»", "q_en": "\"That idea sounds ___.\"", "o": ["greatly", "great", "greater", "greatest"], "o_en": ["greatly", "great", "greater", "greatest"], "a": 1, "why": "Sound es verbo de percepción: va con adjetivo.", "why_en": "Sound is a perception verb: it takes an adjective." },
+        { "q": "El adverbio de «easy» es…", "q_en": "The adverb of \"easy\" is…", "o": ["easyly", "easily", "easly", "easy"], "o_en": ["easyly", "easily", "easly", "easy"], "a": 1, "why": "Consonante + y cambia a -ily.", "why_en": "Consonant + y changes to -ily." }
+      ]
+    },
+    {
+      "id": "ingles-9-4-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Futuro con will y going to",
+      "t_en": "Future with will and going to",
+      "d": "14 min",
+      "content_es": "<h4>La elección</h4><ul><li><b>will</b> – predicción por opinión, decisión del momento, promesa: <i>AI will change education.</i></li><li><b>going to</b> – plan previo o predicción con evidencia: <i>They're going to launch the app next month.</i></li></ul><h4>Grados de certeza</h4><p><i>It <b>will definitely</b> happen. · It <b>will probably</b> happen. · It <b>might</b> happen. · It <b>probably won't</b> happen.</i></p><p>El adverbio va después de will y antes de won't.</p><h4>Futuro continuo y perfecto</h4><ul><li><b>will be + -ing</b> – acción en curso en un momento futuro: <i>By 2050 we <b>will be using</b> autonomous cars.</i></li><li><b>will have + participio</b> – acción terminada antes de un momento futuro: <i>By 2050 AI <b>will have replaced</b> many tasks.</i></li></ul><h4>Ojo</h4><p>Después de <b>when, before, after, as soon as</b> no va will: <i>When technology <b>improves</b>, costs will drop.</i></p>",
+      "content_en": "<h4>The choice</h4><ul><li><b>will</b> – prediction from opinion, on-the-spot decision, promise: <i>AI will change education.</i></li><li><b>going to</b> – prior plan or prediction with evidence: <i>They're going to launch the app next month.</i></li></ul><h4>Degrees of certainty</h4><p><i>It <b>will definitely</b> happen. · It <b>will probably</b> happen. · It <b>might</b> happen. · It <b>probably won't</b> happen.</i></p><p>The adverb goes after will and before won't.</p><h4>Future continuous and perfect</h4><ul><li><b>will be + -ing</b> – an action in progress at a future moment: <i>By 2050 we <b>will be using</b> autonomous cars.</i></li><li><b>will have + participle</b> – an action finished before a future moment: <i>By 2050 AI <b>will have replaced</b> many tasks.</i></li></ul><h4>Careful</h4><p>After <b>when, before, after, as soon as</b> there is no will: <i>When technology <b>improves</b>, costs will drop.</i></p>",
+      "fichas": [
+        { "t": "will be + -ing", "d": "Futuro continuo: acción en curso en un momento futuro.", "d_en": "Future continuous: an action in progress at a future point." },
+        { "t": "will have + participio", "d": "Futuro perfecto: terminado antes de una fecha futura.", "d_en": "Future perfect: finished before a future date." },
+        { "t": "will probably", "d": "El adverbio va después de will y antes de won't.", "d_en": "The adverb goes after will and before won't." },
+        { "t": "Sin will tras when", "d": "When it arrives, we'll start.", "d_en": "When it arrives, we'll start." }
+      ],
+      "quiz": [
+        { "q": "«By 2040 robots ___ many jobs.»", "q_en": "\"By 2040 robots ___ many jobs.\"", "o": ["will replace", "will have replaced", "replace", "are replacing"], "o_en": ["will replace", "will have replaced", "replace", "are replacing"], "a": 1, "why": "By + fecha futura con acción ya completada: futuro perfecto.", "why_en": "By + future date with a completed action: future perfect." },
+        { "q": "«At 10 tomorrow I ___ the exam.»", "q_en": "\"At 10 tomorrow I ___ the exam.\"", "o": ["will take", "will be taking", "will have taken", "take"], "o_en": ["will take", "will be taking", "will have taking", "take"], "a": 1, "why": "En ese momento la acción estará en curso: futuro continuo.", "why_en": "At that moment the action will be in progress: future continuous." },
+        { "q": "«As soon as the update ___, install it.»", "q_en": "\"As soon as the update ___, install it.\"", "o": ["will arrive", "arrives", "arrived", "will arriving"], "o_en": ["will arrive", "arrives", "arrived", "will arriving"], "a": 1, "why": "Después de as soon as no se usa will.", "why_en": "After as soon as we do not use will." }
+      ]
+    },
+    {
+      "id": "ingles-9-4-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Comparativos",
+      "t_en": "Comparatives",
+      "d": "12 min",
+      "content_es": "<h4>Formas</h4><ul><li>Cortos: <b>-er + than</b> — <i>faster than, cheaper than</i></li><li>Consonante + y: <b>-ier</b> — <i>easier than</i></li><li>Largos: <b>more … than</b> — <i>more efficient than</i></li><li>Irregulares: good → <b>better</b>, bad → <b>worse</b>, far → <b>further</b></li></ul><h4>Comparación de igualdad y de inferioridad</h4><ul><li><b>as … as</b>: <i>This model is <b>as fast as</b> that one.</i></li><li><b>not as … as</b>: <i>It isn't as expensive as I thought.</i></li><li><b>less … than</b>: <i>less complicated than</i></li></ul><h4>Intensificar</h4><p><i><b>much</b> faster, <b>far</b> more efficient, <b>a lot</b> cheaper, <b>slightly</b> better, <b>a bit</b> heavier.</i></p><h4>Cambio progresivo</h4><p><i>Technology is getting <b>faster and faster</b>. · <b>The more</b> we automate, <b>the less</b> we control.</i></p>",
+      "content_en": "<h4>Forms</h4><ul><li>Short: <b>-er + than</b> — <i>faster than, cheaper than</i></li><li>Consonant + y: <b>-ier</b> — <i>easier than</i></li><li>Long: <b>more … than</b> — <i>more efficient than</i></li><li>Irregular: good → <b>better</b>, bad → <b>worse</b>, far → <b>further</b></li></ul><h4>Equality and inferiority</h4><ul><li><b>as … as</b>: <i>This model is <b>as fast as</b> that one.</i></li><li><b>not as … as</b>: <i>It isn't as expensive as I thought.</i></li><li><b>less … than</b>: <i>less complicated than</i></li></ul><h4>Intensifiers</h4><p><i><b>much</b> faster, <b>far</b> more efficient, <b>a lot</b> cheaper, <b>slightly</b> better, <b>a bit</b> heavier.</i></p><h4>Progressive change</h4><p><i>Technology is getting <b>faster and faster</b>. · <b>The more</b> we automate, <b>the less</b> we control.</i></p>",
+      "fichas": [
+        { "t": "much / far + comparativo", "d": "Intensifican: much faster, far better.", "d_en": "They intensify: much faster, far better." },
+        { "t": "not as … as", "d": "Comparación de inferioridad sin usar less.", "d_en": "Inferiority comparison without using less." },
+        { "t": "faster and faster", "d": "Estructura de cambio progresivo.", "d_en": "Structure for progressive change." },
+        { "t": "The more…, the less…", "d": "Doble comparativo: a más de uno, menos del otro.", "d_en": "Double comparative: the more of one, the less of the other." }
+      ],
+      "quiz": [
+        { "q": "«This laptop is ___ faster than mine.»", "q_en": "\"This laptop is ___ faster than mine.\"", "o": ["very", "much", "so", "too"], "o_en": ["very", "much", "so", "too"], "a": 1, "why": "Much intensifica el comparativo; very no puede.", "why_en": "Much intensifies a comparative; very cannot." },
+        { "q": "«The new version isn't ___ complicated ___ the old one.»", "q_en": "\"The new version isn't ___ complicated ___ the old one.\"", "o": ["as / than", "as / as", "more / as", "so / than"], "o_en": ["as / than", "as / as", "more / as", "so / than"], "a": 1, "why": "La estructura es as + adjetivo + as.", "why_en": "The structure is as + adjective + as." },
+        { "q": "«Screens are getting ___.»", "q_en": "\"Screens are getting ___.\"", "o": ["thin and thin", "thinner and thinner", "more thin and thin", "thinnest"], "o_en": ["thin and thin", "thinner and thinner", "more thin and thin", "thinnest"], "a": 1, "why": "El cambio progresivo repite el comparativo.", "why_en": "Progressive change repeats the comparative." }
+      ]
+    },
+    {
+      "id": "ingles-9-4-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Superlativos",
+      "t_en": "Superlatives",
+      "d": "12 min",
+      "content_es": "<h4>Formas</h4><ul><li>Cortos: <b>the -est</b> — <i>the fastest, the biggest</i></li><li>Consonante + y: <b>the -iest</b> — <i>the easiest</i></li><li>Largos: <b>the most</b> — <i>the most advanced</i></li><li>Irregulares: <b>the best</b>, <b>the worst</b>, <b>the least</b>, <b>the most</b></li></ul><h4>Complementos</h4><ul><li><b>in</b> + lugar o grupo cerrado: <i>the largest company <b>in</b> the world</i></li><li><b>of</b> + conjunto de elementos: <i>the fastest <b>of</b> the three</i></li><li>Con presente perfecto: <i>the best film I've <b>ever</b> seen</i></li></ul><h4>Ordinales con superlativo</h4><p><i>the <b>second</b> largest city · the <b>third</b> most popular app.</i></p><h4>Ojo</h4><p>El artículo <b>the</b> es obligatorio y no se combina <i>most</i> con <i>-est</i>: <i>the most fastest</i> es incorrecto.</p>",
+      "content_en": "<h4>Forms</h4><ul><li>Short: <b>the -est</b> — <i>the fastest, the biggest</i></li><li>Consonant + y: <b>the -iest</b> — <i>the easiest</i></li><li>Long: <b>the most</b> — <i>the most advanced</i></li><li>Irregular: <b>the best</b>, <b>the worst</b>, <b>the least</b>, <b>the most</b></li></ul><h4>Complements</h4><ul><li><b>in</b> + place or closed group: <i>the largest company <b>in</b> the world</i></li><li><b>of</b> + a set of items: <i>the fastest <b>of</b> the three</i></li><li>With the present perfect: <i>the best film I've <b>ever</b> seen</i></li></ul><h4>Ordinals with superlatives</h4><p><i>the <b>second</b> largest city · the <b>third</b> most popular app.</i></p><h4>Careful</h4><p>The article <b>the</b> is compulsory and <i>most</i> is never combined with <i>-est</i>: <i>the most fastest</i> is wrong.</p>",
+      "fichas": [
+        { "t": "the + superlativo", "d": "El artículo the es obligatorio.", "d_en": "The article the is compulsory." },
+        { "t": "in vs of", "d": "in con lugares; of con conjuntos de elementos.", "d_en": "in with places; of with sets of items." },
+        { "t": "the second largest", "d": "El ordinal va entre the y el superlativo.", "d_en": "The ordinal goes between the and the superlative." },
+        { "t": "ever con superlativo", "d": "the best I've ever seen: experiencia hasta ahora.", "d_en": "the best I've ever seen: experience up to now." }
+      ],
+      "quiz": [
+        { "q": "«It's ___ app I've ever used.»", "q_en": "\"It's ___ app I've ever used.\"", "o": ["the most best", "the best", "best", "the better"], "o_en": ["the most best", "the best", "best", "the better"], "a": 1, "why": "Superlativo irregular de good con el artículo the.", "why_en": "Irregular superlative of good with the article the." },
+        { "q": "«Bogotá is the largest city ___ Colombia.»", "q_en": "\"Bogotá is the largest city ___ Colombia.\"", "o": ["of", "in", "at", "from"], "o_en": ["of", "in", "at", "from"], "a": 1, "why": "Con lugares el superlativo lleva in.", "why_en": "With places the superlative takes in." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["the most fastest network", "the fastest network", "the more fast network", "fastest network"], "o_en": ["the most fastest network", "the fastest network", "the more fast network", "fastest network"], "a": 1, "why": "No se combinan the most y -est, y the es obligatorio.", "why_en": "the most and -est are never combined, and the is compulsory." }
+      ]
+    },
+    {
+      "id": "ingles-9-4-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Tecnología y tecnoética",
+      "t_en": "Technology and technoethics",
+      "d": "14 min",
+      "content_es": "<h4>Tecnología actual</h4><p><b>artificial intelligence</b>, <b>algorithm</b>, <b>automation</b>, <b>robotics</b>, <b>machine learning</b>, <b>big data</b>, <b>virtual reality</b>, <b>renewable energy</b>, <b>biotechnology</b>, <b>self-driving car</b>.</p><h4>Tecnoética</h4><p><b>privacy</b>, <b>surveillance</b> (vigilancia), <b>bias</b> (sesgo), <b>digital divide</b> (brecha digital), <b>misinformation</b>, <b>cybersecurity</b>, <b>data protection</b>, <b>transparency</b>, <b>accountability</b>, <b>sustainability</b>.</p><h4>Impactos</h4><ul><li>Positivos: <i>improve access, save time, reduce costs, connect people, detect diseases early.</i></li><li>Negativos: <i>replace jobs, invade privacy, spread misinformation, increase inequality.</i></li></ul><h4>Discutirlo</h4><p><i>The main advantage is… · A major drawback is… · We need clear rules to prevent… · Who is responsible if…?</i></p>",
+      "content_en": "<h4>Current technology</h4><p><b>artificial intelligence</b>, <b>algorithm</b>, <b>automation</b>, <b>robotics</b>, <b>machine learning</b>, <b>big data</b>, <b>virtual reality</b>, <b>renewable energy</b>, <b>biotechnology</b>, <b>self-driving car</b>.</p><h4>Technoethics</h4><p><b>privacy</b>, <b>surveillance</b>, <b>bias</b>, <b>digital divide</b>, <b>misinformation</b>, <b>cybersecurity</b>, <b>data protection</b>, <b>transparency</b>, <b>accountability</b>, <b>sustainability</b>.</p><h4>Impacts</h4><ul><li>Positive: <i>improve access, save time, reduce costs, connect people, detect diseases early.</i></li><li>Negative: <i>replace jobs, invade privacy, spread misinformation, increase inequality.</i></li></ul><h4>Discussing it</h4><p><i>The main advantage is… · A major drawback is… · We need clear rules to prevent… · Who is responsible if…?</i></p>",
+      "fichas": [
+        { "t": "bias", "d": "Sesgo: una inclinación injusta en datos o decisiones.", "d_en": "An unfair leaning in data or decisions." },
+        { "t": "digital divide", "d": "Brecha entre quienes tienen acceso digital y quienes no.", "d_en": "The gap between those with digital access and those without." },
+        { "t": "surveillance", "d": "Vigilancia constante de personas o datos.", "d_en": "Constant monitoring of people or data." },
+        { "t": "drawback", "d": "Desventaja o inconveniente de algo.", "d_en": "A disadvantage of something." },
+        { "t": "misinformation", "d": "Información falsa que circula, con o sin intención.", "d_en": "False information that circulates, intentionally or not." }
+      ],
+      "quiz": [
+        { "q": "¿Qué es el «digital divide»?", "q_en": "What is the \"digital divide\"?", "o": ["Una red social", "La brecha de acceso digital", "Un tipo de algoritmo", "Un antivirus"], "o_en": ["A social network", "The gap in digital access", "A kind of algorithm", "An antivirus"], "a": 1, "why": "Es la desigualdad en el acceso a la tecnología.", "why_en": "It is the inequality in access to technology." },
+        { "q": "«A major ___ of automation is job loss.»", "q_en": "\"A major ___ of automation is job loss.\"", "o": ["advantage", "drawback", "benefit", "algorithm"], "o_en": ["advantage", "drawback", "benefit", "algorithm"], "a": 1, "why": "Drawback es la desventaja de algo.", "why_en": "A drawback is a disadvantage." },
+        { "q": "¿Qué significa «bias» en un algoritmo?", "q_en": "What does \"bias\" mean in an algorithm?", "o": ["Velocidad", "Sesgo", "Seguridad", "Precisión"], "o_en": ["Speed", "An unfair leaning", "Security", "Accuracy"], "a": 1, "why": "Bias es la inclinación injusta que produce resultados desiguales.", "why_en": "Bias is the unfair leaning that produces unequal results." }
+      ]
+    },
+    {
+      "id": "ingles-9-4-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "El alfabeto y la precisión técnica",
+      "t_en": "The alphabet and technical accuracy",
+      "d": "10 min",
+      "content_es": "<h4>Deletrear sin ambigüedad</h4><p>Cuando una letra se puede confundir (B/V, M/N, E/I), se usa una palabra de referencia: <i>B as in Boy, V as in Victor.</i> El alfabeto fonético internacional usa <i>Alpha, Bravo, Charlie, Delta…</i></p><h4>Términos técnicos frecuentes</h4><p><b>URL</b>, <b>Wi-Fi</b>, <b>PDF</b>, <b>USB</b>, <b>AI</b>, <b>IT</b>, <b>OS</b> — las siglas se deletrean letra por letra.</p><h4>Símbolos</h4><p><b>@</b> at · <b>#</b> hash · <b>.</b> dot · <b>/</b> slash · <b>_</b> underscore · <b>-</b> hyphen · <b>&amp;</b> ampersand.</p><h4>Frases de precisión</h4><p><i>All lowercase, no spaces. · That's with a capital W. · Double S. · Is that B as in Boy or V as in Victor?</i></p>",
+      "content_en": "<h4>Spelling without ambiguity</h4><p>When a letter can be confused (B/V, M/N, E/I), use a reference word: <i>B as in Boy, V as in Victor.</i> The international phonetic alphabet uses <i>Alpha, Bravo, Charlie, Delta…</i></p><h4>Frequent technical terms</h4><p><b>URL</b>, <b>Wi-Fi</b>, <b>PDF</b>, <b>USB</b>, <b>AI</b>, <b>IT</b>, <b>OS</b> — acronyms are spelled letter by letter.</p><h4>Symbols</h4><p><b>@</b> at · <b>#</b> hash · <b>.</b> dot · <b>/</b> slash · <b>_</b> underscore · <b>-</b> hyphen · <b>&amp;</b> ampersand.</p><h4>Accuracy phrases</h4><p><i>All lowercase, no spaces. · That's with a capital W. · Double S. · Is that B as in Boy or V as in Victor?</i></p>",
+      "fichas": [
+        { "t": "B as in Boy", "d": "Fórmula para desambiguar una letra al deletrear.", "d_en": "Formula to disambiguate a letter when spelling." },
+        { "t": "Siglas letra por letra", "d": "URL, PDF, USB se deletrean, no se leen como palabra.", "d_en": "URL, PDF, USB are spelled out, not read as words." },
+        { "t": "capital W", "d": "Con W mayúscula: se especifica para evitar errores.", "d_en": "With a capital W: specified to avoid mistakes." },
+        { "t": "Alpha, Bravo, Charlie", "d": "Alfabeto fonético internacional para deletrear con claridad.", "d_en": "International phonetic alphabet for clear spelling." }
+      ],
+      "quiz": [
+        { "q": "¿Cómo desambiguas la letra B al deletrear?", "q_en": "How do you disambiguate the letter B when spelling?", "o": ["B big", "B as in Boy", "B letter", "B capital of Boy"], "o_en": ["B big", "B as in Boy", "B letter", "B capital of Boy"], "a": 1, "why": "La fórmula estándar es la letra as in + palabra.", "why_en": "The standard formula is the letter as in + a word." },
+        { "q": "¿Cómo se lee «#»?", "q_en": "How do you read \"#\"?", "o": ["dot", "hash", "slash", "at"], "o_en": ["dot", "hash", "slash", "at"], "a": 1, "why": "El símbolo # se lee hash o hashtag.", "why_en": "The # symbol is read hash or hashtag." },
+        { "q": "«PDF» se pronuncia…", "q_en": "\"PDF\" is pronounced…", "o": ["como una palabra", "letra por letra", "solo la P", "en español"], "o_en": ["as a word", "letter by letter", "only the P", "in Spanish"], "a": 1, "why": "Las siglas de este tipo se deletrean letra por letra.", "why_en": "Acronyms of this kind are spelled letter by letter." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-9-4-repaso",
+    "titulo": "Repaso — How Will Technology Change Us?",
+    "titulo_en": "Review — How Will Technology Change Us?",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Para proyectar el futuro necesitas <b>describir con precisión</b> (adjetivo vs adverbio), <b>proyectar</b> (will, going to, futuro continuo y perfecto) y <b>comparar</b> (comparativos y superlativos).</p><h4>Puntos gramaticales</h4><ul><li>Adjetivo describe sustantivos; adverbio describe verbos. hardly ≠ hard.</li><li>Los verbos de percepción (look, sound, feel) llevan adjetivo.</li><li>will have + participio = terminado antes de una fecha futura.</li><li>much/far intensifican el comparativo; very no.</li><li>El superlativo siempre lleva the; in con lugares, of con conjuntos.</li></ul><h4>Vocabulario</h4><p>Tecnología (algorithm, automation, machine learning), tecnoética (bias, surveillance, digital divide) y deletreo técnico con referencias de letra.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>To project the future you need to <b>describe precisely</b> (adjective vs adverb), <b>project</b> (will, going to, future continuous and perfect) and <b>compare</b> (comparatives and superlatives).</p><h4>Grammar points</h4><ul><li>Adjectives describe nouns; adverbs describe verbs. hardly ≠ hard.</li><li>Perception verbs (look, sound, feel) take an adjective.</li><li>will have + participle = finished before a future date.</li><li>much/far intensify a comparative; very does not.</li><li>The superlative always takes the; in with places, of with sets.</li></ul><h4>Vocabulary</h4><p>Technology (algorithm, automation, machine learning), technoethics (bias, surveillance, digital divide) and technical spelling with letter references.</p>",
+    "puntos_clave": [
+      ["hardly significa apenas, no duramente.", "hardly means barely, not with effort."],
+      ["It looks good, no It looks well.", "It looks good, not It looks well."],
+      ["much faster, no very faster.", "much faster, not very faster."],
+      ["will have + participio para lo terminado antes de una fecha.", "will have + participle for what is finished before a date."],
+      ["El superlativo siempre lleva the.", "The superlative always takes the."],
+      ["Después de when o as soon as no va will.", "After when or as soon as there is no will."]
+    ],
+    "preguntas": [
+      { "q": "«She speaks English ___.»", "q_en": "\"She speaks English ___.\"", "o": ["fluent", "fluently", "more fluent", "fluentily"], "o_en": ["fluent", "fluently", "more fluent", "fluentily"], "a": 1, "why": "Describe cómo habla: adverbio de modo.", "why_en": "It describes how she speaks: a manner adverb." },
+      { "q": "«I ___ slept last night.» (casi nada)", "q_en": "\"I ___ slept last night.\" (almost none)", "o": ["hard", "hardly", "harder", "hardily"], "o_en": ["hard", "hardly", "harder", "hardily"], "a": 1, "why": "Hardly significa apenas.", "why_en": "Hardly means barely." },
+      { "q": "«By 2035 we ___ this problem.»", "q_en": "\"By 2035 we ___ this problem.\"", "o": ["will solve", "will have solved", "solve", "are solving"], "o_en": ["will solve", "will have solved", "solve", "are solving"], "a": 1, "why": "By + fecha futura con acción completada: futuro perfecto.", "why_en": "By + future date with a completed action: future perfect." },
+      { "q": "«The new model is ___ better than the old one.»", "q_en": "\"The new model is ___ better than the old one.\"", "o": ["very", "much", "so", "too"], "o_en": ["very", "much", "so", "too"], "a": 1, "why": "Much intensifica comparativos; very no puede.", "why_en": "Much intensifies comparatives; very cannot." },
+      { "q": "«It's the ___ powerful computer in the lab.»", "q_en": "\"It's the ___ powerful computer in the lab.\"", "o": ["more", "most", "much", "very"], "o_en": ["more", "most", "much", "very"], "a": 1, "why": "Superlativo de adjetivo largo: the most.", "why_en": "Superlative of a long adjective: the most." },
+      { "q": "«That plan sounds ___.»", "q_en": "\"That plan sounds ___.\"", "o": ["reasonably", "reasonable", "reason", "reasoned"], "o_en": ["reasonably", "reasonable", "reason", "reasoned"], "a": 1, "why": "Sound es verbo de percepción: va con adjetivo.", "why_en": "Sound is a perception verb: it takes an adjective." },
+      { "q": "«The algorithm showed a clear ___ against some groups.»", "q_en": "\"The algorithm showed a clear ___ against some groups.\"", "o": ["bias", "privacy", "transparency", "divide"], "o_en": ["bias", "privacy", "transparency", "divide"], "a": 0, "why": "Bias es el sesgo que perjudica a unos frente a otros.", "why_en": "Bias is the unfair leaning that harms some groups." },
+      { "q": "«Send it as a ___ file.»", "q_en": "\"Send it as a ___ file.\"", "o": ["PDF", "P-D-F word", "pdf spoken", "pedeefe"], "o_en": ["PDF", "P-D-F word", "pdf spoken", "pedeefe"], "a": 0, "why": "PDF es la sigla estándar y se deletrea letra por letra.", "why_en": "PDF is the standard acronym, spelled letter by letter." }
+    ]
+  }
+}

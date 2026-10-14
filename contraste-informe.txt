@@ -24,8 +24,14 @@
   chip gris sobre su fondo tenue                  6.87  min 4.5  ok
   texto gris sobre superficie                     7.89  min 4.5  ok
   relleno gris sobre superficie (borde)           3.67  min 3.0  ok
-  numero sobre verde                              5.37  min 4.5  ok
+  texto sobre relleno verde                       5.37  min 4.5  ok
+  texto sobre relleno cian                        8.25  min 4.5  ok
+  texto sobre panel (titulo)                     15.14  min 4.5  ok
   numero sobre ambar                              4.62  min 4.5  ok
+  texto sobre relleno de software                 8.25  min 4.5  ok
+  texto sobre relleno de unity                    8.49  min 4.5  ok
+  texto sobre relleno de electronica              7.14  min 4.5  ok
+  texto sobre relleno de audiovisual              7.26  min 4.5  ok
   linea software sobre superficie                 8.25  min 4.5  ok
   linea software sobre su tenue                   6.59  min 4.5  ok
   linea software sobre su tenue en papel          5.61  min 4.5  ok
@@ -90,8 +96,14 @@
   chip gris sobre su fondo tenue                  6.06  min 4.5  ok
   texto gris sobre superficie                     6.79  min 4.5  ok
   relleno gris sobre superficie (borde)           3.03  min 3.0  ok
-  numero sobre verde                              4.93  min 4.5  ok
+  texto sobre relleno verde                       5.49  min 4.5  ok
+  texto sobre relleno cian                        9.42  min 4.5  ok
+  texto sobre panel (titulo)                     16.62  min 4.5  ok
   numero sobre ambar                              6.63  min 4.5  ok
+  texto sobre relleno de software                 9.42  min 4.5  ok
+  texto sobre relleno de unity                    9.20  min 4.5  ok
+  texto sobre relleno de electronica              9.07  min 4.5  ok
+  texto sobre relleno de audiovisual              8.79  min 4.5  ok
   linea software sobre superficie                 8.45  min 4.5  ok
   linea software sobre su tenue                   6.40  min 4.5  ok
   linea software sobre su tenue en papel          7.17  min 4.5  ok

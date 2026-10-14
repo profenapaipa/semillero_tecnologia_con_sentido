@@ -1,0 +1,200 @@
+{
+  "id": "ingles-11-3",
+  "materia": "ingles",
+  "grado": "11",
+  "grado_nombre": "Once",
+  "periodo": 3,
+  "periodo_label": { "es": "Periodo III", "en": "Term III" },
+  "titulo": "Professional Communication and Life Skills",
+  "titulo_es": "Comunicación profesional y habilidades para la vida",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Me comunico en situaciones formales y laborales con el registro adecuado. Describo mis capacidades, limitaciones y proyectos con estructuras complejas.",
+  "competencias": "Usar modales y modales perfectos en contexto profesional; enlazar ideas con conjunciones subordinantes; formular preguntas indirectas; hablar de oficios, talentos, fortalezas y entrevistas.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "The Job Interview",
+    "descripcion_es": "En parejas, los estudiantes preparan y representan una entrevista de trabajo: hoja de vida, carta de presentación, preguntas indirectas del entrevistador y respuestas sobre fortalezas y debilidades.",
+    "descripcion_en": "In pairs, students prepare and act out a job interview: a résumé, a cover letter, the interviewer's indirect questions and answers about strengths and weaknesses."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-11-3-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Modales en contexto profesional",
+      "t_en": "Modals in a professional context",
+      "d": "14 min",
+      "content_es": "<h4>Graduar el mensaje</h4><ul><li><b>must / have to</b>: obligación firme — <i>Applicants must submit two references.</i></li><li><b>should / ought to</b>: recomendación — <i>You should tailor your résumé.</i></li><li><b>can / could</b>: capacidad y petición — <i>I can manage teams. / Could you send the details?</i></li><li><b>may / might</b>: posibilidad y permiso formal — <i>The position may involve travel.</i></li><li><b>would</b>: cortesía e hipótesis — <i>I would be glad to contribute.</i></li></ul><h4>Cortesía profesional</h4><p>Cuanto más indirecto, más formal: <i>Can you…?</i> &lt; <i>Could you…?</i> &lt; <i>Would you mind…?</i> &lt; <i>I was wondering if you could…</i></p><h4>Reglas fijas</h4><p>Los modales no llevan <b>-s</b>, no llevan <b>to</b> (salvo <i>ought to</i>) y forman negativo y pregunta sin <b>do</b>.</p><h4>Sustitutos</h4><p>Cuando se necesita otro tiempo: <i>be able to</i> (can), <i>have to</i> (must), <i>be allowed to</i> (may).</p>",
+      "content_en": "<h4>Grading the message</h4><ul><li><b>must / have to</b>: firm obligation — <i>Applicants must submit two references.</i></li><li><b>should / ought to</b>: recommendation — <i>You should tailor your résumé.</i></li><li><b>can / could</b>: ability and request — <i>I can manage teams. / Could you send the details?</i></li><li><b>may / might</b>: possibility and formal permission — <i>The position may involve travel.</i></li><li><b>would</b>: politeness and hypothesis — <i>I would be glad to contribute.</i></li></ul><h4>Professional politeness</h4><p>The more indirect, the more formal: <i>Can you…?</i> &lt; <i>Could you…?</i> &lt; <i>Would you mind…?</i> &lt; <i>I was wondering if you could…</i></p><h4>Fixed rules</h4><p>Modals take no <b>-s</b>, no <b>to</b> (except <i>ought to</i>) and form negatives and questions without <b>do</b>.</p><h4>Substitutes</h4><p>When another tense is needed: <i>be able to</i> (can), <i>have to</i> (must), <i>be allowed to</i> (may).</p>",
+      "fichas": [
+        { "t": "be able to", "d": "Sustituto de can en tiempos donde can no existe.", "d_en": "Substitute for can in tenses where can does not exist." },
+        { "t": "I was wondering if…", "d": "La petición más formal y cortés.", "d_en": "The most formal and polite request." },
+        { "t": "ought to", "d": "Único modal que lleva to. Equivale a should.", "d_en": "The only modal that takes to. Equivalent to should." },
+        { "t": "may involve", "d": "Posibilidad en un anuncio de empleo.", "d_en": "Possibility in a job posting." }
+      ],
+      "quiz": [
+        { "q": "«I ___ to attend the meeting next Friday.»", "q_en": "\"I ___ to attend the meeting next Friday.\"", "o": ["will can", "will be able", "can will", "am can"], "o_en": ["will can", "will be able", "can will", "am can"], "a": 1, "why": "Can no tiene futuro: se usa will be able to.", "why_en": "Can has no future form: use will be able to." },
+        { "q": "¿Cuál es la petición más formal?", "q_en": "Which is the most formal request?", "o": ["Send me the file", "Can you send it?", "Could you send it?", "I was wondering if you could send it"], "o_en": ["Send me the file", "Can you send it?", "Could you send it?", "I was wondering if you could send it"], "a": 3, "why": "Cuanto más indirecta, más formal es la petición.", "why_en": "The more indirect the request, the more formal it is." },
+        { "q": "«Candidates ___ submit their portfolio.»", "q_en": "\"Candidates ___ submit their portfolio.\"", "o": ["musts", "must", "must to", "are must"], "o_en": ["musts", "must", "must to", "are must"], "a": 1, "why": "Must no cambia y va con el verbo en base.", "why_en": "Must never changes and takes the base verb." }
+      ]
+    },
+    {
+      "id": "ingles-11-3-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Modales perfectos",
+      "t_en": "Perfect modals",
+      "d": "14 min",
+      "content_es": "<h4>La fórmula</h4><p><b>modal + have + participio</b>, siempre igual: <i>should have sent</i>, <i>could have been</i>.</p><h4>Qué expresa cada uno</h4><ul><li><b>should have</b>: crítica o arrepentimiento — <i>I should have prepared more examples.</i></li><li><b>shouldn't have</b>: algo que no debió hacerse.</li><li><b>could have</b>: posibilidad no aprovechada — <i>You could have applied earlier.</i></li><li><b>would have</b>: lo que habría pasado — <i>I would have accepted, but the salary was too low.</i></li><li><b>must have</b>: deducción casi segura — <i>They must have received the email.</i></li><li><b>can't have</b>: deducción negativa — <i>She can't have forgotten the meeting.</i></li><li><b>might / may have</b>: suposición — <i>He might have misunderstood.</i></li></ul><h4>Errores</h4><p>No existe <i>would of</i> ni <i>should of</i>: la forma es <b>have</b>. Y el verbo va en <b>participio</b>, no en pasado.</p>",
+      "content_en": "<h4>The formula</h4><p><b>modal + have + participle</b>, always the same: <i>should have sent</i>, <i>could have been</i>.</p><h4>What each one expresses</h4><ul><li><b>should have</b>: criticism or regret — <i>I should have prepared more examples.</i></li><li><b>shouldn't have</b>: something that should not have been done.</li><li><b>could have</b>: an unused possibility — <i>You could have applied earlier.</i></li><li><b>would have</b>: what would have happened — <i>I would have accepted, but the salary was too low.</i></li><li><b>must have</b>: near-certain deduction — <i>They must have received the email.</i></li><li><b>can't have</b>: negative deduction — <i>She can't have forgotten the meeting.</i></li><li><b>might / may have</b>: a guess — <i>He might have misunderstood.</i></li></ul><h4>Mistakes</h4><p>There is no <i>would of</i> or <i>should of</i>: the form is <b>have</b>. And the verb goes in the <b>participle</b>, not the past.</p>",
+      "fichas": [
+        { "t": "should have + participio", "d": "Arrepentimiento o crítica sobre el pasado.", "d_en": "Regret or criticism about the past." },
+        { "t": "must have vs can't have", "d": "Deducción positiva vs negativa sobre el pasado.", "d_en": "Positive vs negative deduction about the past." },
+        { "t": "could have", "d": "Posibilidad pasada que no se aprovechó.", "d_en": "A past possibility that was not taken." },
+        { "t": "Nunca would of", "d": "Suena igual que would have pero no existe.", "d_en": "It sounds like would have but does not exist." },
+        { "t": "Participio obligatorio", "d": "should have gone, no should have went.", "d_en": "should have gone, not should have went." }
+      ],
+      "quiz": [
+        { "q": "«The office is empty. Everyone ___ home.»", "q_en": "\"The office is empty. Everyone ___ home.\"", "o": ["must have gone", "must go", "can't have gone", "should go"], "o_en": ["must have gone", "must go", "can't have gone", "should go"], "a": 0, "why": "La evidencia lleva a una deducción casi segura.", "why_en": "The evidence leads to a near-certain deduction." },
+        { "q": "«I didn't get the job. I ___ better.»", "q_en": "\"I didn't get the job. I ___ better.\"", "o": ["should prepare", "should have prepared", "must prepare", "could prepare"], "o_en": ["should prepare", "should have prepared", "must prepare", "could prepare"], "a": 1, "why": "Es un arrepentimiento sobre el pasado.", "why_en": "It is a regret about the past." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["She would of accepted", "She would have accepted", "She would have accept", "She would had accepted"], "o_en": ["She would of accepted", "She would have accepted", "She would have accept", "She would had accepted"], "a": 1, "why": "La forma es would have + participio.", "why_en": "The form is would have + participle." }
+      ]
+    },
+    {
+      "id": "ingles-11-3-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Conjunciones subordinantes",
+      "t_en": "Subordinating conjunctions",
+      "d": "14 min",
+      "content_es": "<h4>Qué hacen</h4><p>Unen una oración principal con una subordinada y establecen la relación entre ambas.</p><ul><li><b>Tiempo</b>: when, while, before, after, until, as soon as, once</li><li><b>Causa</b>: because, since, as</li><li><b>Contraste</b>: although, even though, though, whereas, while</li><li><b>Condición</b>: if, unless, provided that, as long as, in case</li><li><b>Propósito</b>: so that, in order that</li><li><b>Resultado</b>: so … that, such … that</li></ul><h4>Puntuación</h4><p>Si la subordinada va primero, se separa con coma: <i><b>Although</b> the salary was low, she accepted.</i> Si va después, no lleva coma.</p><h4>Detalles</h4><ul><li><b>while</b> sirve para tiempo y para contraste: el contexto decide.</li><li><b>so that</b> introduce propósito y suele llevar modal: <i>so that we <b>can</b> finish on time</i>.</li><li><b>so … that</b> con adjetivo; <b>such … that</b> con sustantivo: <i>so busy that…</i> / <i>such a busy week that…</i></li></ul>",
+      "content_en": "<h4>What they do</h4><p>They join a main clause with a subordinate one and set the relation between them.</p><ul><li><b>Time</b>: when, while, before, after, until, as soon as, once</li><li><b>Cause</b>: because, since, as</li><li><b>Contrast</b>: although, even though, though, whereas, while</li><li><b>Condition</b>: if, unless, provided that, as long as, in case</li><li><b>Purpose</b>: so that, in order that</li><li><b>Result</b>: so … that, such … that</li></ul><h4>Punctuation</h4><p>If the subordinate clause comes first, separate it with a comma: <i><b>Although</b> the salary was low, she accepted.</i> If it comes second, no comma.</p><h4>Details</h4><ul><li><b>while</b> works for time and for contrast: the context decides.</li><li><b>so that</b> introduces purpose and usually takes a modal: <i>so that we <b>can</b> finish on time</i>.</li><li><b>so … that</b> with an adjective; <b>such … that</b> with a noun: <i>so busy that…</i> / <i>such a busy week that…</i></li></ul>",
+      "fichas": [
+        { "t": "so that + modal", "d": "Propósito: so that we can finish.", "d_en": "Purpose: so that we can finish." },
+        { "t": "so … that / such … that", "d": "so con adjetivo; such con sustantivo.", "d_en": "so with an adjective; such with a noun." },
+        { "t": "while doble uso", "d": "Puede indicar tiempo o contraste.", "d_en": "It can indicate time or contrast." },
+        { "t": "Coma si va primero", "d": "Although it rained, we went.", "d_en": "Although it rained, we went." },
+        { "t": "provided that", "d": "Condición formal: siempre que se cumpla algo.", "d_en": "Formal condition: on condition that." }
+      ],
+      "quiz": [
+        { "q": "«She stayed late ___ she could finish the report.»", "q_en": "\"She stayed late ___ she could finish the report.\"", "o": ["so that", "so", "such that", "because of"], "o_en": ["so that", "so", "such that", "because of"], "a": 0, "why": "So that introduce el propósito con un modal.", "why_en": "So that introduces purpose with a modal." },
+        { "q": "«It was ___ a demanding project that we hired two more people.»", "q_en": "\"It was ___ a demanding project that we hired two more people.\"", "o": ["so", "such", "very", "too"], "o_en": ["so", "such", "very", "too"], "a": 1, "why": "Va con sustantivo (project), así que se usa such.", "why_en": "It goes with a noun (project), so we use such." },
+        { "q": "«___ the deadline was tight, the team delivered on time.»", "q_en": "\"___ the deadline was tight, the team delivered on time.\"", "o": ["Because", "Even though", "So that", "Provided that"], "o_en": ["Because", "Even though", "So that", "Provided that"], "a": 1, "why": "Hay contraste entre la dificultad y el resultado.", "why_en": "There is a contrast between the difficulty and the result." }
+      ]
+    },
+    {
+      "id": "ingles-11-3-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Preguntas indirectas",
+      "t_en": "Indirect questions",
+      "d": "14 min",
+      "content_es": "<h4>Para qué sirven</h4><p>Son más corteses y formales que la pregunta directa. Muy usadas en entrevistas y correos.</p><h4>La transformación</h4><p>Después de la fórmula introductoria, el orden es el de una <b>afirmación</b>: sin inversión y sin do/does/did.</p><ul><li><i>Where is the office?</i> → <i>Could you tell me <b>where the office is</b>?</i></li><li><i>What time does it start?</i> → <i>Do you know <b>what time it starts</b>?</i></li><li><i>Did he apply?</i> → <i>I'd like to know <b>if he applied</b>.</i></li></ul><h4>Fórmulas introductorias</h4><p><i>Could you tell me… · Do you know… · I was wondering… · I'd like to know… · Would you mind telling me…</i></p><h4>Detalles</h4><ul><li>Con preguntas de sí o no se usa <b>if</b> o <b>whether</b>.</li><li>Si la fórmula es una pregunta (<i>Do you know…?</i>), la oración lleva signo de interrogación; si es una afirmación (<i>I'd like to know…</i>), lleva punto.</li></ul>",
+      "content_en": "<h4>What they are for</h4><p>They are more polite and formal than the direct question. Very common in interviews and emails.</p><h4>The transformation</h4><p>After the introductory formula, the word order is that of a <b>statement</b>: no inversion and no do/does/did.</p><ul><li><i>Where is the office?</i> → <i>Could you tell me <b>where the office is</b>?</i></li><li><i>What time does it start?</i> → <i>Do you know <b>what time it starts</b>?</i></li><li><i>Did he apply?</i> → <i>I'd like to know <b>if he applied</b>.</i></li></ul><h4>Introductory formulas</h4><p><i>Could you tell me… · Do you know… · I was wondering… · I'd like to know… · Would you mind telling me…</i></p><h4>Details</h4><ul><li>With yes/no questions use <b>if</b> or <b>whether</b>.</li><li>If the formula is a question (<i>Do you know…?</i>), the sentence takes a question mark; if it is a statement (<i>I'd like to know…</i>), it takes a period.</li></ul>",
+      "fichas": [
+        { "t": "Orden de afirmación", "d": "where the office is, no where is the office.", "d_en": "where the office is, not where is the office." },
+        { "t": "Sin do/does/did", "d": "what time it starts, no what time does it start.", "d_en": "what time it starts, not what time does it start." },
+        { "t": "if / whether", "d": "Para preguntas de sí o no en forma indirecta.", "d_en": "For yes/no questions in indirect form." },
+        { "t": "Puntuación", "d": "Depende de si la fórmula introductoria es pregunta.", "d_en": "It depends on whether the introductory formula is a question." }
+      ],
+      "quiz": [
+        { "q": "«Could you tell me where ___?»", "q_en": "\"Could you tell me where ___?\"", "o": ["is the meeting room", "the meeting room is", "does the meeting room", "is meeting room"], "o_en": ["is the meeting room", "the meeting room is", "does the meeting room", "is meeting room"], "a": 1, "why": "En la pregunta indirecta el orden es el de una afirmación.", "why_en": "In an indirect question the order is that of a statement." },
+        { "q": "«Do you know what time ___?»", "q_en": "\"Do you know what time ___?\"", "o": ["does the interview start", "the interview starts", "starts the interview", "is the interview start"], "o_en": ["does the interview start", "the interview starts", "starts the interview", "is the interview start"], "a": 1, "why": "No se usa el auxiliar does en la pregunta indirecta.", "why_en": "The auxiliary does is not used in the indirect question." },
+        { "q": "«I was wondering ___ you received my application.»", "q_en": "\"I was wondering ___ you received my application.\"", "o": ["that", "if", "what", "did"], "o_en": ["that", "if", "what", "did"], "a": 1, "why": "Las preguntas de sí o no se introducen con if o whether.", "why_en": "Yes/no questions are introduced with if or whether." }
+      ]
+    },
+    {
+      "id": "ingles-11-3-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Oficios, lugares de trabajo y actividades",
+      "t_en": "Jobs, workplaces and activities",
+      "d": "12 min",
+      "content_es": "<h4>Sectores y cargos</h4><p><b>manager</b>, <b>supervisor</b>, <b>assistant</b>, <b>analyst</b>, <b>technician</b>, <b>consultant</b>, <b>intern</b> (practicante), <b>freelancer</b>, <b>entrepreneur</b> (emprendedor), <b>civil servant</b> (funcionario público).</p><h4>Lugares</h4><p><b>office</b>, <b>workshop</b> (taller), <b>warehouse</b> (bodega), <b>factory</b>, <b>site</b> (obra), <b>lab</b>, <b>headquarters</b> (sede central), <b>remote / hybrid work</b>.</p><h4>Actividades</h4><p><b>attend meetings</b>, <b>meet deadlines</b> (cumplir plazos), <b>handle complaints</b>, <b>draft reports</b>, <b>supervise a team</b>, <b>negotiate contracts</b>, <b>track progress</b>, <b>troubleshoot</b> (resolver fallas).</p><h4>Condiciones</h4><p><b>full-time / part-time</b>, <b>shift</b> (turno), <b>salary</b> vs <b>wage</b> (mensual vs por hora), <b>benefits</b>, <b>promotion</b>, <b>resign</b> (renunciar), <b>be laid off</b> (ser despedido por recorte).</p>",
+      "content_en": "<h4>Sectors and roles</h4><p><b>manager</b>, <b>supervisor</b>, <b>assistant</b>, <b>analyst</b>, <b>technician</b>, <b>consultant</b>, <b>intern</b>, <b>freelancer</b>, <b>entrepreneur</b>, <b>civil servant</b>.</p><h4>Places</h4><p><b>office</b>, <b>workshop</b>, <b>warehouse</b>, <b>factory</b>, <b>site</b>, <b>lab</b>, <b>headquarters</b>, <b>remote / hybrid work</b>.</p><h4>Activities</h4><p><b>attend meetings</b>, <b>meet deadlines</b>, <b>handle complaints</b>, <b>draft reports</b>, <b>supervise a team</b>, <b>negotiate contracts</b>, <b>track progress</b>, <b>troubleshoot</b>.</p><h4>Conditions</h4><p><b>full-time / part-time</b>, <b>shift</b>, <b>salary</b> vs <b>wage</b>, <b>benefits</b>, <b>promotion</b>, <b>resign</b>, <b>be laid off</b>.</p>",
+      "fichas": [
+        { "t": "meet a deadline", "d": "Cumplir con la fecha límite. El verbo es meet.", "d_en": "To finish by the due date. The verb is meet." },
+        { "t": "salary vs wage", "d": "Salario mensual fijo vs pago por hora o día.", "d_en": "A fixed monthly salary vs pay by the hour or day." },
+        { "t": "resign vs be laid off", "d": "Renunciar por decisión propia vs ser despedido por recorte.", "d_en": "To quit by choice vs to be dismissed in a cutback." },
+        { "t": "intern", "d": "Practicante en formación dentro de una empresa.", "d_en": "A trainee working in a company." },
+        { "t": "troubleshoot", "d": "Diagnosticar y resolver fallas técnicas.", "d_en": "To diagnose and fix technical problems." }
+      ],
+      "quiz": [
+        { "q": "«We have to ___ the deadline on Friday.»", "q_en": "\"We have to ___ the deadline on Friday.\"", "o": ["accomplish", "meet", "arrive", "reach out"], "o_en": ["accomplish", "meet", "arrive", "reach out"], "a": 1, "why": "La colocación fija es meet a deadline.", "why_en": "The fixed collocation is meet a deadline." },
+        { "q": "¿Cuál es la diferencia entre «salary» y «wage»?", "q_en": "What is the difference between \"salary\" and \"wage\"?", "o": ["Ninguna", "Salary es mensual fijo; wage se paga por hora o día", "Salary es por hora", "Wage es solo para gerentes"], "o_en": ["None", "A salary is fixed monthly; a wage is paid hourly or daily", "A salary is hourly", "A wage is only for managers"], "a": 1, "why": "El salary es fijo y periódico; el wage se paga por tiempo trabajado.", "why_en": "A salary is fixed and periodic; a wage is paid for time worked." },
+        { "q": "«She ___ last month to start her own business.»", "q_en": "\"She ___ last month to start her own business.\"", "o": ["was laid off", "resigned", "was promoted", "was hired"], "o_en": ["was laid off", "resigned", "was promoted", "was hired"], "a": 1, "why": "Irse por decisión propia es resign.", "why_en": "Leaving by your own decision is to resign." }
+      ]
+    },
+    {
+      "id": "ingles-11-3-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Talentos, fortalezas y debilidades",
+      "t_en": "Talents, strengths and weaknesses",
+      "d": "14 min",
+      "content_es": "<h4>Habilidades duras y blandas</h4><p><b>hard skills</b>: data analysis, programming, bilingual proficiency, technical drawing.<br><b>soft skills</b>: teamwork, leadership, communication, adaptability, time management, problem-solving, critical thinking.</p><h4>Cómo describirlas</h4><ul><li><i>I'm <b>good at</b> solving problems.</i> (good at + gerundio)</li><li><i>I have <b>experience in</b> customer service.</i></li><li><i>One of my <b>strengths</b> is attention to detail.</i></li><li><i>I'm <b>able to</b> work under pressure.</i></li></ul><h4>Debilidades sin dispararse en el pie</h4><p>Se menciona la debilidad y de inmediato la acción correctiva: <i>I used to struggle with public speaking, but I've been taking a course and I've improved a lot.</i></p><h4>Ojo</h4><p><b>Ability</b> es la capacidad; <b>skill</b> es la habilidad entrenada. <i>Career</i> es la trayectoria profesional, no la carrera universitaria (que es <i>degree</i> o <i>major</i>).</p>",
+      "content_en": "<h4>Hard and soft skills</h4><p><b>hard skills</b>: data analysis, programming, bilingual proficiency, technical drawing.<br><b>soft skills</b>: teamwork, leadership, communication, adaptability, time management, problem-solving, critical thinking.</p><h4>How to describe them</h4><ul><li><i>I'm <b>good at</b> solving problems.</i> (good at + gerund)</li><li><i>I have <b>experience in</b> customer service.</i></li><li><i>One of my <b>strengths</b> is attention to detail.</i></li><li><i>I'm <b>able to</b> work under pressure.</i></li></ul><h4>Weaknesses without shooting yourself in the foot</h4><p>State the weakness and immediately the corrective action: <i>I used to struggle with public speaking, but I've been taking a course and I've improved a lot.</i></p><h4>Careful</h4><p><b>Ability</b> is the capacity; <b>skill</b> is the trained competence. <i>Career</i> is your professional path, not a university programme (that is a <i>degree</i> or <i>major</i>).</p>",
+      "fichas": [
+        { "t": "good at + gerundio", "d": "I'm good at organizing, no good at organize.", "d_en": "I'm good at organizing, not good at organize." },
+        { "t": "soft skills", "d": "Habilidades interpersonales: trabajo en equipo, comunicación.", "d_en": "Interpersonal skills: teamwork, communication." },
+        { "t": "career vs degree", "d": "Trayectoria profesional vs título universitario.", "d_en": "Professional path vs university qualification." },
+        { "t": "strength / weakness", "d": "Fortaleza y debilidad: sustantivos de la entrevista.", "d_en": "The two interview nouns: strength and weakness." },
+        { "t": "work under pressure", "d": "Trabajar bajo presión: colocación fija.", "d_en": "Fixed collocation for handling stressful conditions." }
+      ],
+      "quiz": [
+        { "q": "«I'm good at ___ complex problems.»", "q_en": "\"I'm good at ___ complex problems.\"", "o": ["solve", "to solve", "solving", "solved"], "o_en": ["solve", "to solve", "solving", "solved"], "a": 2, "why": "Good at siempre va seguido de gerundio.", "why_en": "Good at is always followed by a gerund." },
+        { "q": "¿Cuál es una «soft skill»?", "q_en": "Which one is a \"soft skill\"?", "o": ["Programming", "Data analysis", "Teamwork", "Technical drawing"], "o_en": ["Programming", "Data analysis", "Teamwork", "Technical drawing"], "a": 2, "why": "El trabajo en equipo es una habilidad interpersonal.", "why_en": "Teamwork is an interpersonal skill." },
+        { "q": "«I finished my ___ in engineering last year.»", "q_en": "\"I finished my ___ in engineering last year.\"", "o": ["career", "degree", "job", "skill"], "o_en": ["career", "degree", "job", "skill"], "a": 1, "why": "El título universitario es el degree, no el career.", "why_en": "The university qualification is a degree, not a career." }
+      ]
+    },
+    {
+      "id": "ingles-11-3-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Entrevistas y comunicación laboral",
+      "t_en": "Interviews and workplace communication",
+      "d": "14 min",
+      "content_es": "<h4>Documentos</h4><p><b>résumé / CV</b>, <b>cover letter</b> (carta de presentación), <b>reference</b>, <b>portfolio</b>, <b>job posting</b> (oferta de empleo), <b>application</b>.</p><h4>Preguntas típicas</h4><p><i>Tell me about yourself. · Why are you interested in this position? · What are your strengths and weaknesses? · Where do you see yourself in five years? · Can you give an example of a challenge you faced?</i></p><h4>Cómo responder</h4><p>Estructura <b>situación → acción → resultado</b>: <i>In my last project, the deadline moved up. I reorganized the schedule and delegated two tasks. We delivered on time.</i></p><h4>Correos de trabajo</h4><p><i>Dear Mr. Ospina, · I am writing to apply for… · Please find my résumé attached. · I look forward to hearing from you. · Best regards,</i></p><h4>Ojo</h4><p><b>Apply for</b> a job, <b>apply to</b> a company. Y <i>attach</i> es adjuntar: <i>Please find attached…</i></p>",
+      "content_en": "<h4>Documents</h4><p><b>résumé / CV</b>, <b>cover letter</b>, <b>reference</b>, <b>portfolio</b>, <b>job posting</b>, <b>application</b>.</p><h4>Typical questions</h4><p><i>Tell me about yourself. · Why are you interested in this position? · What are your strengths and weaknesses? · Where do you see yourself in five years? · Can you give an example of a challenge you faced?</i></p><h4>How to answer</h4><p>Use the <b>situation → action → result</b> structure: <i>In my last project, the deadline moved up. I reorganized the schedule and delegated two tasks. We delivered on time.</i></p><h4>Work emails</h4><p><i>Dear Mr. Ospina, · I am writing to apply for… · Please find my résumé attached. · I look forward to hearing from you. · Best regards,</i></p><h4>Careful</h4><p><b>Apply for</b> a job, <b>apply to</b> a company. And <i>attach</i> means to send with the message: <i>Please find attached…</i></p>",
+      "fichas": [
+        { "t": "cover letter", "d": "Carta de presentación que acompaña la hoja de vida.", "d_en": "The letter that accompanies your résumé." },
+        { "t": "apply for / apply to", "d": "for + puesto; to + empresa o institución.", "d_en": "for + position; to + company or institution." },
+        { "t": "Situación, acción, resultado", "d": "Estructura estándar para responder en entrevistas.", "d_en": "Standard structure for answering interview questions." },
+        { "t": "Please find attached", "d": "Fórmula formal para anunciar un archivo adjunto.", "d_en": "Formal formula to announce an attached file." },
+        { "t": "I look forward to hearing", "d": "Cierre formal. Lleva gerundio porque to es preposición.", "d_en": "Formal closing. It takes a gerund because to is a preposition." }
+      ],
+      "quiz": [
+        { "q": "«I'd like to apply ___ the marketing position.»", "q_en": "\"I'd like to apply ___ the marketing position.\"", "o": ["to", "for", "at", "in"], "o_en": ["to", "for", "at", "in"], "a": 1, "why": "Apply for + puesto; apply to + empresa.", "why_en": "Apply for + position; apply to + company." },
+        { "q": "«I look forward to ___ from you.»", "q_en": "\"I look forward to ___ from you.\"", "o": ["hear", "hearing", "heard", "to hear"], "o_en": ["hear", "hearing", "heard", "to hear"], "a": 1, "why": "En look forward to, el to es preposición y pide gerundio.", "why_en": "In look forward to, to is a preposition and takes a gerund." },
+        { "q": "¿Qué documento acompaña a la hoja de vida?", "q_en": "Which document accompanies the résumé?", "o": ["The job posting", "The cover letter", "The portfolio", "The reference number"], "o_en": ["The job posting", "The cover letter", "The portfolio", "The reference number"], "a": 1, "why": "La cover letter presenta al candidato junto al CV.", "why_en": "The cover letter introduces the candidate alongside the CV." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-11-3-repaso",
+    "titulo": "Repaso — Professional Communication and Life Skills",
+    "titulo_en": "Review — Professional Communication and Life Skills",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El registro profesional se construye con <b>modales</b> (para graduar obligación, consejo y cortesía), <b>conjunciones subordinantes</b> (para articular ideas complejas) y <b>preguntas indirectas</b> (para sonar formal y respetuoso).</p><h4>Puntos gramaticales</h4><ul><li>Los modales no llevan -s ni to; se sustituyen por be able to, have to y be allowed to en otros tiempos.</li><li>Modal perfecto = modal + have + participio. Nunca would of.</li><li>so that expresa propósito; so … that y such … that expresan resultado.</li><li>En preguntas indirectas el orden es el de una afirmación, sin do/does/did.</li></ul><h4>Vocabulario</h4><p>Cargos y lugares de trabajo, hard y soft skills, fortalezas y debilidades, documentos y fórmulas de correo profesional.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>Professional register is built with <b>modals</b> (to grade obligation, advice and politeness), <b>subordinating conjunctions</b> (to articulate complex ideas) and <b>indirect questions</b> (to sound formal and respectful).</p><h4>Grammar points</h4><ul><li>Modals take no -s and no to; they are replaced by be able to, have to and be allowed to in other tenses.</li><li>Perfect modal = modal + have + participle. Never would of.</li><li>so that expresses purpose; so … that and such … that express result.</li><li>In indirect questions the order is that of a statement, with no do/does/did.</li></ul><h4>Vocabulary</h4><p>Roles and workplaces, hard and soft skills, strengths and weaknesses, documents and professional email formulas.</p>",
+    "puntos_clave": [
+      ["can no tiene futuro: will be able to.", "can has no future: will be able to."],
+      ["should have + participio, nunca should of.", "should have + participle, never should of."],
+      ["so + adjetivo that; such + sustantivo that.", "so + adjective that; such + noun that."],
+      ["Could you tell me where the office is, sin inversión.", "Could you tell me where the office is, with no inversion."],
+      ["good at + gerundio.", "good at + gerund."],
+      ["apply for un puesto; apply to una empresa.", "apply for a position; apply to a company."]
+    ],
+    "preguntas": [
+      { "q": "«Next year I ___ work remotely.»", "q_en": "\"Next year I ___ work remotely.\"", "o": ["will can", "will be able to", "can will", "am able"], "o_en": ["will can", "will be able to", "can will", "am able"], "a": 1, "why": "Can no tiene futuro: se usa will be able to.", "why_en": "Can has no future: use will be able to." },
+      { "q": "«They didn't reply. They ___ the email.»", "q_en": "\"They didn't reply. They ___ the email.\"", "o": ["can't have received", "must receive", "should receive", "can't receive"], "o_en": ["can't have received", "must receive", "should receive", "can't receive"], "a": 0, "why": "Deducción negativa sobre el pasado: can't have + participio.", "why_en": "Negative deduction about the past: can't have + participle." },
+      { "q": "«It was ___ a complex task that we asked for help.»", "q_en": "\"It was ___ a complex task that we asked for help.\"", "o": ["so", "such", "very", "too"], "o_en": ["so", "such", "very", "too"], "a": 1, "why": "Va con sustantivo (task): such.", "why_en": "It goes with a noun (task): such." },
+      { "q": "«Could you tell me when ___?»", "q_en": "\"Could you tell me when ___?\"", "o": ["does the shift start", "the shift starts", "starts the shift", "is the shift start"], "o_en": ["does the shift start", "the shift starts", "starts the shift", "is the shift start"], "a": 1, "why": "En la pregunta indirecta no se usa el auxiliar.", "why_en": "In an indirect question the auxiliary is not used." },
+      { "q": "«She's excellent at ___ teams.»", "q_en": "\"She's excellent at ___ teams.\"", "o": ["lead", "to lead", "leading", "led"], "o_en": ["lead", "to lead", "leading", "led"], "a": 2, "why": "Después de la preposición at va gerundio.", "why_en": "After the preposition at we use a gerund." },
+      { "q": "«He ___ last month; nobody fired him.»", "q_en": "\"He ___ last month; nobody fired him.\"", "o": ["was laid off", "resigned", "was promoted", "was hired"], "o_en": ["was laid off", "resigned", "was promoted", "was hired"], "a": 1, "why": "Resign es irse por decisión propia.", "why_en": "Resign means to leave by your own decision." },
+      { "q": "«Please find my résumé ___.»", "q_en": "\"Please find my résumé ___.\"", "o": ["attach", "attached", "attaching", "to attach"], "o_en": ["attach", "attached", "attaching", "to attach"], "a": 1, "why": "La fórmula fija es Please find attached / my résumé attached.", "why_en": "The fixed formula is Please find attached / my résumé attached." },
+      { "q": "«I'm applying ___ that company.»", "q_en": "\"I'm applying ___ that company.\"", "o": ["for", "to", "in", "at"], "o_en": ["for", "to", "in", "at"], "a": 1, "why": "Apply to + empresa; apply for + puesto.", "why_en": "Apply to + company; apply for + position." }
+    ]
+  }
+}

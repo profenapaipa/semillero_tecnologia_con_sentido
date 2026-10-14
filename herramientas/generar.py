@@ -1438,9 +1438,16 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
                      % (ico('libro', 16), rotulo_evento('contenido')))
             h.append('<details class="mas diapos" open><summary>%s Ver las %d diapositivas de '
                      'la sesion</summary><div>' % (ico('chevron', 14), len(diapos)))
-            h.append('<p class="dato">Se muestran las de tu linea y las que eran para todos. '
-                     'La presentacion completa esta en <code>%s</code>.</p>'
-                     % e(m.get('archivo') or 'la carpeta de la sesion'))
+            h.append('<div class="barra-diapos">')
+            h.append('<p class="dato">Se muestran las de tu linea y las que eran para todos.</p>')
+            if m.get('pdf'):
+                h.append('<div class="botones">'
+                         '<a class="boton" href="../assets/pdf/sesion-%s.pdf" target="_blank" '
+                         'rel="noopener">%s Abrir la sesion completa en PDF</a>'
+                         '<a class="boton" href="../assets/pdf/sesion-%s.pdf" download>%s Descargar</a>'
+                         '</div>' % (e(m['letra']), ico('documento', 16),
+                                     e(m['letra']), ico('carpeta', 16)))
+            h.append('</div>')
             h.append(carrusel(m, diapos))
             h.append('<details class="mas texto-diapos"><summary>%s Leer el texto de las '
                      'diapositivas</summary><div>' % ico('documento', 14))

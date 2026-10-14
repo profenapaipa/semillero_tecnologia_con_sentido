@@ -1,0 +1,175 @@
+{
+  "id": "ingles-8-1",
+  "materia": "ingles",
+  "grado": "8",
+  "grado_nombre": "Octavo",
+  "periodo": 1,
+  "periodo_label": { "es": "Periodo I", "en": "Term I" },
+  "titulo": "Understanding Others and Expressing Personal Viewpoints",
+  "titulo_es": "Entender a otros y expresar puntos de vista",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Comprendo y expreso opiniones sobre costumbres y actividades cotidianas. Distingo entre lo habitual y lo temporal al describir la vida propia y la de otras culturas.",
+  "competencias": "Contrastar presente simple y presente continuo en contextos reales; usar adverbios y expresiones de frecuencia; saludar y despedirse según el registro; describir costumbres y tradiciones y opinar sobre ellas.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Cultures Around the World",
+    "descripcion_es": "En grupos, los estudiantes investigan una tradición de otro país y la presentan comparándola con una costumbre colombiana, usando presente simple para lo habitual y presente continuo para lo que está cambiando hoy.",
+    "descripcion_en": "In groups, students research a tradition from another country and present it comparing it with a Colombian custom, using the simple present for what is habitual and the present continuous for what is changing today."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-8-1-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Presente simple vs presente continuo",
+      "t_en": "Present simple vs present continuous",
+      "d": "14 min",
+      "content_es": "<h4>Lo permanente y lo temporal</h4><ul><li><b>Presente simple</b>: rutinas, hechos, verdades generales. <i>Water boils at 100 °C.</i></li><li><b>Presente continuo</b>: acción de ahora, situación temporal o tendencia en curso. <i>She is living with her aunt this year.</i></li></ul><h4>Usos menos obvios del continuo</h4><ul><li>Cambios en desarrollo: <i>The climate is getting warmer.</i></li><li>Planes ya concretados: <i>We are traveling to Cali on Friday.</i></li><li>Quejas con <b>always</b>: <i>He's always interrupting me!</i></li></ul><h4>Verbos de estado</h4><p><b>know, believe, understand, want, need, own, seem, belong, prefer</b> normalmente no van en continuo. Pero algunos cambian de significado: <i>I <b>think</b> it's true</i> (opinión) vs. <i>I'm <b>thinking</b> about it</i> (proceso mental).</p>",
+      "content_en": "<h4>Permanent and temporary</h4><ul><li><b>Present simple</b>: routines, facts, general truths. <i>Water boils at 100 °C.</i></li><li><b>Present continuous</b>: an action right now, a temporary situation or an ongoing trend. <i>She is living with her aunt this year.</i></li></ul><h4>Less obvious uses of the continuous</h4><ul><li>Developing changes: <i>The climate is getting warmer.</i></li><li>Fixed plans: <i>We are traveling to Cali on Friday.</i></li><li>Complaints with <b>always</b>: <i>He's always interrupting me!</i></li></ul><h4>State verbs</h4><p><b>know, believe, understand, want, need, own, seem, belong, prefer</b> normally do not take the continuous. Some change meaning: <i>I <b>think</b> it's true</i> (opinion) vs. <i>I'm <b>thinking</b> about it</i> (mental process).</p>",
+      "fichas": [
+        { "t": "Presente simple", "d": "Hechos permanentes y rutinas: The sun rises in the east.", "d_en": "Permanent facts and routines: The sun rises in the east." },
+        { "t": "Presente continuo temporal", "d": "this week, this year: situaciones que no son permanentes.", "d_en": "this week, this year: situations that are not permanent." },
+        { "t": "is always + -ing", "d": "Queja por algo que se repite y molesta.", "d_en": "A complaint about something annoying that repeats." },
+        { "t": "think vs am thinking", "d": "Opinión vs proceso mental en curso.", "d_en": "Opinion vs an ongoing mental process." },
+        { "t": "Verbos de estado", "d": "know, want, belong: no admiten forma continua.", "d_en": "know, want, belong: they take no continuous form." }
+      ],
+      "quiz": [
+        { "q": "«Water ___ at 100 degrees.»", "q_en": "\"Water ___ at 100 degrees.\"", "o": ["is boiling", "boils", "boil", "boiled"], "o_en": ["is boiling", "boils", "boil", "boiled"], "a": 1, "why": "Es una verdad científica: presente simple.", "why_en": "It is a scientific truth: present simple." },
+        { "q": "«My cousin ___ with us this month.»", "q_en": "\"My cousin ___ with us this month.\"", "o": ["stays", "is staying", "stay", "stayed"], "o_en": ["stays", "is staying", "stay", "stayed"], "a": 1, "why": "This month indica una situación temporal: continuo.", "why_en": "This month signals a temporary situation: continuous." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["I'm thinking about the offer", "I am knowing the answer", "I know the answer", "She is working today"], "o_en": ["I'm thinking about the offer", "I am knowing the answer", "I know the answer", "She is working today"], "a": 1, "why": "Know es verbo de estado: no admite forma continua.", "why_en": "Know is a state verb: it has no continuous form." }
+      ]
+    },
+    {
+      "id": "ingles-8-1-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Adverbios y expresiones de frecuencia",
+      "t_en": "Frequency adverbs and expressions",
+      "d": "12 min",
+      "content_es": "<h4>La escala completa</h4><p><b>always</b> · <b>almost always</b> · <b>usually</b> · <b>often / frequently</b> · <b>sometimes</b> · <b>occasionally</b> · <b>hardly ever / rarely</b> · <b>never</b>.</p><h4>Posición</h4><ul><li>Antes del verbo principal: <i>I <b>usually</b> walk to school.</i></li><li>Después de to be: <i>He <b>is</b> <b>rarely</b> late.</i></li><li>Entre auxiliar y verbo: <i>She has <b>never</b> been abroad.</i></li></ul><h4>Expresiones que van al final</h4><p><i>every day, once a week, twice a month, from time to time, most of the time, on weekends.</i></p><h4>Cuidado con los negativos</h4><p><b>never</b>, <b>rarely</b> y <b>hardly ever</b> ya son negativos: no se combinan con don't. <i>I hardly ever eat fast food</i>, no <i>I don't hardly ever eat</i>.</p>",
+      "content_en": "<h4>The full scale</h4><p><b>always</b> · <b>almost always</b> · <b>usually</b> · <b>often / frequently</b> · <b>sometimes</b> · <b>occasionally</b> · <b>hardly ever / rarely</b> · <b>never</b>.</p><h4>Position</h4><ul><li>Before the main verb: <i>I <b>usually</b> walk to school.</i></li><li>After to be: <i>He <b>is</b> <b>rarely</b> late.</i></li><li>Between auxiliary and verb: <i>She has <b>never</b> been abroad.</i></li></ul><h4>Expressions that go at the end</h4><p><i>every day, once a week, twice a month, from time to time, most of the time, on weekends.</i></p><h4>Careful with negatives</h4><p><b>never</b>, <b>rarely</b> and <b>hardly ever</b> are already negative: they are not combined with don't.</p>",
+      "fichas": [
+        { "t": "hardly ever", "d": "Casi nunca. Ya es negativo por sí solo.", "d_en": "Almost never. It is already negative." },
+        { "t": "Entre auxiliar y verbo", "d": "She has never been there.", "d_en": "She has never been there." },
+        { "t": "Expresiones al final", "d": "once a week, from time to time van al final.", "d_en": "once a week, from time to time go at the end." },
+        { "t": "occasionally", "d": "De vez en cuando, con poca frecuencia.", "d_en": "From time to time, not often." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["She has been never there", "She never has been there", "She has never been there", "Never she has been there"], "o_en": ["She has been never there", "She never has been there", "She has never been there", "Never she has been there"], "a": 2, "why": "El adverbio va entre el auxiliar has y el participio.", "why_en": "The adverb goes between the auxiliary has and the participle." },
+        { "q": "«I ___ eat fast food; maybe once a year.»", "q_en": "\"I ___ eat fast food; maybe once a year.\"", "o": ["often", "usually", "hardly ever", "always"], "o_en": ["often", "usually", "hardly ever", "always"], "a": 2, "why": "Una vez al año es una frecuencia mínima: hardly ever.", "why_en": "Once a year is a minimal frequency: hardly ever." },
+        { "q": "«He ___ punctual.»", "q_en": "\"He ___ punctual.\"", "o": ["always is", "is always", "is being always", "always be"], "o_en": ["always is", "is always", "is being always", "always be"], "a": 1, "why": "Con to be el adverbio va después del verbo.", "why_en": "With to be the adverb goes after the verb." }
+      ]
+    },
+    {
+      "id": "ingles-8-1-3",
+      "num": 3,
+      "tipo": "vocabulary",
+      "t": "Saludos y despedidas según el registro",
+      "t_en": "Greetings and farewells by register",
+      "d": "10 min",
+      "content_es": "<h4>Formal</h4><p><i>Good morning, Mr. Ruiz. · How do you do? · It's a pleasure to meet you. · I look forward to hearing from you. · Have a good day.</i></p><h4>Informal</h4><p><i>Hi! · Hey, what's up? · How's it going? · What have you been up to? · See you! · Take care! · Catch you later.</i></p><h4>Responder</h4><ul><li><i>How are you?</i> — <i>I'm doing great, thanks. And yourself?</i></li><li><i>What's up?</i> — <i>Not much. You?</i></li></ul><h4>Elegir el registro</h4><p>Con profesores, adultos desconocidos y correos escolares: formal. Con compañeros y amigos: informal. <i>How do you do?</i> solo se usa la primera vez y en contextos muy formales.</p>",
+      "content_en": "<h4>Formal</h4><p><i>Good morning, Mr. Ruiz. · How do you do? · It's a pleasure to meet you. · I look forward to hearing from you. · Have a good day.</i></p><h4>Informal</h4><p><i>Hi! · Hey, what's up? · How's it going? · What have you been up to? · See you! · Take care! · Catch you later.</i></p><h4>Answering</h4><ul><li><i>How are you?</i> — <i>I'm doing great, thanks. And yourself?</i></li><li><i>What's up?</i> — <i>Not much. You?</i></li></ul><h4>Choosing the register</h4><p>With teachers, unknown adults and school emails: formal. With classmates and friends: informal. <i>How do you do?</i> is only used the first time and in very formal contexts.</p>",
+      "fichas": [
+        { "t": "How do you do?", "d": "Saludo muy formal de primera vez; no pregunta cómo estás.", "d_en": "A very formal first-meeting greeting; it does not ask how you are." },
+        { "t": "What's up?", "d": "Saludo informal. Se responde Not much.", "d_en": "Informal greeting. Answered with Not much." },
+        { "t": "Take care!", "d": "Despedida cálida e informal: cuídate.", "d_en": "A warm, informal farewell." },
+        { "t": "I look forward to…", "d": "Cierre formal de un correo. Va seguido de gerundio.", "d_en": "Formal email closing. It is followed by a gerund." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál saludo es formal?", "q_en": "Which greeting is formal?", "o": ["Hey, what's up?", "Good afternoon, Mrs. Díaz", "Catch you later", "How's it going?"], "o_en": ["Hey, what's up?", "Good afternoon, Mrs. Díaz", "Catch you later", "How's it going?"], "a": 1, "why": "Usa la fórmula completa y el apellido con título.", "why_en": "It uses the full formula and the surname with a title." },
+        { "q": "«What's up?» se responde con…", "q_en": "\"What's up?\" is answered with…", "o": ["I'm up", "Not much", "Yes, please", "How do you do"], "o_en": ["I'm up", "Not much", "Yes, please", "How do you do"], "a": 1, "why": "Not much es la respuesta estándar informal.", "why_en": "Not much is the standard informal answer." },
+        { "q": "«I look forward to ___ from you.»", "q_en": "\"I look forward to ___ from you.\"", "o": ["hear", "hearing", "heard", "to hear"], "o_en": ["hear", "hearing", "heard", "to hear"], "a": 1, "why": "Look forward to lleva gerundio porque to es preposición.", "why_en": "Look forward to takes a gerund because to is a preposition here." }
+      ]
+    },
+    {
+      "id": "ingles-8-1-4",
+      "num": 4,
+      "tipo": "vocabulary",
+      "t": "Instrucciones y comandos de clase",
+      "t_en": "Classroom instructions and commands",
+      "d": "8 min",
+      "content_es": "<h4>Instrucciones de trabajo</h4><p><i>Read the text and answer the questions. · Fill in the blanks. · Match the words with the pictures. · Complete the chart. · Look at the example. · Choose the correct option. · Rewrite the sentences.</i></p><h4>Organización</h4><p><i>Work in pairs / in groups of four. · Take turns. · Share your ideas with the class. · Hand in your work by Friday.</i></p><h4>Verbos de examen</h4><p><b>underline</b> (subrayar), <b>circle</b> (encerrar), <b>tick / check</b> (marcar), <b>cross out</b> (tachar), <b>label</b> (rotular), <b>describe</b>, <b>compare</b>, <b>explain</b>, <b>justify</b>.</p><p>Todos van en <b>imperativo</b>: verbo base sin sujeto.</p>",
+      "content_en": "<h4>Task instructions</h4><p><i>Read the text and answer the questions. · Fill in the blanks. · Match the words with the pictures. · Complete the chart. · Look at the example. · Choose the correct option. · Rewrite the sentences.</i></p><h4>Organization</h4><p><i>Work in pairs / in groups of four. · Take turns. · Share your ideas with the class. · Hand in your work by Friday.</i></p><h4>Exam verbs</h4><p><b>underline</b>, <b>circle</b>, <b>tick / check</b>, <b>cross out</b>, <b>label</b>, <b>describe</b>, <b>compare</b>, <b>explain</b>, <b>justify</b>.</p><p>They all use the <b>imperative</b>: base verb with no subject.</p>",
+      "fichas": [
+        { "t": "Fill in the blanks", "d": "Completar los espacios en blanco.", "d_en": "Complete the empty spaces." },
+        { "t": "Match", "d": "Unir o emparejar elementos de dos columnas.", "d_en": "Join items from two columns." },
+        { "t": "Take turns", "d": "Turnarse: hablar uno después del otro.", "d_en": "To speak one after the other." },
+        { "t": "Cross out", "d": "Tachar lo que sobra o está mal.", "d_en": "To draw a line through what is wrong." }
+      ],
+      "quiz": [
+        { "q": "¿Qué te piden con «Fill in the blanks»?", "q_en": "What does \"Fill in the blanks\" ask you to do?", "o": ["Tachar palabras", "Completar los espacios", "Subrayar el verbo", "Traducir el texto"], "o_en": ["Cross out words", "Complete the spaces", "Underline the verb", "Translate the text"], "a": 1, "why": "Blank es un espacio vacío que hay que completar.", "why_en": "A blank is an empty space you must complete." },
+        { "q": "«___ the correct option.»", "q_en": "\"___ the correct option.\"", "o": ["Choosing", "To choose", "Choose", "You choose"], "o_en": ["Choosing", "To choose", "Choose", "You choose"], "a": 2, "why": "Las instrucciones van en imperativo: verbo base.", "why_en": "Instructions use the imperative: base verb." },
+        { "q": "¿Qué significa «take turns»?", "q_en": "What does \"take turns\" mean?", "o": ["Girar", "Turnarse", "Devolver", "Repetir"], "o_en": ["To turn around", "To do it one after another", "To give back", "To repeat"], "a": 1, "why": "Take turns es alternar la participación.", "why_en": "Take turns means to alternate participation." }
+      ]
+    },
+    {
+      "id": "ingles-8-1-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Costumbres y tradiciones del mundo",
+      "t_en": "Customs and traditions around the world",
+      "d": "12 min",
+      "content_es": "<h4>Vocabulario clave</h4><p><b>custom</b> (costumbre), <b>tradition</b>, <b>celebration</b>, <b>festival</b>, <b>holiday</b> (día festivo), <b>ceremony</b>, <b>ritual</b>, <b>heritage</b> (patrimonio), <b>ancestors</b> (antepasados), <b>folklore</b>, <b>costume</b> (traje típico), <b>parade</b> (desfile).</p><h4>Cómo describirlas</h4><ul><li><i>In Japan, people <b>take off</b> their shoes before entering a house.</i></li><li><i>It is a tradition <b>to</b> eat twelve grapes at midnight.</i></li><li><i>People usually <b>gather</b> to celebrate.</i></li></ul><h4>Falso amigo</h4><p><b>costume</b> es traje o disfraz, no costumbre. Costumbre es <b>custom</b>.</p><h4>Opinar</h4><p><i>I find it fascinating. · It seems strange to me at first, but it makes sense. · In my culture we do it differently.</i></p>",
+      "content_en": "<h4>Key vocabulary</h4><p><b>custom</b>, <b>tradition</b>, <b>celebration</b>, <b>festival</b>, <b>holiday</b>, <b>ceremony</b>, <b>ritual</b>, <b>heritage</b>, <b>ancestors</b>, <b>folklore</b>, <b>costume</b>, <b>parade</b>.</p><h4>How to describe them</h4><ul><li><i>In Japan, people <b>take off</b> their shoes before entering a house.</i></li><li><i>It is a tradition <b>to</b> eat twelve grapes at midnight.</i></li><li><i>People usually <b>gather</b> to celebrate.</i></li></ul><h4>False friend</h4><p><b>costume</b> is an outfit or a disguise, not a habit. A habit or usage is a <b>custom</b>.</p><h4>Giving an opinion</h4><p><i>I find it fascinating. · It seems strange to me at first, but it makes sense. · In my culture we do it differently.</i></p>",
+      "fichas": [
+        { "t": "custom vs costume", "d": "Costumbre vs traje o disfraz: falsos amigos.", "d_en": "A usage vs an outfit: false friends." },
+        { "t": "heritage", "d": "Patrimonio cultural heredado de generaciones anteriores.", "d_en": "Cultural inheritance from earlier generations." },
+        { "t": "gather", "d": "Reunirse en un mismo lugar.", "d_en": "To come together in one place." },
+        { "t": "I find it…", "d": "Fórmula para dar una impresión personal.", "d_en": "Formula to give a personal impression." }
+      ],
+      "quiz": [
+        { "q": "¿Qué significa «costume»?", "q_en": "What does \"costume\" mean?", "o": ["Costumbre", "Traje típico o disfraz", "Ceremonia", "Desfile"], "o_en": ["A habit", "An outfit or disguise", "A ceremony", "A parade"], "a": 1, "why": "Costume es el traje; la costumbre es custom.", "why_en": "Costume is the outfit; a habit is a custom." },
+        { "q": "«People ___ in the square to celebrate.»", "q_en": "\"People ___ in the square to celebrate.\"", "o": ["gather", "gathering", "gathers", "to gather"], "o_en": ["gather", "gathering", "gathers", "to gather"], "a": 0, "why": "People es plural: el verbo va sin -s.", "why_en": "People is plural: the verb takes no -s." },
+        { "q": "¿Qué es «heritage»?", "q_en": "What is \"heritage\"?", "o": ["Una fiesta", "El patrimonio cultural", "Un desfile", "Un antepasado"], "o_en": ["A party", "Cultural inheritance", "A parade", "An ancestor"], "a": 1, "why": "Heritage es lo que se hereda culturalmente.", "why_en": "Heritage is what is culturally inherited." }
+      ]
+    },
+    {
+      "id": "ingles-8-1-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Hábitos, actividades y opiniones",
+      "t_en": "Habits, activities and opinions",
+      "d": "12 min",
+      "content_es": "<h4>Actividades cotidianas</h4><p><b>hang out with friends</b> (pasar el rato), <b>chat online</b>, <b>scroll through social media</b>, <b>work out</b> (entrenar), <b>volunteer</b> (ser voluntario), <b>help out at home</b>, <b>practice an instrument</b>, <b>attend classes</b>.</p><h4>Hablar de hábitos</h4><ul><li><i>I tend to study at night.</i> (tiendo a)</li><li><i>I'm used to waking up early.</i> (estoy acostumbrado a)</li><li><i>I've picked up the habit of reading before bed.</i></li></ul><h4>Dar tu punto de vista</h4><p><b>In my opinion… · I believe that… · From my point of view… · It seems to me that… · I'd say that…</b></p><p>Para matizar: <b>I'm not sure, but… · It depends on… · To some extent…</b></p>",
+      "content_en": "<h4>Everyday activities</h4><p><b>hang out with friends</b>, <b>chat online</b>, <b>scroll through social media</b>, <b>work out</b>, <b>volunteer</b>, <b>help out at home</b>, <b>practice an instrument</b>, <b>attend classes</b>.</p><h4>Talking about habits</h4><ul><li><i>I tend to study at night.</i></li><li><i>I'm used to waking up early.</i></li><li><i>I've picked up the habit of reading before bed.</i></li></ul><h4>Giving your point of view</h4><p><b>In my opinion… · I believe that… · From my point of view… · It seems to me that… · I'd say that…</b></p><p>To soften: <b>I'm not sure, but… · It depends on… · To some extent…</b></p>",
+      "fichas": [
+        { "t": "hang out", "d": "Pasar el rato con alguien sin plan fijo.", "d_en": "To spend casual time with someone." },
+        { "t": "tend to + verbo", "d": "Tender a hacer algo: hábito general.", "d_en": "To have a general tendency to do something." },
+        { "t": "be used to + -ing", "d": "Estar acostumbrado a algo. Lleva gerundio.", "d_en": "To be accustomed to something. It takes a gerund." },
+        { "t": "In my opinion", "d": "Fórmula para abrir una opinión. No se dice in my opinion I think.", "d_en": "Formula to open an opinion. Do not say in my opinion I think." }
+      ],
+      "quiz": [
+        { "q": "«I'm used to ___ up at 5 a.m.»", "q_en": "\"I'm used to ___ up at 5 a.m.\"", "o": ["wake", "waking", "woke", "to wake"], "o_en": ["wake", "waking", "woke", "to wake"], "a": 1, "why": "Be used to va seguido de gerundio.", "why_en": "Be used to is followed by a gerund." },
+        { "q": "¿Qué significa «hang out with friends»?", "q_en": "What does \"hang out with friends\" mean?", "o": ["Colgar algo", "Pasar el rato", "Discutir", "Despedirse"], "o_en": ["To hang something", "To spend casual time together", "To argue", "To say goodbye"], "a": 1, "why": "Hang out es pasar tiempo de forma relajada.", "why_en": "Hang out means to spend relaxed time together." },
+        { "q": "¿Cuál expresión introduce una opinión?", "q_en": "Which expression introduces an opinion?", "o": ["It depends on", "From my point of view", "Take turns", "As soon as"], "o_en": ["It depends on", "From my point of view", "Take turns", "As soon as"], "a": 1, "why": "From my point of view abre un punto de vista personal.", "why_en": "From my point of view opens a personal viewpoint." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-8-1-repaso",
+    "titulo": "Repaso — Understanding Others and Expressing Personal Viewpoints",
+    "titulo_en": "Review — Understanding Others and Expressing Personal Viewpoints",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>La decisión central es <b>simple o continuo</b>: lo permanente y habitual va en presente simple; lo temporal, lo que está en curso o en cambio va en presente continuo. Los adverbios de frecuencia matizan el simple.</p><h4>Puntos gramaticales</h4><ul><li>Verbos de estado (know, want, belong) no admiten forma continua.</li><li>think, have y see cambian de significado en continuo.</li><li>El adverbio va antes del verbo principal, después de to be y entre auxiliar y participio.</li><li>never, rarely y hardly ever ya son negativos.</li></ul><h4>Vocabulario</h4><p>Saludos formales e informales, instrucciones de clase en imperativo, costumbres y tradiciones (custom ≠ costume) y fórmulas para dar opiniones.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The central decision is <b>simple or continuous</b>: what is permanent and habitual goes in the present simple; what is temporary, ongoing or changing goes in the present continuous. Frequency adverbs fine-tune the simple.</p><h4>Grammar points</h4><ul><li>State verbs (know, want, belong) have no continuous form.</li><li>think, have and see change meaning in the continuous.</li><li>The adverb goes before the main verb, after to be, and between auxiliary and participle.</li><li>never, rarely and hardly ever are already negative.</li></ul><h4>Vocabulary</h4><p>Formal and informal greetings, classroom instructions in the imperative, customs and traditions (custom ≠ costume) and formulas for giving opinions.</p>",
+    "puntos_clave": [
+      ["Permanente → simple; temporal o en curso → continuo.", "Permanent → simple; temporary or ongoing → continuous."],
+      ["I know, no I am knowing.", "I know, not I am knowing."],
+      ["is always + -ing expresa queja, no rutina.", "is always + -ing expresses a complaint, not a routine."],
+      ["hardly ever ya es negativo: no lleva don't.", "hardly ever is already negative: it takes no don't."],
+      ["look forward to y be used to llevan gerundio.", "look forward to and be used to take a gerund."],
+      ["custom = costumbre; costume = traje o disfraz.", "custom = usage; costume = outfit."]
+    ],
+    "preguntas": [
+      { "q": "«The Earth ___ around the Sun.»", "q_en": "\"The Earth ___ around the Sun.\"", "o": ["is going", "goes", "go", "is go"], "o_en": ["is going", "goes", "go", "is go"], "a": 1, "why": "Es una verdad científica: presente simple.", "why_en": "It is a scientific truth: present simple." },
+      { "q": "«Prices ___ every year.» (tendencia en curso)", "q_en": "\"Prices ___ every year.\" (ongoing trend)", "o": ["rise", "are rising", "rises", "risen"], "o_en": ["rise", "are rising", "rises", "risen"], "a": 1, "why": "Una tendencia en desarrollo va en presente continuo.", "why_en": "A developing trend takes the present continuous." },
+      { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["She is wanting a new phone", "She wants a new phone", "She is buying a phone", "She often buys online"], "o_en": ["She is wanting a new phone", "She wants a new phone", "She is buying a phone", "She often buys online"], "a": 0, "why": "Want es verbo de estado: no va en continuo.", "why_en": "Want is a state verb: it does not take the continuous." },
+      { "q": "«I have ___ visited Europe.»", "q_en": "\"I have ___ visited Europe.\"", "o": ["never", "not never", "ever not", "no"], "o_en": ["never", "not never", "ever not", "no"], "a": 0, "why": "Never va entre el auxiliar y el participio.", "why_en": "Never goes between the auxiliary and the participle." },
+      { "q": "«He's always ___ his homework late.» (queja)", "q_en": "\"He's always ___ his homework late.\" (complaint)", "o": ["hands in", "handing in", "hand in", "handed in"], "o_en": ["hands in", "handing in", "hand in", "handed in"], "a": 1, "why": "La queja con always usa el continuo.", "why_en": "The complaint with always uses the continuous." },
+      { "q": "«I look forward to ___ you.»", "q_en": "\"I look forward to ___ you.\"", "o": ["meet", "meeting", "met", "to meet"], "o_en": ["meet", "meeting", "met", "to meet"], "a": 1, "why": "En look forward to, el to es preposición y pide gerundio.", "why_en": "In look forward to, to is a preposition and takes a gerund." },
+      { "q": "«In Spain it is a ___ to eat grapes on New Year's Eve.»", "q_en": "\"In Spain it is a ___ to eat grapes on New Year's Eve.\"", "o": ["costume", "custom", "customer", "cost"], "o_en": ["costume", "custom", "customer", "cost"], "a": 1, "why": "Custom es la costumbre; costume es el traje.", "why_en": "Custom is the usage; costume is the outfit." },
+      { "q": "«___, technology helps students learn faster.»", "q_en": "\"___, technology helps students learn faster.\"", "o": ["In my opinion", "In my opinion I think", "By my opinion", "At my opinion"], "o_en": ["In my opinion", "In my opinion I think", "By my opinion", "At my opinion"], "a": 0, "why": "La fórmula correcta es In my opinion, sin duplicar I think.", "why_en": "The correct formula is In my opinion, with no duplicated I think." }
+    ]
+  }
+}

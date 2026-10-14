@@ -1,0 +1,224 @@
+{
+  "id": "ingles-10-4",
+  "materia": "ingles",
+  "grado": "10",
+  "grado_nombre": "Décimo",
+  "periodo": 4,
+  "periodo_label": { "es": "Periodo IV", "en": "Term IV" },
+  "titulo": "Communicating with Confidence in the Digital World",
+  "titulo_es": "Comunicarse con seguridad en el mundo digital",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Produzco textos digitales adaptados a su propósito y audiencia. Reporto lo dicho por otros y confirmo información con precisión.",
+  "competencias": "Evitar falsos cognados; confirmar con tag questions; transformar al estilo indirecto; enlazar ideas con conectores; producir y analizar textos digitales y publicitarios.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Digital Campaign",
+    "descripcion_es": "En grupos, los estudiantes diseñan una campaña digital sobre un tema de interés escolar: un post persuasivo, una reseña, un anuncio y un reporte de las opiniones recogidas usando estilo indirecto.",
+    "descripcion_en": "In groups, students design a digital campaign on a school-related topic: a persuasive post, a review, an ad and a report of the opinions collected, using reported speech."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-10-4-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Falsos cognados y palabras confusas",
+      "t_en": "False cognates and confusing words",
+      "d": "14 min",
+      "content_es": "<h4>Falsos amigos frecuentes</h4><ul><li><b>actually</b> = en realidad (actualmente = <i>currently</i>)</li><li><b>eventually</b> = finalmente (eventualmente = <i>occasionally</i>)</li><li><b>sensible</b> = sensato (sensible = <i>sensitive</i>)</li><li><b>embarrassed</b> = avergonzado</li><li><b>library</b> = biblioteca (librería = <i>bookstore</i>)</li><li><b>assist</b> = ayudar (asistir a = <i>attend</i>)</li><li><b>realize</b> = darse cuenta (realizar = <i>carry out</i>)</li><li><b>support</b> = apoyar (soportar = <i>put up with</i>)</li><li><b>advertisement</b> = anuncio (advertencia = <i>warning</i>)</li></ul><h4>Pares que se confunden</h4><ul><li><b>lose</b> (perder) vs <b>loose</b> (suelto)</li><li><b>affect</b> (verbo, afectar) vs <b>effect</b> (sustantivo, efecto)</li><li><b>advice</b> (sustantivo) vs <b>advise</b> (verbo)</li><li><b>its</b> (posesivo) vs <b>it's</b> (it is)</li><li><b>then</b> (entonces) vs <b>than</b> (que, en comparaciones)</li></ul>",
+      "content_en": "<h4>Frequent false friends</h4><ul><li><b>actually</b> = in fact (not at present, which is <i>currently</i>)</li><li><b>eventually</b> = finally (not occasionally)</li><li><b>sensible</b> = having good judgment (not <i>sensitive</i>)</li><li><b>embarrassed</b> = ashamed</li><li><b>library</b> = where books are lent (a shop is a <i>bookstore</i>)</li><li><b>assist</b> = to help (to go to an event is <i>attend</i>)</li><li><b>realize</b> = to become aware (to perform is <i>carry out</i>)</li><li><b>support</b> = to back someone (to tolerate is <i>put up with</i>)</li><li><b>advertisement</b> = an ad (a caution is a <i>warning</i>)</li></ul><h4>Confusing pairs</h4><ul><li><b>lose</b> vs <b>loose</b></li><li><b>affect</b> (verb) vs <b>effect</b> (noun)</li><li><b>advice</b> (noun) vs <b>advise</b> (verb)</li><li><b>its</b> (possessive) vs <b>it's</b> (it is)</li><li><b>then</b> vs <b>than</b></li></ul>",
+      "fichas": [
+        { "t": "attend vs assist", "d": "attend es asistir a un evento; assist es ayudar.", "d_en": "attend is to go to an event; assist is to help." },
+        { "t": "affect vs effect", "d": "affect es el verbo; effect es el sustantivo.", "d_en": "affect is the verb; effect is the noun." },
+        { "t": "advice vs advise", "d": "advice es consejo (incontable); advise es aconsejar.", "d_en": "advice is the noun (uncountable); advise is the verb." },
+        { "t": "then vs than", "d": "then es tiempo; than es comparación.", "d_en": "then is time; than is comparison." },
+        { "t": "realize", "d": "Darse cuenta de algo, no llevar algo a cabo.", "d_en": "To become aware of something, not to perform it." }
+      ],
+      "quiz": [
+        { "q": "«She ___ the conference last week.»", "q_en": "\"She ___ the conference last week.\"", "o": ["assisted", "attended", "assisted to", "attended to"], "o_en": ["assisted", "attended", "assisted to", "attended to"], "a": 1, "why": "Asistir a un evento es attend, sin preposición.", "why_en": "To go to an event is attend, with no preposition." },
+        { "q": "«Pollution ___ our health.»", "q_en": "\"Pollution ___ our health.\"", "o": ["effects", "affects", "effect", "affect"], "o_en": ["effects", "affects", "effect", "affect"], "a": 1, "why": "Se necesita el verbo: affects.", "why_en": "A verb is needed: affects." },
+        { "q": "«This phone is cheaper ___ that one.»", "q_en": "\"This phone is cheaper ___ that one.\"", "o": ["then", "than", "that", "as"], "o_en": ["then", "than", "that", "as"], "a": 1, "why": "En comparaciones se usa than.", "why_en": "In comparisons we use than." }
+      ]
+    },
+    {
+      "id": "ingles-10-4-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Tag questions",
+      "t_en": "Tag questions",
+      "d": "12 min",
+      "content_es": "<h4>La regla básica</h4><p>Oración afirmativa → coletilla negativa; oración negativa → coletilla afirmativa. Se repite el <b>auxiliar</b>; si no hay, se usa do/does/did.</p><ul><li><i>You've seen this post, <b>haven't you</b>?</i></li><li><i>She doesn't follow that account, <b>does she</b>?</i></li><li><i>They will publish it, <b>won't they</b>?</i></li></ul><h4>Casos especiales</h4><ul><li><i>I'm right, <b>aren't I</b>?</i></li><li><i>Let's post it, <b>shall we</b>?</i></li><li><i>Open the link, <b>will you</b>?</i></li><li>Con <b>nobody, nothing, никто</b>… se usa <i>they</i> o <i>it</i>: <i>Nobody called, <b>did they</b>?</i></li><li>Con negativos encubiertos (never, hardly, rarely) la coletilla va en afirmativo: <i>He never replies, <b>does he</b>?</i></li></ul><h4>Entonación</h4><p>Si sube, es una pregunta real; si baja, solo busca confirmación.</p>",
+      "content_en": "<h4>The basic rule</h4><p>Affirmative sentence → negative tag; negative sentence → affirmative tag. The <b>auxiliary</b> is repeated; if there is none, use do/does/did.</p><ul><li><i>You've seen this post, <b>haven't you</b>?</i></li><li><i>She doesn't follow that account, <b>does she</b>?</i></li><li><i>They will publish it, <b>won't they</b>?</i></li></ul><h4>Special cases</h4><ul><li><i>I'm right, <b>aren't I</b>?</i></li><li><i>Let's post it, <b>shall we</b>?</i></li><li><i>Open the link, <b>will you</b>?</i></li><li>With <b>nobody, nothing</b>… use <i>they</i> or <i>it</i>: <i>Nobody called, <b>did they</b>?</i></li><li>With hidden negatives (never, hardly, rarely) the tag is affirmative: <i>He never replies, <b>does he</b>?</i></li></ul><h4>Intonation</h4><p>Rising intonation makes it a real question; falling intonation only seeks confirmation.</p>",
+      "fichas": [
+        { "t": "Se repite el auxiliar", "d": "have → haven't you; will → won't they.", "d_en": "have → haven't you; will → won't they." },
+        { "t": "aren't I", "d": "Excepción para I am: no existe amn't.", "d_en": "Exception for I am: there is no amn't." },
+        { "t": "Nobody → they", "d": "Nobody came, did they?", "d_en": "Nobody came, did they?" },
+        { "t": "never → tag afirmativa", "d": "La oración ya es negativa aunque no tenga not.", "d_en": "The sentence is already negative even without not." },
+        { "t": "Entonación", "d": "Sube = pregunta real; baja = busca confirmación.", "d_en": "Rising = real question; falling = seeking confirmation." }
+      ],
+      "quiz": [
+        { "q": "«She hardly ever posts, ___?»", "q_en": "\"She hardly ever posts, ___?\"", "o": ["doesn't she", "does she", "is she", "did she"], "o_en": ["doesn't she", "does she", "is she", "did she"], "a": 1, "why": "Hardly ever es negativo, así que la coletilla va en afirmativo.", "why_en": "Hardly ever is negative, so the tag is affirmative." },
+        { "q": "«I'm the next one, ___?»", "q_en": "\"I'm the next one, ___?\"", "o": ["amn't I", "aren't I", "am I not it", "isn't I"], "o_en": ["amn't I", "aren't I", "am I not it", "isn't I"], "a": 1, "why": "La forma establecida es aren't I.", "why_en": "The established form is aren't I." },
+        { "q": "«Nothing happened, ___?»", "q_en": "\"Nothing happened, ___?\"", "o": ["didn't it", "did it", "does it", "wasn't it"], "o_en": ["didn't it", "did it", "does it", "wasn't it"], "a": 1, "why": "Nothing es negativo y se retoma con it en afirmativo.", "why_en": "Nothing is negative and is picked up with it in the affirmative." }
+      ]
+    },
+    {
+      "id": "ingles-10-4-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Estilo indirecto: afirmaciones",
+      "t_en": "Reported speech: statements",
+      "d": "16 min",
+      "content_es": "<h4>Qué cambia</h4><p>Al reportar lo que alguien dijo, el verbo <b>retrocede un tiempo</b>:</p><ul><li>presente simple → pasado simple: <i>\"I work here\" → He said he <b>worked</b> there.</i></li><li>presente continuo → pasado continuo</li><li>pasado simple / presente perfecto → pasado perfecto</li><li>will → <b>would</b> · can → <b>could</b> · may → <b>might</b> · must → <b>had to</b></li></ul><h4>También cambian</h4><p>Pronombres (<i>I → he/she</i>), tiempo (<i>today → that day, tomorrow → the next day, yesterday → the day before</i>) y lugar (<i>here → there, this → that</i>).</p><h4>say vs tell</h4><p><b>say</b> no lleva objeto directo de persona: <i>He <b>said</b> that…</i> · <b>tell</b> sí: <i>He <b>told me</b> that…</i></p><h4>Cuando no hay que retroceder</h4><p>Si lo dicho sigue siendo verdad o el verbo introductorio está en presente: <i>She says she <b>lives</b> in Cali.</i></p>",
+      "content_en": "<h4>What changes</h4><p>When reporting what someone said, the verb <b>moves one step back</b>:</p><ul><li>present simple → past simple: <i>\"I work here\" → He said he <b>worked</b> there.</i></li><li>present continuous → past continuous</li><li>past simple / present perfect → past perfect</li><li>will → <b>would</b> · can → <b>could</b> · may → <b>might</b> · must → <b>had to</b></li></ul><h4>Other changes</h4><p>Pronouns (<i>I → he/she</i>), time (<i>today → that day, tomorrow → the next day, yesterday → the day before</i>) and place (<i>here → there, this → that</i>).</p><h4>say vs tell</h4><p><b>say</b> takes no personal object: <i>He <b>said</b> that…</i> · <b>tell</b> does: <i>He <b>told me</b> that…</i></p><h4>When no backshift is needed</h4><p>If what was said is still true or the reporting verb is in the present: <i>She says she <b>lives</b> in Cali.</i></p>",
+      "fichas": [
+        { "t": "Retroceso temporal", "d": "El verbo baja un tiempo: work → worked.", "d_en": "The verb steps back one tense: work → worked." },
+        { "t": "say vs tell", "d": "tell lleva persona; say no.", "d_en": "tell takes a person; say does not." },
+        { "t": "tomorrow → the next day", "d": "Las referencias de tiempo también cambian.", "d_en": "Time references change too." },
+        { "t": "will → would", "d": "Los modales retroceden igual que los verbos.", "d_en": "Modals shift back like verbs." },
+        { "t": "Sin retroceso", "d": "Si sigue siendo verdad, el tiempo puede quedarse igual.", "d_en": "If it is still true, the tense may stay the same." }
+      ],
+      "quiz": [
+        { "q": "«\"I am tired\", she said.» → «She said she ___ tired.»", "q_en": "\"I am tired\", she said. → She said she ___ tired.", "o": ["is", "was", "were", "had been"], "o_en": ["is", "was", "were", "had been"], "a": 1, "why": "El presente simple retrocede a pasado simple.", "why_en": "The present simple shifts back to the past simple." },
+        { "q": "«He ___ me that he would come.»", "q_en": "\"He ___ me that he would come.\"", "o": ["said", "told", "say", "tell"], "o_en": ["said", "told", "say", "tell"], "a": 1, "why": "Con objeto de persona se usa tell.", "why_en": "With a personal object we use tell." },
+        { "q": "«\"We will publish it tomorrow.\"» → «They said they ___ publish it ___.»", "q_en": "\"We will publish it tomorrow.\" → They said they ___ publish it ___.", "o": ["will / tomorrow", "would / the next day", "would / tomorrow", "will / the next day"], "o_en": ["will / tomorrow", "would / the next day", "would / tomorrow", "will / the next day"], "a": 1, "why": "will pasa a would y tomorrow a the next day.", "why_en": "will becomes would and tomorrow becomes the next day." }
+      ]
+    },
+    {
+      "id": "ingles-10-4-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Estilo indirecto: preguntas y órdenes",
+      "t_en": "Reported speech: questions and commands",
+      "d": "16 min",
+      "content_es": "<h4>Preguntas de sí o no</h4><p>Se introducen con <b>if</b> o <b>whether</b> y el orden vuelve a ser el de una afirmación:</p><p><i>\"Do you follow her?\" → He asked <b>if I followed</b> her.</i> (sin do, sin signo de interrogación)</p><h4>Preguntas con Wh-</h4><p>Se conserva la palabra interrogativa y se reordena:</p><p><i>\"Where do you live?\" → She asked <b>where I lived</b>.</i></p><h4>Órdenes y peticiones</h4><p>Se usa <b>tell / ask + persona + to + infinitivo</b>:</p><ul><li><i>\"Close the app.\" → He told me <b>to close</b> the app.</i></li><li><i>\"Please help me.\" → She asked me <b>to help</b> her.</i></li><li>Negativo: <i>He told me <b>not to</b> share it.</i></li></ul><h4>Verbos introductorios útiles</h4><p><b>advise, warn, remind, invite, offer, suggest</b>. Ojo: <i>suggest</i> va con gerundio o con that: <i>He suggested <b>posting</b> it</i> / <i>He suggested that we post it</i>.</p>",
+      "content_en": "<h4>Yes/no questions</h4><p>They are introduced with <b>if</b> or <b>whether</b>, and the order becomes that of a statement:</p><p><i>\"Do you follow her?\" → He asked <b>if I followed</b> her.</i> (no do, no question mark)</p><h4>Wh- questions</h4><p>The question word is kept and the order changes:</p><p><i>\"Where do you live?\" → She asked <b>where I lived</b>.</i></p><h4>Commands and requests</h4><p>Use <b>tell / ask + person + to + infinitive</b>:</p><ul><li><i>\"Close the app.\" → He told me <b>to close</b> the app.</i></li><li><i>\"Please help me.\" → She asked me <b>to help</b> her.</i></li><li>Negative: <i>He told me <b>not to</b> share it.</i></li></ul><h4>Useful reporting verbs</h4><p><b>advise, warn, remind, invite, offer, suggest</b>. Careful: <i>suggest</i> takes a gerund or a that-clause: <i>He suggested <b>posting</b> it</i> / <i>He suggested that we post it</i>.</p>",
+      "fichas": [
+        { "t": "ask if / whether", "d": "Para reportar preguntas de sí o no.", "d_en": "For reporting yes/no questions." },
+        { "t": "Orden de afirmación", "d": "En la pregunta reportada no se invierte el sujeto.", "d_en": "In a reported question the subject is not inverted." },
+        { "t": "tell + persona + to", "d": "Para órdenes: He told me to wait.", "d_en": "For commands: He told me to wait." },
+        { "t": "not to", "d": "Orden negativa: She asked me not to call.", "d_en": "Negative command: She asked me not to call." },
+        { "t": "suggest", "d": "No admite to + infinitivo: suggest doing o suggest that.", "d_en": "It does not take to + infinitive: suggest doing or suggest that." }
+      ],
+      "quiz": [
+        { "q": "«\"Are you coming?\"» → «He asked ___.»", "q_en": "\"Are you coming?\" → He asked ___.", "o": ["if was I coming", "if I was coming", "was I coming", "if I am coming?"], "o_en": ["if was I coming", "if I was coming", "was I coming", "if I am coming?"], "a": 1, "why": "Se usa if y el orden de una afirmación.", "why_en": "We use if and statement word order." },
+        { "q": "«\"Don't share the file.\"» → «She told me ___ the file.»", "q_en": "\"Don't share the file.\" → She told me ___ the file.", "o": ["don't share", "to not share", "not to share", "not sharing"], "o_en": ["don't share", "to not share", "not to share", "not sharing"], "a": 2, "why": "La orden negativa se reporta con not to + infinitivo.", "why_en": "A negative command is reported with not to + infinitive." },
+        { "q": "«He suggested ___ a shorter version.»", "q_en": "\"He suggested ___ a shorter version.\"", "o": ["to post", "posting", "post", "to posting"], "o_en": ["to post", "posting", "post", "to posting"], "a": 1, "why": "Suggest va con gerundio, no con to + infinitivo.", "why_en": "Suggest takes a gerund, not to + infinitive." }
+      ]
+    },
+    {
+      "id": "ingles-10-4-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "Conectores y palabras de enlace",
+      "t_en": "Connectors and linking words",
+      "d": "14 min",
+      "content_es": "<h4>Por función</h4><ul><li><b>Adición</b>: and, also, moreover, furthermore, in addition, besides</li><li><b>Contraste</b>: but, however, nevertheless, on the contrary, whereas, although</li><li><b>Causa</b>: because, since, as, due to, owing to</li><li><b>Consecuencia</b>: so, therefore, thus, as a result, consequently</li><li><b>Ejemplo</b>: for example, for instance, such as, namely</li><li><b>Orden</b>: first, then, next, finally</li><li><b>Resumen</b>: in short, to sum up, overall, in conclusion</li></ul><h4>Puntuación</h4><ul><li><b>however, therefore, moreover</b> abren oración y van seguidos de coma: <i>However, the data is clear.</i></li><li><b>but, so, and</b> unen dentro de la misma oración.</li><li><b>because of / due to</b> van con sustantivo; <b>because</b> con oración.</li></ul><h4>Error frecuente</h4><p>No se combinan <i>although</i> y <i>but</i> en la misma oración, ni <i>because</i> y <i>so</i>.</p>",
+      "content_en": "<h4>By function</h4><ul><li><b>Addition</b>: and, also, moreover, furthermore, in addition, besides</li><li><b>Contrast</b>: but, however, nevertheless, on the contrary, whereas, although</li><li><b>Cause</b>: because, since, as, due to, owing to</li><li><b>Consequence</b>: so, therefore, thus, as a result, consequently</li><li><b>Example</b>: for example, for instance, such as, namely</li><li><b>Order</b>: first, then, next, finally</li><li><b>Summary</b>: in short, to sum up, overall, in conclusion</li></ul><h4>Punctuation</h4><ul><li><b>however, therefore, moreover</b> open a sentence and are followed by a comma: <i>However, the data is clear.</i></li><li><b>but, so, and</b> join inside the same sentence.</li><li><b>because of / due to</b> take a noun; <b>because</b> takes a clause.</li></ul><h4>Common mistake</h4><p>Do not combine <i>although</i> and <i>but</i> in the same sentence, nor <i>because</i> and <i>so</i>.</p>",
+      "fichas": [
+        { "t": "however + coma", "d": "Abre oración nueva: However, the results differ.", "d_en": "Opens a new sentence: However, the results differ." },
+        { "t": "due to + sustantivo", "d": "due to the rain, no due to it rained.", "d_en": "due to the rain, not due to it rained." },
+        { "t": "moreover / furthermore", "d": "Añaden un argumento en registro formal.", "d_en": "They add an argument in a formal register." },
+        { "t": "namely", "d": "Es decir, concretamente: introduce una precisión.", "d_en": "That is to say: introduces a precision." },
+        { "t": "although ≠ but juntos", "d": "Se usa uno de los dos, nunca ambos.", "d_en": "Use one of the two, never both." }
+      ],
+      "quiz": [
+        { "q": "«The app is free. ___, it has ads.»", "q_en": "\"The app is free. ___, it has ads.\"", "o": ["However", "Although", "Because", "Such as"], "o_en": ["However", "Although", "Because", "Such as"], "a": 0, "why": "However abre una oración nueva con contraste.", "why_en": "However opens a new sentence with a contrast." },
+        { "q": "«The event was canceled ___ the storm.»", "q_en": "\"The event was canceled ___ the storm.\"", "o": ["because", "due to", "so", "therefore"], "o_en": ["because", "due to", "so", "therefore"], "a": 1, "why": "Le sigue un sustantivo, así que va due to.", "why_en": "A noun follows, so it takes due to." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["Although it rained, we went", "It rained, but we went", "Although it rained, but we went", "It rained; however, we went"], "o_en": ["Although it rained, we went", "It rained, but we went", "Although it rained, but we went", "It rained; however, we went"], "a": 2, "why": "No se combinan although y but.", "why_en": "although and but are not combined." }
+      ]
+    },
+    {
+      "id": "ingles-10-4-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Alfabeto, puntuación y caracteres especiales",
+      "t_en": "Alphabet, punctuation and special characters",
+      "d": "12 min",
+      "content_es": "<h4>Signos de puntuación</h4><p><b>.</b> period o full stop · <b>,</b> comma · <b>;</b> semicolon · <b>:</b> colon · <b>?</b> question mark · <b>!</b> exclamation mark · <b>'</b> apostrophe · <b>\"</b> quotation marks · <b>( )</b> brackets o parentheses · <b>-</b> hyphen · <b>—</b> dash · <b>…</b> ellipsis.</p><h4>Caracteres especiales</h4><p><b>#</b> hash · <b>@</b> at · <b>_</b> underscore · <b>/</b> slash · <b>\\</b> backslash · <b>&amp;</b> ampersand · <b>*</b> asterisk · <b>%</b> percent sign.</p><h4>Reglas de puntuación útiles</h4><ul><li>En inglés no hay signos de apertura: <i>¿</i> y <i>¡</i> no existen.</li><li>La coma va antes de <i>but</i> cuando une dos oraciones completas.</li><li>El apóstrofe marca posesión o contracción, nunca plural: <i>photos</i>, no <i>photo's</i>.</li></ul><h4>Dictar</h4><p><i>All lowercase. · Capital M. · No spaces. · Hyphen, not underscore.</i></p>",
+      "content_en": "<h4>Punctuation marks</h4><p><b>.</b> period or full stop · <b>,</b> comma · <b>;</b> semicolon · <b>:</b> colon · <b>?</b> question mark · <b>!</b> exclamation mark · <b>'</b> apostrophe · <b>\"</b> quotation marks · <b>( )</b> brackets or parentheses · <b>-</b> hyphen · <b>—</b> dash · <b>…</b> ellipsis.</p><h4>Special characters</h4><p><b>#</b> hash · <b>@</b> at · <b>_</b> underscore · <b>/</b> slash · <b>\\</b> backslash · <b>&amp;</b> ampersand · <b>*</b> asterisk · <b>%</b> percent sign.</p><h4>Useful punctuation rules</h4><ul><li>English has no opening question or exclamation marks.</li><li>A comma goes before <i>but</i> when it joins two full clauses.</li><li>The apostrophe marks possession or contraction, never a plural: <i>photos</i>, not <i>photo's</i>.</li></ul><h4>Dictating</h4><p><i>All lowercase. · Capital M. · No spaces. · Hyphen, not underscore.</i></p>",
+      "fichas": [
+        { "t": "period / full stop", "d": "El punto final: americano vs británico.", "d_en": "The full stop: American vs British name." },
+        { "t": "semicolon vs colon", "d": "; separa ideas relacionadas; : introduce una lista o explicación.", "d_en": "; separates related ideas; : introduces a list or explanation." },
+        { "t": "Sin signos de apertura", "d": "El inglés no usa ¿ ni ¡.", "d_en": "English has no opening ¿ or ¡." },
+        { "t": "Apóstrofe ≠ plural", "d": "photos, no photo's.", "d_en": "photos, not photo's." },
+        { "t": "backslash vs slash", "d": "\\ es backslash; / es slash.", "d_en": "\\ is backslash; / is slash." }
+      ],
+      "quiz": [
+        { "q": "¿Cómo se llama el signo «;»?", "q_en": "What is the \";\" sign called?", "o": ["colon", "semicolon", "comma", "apostrophe"], "o_en": ["colon", "semicolon", "comma", "apostrophe"], "a": 1, "why": "El punto y coma es semicolon.", "why_en": "The \";\" sign is a semicolon." },
+        { "q": "¿Cuál está bien escrito?", "q_en": "Which one is correctly written?", "o": ["I posted three photo's", "I posted three photos", "I posted three photoes", "I posted three photos'"], "o_en": ["I posted three photo's", "I posted three photos", "I posted three photoes", "I posted three photos'"], "a": 1, "why": "El plural no lleva apóstrofe.", "why_en": "The plural takes no apostrophe." },
+        { "q": "¿Cómo se lee «\\»?", "q_en": "How do you read \"\\\"?", "o": ["slash", "backslash", "hyphen", "dash"], "o_en": ["slash", "backslash", "hyphen", "dash"], "a": 1, "why": "La barra invertida es backslash.", "why_en": "The reversed stroke is a backslash." }
+      ]
+    },
+    {
+      "id": "ingles-10-4-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Redes sociales, comunicación en línea y publicidad",
+      "t_en": "Social media, online communication and advertising",
+      "d": "14 min",
+      "content_es": "<h4>Redes y publicación</h4><p><b>post</b>, <b>feed</b>, <b>thread</b> (hilo), <b>follower</b>, <b>engagement</b>, <b>reach</b> (alcance), <b>trending</b>, <b>go viral</b>, <b>share</b>, <b>tag</b> (etiquetar), <b>block</b>, <b>report</b>, <b>privacy settings</b>.</p><h4>Riesgos</h4><p><b>fake news</b>, <b>clickbait</b>, <b>cyberbullying</b>, <b>troll</b>, <b>scam</b> (estafa), <b>phishing</b>, <b>oversharing</b>, <b>digital footprint</b> (huella digital).</p><h4>Publicidad</h4><p><b>ad / advertisement</b>, <b>brand</b>, <b>slogan</b>, <b>target audience</b> (público objetivo), <b>sponsored content</b>, <b>influencer</b>, <b>campaign</b>, <b>call to action</b>.</p><h4>Verbos frecuentes</h4><p><b>upload</b>, <b>comment on</b>, <b>reply to</b>, <b>subscribe to</b>, <b>sign up for</b>, <b>log in to</b>, <b>promote</b>, <b>endorse</b> (respaldar).</p><p>Ojo: <i>comment <b>on</b> a post</i>, <i>reply <b>to</b> a message</i>, <i>subscribe <b>to</b> a channel</i>.</p>",
+      "content_en": "<h4>Networks and publishing</h4><p><b>post</b>, <b>feed</b>, <b>thread</b>, <b>follower</b>, <b>engagement</b>, <b>reach</b>, <b>trending</b>, <b>go viral</b>, <b>share</b>, <b>tag</b>, <b>block</b>, <b>report</b>, <b>privacy settings</b>.</p><h4>Risks</h4><p><b>fake news</b>, <b>clickbait</b>, <b>cyberbullying</b>, <b>troll</b>, <b>scam</b>, <b>phishing</b>, <b>oversharing</b>, <b>digital footprint</b>.</p><h4>Advertising</h4><p><b>ad / advertisement</b>, <b>brand</b>, <b>slogan</b>, <b>target audience</b>, <b>sponsored content</b>, <b>influencer</b>, <b>campaign</b>, <b>call to action</b>.</p><h4>Frequent verbs</h4><p><b>upload</b>, <b>comment on</b>, <b>reply to</b>, <b>subscribe to</b>, <b>sign up for</b>, <b>log in to</b>, <b>promote</b>, <b>endorse</b>.</p><p>Careful: <i>comment <b>on</b> a post</i>, <i>reply <b>to</b> a message</i>, <i>subscribe <b>to</b> a channel</i>.</p>",
+      "fichas": [
+        { "t": "engagement", "d": "Interacción real del público con un contenido.", "d_en": "Real interaction of the audience with a piece of content." },
+        { "t": "clickbait", "d": "Titular exagerado para atraer clics.", "d_en": "An exaggerated headline written to attract clicks." },
+        { "t": "digital footprint", "d": "Rastro que dejan tus actividades en línea.", "d_en": "The trace your online activity leaves behind." },
+        { "t": "target audience", "d": "Público al que se dirige un mensaje.", "d_en": "The audience a message is aimed at." },
+        { "t": "comment on / reply to", "d": "Cada verbo tiene su preposición fija.", "d_en": "Each verb has its own fixed preposition." }
+      ],
+      "quiz": [
+        { "q": "«She ___ on my post yesterday.»", "q_en": "\"She ___ on my post yesterday.\"", "o": ["replied", "commented", "answered", "subscribed"], "o_en": ["replied", "commented", "answered", "subscribed"], "a": 1, "why": "Comment va con la preposición on.", "why_en": "Comment takes the preposition on." },
+        { "q": "¿Qué es el «clickbait»?", "q_en": "What is \"clickbait\"?", "o": ["Un anuncio pagado", "Un titular exagerado para atraer clics", "Un tipo de estafa bancaria", "Una red social"], "o_en": ["A paid ad", "An exaggerated headline to attract clicks", "A banking scam", "A social network"], "a": 1, "why": "Es el titular sensacionalista que busca el clic.", "why_en": "It is the sensational headline that chases clicks." },
+        { "q": "«Every campaign needs a clear ___.»", "q_en": "\"Every campaign needs a clear ___.\"", "o": ["target audience", "digital footprint", "troll", "thread"], "o_en": ["target audience", "digital footprint", "troll", "thread"], "a": 0, "why": "La campaña se dirige a un público objetivo definido.", "why_en": "A campaign is aimed at a defined target audience." }
+      ]
+    },
+    {
+      "id": "ingles-10-4-8",
+      "num": 8,
+      "tipo": "vocabulary",
+      "t": "Tipos de texto y lenguaje persuasivo",
+      "t_en": "Text types and persuasive language",
+      "d": "14 min",
+      "content_es": "<h4>Tipos de texto</h4><ul><li><b>article</b>: informa y desarrolla un tema.</li><li><b>review</b>: valora un producto u obra y da una recomendación.</li><li><b>ad</b>: persuade en pocas palabras, con imperativos.</li><li><b>post</b>: informal, breve, busca interacción.</li><li><b>report</b>: objetivo, estructurado, con datos.</li><li><b>opinion piece</b>: defiende una tesis.</li></ul><h4>Recursos persuasivos</h4><ul><li>Imperativos: <i>Discover, Join, Try it today.</i></li><li>Preguntas retóricas: <i>Tired of waiting?</i></li><li>Superlativos: <i>the fastest, the most reliable.</i></li><li>Repetición y ritmo de tres: <i>faster, safer, smarter.</i></li><li>Pronombre <b>you</b> para acercarse al lector.</li></ul><h4>Lenguaje descriptivo</h4><p>Adjetivos precisos, comparaciones y verbos fuertes: <i>a stunning design, twice as fast, it transforms the way you study.</i></p><h4>Registro</h4><p>Un review admite <i>I</i>; un report prefiere pasiva e impersonal: <i>The data was collected…</i></p>",
+      "content_en": "<h4>Text types</h4><ul><li><b>article</b>: informs and develops a topic.</li><li><b>review</b>: evaluates a product or work and gives a recommendation.</li><li><b>ad</b>: persuades in few words, with imperatives.</li><li><b>post</b>: informal, short, seeking interaction.</li><li><b>report</b>: objective, structured, with data.</li><li><b>opinion piece</b>: defends a thesis.</li></ul><h4>Persuasive devices</h4><ul><li>Imperatives: <i>Discover, Join, Try it today.</i></li><li>Rhetorical questions: <i>Tired of waiting?</i></li><li>Superlatives: <i>the fastest, the most reliable.</i></li><li>Repetition and the rule of three: <i>faster, safer, smarter.</i></li><li>The pronoun <b>you</b> to address the reader directly.</li></ul><h4>Descriptive language</h4><p>Precise adjectives, comparisons and strong verbs: <i>a stunning design, twice as fast, it transforms the way you study.</i></p><h4>Register</h4><p>A review allows <i>I</i>; a report prefers the passive and the impersonal: <i>The data was collected…</i></p>",
+      "fichas": [
+        { "t": "review", "d": "Texto que valora algo y recomienda o no.", "d_en": "A text that evaluates something and recommends it or not." },
+        { "t": "Pregunta retórica", "d": "No espera respuesta: busca enganchar al lector.", "d_en": "It expects no answer: it hooks the reader." },
+        { "t": "Regla de tres", "d": "faster, safer, smarter: ritmo persuasivo.", "d_en": "faster, safer, smarter: a persuasive rhythm." },
+        { "t": "call to action", "d": "Frase final que pide una acción concreta.", "d_en": "The closing line that asks for a specific action." },
+        { "t": "Registro del report", "d": "Impersonal y en pasiva, sin I.", "d_en": "Impersonal and passive, with no I." }
+      ],
+      "quiz": [
+        { "q": "«Tired of waiting? Try it today.» ¿Qué recursos usa?", "q_en": "\"Tired of waiting? Try it today.\" Which devices does it use?", "o": ["Pasiva y datos", "Pregunta retórica e imperativo", "Estilo indirecto", "Conectores de causa"], "o_en": ["Passive and data", "Rhetorical question and imperative", "Reported speech", "Cause connectors"], "a": 1, "why": "Combina una pregunta que engancha con una orden persuasiva.", "why_en": "It combines a hooking question with a persuasive command." },
+        { "q": "¿Qué tipo de texto valora un producto?", "q_en": "Which text type evaluates a product?", "o": ["report", "review", "article", "thread"], "o_en": ["report", "review", "article", "thread"], "a": 1, "why": "El review evalúa y recomienda.", "why_en": "A review evaluates and recommends." },
+        { "q": "En un report formal se prefiere…", "q_en": "In a formal report we prefer…", "o": ["I collected the data", "The data was collected", "You should collect data", "Data, right?"], "o_en": ["I collected the data", "The data was collected", "You should collect data", "Data, right?"], "a": 1, "why": "El registro del report es impersonal y pasivo.", "why_en": "The register of a report is impersonal and passive." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-10-4-repaso",
+    "titulo": "Repaso — Communicating with Confidence",
+    "titulo_en": "Review — Communicating with Confidence",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Comunicarse bien en digital exige <b>precisión léxica</b> (falsos cognados), <b>confirmar</b> (tag questions), <b>reportar</b> lo dicho por otros y <b>enlazar</b> ideas con los conectores adecuados.</p><h4>Puntos gramaticales</h4><ul><li>Tag: se repite el auxiliar y se invierte el signo; aren't I y shall we son excepciones.</li><li>Estilo indirecto: el verbo retrocede un tiempo y cambian pronombres, tiempo y lugar.</li><li>Preguntas reportadas: if / whether y orden de afirmación.</li><li>Órdenes reportadas: tell/ask + persona + to (o not to).</li><li>however y therefore abren oración con coma; due to va con sustantivo.</li></ul><h4>Vocabulario</h4><p>Falsos amigos, puntuación y caracteres, redes sociales y publicidad, tipos de texto y recursos persuasivos.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>Communicating well online requires <b>lexical precision</b> (false cognates), <b>confirming</b> (tag questions), <b>reporting</b> what others said and <b>linking</b> ideas with the right connectors.</p><h4>Grammar points</h4><ul><li>Tag: repeat the auxiliary and flip the polarity; aren't I and shall we are exceptions.</li><li>Reported speech: the verb shifts back and pronouns, time and place change.</li><li>Reported questions: if / whether and statement word order.</li><li>Reported commands: tell/ask + person + to (or not to).</li><li>however and therefore open a sentence with a comma; due to takes a noun.</li></ul><h4>Vocabulary</h4><p>False friends, punctuation and characters, social media and advertising, text types and persuasive devices.</p>",
+    "puntos_clave": [
+      ["attend a class, no assist a class.", "attend a class, not assist a class."],
+      ["affect es verbo; effect es sustantivo.", "affect is the verb; effect is the noun."],
+      ["never y hardly piden coletilla afirmativa.", "never and hardly take an affirmative tag."],
+      ["En estilo indirecto will → would y tomorrow → the next day.", "In reported speech will → would and tomorrow → the next day."],
+      ["suggest va con gerundio, no con to.", "suggest takes a gerund, not to."],
+      ["El plural nunca lleva apóstrofe.", "The plural never takes an apostrophe."]
+    ],
+    "preguntas": [
+      { "q": "«I ___ that I had left my phone at home.»", "q_en": "\"I ___ that I had left my phone at home.\"", "o": ["realized", "carried out", "assisted", "attended"], "o_en": ["realized", "carried out", "assisted", "attended"], "a": 0, "why": "Realize es darse cuenta de algo.", "why_en": "Realize means to become aware of something." },
+      { "q": "«You've read the thread, ___?»", "q_en": "\"You've read the thread, ___?\"", "o": ["have you", "haven't you", "didn't you", "don't you"], "o_en": ["have you", "haven't you", "didn't you", "don't you"], "a": 1, "why": "Oración afirmativa con have: coletilla haven't you.", "why_en": "Affirmative sentence with have: the tag is haven't you." },
+      { "q": "«\"I can help you.\"» → «He said he ___ help me.»", "q_en": "\"I can help you.\" → He said he ___ help me.", "o": ["can", "could", "would can", "will"], "o_en": ["can", "could", "would can", "will"], "a": 1, "why": "En estilo indirecto can pasa a could.", "why_en": "In reported speech can becomes could." },
+      { "q": "«She asked me ___ the file.»", "q_en": "\"She asked me ___ the file.\"", "o": ["to send", "send", "sending", "that send"], "o_en": ["to send", "send", "sending", "that send"], "a": 0, "why": "Las peticiones reportadas usan ask + persona + to.", "why_en": "Reported requests use ask + person + to." },
+      { "q": "«The launch was delayed ___ technical problems.»", "q_en": "\"The launch was delayed ___ technical problems.\"", "o": ["because", "due to", "so", "although"], "o_en": ["because", "due to", "so", "although"], "a": 1, "why": "Le sigue un sustantivo: due to.", "why_en": "A noun follows: due to." },
+      { "q": "¿Cómo se lee «@»?", "q_en": "How do you read \"@\"?", "o": ["ampersand", "at", "asterisk", "hash"], "o_en": ["ampersand", "at", "asterisk", "hash"], "a": 1, "why": "El símbolo @ se lee at.", "why_en": "The @ symbol is read at." },
+      { "q": "«The video ___ in two days.» (se hizo viral)", "q_en": "\"The video ___ in two days.\" (it became viral)", "o": ["went viral", "made viral", "did viral", "turned viral off"], "o_en": ["went viral", "made viral", "did viral", "turned viral off"], "a": 0, "why": "La colocación fija es go viral.", "why_en": "The fixed collocation is go viral." },
+      { "q": "«Discover the fastest way to study.» ¿Qué recurso usa?", "q_en": "\"Discover the fastest way to study.\" Which device does it use?", "o": ["Estilo indirecto", "Imperativo y superlativo", "Pregunta retórica", "Conector de contraste"], "o_en": ["Reported speech", "Imperative and superlative", "Rhetorical question", "Contrast connector"], "a": 1, "why": "Discover es imperativo y the fastest es superlativo.", "why_en": "Discover is an imperative and the fastest is a superlative." }
+    ]
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "id": "ingles-6-3",
+  "materia": "ingles",
+  "grado": "6",
+  "grado_nombre": "Sexto",
+  "periodo": 3,
+  "periodo_label": { "es": "Periodo III", "en": "Term III" },
+  "titulo": "Fashion in Every Season",
+  "titulo_es": "Rutinas, horarios y hábitos",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Comprendo y produzco textos cortos sobre rutinas diarias, horarios y hábitos. Pregunto y respondo sobre la frecuencia con la que se realizan actividades cotidianas.",
+  "competencias": "Preguntar y responder con question words en presente simple; unir ideas con conectores; expresar frecuencia con adverbios y con How often…?; describir la rutina diaria y los hábitos alimenticios.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "My Daily Routine Timeline",
+    "descripcion_es": "Cada estudiante construye una línea de tiempo ilustrada de su día, con la hora de cada actividad, un adverbio de frecuencia y un conector en cada oración.",
+    "descripcion_en": "Each student builds an illustrated timeline of their day, with the time of each activity, a frequency adverb and a connector in every sentence."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-6-3-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Question words con presente simple",
+      "t_en": "Question words with the simple present",
+      "d": "12 min",
+      "content_es": "<h4>El orden fijo</h4><p><b>Wh- + do/does + sujeto + verbo base</b>: <i>What time <b>do</b> you get up?</i></p><h4>Cuál usar</h4><ul><li><b>What time / When</b> – momento: <i>When does the class start?</i></li><li><b>Where</b> – lugar · <b>Who</b> – persona · <b>Why</b> – razón</li><li><b>How</b> – modo · <b>What</b> – cosa o actividad</li></ul><h4>Cuando el Wh- es el sujeto</h4><p>Si preguntas <i>quién hace la acción</i>, no se usa do/does: <i><b>Who</b> cooks at home?</i> (no <i>Who does cook</i>).</p>",
+      "content_en": "<h4>The fixed order</h4><p><b>Wh- + do/does + subject + base verb</b>: <i>What time <b>do</b> you get up?</i></p><h4>Which one to use</h4><ul><li><b>What time / When</b> – moment: <i>When does the class start?</i></li><li><b>Where</b> – place · <b>Who</b> – person · <b>Why</b> – reason</li><li><b>How</b> – manner · <b>What</b> – thing or activity</li></ul><h4>When the Wh- word is the subject</h4><p>If you ask <i>who does the action</i>, you do not use do/does: <i><b>Who</b> cooks at home?</i> (not <i>Who does cook</i>).</p>",
+      "fichas": [
+        { "t": "What time…?", "d": "Pregunta por la hora exacta de una actividad.", "d_en": "Asks for the exact time of an activity." },
+        { "t": "Wh- + do/does + sujeto + verbo", "d": "Orden obligatorio de la pregunta en presente simple.", "d_en": "Compulsory word order for simple present questions." },
+        { "t": "Who cooks…?", "d": "Si el Wh- es el sujeto, no se usa do/does.", "d_en": "If the Wh- word is the subject, do/does is not used." },
+        { "t": "Why…? / Because…", "d": "Why pregunta la razón; se responde con because.", "d_en": "Why asks for a reason; you answer with because." }
+      ],
+      "quiz": [
+        { "q": "«___ does your class start?» — «At 7 a.m.»", "q_en": "\"___ does your class start?\" — \"At 7 a.m.\"", "o": ["Where", "What time", "Who", "How"], "o_en": ["Where", "What time", "Who", "How"], "a": 1, "why": "La respuesta es una hora, así que se pregunta con What time.", "why_en": "The answer is a time, so we ask with What time." },
+        { "q": "¿Cuál pregunta está bien formada?", "q_en": "Which question is well formed?", "o": ["Who does live here?", "Who lives here?", "Who do lives here?", "Who live here does?"], "o_en": ["Who does live here?", "Who lives here?", "Who do lives here?", "Who live here does?"], "a": 1, "why": "Who es el sujeto de la oración: el verbo va directo y con -s.", "why_en": "Who is the subject: the verb goes directly and takes -s." },
+        { "q": "«___ do you study at night?» — «Because I work in the morning.»", "q_en": "\"___ do you study at night?\" — \"Because I work in the morning.\"", "o": ["When", "Why", "How", "Where"], "o_en": ["When", "Why", "How", "Where"], "a": 1, "why": "La respuesta empieza con because: la pregunta era por la razón.", "why_en": "The answer starts with because: the question asked for a reason." }
+      ]
+    },
+    {
+      "id": "ingles-6-3-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Conectores: and, but, or, because, so",
+      "t_en": "Connectors: and, but, or, because, so",
+      "d": "10 min",
+      "content_es": "<h4>Para qué sirven</h4><p>Unen ideas y hacen que el texto suene natural en vez de cortado.</p><ul><li><b>and</b> – suma: <i>I get up and I take a shower.</i></li><li><b>but</b> – contraste: <i>I like Math but I don't like tests.</i></li><li><b>or</b> – opción: <i>Do you drink milk or juice?</i></li><li><b>because</b> – causa: <i>I'm tired because I study a lot.</i></li><li><b>so</b> – consecuencia: <i>I'm tired, so I go to bed early.</i></li></ul><h4>Ojo con because y so</h4><p><b>because</b> introduce la causa; <b>so</b> introduce el resultado. Son opuestos: <i>It rains, <b>so</b> I stay home</i> = <i>I stay home <b>because</b> it rains</i>.</p>",
+      "content_en": "<h4>What they are for</h4><p>They join ideas and make a text sound natural instead of chopped up.</p><ul><li><b>and</b> – addition: <i>I get up and I take a shower.</i></li><li><b>but</b> – contrast: <i>I like Math but I don't like tests.</i></li><li><b>or</b> – choice: <i>Do you drink milk or juice?</i></li><li><b>because</b> – cause: <i>I'm tired because I study a lot.</i></li><li><b>so</b> – consequence: <i>I'm tired, so I go to bed early.</i></li></ul><h4>Careful with because and so</h4><p><b>because</b> introduces the cause; <b>so</b> introduces the result. They are opposites: <i>It rains, <b>so</b> I stay home</i> = <i>I stay home <b>because</b> it rains</i>.</p>",
+      "fichas": [
+        { "t": "and", "d": "Suma ideas del mismo tipo.", "d_en": "Adds ideas of the same kind." },
+        { "t": "but", "d": "Marca contraste u oposición entre dos ideas.", "d_en": "Marks contrast between two ideas." },
+        { "t": "because", "d": "Introduce la causa: responde a why.", "d_en": "Introduces the cause: it answers why." },
+        { "t": "so", "d": "Introduce la consecuencia o el resultado.", "d_en": "Introduces the consequence or result." }
+      ],
+      "quiz": [
+        { "q": "«I want to go out, ___ it's raining.»", "q_en": "\"I want to go out, ___ it's raining.\"", "o": ["and", "but", "because", "or"], "o_en": ["and", "but", "because", "or"], "a": 1, "why": "Hay contraste entre querer salir y la lluvia: but.", "why_en": "There is a contrast between wanting to go out and the rain: but." },
+        { "q": "«She studies at night ___ she works in the day.»", "q_en": "\"She studies at night ___ she works in the day.\"", "o": ["so", "but", "because", "or"], "o_en": ["so", "but", "because", "or"], "a": 2, "why": "La segunda parte es la causa de la primera: because.", "why_en": "The second part is the cause of the first: because." },
+        { "q": "«It's very late, ___ I go to bed.»", "q_en": "\"It's very late, ___ I go to bed.\"", "o": ["because", "but", "so", "or"], "o_en": ["because", "but", "so", "or"], "a": 2, "why": "Irse a la cama es la consecuencia: so.", "why_en": "Going to bed is the consequence: so." }
+      ]
+    },
+    {
+      "id": "ingles-6-3-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Adverbios de frecuencia",
+      "t_en": "Adverbs of frequency",
+      "d": "12 min",
+      "content_es": "<h4>La escala</h4><p><b>always</b> (100%) → <b>usually</b> → <b>often</b> → <b>sometimes</b> → <b>rarely / seldom</b> → <b>never</b> (0%).</p><h4>Dónde se colocan</h4><ul><li>Antes del verbo principal: <i>I <b>always</b> have breakfast.</i></li><li>Después del verbo to be: <i>She <b>is</b> <b>never</b> late.</i></li><li>Entre auxiliar y verbo: <i>I don't <b>usually</b> go out on Mondays.</i></li></ul><h4>Regla importante</h4><p><b>never</b> ya es negativo: no se combina con don't. Se dice <i>I never eat fish</i>, no <i>I don't never eat fish</i>.</p>",
+      "content_en": "<h4>The scale</h4><p><b>always</b> (100%) → <b>usually</b> → <b>often</b> → <b>sometimes</b> → <b>rarely / seldom</b> → <b>never</b> (0%).</p><h4>Where they go</h4><ul><li>Before the main verb: <i>I <b>always</b> have breakfast.</i></li><li>After the verb to be: <i>She <b>is</b> <b>never</b> late.</i></li><li>Between auxiliary and verb: <i>I don't <b>usually</b> go out on Mondays.</i></li></ul><h4>Important rule</h4><p><b>never</b> is already negative: it is not combined with don't. Say <i>I never eat fish</i>, not <i>I don't never eat fish</i>.</p>",
+      "fichas": [
+        { "t": "always / never", "d": "Los extremos de la escala: siempre y nunca.", "d_en": "The two ends of the scale: 100% and 0%." },
+        { "t": "Antes del verbo principal", "d": "I usually walk to school.", "d_en": "I usually walk to school." },
+        { "t": "Después de to be", "d": "He is always happy, no He always is happy.", "d_en": "He is always happy, not He always is happy." },
+        { "t": "never es negativo", "d": "No se usa junto con don't o doesn't.", "d_en": "It is not used together with don't or doesn't." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["I always am tired", "I am always tired", "Always I am tired", "I am tired always"], "o_en": ["I always am tired", "I am always tired", "Always I am tired", "I am tired always"], "a": 1, "why": "Con to be el adverbio va después del verbo.", "why_en": "With to be the adverb goes after the verb." },
+        { "q": "«She ___ eats meat; she is vegetarian.»", "q_en": "\"She ___ eats meat; she is vegetarian.\"", "o": ["always", "never", "usually", "often"], "o_en": ["always", "never", "usually", "often"], "a": 1, "why": "Ser vegetariana implica frecuencia cero: never.", "why_en": "Being vegetarian implies zero frequency: never." },
+        { "q": "¿Dónde va «often» en «I go to the park»?", "q_en": "Where does \"often\" go in \"I go to the park\"?", "o": ["Often I go to the park", "I go often to the park", "I often go to the park", "I go to the park often it"], "o_en": ["Often I go to the park", "I go often to the park", "I often go to the park", "I go to the park often it"], "a": 2, "why": "El adverbio de frecuencia va antes del verbo principal.", "why_en": "The frequency adverb goes before the main verb." }
+      ]
+    },
+    {
+      "id": "ingles-6-3-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "How often…? y expresiones de frecuencia",
+      "t_en": "How often…? and frequency expressions",
+      "d": "10 min",
+      "content_es": "<h4>La pregunta</h4><p><i><b>How often</b> do you play soccer?</i> — pide la frecuencia de una actividad.</p><h4>Las respuestas</h4><ul><li>Con adverbio: <i>I usually play on Saturdays.</i></li><li>Con expresión de frecuencia: <i>once a week</i> (una vez por semana), <i>twice a month</i> (dos veces al mes), <i>three times a year</i>, <i>every day</i>, <i>every other day</i> (día por medio).</li></ul><h4>Cuidado</h4><p>Una vez es <b>once</b> y dos veces es <b>twice</b>; de tres en adelante se usa <b>times</b>: <i>four times a week</i>.</p>",
+      "content_en": "<h4>The question</h4><p><i><b>How often</b> do you play soccer?</i> — it asks how frequently something happens.</p><h4>The answers</h4><ul><li>With an adverb: <i>I usually play on Saturdays.</i></li><li>With a frequency expression: <i>once a week</i>, <i>twice a month</i>, <i>three times a year</i>, <i>every day</i>, <i>every other day</i>.</li></ul><h4>Careful</h4><p>One time is <b>once</b> and two times is <b>twice</b>; from three on you use <b>times</b>: <i>four times a week</i>.</p>",
+      "fichas": [
+        { "t": "How often…?", "d": "¿Con qué frecuencia? Pregunta por la periodicidad.", "d_en": "Asks how frequently something happens." },
+        { "t": "once / twice", "d": "Una vez y dos veces. No se dice one time ni two times.", "d_en": "One time and two times, in their proper forms." },
+        { "t": "three times a week", "d": "De tres en adelante se usa times.", "d_en": "From three on you use times." },
+        { "t": "every other day", "d": "Día por medio: un día sí y otro no.", "d_en": "Every second day." }
+      ],
+      "quiz": [
+        { "q": "«___ do you visit your grandparents?»", "q_en": "\"___ do you visit your grandparents?\"", "o": ["How many", "How often", "How much", "How long"], "o_en": ["How many", "How often", "How much", "How long"], "a": 1, "why": "Se pregunta por la frecuencia: How often.", "why_en": "We are asking about frequency: How often." },
+        { "q": "Dos veces por semana se dice…", "q_en": "Two times a week is said…", "o": ["two times a week", "twice a week", "second a week", "double a week"], "o_en": ["two times a week", "twice a week", "second a week", "double a week"], "a": 1, "why": "Para dos veces se usa twice.", "why_en": "For two times we use twice." },
+        { "q": "«I go to the gym ___ times a week.»", "q_en": "\"I go to the gym ___ times a week.\"", "o": ["once", "twice", "three", "every"], "o_en": ["once", "twice", "three", "every"], "a": 2, "why": "Times solo se usa a partir de tres: three times a week.", "why_en": "Times is only used from three on: three times a week." }
+      ]
+    },
+    {
+      "id": "ingles-6-3-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "Pronombres objeto",
+      "t_en": "Object pronouns",
+      "d": "10 min",
+      "content_es": "<h4>Después del verbo</h4><p>Reemplazan al complemento, no al sujeto: <i>I know <b>her</b>.</i></p><h4>Las parejas</h4><ul><li>I → <b>me</b> · you → <b>you</b> · he → <b>him</b></li><li>she → <b>her</b> · it → <b>it</b></li><li>we → <b>us</b> · they → <b>them</b></li></ul><h4>Dónde aparecen</h4><p>Después del verbo (<i>Call <b>me</b> tonight</i>) o después de una preposición (<i>This gift is for <b>you</b></i>).</p><p>Error frecuente: <i>He helps I</i> → lo correcto es <b>He helps me</b>.</p>",
+      "content_en": "<h4>After the verb</h4><p>They replace the object, not the subject: <i>I know <b>her</b>.</i></p><h4>The pairs</h4><ul><li>I → <b>me</b> · you → <b>you</b> · he → <b>him</b></li><li>she → <b>her</b> · it → <b>it</b></li><li>we → <b>us</b> · they → <b>them</b></li></ul><h4>Where they appear</h4><p>After the verb (<i>Call <b>me</b> tonight</i>) or after a preposition (<i>This gift is for <b>you</b></i>).</p><p>Common mistake: <i>He helps I</i> → the correct form is <b>He helps me</b>.</p>",
+      "fichas": [
+        { "t": "me / him / her", "d": "Pronombres objeto de I, he y she.", "d_en": "Object pronouns of I, he and she." },
+        { "t": "us / them", "d": "Pronombres objeto de we y they.", "d_en": "Object pronouns of we and they." },
+        { "t": "Después de preposición", "d": "with me, for you, about them.", "d_en": "with me, for you, about them." },
+        { "t": "her (doble uso)", "d": "her es objeto (I see her) y posesivo (her book).", "d_en": "her works as object (I see her) and possessive (her book)." }
+      ],
+      "quiz": [
+        { "q": "«My friends invited ___ to the party.»", "q_en": "\"My friends invited ___ to the party.\"", "o": ["I", "me", "my", "mine"], "o_en": ["I", "me", "my", "mine"], "a": 1, "why": "Después del verbo se usa el pronombre objeto me.", "why_en": "After the verb we use the object pronoun me." },
+        { "q": "«I don't know ___.» (a ellos)", "q_en": "\"I don't know ___.\" (them)", "o": ["they", "their", "them", "theirs"], "o_en": ["they", "their", "them", "theirs"], "a": 2, "why": "They como complemento se convierte en them.", "why_en": "They as an object becomes them." },
+        { "q": "«This message is for ___.» (para él)", "q_en": "\"This message is for ___.\" (for him)", "o": ["he", "his", "him", "he's"], "o_en": ["he", "his", "him", "he's"], "a": 2, "why": "Después de una preposición va el pronombre objeto him.", "why_en": "After a preposition we use the object pronoun him." }
+      ]
+    },
+    {
+      "id": "ingles-6-3-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "La hora",
+      "t_en": "Telling the time",
+      "d": "12 min",
+      "content_es": "<h4>Preguntar la hora</h4><p><i>What time is it?</i> — <i>It's seven o'clock.</i></p><h4>Las formas</h4><ul><li>En punto: <b>o'clock</b> — <i>It's three o'clock.</i></li><li>Y cuarto: <b>quarter past</b> — <i>It's quarter past four (4:15).</i></li><li>Y media: <b>half past</b> — <i>It's half past six (6:30).</i></li><li>Menos cuarto: <b>quarter to</b> — <i>It's quarter to nine (8:45).</i></li><li>Minutos sueltos: <i>ten past five (5:10)</i>, <i>twenty to eight (7:40)</i>.</li></ul><h4>Forma digital</h4><p>También se puede leer el número tal cual: <i>It's seven fifteen.</i> Y se usa <b>a.m.</b> (mañana) y <b>p.m.</b> (tarde y noche).</p>",
+      "content_en": "<h4>Asking the time</h4><p><i>What time is it?</i> — <i>It's seven o'clock.</i></p><h4>The forms</h4><ul><li>On the hour: <b>o'clock</b> — <i>It's three o'clock.</i></li><li>Quarter past: <i>It's quarter past four (4:15).</i></li><li>Half past: <i>It's half past six (6:30).</i></li><li>Quarter to: <i>It's quarter to nine (8:45).</i></li><li>Other minutes: <i>ten past five (5:10)</i>, <i>twenty to eight (7:40)</i>.</li></ul><h4>Digital form</h4><p>You can also read the numbers directly: <i>It's seven fifteen.</i> And we use <b>a.m.</b> and <b>p.m.</b></p>",
+      "fichas": [
+        { "t": "o'clock", "d": "Se usa solo con horas exactas: five o'clock.", "d_en": "Used only for exact hours: five o'clock." },
+        { "t": "half past", "d": "Y media: half past six son las 6:30.", "d_en": "Half past six means 6:30." },
+        { "t": "quarter to", "d": "Menos cuarto: quarter to nine son las 8:45.", "d_en": "Quarter to nine means 8:45." },
+        { "t": "past vs to", "d": "past hasta el minuto 30; to después del 30.", "d_en": "past up to minute 30; to after minute 30." },
+        { "t": "a.m. / p.m.", "d": "Antes y después del mediodía.", "d_en": "Before and after noon." }
+      ],
+      "quiz": [
+        { "q": "¿Cómo se dice 7:30?", "q_en": "How do you say 7:30?", "o": ["half to seven", "half past seven", "quarter past seven", "seven o'clock"], "o_en": ["half to seven", "half past seven", "quarter past seven", "seven o'clock"], "a": 1, "why": "La media hora pasada se dice half past + la hora.", "why_en": "Half an hour after is said half past + the hour." },
+        { "q": "«It's quarter to five» son las…", "q_en": "\"It's quarter to five\" means…", "o": ["5:15", "4:45", "5:45", "4:15"], "o_en": ["5:15", "4:45", "5:45", "4:15"], "a": 1, "why": "Quarter to five son quince minutos antes de las cinco: 4:45.", "why_en": "Quarter to five is fifteen minutes before five: 4:45." },
+        { "q": "¿Cuándo se usa «o'clock»?", "q_en": "When do you use \"o'clock\"?", "o": ["Con cualquier hora", "Solo con horas exactas", "Solo con medias horas", "Solo de noche"], "o_en": ["With any time", "Only with exact hours", "Only with half hours", "Only at night"], "a": 1, "why": "O'clock solo acompaña horas en punto, sin minutos.", "why_en": "O'clock only goes with exact hours, with no minutes." }
+      ]
+    },
+    {
+      "id": "ingles-6-3-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Rutinas diarias",
+      "t_en": "Daily routines",
+      "d": "10 min",
+      "content_es": "<h4>Verbos de la rutina</h4><p><b>get up</b> – levantarse · <b>take a shower</b> – ducharse · <b>brush my teeth</b> – cepillarse los dientes · <b>get dressed</b> – vestirse · <b>have breakfast / lunch / dinner</b> · <b>go to school</b> · <b>do homework</b> · <b>go to bed</b> – acostarse.</p><h4>Cómo se cuenta un día</h4><p><i>I get up at 6:00. Then I take a shower and I have breakfast. I go to school at 7:00. In the afternoon I do my homework, and at 9:30 I go to bed.</i></p><h4>Palabras de secuencia</h4><p><b>first</b>, <b>then</b>, <b>after that</b>, <b>finally</b>.</p>",
+      "content_en": "<h4>Routine verbs</h4><p><b>get up</b> · <b>take a shower</b> · <b>brush my teeth</b> · <b>get dressed</b> · <b>have breakfast / lunch / dinner</b> · <b>go to school</b> · <b>do homework</b> · <b>go to bed</b>.</p><h4>How to tell your day</h4><p><i>I get up at 6:00. Then I take a shower and I have breakfast. I go to school at 7:00. In the afternoon I do my homework, and at 9:30 I go to bed.</i></p><h4>Sequence words</h4><p><b>first</b>, <b>then</b>, <b>after that</b>, <b>finally</b>.</p>",
+      "fichas": [
+        { "t": "get up", "d": "Levantarse de la cama. Diferente de wake up (despertarse).", "d_en": "To get out of bed. Different from wake up." },
+        { "t": "have breakfast", "d": "Desayunar. Se usa have, no eat.", "d_en": "To eat the morning meal: we use have." },
+        { "t": "do homework", "d": "Hacer tareas: la colocación correcta es do, no make.", "d_en": "The correct collocation is do homework, not make." },
+        { "t": "first / then / finally", "d": "Palabras para ordenar la secuencia del día.", "d_en": "Words used to order the sequence of the day." }
+      ],
+      "quiz": [
+        { "q": "«I ___ at 6 a.m. every day.»", "q_en": "\"I ___ at 6 a.m. every day.\"", "o": ["get up", "get on", "get in", "get out"], "o_en": ["get up", "get on", "get in", "get out"], "a": 0, "why": "Get up significa levantarse de la cama.", "why_en": "Get up means to get out of bed." },
+        { "q": "¿Cuál es la forma correcta?", "q_en": "Which is the correct form?", "o": ["make my homework", "do my homework", "have my homework", "take my homework"], "o_en": ["make my homework", "do my homework", "have my homework", "take my homework"], "a": 1, "why": "En inglés la tarea se hace con do, no con make.", "why_en": "In English homework goes with do, not make." },
+        { "q": "«___ I have breakfast, and ___ I go to school.»", "q_en": "\"___ I have breakfast, and ___ I go to school.\"", "o": ["Finally / first", "First / then", "Then / first", "After / first"], "o_en": ["Finally / first", "First / then", "Then / first", "After / first"], "a": 1, "why": "First abre la secuencia y then la continúa.", "why_en": "First opens the sequence and then continues it." }
+      ]
+    },
+    {
+      "id": "ingles-6-3-8",
+      "num": 8,
+      "tipo": "vocabulary",
+      "t": "Hábitos",
+      "t_en": "Habits",
+      "d": "10 min",
+      "content_es": "<h4>Hábitos buenos y malos</h4><p><b>good habits</b>: exercise, drink water, sleep eight hours, eat vegetables, read every day, help at home.<br><b>bad habits</b>: skip breakfast, spend hours on the phone, go to bed late, eat too much junk food.</p><h4>Cómo hablar de ellos</h4><p><i>I always drink water, but I sometimes go to bed late.</i></p><p>Para aconsejar se usa <b>should</b>: <i>You <b>should</b> sleep more.</i> · <i>You <b>shouldn't</b> skip breakfast.</i></p>",
+      "content_en": "<h4>Good and bad habits</h4><p><b>good habits</b>: exercise, drink water, sleep eight hours, eat vegetables, read every day, help at home.<br><b>bad habits</b>: skip breakfast, spend hours on the phone, go to bed late, eat too much junk food.</p><h4>How to talk about them</h4><p><i>I always drink water, but I sometimes go to bed late.</i></p><p>To give advice we use <b>should</b>: <i>You <b>should</b> sleep more.</i> · <i>You <b>shouldn't</b> skip breakfast.</i></p>",
+      "fichas": [
+        { "t": "habit", "d": "Hábito: algo que se hace de forma repetida.", "d_en": "Something you do repeatedly." },
+        { "t": "skip breakfast", "d": "Saltarse el desayuno.", "d_en": "To miss the morning meal." },
+        { "t": "should / shouldn't", "d": "Consejo: deberías / no deberías. El verbo va en base.", "d_en": "Advice: the verb after it stays in base form." },
+        { "t": "junk food", "d": "Comida chatarra, poco saludable.", "d_en": "Unhealthy food." }
+      ],
+      "quiz": [
+        { "q": "«You ___ drink more water.» (consejo)", "q_en": "\"You ___ drink more water.\" (advice)", "o": ["should", "shoulds", "should to", "are should"], "o_en": ["should", "shoulds", "should to", "are should"], "a": 0, "why": "Should no cambia y va seguido del verbo en base.", "why_en": "Should never changes and is followed by the base verb." },
+        { "q": "¿Cuál es un mal hábito?", "q_en": "Which one is a bad habit?", "o": ["Eat vegetables", "Sleep eight hours", "Skip breakfast", "Exercise"], "o_en": ["Eat vegetables", "Sleep eight hours", "Skip breakfast", "Exercise"], "a": 2, "why": "Saltarse el desayuno no es saludable.", "why_en": "Skipping breakfast is not healthy." },
+        { "q": "«He ___ eat so much junk food.»", "q_en": "\"He ___ eat so much junk food.\"", "o": ["shouldn't", "doesn't should", "not should", "shouldn't to"], "o_en": ["shouldn't", "doesn't should", "not should", "shouldn't to"], "a": 0, "why": "La negación de should es shouldn't, sin auxiliar do.", "why_en": "The negative of should is shouldn't, with no do auxiliary." }
+      ]
+    },
+    {
+      "id": "ingles-6-3-9",
+      "num": 9,
+      "tipo": "vocabulary",
+      "t": "La hora del almuerzo",
+      "t_en": "Lunch time",
+      "d": "8 min",
+      "content_es": "<h4>Las comidas del día</h4><p><b>breakfast</b> (desayuno), <b>lunch</b> (almuerzo), <b>snack</b> (refrigerio), <b>dinner</b> (cena).</p><h4>Frases útiles en la mesa</h4><ul><li><i>What's for lunch?</i> — ¿Qué hay de almuerzo?</li><li><i>I'm hungry / I'm thirsty.</i></li><li><i>Can I have some rice, please?</i></li><li><i>It's delicious! / I don't like it very much.</i></li></ul><h4>Ojo</h4><p>Se dice <b>have lunch</b>, no <i>take lunch</i>. Y <i>I'm hungry</i> (tengo hambre) se construye con to be, no con have.</p>",
+      "content_en": "<h4>Meals of the day</h4><p><b>breakfast</b>, <b>lunch</b>, <b>snack</b>, <b>dinner</b>.</p><h4>Useful phrases at the table</h4><ul><li><i>What's for lunch?</i></li><li><i>I'm hungry / I'm thirsty.</i></li><li><i>Can I have some rice, please?</i></li><li><i>It's delicious! / I don't like it very much.</i></li></ul><h4>Careful</h4><p>We say <b>have lunch</b>, not <i>take lunch</i>. And <i>I'm hungry</i> uses to be, not have.</p>",
+      "fichas": [
+        { "t": "have lunch", "d": "Almorzar. Nunca take lunch.", "d_en": "To eat the midday meal. Never take lunch." },
+        { "t": "I'm hungry", "d": "Tengo hambre: se usa to be, no have.", "d_en": "It uses to be, not have." },
+        { "t": "snack", "d": "Refrigerio o merienda entre comidas.", "d_en": "A small meal between main meals." },
+        { "t": "Can I have…, please?", "d": "Fórmula educada para pedir algo en la mesa.", "d_en": "Polite formula to ask for something at the table." }
+      ],
+      "quiz": [
+        { "q": "«I ___ lunch at 12:30.»", "q_en": "\"I ___ lunch at 12:30.\"", "o": ["take", "make", "have", "do"], "o_en": ["take", "make", "have", "do"], "a": 2, "why": "La colocación correcta es have lunch.", "why_en": "The correct collocation is have lunch." },
+        { "q": "¿Cómo se dice «tengo sed»?", "q_en": "How do you say you need something to drink?", "o": ["I have thirst", "I'm thirsty", "I have thirsty", "I am thirst"], "o_en": ["I have thirst", "I'm thirsty", "I have thirsty", "I am thirst"], "a": 1, "why": "Se usa to be + adjetivo: I'm thirsty.", "why_en": "It uses to be + adjective: I'm thirsty." },
+        { "q": "¿Cuál es la comida de la noche?", "q_en": "Which is the evening meal?", "o": ["breakfast", "lunch", "snack", "dinner"], "o_en": ["breakfast", "lunch", "snack", "dinner"], "a": 3, "why": "Dinner es la comida principal de la noche.", "why_en": "Dinner is the main evening meal." }
+      ]
+    },
+    {
+      "id": "ingles-6-3-10",
+      "num": 10,
+      "tipo": "vocabulary",
+      "t": "Comidas y bebidas",
+      "t_en": "Food and drinks",
+      "d": "10 min",
+      "content_es": "<h4>Comida</h4><p><b>rice</b>, <b>chicken</b>, <b>beef</b>, <b>fish</b>, <b>eggs</b>, <b>bread</b>, <b>cheese</b>, <b>soup</b>, <b>salad</b>, <b>potatoes</b>, <b>beans</b>.<br><b>fruit</b>: apple, banana, orange, strawberry, mango.<br><b>vegetables</b>: carrot, tomato, onion, lettuce.</p><h4>Bebidas</h4><p><b>water</b>, <b>milk</b>, <b>juice</b>, <b>coffee</b>, <b>tea</b>, <b>soda</b>, <b>hot chocolate</b>.</p><h4>Contables e incontables</h4><p>Se puede contar: <i>two apples, three eggs</i>. No se puede contar: <i>rice, water, milk, bread</i> → se dice <b>some rice</b>, <i>a glass of water</i>, <i>a piece of bread</i>.</p>",
+      "content_en": "<h4>Food</h4><p><b>rice</b>, <b>chicken</b>, <b>beef</b>, <b>fish</b>, <b>eggs</b>, <b>bread</b>, <b>cheese</b>, <b>soup</b>, <b>salad</b>, <b>potatoes</b>, <b>beans</b>.<br><b>fruit</b>: apple, banana, orange, strawberry, mango.<br><b>vegetables</b>: carrot, tomato, onion, lettuce.</p><h4>Drinks</h4><p><b>water</b>, <b>milk</b>, <b>juice</b>, <b>coffee</b>, <b>tea</b>, <b>soda</b>, <b>hot chocolate</b>.</p><h4>Countable and uncountable</h4><p>Countable: <i>two apples, three eggs</i>. Uncountable: <i>rice, water, milk, bread</i> → we say <b>some rice</b>, <i>a glass of water</i>, <i>a piece of bread</i>.</p>",
+      "fichas": [
+        { "t": "Incontables", "d": "rice, water, milk, bread: no llevan número directo.", "d_en": "rice, water, milk, bread: they take no direct number." },
+        { "t": "a glass of water", "d": "Los incontables se miden con recipientes o porciones.", "d_en": "Uncountables are measured with containers or portions." },
+        { "t": "vegetables vs fruit", "d": "Verduras y frutas. Fruit suele ser incontable.", "d_en": "Fruit is usually uncountable in English." },
+        { "t": "some + incontable", "d": "some rice, some milk: cantidad indefinida.", "d_en": "some rice, some milk: an indefinite amount." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál palabra es incontable?", "q_en": "Which word is uncountable?", "o": ["apple", "egg", "rice", "banana"], "o_en": ["apple", "egg", "rice", "banana"], "a": 2, "why": "El arroz no se cuenta en unidades: se dice some rice.", "why_en": "Rice is not counted in units: we say some rice." },
+        { "q": "«Can I have ___ water, please?»", "q_en": "\"Can I have ___ water, please?\"", "o": ["a", "an", "some", "many"], "o_en": ["a", "an", "some", "many"], "a": 2, "why": "Water es incontable y va con some en un pedido.", "why_en": "Water is uncountable and takes some in a request." },
+        { "q": "¿Cuál de estos es una verdura?", "q_en": "Which of these is a vegetable?", "o": ["strawberry", "carrot", "mango", "cheese"], "o_en": ["strawberry", "carrot", "mango", "cheese"], "a": 1, "why": "Carrot (zanahoria) es una verdura; las otras no.", "why_en": "A carrot is a vegetable; the others are not." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-6-3-repaso",
+    "titulo": "Repaso — Rutinas, horarios y hábitos",
+    "titulo_en": "Review — Fashion in Every Season",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Todo el periodo gira alrededor de <b>contar tu día</b>: a qué hora, con qué frecuencia y por qué. Las preguntas se arman con <b>Wh- + do/does + sujeto + verbo</b>, y las respuestas se unen con conectores.</p><h4>Puntos gramaticales</h4><ul><li>Adverbios de frecuencia: antes del verbo principal, después de to be.</li><li>How often…? se responde con once / twice / three times a week.</li><li>Pronombres objeto: me, you, him, her, it, us, them.</li><li>Conectores: and, but, or, because (causa), so (consecuencia).</li></ul><h4>Vocabulario</h4><p>La hora (o'clock, half past, quarter to), rutinas diarias, hábitos buenos y malos, comidas y bebidas contables e incontables.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The whole term is about <b>telling your day</b>: at what time, how often and why. Questions are built with <b>Wh- + do/does + subject + verb</b>, and answers are joined with connectors.</p><h4>Grammar points</h4><ul><li>Frequency adverbs: before the main verb, after to be.</li><li>How often…? is answered with once / twice / three times a week.</li><li>Object pronouns: me, you, him, her, it, us, them.</li><li>Connectors: and, but, or, because (cause), so (consequence).</li></ul><h4>Vocabulary</h4><p>Telling the time (o'clock, half past, quarter to), daily routines, good and bad habits, countable and uncountable food and drinks.</p>",
+    "puntos_clave": [
+      ["Wh- + do/does + sujeto + verbo base.", "Wh- + do/does + subject + base verb."],
+      ["Si el Wh- es el sujeto, no se usa do/does: Who lives here?", "If the Wh- word is the subject, do/does is not used: Who lives here?"],
+      ["never ya es negativo: no se combina con don't.", "never is already negative: it is not combined with don't."],
+      ["once, twice, y de tres en adelante times.", "once, twice, and from three on, times."],
+      ["past hasta el minuto 30; to después del 30.", "past up to minute 30; to after minute 30."],
+      ["Incontables: some rice, a glass of water.", "Uncountables: some rice, a glass of water."]
+    ],
+    "preguntas": [
+      { "q": "«___ often do you play basketball?»", "q_en": "\"___ often do you play basketball?\"", "o": ["What", "How", "When", "Why"], "o_en": ["What", "How", "When", "Why"], "a": 1, "why": "La expresión fija es How often.", "why_en": "The fixed expression is How often." },
+      { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["He never is late", "He is never late", "Never he is late", "He is late never"], "o_en": ["He never is late", "He is never late", "Never he is late", "He is late never"], "a": 1, "why": "Con to be el adverbio de frecuencia va después del verbo.", "why_en": "With to be the frequency adverb goes after the verb." },
+      { "q": "«I study a lot, ___ I get good grades.»", "q_en": "\"I study a lot, ___ I get good grades.\"", "o": ["because", "but", "so", "or"], "o_en": ["because", "but", "so", "or"], "a": 2, "why": "Las buenas notas son la consecuencia: so.", "why_en": "Good grades are the consequence: so." },
+      { "q": "8:45 se dice…", "q_en": "8:45 is said…", "o": ["quarter past eight", "quarter to nine", "half past eight", "quarter to eight"], "o_en": ["quarter past eight", "quarter to nine", "half past eight", "quarter to eight"], "a": 1, "why": "Faltan 15 minutos para las nueve: quarter to nine.", "why_en": "It is fifteen minutes before nine: quarter to nine." },
+      { "q": "«My mom always helps ___ with my homework.»", "q_en": "\"My mom always helps ___ with my homework.\"", "o": ["I", "me", "my", "mine"], "o_en": ["I", "me", "my", "mine"], "a": 1, "why": "Después del verbo va el pronombre objeto me.", "why_en": "After the verb we use the object pronoun me." },
+      { "q": "«She goes to the doctor ___ a year.» (2 veces)", "q_en": "\"She goes to the doctor ___ a year.\" (2 times)", "o": ["two times", "twice", "second time", "double"], "o_en": ["two times", "twice", "second time", "double"], "a": 1, "why": "Dos veces se dice twice.", "why_en": "Two times is said twice." },
+      { "q": "«You ___ go to bed so late.» (consejo negativo)", "q_en": "\"You ___ go to bed so late.\" (negative advice)", "o": ["don't should", "shouldn't", "not should", "doesn't should"], "o_en": ["don't should", "shouldn't", "not should", "doesn't should"], "a": 1, "why": "Should se niega solo: shouldn't.", "why_en": "Should is negated on its own: shouldn't." },
+      { "q": "«There isn't ___ milk in the fridge.»", "q_en": "\"There isn't ___ milk in the fridge.\"", "o": ["some", "any", "many", "a"], "o_en": ["some", "any", "many", "a"], "a": 1, "why": "Es negativo y milk es incontable: any.", "why_en": "It is a negative sentence and milk is uncountable: any." }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+/*
+ * fonts.css — Tipografía web Nunito
+ * ====================================
+ * Origen: el prototipo incrustaba 5 pesos de la fuente como data: URIs
+ * en base64 directamente en <style> (un bloque base64 de ~16-22KB por
+ * peso, cada uno en una sola línea). Así fue como el archivo "boceto"
+ * infló a 320KB.
+ *
+ * Aquí se decodificaron de vuelta a archivos binarios reales y se
+ * movieron a public/fonts/nunito-{weight}.woff2, referenciados
+ * normalmente abajo. Vite sirve todo lo que está en public/ desde la
+ * raíz del sitio, así que las rutas son estables tanto en desarrollo
+ * como en build.
+ *
+ * unicode-range se preservó del subsetting original (latino + símbolos
+ * y puntuación comunes) para que el navegador solo descargue un peso
+ * cuando la página realmente necesita un glifo de ese rango.
+ */
+
+@font-face{
+  font-family:'Nunito'; font-style:normal; font-weight:400; font-display:swap;
+  src:url('/fonts/nunito-400.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face{
+  font-family:'Nunito'; font-style:normal; font-weight:600; font-display:swap;
+  src:url('/fonts/nunito-600.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face{
+  font-family:'Nunito'; font-style:normal; font-weight:700; font-display:swap;
+  src:url('/fonts/nunito-700.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face{
+  font-family:'Nunito'; font-style:normal; font-weight:800; font-display:swap;
+  src:url('/fonts/nunito-800.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face{
+  font-family:'Nunito'; font-style:normal; font-weight:900; font-display:swap;
+  src:url('/fonts/nunito-900.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}

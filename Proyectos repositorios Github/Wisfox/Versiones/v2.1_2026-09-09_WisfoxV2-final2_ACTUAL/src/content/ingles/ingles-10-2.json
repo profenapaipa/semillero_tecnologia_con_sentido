@@ -1,0 +1,220 @@
+{
+  "id": "ingles-10-2",
+  "materia": "ingles",
+  "grado": "10",
+  "grado_nombre": "Décimo",
+  "periodo": 2,
+  "periodo_label": { "es": "Periodo II", "en": "Term II" },
+  "titulo": "Looking Forward – Predicting and Planning for the Future",
+  "titulo_es": "Mirar adelante: predecir y planear el futuro",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Proyecto planes y predicciones con distintos matices temporales. Comprendo y produzco textos sobre salud y bienestar, y doy consejos fundamentados.",
+  "competencias": "Usar futuro simple, continuo, perfecto y perfecto continuo; construir condicionales de tipo cero y uno; manejar fechas y ordinales; describir el cuerpo, la salud y hábitos saludables.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "My Five-Year Health Plan",
+    "descripcion_es": "Cada estudiante diseña un plan personal de bienestar a cinco años: qué estará haciendo, qué habrá logrado para cada fecha y qué pasará si mantiene o abandona cada hábito.",
+    "descripcion_en": "Each student designs a personal five-year wellbeing plan: what they will be doing, what they will have achieved by each date and what will happen if they keep or drop each habit."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-10-2-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Futuro simple: will y going to",
+      "t_en": "Simple future: will and going to",
+      "d": "12 min",
+      "content_es": "<h4>El reparto de funciones</h4><ul><li><b>will</b>: predicción por opinión, decisión del momento, promesa, ofrecimiento.</li><li><b>going to</b>: intención ya decidida, predicción con evidencia presente.</li></ul><h4>Matices de certeza</h4><p><i>I'm <b>sure</b> it will work. · It will <b>probably</b> take longer. · It <b>might</b> not be enough. · It <b>definitely won't</b> happen this year.</i></p><h4>Otras formas para el futuro</h4><ul><li>Presente continuo → cita ya acordada: <i>I'm seeing the doctor at 4.</i></li><li>Presente simple → horario: <i>The clinic opens at 7.</i></li><li><b>be about to</b> → inminente: <i>The results are about to come out.</i></li></ul><h4>Recordatorio</h4><p>Después de <b>when, as soon as, before, after, until</b> no se usa will: <i>I'll call you when I <b>get</b> the results.</i></p>",
+      "content_en": "<h4>Division of roles</h4><ul><li><b>will</b>: prediction from opinion, on-the-spot decision, promise, offer.</li><li><b>going to</b>: an intention already decided, a prediction with present evidence.</li></ul><h4>Degrees of certainty</h4><p><i>I'm <b>sure</b> it will work. · It will <b>probably</b> take longer. · It <b>might</b> not be enough. · It <b>definitely won't</b> happen this year.</i></p><h4>Other future forms</h4><ul><li>Present continuous → arranged appointment: <i>I'm seeing the doctor at 4.</i></li><li>Present simple → timetable: <i>The clinic opens at 7.</i></li><li><b>be about to</b> → imminent: <i>The results are about to come out.</i></li></ul><h4>Reminder</h4><p>After <b>when, as soon as, before, after, until</b> we do not use will: <i>I'll call you when I <b>get</b> the results.</i></p>",
+      "fichas": [
+        { "t": "be about to", "d": "Algo inminente, a punto de ocurrir.", "d_en": "Something imminent, on the point of happening." },
+        { "t": "will probably", "d": "El adverbio va después de will.", "d_en": "The adverb goes after will." },
+        { "t": "won't definitely / definitely won't", "d": "Con won't el adverbio va antes: definitely won't.", "d_en": "With won't the adverb goes before: definitely won't." },
+        { "t": "Sin will tras when", "d": "when I get, no when I will get.", "d_en": "when I get, not when I will get." }
+      ],
+      "quiz": [
+        { "q": "«The results ___ come out any minute.»", "q_en": "\"The results ___ come out any minute.\"", "o": ["will about", "are about to", "are going", "will to"], "o_en": ["will about", "are about to", "are going", "will to"], "a": 1, "why": "Be about to expresa algo inminente.", "why_en": "Be about to expresses something imminent." },
+        { "q": "«I'll text you as soon as I ___ home.»", "q_en": "\"I'll text you as soon as I ___ home.\"", "o": ["will arrive", "arrive", "arrived", "am arriving"], "o_en": ["will arrive", "arrive", "arrived", "am arriving"], "a": 1, "why": "Después de as soon as no se usa will.", "why_en": "After as soon as we do not use will." },
+        { "q": "«Look at her face. She ___ cry.»", "q_en": "\"Look at her face. She ___ cry.\"", "o": ["will", "is going to", "goes to", "would"], "o_en": ["will", "is going to", "goes to", "would"], "a": 1, "why": "Hay evidencia visible: going to.", "why_en": "There is visible evidence: going to." }
+      ]
+    },
+    {
+      "id": "ingles-10-2-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Futuro continuo",
+      "t_en": "Future continuous",
+      "d": "12 min",
+      "content_es": "<h4>Forma</h4><p><b>will be + verbo-ing</b>: <i>This time next year I <b>will be studying</b> at university.</i></p><h4>Usos</h4><ul><li>Acción en curso en un momento futuro concreto: <i>At 10 tomorrow we'll be taking the exam.</i></li><li>Planes que ya siguen su curso natural: <i>I'll be seeing her on Monday anyway.</i></li><li>Preguntas educadas y no invasivas: <i>Will you be using the car tonight?</i> (más suave que <i>Will you use…?</i>)</li></ul><h4>Expresiones que lo acompañan</h4><p><i>this time tomorrow, at 8 p.m., all day, during the summer, while you're away.</i></p><h4>Diferencia clave</h4><p><i>I'll do it at 5</i> = empezaré a las 5. <i>I'll be doing it at 5</i> = a las 5 ya estaré en medio de la tarea.</p>",
+      "content_en": "<h4>Form</h4><p><b>will be + verb-ing</b>: <i>This time next year I <b>will be studying</b> at university.</i></p><h4>Uses</h4><ul><li>An action in progress at a specific future moment: <i>At 10 tomorrow we'll be taking the exam.</i></li><li>Plans already running their natural course: <i>I'll be seeing her on Monday anyway.</i></li><li>Polite, non-intrusive questions: <i>Will you be using the car tonight?</i> (softer than <i>Will you use…?</i>)</li></ul><h4>Expressions that go with it</h4><p><i>this time tomorrow, at 8 p.m., all day, during the summer, while you're away.</i></p><h4>Key difference</h4><p><i>I'll do it at 5</i> = I will start at 5. <i>I'll be doing it at 5</i> = at 5 I will already be in the middle of it.</p>",
+      "fichas": [
+        { "t": "will be + -ing", "d": "Estructura del futuro continuo.", "d_en": "Structure of the future continuous." },
+        { "t": "this time tomorrow", "d": "Expresión típica del futuro continuo.", "d_en": "A typical future continuous expression." },
+        { "t": "Pregunta educada", "d": "Will you be using…? suena menos invasivo.", "d_en": "Will you be using…? sounds less intrusive." },
+        { "t": "Empezar vs estar en medio", "d": "I'll do it at 5 vs I'll be doing it at 5.", "d_en": "I'll do it at 5 vs I'll be doing it at 5." }
+      ],
+      "quiz": [
+        { "q": "«This time next week I ___ on the beach.»", "q_en": "\"This time next week I ___ on the beach.\"", "o": ["will lie", "will be lying", "will have lain", "lie"], "o_en": ["will lie", "will be lying", "will have lain", "lie"], "a": 1, "why": "This time next week pide futuro continuo.", "why_en": "This time next week calls for the future continuous." },
+        { "q": "«Don't call at 8; we ___ dinner.»", "q_en": "\"Don't call at 8; we ___ dinner.\"", "o": ["will have", "will be having", "will have had", "have"], "o_en": ["will have", "will be having", "will have had", "have"], "a": 1, "why": "A esa hora la acción estará en curso.", "why_en": "At that time the action will be in progress." },
+        { "q": "¿Cuál pregunta suena más educada?", "q_en": "Which question sounds more polite?", "o": ["Will you use the printer?", "Will you be using the printer?", "Do you use the printer?", "Are you use the printer?"], "o_en": ["Will you use the printer?", "Will you be using the printer?", "Do you use the printer?", "Are you use the printer?"], "a": 1, "why": "El futuro continuo suaviza la pregunta.", "why_en": "The future continuous softens the question." }
+      ]
+    },
+    {
+      "id": "ingles-10-2-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Futuro perfecto y futuro perfecto continuo",
+      "t_en": "Future perfect and future perfect continuous",
+      "d": "14 min",
+      "content_es": "<h4>Futuro perfecto</h4><p><b>will have + participio</b>: acción <b>terminada</b> antes de un momento futuro.<br><i>By 2030, I <b>will have finished</b> my degree.</i></p><h4>Futuro perfecto continuo</h4><p><b>will have been + verbo-ing</b>: enfatiza la <b>duración</b> acumulada hasta ese momento.<br><i>By December, I <b>will have been training</b> for two years.</i></p><h4>La clave: la expresión de tiempo</h4><ul><li><b>by</b> + fecha o momento: <i>by next year, by the time you arrive</i></li><li><b>in</b> + periodo: <i>in five years' time</i></li></ul><h4>Comparación rápida</h4><ul><li><i>I will finish</i> → lo terminaré.</li><li><i>I will be finishing</i> → estaré terminándolo.</li><li><i>I will have finished</i> → ya lo habré terminado.</li><li><i>I will have been finishing</i> → llevaré tiempo terminándolo.</li></ul><p>Después de <b>by the time</b> el verbo va en presente: <i>By the time you <b>arrive</b>, I'll have left.</i></p>",
+      "content_en": "<h4>Future perfect</h4><p><b>will have + participle</b>: an action <b>finished</b> before a future moment.<br><i>By 2030, I <b>will have finished</b> my degree.</i></p><h4>Future perfect continuous</h4><p><b>will have been + verb-ing</b>: it emphasizes the <b>duration</b> accumulated up to that moment.<br><i>By December, I <b>will have been training</b> for two years.</i></p><h4>The key: the time expression</h4><ul><li><b>by</b> + date or moment: <i>by next year, by the time you arrive</i></li><li><b>in</b> + period: <i>in five years' time</i></li></ul><h4>Quick comparison</h4><ul><li><i>I will finish</i> → I will finish it.</li><li><i>I will be finishing</i> → I will be in the middle of finishing.</li><li><i>I will have finished</i> → I will already have finished.</li><li><i>I will have been finishing</i> → I will have spent time finishing.</li></ul><p>After <b>by the time</b> the verb goes in the present: <i>By the time you <b>arrive</b>, I'll have left.</i></p>",
+      "fichas": [
+        { "t": "will have + participio", "d": "Terminado antes de un momento futuro.", "d_en": "Finished before a future moment." },
+        { "t": "will have been + -ing", "d": "Duración acumulada hasta ese momento futuro.", "d_en": "Duration accumulated up to that future moment." },
+        { "t": "by + fecha", "d": "Marca el límite: by 2030, by Friday.", "d_en": "Marks the cut-off: by 2030, by Friday." },
+        { "t": "By the time + presente", "d": "By the time you arrive, no you will arrive.", "d_en": "By the time you arrive, not you will arrive." }
+      ],
+      "quiz": [
+        { "q": "«By next June I ___ my thesis.»", "q_en": "\"By next June I ___ my thesis.\"", "o": ["will finish", "will have finished", "will be finishing", "finish"], "o_en": ["will finish", "will have finished", "will be finishing", "finish"], "a": 1, "why": "By + fecha con acción completada: futuro perfecto.", "why_en": "By + date with a completed action: future perfect." },
+        { "q": "«By the time you ___, we'll have started.»", "q_en": "\"By the time you ___, we'll have started.\"", "o": ["will get here", "get here", "got here", "will be here"], "o_en": ["will get here", "get here", "got here", "will be here"], "a": 1, "why": "Después de by the time el verbo va en presente.", "why_en": "After by the time the verb goes in the present." },
+        { "q": "«In March she ___ here for ten years.»", "q_en": "\"In March she ___ here for ten years.\"", "o": ["will work", "will be working", "will have been working", "works"], "o_en": ["will work", "will be working", "will have been working", "works"], "a": 2, "why": "Se enfatiza la duración acumulada: futuro perfecto continuo.", "why_en": "The accumulated duration is emphasized: future perfect continuous." }
+      ]
+    },
+    {
+      "id": "ingles-10-2-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Condicional cero y primer condicional",
+      "t_en": "Zero and first conditional",
+      "d": "14 min",
+      "content_es": "<h4>Condicional cero</h4><p><b>If + presente, presente</b>: verdades generales y relaciones causa-efecto constantes.<br><i>If you don't sleep enough, your immune system weakens.</i></p><p>Con este tipo, <i>if</i> y <i>when</i> son intercambiables.</p><h4>Primer condicional</h4><p><b>If + presente, will + base</b>: consecuencia probable en el futuro.<br><i>If you exercise regularly, you <b>will feel</b> better.</i></p><h4>Variantes del resultado</h4><ul><li>Modal: <i>If you eat well, you <b>can</b> improve your energy.</i></li><li>Imperativo: <i>If you feel dizzy, <b>sit</b> down.</i></li><li>Sugerencia: <i>If it hurts, you <b>should</b> see a doctor.</i></li></ul><h4>Conectores condicionales</h4><p><b>unless</b> (a menos que) · <b>as long as / provided that</b> (siempre que) · <b>in case</b> (por si acaso) · <b>even if</b> (incluso si).</p><p>Regla firme: después de todos ellos <b>no va will</b>.</p>",
+      "content_en": "<h4>Zero conditional</h4><p><b>If + present, present</b>: general truths and constant cause-effect relations.<br><i>If you don't sleep enough, your immune system weakens.</i></p><p>With this type, <i>if</i> and <i>when</i> are interchangeable.</p><h4>First conditional</h4><p><b>If + present, will + base</b>: a likely future consequence.<br><i>If you exercise regularly, you <b>will feel</b> better.</i></p><h4>Result variants</h4><ul><li>Modal: <i>If you eat well, you <b>can</b> improve your energy.</i></li><li>Imperative: <i>If you feel dizzy, <b>sit</b> down.</i></li><li>Suggestion: <i>If it hurts, you <b>should</b> see a doctor.</i></li></ul><h4>Conditional connectors</h4><p><b>unless</b> · <b>as long as / provided that</b> · <b>in case</b> · <b>even if</b>.</p><p>Firm rule: after all of them there is <b>no will</b>.</p>",
+      "fichas": [
+        { "t": "Condicional cero", "d": "Presente en las dos partes: relación siempre cierta.", "d_en": "Present in both halves: an always-true relation." },
+        { "t": "unless", "d": "A menos que. Equivale a if not y ya es negativo.", "d_en": "Unless: equivalent to if not, already negative." },
+        { "t": "as long as", "d": "Siempre que se cumpla una condición.", "d_en": "On condition that something is met." },
+        { "t": "in case", "d": "Por si acaso: acción preventiva, no condicional.", "d_en": "In case: a precaution, not a condition." },
+        { "t": "Sin will tras if", "d": "Vale para if, unless, as long as y en general.", "d_en": "Applies to if, unless, as long as and the rest." }
+      ],
+      "quiz": [
+        { "q": "«___ you take the medicine, you won't get better.»", "q_en": "\"___ you take the medicine, you won't get better.\"", "o": ["If", "Unless", "As long as", "Even if"], "o_en": ["If", "Unless", "As long as", "Even if"], "a": 1, "why": "Unless significa si no: si no la tomas, no mejorarás.", "why_en": "Unless means if not: if you do not take it, you will not get better." },
+        { "q": "«If the temperature ___, the body sweats.»", "q_en": "\"If the temperature ___, the body sweats.\"", "o": ["will rise", "rises", "rose", "would rise"], "o_en": ["will rise", "rises", "rose", "would rise"], "a": 1, "why": "Es un condicional cero: presente en las dos partes.", "why_en": "It is a zero conditional: present in both halves." },
+        { "q": "«Take an umbrella ___ it rains.»", "q_en": "\"Take an umbrella ___ it rains.\"", "o": ["unless", "in case", "even if", "as long as"], "o_en": ["unless", "in case", "even if", "as long as"], "a": 1, "why": "In case expresa una precaución por si acaso.", "why_en": "In case expresses a precaution." }
+      ]
+    },
+    {
+      "id": "ingles-10-2-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Fechas y números ordinales",
+      "t_en": "Dates and ordinal numbers",
+      "d": "12 min",
+      "content_es": "<h4>Ordinales</h4><p>1st first · 2nd second · 3rd third · 4th fourth · 5th fifth · 8th eighth · 9th ninth · 12th twelfth · 20th twentieth · 21st twenty-first · 30th thirtieth.</p><p>Regla: se agrega <b>-th</b>, salvo los tres primeros de cada decena, que usan st, nd y rd.</p><h4>Fechas completas</h4><p><i>Monday, September 21st, 2026</i> → <i>Monday, September the twenty-first, twenty twenty-six.</i></p><h4>Otros usos del ordinal</h4><p><i>the first time, the second floor, the third chapter, my twentieth birthday, the 21st century.</i></p><h4>Preposiciones</h4><p><b>on</b> + día y fecha · <b>in</b> + mes, año, década, siglo · <b>at</b> + hora, festividades.</p><h4>Duraciones</h4><p><i>for two weeks · from Monday to Friday · until June · within a month · in three days' time.</i></p>",
+      "content_en": "<h4>Ordinals</h4><p>1st first · 2nd second · 3rd third · 4th fourth · 5th fifth · 8th eighth · 9th ninth · 12th twelfth · 20th twentieth · 21st twenty-first · 30th thirtieth.</p><p>Rule: add <b>-th</b>, except the first three of each ten, which take st, nd and rd.</p><h4>Full dates</h4><p><i>Monday, September 21st, 2026</i> → <i>Monday, September the twenty-first, twenty twenty-six.</i></p><h4>Other uses of ordinals</h4><p><i>the first time, the second floor, the third chapter, my twentieth birthday, the 21st century.</i></p><h4>Prepositions</h4><p><b>on</b> + day and date · <b>in</b> + month, year, decade, century · <b>at</b> + clock time, holidays.</p><h4>Durations</h4><p><i>for two weeks · from Monday to Friday · until June · within a month · in three days' time.</i></p>",
+      "fichas": [
+        { "t": "st, nd, rd, th", "d": "1st, 2nd, 3rd y el resto con -th.", "d_en": "1st, 2nd, 3rd and the rest with -th." },
+        { "t": "twelfth", "d": "El ordinal de twelve pierde la ve: twelfth.", "d_en": "The ordinal of twelve changes spelling: twelfth." },
+        { "t": "within a month", "d": "Dentro de un mes, en cualquier momento antes de que acabe.", "d_en": "At any point before a month has passed." },
+        { "t": "in three days' time", "d": "Dentro de tres días. Lleva apóstrofe en days'.", "d_en": "Three days from now. Note the apostrophe in days'." }
+      ],
+      "quiz": [
+        { "q": "El ordinal de «twelve» es…", "q_en": "The ordinal of \"twelve\" is…", "o": ["twelveth", "twelfth", "twelvth", "twelth"], "o_en": ["twelveth", "twelfth", "twelvth", "twelth"], "a": 1, "why": "Twelve cambia a twelfth.", "why_en": "Twelve changes to twelfth." },
+        { "q": "«The appointment is ___ March 3rd ___ 9 a.m.»", "q_en": "\"The appointment is ___ March 3rd ___ 9 a.m.\"", "o": ["in / on", "on / at", "at / in", "on / in"], "o_en": ["in / on", "on / at", "at / in", "on / in"], "a": 1, "why": "Fechas con on y horas con at.", "why_en": "Dates take on and clock times take at." },
+        { "q": "«The results will be ready ___ a week.»", "q_en": "\"The results will be ready ___ a week.\"", "o": ["since", "within", "for", "during of"], "o_en": ["since", "within", "for", "during of"], "a": 1, "why": "Within indica antes de que pase ese plazo.", "why_en": "Within means before that period is over." }
+      ]
+    },
+    {
+      "id": "ingles-10-2-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "El cuerpo y el bienestar",
+      "t_en": "The body and wellbeing",
+      "d": "12 min",
+      "content_es": "<h4>Partes del cuerpo</h4><p><b>head</b>, <b>forehead</b> (frente), <b>throat</b> (garganta), <b>chest</b> (pecho), <b>shoulder</b>, <b>elbow</b> (codo), <b>wrist</b> (muñeca), <b>waist</b> (cintura), <b>hip</b> (cadera), <b>knee</b> (rodilla), <b>ankle</b> (tobillo), <b>skin</b>, <b>bone</b>, <b>muscle</b>, <b>lungs</b>, <b>heart</b>, <b>brain</b>, <b>stomach</b>.</p><h4>Bienestar</h4><p><b>wellbeing</b>, <b>fitness</b>, <b>rest</b>, <b>balanced diet</b>, <b>hydration</b>, <b>mental health</b>, <b>stress</b>, <b>burnout</b>, <b>self-care</b>, <b>routine</b>.</p><h4>Verbos</h4><p><b>work out</b>, <b>stretch</b> (estirar), <b>rest</b>, <b>breathe</b>, <b>relax</b>, <b>strengthen</b> (fortalecer), <b>avoid</b>, <b>reduce</b>, <b>maintain</b>.</p><h4>Falsos amigos</h4><p><b>constipated</b> significa estreñido, no resfriado (eso es <i>to have a cold</i>). <b>injury</b> es lesión, no injuria.</p>",
+      "content_en": "<h4>Body parts</h4><p><b>head</b>, <b>forehead</b>, <b>throat</b>, <b>chest</b>, <b>shoulder</b>, <b>elbow</b>, <b>wrist</b>, <b>waist</b>, <b>hip</b>, <b>knee</b>, <b>ankle</b>, <b>skin</b>, <b>bone</b>, <b>muscle</b>, <b>lungs</b>, <b>heart</b>, <b>brain</b>, <b>stomach</b>.</p><h4>Wellbeing</h4><p><b>wellbeing</b>, <b>fitness</b>, <b>rest</b>, <b>balanced diet</b>, <b>hydration</b>, <b>mental health</b>, <b>stress</b>, <b>burnout</b>, <b>self-care</b>, <b>routine</b>.</p><h4>Verbs</h4><p><b>work out</b>, <b>stretch</b>, <b>rest</b>, <b>breathe</b>, <b>relax</b>, <b>strengthen</b>, <b>avoid</b>, <b>reduce</b>, <b>maintain</b>.</p><h4>False friends</h4><p><b>constipated</b> refers to the digestive system, not to having a cold. <b>injury</b> means physical harm.</p>",
+      "fichas": [
+        { "t": "wrist / ankle", "d": "Muñeca y tobillo: articulaciones que se confunden.", "d_en": "The joints of the hand and the foot." },
+        { "t": "burnout", "d": "Agotamiento por exceso de trabajo o estrés sostenido.", "d_en": "Exhaustion caused by prolonged stress or overwork." },
+        { "t": "constipated", "d": "Falso amigo: se refiere al sistema digestivo.", "d_en": "False friend for Spanish speakers: it refers to digestion." },
+        { "t": "work out", "d": "Hacer ejercicio físico de forma planificada.", "d_en": "To do planned physical exercise." },
+        { "t": "injury", "d": "Lesión física, no ofensa verbal.", "d_en": "Physical harm, not a verbal offense." }
+      ],
+      "quiz": [
+        { "q": "¿Qué es el «ankle»?", "q_en": "What is the \"ankle\"?", "o": ["La muñeca", "El tobillo", "El codo", "La rodilla"], "o_en": ["The wrist", "The joint above the foot", "The elbow", "The knee"], "a": 1, "why": "Ankle es la articulación del pie.", "why_en": "The ankle is the joint above the foot." },
+        { "q": "«She's suffering from ___ after months of overwork.»", "q_en": "\"She's suffering from ___ after months of overwork.\"", "o": ["fitness", "burnout", "hydration", "self-care"], "o_en": ["fitness", "burnout", "hydration", "self-care"], "a": 1, "why": "Burnout es el agotamiento por exceso de trabajo.", "why_en": "Burnout is exhaustion from overwork." },
+        { "q": "¿Cómo se dice «tengo gripa»?", "q_en": "How do you say you have a cold?", "o": ["I'm constipated", "I have a cold", "I have constipation flu", "I am cold"], "o_en": ["I'm constipated", "I have a cold", "I have constipation flu", "I am cold"], "a": 1, "why": "Constipated no significa resfriado: se dice have a cold.", "why_en": "Constipated does not mean having a cold: say have a cold." }
+      ]
+    },
+    {
+      "id": "ingles-10-2-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Enfermedades y problemas de salud",
+      "t_en": "Illnesses and health problems",
+      "d": "12 min",
+      "content_es": "<h4>Molestias comunes</h4><p><b>a headache</b>, <b>a stomachache</b>, <b>a sore throat</b>, <b>a cough</b>, <b>a fever</b>, <b>a cold</b>, <b>the flu</b>, <b>an allergy</b>, <b>a rash</b> (sarpullido), <b>a sprain</b> (esguince), <b>a broken bone</b>.</p><h4>Cómo se expresan</h4><ul><li><b>have</b> + enfermedad: <i>I have a headache.</i></li><li><b>My … hurts</b>: <i>My back hurts.</i></li><li><b>feel</b> + adjetivo: <i>I feel dizzy / sick / weak / exhausted.</i></li></ul><h4>En la consulta</h4><p><i>What's the matter? · How long have you had it? · Where does it hurt? · Take this twice a day. · Get plenty of rest.</i></p><h4>Ojo</h4><p><b>the flu</b> lleva artículo; <b>a cold</b> lleva a. Y <i>I feel sick</i> significa tener náuseas o estar enfermo, según el contexto.</p>",
+      "content_en": "<h4>Common complaints</h4><p><b>a headache</b>, <b>a stomachache</b>, <b>a sore throat</b>, <b>a cough</b>, <b>a fever</b>, <b>a cold</b>, <b>the flu</b>, <b>an allergy</b>, <b>a rash</b>, <b>a sprain</b>, <b>a broken bone</b>.</p><h4>How they are expressed</h4><ul><li><b>have</b> + illness: <i>I have a headache.</i></li><li><b>My … hurts</b>: <i>My back hurts.</i></li><li><b>feel</b> + adjective: <i>I feel dizzy / sick / weak / exhausted.</i></li></ul><h4>At the doctor's</h4><p><i>What's the matter? · How long have you had it? · Where does it hurt? · Take this twice a day. · Get plenty of rest.</i></p><h4>Careful</h4><p><b>the flu</b> takes the article; <b>a cold</b> takes a. And <i>I feel sick</i> can mean nauseous or unwell depending on the context.</p>",
+      "fichas": [
+        { "t": "a sore throat", "d": "Dolor de garganta: se usa el adjetivo sore.", "d_en": "A painful throat: the adjective sore is used." },
+        { "t": "the flu vs a cold", "d": "La gripa lleva the; el resfriado lleva a.", "d_en": "Flu takes the; a cold takes a." },
+        { "t": "My back hurts", "d": "Estructura alternativa a have + dolor.", "d_en": "Alternative structure to have + pain." },
+        { "t": "dizzy", "d": "Mareado: sensación de que todo da vueltas.", "d_en": "Feeling that everything is spinning." },
+        { "t": "sprain", "d": "Esguince: lesión de ligamento por torcedura.", "d_en": "A twisted joint injury." }
+      ],
+      "quiz": [
+        { "q": "«I have ___ sore throat.»", "q_en": "\"I have ___ sore throat.\"", "o": ["the", "a", "an", "—"], "o_en": ["the", "a", "an", "—"], "a": 1, "why": "Sore throat lleva el artículo a.", "why_en": "Sore throat takes the article a." },
+        { "q": "«She has ___ flu and can't come.»", "q_en": "\"She has ___ flu and can't come.\"", "o": ["a", "an", "the", "—"], "o_en": ["a", "an", "the", "—"], "a": 2, "why": "Flu es la excepción: lleva the.", "why_en": "Flu is the exception: it takes the." },
+        { "q": "«After running I felt ___.» (todo daba vueltas)", "q_en": "\"After running I felt ___.\" (everything was spinning)", "o": ["dizzy", "sore", "weak", "cold"], "o_en": ["dizzy", "sore", "weak", "cold"], "a": 0, "why": "Dizzy es la sensación de mareo.", "why_en": "Dizzy is the feeling of spinning." }
+      ]
+    },
+    {
+      "id": "ingles-10-2-8",
+      "num": 8,
+      "tipo": "vocabulary",
+      "t": "Dar consejos y hábitos saludables",
+      "t_en": "Giving advice and healthy habits",
+      "d": "12 min",
+      "content_es": "<h4>Fórmulas de consejo</h4><ul><li><b>should / shouldn't</b> + base: <i>You should drink more water.</i></li><li><b>ought to</b>: más formal, mismo sentido.</li><li><b>had better</b> (+ base): advertencia con consecuencia: <i>You'd better rest, or you'll get worse.</i></li><li><b>Why don't you…? / How about + -ing?</b>: sugerencia amable.</li><li><b>If I were you, I would…</b>: consejo empático.</li><li><b>It's a good idea to… / Try to…</b></li></ul><h4>Hábitos saludables</h4><p><i>get enough sleep, stay hydrated, eat a balanced diet, exercise regularly, take breaks, limit screen time, manage stress, ask for help.</i></p><h4>Ojo</h4><p><b>had better</b> es más fuerte que <i>should</i>: implica que algo malo puede pasar si no se hace. Y <b>How about</b> va con gerundio: <i>How about <b>going</b> for a walk?</i></p>",
+      "content_en": "<h4>Advice formulas</h4><ul><li><b>should / shouldn't</b> + base: <i>You should drink more water.</i></li><li><b>ought to</b>: more formal, same meaning.</li><li><b>had better</b> (+ base): a warning with a consequence: <i>You'd better rest, or you'll get worse.</i></li><li><b>Why don't you…? / How about + -ing?</b>: a friendly suggestion.</li><li><b>If I were you, I would…</b>: empathetic advice.</li><li><b>It's a good idea to… / Try to…</b></li></ul><h4>Healthy habits</h4><p><i>get enough sleep, stay hydrated, eat a balanced diet, exercise regularly, take breaks, limit screen time, manage stress, ask for help.</i></p><h4>Careful</h4><p><b>had better</b> is stronger than <i>should</i>: it implies something bad may happen otherwise. And <b>How about</b> takes a gerund: <i>How about <b>going</b> for a walk?</i></p>",
+      "fichas": [
+        { "t": "had better + base", "d": "Advertencia fuerte: más urgente que should.", "d_en": "A strong warning: more urgent than should." },
+        { "t": "How about + -ing", "d": "Sugerencia amable, siempre con gerundio.", "d_en": "A friendly suggestion, always with a gerund." },
+        { "t": "Why don't you…?", "d": "Sugerencia con verbo en base tras el sujeto.", "d_en": "A suggestion with the base verb after the subject." },
+        { "t": "If I were you", "d": "Consejo empático en segundo condicional.", "d_en": "Empathetic advice in the second conditional." },
+        { "t": "stay hydrated", "d": "Mantenerse hidratado: colocación fija.", "d_en": "To keep drinking enough water: fixed collocation." }
+      ],
+      "quiz": [
+        { "q": "«How about ___ for a walk?»", "q_en": "\"How about ___ for a walk?\"", "o": ["to go", "going", "go", "we go"], "o_en": ["to go", "going", "go", "we go"], "a": 1, "why": "How about siempre va con gerundio.", "why_en": "How about is always followed by a gerund." },
+        { "q": "«You'd better ___ now, or you'll be late.»", "q_en": "\"You'd better ___ now, or you'll be late.\"", "o": ["to leave", "leaving", "leave", "left"], "o_en": ["to leave", "leaving", "leave", "left"], "a": 2, "why": "Had better va con el verbo en forma base.", "why_en": "Had better takes the base verb." },
+        { "q": "«If I ___ you, I'd see a doctor.»", "q_en": "\"If I ___ you, I'd see a doctor.\"", "o": ["am", "was", "were", "will be"], "o_en": ["am", "was", "were", "will be"], "a": 2, "why": "La fórmula estándar del consejo es If I were you.", "why_en": "The standard advice formula is If I were you." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-10-2-repaso",
+    "titulo": "Repaso — Looking Forward",
+    "titulo_en": "Review — Looking Forward",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El futuro en inglés tiene <b>cuatro capas</b>: simple (will / going to), continuo (en curso), perfecto (terminado antes de una fecha) y perfecto continuo (duración acumulada). Los condicionales cero y uno enlazan condición y consecuencia.</p><h4>Puntos gramaticales</h4><ul><li>will be + -ing para lo que estará en curso.</li><li>will have + participio para lo que ya estará terminado.</li><li>Después de if, when, unless, as long as y by the time no va will.</li><li>had better + base es una advertencia; How about + gerundio es una sugerencia.</li></ul><h4>Vocabulario</h4><p>Ordinales y fechas, partes del cuerpo y bienestar, enfermedades con have y hurt, y fórmulas de consejo.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The English future has <b>four layers</b>: simple (will / going to), continuous (in progress), perfect (finished before a date) and perfect continuous (accumulated duration). Zero and first conditionals link condition and consequence.</p><h4>Grammar points</h4><ul><li>will be + -ing for what will be in progress.</li><li>will have + participle for what will already be finished.</li><li>After if, when, unless, as long as and by the time there is no will.</li><li>had better + base is a warning; How about + gerund is a suggestion.</li></ul><h4>Vocabulary</h4><p>Ordinals and dates, body parts and wellbeing, illnesses with have and hurt, and advice formulas.</p>",
+    "puntos_clave": [
+      ["will be + -ing = en curso en un momento futuro.", "will be + -ing = in progress at a future moment."],
+      ["will have + participio = terminado antes de esa fecha.", "will have + participle = finished before that date."],
+      ["Por the time y as soon as van con presente, no con will.", "by the time and as soon as take the present, not will."],
+      ["unless ya es negativo: no se le agrega not.", "unless is already negative: do not add not."],
+      ["the flu lleva the; a cold lleva a.", "flu takes the; a cold takes a."],
+      ["had better + verbo base, sin to.", "had better + base verb, with no to."]
+    ],
+    "preguntas": [
+      { "q": "«By 2032 she ___ her master's degree.»", "q_en": "\"By 2032 she ___ her master's degree.\"", "o": ["will complete", "will have completed", "will be completing", "completes"], "o_en": ["will complete", "will have completed", "will be completing", "completes"], "a": 1, "why": "By + fecha con acción completada: futuro perfecto.", "why_en": "By + date with a completed action: future perfect." },
+      { "q": "«At 7 tomorrow we ___ the presentation.»", "q_en": "\"At 7 tomorrow we ___ the presentation.\"", "o": ["will give", "will be giving", "will have given", "give"], "o_en": ["will give", "will be giving", "will have given", "give"], "a": 1, "why": "En ese momento la acción estará en curso.", "why_en": "At that moment the action will be in progress." },
+      { "q": "«___ you rest, you won't recover.»", "q_en": "\"___ you rest, you won't recover.\"", "o": ["If", "Unless", "As long as", "In case"], "o_en": ["If", "Unless", "As long as", "In case"], "a": 1, "why": "Unless equivale a if not.", "why_en": "Unless is equivalent to if not." },
+      { "q": "«If you drink water regularly, you ___ better.»", "q_en": "\"If you drink water regularly, you ___ better.\"", "o": ["feel", "will feel", "would feel", "felt"], "o_en": ["feel", "will feel", "would feel", "felt"], "a": 1, "why": "Primer condicional: consecuencia con will.", "why_en": "First conditional: the consequence takes will." },
+      { "q": "El ordinal de «nine» es…", "q_en": "The ordinal of \"nine\" is…", "o": ["nineth", "ninth", "nineteenth", "ninenth"], "o_en": ["nineth", "ninth", "nineteenth", "ninenth"], "a": 1, "why": "Nine pierde la e final: ninth.", "why_en": "Nine drops the final e: ninth." },
+      { "q": "«My ___ hurts after typing all day.»", "q_en": "\"My ___ hurts after typing all day.\"", "o": ["wrist", "ankle", "knee", "hip"], "o_en": ["wrist", "ankle", "knee", "hip"], "a": 0, "why": "La muñeca es la articulación afectada al escribir.", "why_en": "The wrist is the joint affected by typing." },
+      { "q": "«You'd better ___ a doctor.»", "q_en": "\"You'd better ___ a doctor.\"", "o": ["seeing", "to see", "see", "saw"], "o_en": ["seeing", "to see", "see", "saw"], "a": 2, "why": "Had better va con el verbo en base.", "why_en": "Had better takes the base verb." },
+      { "q": "«How about ___ a break?»", "q_en": "\"How about ___ a break?\"", "o": ["take", "taking", "to take", "we take"], "o_en": ["take", "taking", "to take", "we take"], "a": 1, "why": "How about siempre va con gerundio.", "why_en": "How about is always followed by a gerund." }
+    ]
+  }
+}

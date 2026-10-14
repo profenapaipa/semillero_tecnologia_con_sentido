@@ -1,0 +1,18 @@
+/*
+ * main.css — Punto de entrada de la hoja de estilos
+ * ======================================================
+ * Se importa una sola vez desde src/main.js. El orden importa: estos
+ * archivos se dividieron a partir de una gran hoja de estilos del
+ * prototipo donde reglas posteriores intencionalmente sobrescriben a las
+ * anteriores con igual especificidad CSS (ver la cabecera de
+ * refinements.css para la explicación completa). Mantén este orden de
+ * importación a menos que hayas vuelto a verificar la cascada.
+ */
+@import './fonts.css';
+@import './base.css';
+@import './layout.css';
+@import './screens.css';
+@import './overlays.css';
+@import './responsive.css';
+@import './refinements.css';
+@import './planes.css';

@@ -1,0 +1,199 @@
+{
+  "id": "ingles-10-3",
+  "materia": "ingles",
+  "grado": "10",
+  "grado_nombre": "Décimo",
+  "periodo": 3,
+  "periodo_label": { "es": "Periodo III", "en": "Term III" },
+  "titulo": "Expressing Opinions and Social Awareness",
+  "titulo_es": "Expresar opiniones y conciencia social",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Expreso posturas argumentadas sobre asuntos sociales y ambientales. Manifiesto deseos, arrepentimientos y obligaciones con estructuras precisas.",
+  "competencias": "Aplicar patrones de gerundio e infinitivo; usar modales de obligación, consejo, posibilidad y necesidad; expresar deseos con I wish / If only; discutir derechos humanos y ambiente.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "A Cause Worth Defending",
+    "descripcion_es": "Cada estudiante elige una causa social o ambiental y prepara un discurso de tres minutos: qué se debería hacer (modales), qué desearía que fuera distinto (I wish) y qué acciones propone.",
+    "descripcion_en": "Each student chooses a social or environmental cause and prepares a three-minute speech: what should be done (modals), what they wish were different (I wish) and what actions they propose."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-10-3-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Gerundios e infinitivos: patrones verbales",
+      "t_en": "Gerunds and infinitives: verb patterns",
+      "d": "16 min",
+      "content_es": "<h4>Los tres grupos</h4><ul><li><b>Solo gerundio</b>: enjoy, avoid, finish, keep, mind, practice, suggest, consider, deny, imagine, risk, admit.</li><li><b>Solo infinitivo</b>: want, need, decide, hope, plan, promise, refuse, agree, manage, afford, offer, seem.</li><li><b>Ambos sin cambio</b>: like, love, hate, prefer, start, begin, continue.</li></ul><h4>Los que cambian de significado</h4><ul><li><i>I <b>stopped smoking</b></i> (dejé de fumar) vs. <i>I <b>stopped to smoke</b></i> (me detuve para fumar).</li><li><i>I <b>remember locking</b> the door</i> (recuerdo haberlo hecho) vs. <i>I <b>remembered to lock</b> it</i> (me acordé de hacerlo).</li><li><i>He <b>tried calling</b></i> (probó llamando) vs. <i>He <b>tried to call</b></i> (intentó llamar).</li></ul><h4>Después de preposición</h4><p>Siempre gerundio: <i>interested <b>in</b> helping, capable <b>of</b> changing, instead <b>of</b> complaining, without <b>saying</b> a word.</i></p>",
+      "content_en": "<h4>The three groups</h4><ul><li><b>Gerund only</b>: enjoy, avoid, finish, keep, mind, practice, suggest, consider, deny, imagine, risk, admit.</li><li><b>Infinitive only</b>: want, need, decide, hope, plan, promise, refuse, agree, manage, afford, offer, seem.</li><li><b>Both with no change</b>: like, love, hate, prefer, start, begin, continue.</li></ul><h4>Verbs that change meaning</h4><ul><li><i>I <b>stopped smoking</b></i> (I quit) vs. <i>I <b>stopped to smoke</b></i> (I paused in order to smoke).</li><li><i>I <b>remember locking</b> the door</i> (I recall doing it) vs. <i>I <b>remembered to lock</b> it</i> (I did not forget).</li><li><i>He <b>tried calling</b></i> (as an experiment) vs. <i>He <b>tried to call</b></i> (he made the effort).</li></ul><h4>After a preposition</h4><p>Always a gerund: <i>interested <b>in</b> helping, capable <b>of</b> changing, instead <b>of</b> complaining, without <b>saying</b> a word.</i></p>",
+      "fichas": [
+        { "t": "stop + gerundio", "d": "Dejar de hacer algo definitivamente.", "d_en": "To quit doing something." },
+        { "t": "stop + to", "d": "Detenerse con el propósito de hacer algo.", "d_en": "To pause in order to do something." },
+        { "t": "remember + gerundio", "d": "Recordar algo que ya se hizo.", "d_en": "To recall something already done." },
+        { "t": "remember + to", "d": "Acordarse de hacer algo pendiente.", "d_en": "Not to forget to do something." },
+        { "t": "Preposición + gerundio", "d": "instead of complaining, without saying.", "d_en": "instead of complaining, without saying." }
+      ],
+      "quiz": [
+        { "q": "«He stopped ___ because of his health.» (dejó el hábito)", "q_en": "\"He stopped ___ because of his health.\" (he quit the habit)", "o": ["to smoke", "smoking", "smoke", "smoked"], "o_en": ["to smoke", "smoking", "smoke", "smoked"], "a": 1, "why": "Stop + gerundio significa abandonar el hábito.", "why_en": "Stop + gerund means to quit the habit." },
+        { "q": "«Don't forget ___ the report tomorrow.»", "q_en": "\"Don't forget ___ the report tomorrow.\"", "o": ["sending", "to send", "send", "sent"], "o_en": ["sending", "to send", "send", "sent"], "a": 1, "why": "Forget + to se refiere a una tarea pendiente.", "why_en": "Forget + to refers to a task still ahead." },
+        { "q": "«She's interested in ___ the community.»", "q_en": "\"She's interested in ___ the community.\"", "o": ["help", "to help", "helping", "helped"], "o_en": ["help", "to help", "helping", "helped"], "a": 2, "why": "Después de la preposición in va gerundio.", "why_en": "After the preposition in we use a gerund." }
+      ]
+    },
+    {
+      "id": "ingles-10-3-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Modales de obligación y necesidad",
+      "t_en": "Modals of obligation and necessity",
+      "d": "14 min",
+      "content_es": "<h4>Obligación</h4><ul><li><b>must</b>: obligación interna o de quien habla: <i>We must protect the environment.</i></li><li><b>have to</b>: obligación externa, de una norma: <i>You have to wear a helmet.</i></li><li><b>need to</b>: necesidad práctica: <i>We need to act now.</i></li></ul><h4>Prohibición y ausencia de obligación</h4><ul><li><b>mustn't</b> = prohibido: <i>You mustn't litter.</i></li><li><b>don't have to / don't need to</b> = no es necesario.</li></ul><h4>En pasado y futuro</h4><p><b>must</b> no tiene pasado propio: se usa <b>had to</b>. Para el futuro, <b>will have to</b>.</p><h4>Voz impersonal</h4><p>En textos normativos se usa la pasiva: <i>Waste <b>must be</b> separated. · Consent <b>has to be</b> given in writing.</i></p>",
+      "content_en": "<h4>Obligation</h4><ul><li><b>must</b>: internal obligation, or the speaker's own: <i>We must protect the environment.</i></li><li><b>have to</b>: external obligation, from a rule: <i>You have to wear a helmet.</i></li><li><b>need to</b>: practical necessity: <i>We need to act now.</i></li></ul><h4>Prohibition and absence of obligation</h4><ul><li><b>mustn't</b> = forbidden: <i>You mustn't litter.</i></li><li><b>don't have to / don't need to</b> = it is not necessary.</li></ul><h4>In the past and the future</h4><p><b>must</b> has no past of its own: use <b>had to</b>. For the future, <b>will have to</b>.</p><h4>Impersonal voice</h4><p>In regulatory texts the passive is used: <i>Waste <b>must be</b> separated. · Consent <b>has to be</b> given in writing.</i></p>",
+      "fichas": [
+        { "t": "must vs have to", "d": "Obligación propia vs impuesta desde afuera.", "d_en": "The speaker's own obligation vs one imposed externally." },
+        { "t": "mustn't vs don't have to", "d": "Prohibido vs innecesario: significados opuestos.", "d_en": "Forbidden vs unnecessary: opposite meanings." },
+        { "t": "had to", "d": "Pasado de must y de have to.", "d_en": "Past of both must and have to." },
+        { "t": "must be + participio", "d": "Pasiva impersonal típica de normas.", "d_en": "Impersonal passive typical of regulations." }
+      ],
+      "quiz": [
+        { "q": "«You ___ throw plastic into the river.»", "q_en": "\"You ___ throw plastic into the river.\"", "o": ["don't have to", "mustn't", "needn't", "shouldn't have"], "o_en": ["don't have to", "mustn't", "needn't", "shouldn't have"], "a": 1, "why": "Es una prohibición: mustn't.", "why_en": "It is a prohibition: mustn't." },
+        { "q": "«Yesterday we ___ stay late to finish it.»", "q_en": "\"Yesterday we ___ stay late to finish it.\"", "o": ["must", "musted", "had to", "have to"], "o_en": ["must", "musted", "had to", "have to"], "a": 2, "why": "Must no tiene pasado: se usa had to.", "why_en": "Must has no past: use had to." },
+        { "q": "«All waste ___ separated before collection.»", "q_en": "\"All waste ___ separated before collection.\"", "o": ["must be", "must", "must to be", "musts be"], "o_en": ["must be", "must", "must to be", "musts be"], "a": 0, "why": "La norma se expresa en pasiva: must be + participio.", "why_en": "The rule is expressed in the passive: must be + participle." }
+      ]
+    },
+    {
+      "id": "ingles-10-3-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Modales de consejo y posibilidad",
+      "t_en": "Modals of advice and possibility",
+      "d": "14 min",
+      "content_es": "<h4>Consejo</h4><ul><li><b>should / shouldn't</b>: <i>Governments should invest more in education.</i></li><li><b>ought to</b>: equivalente formal.</li><li><b>had better</b>: advertencia con consecuencia implícita.</li></ul><h4>Posibilidad</h4><ul><li><b>may / might / could</b>: <i>This policy could reduce inequality.</i></li><li><b>may not / might not</b>: posiblemente no.</li><li><b>can</b>: posibilidad general o teórica: <i>Pollution can cause serious illnesses.</i></li></ul><h4>Modales perfectos en argumentación</h4><p><i>The crisis <b>could have been avoided</b>. · They <b>should have acted</b> earlier. · The data <b>must have been</b> incomplete.</i></p><h4>Registro</h4><p>En un ensayo se prefiere <i>may</i> y <i>could</i> a <i>maybe</i>, y se evita el exceso de <i>must</i>, que suena imperativo.</p>",
+      "content_en": "<h4>Advice</h4><ul><li><b>should / shouldn't</b>: <i>Governments should invest more in education.</i></li><li><b>ought to</b>: a formal equivalent.</li><li><b>had better</b>: a warning with an implied consequence.</li></ul><h4>Possibility</h4><ul><li><b>may / might / could</b>: <i>This policy could reduce inequality.</i></li><li><b>may not / might not</b>: possibly not.</li><li><b>can</b>: general or theoretical possibility: <i>Pollution can cause serious illnesses.</i></li></ul><h4>Perfect modals in argumentation</h4><p><i>The crisis <b>could have been avoided</b>. · They <b>should have acted</b> earlier. · The data <b>must have been</b> incomplete.</i></p><h4>Register</h4><p>In an essay <i>may</i> and <i>could</i> are preferred over <i>maybe</i>, and too much <i>must</i> is avoided because it sounds commanding.</p>",
+      "fichas": [
+        { "t": "could + verbo base", "d": "Posibilidad presente o futura, no obligación.", "d_en": "Present or future possibility, not obligation." },
+        { "t": "should have + participio", "d": "Crítica sobre lo que no se hizo.", "d_en": "Criticism about what was not done." },
+        { "t": "could have been + participio", "d": "Pasiva perfecta: se pudo haber evitado.", "d_en": "Perfect passive: it could have been avoided." },
+        { "t": "may en registro formal", "d": "Preferible a maybe en un ensayo.", "d_en": "Preferable to maybe in an essay." }
+      ],
+      "quiz": [
+        { "q": "«The damage ___ if they had acted sooner.»", "q_en": "\"The damage ___ if they had acted sooner.\"", "o": ["could avoid", "could be avoided", "could have been avoided", "can avoid"], "o_en": ["could avoid", "could be avoided", "could have been avoided", "can avoid"], "a": 2, "why": "Es una posibilidad pasada no realizada, en pasiva.", "why_en": "It is an unrealized past possibility, in the passive." },
+        { "q": "«Governments ___ invest more in renewable energy.»", "q_en": "\"Governments ___ invest more in renewable energy.\"", "o": ["should", "shoulds", "should to", "are should"], "o_en": ["should", "shoulds", "should to", "are should"], "a": 0, "why": "Should no cambia y va con el verbo en base.", "why_en": "Should never changes and takes the base verb." },
+        { "q": "En un ensayo formal, ¿qué es preferible?", "q_en": "In a formal essay, which is preferable?", "o": ["Maybe it works", "It may work", "It works maybe", "Maybe works"], "o_en": ["Maybe it works", "It may work", "It works maybe", "Maybe works"], "a": 1, "why": "May es la forma adecuada al registro formal.", "why_en": "May is the form suited to a formal register." }
+      ]
+    },
+    {
+      "id": "ingles-10-3-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "I wish / If only",
+      "t_en": "I wish / If only",
+      "d": "14 min",
+      "content_es": "<h4>Tres usos según el tiempo</h4><ul><li><b>Presente irreal</b>: <i>I wish I <b>had</b> more time.</i> (verbo en pasado simple; con to be se prefiere <b>were</b>)</li><li><b>Pasado irreal / arrepentimiento</b>: <i>I wish I <b>had studied</b> more.</i> (pasado perfecto)</li><li><b>Queja o deseo de cambio</b>: <i>I wish people <b>would</b> recycle.</i> (would + base, para lo que otro hace y molesta)</li></ul><h4>If only</h4><p>Es lo mismo pero más enfático: <i><b>If only</b> we had acted earlier!</i></p><h4>Cuidado con would</h4><p>No se dice <i>I wish I would have</i>. Con el mismo sujeto se usa <b>could</b>: <i>I wish I <b>could</b> help.</i></p><h4>Comparación</h4><p><i>I hope it rains</i> (posible) vs. <i>I wish it rained</i> (no está lloviendo, deseo irreal).</p>",
+      "content_en": "<h4>Three uses depending on the time</h4><ul><li><b>Unreal present</b>: <i>I wish I <b>had</b> more time.</i> (past simple; with to be prefer <b>were</b>)</li><li><b>Unreal past / regret</b>: <i>I wish I <b>had studied</b> more.</i> (past perfect)</li><li><b>Complaint or desired change</b>: <i>I wish people <b>would</b> recycle.</i> (would + base, for what someone else does that annoys you)</li></ul><h4>If only</h4><p>The same, but more emphatic: <i><b>If only</b> we had acted earlier!</i></p><h4>Careful with would</h4><p>Do not say <i>I wish I would have</i>. With the same subject use <b>could</b>: <i>I wish I <b>could</b> help.</i></p><h4>Comparison</h4><p><i>I hope it rains</i> (possible) vs. <i>I wish it rained</i> (it is not raining; an unreal wish).</p>",
+      "fichas": [
+        { "t": "I wish + pasado simple", "d": "Deseo sobre el presente que no es real.", "d_en": "A wish about a present that is not real." },
+        { "t": "I wish + pasado perfecto", "d": "Arrepentimiento sobre el pasado.", "d_en": "Regret about the past." },
+        { "t": "I wish + would", "d": "Queja sobre lo que hace otra persona.", "d_en": "A complaint about what someone else does." },
+        { "t": "I wish I could", "d": "Con el mismo sujeto se usa could, no would.", "d_en": "With the same subject use could, not would." },
+        { "t": "hope vs wish", "d": "hope es posible; wish es irreal.", "d_en": "hope is possible; wish is unreal." }
+      ],
+      "quiz": [
+        { "q": "«I wish I ___ more free time.»", "q_en": "\"I wish I ___ more free time.\"", "o": ["have", "had", "will have", "would have"], "o_en": ["have", "had", "will have", "would have"], "a": 1, "why": "Deseo sobre el presente: verbo en pasado simple.", "why_en": "A wish about the present: past simple." },
+        { "q": "«If only I ___ harder for that exam.»", "q_en": "\"If only I ___ harder for that exam.\"", "o": ["studied", "had studied", "would study", "study"], "o_en": ["studied", "had studied", "would study", "study"], "a": 1, "why": "Arrepentimiento del pasado: pasado perfecto.", "why_en": "Regret about the past: past perfect." },
+        { "q": "«I wish my neighbors ___ so much noise.»", "q_en": "\"I wish my neighbors ___ so much noise.\"", "o": ["didn't make", "wouldn't make", "hadn't made", "don't make"], "o_en": ["didn't make", "wouldn't make", "hadn't made", "don't make"], "a": 1, "why": "Queja sobre la conducta ajena: wish + would.", "why_en": "A complaint about someone else's behavior: wish + would." }
+      ]
+    },
+    {
+      "id": "ingles-10-3-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Lugares y útiles del colegio y la casa",
+      "t_en": "School and house places and supplies",
+      "d": "10 min",
+      "content_es": "<h4>Lugares del colegio</h4><p><b>classroom</b>, <b>hallway</b>, <b>library</b>, <b>lab</b>, <b>gym</b>, <b>auditorium</b>, <b>cafeteria</b>, <b>schoolyard</b>, <b>principal's office</b>, <b>counselor's office</b>, <b>staff room</b>.</p><h4>Útiles escolares</h4><p><b>notebook</b>, <b>binder</b> (carpeta de argollas), <b>folder</b>, <b>highlighter</b> (resaltador), <b>stapler</b> (grapadora), <b>glue stick</b>, <b>scissors</b>, <b>ruler</b> (regla), <b>eraser</b>, <b>sharpener</b> (sacapuntas), <b>calculator</b>.</p><h4>Casa</h4><p><b>laundry room</b>, <b>pantry</b> (despensa), <b>storage room</b>, <b>tools</b>, <b>broom</b> (escoba), <b>bucket</b> (balde), <b>ladder</b> (escalera de mano).</p><h4>Ojo</h4><p><b>scissors</b> es siempre plural: <i>The scissors <b>are</b> sharp.</i> Para contarlas: <i>a pair of scissors</i>.</p>",
+      "content_en": "<h4>School places</h4><p><b>classroom</b>, <b>hallway</b>, <b>library</b>, <b>lab</b>, <b>gym</b>, <b>auditorium</b>, <b>cafeteria</b>, <b>schoolyard</b>, <b>principal's office</b>, <b>counselor's office</b>, <b>staff room</b>.</p><h4>School supplies</h4><p><b>notebook</b>, <b>binder</b>, <b>folder</b>, <b>highlighter</b>, <b>stapler</b>, <b>glue stick</b>, <b>scissors</b>, <b>ruler</b>, <b>eraser</b>, <b>sharpener</b>, <b>calculator</b>.</p><h4>House</h4><p><b>laundry room</b>, <b>pantry</b>, <b>storage room</b>, <b>tools</b>, <b>broom</b>, <b>bucket</b>, <b>ladder</b>.</p><h4>Careful</h4><p><b>scissors</b> is always plural: <i>The scissors <b>are</b> sharp.</i> To count them: <i>a pair of scissors</i>.</p>",
+      "fichas": [
+        { "t": "binder", "d": "Carpeta de argollas para hojas sueltas.", "d_en": "A ring folder for loose sheets." },
+        { "t": "scissors", "d": "Siempre plural: a pair of scissors.", "d_en": "Always plural: a pair of scissors." },
+        { "t": "pantry", "d": "Despensa donde se guardan los alimentos.", "d_en": "The small room where food is stored." },
+        { "t": "ladder vs stairs", "d": "Escalera de mano vs escaleras fijas de la casa.", "d_en": "A portable ladder vs the fixed stairs of a house." }
+      ],
+      "quiz": [
+        { "q": "«The scissors ___ on the desk.»", "q_en": "\"The scissors ___ on the desk.\"", "o": ["is", "are", "was", "has"], "o_en": ["is", "are", "was", "has"], "a": 1, "why": "Scissors es siempre plural.", "why_en": "Scissors is always plural." },
+        { "q": "¿Dónde se guardan los alimentos?", "q_en": "Where is food stored?", "o": ["In the pantry", "In the laundry room", "In the gym", "In the hallway"], "o_en": ["In the pantry", "In the laundry room", "In the gym", "In the hallway"], "a": 0, "why": "La pantry es la despensa.", "why_en": "The pantry is where food is kept." },
+        { "q": "¿Qué usas para marcar lo importante en un texto?", "q_en": "What do you use to mark what is important in a text?", "o": ["a stapler", "a highlighter", "a sharpener", "a ruler"], "o_en": ["a stapler", "a highlighter", "a sharpener", "a ruler"], "a": 1, "why": "El highlighter es el resaltador.", "why_en": "A highlighter marks text in color." }
+      ]
+    },
+    {
+      "id": "ingles-10-3-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Derechos humanos y protección ambiental",
+      "t_en": "Human rights and environmental protection",
+      "d": "14 min",
+      "content_es": "<h4>Derechos</h4><p><b>human rights</b>, <b>freedom of speech</b>, <b>equality</b>, <b>dignity</b>, <b>discrimination</b>, <b>inclusion</b>, <b>access to education</b>, <b>child labor</b>, <b>displacement</b> (desplazamiento), <b>refugee</b>, <b>advocate</b> (defensor o defender).</p><h4>Ambiente</h4><p><b>climate change</b>, <b>global warming</b>, <b>pollution</b>, <b>deforestation</b>, <b>waste</b>, <b>recycling</b>, <b>renewable energy</b>, <b>carbon footprint</b>, <b>biodiversity</b>, <b>endangered species</b>, <b>sustainability</b>, <b>conservation</b>.</p><h4>Verbos de acción</h4><p><b>protect</b>, <b>defend</b>, <b>demand</b>, <b>raise awareness</b> (concienciar), <b>reduce</b>, <b>reuse</b>, <b>preserve</b>, <b>ban</b> (prohibir), <b>enforce</b> (hacer cumplir), <b>violate</b>.</p><h4>Ojo</h4><p><b>waste</b> es incontable como sustantivo (basura) y también verbo (desperdiciar). <b>advocate for</b> lleva preposición: <i>They advocate <b>for</b> clean water.</i></p>",
+      "content_en": "<h4>Rights</h4><p><b>human rights</b>, <b>freedom of speech</b>, <b>equality</b>, <b>dignity</b>, <b>discrimination</b>, <b>inclusion</b>, <b>access to education</b>, <b>child labor</b>, <b>displacement</b>, <b>refugee</b>, <b>advocate</b>.</p><h4>Environment</h4><p><b>climate change</b>, <b>global warming</b>, <b>pollution</b>, <b>deforestation</b>, <b>waste</b>, <b>recycling</b>, <b>renewable energy</b>, <b>carbon footprint</b>, <b>biodiversity</b>, <b>endangered species</b>, <b>sustainability</b>, <b>conservation</b>.</p><h4>Action verbs</h4><p><b>protect</b>, <b>defend</b>, <b>demand</b>, <b>raise awareness</b>, <b>reduce</b>, <b>reuse</b>, <b>preserve</b>, <b>ban</b>, <b>enforce</b>, <b>violate</b>.</p><h4>Careful</h4><p><b>waste</b> is uncountable as a noun and also works as a verb. <b>advocate for</b> takes a preposition: <i>They advocate <b>for</b> clean water.</i></p>",
+      "fichas": [
+        { "t": "raise awareness", "d": "Concienciar: hacer que la gente conozca un problema.", "d_en": "To make people aware of a problem." },
+        { "t": "carbon footprint", "d": "Huella de carbono: emisiones que genera una actividad.", "d_en": "The emissions an activity generates." },
+        { "t": "endangered species", "d": "Especies en peligro de extinción.", "d_en": "Species at risk of disappearing." },
+        { "t": "advocate for", "d": "Abogar por una causa. Siempre con for.", "d_en": "To publicly support a cause. Always with for." },
+        { "t": "enforce", "d": "Hacer cumplir una ley o norma.", "d_en": "To make a law or rule be obeyed." }
+      ],
+      "quiz": [
+        { "q": "«The campaign aims to ___ about recycling.»", "q_en": "\"The campaign aims to ___ about recycling.\"", "o": ["raise awareness", "raise conscience", "make awareness", "give awareness"], "o_en": ["raise awareness", "raise conscience", "make awareness", "give awareness"], "a": 0, "why": "La colocación fija es raise awareness.", "why_en": "The fixed collocation is raise awareness." },
+        { "q": "«They advocate ___ equal access to education.»", "q_en": "\"They advocate ___ equal access to education.\"", "o": ["to", "for", "by", "with"], "o_en": ["to", "for", "by", "with"], "a": 1, "why": "Advocate siempre va con la preposición for.", "why_en": "Advocate always takes the preposition for." },
+        { "q": "¿Qué es la «carbon footprint»?", "q_en": "What is a \"carbon footprint\"?", "o": ["Una especie en peligro", "Las emisiones que genera una actividad", "Un tipo de reciclaje", "Una ley ambiental"], "o_en": ["An endangered species", "The emissions an activity generates", "A kind of recycling", "An environmental law"], "a": 1, "why": "Es la medida de las emisiones asociadas a algo.", "why_en": "It measures the emissions linked to something." }
+      ]
+    },
+    {
+      "id": "ingles-10-3-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Justicia global y expresión de opiniones",
+      "t_en": "Global justice and expressing opinions",
+      "d": "14 min",
+      "content_es": "<h4>Justicia y derecho internacional</h4><p><b>justice</b>, <b>injustice</b>, <b>impunity</b>, <b>accountability</b>, <b>crimes against humanity</b>, <b>genocide</b>, <b>war crime</b>, <b>international court</b>, <b>trial</b>, <b>verdict</b>, <b>victim</b>, <b>reparation</b>, <b>truth commission</b>.</p><h4>Estructurar una postura</h4><ul><li>Tesis: <i>I firmly believe that… · This essay argues that…</i></li><li>Argumento: <i>To begin with… · Moreover… · What is more…</i></li><li>Ejemplo: <i>A clear example of this is… · According to…</i></li><li>Contraargumento: <i>Some people claim that… However…</i></li><li>Cierre: <i>To sum up… · In conclusion…</i></li></ul><h4>Verbos de opinión matizada</h4><p><b>claim</b> (afirmar sin probar), <b>argue</b>, <b>point out</b>, <b>suggest</b>, <b>acknowledge</b> (reconocer), <b>deny</b>, <b>emphasize</b>.</p><h4>Registro</h4><p>En un texto argumentativo se evita <i>I think</i> repetido: es mejor <i>It can be argued that…</i> o <i>The evidence suggests…</i></p>",
+      "content_en": "<h4>Justice and international law</h4><p><b>justice</b>, <b>injustice</b>, <b>impunity</b>, <b>accountability</b>, <b>crimes against humanity</b>, <b>genocide</b>, <b>war crime</b>, <b>international court</b>, <b>trial</b>, <b>verdict</b>, <b>victim</b>, <b>reparation</b>, <b>truth commission</b>.</p><h4>Structuring a stance</h4><ul><li>Thesis: <i>I firmly believe that… · This essay argues that…</i></li><li>Argument: <i>To begin with… · Moreover… · What is more…</i></li><li>Example: <i>A clear example of this is… · According to…</i></li><li>Counterargument: <i>Some people claim that… However…</i></li><li>Closing: <i>To sum up… · In conclusion…</i></li></ul><h4>Nuanced opinion verbs</h4><p><b>claim</b> (to assert without proof), <b>argue</b>, <b>point out</b>, <b>suggest</b>, <b>acknowledge</b>, <b>deny</b>, <b>emphasize</b>.</p><h4>Register</h4><p>In an argumentative text avoid repeating <i>I think</i>: prefer <i>It can be argued that…</i> or <i>The evidence suggests…</i></p>",
+      "fichas": [
+        { "t": "impunity", "d": "Impunidad: ausencia de castigo para un delito.", "d_en": "The absence of punishment for a crime." },
+        { "t": "claim vs argue", "d": "claim afirma sin probar; argue sustenta con razones.", "d_en": "claim asserts without proof; argue supports with reasons." },
+        { "t": "acknowledge", "d": "Reconocer un hecho o un argumento ajeno.", "d_en": "To admit a fact or another's argument." },
+        { "t": "It can be argued that…", "d": "Fórmula impersonal para un ensayo formal.", "d_en": "Impersonal formula for a formal essay." },
+        { "t": "reparation", "d": "Reparación a las víctimas de un daño.", "d_en": "Compensation given to victims of harm." }
+      ],
+      "quiz": [
+        { "q": "¿Qué significa «impunity»?", "q_en": "What does \"impunity\" mean?", "o": ["Un juicio", "La ausencia de castigo", "La reparación", "El veredicto"], "o_en": ["A trial", "The absence of punishment", "Reparation", "The verdict"], "a": 1, "why": "Impunity es que un delito quede sin castigo.", "why_en": "Impunity is a crime going unpunished." },
+        { "q": "¿Cuál verbo indica afirmar sin pruebas?", "q_en": "Which verb means to assert without proof?", "o": ["argue", "claim", "acknowledge", "emphasize"], "o_en": ["argue", "claim", "acknowledge", "emphasize"], "a": 1, "why": "Claim afirma algo que aún no está probado.", "why_en": "Claim asserts something not yet proven." },
+        { "q": "¿Cuál fórmula es más adecuada en un ensayo?", "q_en": "Which formula is more suitable in an essay?", "o": ["I think that maybe", "It can be argued that", "I think I think", "Maybe I think"], "o_en": ["I think that maybe", "It can be argued that", "I think I think", "Maybe I think"], "a": 1, "why": "La forma impersonal es la del registro académico.", "why_en": "The impersonal form belongs to the academic register." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-10-3-repaso",
+    "titulo": "Repaso — Expressing Opinions and Social Awareness",
+    "titulo_en": "Review — Expressing Opinions and Social Awareness",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Argumentar exige tres herramientas: los <b>patrones verbales</b> (gerundio o infinitivo), los <b>modales</b> para graduar obligación, consejo y posibilidad, y <b>I wish / If only</b> para señalar lo que debería ser distinto.</p><h4>Puntos gramaticales</h4><ul><li>stop, remember y try cambian de sentido según lleven gerundio o infinitivo.</li><li>Después de preposición siempre va gerundio.</li><li>mustn't = prohibido; don't have to = innecesario. El pasado de must es had to.</li><li>I wish + pasado (presente irreal), + pasado perfecto (arrepentimiento), + would (queja).</li></ul><h4>Vocabulario</h4><p>Lugares y útiles escolares, derechos humanos, ambiente, justicia global y fórmulas de registro académico.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>Arguing requires three tools: <b>verb patterns</b> (gerund or infinitive), <b>modals</b> to grade obligation, advice and possibility, and <b>I wish / If only</b> to signal what should be different.</p><h4>Grammar points</h4><ul><li>stop, remember and try change meaning depending on gerund or infinitive.</li><li>After a preposition always use a gerund.</li><li>mustn't = forbidden; don't have to = unnecessary. The past of must is had to.</li><li>I wish + past (unreal present), + past perfect (regret), + would (complaint).</li></ul><h4>Vocabulary</h4><p>School places and supplies, human rights, the environment, global justice and academic register formulas.</p>",
+    "puntos_clave": [
+      ["stop smoking = dejar; stop to smoke = detenerse para fumar.", "stop smoking = quit; stop to smoke = pause in order to smoke."],
+      ["Después de in, of, without siempre va gerundio.", "After in, of, without always use a gerund."],
+      ["mustn't ≠ don't have to.", "mustn't ≠ don't have to."],
+      ["El pasado de must es had to.", "The past of must is had to."],
+      ["I wish I could, nunca I wish I would (mismo sujeto).", "I wish I could, never I wish I would (same subject)."],
+      ["advocate for y raise awareness son colocaciones fijas.", "advocate for and raise awareness are fixed collocations."]
+    ],
+    "preguntas": [
+      { "q": "«I remember ___ that documentary last year.»", "q_en": "\"I remember ___ that documentary last year.\"", "o": ["to watch", "watching", "watch", "watched"], "o_en": ["to watch", "watching", "watch", "watched"], "a": 1, "why": "Remember + gerundio se refiere a algo ya vivido.", "why_en": "Remember + gerund refers to something already experienced." },
+      { "q": "«Instead of ___, they proposed a solution.»", "q_en": "\"Instead of ___, they proposed a solution.\"", "o": ["complain", "to complain", "complaining", "complained"], "o_en": ["complain", "to complain", "complaining", "complained"], "a": 2, "why": "Después de la preposición of va gerundio.", "why_en": "After the preposition of we use a gerund." },
+      { "q": "«Visitors ___ feed the animals.» (prohibido)", "q_en": "\"Visitors ___ feed the animals.\" (forbidden)", "o": ["don't have to", "mustn't", "needn't", "shouldn't have"], "o_en": ["don't have to", "mustn't", "needn't", "shouldn't have"], "a": 1, "why": "Prohibición: mustn't.", "why_en": "Prohibition: mustn't." },
+      { "q": "«Last year we ___ present the project twice.»", "q_en": "\"Last year we ___ present the project twice.\"", "o": ["must", "had to", "have to", "must have"], "o_en": ["must", "had to", "have to", "must have"], "a": 1, "why": "Must no tiene pasado: se usa had to.", "why_en": "Must has no past: use had to." },
+      { "q": "«I wish I ___ speak three languages.»", "q_en": "\"I wish I ___ speak three languages.\"", "o": ["would", "could", "will", "can"], "o_en": ["would", "could", "will", "can"], "a": 1, "why": "Con el mismo sujeto se usa could, no would.", "why_en": "With the same subject use could, not would." },
+      { "q": "«If only they ___ acted before the crisis.»", "q_en": "\"If only they ___ acted before the crisis.\"", "o": ["have", "had", "would have", "has"], "o_en": ["have", "had", "would have", "has"], "a": 1, "why": "Arrepentimiento del pasado: had + participio.", "why_en": "Regret about the past: had + participle." },
+      { "q": "«The organization advocates ___ refugees' rights.»", "q_en": "\"The organization advocates ___ refugees' rights.\"", "o": ["to", "for", "of", "about"], "o_en": ["to", "for", "of", "about"], "a": 1, "why": "Advocate va siempre con for.", "why_en": "Advocate always takes for." },
+      { "q": "«The pollution ___ if regulations had been enforced.»", "q_en": "\"The pollution ___ if regulations had been enforced.\"", "o": ["could be reduced", "could have been reduced", "can be reduced", "could reduce"], "o_en": ["could be reduced", "could have been reduced", "can be reduced", "could reduce"], "a": 1, "why": "Posibilidad pasada no realizada, en pasiva.", "why_en": "An unrealized past possibility, in the passive." }
+    ]
+  }
+}

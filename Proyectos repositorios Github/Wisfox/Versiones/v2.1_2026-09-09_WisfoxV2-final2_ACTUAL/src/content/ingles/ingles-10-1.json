@@ -1,0 +1,196 @@
+{
+  "id": "ingles-10-1",
+  "materia": "ingles",
+  "grado": "10",
+  "grado_nombre": "Décimo",
+  "periodo": 1,
+  "periodo_label": { "es": "Periodo I", "en": "Term I" },
+  "titulo": "Connecting the Past and Understanding Experiences",
+  "titulo_es": "Conectar el pasado y comprender experiencias",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Narro hechos históricos y experiencias personales combinando distintos tiempos del pasado. Comparo épocas, figuras y acontecimientos con estructuras precisas.",
+  "competencias": "Combinar pasado simple, progresivo y perfecto en una narración coherente; comparar hechos y personajes históricos; usar expresiones narrativas y conectores; manejar el registro de aula.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Voices from History",
+    "descripcion_es": "Cada estudiante escribe y presenta una narración en primera persona de un personaje histórico colombiano o mundial: qué estaba haciendo, qué había ocurrido antes y qué hizo después, comparando su época con la actual.",
+    "descripcion_en": "Each student writes and presents a first-person narration by a Colombian or world historical figure: what they were doing, what had happened before and what they did next, comparing their era with today."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-10-1-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Pasado simple: verbos regulares e irregulares",
+      "t_en": "Simple past: regular and irregular verbs",
+      "d": "14 min",
+      "content_es": "<h4>Regulares</h4><p>Terminación <b>-ed</b> con sus reglas: <i>like → liked</i>, <i>study → studied</i>, <i>plan → planned</i>. Tres pronunciaciones: /t/ (worked), /d/ (played), /ɪd/ (wanted).</p><h4>Irregulares esenciales</h4><ul><li>go-went · come-came · see-saw · do-did · make-made</li><li>take-took · give-gave · get-got · find-found · think-thought</li><li>write-wrote · speak-spoke · break-broke · choose-chose</li><li>lead-led · build-built · win-won · fight-fought · rise-rose</li></ul><h4>Las tres columnas</h4><p>Base, pasado simple y participio: <i>write - wrote - written</i>. El participio se usa en los tiempos perfectos y en la voz pasiva, no en el pasado simple.</p><h4>Recordatorio</h4><p>Con <b>did / didn't</b> el verbo vuelve a la base: <i>Did he write it?</i>, <i>He didn't write it.</i></p>",
+      "content_en": "<h4>Regular verbs</h4><p>The <b>-ed</b> ending with its rules: <i>like → liked</i>, <i>study → studied</i>, <i>plan → planned</i>. Three pronunciations: /t/ (worked), /d/ (played), /ɪd/ (wanted).</p><h4>Essential irregulars</h4><ul><li>go-went · come-came · see-saw · do-did · make-made</li><li>take-took · give-gave · get-got · find-found · think-thought</li><li>write-wrote · speak-spoke · break-broke · choose-chose</li><li>lead-led · build-built · win-won · fight-fought · rise-rose</li></ul><h4>The three columns</h4><p>Base, simple past and participle: <i>write - wrote - written</i>. The participle is used in perfect tenses and the passive voice, not in the simple past.</p><h4>Reminder</h4><p>With <b>did / didn't</b> the verb returns to its base: <i>Did he write it?</i>, <i>He didn't write it.</i></p>",
+      "fichas": [
+        { "t": "Tres columnas", "d": "Base, pasado y participio: speak - spoke - spoken.", "d_en": "Base, past and participle: speak - spoke - spoken." },
+        { "t": "Participio ≠ pasado", "d": "I wrote (pasado) vs I have written (participio).", "d_en": "I wrote (past) vs I have written (participle)." },
+        { "t": "lead → led", "d": "Irregular frecuente en textos históricos: liderar.", "d_en": "A frequent irregular in historical texts: to lead." },
+        { "t": "-ed con tres sonidos", "d": "/t/ worked, /d/ played, /ɪd/ wanted.", "d_en": "/t/ worked, /d/ played, /ɪd/ wanted." }
+      ],
+      "quiz": [
+        { "q": "El pasado simple de «choose» es…", "q_en": "The simple past of \"choose\" is…", "o": ["choosed", "chose", "chosen", "choosen"], "o_en": ["choosed", "chose", "chosen", "choosen"], "a": 1, "why": "Chose es el pasado; chosen es el participio.", "why_en": "Chose is the past; chosen is the participle." },
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["He didn't wrote it", "He didn't write it", "He not wrote it", "He didn't written it"], "o_en": ["He didn't wrote it", "He didn't write it", "He not wrote it", "He didn't written it"], "a": 1, "why": "Después de didn't el verbo va en forma base.", "why_en": "After didn't the verb goes in its base form." },
+        { "q": "«Bolívar ___ the army to victory.»", "q_en": "\"Bolívar ___ the army to victory.\"", "o": ["leaded", "led", "lead", "leading"], "o_en": ["leaded", "led", "lead", "leading"], "a": 1, "why": "Lead es irregular: su pasado es led.", "why_en": "Lead is irregular: its past is led." }
+      ]
+    },
+    {
+      "id": "ingles-10-1-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Pasado progresivo",
+      "t_en": "Past progressive",
+      "d": "12 min",
+      "content_es": "<h4>Forma</h4><p><b>was / were + verbo-ing</b>: <i>They <b>were fighting</b> for independence.</i></p><h4>Usos</h4><ul><li>Acción en desarrollo en un momento del pasado: <i>At 3 p.m. I was studying.</i></li><li>Escenario o contexto de una narración: <i>The sun was setting and people were leaving the square.</i></li><li>Dos acciones simultáneas con <b>while</b>: <i>While she was writing, he was reading.</i></li><li>Acción interrumpida: <i>I was walking home <b>when</b> it started to rain.</i></li></ul><h4>La regla de la interrupción</h4><p>La acción larga va en <b>progresivo</b> y la que la interrumpe en <b>pasado simple</b>. Normalmente <i>while</i> acompaña a la larga y <i>when</i> a la corta.</p><h4>Ojo</h4><p>Los verbos de estado no van en progresivo: <i>I knew the answer</i>, no <i>I was knowing</i>.</p>",
+      "content_en": "<h4>Form</h4><p><b>was / were + verb-ing</b>: <i>They <b>were fighting</b> for independence.</i></p><h4>Uses</h4><ul><li>An action in progress at a past moment: <i>At 3 p.m. I was studying.</i></li><li>The background of a narration: <i>The sun was setting and people were leaving the square.</i></li><li>Two simultaneous actions with <b>while</b>: <i>While she was writing, he was reading.</i></li><li>An interrupted action: <i>I was walking home <b>when</b> it started to rain.</i></li></ul><h4>The interruption rule</h4><p>The long action goes in the <b>progressive</b> and the interrupting one in the <b>simple past</b>. Usually <i>while</i> goes with the long one and <i>when</i> with the short one.</p><h4>Careful</h4><p>State verbs do not take the progressive: <i>I knew the answer</i>, not <i>I was knowing</i>.</p>",
+      "fichas": [
+        { "t": "was/were + -ing", "d": "Estructura del pasado progresivo.", "d_en": "Structure of the past progressive." },
+        { "t": "while + progresivo", "d": "While marca la acción larga y de fondo.", "d_en": "While marks the long background action." },
+        { "t": "when + simple", "d": "When suele introducir la acción que interrumpe.", "d_en": "When usually introduces the interrupting action." },
+        { "t": "Escenario narrativo", "d": "Sirve para pintar el contexto antes del hecho principal.", "d_en": "Used to paint the context before the main event." }
+      ],
+      "quiz": [
+        { "q": "«I ___ dinner when the lights went out.»", "q_en": "\"I ___ dinner when the lights went out.\"", "o": ["cooked", "was cooking", "had cooked", "cook"], "o_en": ["cooked", "was cooking", "had cooked", "cook"], "a": 1, "why": "Es la acción larga interrumpida: pasado progresivo.", "why_en": "It is the long action being interrupted: past progressive." },
+        { "q": "«While they ___, the storm started.»", "q_en": "\"While they ___, the storm started.\"", "o": ["traveled", "were traveling", "had traveled", "travel"], "o_en": ["traveled", "were traveling", "had traveled", "travel"], "a": 1, "why": "While acompaña a la acción larga en progresivo.", "why_en": "While goes with the long action in the progressive." },
+        { "q": "¿Cuál oración es incorrecta?", "q_en": "Which sentence is incorrect?", "o": ["I was reading at 8", "I was knowing the answer", "I knew the answer", "They were waiting outside"], "o_en": ["I was reading at 8", "I was knowing the answer", "I knew the answer", "They were waiting outside"], "a": 1, "why": "Know es verbo de estado: no admite progresivo.", "why_en": "Know is a state verb: it takes no progressive." }
+      ]
+    },
+    {
+      "id": "ingles-10-1-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Los tres pasados en una narración",
+      "t_en": "The three pasts in one narration",
+      "d": "16 min",
+      "content_es": "<h4>Cada uno con su papel</h4><ul><li><b>Pasado progresivo</b> → el fondo, lo que estaba ocurriendo.</li><li><b>Pasado simple</b> → los hechos, en su orden.</li><li><b>Pasado perfecto</b> → lo que ya había pasado antes.</li></ul><h4>Ejemplo completo</h4><p><i>The crowd <b>was waiting</b> in the square (fondo). Suddenly a messenger <b>arrived</b> (hecho). He <b>had ridden</b> for three days to bring the news (anterior).</i></p><h4>Combinaciones útiles</h4><ul><li><i>When she arrived, they were eating.</i> → ya estaban comiendo.</li><li><i>When she arrived, they ate.</i> → comieron después.</li><li><i>When she arrived, they had eaten.</i> → ya habían terminado.</li></ul><h4>Consejo de escritura</h4><p>No abuses del pasado perfecto: úsalo solo cuando el orden no sea evidente por el contexto o por conectores como <i>before</i> y <i>after</i>.</p>",
+      "content_en": "<h4>Each one with its role</h4><ul><li><b>Past progressive</b> → the background, what was going on.</li><li><b>Past simple</b> → the events, in their order.</li><li><b>Past perfect</b> → what had already happened before.</li></ul><h4>A full example</h4><p><i>The crowd <b>was waiting</b> in the square (background). Suddenly a messenger <b>arrived</b> (event). He <b>had ridden</b> for three days to bring the news (earlier).</i></p><h4>Useful combinations</h4><ul><li><i>When she arrived, they were eating.</i> → they were already eating.</li><li><i>When she arrived, they ate.</i> → they ate afterwards.</li><li><i>When she arrived, they had eaten.</i> → they had already finished.</li></ul><h4>Writing advice</h4><p>Do not overuse the past perfect: keep it for when the order is not obvious from the context or from connectors like <i>before</i> and <i>after</i>.</p>",
+      "fichas": [
+        { "t": "Progresivo = fondo", "d": "Describe la escena en la que ocurre el hecho.", "d_en": "Describes the scene in which the event happens." },
+        { "t": "Simple = hechos", "d": "Cuenta los acontecimientos en su orden.", "d_en": "Tells the events in their order." },
+        { "t": "Perfecto = anterior", "d": "Retrocede a lo que ya había pasado.", "d_en": "Steps back to what had already happened." },
+        { "t": "Tres versiones de when", "d": "were eating / ate / had eaten cambian el orden.", "d_en": "were eating / ate / had eaten change the order." }
+      ],
+      "quiz": [
+        { "q": "«When the teacher came in, the students ___.» (ya estaban trabajando)", "q_en": "\"When the teacher came in, the students ___.\" (they were already working)", "o": ["worked", "were working", "had worked", "work"], "o_en": ["worked", "were working", "had worked", "work"], "a": 1, "why": "La acción ya estaba en curso: pasado progresivo.", "why_en": "The action was already in progress: past progressive." },
+        { "q": "«He was exhausted; he ___ for ten hours.»", "q_en": "\"He was exhausted; he ___ for ten hours.\"", "o": ["worked", "was working", "had worked", "works"], "o_en": ["worked", "was working", "had worked", "works"], "a": 2, "why": "La causa es anterior al estado descrito: pasado perfecto.", "why_en": "The cause is earlier than the state described: past perfect." },
+        { "q": "«The sun ___ when we reached the top.»", "q_en": "\"The sun ___ when we reached the top.\"", "o": ["set", "was setting", "had set", "sets"], "o_en": ["set", "was setting", "had set", "sets"], "a": 1, "why": "Describe el escenario en curso: pasado progresivo.", "why_en": "It describes the ongoing scene: past progressive." }
+      ]
+    },
+    {
+      "id": "ingles-10-1-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Comparativos y superlativos en contexto histórico",
+      "t_en": "Comparatives and superlatives in historical contexts",
+      "d": "14 min",
+      "content_es": "<h4>Comparar épocas y figuras</h4><ul><li><i>The 19th century was <b>more turbulent than</b> the 18th.</i></li><li><i>Bolívar was <b>one of the most influential</b> leaders of the continent.</i></li><li><i>This battle was <b>as decisive as</b> the previous one.</i></li></ul><h4>Estructuras de precisión</h4><ul><li><b>one of the + superlativo + sustantivo plural</b>: <i>one of the greatest reforms</i></li><li><b>by far</b>: <i>by far the most important treaty</i></li><li><b>the + ordinal + superlativo</b>: <i>the second largest empire</i></li></ul><h4>Comparar cantidades</h4><p><b>more / fewer</b> con contables, <b>more / less</b> con incontables: <i>fewer soldiers, less territory</i>.</p><h4>Cambio en el tiempo</h4><p><i>Cities grew <b>larger and larger</b>. · <b>The more</b> trade increased, <b>the faster</b> cities expanded.</i></p>",
+      "content_en": "<h4>Comparing eras and figures</h4><ul><li><i>The 19th century was <b>more turbulent than</b> the 18th.</i></li><li><i>Bolívar was <b>one of the most influential</b> leaders of the continent.</i></li><li><i>This battle was <b>as decisive as</b> the previous one.</i></li></ul><h4>Precision structures</h4><ul><li><b>one of the + superlative + plural noun</b>: <i>one of the greatest reforms</i></li><li><b>by far</b>: <i>by far the most important treaty</i></li><li><b>the + ordinal + superlative</b>: <i>the second largest empire</i></li></ul><h4>Comparing quantities</h4><p><b>more / fewer</b> with countables, <b>more / less</b> with uncountables: <i>fewer soldiers, less territory</i>.</p><h4>Change over time</h4><p><i>Cities grew <b>larger and larger</b>. · <b>The more</b> trade increased, <b>the faster</b> cities expanded.</i></p>",
+      "fichas": [
+        { "t": "one of the + superlativo", "d": "Siempre va seguido de sustantivo en plural.", "d_en": "It is always followed by a plural noun." },
+        { "t": "by far", "d": "Refuerza el superlativo: by far the best.", "d_en": "Reinforces the superlative: by far the best." },
+        { "t": "fewer vs less", "d": "fewer con contables; less con incontables.", "d_en": "fewer with countables; less with uncountables." },
+        { "t": "The more…, the faster…", "d": "Doble comparativo para relaciones proporcionales.", "d_en": "Double comparative for proportional relations." }
+      ],
+      "quiz": [
+        { "q": "«It was one of the most important ___ of the century.»", "q_en": "\"It was one of the most important ___ of the century.\"", "o": ["event", "events", "an event", "eventness"], "o_en": ["event", "events", "an event", "eventness"], "a": 1, "why": "One of the + superlativo pide sustantivo en plural.", "why_en": "One of the + superlative takes a plural noun." },
+        { "q": "«There were ___ soldiers than expected.»", "q_en": "\"There were ___ soldiers than expected.\"", "o": ["less", "fewer", "little", "least"], "o_en": ["less", "fewer", "little", "least"], "a": 1, "why": "Soldiers es contable: fewer.", "why_en": "Soldiers is countable: fewer." },
+        { "q": "«That treaty was ___ the most decisive of all.»", "q_en": "\"That treaty was ___ the most decisive of all.\"", "o": ["by far", "very", "much more", "so"], "o_en": ["by far", "very", "much more", "so"], "a": 0, "why": "By far es el intensificador propio del superlativo.", "why_en": "By far is the intensifier used with superlatives." }
+      ]
+    },
+    {
+      "id": "ingles-10-1-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Hechos históricos de Colombia y del mundo",
+      "t_en": "Historical events in Colombia and the world",
+      "d": "14 min",
+      "content_es": "<h4>Vocabulario histórico</h4><p><b>independence</b>, <b>revolution</b>, <b>colony</b>, <b>settlement</b> (asentamiento), <b>treaty</b> (tratado), <b>battle</b>, <b>uprising</b> (levantamiento), <b>reform</b>, <b>constitution</b>, <b>republic</b>, <b>empire</b>, <b>conquest</b>, <b>heritage</b>, <b>legacy</b> (legado).</p><h4>Hitos colombianos</h4><p><i>the Battle of Boyacá (1819), the founding of Gran Colombia, the Constitution of 1991, the peace process.</i></p><h4>Hitos mundiales</h4><p><i>the French Revolution, World War II, the fall of the Berlin Wall, the Universal Declaration of Human Rights.</i></p><h4>Verbos frecuentes</h4><p><b>declare</b>, <b>establish</b>, <b>overthrow</b> (derrocar), <b>sign</b>, <b>defeat</b> (derrotar), <b>achieve</b> (lograr), <b>abolish</b>, <b>influence</b>, <b>found</b> (fundar).</p><p>Ojo: <b>found</b> como verbo base significa fundar (found - founded), distinto del pasado de <i>find</i>.</p>",
+      "content_en": "<h4>Historical vocabulary</h4><p><b>independence</b>, <b>revolution</b>, <b>colony</b>, <b>settlement</b>, <b>treaty</b>, <b>battle</b>, <b>uprising</b>, <b>reform</b>, <b>constitution</b>, <b>republic</b>, <b>empire</b>, <b>conquest</b>, <b>heritage</b>, <b>legacy</b>.</p><h4>Colombian milestones</h4><p><i>the Battle of Boyacá (1819), the founding of Gran Colombia, the Constitution of 1991, the peace process.</i></p><h4>World milestones</h4><p><i>the French Revolution, World War II, the fall of the Berlin Wall, the Universal Declaration of Human Rights.</i></p><h4>Frequent verbs</h4><p><b>declare</b>, <b>establish</b>, <b>overthrow</b>, <b>sign</b>, <b>defeat</b>, <b>achieve</b>, <b>abolish</b>, <b>influence</b>, <b>found</b>.</p><p>Careful: <b>found</b> as a base verb means to establish (found - founded), different from the past of <i>find</i>.</p>",
+      "fichas": [
+        { "t": "found vs found", "d": "found (fundar) es base; found es también el pasado de find.", "d_en": "found (to establish) is a base verb; found is also the past of find." },
+        { "t": "overthrow", "d": "Derrocar a un gobierno o régimen.", "d_en": "To remove a government by force." },
+        { "t": "legacy", "d": "Legado: lo que una época deja a las siguientes.", "d_en": "What an era leaves to those that follow." },
+        { "t": "uprising", "d": "Levantamiento popular contra una autoridad.", "d_en": "A popular revolt against an authority." },
+        { "t": "treaty", "d": "Tratado formal firmado entre estados.", "d_en": "A formal agreement signed between states." }
+      ],
+      "quiz": [
+        { "q": "«The city was ___ in 1538.»", "q_en": "\"The city was ___ in 1538.\"", "o": ["find", "found", "founded", "founding"], "o_en": ["find", "found", "founded", "founding"], "a": 2, "why": "Founded es el participio del verbo found (fundar).", "why_en": "Founded is the participle of the verb found (to establish)." },
+        { "q": "¿Qué es un «treaty»?", "q_en": "What is a \"treaty\"?", "o": ["Una batalla", "Un tratado firmado", "Un levantamiento", "Una colonia"], "o_en": ["A battle", "A signed agreement between states", "An uprising", "A colony"], "a": 1, "why": "Treaty es el acuerdo formal entre estados.", "why_en": "A treaty is a formal agreement between states." },
+        { "q": "«The people ___ the dictator in 1989.»", "q_en": "\"The people ___ the dictator in 1989.\"", "o": ["overthrew", "overthrown", "overthrowed", "overthrow"], "o_en": ["overthrew", "overthrown", "overthrowed", "overthrow"], "a": 0, "why": "Overthrow es irregular: overthrow - overthrew - overthrown.", "why_en": "Overthrow is irregular: overthrow - overthrew - overthrown." }
+      ]
+    },
+    {
+      "id": "ingles-10-1-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Contar una historia: conectores narrativos",
+      "t_en": "Telling a story: narrative connectors",
+      "d": "14 min",
+      "content_es": "<h4>Abrir la narración</h4><p><i>It all started when… · Back in 1810… · At that time… · One day…</i></p><h4>Ordenar los hechos</h4><p><b>first, then, after that, soon afterwards, later, meanwhile, eventually</b> (finalmente, con el tiempo), <b>in the end</b>.</p><h4>Crear tensión</h4><p><i><b>Suddenly</b>, everything changed. · <b>All of a sudden</b>, a shot was heard. · <b>Just as</b> they were leaving, someone shouted.</i></p><h4>Cerrar</h4><p><i>In the end… · As a result… · That is how… · Looking back, it marked the beginning of…</i></p><h4>Ojo con eventually</h4><p><b>eventually</b> significa «finalmente, con el tiempo», no «eventualmente». Lo que en español es eventualmente se dice <i>possibly</i> u <i>occasionally</i>.</p>",
+      "content_en": "<h4>Opening the narration</h4><p><i>It all started when… · Back in 1810… · At that time… · One day…</i></p><h4>Ordering the events</h4><p><b>first, then, after that, soon afterwards, later, meanwhile, eventually</b>, <b>in the end</b>.</p><h4>Building tension</h4><p><i><b>Suddenly</b>, everything changed. · <b>All of a sudden</b>, a shot was heard. · <b>Just as</b> they were leaving, someone shouted.</i></p><h4>Closing</h4><p><i>In the end… · As a result… · That is how… · Looking back, it marked the beginning of…</i></p><h4>Careful with eventually</h4><p><b>eventually</b> means finally, in the end, after some time — it does not mean possibly. For that, use <i>possibly</i> or <i>occasionally</i>.</p>",
+      "fichas": [
+        { "t": "eventually", "d": "Falso amigo: significa finalmente, con el tiempo.", "d_en": "False friend for Spanish speakers: it means finally, in the end." },
+        { "t": "Just as…", "d": "Justo cuando: introduce una coincidencia temporal.", "d_en": "At the exact moment when: introduces a coincidence in time." },
+        { "t": "meanwhile", "d": "Mientras tanto: acción paralela en la narración.", "d_en": "At the same time: a parallel action in the narration." },
+        { "t": "It all started when…", "d": "Fórmula clásica para abrir un relato.", "d_en": "A classic formula to open a story." }
+      ],
+      "quiz": [
+        { "q": "«Eventually» significa…", "q_en": "\"Eventually\" means…", "o": ["Eventualmente", "Finalmente, con el tiempo", "Rápidamente", "Quizás"], "o_en": ["Possibly", "Finally, after some time", "Quickly", "Maybe"], "a": 1, "why": "Es un falso amigo: quiere decir finalmente.", "why_en": "It is a false friend for Spanish speakers: it means finally." },
+        { "q": "«___ they were leaving, the storm began.»", "q_en": "\"___ they were leaving, the storm began.\"", "o": ["Just as", "In the end", "Eventually", "Meanwhile"], "o_en": ["Just as", "In the end", "Eventually", "Meanwhile"], "a": 0, "why": "Just as marca la coincidencia exacta de dos momentos.", "why_en": "Just as marks the exact coincidence of two moments." },
+        { "q": "¿Cuál conector cierra una narración?", "q_en": "Which connector closes a narration?", "o": ["One day", "Suddenly", "In the end", "At that time"], "o_en": ["One day", "Suddenly", "In the end", "At that time"], "a": 2, "why": "In the end presenta el desenlace.", "why_en": "In the end presents the outcome." }
+      ]
+    },
+    {
+      "id": "ingles-10-1-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Saludos y comandos para la clase",
+      "t_en": "Greetings and commands for the class",
+      "d": "10 min",
+      "content_es": "<h4>Abrir y cerrar una sesión</h4><p><i>Good morning, everyone. Let's get started. · Before we begin, any questions? · That's all for today. See you on Thursday.</i></p><h4>Instrucciones académicas</h4><p><i>Read the primary source. · Identify the author's purpose. · Take notes on the main events. · Discuss in groups and report back. · Support your claim with a quote. · Hand in your draft by Friday.</i></p><h4>Interacción</h4><ul><li>Pedir aclaración: <i>Could you clarify that? · Do you mean that…?</i></li><li>Pedir tiempo: <i>Could you give us five more minutes?</i></li><li>Confirmar: <i>So, if I understood correctly…</i></li></ul><h4>Recuerda</h4><p>Todas las instrucciones van en <b>imperativo</b>. Para suavizar se agrega <i>please</i> o se usa <i>Could you…?</i></p>",
+      "content_en": "<h4>Opening and closing a session</h4><p><i>Good morning, everyone. Let's get started. · Before we begin, any questions? · That's all for today. See you on Thursday.</i></p><h4>Academic instructions</h4><p><i>Read the primary source. · Identify the author's purpose. · Take notes on the main events. · Discuss in groups and report back. · Support your claim with a quote. · Hand in your draft by Friday.</i></p><h4>Interaction</h4><ul><li>Asking for clarification: <i>Could you clarify that? · Do you mean that…?</i></li><li>Asking for time: <i>Could you give us five more minutes?</i></li><li>Confirming: <i>So, if I understood correctly…</i></li></ul><h4>Remember</h4><p>All instructions use the <b>imperative</b>. To soften them, add <i>please</i> or use <i>Could you…?</i></p>",
+      "fichas": [
+        { "t": "primary source", "d": "Fuente primaria: documento de la época estudiada.", "d_en": "A document from the period being studied." },
+        { "t": "report back", "d": "Volver al grupo grande a compartir las conclusiones.", "d_en": "To come back to the whole class and share conclusions." },
+        { "t": "draft", "d": "Borrador de un trabajo escrito.", "d_en": "A first version of a written work." },
+        { "t": "Could you clarify…?", "d": "Petición educada de aclaración.", "d_en": "Polite request for clarification." }
+      ],
+      "quiz": [
+        { "q": "¿Qué es un «draft»?", "q_en": "What is a \"draft\"?", "o": ["La versión final", "Un borrador", "Una cita", "Una fuente"], "o_en": ["The final version", "A first version", "A quote", "A source"], "a": 1, "why": "El draft es la versión preliminar de un texto.", "why_en": "A draft is the preliminary version of a text." },
+        { "q": "«___ your claim with a quote.»", "q_en": "\"___ your claim with a quote.\"", "o": ["Supporting", "Support", "To support", "You support"], "o_en": ["Supporting", "Support", "To support", "You support"], "a": 1, "why": "Las instrucciones van en imperativo.", "why_en": "Instructions use the imperative." },
+        { "q": "¿Cuál es la forma más educada de pedir aclaración?", "q_en": "Which is the most polite way to ask for clarification?", "o": ["Repeat that", "What?", "Could you clarify that?", "I don't understand you"], "o_en": ["Repeat that", "What?", "Could you clarify that?", "I don't understand you"], "a": 2, "why": "Could you… es la fórmula educada estándar.", "why_en": "Could you… is the standard polite formula." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-10-1-repaso",
+    "titulo": "Repaso — Connecting the Past",
+    "titulo_en": "Review — Connecting the Past",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Una narración histórica bien hecha usa <b>tres pasados</b>: el progresivo pinta el fondo, el simple cuenta los hechos y el perfecto retrocede a lo anterior. A eso se suman comparativos y superlativos para valorar épocas y figuras.</p><h4>Puntos gramaticales</h4><ul><li>Con did/didn't el verbo vuelve a la base.</li><li>Acción larga en progresivo + acción que interrumpe en simple.</li><li>El pasado perfecto solo cuando el orden no es evidente.</li><li>one of the + superlativo + plural; by far refuerza el superlativo.</li><li>fewer con contables, less con incontables.</li></ul><h4>Vocabulario</h4><p>Léxico histórico (treaty, uprising, legacy, overthrow), conectores narrativos y el falso amigo eventually.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>A well-built historical narration uses <b>three pasts</b>: the progressive paints the background, the simple tells the events and the perfect steps back to what came earlier. Comparatives and superlatives are added to assess eras and figures.</p><h4>Grammar points</h4><ul><li>With did/didn't the verb returns to the base form.</li><li>Long action in the progressive + interrupting action in the simple.</li><li>The past perfect only when the order is not obvious.</li><li>one of the + superlative + plural; by far reinforces the superlative.</li><li>fewer with countables, less with uncountables.</li></ul><h4>Vocabulary</h4><p>Historical vocabulary (treaty, uprising, legacy, overthrow), narrative connectors and the false friend eventually.</p>",
+    "puntos_clave": [
+      ["Progresivo = fondo; simple = hechos; perfecto = lo anterior.", "Progressive = background; simple = events; perfect = what came before."],
+      ["while + progresivo, when + simple.", "while + progressive, when + simple."],
+      ["one of the + superlativo va con sustantivo plural.", "one of the + superlative takes a plural noun."],
+      ["fewer soldiers, less territory.", "fewer soldiers, less territory."],
+      ["eventually = finalmente, no eventualmente.", "eventually = finally, not possibly."],
+      ["found (fundar) es distinto del pasado de find.", "found (to establish) is different from the past of find."]
+    ],
+    "preguntas": [
+      { "q": "«They ___ the treaty while the war ___ on.»", "q_en": "\"They ___ the treaty while the war ___ on.\"", "o": ["signed / was going", "were signing / went", "had signed / goes", "sign / was going"], "o_en": ["signed / was going", "were signing / went", "had signed / goes", "sign / was going"], "a": 0, "why": "El hecho puntual va en simple y el fondo en progresivo.", "why_en": "The specific event goes in the simple and the background in the progressive." },
+      { "q": "«By 1819 the army ___ several battles.»", "q_en": "\"By 1819 the army ___ several battles.\"", "o": ["won", "was winning", "had won", "wins"], "o_en": ["won", "was winning", "had won", "wins"], "a": 2, "why": "By + fecha pasada con acción anterior: pasado perfecto.", "why_en": "By + past date with an earlier action: past perfect." },
+      { "q": "El pasado de «think» es…", "q_en": "The past of \"think\" is…", "o": ["thinked", "thought", "thinked up", "thunk"], "o_en": ["thinked", "thought", "thinked up", "thunk"], "a": 1, "why": "Think es irregular: thought.", "why_en": "Think is irregular: thought." },
+      { "q": "«It was ___ the most important reform of the century.»", "q_en": "\"It was ___ the most important reform of the century.\"", "o": ["very", "by far", "much", "too"], "o_en": ["very", "by far", "much", "too"], "a": 1, "why": "By far es el intensificador del superlativo.", "why_en": "By far is the superlative intensifier." },
+      { "q": "«There was ___ support than expected.»", "q_en": "\"There was ___ support than expected.\"", "o": ["fewer", "less", "little", "least"], "o_en": ["fewer", "less", "little", "least"], "a": 1, "why": "Support es incontable: less.", "why_en": "Support is uncountable: less." },
+      { "q": "«___, the movement changed the country.»", "q_en": "\"___, the movement changed the country.\"", "o": ["Eventually", "Actually", "Currently", "Hardly"], "o_en": ["Eventually", "Actually", "Currently", "Hardly"], "a": 0, "why": "Eventually indica que ocurrió al final del proceso.", "why_en": "Eventually indicates it happened at the end of the process." },
+      { "q": "«He ___ the republic in 1830.»", "q_en": "\"He ___ the republic in 1830.\"", "o": ["find", "found", "founded", "was found"], "o_en": ["find", "found", "founded", "was found"], "a": 2, "why": "El pasado del verbo found (fundar) es founded.", "why_en": "The past of the verb found (to establish) is founded." },
+      { "q": "«I ___ home when I heard the news.»", "q_en": "\"I ___ home when I heard the news.\"", "o": ["walked", "was walking", "had walked", "walk"], "o_en": ["walked", "was walking", "had walked", "walk"], "a": 1, "why": "Es la acción larga interrumpida: pasado progresivo.", "why_en": "It is the long action being interrupted: past progressive." }
+    ]
+  }
+}

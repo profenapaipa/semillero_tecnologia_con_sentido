@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZocaLab — Rutina de la luna</title>
+
+  <!-- Tipografías: Playfair Display para títulos, Nunito para el cuerpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/zocalab.css">
+  <link rel="stylesheet" href="../css/muisca.css">
+
+  <style>
+    /* ====== FONDO — noche muisca ====== */
+    .luna-fecha {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 15px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.72);
+      margin-top: 8px;
+    }
+    .luna-fase {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(201, 152, 42, 0.18);
+      color: var(--zl-dorado);
+      padding: 5px 13px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .luna-racha {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--zl-dorado);
+      background: rgba(201, 152, 42, 0.14);
+      padding: 9px 16px;
+      border-radius: 999px;
+    }
+
+    /* ====== LOS BLOQUES ====== */
+    .luna-bloques {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 26px;
+    }
+    .luna-bloque-cabeza {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      margin-bottom: 14px;
+    }
+    .luna-bloque-icono { font-size: 27px; line-height: 1; flex-shrink: 0; }
+    .luna-bloque-nombre {
+      font-family: var(--zl-font-titulo);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--zl-dorado);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+    .luna-bloque-titulo {
+      font-family: var(--zl-font-titulo);
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.35;
+    }
+    .luna-bloque-estado {
+      margin-left: auto;
+      font-size: 22px;
+      line-height: 1;
+      flex-shrink: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .zl-card.completada .luna-bloque-estado { opacity: 1; }
+
+    /* ====== EMOCIONES (5 columnas en escritorio, se adapta) ====== */
+    .zl-emociones { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+    /* ====== BOTÓN FINAL ====== */
+    .luna-final { margin-top: 26px; }
+
+    /* La luna que sube al terminar la rutina */
+    .luna-celebra {
+      position: fixed;
+      left: 50%;
+      bottom: 30%;
+      transform: translateX(-50%);
+      font-size: 84px;
+      z-index: 600;
+      pointer-events: none;
+      animation: zlLunaSube 1.5s ease forwards;
+    }
+    .luna-mensaje-final {
+      position: fixed;
+      left: 50%;
+      top: 45%;
+      transform: translateX(-50%);
+      background: rgba(201, 152, 42, 0.95);
+      color: #16222f;
+      padding: 18px 30px;
+      border-radius: 16px;
+      font-family: var(--zl-font-titulo);
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      z-index: 601;
+      animation: zlFadeUp 0.5s ease both;
+      box-shadow: var(--zl-sombra-flota);
+    }
+  </style>
+</head>
+<body class="tema-muisca tema-noche tema-escena">
+
+<div class="zl-page zl-noche-page">
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="zl-header">
+    <div class="zl-marca">
+      <img src="../assets/logo-icon.png" alt="" onerror="this.style.display='none'">
+      <span>ZocaLab</span>
+    </div>
+
+    <div class="zl-saludo" id="saludo">Cargando...</div>
+
+    <button class="zl-avatar" id="avatarBtn" title="Ir a mi perfil" aria-label="Ir a mi perfil">Z</button>
+  </header>
+
+  <!-- ============================================
+       CONTENIDO
+       ============================================ -->
+  <main class="zl-content">
+    <div class="zl-container zl-container-angosto">
+
+      <!-- ====== SALUDO PRINCIPAL ====== -->
+      <h1 class="zl-titulo zl-titulo-xl zl-anim-entrada" id="tituloPrincipal">
+        Cierra tu día con calma
+      </h1>
+
+      <div class="luna-fecha zl-anim-entrada zl-d1">
+        <span id="fechaHoy">—</span>
+        <span class="luna-fase" id="faseLunar">🌙 —</span>
+      </div>
+
+      <div class="luna-racha zl-anim-entrada zl-d2" id="contadorRacha">
+        <span aria-hidden="true">🔥</span>
+        <span>—</span>
+      </div>
+
+      <!-- ====== LOS CUATRO BLOQUES DE LA RUTINA ====== -->
+      <div class="luna-bloques">
+
+        <!-- BLOQUE 1 — Lo que hice hoy -->
+        <section class="zl-card zl-anim-entrada zl-d1" id="bloque-hice">
+          <div class="luna-bloque-cabeza">
+            <span class="luna-bloque-icono" aria-hidden="true">🌾</span>
+            <div>
+              <div class="luna-bloque-nombre">Bachué</div>
+              <h2 class="luna-bloque-titulo">¿Qué hiciste hoy?</h2>
+            </div>
+            <span class="luna-bloque-estado" aria-hidden="true">✅</span>
+          </div>
+
+          <div class="zl-chips" id="chipsHice" role="group" aria-label="¿Qué hiciste hoy?">
+            <button type="button" class="zl-chip" data-valor="Estudié">Estudié</button>
+            <button type="button" class="zl-chip" data-valor="Hice ejercicio">Hice ejercicio</button>
+            <button type="button" class="zl-chip" data-valor="Descansé">Descansé</button>
+            <button type="button" class="zl-chip" data-valor="Ayudé a alguien">Ayudé a alguien</button>
+            <button type="button" class="zl-chip" data-valor="Creé algo">Creé algo</button>
+            <button type="button" class="zl-chip" data-valor="Pasé tiempo en familia">Pasé tiempo en familia</button>
+          </div>
+
+          <div class="zl-chips zl-mt-8" id="chipsHiceExtra" aria-label="Otras cosas que agregaste"></div>
+
+          <div class="zl-mt-16" style="display:flex;gap:8px">
+            <label class="zl-sr" for="campoHiceOtro">Agregar algo más que hiciste</label>
+            <input type="text" class="zl-input" id="campoHiceOtro" maxlength="60"
+                   placeholder="Escribe algo más que hiciste...">
+            <button type="button" class="zl-btn-secundario zl-btn-sm zl-btn-auto" id="btnAgregarHice">+ Agregar</button>
+          </div>
+        </section>
+
+        <!-- BLOQUE 2 — Qué aprendiste -->
+        <section class="zl-card zl-anim-entrada zl-d2" id="bloque-aprendi">
+          <div class="luna-bloque-cabeza">
+            <span class="luna-bloque-icono" aria-hidden="true">📖</span>
+            <div>
+              <div class="luna-bloque-nombre">Chyquy</div>
+              <h2 class="luna-bloque-titulo">¿Qué aprendiste hoy?</h2>
+            </div>
+            <span class="luna-bloque-estado" aria-hidden="true">✅</span>
+          </div>
+
+          <label class="zl-sr" for="campoAprendi">¿Qué aprendiste hoy?</label>
+          <textarea class="zl-textarea zl-textarea-sm" id="campoAprendi"
+                    maxlength="200" data-bloque="aprendi"
+                    placeholder="Una idea, una palabra nueva, algo que te sorprendió..."></textarea>
+        </section>
+
+        <!-- BLOQUE 3 — Cómo te sientes -->
+        <section class="zl-card zl-anim-entrada zl-d3" id="bloque-emocion">
+          <div class="luna-bloque-cabeza">
+            <span class="luna-bloque-icono" aria-hidden="true">🌙</span>
+            <div>
+              <div class="luna-bloque-nombre">Chía</div>
+              <h2 class="luna-bloque-titulo">¿Cómo te sientes esta noche?</h2>
+            </div>
+            <span class="luna-bloque-estado" aria-hidden="true">✅</span>
+          </div>
+
+          <div class="zl-emociones" id="grupoEmociones" role="group" aria-label="¿Cómo te sientes esta noche?">
+            <button type="button" class="zl-emocion" data-valor="Feliz">
+              <span aria-hidden="true">😊</span><span>Feliz</span>
+            </button>
+            <button type="button" class="zl-emocion" data-valor="Tranquilo/a">
+              <span aria-hidden="true">😌</span><span>Tranquilo/a</span>
+            </button>
+            <button type="button" class="zl-emocion" data-valor="Cansado/a">
+              <span aria-hidden="true">😴</span><span>Cansado/a</span>
+            </button>
+            <button type="button" class="zl-emocion" data-valor="Triste">
+              <span aria-hidden="true">😔</span><span>Triste</span>
+            </button>
+            <button type="button" class="zl-emocion" data-valor="Ansioso/a">
+              <span aria-hidden="true">😟</span><span>Ansioso/a</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- BLOQUE 4 — Para mañana -->
+        <section class="zl-card zl-anim-entrada zl-d4" id="bloque-manana">
+          <div class="luna-bloque-cabeza">
+            <span class="luna-bloque-icono" aria-hidden="true">🌅</span>
+            <div>
+              <div class="luna-bloque-nombre">Sua</div>
+              <h2 class="luna-bloque-titulo">Una cosa para mañana</h2>
+            </div>
+            <span class="luna-bloque-estado" aria-hidden="true">✅</span>
+          </div>
+
+          <label class="zl-sr" for="campoManana">Una cosa para mañana</label>
+          <input type="text" class="zl-input" id="campoManana"
+                 maxlength="140" data-bloque="manana"
+                 placeholder="¿Qué quieres recordar al despertar?">
+        </section>
+
+      </div>
+
+      <!-- ====== BOTÓN FINAL ====== -->
+      <div class="luna-final">
+        <button class="zl-btn-primario" id="btnTerminar" disabled>
+          Completa los bloques para terminar
+        </button>
+      </div>
+
+      <div class="zl-centro zl-mt-16">
+        <a href="mi-espacio.html?tab=diario" style="color:rgba(255,255,255,0.65);font-size:13px;font-weight:700">
+          📖 Ver mi bitácora
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============================================
+       NAVEGACIÓN INFERIOR
+       ============================================ -->
+  <nav class="zl-nav">
+    <a class="zl-nav-item" href="bosque.html">
+      <span aria-hidden="true">🌳</span><span>Bosque</span>
+    </a>
+    <a class="zl-nav-item" href="rutina-sol.html">
+      <span aria-hidden="true">☀️</span><span>Mi día</span>
+    </a>
+    <a class="zl-nav-item" href="mi-espacio.html">
+      <span aria-hidden="true">📋</span><span>Mi espacio</span>
+    </a>
+    <a class="zl-nav-item active" href="rutina-luna.html">
+      <span aria-hidden="true">🌙</span><span>Cerrar día</span>
+    </a>
+    <a class="zl-nav-item" href="perfil.html">
+      <span aria-hidden="true">👤</span><span>Perfil</span>
+    </a>
+  </nav>
+</div>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+<script src="../js/datos.js"></script>
+<script src="../js/sonidos.js"></script>
+<script src="../js/animaciones.js"></script>
+<script src="../js/escenas.js"></script>
+<script src="../js/condor.js"></script>
+
+<script>
+  /* ============================================
+     PROTECCIÓN DE RUTA
+     ============================================ */
+  if (!verificarSesion()) {
+    throw new Error('Sin sesión activa');
+  }
+
+  const D = window.ZocaDatos;
+
+  /* ============================================
+     HEADER
+     ============================================ */
+  document.getElementById('saludo').textContent = D.saludoSegunHora();
+  D.pintarAvatar(document.getElementById('avatarBtn'));
+  document.getElementById('avatarBtn').addEventListener('click', function () {
+    window.location.href = 'perfil.html';
+  });
+
+  /* ============================================
+     ESCENA ANIMADA: luna, estrellas, luciérnagas y plantas.
+     Las plantas empiezan despiertas (como en Mi día, cuando
+     tomaban el sol) y al poco rato se van quedando dormidas
+     para completar su ciclo.
+     ============================================ */
+  ZocaEscenas.montar('luna');
+  setTimeout(function () { ZocaEscenas.dormirPlantas(true); }, 1600);
+
+  /* ============================================
+     SALUDO, FECHA Y FASE LUNAR
+     ============================================ */
+  var horaActual = new Date().getHours();
+
+  document.getElementById('tituloPrincipal').textContent =
+    (horaActual >= 17 || horaActual < 4) ? 'Cierra tu día con calma' : 'Un momento para mirar atrás';
+
+  document.getElementById('fechaHoy').textContent = D.fechaLarga();
+
+  var fase = D.faseLunar();
+  document.getElementById('faseLunar').innerHTML =
+    '<span aria-hidden="true">' + fase.icono + '</span>' +
+    '<span>' + fase.nombre + ' — ' + fase.mensaje + '</span>';
+
+  /* ============================================
+     CONTADOR DE RACHA DE RUTINAS DE LA LUNA
+     ============================================ */
+  function pintarRacha() {
+    var rutinas = D.leerDato(D.CLAVES.RUTINAS);
+    var racha = rutinas.luna.racha || 0;
+    var nodo = document.getElementById('contadorRacha');
+
+    if (racha <= 0) {
+      nodo.innerHTML = '<span aria-hidden="true">🌙</span><span>Esta es tu primera noche. Bienvenido.</span>';
+    } else {
+      nodo.innerHTML = '<span aria-hidden="true">🔥</span><span>' + racha +
+        (racha === 1 ? ' noche seguida' : ' noches seguidas') + ' cerrando tu día</span>';
+    }
+  }
+
+  /* ============================================
+     ESTADO DE LA RUTINA EN CURSO
+     ============================================ */
+  var respuestas = {
+    hice: [],
+    aprendi: '',
+    emocion: '',
+    manana: ''
+  };
+
+  var BLOQUES = ['hice', 'aprendi', 'emocion', 'manana'];
+
+  var TARJETAS = {
+    hice:    'bloque-hice',
+    aprendi: 'bloque-aprendi',
+    emocion: 'bloque-emocion',
+    manana:  'bloque-manana'
+  };
+
+  function tieneContenido(bloque) {
+    if (bloque === 'hice') return respuestas.hice.length > 0;
+    return String(respuestas[bloque]).trim().length > 0;
+  }
+
+  function marcarTarjeta(bloque) {
+    var tarjeta = document.getElementById(TARJETAS[bloque]);
+    if (!tarjeta) return;
+    tarjeta.classList.toggle('completada', tieneContenido(bloque));
+  }
+
+  function revisarCompleto() {
+    var faltan = BLOQUES.filter(function (b) { return !tieneContenido(b); });
+    var boton = document.getElementById('btnTerminar');
+    if (faltan.length === 0) {
+      boton.disabled = false;
+      boton.textContent = '🌙 Mi día está cerrado';
+    } else {
+      boton.disabled = true;
+      boton.textContent = 'Completa los bloques para terminar';
+    }
+  }
+
+  function registrar(bloque, valor) {
+    respuestas[bloque] = valor;
+    marcarTarjeta(bloque);
+    revisarCompleto();
+  }
+
+  /* ============================================
+     BLOQUE 1 — LO QUE HICE (chips, selección múltiple)
+     ============================================ */
+  var chipsHice = document.getElementById('chipsHice');
+  var hiceExtra = [];   // cosas que el usuario escribió libremente, no de la lista fija
+
+  // Junta los chips predefinidos marcados + lo que el usuario agregó a mano
+  function actualizarHice() {
+    var elegidos = Array.prototype.slice.call(chipsHice.querySelectorAll('.zl-chip.active'))
+      .map(function (c) { return c.dataset.valor; });
+    registrar('hice', elegidos.concat(hiceExtra));
+  }
+
+  // Construido con DOM (no innerHTML) porque el texto lo escribe el usuario
+  function pintarHiceExtra() {
+    var cont = document.getElementById('chipsHiceExtra');
+    cont.innerHTML = '';
+    hiceExtra.forEach(function (texto, indice) {
+      var boton = document.createElement('button');
+      boton.type = 'button';
+      boton.className = 'zl-chip active';
+      boton.textContent = texto + ' ✕';
+      boton.title = 'Quitar';
+      boton.addEventListener('click', function () {
+        hiceExtra.splice(indice, 1);
+        pintarHiceExtra();
+        actualizarHice();
+      });
+      cont.appendChild(boton);
+    });
+  }
+
+  function agregarHiceExtra() {
+    var campo = document.getElementById('campoHiceOtro');
+    var texto = campo.value.trim();
+    if (!texto) return;
+    hiceExtra.push(texto);
+    campo.value = '';
+    pintarHiceExtra();
+    actualizarHice();
+  }
+
+  document.getElementById('btnAgregarHice').addEventListener('click', agregarHiceExtra);
+  document.getElementById('campoHiceOtro').addEventListener('keydown', function (evento) {
+    if (evento.key === 'Enter') { evento.preventDefault(); agregarHiceExtra(); }
+  });
+
+  chipsHice.addEventListener('click', function (evento) {
+    var chip = evento.target.closest('.zl-chip');
+    if (!chip) return;
+
+    chip.classList.toggle('active');
+    actualizarHice();
+  });
+
+  /* ============================================
+     BLOQUE 2 — APRENDÍ
+     ============================================ */
+  var campoAprendi = document.getElementById('campoAprendi');
+  campoAprendi.addEventListener('input', function () {
+    registrar('aprendi', campoAprendi.value);
+  });
+
+  /* ============================================
+     BLOQUE 3 — EMOCIÓN (una sola elección)
+     ============================================ */
+  var grupoEmociones = document.getElementById('grupoEmociones');
+  grupoEmociones.addEventListener('click', function (evento) {
+    var boton = evento.target.closest('.zl-emocion');
+    if (!boton) return;
+
+    grupoEmociones.querySelectorAll('.zl-emocion').forEach(function (b) {
+      b.classList.remove('active');
+    });
+    boton.classList.add('active');
+    registrar('emocion', boton.dataset.valor);
+  });
+
+  /* ============================================
+     BLOQUE 4 — PARA MAÑANA
+     ============================================ */
+  var campoManana = document.getElementById('campoManana');
+  campoManana.addEventListener('input', function () {
+    registrar('manana', campoManana.value);
+  });
+
+  /* ============================================
+     SI LA RUTINA DE HOY YA ESTÁ COMPLETA
+     ============================================ */
+  function cargarRutinaDeHoy() {
+    var rutinas = D.leerDato(D.CLAVES.RUTINAS);
+    if (!rutinas.luna.completadaHoy || !D.esHoy(rutinas.luna.fechaUltima)) return false;
+
+    var registro = rutinas.luna.historial[rutinas.luna.historial.length - 1];
+    if (!registro || !D.esHoy(registro.fecha)) return false;
+
+    var hice = Array.isArray(registro.hice) ? registro.hice : [];
+    var valoresFijos = Array.prototype.slice.call(chipsHice.querySelectorAll('.zl-chip'))
+      .map(function (c) { return c.dataset.valor; });
+    chipsHice.querySelectorAll('.zl-chip').forEach(function (chip) {
+      if (hice.indexOf(chip.dataset.valor) !== -1) chip.classList.add('active');
+    });
+    hiceExtra = hice.filter(function (h) { return valoresFijos.indexOf(h) === -1; });
+    pintarHiceExtra();
+
+    campoAprendi.value = registro.aprendi || '';
+
+    if (registro.emocion) {
+      grupoEmociones.querySelectorAll('.zl-emocion').forEach(function (b) {
+        if (b.dataset.valor === registro.emocion) b.classList.add('active');
+      });
+    }
+
+    campoManana.value = registro.manana || '';
+
+    respuestas.hice = hice;
+    respuestas.aprendi = registro.aprendi || '';
+    respuestas.emocion = registro.emocion || '';
+    respuestas.manana = registro.manana || '';
+    BLOQUES.forEach(marcarTarjeta);
+
+    var boton = document.getElementById('btnTerminar');
+    boton.disabled = true;
+    boton.textContent = '✅ Tu día ya está cerrado';
+    return true;
+  }
+
+  /* ============================================
+     TERMINAR LA RUTINA
+     ============================================ */
+  document.getElementById('btnTerminar').addEventListener('click', function () {
+    var rutinas = D.leerDato(D.CLAVES.RUTINAS);
+
+    // Doble seguro: nunca dos rutinas de la luna el mismo día
+    if (rutinas.luna.completadaHoy && D.esHoy(rutinas.luna.fechaUltima)) return;
+
+    var hoy = D.hoyISO();
+
+    // ====== La racha ======
+    if (D.esAyer(rutinas.luna.fechaUltima)) {
+      rutinas.luna.racha = (rutinas.luna.racha || 0) + 1;
+    } else {
+      rutinas.luna.racha = 1;
+    }
+
+    rutinas.luna.completadaHoy = true;
+    rutinas.luna.fechaUltima = hoy;
+    rutinas.luna.historial.push({
+      fecha: hoy,
+      hice: respuestas.hice.slice(),
+      aprendi: respuestas.aprendi.trim(),
+      emocion: respuestas.emocion,
+      manana: respuestas.manana.trim()
+    });
+    rutinas.luna.registroEmocional.push({
+      fecha: hoy,
+      emocion: respuestas.emocion,
+      etiqueta: respuestas.emocion
+    });
+
+    D.guardarDato(D.CLAVES.RUTINAS, rutinas);
+
+    // ====== Celebración: la luna sube ======
+    try {
+      if (window.zocaSound) window.zocaSound.nivelCompleto();
+      if (window.zocaAnim)  window.zocaAnim.lanzarConfeti(30);
+    } catch (e) {
+      console.error('Rutina de la luna: falló la celebración', e);
+    }
+
+    var luna = document.createElement('div');
+    luna.className = 'luna-celebra';
+    luna.textContent = '🌙';
+    luna.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(luna);
+
+    var mensaje = document.createElement('div');
+    mensaje.className = 'luna-mensaje-final';
+    mensaje.setAttribute('role', 'status');
+    mensaje.textContent = 'Tu día se cierra en paz. Descansa 🌙';
+    document.body.appendChild(mensaje);
+
+    this.disabled = true;
+
+    // Al bosque, donde ya puede plantar su árbol de hoy
+    setTimeout(function () {
+      window.location.href = 'bosque.html';
+    }, 1500);
+  });
+
+  /* ============================================
+     ARRANQUE
+     ============================================ */
+  pintarRacha();
+  cargarRutinaDeHoy();
+  revisarCompleto();
+
+  // El Cóndor vigila el tiempo en pantalla
+  ZocaCondor.init();
+</script>
+
+</body>
+</html>

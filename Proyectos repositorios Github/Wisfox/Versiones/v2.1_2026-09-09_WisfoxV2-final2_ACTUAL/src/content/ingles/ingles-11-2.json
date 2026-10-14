@@ -1,0 +1,199 @@
+{
+  "id": "ingles-11-2",
+  "materia": "ingles",
+  "grado": "11",
+  "grado_nombre": "Once",
+  "periodo": 2,
+  "periodo_label": { "es": "Periodo II", "en": "Term II" },
+  "titulo": "Technology and the World We Live In",
+  "titulo_es": "La tecnología y el mundo en que vivimos",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Produzco textos informativos y expositivos sobre procesos tecnológicos. Explico causas, efectos y contrastes, y describo transformaciones a lo largo del tiempo.",
+  "competencias": "Usar la voz pasiva en los tiempos principales; construir condicionales de tipo cero y uno; enlazar ideas con conectores de causa, efecto y contraste; describir cambios tecnológicos y sociales.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Before and After Digitalization",
+    "descripcion_es": "En grupos, los estudiantes comparan un ámbito de la vida (la música, la banca, la educación) antes y después de la digitalización, con un informe en voz pasiva y conectores de causa y efecto.",
+    "descripcion_en": "In groups, students compare one area of life (music, banking, education) before and after digitalization, in a report written with the passive voice and cause-and-effect connectors."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-11-2-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Voz pasiva: formación y uso",
+      "t_en": "Passive voice: form and use",
+      "d": "16 min",
+      "content_es": "<h4>Cómo se forma</h4><p><b>to be (en el tiempo correspondiente) + participio pasado</b>.</p><p><i>Engineers <b>design</b> the system.</i> (activa) → <i>The system <b>is designed</b> by engineers.</i> (pasiva)</p><h4>Por qué se usa</h4><ul><li>El agente es desconocido o irrelevante: <i>The data was deleted.</i></li><li>Interesa más el objeto que quien actúa: <i>The vaccine was developed in 2020.</i></li><li>Registro impersonal en informes y textos científicos: <i>The samples were analyzed.</i></li></ul><h4>El complemento agente</h4><p>Se introduce con <b>by</b> y solo se pone si aporta información: <i>designed <b>by</b> Turing</i>. El instrumento se introduce con <b>with</b>: <i>cut <b>with</b> a laser</i>.</p><h4>Requisito</h4><p>Solo los verbos <b>transitivos</b> (con objeto directo) admiten pasiva. <i>Arrive</i>, <i>happen</i> y <i>exist</i> no la tienen.</p>",
+      "content_en": "<h4>How it is formed</h4><p><b>to be (in the corresponding tense) + past participle</b>.</p><p><i>Engineers <b>design</b> the system.</i> (active) → <i>The system <b>is designed</b> by engineers.</i> (passive)</p><h4>Why it is used</h4><ul><li>The agent is unknown or irrelevant: <i>The data was deleted.</i></li><li>The object matters more than who acts: <i>The vaccine was developed in 2020.</i></li><li>Impersonal register in reports and scientific texts: <i>The samples were analyzed.</i></li></ul><h4>The agent</h4><p>It is introduced with <b>by</b> and only stated when it adds information: <i>designed <b>by</b> Turing</i>. The instrument takes <b>with</b>: <i>cut <b>with</b> a laser</i>.</p><h4>Requirement</h4><p>Only <b>transitive</b> verbs (with a direct object) have a passive. <i>Arrive</i>, <i>happen</i> and <i>exist</i> do not.</p>",
+      "fichas": [
+        { "t": "be + participio", "d": "La fórmula de toda pasiva, en cualquier tiempo.", "d_en": "The formula of every passive, in any tense." },
+        { "t": "by vs with", "d": "by introduce al agente; with al instrumento.", "d_en": "by introduces the agent; with the instrument." },
+        { "t": "Solo verbos transitivos", "d": "happen y arrive no tienen pasiva.", "d_en": "happen and arrive have no passive." },
+        { "t": "Agente omitido", "d": "Si es obvio o irrelevante, se omite el by.", "d_en": "If it is obvious or irrelevant, the by phrase is dropped." }
+      ],
+      "quiz": [
+        { "q": "«The report ___ every Monday.»", "q_en": "\"The report ___ every Monday.\"", "o": ["is published", "publishes", "is publishing", "publish"], "o_en": ["is published", "publishes", "is publishing", "publish"], "a": 0, "why": "El informe recibe la acción: pasiva con be + participio.", "why_en": "The report receives the action: passive with be + participle." },
+        { "q": "«The sculpture was carved ___ a chisel.»", "q_en": "\"The sculpture was carved ___ a chisel.\"", "o": ["by", "with", "for", "from"], "o_en": ["by", "with", "for", "from"], "a": 1, "why": "El instrumento se introduce con with.", "why_en": "The instrument is introduced with with." },
+        { "q": "¿Cuál verbo NO admite pasiva?", "q_en": "Which verb has NO passive?", "o": ["build", "write", "happen", "design"], "o_en": ["build", "write", "happen", "design"], "a": 2, "why": "Happen es intransitivo: no tiene objeto directo.", "why_en": "Happen is intransitive: it has no direct object." }
+      ]
+    },
+    {
+      "id": "ingles-11-2-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "La pasiva en todos los tiempos",
+      "t_en": "The passive in all tenses",
+      "d": "16 min",
+      "content_es": "<h4>La tabla completa</h4><ul><li>Presente simple: <i>is / are + participio</i> — <i>The data is stored.</i></li><li>Pasado simple: <i>was / were</i> — <i>The system was updated.</i></li><li>Presente continuo: <i>is / are being</i> — <i>The site is being redesigned.</i></li><li>Pasado continuo: <i>was / were being</i> — <i>It was being tested.</i></li><li>Presente perfecto: <i>has / have been</i> — <i>The files have been deleted.</i></li><li>Pasado perfecto: <i>had been</i> — <i>It had been sent before noon.</i></li><li>Futuro: <i>will be</i> — <i>The app will be launched in May.</i></li><li>Con modal: <i>modal + be</i> — <i>It must be checked. / It can be improved.</i></li><li>Con modal perfecto: <i>modal + have been</i> — <i>It could have been avoided.</i></li></ul><h4>Regla constante</h4><p>Lo único que cambia es la forma de <b>be</b>; el participio nunca varía.</p><h4>Ojo</h4><p>No existe pasiva del futuro continuo ni del perfecto continuo en uso normal: se prefiere reformular en activa.</p>",
+      "content_en": "<h4>The full table</h4><ul><li>Present simple: <i>is / are + participle</i> — <i>The data is stored.</i></li><li>Past simple: <i>was / were</i> — <i>The system was updated.</i></li><li>Present continuous: <i>is / are being</i> — <i>The site is being redesigned.</i></li><li>Past continuous: <i>was / were being</i> — <i>It was being tested.</i></li><li>Present perfect: <i>has / have been</i> — <i>The files have been deleted.</i></li><li>Past perfect: <i>had been</i> — <i>It had been sent before noon.</i></li><li>Future: <i>will be</i> — <i>The app will be launched in May.</i></li><li>With a modal: <i>modal + be</i> — <i>It must be checked. / It can be improved.</i></li><li>With a perfect modal: <i>modal + have been</i> — <i>It could have been avoided.</i></li></ul><h4>Constant rule</h4><p>The only thing that changes is the form of <b>be</b>; the participle never varies.</p><h4>Careful</h4><p>There is no normal passive for the future continuous or the perfect continuous: rephrase in the active instead.</p>",
+      "fichas": [
+        { "t": "is being + participio", "d": "Pasiva del presente continuo.", "d_en": "Passive of the present continuous." },
+        { "t": "has been + participio", "d": "Pasiva del presente perfecto.", "d_en": "Passive of the present perfect." },
+        { "t": "modal + be + participio", "d": "must be done, can be improved.", "d_en": "must be done, can be improved." },
+        { "t": "could have been + participio", "d": "Pasiva del modal perfecto.", "d_en": "Passive of the perfect modal." },
+        { "t": "Solo cambia be", "d": "El participio se mantiene igual en todos los tiempos.", "d_en": "The participle stays the same in every tense." }
+      ],
+      "quiz": [
+        { "q": "«The website ___ right now.»", "q_en": "\"The website ___ right now.\"", "o": ["is updated", "is being updated", "has been updated", "updates"], "o_en": ["is updated", "is being updated", "has been updated", "updates"], "a": 1, "why": "Right now pide la pasiva del presente continuo.", "why_en": "Right now calls for the present continuous passive." },
+        { "q": "«All the tests ___ before the launch.»", "q_en": "\"All the tests ___ before the launch.\"", "o": ["must be completed", "must completed", "must to be completed", "must been completed"], "o_en": ["must be completed", "must completed", "must to be completed", "must been completed"], "a": 0, "why": "Con modal la pasiva es modal + be + participio.", "why_en": "With a modal the passive is modal + be + participle." },
+        { "q": "«The bug ___ if the code had been reviewed.»", "q_en": "\"The bug ___ if the code had been reviewed.\"", "o": ["could be found", "could have been found", "can be found", "could found"], "o_en": ["could be found", "could have been found", "can be found", "could found"], "a": 1, "why": "Posibilidad pasada no realizada en pasiva.", "why_en": "An unrealized past possibility in the passive." }
+      ]
+    },
+    {
+      "id": "ingles-11-2-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Pasiva con dos objetos y estructuras impersonales",
+      "t_en": "Passive with two objects and impersonal structures",
+      "d": "14 min",
+      "content_es": "<h4>Verbos con dos objetos</h4><p>Verbos como <b>give, send, offer, tell, show, teach, pay</b> tienen dos objetos y por eso admiten <b>dos pasivas</b>:</p><p><i>They gave <b>the students</b> <b>a certificate</b>.</i><br>→ <i><b>The students were given</b> a certificate.</i> (la más natural)<br>→ <i><b>A certificate was given</b> to the students.</i></p><h4>Estructuras impersonales</h4><p>Muy usadas en noticias y textos académicos:</p><ul><li><i><b>It is said that</b> the system is safe.</i></li><li><i>The system <b>is said to be</b> safe.</i></li><li><i><b>It was reported that</b> the data had been leaked.</i></li></ul><p>Verbos frecuentes: <b>say, believe, think, know, report, expect, consider, claim</b>.</p><h4>Ojo</h4><p>La versión con <i>It is said that…</i> es la más sencilla de construir; la otra exige mover el sujeto y usar <b>to + infinitivo</b>.</p>",
+      "content_en": "<h4>Verbs with two objects</h4><p>Verbs like <b>give, send, offer, tell, show, teach, pay</b> have two objects and therefore allow <b>two passives</b>:</p><p><i>They gave <b>the students</b> <b>a certificate</b>.</i><br>→ <i><b>The students were given</b> a certificate.</i> (the more natural one)<br>→ <i><b>A certificate was given</b> to the students.</i></p><h4>Impersonal structures</h4><p>Very common in news and academic texts:</p><ul><li><i><b>It is said that</b> the system is safe.</i></li><li><i>The system <b>is said to be</b> safe.</i></li><li><i><b>It was reported that</b> the data had been leaked.</i></li></ul><p>Frequent verbs: <b>say, believe, think, know, report, expect, consider, claim</b>.</p><h4>Careful</h4><p>The <i>It is said that…</i> version is the easiest to build; the other requires moving the subject and using <b>to + infinitive</b>.</p>",
+      "fichas": [
+        { "t": "Dos pasivas", "d": "Con give, send, offer: la persona suele ir primero.", "d_en": "With give, send, offer: the person usually comes first." },
+        { "t": "It is said that…", "d": "Estructura impersonal para atribuir sin nombrar la fuente.", "d_en": "Impersonal structure to attribute without naming the source." },
+        { "t": "is said to be", "d": "Alternativa con to + infinitivo.", "d_en": "Alternative with to + infinitive." },
+        { "t": "It was reported that…", "d": "Muy usada en el registro periodístico.", "d_en": "Very common in journalistic register." }
+      ],
+      "quiz": [
+        { "q": "«They offered her a scholarship.» → «She ___ a scholarship.»", "q_en": "\"They offered her a scholarship.\" → \"She ___ a scholarship.\"", "o": ["was offered", "offered", "was offering", "has offered"], "o_en": ["was offered", "offered", "was offering", "has offered"], "a": 0, "why": "En la pasiva de dos objetos la persona pasa a sujeto.", "why_en": "In a two-object passive the person becomes the subject." },
+        { "q": "«___ that the app collects too much data.»", "q_en": "\"___ that the app collects too much data.\"", "o": ["It says", "It is said", "Is said", "They said it"], "o_en": ["It says", "It is said", "Is said", "They said it"], "a": 1, "why": "La estructura impersonal es It is said that…", "why_en": "The impersonal structure is It is said that…" },
+        { "q": "«The company ___ to be the market leader.»", "q_en": "\"The company ___ to be the market leader.\"", "o": ["is believed", "believes", "is believing", "believed"], "o_en": ["is believed", "believes", "is believing", "believed"], "a": 0, "why": "Estructura pasiva impersonal con to + infinitivo.", "why_en": "Impersonal passive structure with to + infinitive." }
+      ]
+    },
+    {
+      "id": "ingles-11-2-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Condicional cero y primero: hechos y predicciones",
+      "t_en": "Zero and first conditional: facts and predictions",
+      "d": "14 min",
+      "content_es": "<h4>Condicional cero: leyes y procesos</h4><p><b>If + presente, presente</b>. Ideal para explicar cómo funciona algo:</p><p><i>If you overload the circuit, the fuse burns out.</i> · <i>When data is encrypted, it becomes unreadable.</i></p><h4>Primer condicional: consecuencias probables</h4><p><b>If + presente, will + base</b>:</p><p><i>If we adopt this system, we will save time.</i></p><h4>Variantes del resultado</h4><p>Modal (<i>can, may, should</i>), imperativo o <b>be going to</b>: <i>If it fails, restart the server.</i></p><h4>Otros conectores</h4><p><b>unless</b>, <b>as long as</b>, <b>provided that</b>, <b>in case</b>, <b>even if</b>, <b>otherwise</b>.</p><p><i>The update will run <b>provided that</b> the device is charged.</i> · <i>Back up your files; <b>otherwise</b>, you may lose them.</i></p><h4>Regla</h4><p>En la parte de la condición no va <b>will</b> nunca.</p>",
+      "content_en": "<h4>Zero conditional: laws and processes</h4><p><b>If + present, present</b>. Ideal for explaining how something works:</p><p><i>If you overload the circuit, the fuse burns out.</i> · <i>When data is encrypted, it becomes unreadable.</i></p><h4>First conditional: likely consequences</h4><p><b>If + present, will + base</b>:</p><p><i>If we adopt this system, we will save time.</i></p><h4>Result variants</h4><p>A modal (<i>can, may, should</i>), an imperative or <b>be going to</b>: <i>If it fails, restart the server.</i></p><h4>Other connectors</h4><p><b>unless</b>, <b>as long as</b>, <b>provided that</b>, <b>in case</b>, <b>even if</b>, <b>otherwise</b>.</p><p><i>The update will run <b>provided that</b> the device is charged.</i> · <i>Back up your files; <b>otherwise</b>, you may lose them.</i></p><h4>Rule</h4><p>The condition half never takes <b>will</b>.</p>",
+      "fichas": [
+        { "t": "Condicional cero", "d": "Presente + presente: relación siempre cierta.", "d_en": "Present + present: an always-true relation." },
+        { "t": "provided that", "d": "Siempre que se cumpla la condición.", "d_en": "On condition that something is met." },
+        { "t": "otherwise", "d": "De lo contrario: introduce la consecuencia negativa.", "d_en": "If not: introduces the negative consequence." },
+        { "t": "even if", "d": "Incluso si: la condición no cambia el resultado.", "d_en": "Even if: the condition does not change the result." },
+        { "t": "Sin will en la condición", "d": "Vale para if, unless, provided that y demás.", "d_en": "Applies to if, unless, provided that and the rest." }
+      ],
+      "quiz": [
+        { "q": "«If you heat metal, it ___.»", "q_en": "\"If you heat metal, it ___.\"", "o": ["will expand", "expands", "expanded", "would expand"], "o_en": ["will expand", "expands", "expanded", "would expand"], "a": 1, "why": "Es una ley física: condicional cero.", "why_en": "It is a physical law: zero conditional." },
+        { "q": "«Save your work; ___, you'll lose it.»", "q_en": "\"Save your work; ___, you'll lose it.\"", "o": ["unless", "otherwise", "provided that", "even if"], "o_en": ["unless", "otherwise", "provided that", "even if"], "a": 1, "why": "Otherwise introduce lo que pasará de lo contrario.", "why_en": "Otherwise introduces what will happen if not." },
+        { "q": "«The system will work ___ you follow the steps.»", "q_en": "\"The system will work ___ you follow the steps.\"", "o": ["unless", "as long as", "otherwise", "even if not"], "o_en": ["unless", "as long as", "otherwise", "even if not"], "a": 1, "why": "As long as expresa la condición que debe cumplirse.", "why_en": "As long as expresses the condition that must hold." }
+      ]
+    },
+    {
+      "id": "ingles-11-2-5",
+      "num": 5,
+      "tipo": "grammar",
+      "t": "Conectores de causa, efecto y contraste",
+      "t_en": "Connectors of cause, effect and contrast",
+      "d": "14 min",
+      "content_es": "<h4>Causa</h4><ul><li><b>because / since / as</b> + oración: <i>because the network failed</i></li><li><b>because of / due to / owing to</b> + sustantivo: <i>due to a power cut</i></li><li><b>The reason for … is that …</b></li></ul><h4>Efecto</h4><ul><li><b>so</b> + oración (informal), <b>therefore / thus / consequently / as a result</b> (formal, con coma)</li><li><b>lead to / result in / bring about / cause</b> + sustantivo o gerundio: <i>Automation has led to job losses.</i></li></ul><h4>Contraste</h4><ul><li><b>although / even though / though</b> + oración</li><li><b>despite / in spite of</b> + sustantivo o gerundio</li><li><b>however / nevertheless / on the other hand</b> abren oración, con coma</li><li><b>whereas / while</b> comparan dos sujetos</li></ul><h4>Errores frecuentes</h4><p>No se combinan <i>although</i> y <i>but</i>, ni <i>because</i> y <i>so</i>. Y <b>despite</b> nunca lleva <i>of</i>; <b>in spite</b> sí: <i>in spite of</i>.</p>",
+      "content_en": "<h4>Cause</h4><ul><li><b>because / since / as</b> + clause: <i>because the network failed</i></li><li><b>because of / due to / owing to</b> + noun: <i>due to a power cut</i></li><li><b>The reason for … is that …</b></li></ul><h4>Effect</h4><ul><li><b>so</b> + clause (informal), <b>therefore / thus / consequently / as a result</b> (formal, with a comma)</li><li><b>lead to / result in / bring about / cause</b> + noun or gerund: <i>Automation has led to job losses.</i></li></ul><h4>Contrast</h4><ul><li><b>although / even though / though</b> + clause</li><li><b>despite / in spite of</b> + noun or gerund</li><li><b>however / nevertheless / on the other hand</b> open a sentence, with a comma</li><li><b>whereas / while</b> compare two subjects</li></ul><h4>Common mistakes</h4><p>Do not combine <i>although</i> and <i>but</i>, nor <i>because</i> and <i>so</i>. And <b>despite</b> never takes <i>of</i>; <b>in spite</b> does: <i>in spite of</i>.</p>",
+      "fichas": [
+        { "t": "despite ≠ despite of", "d": "Se dice despite the rain o in spite of the rain.", "d_en": "Say despite the rain or in spite of the rain." },
+        { "t": "lead to + sustantivo", "d": "Provocar un resultado: led to a change.", "d_en": "To cause a result: led to a change." },
+        { "t": "therefore con coma", "d": "Abre oración formal: Therefore, the plan changed.", "d_en": "Opens a formal sentence: Therefore, the plan changed." },
+        { "t": "whereas", "d": "Compara dos sujetos que se contraponen.", "d_en": "Compares two contrasting subjects." },
+        { "t": "result in", "d": "Dar como resultado. Lleva sustantivo o gerundio.", "d_en": "To have as a result. It takes a noun or gerund." }
+      ],
+      "quiz": [
+        { "q": "«___ the technical issues, the launch was postponed.»", "q_en": "\"___ the technical issues, the launch was postponed.\"", "o": ["Because", "Due to", "So", "Although"], "o_en": ["Because", "Due to", "So", "Although"], "a": 1, "why": "Le sigue un sustantivo: due to.", "why_en": "A noun follows: due to." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["Despite of the cost", "Despite the cost", "In spite the cost", "Despite of costing"], "o_en": ["Despite of the cost", "Despite the cost", "In spite the cost", "Despite of costing"], "a": 1, "why": "Despite nunca lleva of; in spite sí lo lleva.", "why_en": "Despite never takes of; in spite does." },
+        { "q": "«Automation has ___ significant job losses.»", "q_en": "\"Automation has ___ significant job losses.\"", "o": ["led to", "led", "resulted", "caused to"], "o_en": ["led to", "led", "resulted", "caused to"], "a": 0, "why": "Lead siempre va con la preposición to.", "why_en": "Lead always takes the preposition to." }
+      ]
+    },
+    {
+      "id": "ingles-11-2-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Tecnología, innovación y digitalización",
+      "t_en": "Technology, innovation and digitalization",
+      "d": "14 min",
+      "content_es": "<h4>Innovación</h4><p><b>innovation</b>, <b>breakthrough</b>, <b>prototype</b>, <b>patent</b>, <b>startup</b>, <b>scalability</b>, <b>disruption</b>, <b>upgrade</b>, <b>obsolete</b> (obsoleto), <b>state-of-the-art</b> (de última generación).</p><h4>Digitalización</h4><p><b>digitalization</b>, <b>cloud computing</b>, <b>streaming</b>, <b>e-commerce</b>, <b>remote work</b>, <b>paperless</b>, <b>automation</b>, <b>encryption</b>, <b>open source</b>, <b>user experience</b>.</p><h4>Antes y después</h4><p><i>People <b>used to</b> rent DVDs; now everything <b>is streamed</b>. · Payments <b>were made</b> in cash; today they <b>are processed</b> digitally.</i></p><h4>Describir el cambio</h4><p><b>shift</b> (cambio de tendencia), <b>transform</b>, <b>replace</b>, <b>adopt</b>, <b>phase out</b> (retirar gradualmente), <b>catch on</b>, <b>become widespread</b>, <b>go digital</b>.</p><p>Ojo: <b>actual</b> significa real, no actual; se dice <i>current</i>.</p>",
+      "content_en": "<h4>Innovation</h4><p><b>innovation</b>, <b>breakthrough</b>, <b>prototype</b>, <b>patent</b>, <b>startup</b>, <b>scalability</b>, <b>disruption</b>, <b>upgrade</b>, <b>obsolete</b>, <b>state-of-the-art</b>.</p><h4>Digitalization</h4><p><b>digitalization</b>, <b>cloud computing</b>, <b>streaming</b>, <b>e-commerce</b>, <b>remote work</b>, <b>paperless</b>, <b>automation</b>, <b>encryption</b>, <b>open source</b>, <b>user experience</b>.</p><h4>Before and after</h4><p><i>People <b>used to</b> rent DVDs; now everything <b>is streamed</b>. · Payments <b>were made</b> in cash; today they <b>are processed</b> digitally.</i></p><h4>Describing change</h4><p><b>shift</b>, <b>transform</b>, <b>replace</b>, <b>adopt</b>, <b>phase out</b>, <b>catch on</b>, <b>become widespread</b>, <b>go digital</b>.</p><p>Careful: <b>actual</b> means real, not current.</p>",
+      "fichas": [
+        { "t": "state-of-the-art", "d": "De última generación, lo más avanzado disponible.", "d_en": "The most advanced currently available." },
+        { "t": "phase out", "d": "Retirar algo de forma gradual.", "d_en": "To withdraw something gradually." },
+        { "t": "disruption", "d": "Cambio que transforma por completo un sector.", "d_en": "A change that completely transforms a sector." },
+        { "t": "actual vs current", "d": "actual = real; current = actual en el tiempo.", "d_en": "actual = real; current = happening now." },
+        { "t": "obsolete", "d": "Que quedó desactualizado y ya no se usa.", "d_en": "Outdated and no longer in use." }
+      ],
+      "quiz": [
+        { "q": "«That technology is now ___; nobody uses it.»", "q_en": "\"That technology is now ___; nobody uses it.\"", "o": ["state-of-the-art", "obsolete", "scalable", "open source"], "o_en": ["state-of-the-art", "obsolete", "scalable", "open source"], "a": 1, "why": "Obsolete es lo que quedó desactualizado.", "why_en": "Obsolete means outdated and unused." },
+        { "q": "«The company will ___ the old system next year.»", "q_en": "\"The company will ___ the old system next year.\"", "o": ["phase out", "catch on", "go digital", "scale"], "o_en": ["phase out", "catch on", "go digital", "scale"], "a": 0, "why": "Phase out es retirar algo gradualmente.", "why_en": "Phase out means to withdraw something gradually." },
+        { "q": "«___ significa real, no actual.»", "q_en": "Which word means \"real\", not \"current\"?", "o": ["current", "actual", "recent", "modern"], "o_en": ["current", "actual", "recent", "modern"], "a": 1, "why": "Actual es un falso amigo: significa real o verdadero.", "why_en": "Actual is a false friend for Spanish speakers: it means real." }
+      ]
+    },
+    {
+      "id": "ingles-11-2-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Fechas, números y caracteres en textos técnicos",
+      "t_en": "Dates, numbers and characters in technical texts",
+      "d": "12 min",
+      "content_es": "<h4>Números grandes y datos</h4><p>1,500 → <i>one thousand five hundred</i> · 2.5 million · 75% <i>seventy-five percent</i> · 1/3 <i>one third</i> · 3:1 <i>three to one</i>.</p><p>En inglés la coma separa los miles y el punto marca los decimales, al revés del español: <b>1,250.75</b>.</p><h4>Fechas en informes</h4><p>Formato internacional recomendado: <i>2026-03-15</i> o con el mes escrito: <i>15 March 2026</i>.</p><h4>Caracteres</h4><p><b>#</b> hash · <b>@</b> at · <b>_</b> underscore · <b>/</b> slash · <b>\\</b> backslash · <b>&amp;</b> ampersand · <b>*</b> asterisk · <b>%</b> percent · <b>+</b> plus · <b>=</b> equals · <b>&lt; &gt;</b> angle brackets.</p><h4>Describir cifras</h4><p><i>Sales rose <b>by</b> 20%. · The figure fell <b>to</b> 3 million. · It doubled / tripled. · There was a <b>sharp increase</b> / a <b>slight decline</b>.</i></p><p>Ojo: <i>rise by</i> es cuánto subió; <i>rise to</i> es hasta dónde llegó.</p>",
+      "content_en": "<h4>Large numbers and data</h4><p>1,500 → <i>one thousand five hundred</i> · 2.5 million · 75% <i>seventy-five percent</i> · 1/3 <i>one third</i> · 3:1 <i>three to one</i>.</p><p>In English the comma separates thousands and the period marks decimals: <b>1,250.75</b>.</p><h4>Dates in reports</h4><p>Recommended international format: <i>2026-03-15</i> or with the month written out: <i>15 March 2026</i>.</p><h4>Characters</h4><p><b>#</b> hash · <b>@</b> at · <b>_</b> underscore · <b>/</b> slash · <b>\\</b> backslash · <b>&amp;</b> ampersand · <b>*</b> asterisk · <b>%</b> percent · <b>+</b> plus · <b>=</b> equals · <b>&lt; &gt;</b> angle brackets.</p><h4>Describing figures</h4><p><i>Sales rose <b>by</b> 20%. · The figure fell <b>to</b> 3 million. · It doubled / tripled. · There was a <b>sharp increase</b> / a <b>slight decline</b>.</i></p><p>Careful: <i>rise by</i> is how much it went up; <i>rise to</i> is the level reached.</p>",
+      "fichas": [
+        { "t": "1,250.75", "d": "Coma para miles y punto para decimales.", "d_en": "Comma for thousands and period for decimals." },
+        { "t": "rise by vs rise to", "d": "by = cuánto subió; to = hasta qué cifra llegó.", "d_en": "by = how much it went up; to = the level reached." },
+        { "t": "sharp / slight", "d": "Fuerte vs leve: describen la magnitud del cambio.", "d_en": "Steep vs small: they describe the size of the change." },
+        { "t": "angle brackets", "d": "Los signos < y > usados en código y etiquetas.", "d_en": "The < and > signs used in code and tags." }
+      ],
+      "quiz": [
+        { "q": "En inglés, «1,250.75» significa…", "q_en": "In English, \"1,250.75\" means…", "o": ["Mil doscientos cincuenta con setenta y cinco", "Un millón doscientos cincuenta mil", "1.25075", "125,075"], "o_en": ["One thousand two hundred fifty point seven five", "One million two hundred fifty thousand", "1.25075", "125,075"], "a": 0, "why": "La coma separa miles y el punto marca los decimales.", "why_en": "The comma separates thousands and the period marks decimals." },
+        { "q": "«Revenue rose ___ 15% last quarter.»", "q_en": "\"Revenue rose ___ 15% last quarter.\"", "o": ["to", "by", "in", "at"], "o_en": ["to", "by", "in", "at"], "a": 1, "why": "By indica la magnitud del aumento.", "why_en": "By indicates the size of the increase." },
+        { "q": "¿Cómo se lee «&»?", "q_en": "How do you read \"&\"?", "o": ["and sign", "ampersand", "asterisk", "at"], "o_en": ["and sign", "ampersand", "asterisk", "at"], "a": 1, "why": "El símbolo & se llama ampersand.", "why_en": "The & symbol is called ampersand." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-11-2-repaso",
+    "titulo": "Repaso — Technology and the World We Live In",
+    "titulo_en": "Review — Technology and the World We Live In",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>La <b>voz pasiva</b> es la herramienta del registro técnico: pone el foco en el proceso, no en quién lo hace. Se combina con los <b>condicionales</b> para explicar causas y consecuencias y con los <b>conectores</b> para articular el texto.</p><h4>Puntos gramaticales</h4><ul><li>Pasiva = be (en el tiempo que sea) + participio. Solo cambia be.</li><li>by introduce el agente; with, el instrumento.</li><li>Con modales: modal + be + participio; modal perfecto: modal + have been + participio.</li><li>It is said that… y is said to be… son las estructuras impersonales.</li><li>despite + sustantivo, sin of; although + oración.</li></ul><h4>Vocabulario</h4><p>Innovación y digitalización, verbos de cambio, formato de cifras y caracteres técnicos.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The <b>passive voice</b> is the tool of technical register: it puts the focus on the process, not on who performs it. It combines with <b>conditionals</b> to explain causes and consequences and with <b>connectors</b> to articulate the text.</p><h4>Grammar points</h4><ul><li>Passive = be (in any tense) + participle. Only be changes.</li><li>by introduces the agent; with, the instrument.</li><li>With modals: modal + be + participle; perfect modal: modal + have been + participle.</li><li>It is said that… and is said to be… are the impersonal structures.</li><li>despite + noun, with no of; although + clause.</li></ul><h4>Vocabulary</h4><p>Innovation and digitalization, verbs of change, number formatting and technical characters.</p>",
+    "puntos_clave": [
+      ["Solo los verbos transitivos tienen pasiva.", "Only transitive verbs have a passive."],
+      ["by = agente; with = instrumento.", "by = agent; with = instrument."],
+      ["must be checked, could have been avoided.", "must be checked, could have been avoided."],
+      ["despite the cost, sin of.", "despite the cost, with no of."],
+      ["Después de if nunca va will.", "After if there is never will."],
+      ["En inglés la coma es de miles y el punto de decimales.", "In English the comma marks thousands and the period decimals."]
+    ],
+    "preguntas": [
+      { "q": "«The new protocol ___ last month.»", "q_en": "\"The new protocol ___ last month.\"", "o": ["is approved", "was approved", "has approved", "approved"], "o_en": ["is approved", "was approved", "has approved", "approved"], "a": 1, "why": "Last month pide pasiva en pasado simple.", "why_en": "Last month calls for the past simple passive." },
+      { "q": "«The servers ___ right now.»", "q_en": "\"The servers ___ right now.\"", "o": ["are maintained", "are being maintained", "have been maintained", "maintain"], "o_en": ["are maintained", "are being maintained", "have been maintained", "maintain"], "a": 1, "why": "Right now pide la pasiva del presente continuo.", "why_en": "Right now calls for the present continuous passive." },
+      { "q": "«All passwords ___ regularly.»", "q_en": "\"All passwords ___ regularly.\"", "o": ["should changed", "should be changed", "should to be changed", "should being changed"], "o_en": ["should changed", "should be changed", "should to be changed", "should being changed"], "a": 1, "why": "Con modal la pasiva es modal + be + participio.", "why_en": "With a modal the passive is modal + be + participle." },
+      { "q": "«___ that the platform will double its users.»", "q_en": "\"___ that the platform will double its users.\"", "o": ["It expects", "It is expected", "Is expected", "They expects"], "o_en": ["It expects", "It is expected", "Is expected", "They expects"], "a": 1, "why": "Estructura impersonal: It is expected that…", "why_en": "Impersonal structure: It is expected that…" },
+      { "q": "«If you compress the file, it ___ less space.»", "q_en": "\"If you compress the file, it ___ less space.\"", "o": ["will take", "takes", "would take", "took"], "o_en": ["will take", "takes", "would take", "took"], "a": 1, "why": "Es una relación siempre cierta: condicional cero.", "why_en": "It is an always-true relation: zero conditional." },
+      { "q": "«___ the high cost, the project continued.»", "q_en": "\"___ the high cost, the project continued.\"", "o": ["Although", "Despite", "However", "Because"], "o_en": ["Although", "Despite", "However", "Because"], "a": 1, "why": "Le sigue un sustantivo: despite.", "why_en": "A noun follows: despite." },
+      { "q": "«The old software will be ___ next year.»", "q_en": "\"The old software will be ___ next year.\"", "o": ["phased out", "caught on", "scaled up", "gone digital"], "o_en": ["phased out", "caught on", "scaled up", "gone digital"], "a": 0, "why": "Phase out es retirar gradualmente.", "why_en": "Phase out means to withdraw gradually." },
+      { "q": "«Downloads increased ___ 40% in June.»", "q_en": "\"Downloads increased ___ 40% in June.\"", "o": ["to", "by", "at", "on"], "o_en": ["to", "by", "at", "on"], "a": 1, "why": "By indica la magnitud del aumento.", "why_en": "By indicates the size of the increase." }
+    ]
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "id": "ingles-7-2",
+  "materia": "ingles",
+  "grado": "7",
+  "grado_nombre": "Séptimo",
+  "periodo": 2,
+  "periodo_label": { "es": "Periodo II", "en": "Term II" },
+  "titulo": "The Best Moments in History!",
+  "titulo_es": "Los mejores momentos de la historia",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Narro hechos pasados en secuencia usando verbos regulares e irregulares. Comprendo textos cortos sobre acontecimientos históricos y culturales.",
+  "competencias": "Usar el pasado simple en sus tres formas; distinguir verbos regulares e irregulares; preguntar por hechos pasados con question words; hablar de fechas, lugares de la ciudad y géneros de cine.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "A Moment in History",
+    "descripcion_es": "En parejas, los estudiantes eligen un acontecimiento histórico o una película basada en hechos reales y presentan una línea de tiempo narrada en pasado simple, con al menos cinco verbos irregulares.",
+    "descripcion_en": "In pairs, students choose a historical event or a film based on real events and present a timeline narrated in the simple past, using at least five irregular verbs."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-7-2-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Pasado simple: afirmativo, negativo e interrogativo",
+      "t_en": "Simple past: affirmative, negative and interrogative",
+      "d": "14 min",
+      "content_es": "<h4>Para qué sirve</h4><p>Habla de acciones <b>terminadas</b> en un momento concreto del pasado: <i>I watched a movie yesterday.</i></p><h4>Las tres formas</h4><ul><li>Afirmativo: verbo en pasado — <i>She <b>played</b> tennis.</i></li><li>Negativo: <b>didn't</b> + verbo base — <i>She <b>didn't play</b> tennis.</i></li><li>Pregunta: <b>Did</b> + sujeto + verbo base — <i><b>Did</b> she <b>play</b> tennis?</i></li></ul><h4>La regla de oro</h4><p>El pasado se marca <b>una sola vez</b>. Si aparece <b>did</b> o <b>didn't</b>, el verbo principal vuelve a su forma base: <i>Did you went?</i> es incorrecto; lo correcto es <i>Did you go?</i></p><p>Respuestas cortas: <i>Yes, I did. / No, I didn't.</i></p>",
+      "content_en": "<h4>What it is for</h4><p>It talks about <b>finished</b> actions at a specific moment in the past: <i>I watched a movie yesterday.</i></p><h4>The three forms</h4><ul><li>Affirmative: past verb — <i>She <b>played</b> tennis.</i></li><li>Negative: <b>didn't</b> + base verb — <i>She <b>didn't play</b> tennis.</i></li><li>Question: <b>Did</b> + subject + base verb — <i><b>Did</b> she <b>play</b> tennis?</i></li></ul><h4>The golden rule</h4><p>The past is marked <b>only once</b>. If <b>did</b> or <b>didn't</b> appears, the main verb goes back to its base form: <i>Did you went?</i> is wrong; the correct form is <i>Did you go?</i></p><p>Short answers: <i>Yes, I did. / No, I didn't.</i></p>",
+      "fichas": [
+        { "t": "didn't + verbo base", "d": "El pasado ya está en didn't: I didn't go, no didn't went.", "d_en": "The past is already in didn't: I didn't go, not didn't went." },
+        { "t": "Did + sujeto + verbo base", "d": "Orden de la pregunta en pasado simple.", "d_en": "Word order of the simple past question." },
+        { "t": "Yes, I did.", "d": "Respuesta corta: se repite el auxiliar did.", "d_en": "Short answer: the auxiliary did is repeated." },
+        { "t": "Una sola marca de pasado", "d": "O el verbo o el auxiliar, nunca los dos.", "d_en": "Either the verb or the auxiliary, never both." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["Did you saw the movie?", "Did you see the movie?", "Did you seen the movie?", "You did saw the movie?"], "o_en": ["Did you saw the movie?", "Did you see the movie?", "Did you seen the movie?", "You did saw the movie?"], "a": 1, "why": "Con did el verbo principal va en forma base: see.", "why_en": "With did the main verb goes in base form: see." },
+        { "q": "«They ___ to the party.» (negativo)", "q_en": "\"They ___ to the party.\" (negative)", "o": ["didn't went", "not went", "didn't go", "don't go"], "o_en": ["didn't went", "not went", "didn't go", "don't go"], "a": 2, "why": "Didn't ya marca el pasado, así que el verbo queda en base.", "why_en": "Didn't already marks the past, so the verb stays in base form." },
+        { "q": "Respuesta corta a «Did she call you?» (sí)", "q_en": "Short answer to \"Did she call you?\" (yes)", "o": ["Yes, she called", "Yes, she did", "Yes, she does", "Yes, she was"], "o_en": ["Yes, she called", "Yes, she did", "Yes, she does", "Yes, she was"], "a": 1, "why": "La respuesta corta repite el auxiliar did.", "why_en": "The short answer repeats the auxiliary did." }
+      ]
+    },
+    {
+      "id": "ingles-7-2-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Verbos regulares en pasado",
+      "t_en": "Simple past: regular verbs",
+      "d": "12 min",
+      "content_es": "<h4>La terminación -ed</h4><p>Los verbos regulares forman el pasado agregando <b>-ed</b>: <i>work → worked</i>, <i>play → played</i>.</p><h4>Reglas de escritura</h4><ul><li>Termina en -e → solo <b>-d</b>: <i>like → liked</i></li><li>Consonante + y → <b>-ied</b>: <i>study → studied</i>, <i>cry → cried</i></li><li>Vocal + y → <b>-ed</b>: <i>play → played</i></li><li>Consonante-vocal-consonante corta → se dobla: <i>stop → stopped</i>, <i>plan → planned</i></li></ul><h4>Las tres pronunciaciones de -ed</h4><ul><li>/t/ después de sonido sordo: <i>worked, watched, stopped</i></li><li>/d/ después de sonido sonoro: <i>played, lived, cleaned</i></li><li>/ɪd/ después de t o d: <i>wanted, needed, visited</i></li></ul>",
+      "content_en": "<h4>The -ed ending</h4><p>Regular verbs form the past by adding <b>-ed</b>: <i>work → worked</i>, <i>play → played</i>.</p><h4>Spelling rules</h4><ul><li>Ends in -e → just <b>-d</b>: <i>like → liked</i></li><li>Consonant + y → <b>-ied</b>: <i>study → studied</i>, <i>cry → cried</i></li><li>Vowel + y → <b>-ed</b>: <i>play → played</i></li><li>Short consonant-vowel-consonant → double it: <i>stop → stopped</i>, <i>plan → planned</i></li></ul><h4>The three pronunciations of -ed</h4><ul><li>/t/ after a voiceless sound: <i>worked, watched, stopped</i></li><li>/d/ after a voiced sound: <i>played, lived, cleaned</i></li><li>/ɪd/ after t or d: <i>wanted, needed, visited</i></li></ul>",
+      "fichas": [
+        { "t": "study → studied", "d": "Consonante + y se convierte en -ied.", "d_en": "Consonant + y becomes -ied." },
+        { "t": "stop → stopped", "d": "Se dobla la consonante final en verbos cortos.", "d_en": "The final consonant doubles in short verbs." },
+        { "t": "wanted /ɪd/", "d": "Los verbos que terminan en t o d suman una sílaba.", "d_en": "Verbs ending in t or d add an extra syllable." },
+        { "t": "like → liked", "d": "Si ya termina en -e, solo se agrega -d.", "d_en": "If it already ends in -e, just add -d." }
+      ],
+      "quiz": [
+        { "q": "El pasado de «study» es…", "q_en": "The past of \"study\" is…", "o": ["studyed", "studied", "studeed", "studies"], "o_en": ["studyed", "studied", "studeed", "studies"], "a": 1, "why": "Consonante + y cambia a -ied.", "why_en": "Consonant + y changes to -ied." },
+        { "q": "El pasado de «stop» es…", "q_en": "The past of \"stop\" is…", "o": ["stoped", "stopped", "stoppd", "stopt"], "o_en": ["stoped", "stopped", "stoppd", "stopt"], "a": 1, "why": "Se dobla la p por ser consonante-vocal-consonante corta.", "why_en": "The p doubles because it is a short consonant-vowel-consonant verb." },
+        { "q": "¿En cuál se pronuncia -ed como /ɪd/?", "q_en": "In which one is -ed pronounced /ɪd/?", "o": ["played", "watched", "visited", "cleaned"], "o_en": ["played", "watched", "visited", "cleaned"], "a": 2, "why": "Visit termina en t, así que -ed suma una sílaba.", "why_en": "Visit ends in t, so -ed adds an extra syllable." }
+      ]
+    },
+    {
+      "id": "ingles-7-2-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Verbos irregulares en pasado",
+      "t_en": "Simple past: irregular verbs",
+      "d": "14 min",
+      "content_es": "<h4>No siguen la regla</h4><p>Estos verbos cambian de forma y hay que aprenderlos de memoria. Son los más usados del idioma.</p><h4>Los más frecuentes</h4><ul><li>go → <b>went</b> · come → <b>came</b> · see → <b>saw</b></li><li>do → <b>did</b> · make → <b>made</b> · take → <b>took</b></li><li>get → <b>got</b> · give → <b>gave</b> · have → <b>had</b></li><li>say → <b>said</b> · tell → <b>told</b> · think → <b>thought</b></li><li>write → <b>wrote</b> · read → <b>read</b> (se escribe igual, suena /red/)</li><li>eat → <b>ate</b> · drink → <b>drank</b> · buy → <b>bought</b></li></ul><h4>Recuerda</h4><p>La forma irregular solo aparece en <b>afirmativo</b>. En negativo y pregunta vuelve la forma base: <i>I went</i> → <i>I didn't <b>go</b></i> → <i>Did you <b>go</b>?</i></p>",
+      "content_en": "<h4>They do not follow the rule</h4><p>These verbs change their form and must be learned by heart. They are the most used ones in the language.</p><h4>The most frequent</h4><ul><li>go → <b>went</b> · come → <b>came</b> · see → <b>saw</b></li><li>do → <b>did</b> · make → <b>made</b> · take → <b>took</b></li><li>get → <b>got</b> · give → <b>gave</b> · have → <b>had</b></li><li>say → <b>said</b> · tell → <b>told</b> · think → <b>thought</b></li><li>write → <b>wrote</b> · read → <b>read</b> (same spelling, pronounced /red/)</li><li>eat → <b>ate</b> · drink → <b>drank</b> · buy → <b>bought</b></li></ul><h4>Remember</h4><p>The irregular form only appears in the <b>affirmative</b>. In negatives and questions the base form comes back: <i>I went</i> → <i>I didn't <b>go</b></i> → <i>Did you <b>go</b>?</i></p>",
+      "fichas": [
+        { "t": "go → went", "d": "Uno de los irregulares más usados.", "d_en": "One of the most used irregular verbs." },
+        { "t": "see → saw", "d": "No confundir con say → said.", "d_en": "Not to be confused with say → said." },
+        { "t": "read → read", "d": "Se escribe igual pero se pronuncia /red/ en pasado.", "d_en": "Same spelling but pronounced /red/ in the past." },
+        { "t": "buy → bought", "d": "Grupo de -ought: buy, think, bring.", "d_en": "The -ought group: buy, think, bring." },
+        { "t": "Solo en afirmativo", "d": "Con did/didn't el verbo vuelve a la forma base.", "d_en": "With did/didn't the verb returns to its base form." }
+      ],
+      "quiz": [
+        { "q": "El pasado de «see» es…", "q_en": "The past of \"see\" is…", "o": ["seed", "saw", "seen", "sawed"], "o_en": ["seed", "saw", "seen", "sawed"], "a": 1, "why": "See es irregular: su pasado simple es saw.", "why_en": "See is irregular: its simple past is saw." },
+        { "q": "«I ___ a sandwich for lunch.»", "q_en": "\"I ___ a sandwich for lunch.\"", "o": ["eated", "eat", "ate", "eaten"], "o_en": ["eated", "eat", "ate", "eaten"], "a": 2, "why": "El pasado simple de eat es ate.", "why_en": "The simple past of eat is ate." },
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["She didn't took the bus", "She didn't take the bus", "She not took the bus", "She don't take the bus"], "o_en": ["She didn't took the bus", "She didn't take the bus", "She not took the bus", "She don't take the bus"], "a": 1, "why": "Después de didn't el irregular vuelve a su forma base.", "why_en": "After didn't the irregular verb returns to its base form." }
+      ]
+    },
+    {
+      "id": "ingles-7-2-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Question words en pasado simple",
+      "t_en": "Question words with the simple past",
+      "d": "12 min",
+      "content_es": "<h4>La estructura</h4><p><b>Wh- + did + sujeto + verbo base</b>:</p><ul><li><i><b>Where did</b> you go last summer?</i></li><li><i><b>What did</b> she say?</i></li><li><i><b>When did</b> the war start?</i></li><li><i><b>Why did</b> they leave?</i></li><li><i><b>How did</b> he learn English?</i></li></ul><h4>Cuando el Wh- es el sujeto</h4><p>Si preguntas quién o qué <b>hizo</b> la acción, no se usa did y el verbo va en pasado:</p><ul><li><i><b>Who wrote</b> this book?</i> (no <i>Who did write</i>)</li><li><i><b>What happened</b> yesterday?</i></li></ul><h4>How much / How many</h4><p><i>How many people came?</i> · <i>How much did it cost?</i></p>",
+      "content_en": "<h4>The structure</h4><p><b>Wh- + did + subject + base verb</b>:</p><ul><li><i><b>Where did</b> you go last summer?</i></li><li><i><b>What did</b> she say?</i></li><li><i><b>When did</b> the war start?</i></li><li><i><b>Why did</b> they leave?</i></li><li><i><b>How did</b> he learn English?</i></li></ul><h4>When the Wh- word is the subject</h4><p>If you ask who or what <b>did</b> the action, did is not used and the verb goes in the past:</p><ul><li><i><b>Who wrote</b> this book?</i> (not <i>Who did write</i>)</li><li><i><b>What happened</b> yesterday?</i></li></ul><h4>How much / How many</h4><p><i>How many people came?</i> · <i>How much did it cost?</i></p>",
+      "fichas": [
+        { "t": "Wh- + did + sujeto + verbo", "d": "Orden fijo de la pregunta en pasado.", "d_en": "Fixed word order for past questions." },
+        { "t": "Who wrote…?", "d": "Si Who es el sujeto, el verbo va en pasado sin did.", "d_en": "If Who is the subject, the verb goes in the past with no did." },
+        { "t": "What happened?", "d": "Pregunta por el hecho: no lleva did.", "d_en": "Asks about the event itself: it takes no did." },
+        { "t": "How much did it cost?", "d": "Preguntar el precio en pasado.", "d_en": "Asking about a past price." }
+      ],
+      "quiz": [
+        { "q": "«___ did you meet him?»", "q_en": "\"___ did you meet him?\"", "o": ["Who", "Where", "What happened", "Which"], "o_en": ["Who", "Where", "What happened", "Which"], "a": 1, "why": "Con did + sujeto la pregunta pide lugar, tiempo o modo: Where.", "why_en": "With did + subject the question asks for place, time or manner: Where." },
+        { "q": "¿Cuál pregunta está bien formada?", "q_en": "Which question is well formed?", "o": ["Who did discover America?", "Who discovered America?", "Who did discovered America?", "Who was discover America?"], "o_en": ["Who did discover America?", "Who discovered America?", "Who did discovered America?", "Who was discover America?"], "a": 1, "why": "Who es el sujeto: el verbo va en pasado y no lleva did.", "why_en": "Who is the subject: the verb goes in the past with no did." },
+        { "q": "«What ___ you do last weekend?»", "q_en": "\"What ___ you do last weekend?\"", "o": ["do", "did", "does", "was"], "o_en": ["do", "did", "does", "was"], "a": 1, "why": "Last weekend indica pasado: el auxiliar es did.", "why_en": "Last weekend signals the past: the auxiliary is did." }
+      ]
+    },
+    {
+      "id": "ingles-7-2-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Fechas y expresiones de tiempo",
+      "t_en": "Dates and time expressions",
+      "d": "12 min",
+      "content_es": "<h4>Escribir la fecha</h4><p>Formato americano: <i>March 15, 2026</i> (mes, día, año).<br>Formato británico: <i>15 March 2026</i>.<br>Se lee con ordinal: <i>March the fifteenth</i>.</p><h4>Los años</h4><ul><li>1999 → <i>nineteen ninety-nine</i></li><li>2005 → <i>two thousand five</i></li><li>2026 → <i>twenty twenty-six</i></li></ul><h4>Siglos y décadas</h4><p><i>the 19th century</i> (siglo XIX), <i>the 1990s</i> (los noventa).</p><h4>Preposiciones</h4><ul><li><b>in</b> + año, mes, siglo: <i>in 1810, in July, in the 20th century</i></li><li><b>on</b> + día o fecha exacta: <i>on Monday, on July 20th</i></li><li><b>at</b> + hora: <i>at 7 o'clock</i></li></ul>",
+      "content_en": "<h4>Writing the date</h4><p>American format: <i>March 15, 2026</i> (month, day, year).<br>British format: <i>15 March 2026</i>.<br>It is read with an ordinal: <i>March the fifteenth</i>.</p><h4>Years</h4><ul><li>1999 → <i>nineteen ninety-nine</i></li><li>2005 → <i>two thousand five</i></li><li>2026 → <i>twenty twenty-six</i></li></ul><h4>Centuries and decades</h4><p><i>the 19th century</i>, <i>the 1990s</i>.</p><h4>Prepositions</h4><ul><li><b>in</b> + year, month, century: <i>in 1810, in July, in the 20th century</i></li><li><b>on</b> + day or exact date: <i>on Monday, on July 20th</i></li><li><b>at</b> + time: <i>at 7 o'clock</i></li></ul>",
+      "fichas": [
+        { "t": "in / on / at", "d": "in año o mes, on día o fecha, at hora.", "d_en": "in for year or month, on for day or date, at for time." },
+        { "t": "the 19th century", "d": "Los siglos se dicen con ordinal.", "d_en": "Centuries are said with an ordinal." },
+        { "t": "nineteen ninety-nine", "d": "Los años del siglo XX se leen en dos pares.", "d_en": "Twentieth century years are read in two pairs." },
+        { "t": "July 20th", "d": "La fecha se lee con número ordinal.", "d_en": "The date is read with an ordinal number." }
+      ],
+      "quiz": [
+        { "q": "«Colombia declared independence ___ 1810.»", "q_en": "\"Colombia declared independence ___ 1810.\"", "o": ["on", "at", "in", "of"], "o_en": ["on", "at", "in", "of"], "a": 2, "why": "Los años llevan la preposición in.", "why_en": "Years take the preposition in." },
+        { "q": "«The party is ___ July 20th.»", "q_en": "\"The party is ___ July 20th.\"", "o": ["in", "on", "at", "for"], "o_en": ["in", "on", "at", "for"], "a": 1, "why": "Las fechas exactas llevan on.", "why_en": "Exact dates take on." },
+        { "q": "¿Cómo se lee «the 19th century»?", "q_en": "How do you read \"the 19th century\"?", "o": ["Siglo diecinueve", "Año diecinueve", "Década de los 19", "1900"], "o_en": ["The nineteenth century", "Year nineteen", "The nineteen decade", "1900"], "a": 0, "why": "Century con ordinal indica el siglo.", "why_en": "Century with an ordinal indicates the century." }
+      ]
+    },
+    {
+      "id": "ingles-7-2-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Lugares de la ciudad",
+      "t_en": "Places around town",
+      "d": "10 min",
+      "content_es": "<h4>Lugares</h4><p><b>library</b> (biblioteca), <b>bookstore</b> (librería), <b>museum</b>, <b>park</b>, <b>hospital</b>, <b>bank</b>, <b>post office</b> (oficina de correos), <b>police station</b>, <b>bus station</b>, <b>train station</b>, <b>market</b>, <b>mall</b> (centro comercial), <b>bakery</b> (panadería), <b>drugstore / pharmacy</b>, <b>church</b>, <b>square</b> (plaza), <b>stadium</b>.</p><h4>Falsos amigos</h4><p><b>library</b> NO es librería (esa es <i>bookstore</i>). <b>drugstore</b> es farmacia, no droguería de drogas ilegales.</p><h4>Dar indicaciones</h4><p><i>Go straight ahead. Turn left / right at the corner. It's on the right, next to the bank. Cross the street.</i></p>",
+      "content_en": "<h4>Places</h4><p><b>library</b>, <b>bookstore</b>, <b>museum</b>, <b>park</b>, <b>hospital</b>, <b>bank</b>, <b>post office</b>, <b>police station</b>, <b>bus station</b>, <b>train station</b>, <b>market</b>, <b>mall</b>, <b>bakery</b>, <b>drugstore / pharmacy</b>, <b>church</b>, <b>square</b>, <b>stadium</b>.</p><h4>False friends</h4><p><b>library</b> is where you borrow books; a shop that sells them is a <i>bookstore</i>.</p><h4>Giving directions</h4><p><i>Go straight ahead. Turn left / right at the corner. It's on the right, next to the bank. Cross the street.</i></p>",
+      "fichas": [
+        { "t": "library vs bookstore", "d": "Biblioteca (prestan libros) vs librería (los venden).", "d_en": "A library lends books; a bookstore sells them." },
+        { "t": "post office", "d": "Oficina de correos, donde se envían cartas.", "d_en": "The place where you send letters." },
+        { "t": "Turn left / right", "d": "Girar a la izquierda o a la derecha.", "d_en": "To change direction at a corner." },
+        { "t": "Go straight ahead", "d": "Seguir derecho sin girar.", "d_en": "Keep going without turning." }
+      ],
+      "quiz": [
+        { "q": "¿Dónde compras un libro nuevo?", "q_en": "Where do you buy a new book?", "o": ["In a library", "In a bookstore", "In a bakery", "In a post office"], "o_en": ["In a library", "In a bookstore", "In a bakery", "In a post office"], "a": 1, "why": "La bookstore vende libros; la library los presta.", "why_en": "A bookstore sells books; a library lends them." },
+        { "q": "¿Dónde compras pan?", "q_en": "Where do you buy bread?", "o": ["bakery", "bank", "museum", "stadium"], "o_en": ["bakery", "bank", "museum", "stadium"], "a": 0, "why": "La bakery es la panadería.", "why_en": "A bakery is where bread is made and sold." },
+        { "q": "«___ the street and turn right.»", "q_en": "\"___ the street and turn right.\"", "o": ["Go", "Cross", "Take", "Walk"], "o_en": ["Go", "Cross", "Take", "Walk"], "a": 1, "why": "Cross the street es cruzar la calle.", "why_en": "Cross the street means to go to the other side." }
+      ]
+    },
+    {
+      "id": "ingles-7-2-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Tipos de películas",
+      "t_en": "Types of movies",
+      "d": "10 min",
+      "content_es": "<h4>Géneros</h4><p><b>action</b>, <b>comedy</b>, <b>drama</b>, <b>horror</b> (terror), <b>science fiction / sci-fi</b>, <b>romance</b>, <b>thriller</b> (suspenso), <b>animated movie</b>, <b>documentary</b>, <b>historical movie</b>, <b>adventure</b>, <b>musical</b>.</p><h4>Hablar de películas</h4><ul><li><i>What kind of movies do you like?</i></li><li><i>I watched a great documentary last night.</i></li><li><i>It was about the Second World War.</i></li><li><i>The ending was surprising.</i></li></ul><h4>Adjetivos de opinión</h4><p><b>exciting</b>, <b>boring</b>, <b>scary</b>, <b>funny</b>, <b>touching</b> (conmovedora), <b>predictable</b>.</p><p>Ojo: <b>watch</b> a movie, <b>see</b> a movie, pero <b>go to</b> the movies.</p>",
+      "content_en": "<h4>Genres</h4><p><b>action</b>, <b>comedy</b>, <b>drama</b>, <b>horror</b>, <b>science fiction / sci-fi</b>, <b>romance</b>, <b>thriller</b>, <b>animated movie</b>, <b>documentary</b>, <b>historical movie</b>, <b>adventure</b>, <b>musical</b>.</p><h4>Talking about films</h4><ul><li><i>What kind of movies do you like?</i></li><li><i>I watched a great documentary last night.</i></li><li><i>It was about the Second World War.</i></li><li><i>The ending was surprising.</i></li></ul><h4>Opinion adjectives</h4><p><b>exciting</b>, <b>boring</b>, <b>scary</b>, <b>funny</b>, <b>touching</b>, <b>predictable</b>.</p><p>Careful: you <b>watch</b> or <b>see</b> a movie, but you <b>go to</b> the movies.</p>",
+      "fichas": [
+        { "t": "documentary", "d": "Película sobre hechos reales.", "d_en": "A film about real facts." },
+        { "t": "horror vs thriller", "d": "Horror da miedo; thriller mantiene la tensión.", "d_en": "Horror scares; a thriller keeps the tension." },
+        { "t": "It was about…", "d": "Estructura para contar el tema de una película.", "d_en": "Structure used to tell what a film is about." },
+        { "t": "go to the movies", "d": "Ir a cine: expresión fija en plural.", "d_en": "Fixed plural expression for going to the cinema." }
+      ],
+      "quiz": [
+        { "q": "Una película sobre hechos reales es un…", "q_en": "A film about real facts is a…", "o": ["thriller", "documentary", "musical", "comedy"], "o_en": ["thriller", "documentary", "musical", "comedy"], "a": 1, "why": "El documental presenta hechos reales.", "why_en": "A documentary presents real facts." },
+        { "q": "«The movie ___ the French Revolution.»", "q_en": "\"The movie ___ the French Revolution.\"", "o": ["was of", "was about", "was on", "was for"], "o_en": ["was of", "was about", "was on", "was for"], "a": 1, "why": "El tema de una película se introduce con about.", "why_en": "The topic of a film is introduced with about." },
+        { "q": "¿Cuál expresión es correcta?", "q_en": "Which expression is correct?", "o": ["go to the movie", "go to the movies", "go at the movies", "go in movies"], "o_en": ["go to the movie", "go to the movies", "go at the movies", "go in movies"], "a": 1, "why": "La expresión fija es go to the movies, en plural.", "why_en": "The fixed expression is go to the movies, in the plural." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-7-2-repaso",
+    "titulo": "Repaso — The Best Moments in History!",
+    "titulo_en": "Review — The Best Moments in History!",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>Todo el periodo es <b>pasado simple</b>. Los verbos regulares agregan <b>-ed</b>; los irregulares cambian de forma y hay que memorizarlos. En negativo y pregunta entra <b>did</b> y el verbo vuelve a su forma base.</p><h4>Puntos gramaticales</h4><ul><li>Reglas de -ed: -d, -ied, doble consonante. Tres pronunciaciones: /t/, /d/, /ɪd/.</li><li>Irregulares frecuentes: go-went, see-saw, eat-ate, buy-bought, write-wrote.</li><li>Wh- + did + sujeto + verbo base; si el Wh- es el sujeto, no lleva did.</li></ul><h4>Vocabulario</h4><p>Fechas, años y siglos con in / on / at; lugares de la ciudad e indicaciones; géneros de cine y adjetivos de opinión.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The whole term is the <b>simple past</b>. Regular verbs add <b>-ed</b>; irregular verbs change form and must be memorized. In negatives and questions <b>did</b> appears and the verb returns to its base form.</p><h4>Grammar points</h4><ul><li>-ed rules: -d, -ied, doubled consonant. Three pronunciations: /t/, /d/, /ɪd/.</li><li>Frequent irregulars: go-went, see-saw, eat-ate, buy-bought, write-wrote.</li><li>Wh- + did + subject + base verb; if the Wh- word is the subject, no did.</li></ul><h4>Vocabulary</h4><p>Dates, years and centuries with in / on / at; places around town and directions; film genres and opinion adjectives.</p>",
+    "puntos_clave": [
+      ["El pasado se marca una sola vez: didn't go, no didn't went.", "The past is marked once: didn't go, not didn't went."],
+      ["study → studied; stop → stopped; like → liked.", "study → studied; stop → stopped; like → liked."],
+      ["-ed suena /ɪd/ solo después de t o d.", "-ed sounds /ɪd/ only after t or d."],
+      ["Who wrote…? no lleva did porque Who es el sujeto.", "Who wrote…? takes no did because Who is the subject."],
+      ["in + año, on + fecha, at + hora.", "in + year, on + date, at + time."],
+      ["library es biblioteca; bookstore es librería.", "a library lends books; a bookstore sells them."]
+    ],
+    "preguntas": [
+      { "q": "«We ___ to the museum yesterday.»", "q_en": "\"We ___ to the museum yesterday.\"", "o": ["go", "goed", "went", "gone"], "o_en": ["go", "goed", "went", "gone"], "a": 2, "why": "Go es irregular: su pasado es went.", "why_en": "Go is irregular: its past is went." },
+      { "q": "«She ___ her homework last night.» (negativo)", "q_en": "\"She ___ her homework last night.\" (negative)", "o": ["didn't did", "didn't do", "don't do", "not did"], "o_en": ["didn't did", "didn't do", "don't do", "not did"], "a": 1, "why": "Después de didn't el verbo va en base: do.", "why_en": "After didn't the verb goes in base form: do." },
+      { "q": "El pasado de «carry» es…", "q_en": "The past of \"carry\" is…", "o": ["carryed", "carried", "carreid", "carrys"], "o_en": ["carryed", "carried", "carreid", "carrys"], "a": 1, "why": "Consonante + y cambia a -ied.", "why_en": "Consonant + y changes to -ied." },
+      { "q": "«___ invented the telephone?»", "q_en": "\"___ invented the telephone?\"", "o": ["Who did", "Who", "What did", "Whom did"], "o_en": ["Who did", "Who", "What did", "Whom did"], "a": 1, "why": "Who es el sujeto: el verbo va en pasado sin did.", "why_en": "Who is the subject: the verb goes in the past with no did." },
+      { "q": "«The Berlin Wall fell ___ 1989.»", "q_en": "\"The Berlin Wall fell ___ 1989.\"", "o": ["on", "at", "in", "of"], "o_en": ["on", "at", "in", "of"], "a": 2, "why": "Los años llevan in.", "why_en": "Years take in." },
+      { "q": "¿En cuál se pronuncia -ed como /ɪd/?", "q_en": "In which one is -ed pronounced /ɪd/?", "o": ["worked", "needed", "played", "opened"], "o_en": ["worked", "needed", "played", "opened"], "a": 1, "why": "Need termina en d, así que -ed suma una sílaba.", "why_en": "Need ends in d, so -ed adds an extra syllable." },
+      { "q": "«___ you enjoy the movie?»", "q_en": "\"___ you enjoy the movie?\"", "o": ["Was", "Did", "Do", "Were"], "o_en": ["Was", "Did", "Do", "Were"], "a": 1, "why": "Enjoy es verbo principal en pasado: el auxiliar es did.", "why_en": "Enjoy is the main verb in the past: the auxiliary is did." },
+      { "q": "«I borrowed this book from the ___.»", "q_en": "\"I borrowed this book from the ___.\"", "o": ["bookstore", "library", "bakery", "market"], "o_en": ["bookstore", "library", "bakery", "market"], "a": 1, "why": "Borrow es pedir prestado, y eso se hace en la biblioteca.", "why_en": "Borrow means to take temporarily, which you do at a library." }
+    ]
+  }
+}

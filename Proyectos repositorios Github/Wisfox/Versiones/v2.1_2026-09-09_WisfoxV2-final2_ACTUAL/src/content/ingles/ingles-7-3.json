@@ -1,0 +1,195 @@
+{
+  "id": "ingles-7-3",
+  "materia": "ingles",
+  "grado": "7",
+  "grado_nombre": "Séptimo",
+  "periodo": 3,
+  "periodo_label": { "es": "Periodo III", "en": "Term III" },
+  "titulo": "Rules and Routes: My Life and My Adventures",
+  "titulo_es": "Reglas y rutas: mi vida y mis aventuras",
+  "intensidad_horaria": 6,
+  "semanas": 8,
+  "total_horas": 48,
+  "estandares": "Expreso obligación, prohibición y consejo en contextos cotidianos. Comprendo y doy instrucciones sobre rutinas, normas y desplazamientos.",
+  "competencias": "Expresar obligación con have to y modales; hablar de cantidades con cuantificadores; usar gerundios después de ciertos verbos y preposiciones; describir tareas del hogar y medios de transporte.",
+  "componentes": "Pensamiento crítico, comunicación, colaboración y creatividad.",
+  "proyecto": {
+    "titulo": "Rules for a Great Trip",
+    "descripcion_es": "En grupos, los estudiantes diseñan la guía de un viaje escolar: reglas del grupo (have to / mustn't), qué llevar (cuantificadores) y el itinerario con medios de transporte.",
+    "descripcion_en": "In groups, students design the guide for a school trip: group rules (have to / mustn't), what to bring (quantifiers) and the itinerary with means of transport."
+  },
+  "lecciones": [
+    {
+      "id": "ingles-7-3-1",
+      "num": 1,
+      "tipo": "grammar",
+      "t": "Have to / don't have to",
+      "t_en": "Have to / don't have to",
+      "d": "12 min",
+      "content_es": "<h4>Obligación que viene de fuera</h4><p><b>have to</b> expresa una obligación impuesta por una regla o una circunstancia: <i>I <b>have to</b> wear a uniform.</i></p><ul><li>Tercera persona: <b>has to</b> — <i>He has to study.</i></li><li>Pasado: <b>had to</b> — <i>We had to leave early.</i></li></ul><h4>El negativo cambia el significado</h4><ul><li><b>don't have to</b> = no es necesario (pero puedes): <i>You don't have to come.</i></li><li><b>mustn't</b> = está prohibido: <i>You mustn't smoke here.</i></li></ul><h4>Preguntas</h4><p>Se usan con do/does/did: <i><b>Do</b> you <b>have to</b> work on Saturdays?</i></p>",
+      "content_en": "<h4>Obligation that comes from outside</h4><p><b>have to</b> expresses an obligation imposed by a rule or a circumstance: <i>I <b>have to</b> wear a uniform.</i></p><ul><li>Third person: <b>has to</b> — <i>He has to study.</i></li><li>Past: <b>had to</b> — <i>We had to leave early.</i></li></ul><h4>The negative changes the meaning</h4><ul><li><b>don't have to</b> = it is not necessary (but you may): <i>You don't have to come.</i></li><li><b>mustn't</b> = it is forbidden: <i>You mustn't smoke here.</i></li></ul><h4>Questions</h4><p>They use do/does/did: <i><b>Do</b> you <b>have to</b> work on Saturdays?</i></p>",
+      "fichas": [
+        { "t": "have to / has to", "d": "Obligación externa: una regla o una circunstancia.", "d_en": "External obligation: a rule or a circumstance." },
+        { "t": "don't have to", "d": "No es necesario. No significa prohibido.", "d_en": "It is not necessary. It does not mean forbidden." },
+        { "t": "mustn't", "d": "Prohibición: no se puede hacer.", "d_en": "Prohibition: it is not allowed." },
+        { "t": "had to", "d": "Pasado de have to, igual para todas las personas.", "d_en": "Past of have to, the same for every person." }
+      ],
+      "quiz": [
+        { "q": "«She ___ wear a uniform at school.»", "q_en": "\"She ___ wear a uniform at school.\"", "o": ["have to", "has to", "must to", "haves to"], "o_en": ["have to", "has to", "must to", "haves to"], "a": 1, "why": "She es tercera persona: has to.", "why_en": "She is third person: has to." },
+        { "q": "«It's Saturday, you ___ get up early.» (no es necesario)", "q_en": "\"It's Saturday, you ___ get up early.\" (it is not necessary)", "o": ["mustn't", "don't have to", "have to", "haven't"], "o_en": ["mustn't", "don't have to", "have to", "haven't"], "a": 1, "why": "Don't have to expresa que no hace falta, no que esté prohibido.", "why_en": "Don't have to means it is not needed, not that it is forbidden." },
+        { "q": "«You ___ touch that. It's dangerous.»", "q_en": "\"You ___ touch that. It's dangerous.\"", "o": ["don't have to", "mustn't", "haven't to", "not have to"], "o_en": ["don't have to", "mustn't", "haven't to", "not have to"], "a": 1, "why": "Es una prohibición: mustn't.", "why_en": "It is a prohibition: mustn't." }
+      ]
+    },
+    {
+      "id": "ingles-7-3-2",
+      "num": 2,
+      "tipo": "grammar",
+      "t": "Verbos modales: must, should, can, may",
+      "t_en": "Modal verbs: must, should, can, may",
+      "d": "14 min",
+      "content_es": "<h4>Qué tienen en común</h4><p>No cambian nunca (sin -s), van seguidos del <b>verbo en base sin to</b> y forman negativo y pregunta por sí mismos, sin do.</p><h4>Qué expresa cada uno</h4><ul><li><b>must</b> – obligación fuerte o deducción: <i>You must study. / He must be tired.</i></li><li><b>should</b> – consejo: <i>You should sleep more.</i></li><li><b>can</b> – habilidad y permiso: <i>I can swim. / Can I go out?</i></li><li><b>may</b> – permiso formal y posibilidad: <i>May I come in? / It may rain.</i></li><li><b>could</b> – posibilidad o petición educada: <i>Could you help me?</i></li></ul><h4>Negativos</h4><p><b>mustn't</b> (prohibido), <b>shouldn't</b> (no conviene), <b>can't</b> (no puede), <b>may not</b>.</p>",
+      "content_en": "<h4>What they share</h4><p>They never change (no -s), they are followed by the <b>base verb without to</b>, and they form negatives and questions by themselves, with no do.</p><h4>What each one expresses</h4><ul><li><b>must</b> – strong obligation or deduction: <i>You must study. / He must be tired.</i></li><li><b>should</b> – advice: <i>You should sleep more.</i></li><li><b>can</b> – ability and permission: <i>I can swim. / Can I go out?</i></li><li><b>may</b> – formal permission and possibility: <i>May I come in? / It may rain.</i></li><li><b>could</b> – possibility or polite request: <i>Could you help me?</i></li></ul><h4>Negatives</h4><p><b>mustn't</b> (forbidden), <b>shouldn't</b> (not advisable), <b>can't</b>, <b>may not</b>.</p>",
+      "fichas": [
+        { "t": "Modal + verbo base", "d": "Nunca llevan to ni -s: he must go.", "d_en": "They never take to or -s: he must go." },
+        { "t": "must vs should", "d": "must es obligación fuerte; should es consejo.", "d_en": "must is strong obligation; should is advice." },
+        { "t": "may", "d": "Permiso formal o posibilidad: It may rain.", "d_en": "Formal permission or possibility: It may rain." },
+        { "t": "Could you…?", "d": "Petición educada, más formal que Can you…?", "d_en": "Polite request, more formal than Can you…?" }
+      ],
+      "quiz": [
+        { "q": "¿Cuál oración es correcta?", "q_en": "Which sentence is correct?", "o": ["He musts study", "He must to study", "He must study", "He must studies"], "o_en": ["He musts study", "He must to study", "He must study", "He must studies"], "a": 2, "why": "Los modales no cambian y van con el verbo en base sin to.", "why_en": "Modals never change and take the base verb without to." },
+        { "q": "«You look sick. You ___ see a doctor.»", "q_en": "\"You look sick. You ___ see a doctor.\"", "o": ["must not", "should", "can't", "may not"], "o_en": ["must not", "should", "can't", "may not"], "a": 1, "why": "Es un consejo: should.", "why_en": "It is advice: should." },
+        { "q": "«___ I use your pen, please?»", "q_en": "\"___ I use your pen, please?\"", "o": ["Must", "Should", "May", "Do"], "o_en": ["Must", "Should", "May", "Do"], "a": 2, "why": "May pide permiso de forma educada.", "why_en": "May asks for permission politely." }
+      ]
+    },
+    {
+      "id": "ingles-7-3-3",
+      "num": 3,
+      "tipo": "grammar",
+      "t": "Cuantificadores",
+      "t_en": "Quantifiers",
+      "d": "12 min",
+      "content_es": "<h4>Dependen de si se puede contar</h4><ul><li>Contables: <b>many</b>, <b>a few</b>, <b>few</b> — <i>many books, a few friends</i></li><li>Incontables: <b>much</b>, <b>a little</b>, <b>little</b> — <i>much water, a little sugar</i></li><li>Para ambos: <b>a lot of</b>, <b>lots of</b>, <b>some</b>, <b>any</b>, <b>enough</b>, <b>no</b></li></ul><h4>La diferencia sutil</h4><ul><li><b>a few / a little</b> = algunos, un poco (suficiente, positivo)</li><li><b>few / little</b> = pocos, poco (casi nada, negativo)</li></ul><p><i>I have <b>a few</b> friends</i> (tengo algunos) vs. <i>I have <b>few</b> friends</i> (tengo muy pocos).</p><h4>Uso frecuente</h4><p><b>much</b> y <b>many</b> aparecen sobre todo en negativos y preguntas; en afirmativo se prefiere <b>a lot of</b>.</p>",
+      "content_en": "<h4>They depend on countability</h4><ul><li>Countable: <b>many</b>, <b>a few</b>, <b>few</b> — <i>many books, a few friends</i></li><li>Uncountable: <b>much</b>, <b>a little</b>, <b>little</b> — <i>much water, a little sugar</i></li><li>For both: <b>a lot of</b>, <b>lots of</b>, <b>some</b>, <b>any</b>, <b>enough</b>, <b>no</b></li></ul><h4>The subtle difference</h4><ul><li><b>a few / a little</b> = some, a bit (enough, positive)</li><li><b>few / little</b> = hardly any (negative)</li></ul><p><i>I have <b>a few</b> friends</i> vs. <i>I have <b>few</b> friends</i>.</p><h4>Frequent use</h4><p><b>much</b> and <b>many</b> appear mostly in negatives and questions; in affirmatives we prefer <b>a lot of</b>.</p>",
+      "fichas": [
+        { "t": "many / much", "d": "many con contables, much con incontables.", "d_en": "many with countables, much with uncountables." },
+        { "t": "a few vs few", "d": "a few es algunos; few es muy pocos.", "d_en": "a few means some; few means hardly any." },
+        { "t": "a little vs little", "d": "a little es un poco; little es casi nada.", "d_en": "a little means a bit; little means hardly any." },
+        { "t": "a lot of", "d": "Sirve para contables e incontables, sobre todo en afirmativo.", "d_en": "Works with both, especially in affirmative sentences." }
+      ],
+      "quiz": [
+        { "q": "«How ___ money do you need?»", "q_en": "\"How ___ money do you need?\"", "o": ["many", "much", "few", "little of"], "o_en": ["many", "much", "few", "little of"], "a": 1, "why": "Money es incontable: how much.", "why_en": "Money is uncountable: how much." },
+        { "q": "«There are ___ students in the classroom.»", "q_en": "\"There are ___ students in the classroom.\"", "o": ["much", "a little", "many", "little"], "o_en": ["much", "a little", "many", "little"], "a": 2, "why": "Students es contable: many.", "why_en": "Students is countable: many." },
+        { "q": "«I'm not worried: I have ___ time left.»", "q_en": "\"I'm not worried: I have ___ time left.\"", "o": ["little", "a little", "few", "many"], "o_en": ["little", "a little", "few", "many"], "a": 1, "why": "No está preocupado, así que le queda un poco: a little.", "why_en": "They are not worried, so some time is left: a little." }
+      ]
+    },
+    {
+      "id": "ingles-7-3-4",
+      "num": 4,
+      "tipo": "grammar",
+      "t": "Gerundios",
+      "t_en": "Gerunds",
+      "d": "12 min",
+      "content_es": "<h4>El verbo que actúa como sustantivo</h4><p>Es la forma <b>-ing</b> usada como nombre: <i><b>Swimming</b> is good for you.</i></p><h4>Cuándo se usa</h4><ul><li>Como sujeto de la oración: <i><b>Reading</b> helps you learn.</i></li><li>Después de <b>preposiciones</b>: <i>I'm good at <b>drawing</b>. / Thanks for <b>coming</b>.</i></li><li>Después de ciertos verbos: <b>like, love, enjoy, hate, finish, practice, avoid, mind, keep</b> — <i>She enjoys <b>dancing</b>.</i></li></ul><h4>Frente al infinitivo</h4><p>Otros verbos piden <b>to + verbo</b>: <b>want, need, decide, hope, plan, learn</b> — <i>I want <b>to travel</b>.</i></p><p>Y unos pocos aceptan los dos sin cambiar el sentido: <i>I like swimming / I like to swim.</i></p>",
+      "content_en": "<h4>The verb acting as a noun</h4><p>It is the <b>-ing</b> form used as a noun: <i><b>Swimming</b> is good for you.</i></p><h4>When to use it</h4><ul><li>As the subject: <i><b>Reading</b> helps you learn.</i></li><li>After <b>prepositions</b>: <i>I'm good at <b>drawing</b>. / Thanks for <b>coming</b>.</i></li><li>After certain verbs: <b>like, love, enjoy, hate, finish, practice, avoid, mind, keep</b> — <i>She enjoys <b>dancing</b>.</i></li></ul><h4>Versus the infinitive</h4><p>Other verbs take <b>to + verb</b>: <b>want, need, decide, hope, plan, learn</b> — <i>I want <b>to travel</b>.</i></p><p>And a few accept both with no change of meaning: <i>I like swimming / I like to swim.</i></p>",
+      "fichas": [
+        { "t": "Gerundio", "d": "Forma -ing usada como sustantivo: Running is fun.", "d_en": "The -ing form used as a noun: Running is fun." },
+        { "t": "Después de preposición", "d": "Siempre gerundio: good at drawing, before leaving.", "d_en": "Always a gerund: good at drawing, before leaving." },
+        { "t": "enjoy / finish / avoid", "d": "Verbos que siempre piden gerundio.", "d_en": "Verbs that always take a gerund." },
+        { "t": "want / need / decide", "d": "Verbos que piden to + infinitivo.", "d_en": "Verbs that take to + infinitive." }
+      ],
+      "quiz": [
+        { "q": "«I enjoy ___ new places.»", "q_en": "\"I enjoy ___ new places.\"", "o": ["to visit", "visiting", "visit", "visited"], "o_en": ["to visit", "visiting", "visit", "visited"], "a": 1, "why": "Enjoy siempre va seguido de gerundio.", "why_en": "Enjoy is always followed by a gerund." },
+        { "q": "«She's interested in ___ Japanese.»", "q_en": "\"She's interested in ___ Japanese.\"", "o": ["learn", "to learn", "learning", "learns"], "o_en": ["learn", "to learn", "learning", "learns"], "a": 2, "why": "Después de una preposición (in) va el gerundio.", "why_en": "After a preposition (in) we use the gerund." },
+        { "q": "«They decided ___ by train.»", "q_en": "\"They decided ___ by train.\"", "o": ["traveling", "to travel", "travel", "traveled"], "o_en": ["traveling", "to travel", "travel", "traveled"], "a": 1, "why": "Decide pide to + infinitivo.", "why_en": "Decide takes to + infinitive." }
+      ]
+    },
+    {
+      "id": "ingles-7-3-5",
+      "num": 5,
+      "tipo": "vocabulary",
+      "t": "Números: precios, distancias y porcentajes",
+      "t_en": "Numbers: prices, distances and percentages",
+      "d": "10 min",
+      "content_es": "<h4>Números grandes</h4><p>100 → <i>one hundred</i> · 1.000 → <i>one thousand</i> · 1.000.000 → <i>one million</i>.<br>Se usa <b>and</b> antes de las decenas finales en inglés británico: <i>350 = three hundred and fifty</i>.</p><p><b>hundred</b>, <b>thousand</b> y <b>million</b> no llevan -s cuando van con un número: <i>two hundred people</i>, no <i>two hundreds</i>.</p><h4>Precios</h4><p><i>How much is it?</i> — <i>It's twenty dollars. / It costs 15,000 pesos.</i></p><h4>Decimales y porcentajes</h4><p>El punto decimal se lee <b>point</b>: <i>3.5 = three point five</i>. Los porcentajes: <i>50% = fifty percent</i>.</p><h4>Distancias</h4><p><i>It's five kilometers from here. The trip takes two hours.</i></p>",
+      "content_en": "<h4>Large numbers</h4><p>100 → <i>one hundred</i> · 1,000 → <i>one thousand</i> · 1,000,000 → <i>one million</i>.<br>British English uses <b>and</b> before the final tens: <i>350 = three hundred and fifty</i>.</p><p><b>hundred</b>, <b>thousand</b> and <b>million</b> take no -s after a number: <i>two hundred people</i>, not <i>two hundreds</i>.</p><h4>Prices</h4><p><i>How much is it?</i> — <i>It's twenty dollars. / It costs 15,000 pesos.</i></p><h4>Decimals and percentages</h4><p>The decimal point is read <b>point</b>: <i>3.5 = three point five</i>. Percentages: <i>50% = fifty percent</i>.</p><h4>Distances</h4><p><i>It's five kilometers from here. The trip takes two hours.</i></p>",
+      "fichas": [
+        { "t": "two hundred", "d": "Sin -s cuando va precedido de un número.", "d_en": "No -s when preceded by a number." },
+        { "t": "How much is it?", "d": "Pregunta por el precio.", "d_en": "Asks about the price." },
+        { "t": "point", "d": "El punto decimal se lee point: 2.5 = two point five.", "d_en": "The decimal point is read point: 2.5 = two point five." },
+        { "t": "percent", "d": "Porcentaje: siempre en singular, sin -s.", "d_en": "Percentage: always singular, with no -s." }
+      ],
+      "quiz": [
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["three hundreds people", "three hundred people", "three hundred of people", "three hundreds of people"], "o_en": ["three hundreds people", "three hundred people", "three hundred of people", "three hundreds of people"], "a": 1, "why": "Hundred no lleva -s cuando va con un número.", "why_en": "Hundred takes no -s when it follows a number." },
+        { "q": "«___ is this backpack?»", "q_en": "\"___ is this backpack?\"", "o": ["How many", "How much", "How long", "What many"], "o_en": ["How many", "How much", "How long", "What many"], "a": 1, "why": "El precio se pregunta con How much.", "why_en": "The price is asked with How much." },
+        { "q": "¿Cómo se lee 4.2?", "q_en": "How do you read 4.2?", "o": ["four coma two", "four point two", "four dot two", "four and two"], "o_en": ["four coma two", "four point two", "four dot two", "four and two"], "a": 1, "why": "El punto decimal se lee point.", "why_en": "The decimal point is read point." }
+      ]
+    },
+    {
+      "id": "ingles-7-3-6",
+      "num": 6,
+      "tipo": "vocabulary",
+      "t": "Tareas del hogar",
+      "t_en": "Housework",
+      "d": "10 min",
+      "content_es": "<h4>Las tareas</h4><p><b>make the bed</b> (tender la cama), <b>wash the dishes / do the dishes</b>, <b>do the laundry</b> (lavar la ropa), <b>sweep the floor</b> (barrer), <b>mop the floor</b> (trapear), <b>vacuum</b> (aspirar), <b>take out the trash</b> (sacar la basura), <b>set the table</b> (poner la mesa), <b>water the plants</b>, <b>walk the dog</b>, <b>tidy up / clean my room</b>.</p><h4>Los verbos que se usan</h4><ul><li><b>do</b>: the dishes, the laundry, the housework, the shopping</li><li><b>make</b>: the bed, breakfast, a mess</li></ul><h4>Con obligación</h4><p><i>I have to take out the trash every night.</i> · <i>My brother doesn't have to cook.</i></p>",
+      "content_en": "<h4>The chores</h4><p><b>make the bed</b>, <b>wash the dishes / do the dishes</b>, <b>do the laundry</b>, <b>sweep the floor</b>, <b>mop the floor</b>, <b>vacuum</b>, <b>take out the trash</b>, <b>set the table</b>, <b>water the plants</b>, <b>walk the dog</b>, <b>tidy up / clean my room</b>.</p><h4>The verbs used</h4><ul><li><b>do</b>: the dishes, the laundry, the housework, the shopping</li><li><b>make</b>: the bed, breakfast, a mess</li></ul><h4>With obligation</h4><p><i>I have to take out the trash every night.</i> · <i>My brother doesn't have to cook.</i></p>",
+      "fichas": [
+        { "t": "make the bed", "d": "Tender la cama: con make, no con do.", "d_en": "To arrange the bed: with make, not do." },
+        { "t": "do the dishes", "d": "Lavar la loza: con do o con wash.", "d_en": "To wash the plates: with do or wash." },
+        { "t": "take out the trash", "d": "Sacar la basura.", "d_en": "To put the garbage outside." },
+        { "t": "do vs make", "d": "do para tareas rutinarias; make para crear algo.", "d_en": "do for routine tasks; make for creating something." }
+      ],
+      "quiz": [
+        { "q": "«Every morning I ___ my bed.»", "q_en": "\"Every morning I ___ my bed.\"", "o": ["do", "make", "take", "clean up"], "o_en": ["do", "make", "take", "clean up"], "a": 1, "why": "La colocación correcta es make the bed.", "why_en": "The correct collocation is make the bed." },
+        { "q": "¿Qué significa «take out the trash»?", "q_en": "What does \"take out the trash\" mean?", "o": ["Barrer el piso", "Sacar la basura", "Lavar la ropa", "Poner la mesa"], "o_en": ["Sweep the floor", "Put the garbage out", "Do the laundry", "Set the table"], "a": 1, "why": "Trash es basura y take out es sacarla.", "why_en": "Trash is garbage and take out means to put it outside." },
+        { "q": "«I have to ___ the laundry on Sundays.»", "q_en": "\"I have to ___ the laundry on Sundays.\"", "o": ["make", "do", "take", "set"], "o_en": ["make", "do", "take", "set"], "a": 1, "why": "La colocación es do the laundry.", "why_en": "The collocation is do the laundry." }
+      ]
+    },
+    {
+      "id": "ingles-7-3-7",
+      "num": 7,
+      "tipo": "vocabulary",
+      "t": "Transporte y viajes",
+      "t_en": "Transportation and travel",
+      "d": "12 min",
+      "content_es": "<h4>Medios de transporte</h4><p><b>bus</b>, <b>car</b>, <b>taxi</b>, <b>train</b>, <b>subway / metro</b>, <b>plane</b>, <b>boat</b>, <b>ship</b>, <b>bicycle / bike</b>, <b>motorcycle</b>, <b>on foot</b> (a pie).</p><h4>La preposición correcta</h4><ul><li><b>by</b> + medio, sin artículo: <i>by bus, by car, by plane</i></li><li>Excepción: <b>on foot</b></li><li>Con artículo se usa <b>in</b> o <b>on</b>: <i>in the car</i>, <i>on the bus</i></li></ul><h4>Vocabulario de viaje</h4><p><b>ticket</b>, <b>luggage</b> (equipaje), <b>suitcase</b> (maleta), <b>passport</b>, <b>airport</b>, <b>flight</b>, <b>trip</b>, <b>journey</b>, <b>tour</b>, <b>book a ticket</b> (reservar).</p><h4>Frases útiles</h4><p><i>How do you get to school?</i> — <i>I go by bus.</i> · <i>The flight takes two hours.</i></p>",
+      "content_en": "<h4>Means of transport</h4><p><b>bus</b>, <b>car</b>, <b>taxi</b>, <b>train</b>, <b>subway / metro</b>, <b>plane</b>, <b>boat</b>, <b>ship</b>, <b>bicycle / bike</b>, <b>motorcycle</b>, <b>on foot</b>.</p><h4>The right preposition</h4><ul><li><b>by</b> + means, with no article: <i>by bus, by car, by plane</i></li><li>Exception: <b>on foot</b></li><li>With an article we use <b>in</b> or <b>on</b>: <i>in the car</i>, <i>on the bus</i></li></ul><h4>Travel vocabulary</h4><p><b>ticket</b>, <b>luggage</b>, <b>suitcase</b>, <b>passport</b>, <b>airport</b>, <b>flight</b>, <b>trip</b>, <b>journey</b>, <b>tour</b>, <b>book a ticket</b>.</p><h4>Useful phrases</h4><p><i>How do you get to school?</i> — <i>I go by bus.</i> · <i>The flight takes two hours.</i></p>",
+      "fichas": [
+        { "t": "by bus / by car", "d": "By + medio de transporte, sin artículo.", "d_en": "By + means of transport, with no article." },
+        { "t": "on foot", "d": "A pie: la única excepción a by.", "d_en": "Walking: the only exception to by." },
+        { "t": "luggage", "d": "Equipaje: es incontable, no lleva -s.", "d_en": "Luggage is uncountable: it takes no -s." },
+        { "t": "book a ticket", "d": "Reservar un tiquete. Book también es verbo.", "d_en": "To reserve a ticket. Book is also a verb." }
+      ],
+      "quiz": [
+        { "q": "«I go to school ___ bus.»", "q_en": "\"I go to school ___ bus.\"", "o": ["in", "on", "by", "with"], "o_en": ["in", "on", "by", "with"], "a": 2, "why": "By + medio de transporte, sin artículo.", "why_en": "By + means of transport, with no article." },
+        { "q": "«We went to the park ___.» (a pie)", "q_en": "\"We went to the park ___.\" (walking)", "o": ["by foot", "on foot", "in foot", "with foot"], "o_en": ["by foot", "on foot", "in foot", "with foot"], "a": 1, "why": "La expresión fija es on foot.", "why_en": "The fixed expression is on foot." },
+        { "q": "¿Cuál es correcta?", "q_en": "Which one is correct?", "o": ["My luggages are heavy", "My luggage is heavy", "My luggage are heavy", "My luggages is heavy"], "o_en": ["My luggages are heavy", "My luggage is heavy", "My luggage are heavy", "My luggages is heavy"], "a": 1, "why": "Luggage es incontable: verbo en singular y sin -s.", "why_en": "Luggage is uncountable: singular verb and no -s." }
+      ]
+    }
+  ],
+  "repaso": {
+    "id": "ingles-7-3-repaso",
+    "titulo": "Repaso — Rules and Routes",
+    "titulo_en": "Review — Rules and Routes",
+    "resumen_es": "<h4>Lo esencial del periodo</h4><p>El periodo trata de <b>reglas y cantidades</b>. Los modales y have to expresan obligación, consejo y permiso; los cuantificadores dicen cuánto hay; y los gerundios aparecen después de preposiciones y de ciertos verbos.</p><h4>Puntos gramaticales</h4><ul><li>have to = obligación externa · don't have to = no es necesario · mustn't = prohibido.</li><li>Los modales no cambian, no llevan to y forman preguntas sin do.</li><li>many/few con contables; much/little con incontables; a lot of para ambos.</li><li>Gerundio después de preposición y de enjoy, finish, avoid, practice.</li></ul><h4>Vocabulario</h4><p>Números grandes, precios y porcentajes; tareas del hogar con do y make; transporte con by y vocabulario de viaje.</p>",
+    "resumen_en": "<h4>The core of the term</h4><p>The term is about <b>rules and quantities</b>. Modals and have to express obligation, advice and permission; quantifiers say how much there is; and gerunds appear after prepositions and certain verbs.</p><h4>Grammar points</h4><ul><li>have to = external obligation · don't have to = not necessary · mustn't = forbidden.</li><li>Modals never change, take no to and form questions without do.</li><li>many/few with countables; much/little with uncountables; a lot of for both.</li><li>Gerund after prepositions and after enjoy, finish, avoid, practice.</li></ul><h4>Vocabulary</h4><p>Large numbers, prices and percentages; housework with do and make; transport with by and travel vocabulary.</p>",
+    "puntos_clave": [
+      ["don't have to no es prohibición; mustn't sí lo es.", "don't have to is not a prohibition; mustn't is."],
+      ["Modal + verbo base, sin to y sin -s.", "Modal + base verb, no to and no -s."],
+      ["a few = algunos; few = muy pocos.", "a few = some; few = hardly any."],
+      ["Después de preposición siempre va gerundio.", "After a preposition always use a gerund."],
+      ["hundred, thousand y million no llevan -s tras un número.", "hundred, thousand and million take no -s after a number."],
+      ["by bus, by car, pero on foot.", "by bus, by car, but on foot."]
+    ],
+    "preguntas": [
+      { "q": "«He ___ wake up at 5 a.m. for work.»", "q_en": "\"He ___ wake up at 5 a.m. for work.\"", "o": ["have to", "has to", "must to", "should to"], "o_en": ["have to", "has to", "must to", "should to"], "a": 1, "why": "He es tercera persona: has to.", "why_en": "He is third person: has to." },
+      { "q": "«You ___ park here. It's forbidden.»", "q_en": "\"You ___ park here. It's forbidden.\"", "o": ["don't have to", "mustn't", "shouldn't have", "may not to"], "o_en": ["don't have to", "mustn't", "shouldn't have", "may not to"], "a": 1, "why": "Forbidden indica prohibición: mustn't.", "why_en": "Forbidden indicates prohibition: mustn't." },
+      { "q": "«How ___ sugar do you want?»", "q_en": "\"How ___ sugar do you want?\"", "o": ["many", "much", "few", "a lot"], "o_en": ["many", "much", "few", "a lot"], "a": 1, "why": "Sugar es incontable: how much.", "why_en": "Sugar is uncountable: how much." },
+      { "q": "«She's good at ___ problems.»", "q_en": "\"She's good at ___ problems.\"", "o": ["solve", "to solve", "solving", "solved"], "o_en": ["solve", "to solve", "solving", "solved"], "a": 2, "why": "Después de la preposición at va el gerundio.", "why_en": "After the preposition at we use the gerund." },
+      { "q": "«I finished ___ the report.»", "q_en": "\"I finished ___ the report.\"", "o": ["to write", "writing", "write", "wrote"], "o_en": ["to write", "writing", "write", "wrote"], "a": 1, "why": "Finish siempre va con gerundio.", "why_en": "Finish is always followed by a gerund." },
+      { "q": "«We traveled ___ train to Bogotá.»", "q_en": "\"We traveled ___ train to Bogotá.\"", "o": ["in", "on", "by", "with"], "o_en": ["in", "on", "by", "with"], "a": 2, "why": "By + medio de transporte.", "why_en": "By + means of transport." },
+      { "q": "«My sister has to ___ the dishes tonight.»", "q_en": "\"My sister has to ___ the dishes tonight.\"", "o": ["make", "do", "take", "put"], "o_en": ["make", "do", "take", "put"], "a": 1, "why": "La colocación es do the dishes.", "why_en": "The collocation is do the dishes." },
+      { "q": "«There were ___ hundred people at the concert.»", "q_en": "\"There were ___ hundred people at the concert.\"", "o": ["fives", "five", "five of", "fifth"], "o_en": ["fives", "five", "five of", "fifth"], "a": 1, "why": "Se usa el cardinal y hundred no lleva -s.", "why_en": "We use the cardinal number and hundred takes no -s." }
+    ]
+  }
+}

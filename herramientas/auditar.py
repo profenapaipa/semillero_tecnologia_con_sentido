@@ -97,6 +97,25 @@ for p in paginas:
                       % (os.path.relpath(p, RAIZ), m.group(0)))
         break
 
+# ---- 4.bis texto que no se lee sobre su fondo ----
+# El error que aparecio en la revision del docente: se usaba --superficie
+# como COLOR DE TEXTO sobre el panel oscuro y sobre rellenos saturados. En
+# tema claro la superficie es blanca y funciona; en tema oscuro la
+# superficie es OSCURA, y quedaba texto oscuro sobre fondo oscuro.
+# Para eso existen --sobre-panel y --sobre-relleno.
+PROHIBIDO_COMO_TEXTO = ('--superficie', '--superficie2', '--papel')
+for i, linea in enumerate(sitio.splitlines(), 1):
+    limpia = re.sub(r'/\*.*?\*/', '', linea)
+    m = re.search(r'(?<!-)color:\s*var\((--[a-z0-9-]+)\)', limpia)
+    if m and m.group(1) in PROHIBIDO_COMO_TEXTO:
+        fallas.append('sitio.css linea %d usa %s como color de texto. En tema oscuro ese '
+                      'token es oscuro: usa --sobre-panel o --sobre-relleno. [%s]'
+                      % (i, m.group(1), limpia.strip()[:60]))
+    f = re.search(r'fill:\s*var\((--[a-z0-9-]+)\)', limpia)
+    if f and f.group(1) in PROHIBIDO_COMO_TEXTO:
+        fallas.append('sitio.css linea %d usa %s como relleno de texto SVG. [%s]'
+                      % (i, f.group(1), limpia.strip()[:60]))
+
 # ---- 5. tokens definidos en el :root base ----
 marca = leer(os.path.join(CSS, 'marca.css'))
 base = marca.split('@media', 1)[0]

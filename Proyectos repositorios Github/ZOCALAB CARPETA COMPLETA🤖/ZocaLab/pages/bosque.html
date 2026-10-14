@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZocaLab — Mis bosques</title>
+
+  <!-- Tipografías: Playfair Display para títulos, Nunito para el cuerpo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/zocalab.css">
+  <link rel="stylesheet" href="../css/muisca.css">
+
+  <style>
+    /* ====== Ajustes propios de esta página ====== */
+
+    /* Fondo del resto de la página: piedra cálida con textil muisca */
+    body.tema-muisca {
+      background:
+        repeating-linear-gradient(60deg,  rgba(201,152,42,.06) 0, rgba(201,152,42,.06) 1px, transparent 0, transparent 26px),
+        repeating-linear-gradient(-60deg, rgba(27,94,59,.05)  0, rgba(27,94,59,.05)  1px, transparent 0, transparent 26px),
+        linear-gradient(180deg, #F2EDE0 0%, #EADFC0 100%);
+      background-attachment: fixed;
+    }
+
+    /* Cambio de bosque: la escena se atenúa un instante */
+    .mz-marco .mz-arboles-capa,
+    .mz-marco .mz-efectos { transition: opacity .28s ease; }
+    .mz-marco.cambiando .mz-fondo { transition-duration: .28s; }
+    .mz-marco.cambiando .mz-fondo,
+    .mz-marco.cambiando .mz-arboles-capa,
+    .mz-marco.cambiando .mz-efectos { opacity: 0 !important; }
+
+    /* Panel bajo el bosque */
+    .bosque-ui {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 22px 12px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Mensaje de árbol ya plantado */
+    .plantado-hoy {
+      background: linear-gradient(180deg, #F1FAEF, #DDF0DA);
+      border: 2px solid rgba(45, 155, 90, 0.55);
+      border-radius: 18px;
+      padding: 18px 20px;
+      text-align: center;
+      box-shadow: 0 0 0 4px rgba(45, 155, 90, .08);
+    }
+    .plantado-hoy .principal { font-size: 16px; font-weight: 800; color: var(--zl-verde-oscuro); }
+    .plantado-hoy .secundario { font-size: 14px; color: var(--gris); margin-top: 4px; }
+
+    /* Brote que sube al plantar */
+    .brote-celebra {
+      position: fixed;
+      left: 50%;
+      bottom: 40%;
+      transform: translateX(-50%);
+      font-size: 62px;
+      z-index: 600;
+      pointer-events: none;
+      animation: zlSolSube 1.5s ease forwards;
+    }
+
+    @media (max-width: 720px) {
+      .mz-opciones-arbol { gap: 14px; }
+    }
+  </style>
+</head>
+<body class="tema-muisca">
+
+<div class="zl-page">
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="zl-header">
+    <div class="zl-marca">
+      <img src="../assets/logo-icon.png" alt="" onerror="this.style.display='none'">
+      <span>ZocaLab</span>
+    </div>
+
+    <div class="zl-saludo" id="saludo">Cargando...</div>
+
+    <button class="zl-avatar" id="avatarBtn" title="Ir a mi perfil" aria-label="Ir a mi perfil">Z</button>
+  </header>
+
+  <!-- ============================================
+       CONTENIDO
+       ============================================ -->
+  <main class="zl-content">
+
+    <!-- ====== LA ESCENA DEL BOSQUE ====== -->
+    <div class="mz-marco" id="escena">
+      <div class="mz-fondo" id="fondoDia"></div>
+      <div class="mz-fondo" id="fondoNoche"></div>
+      <div class="mz-efectos" id="efectos" aria-hidden="true"></div>
+
+      <div class="mz-arboles-capa">
+        <div class="zl-bosque-arboles" id="bosqueArboles"></div>
+      </div>
+      <div class="zl-bosque-hojas" id="bosqueHojas" aria-hidden="true"></div>
+
+      <div class="mz-titulo-piedra"><span id="tituloBosque">Bosque</span><small id="lemaBosque"></small></div>
+      <div class="mz-hora-chip" id="horaChip">☀️ Día</div>
+      <div class="zl-bosque-aviso zl-oculto" id="bosqueAviso"></div>
+      <div class="mz-vineta" aria-hidden="true"></div>
+    </div>
+
+    <!-- ====== ELEGIR BOSQUE ====== -->
+    <div class="mz-selector" id="selectorBosques" role="group" aria-label="Elige un bosque"></div>
+
+    <!-- ====== INTERFAZ SOBRE EL BOSQUE ====== -->
+    <div class="bosque-ui">
+
+      <div class="mz-divisor" aria-hidden="true"><span></span></div>
+
+      <!-- Tablilla de racha -->
+      <div class="mz-tablilla zl-anim-entrada" id="rachaPanel">
+        <div class="mz-tablilla-dato">
+          <span class="ico" aria-hidden="true">🌳</span>
+          <span class="num" id="totalArboles">0</span>
+          <span class="eti">árboles en total</span>
+        </div>
+        <div class="mz-tablilla-dato">
+          <span class="ico" aria-hidden="true">🔥</span>
+          <span class="num" id="diasRacha">0</span>
+          <span class="eti">días de racha</span>
+        </div>
+        <div class="mz-tablilla-dato" id="tipoArbolActivo">
+          <span class="ico" aria-hidden="true">🌱</span>
+          <span class="num" style="font-size:17px">Sin árbol</span>
+          <span class="eti">de este bosque</span>
+        </div>
+      </div>
+
+      <!-- Zona de acción: plantar / mensaje / invitación a la rutina -->
+      <div id="zonaAccion"></div>
+
+      <div class="mz-acciones">
+        <button class="zl-btn-secundario" id="btnMisArboles">🌳 Mis árboles plantados</button>
+        <button class="zl-btn-secundario zl-oculto" id="btnCambiarArbol">🔄 Cambiar árbol de este bosque</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============================================
+       NAVEGACIÓN INFERIOR
+       ============================================ -->
+  <nav class="zl-nav">
+    <a class="zl-nav-item active" href="bosque.html">
+      <span aria-hidden="true">🌳</span><span>Bosque</span>
+    </a>
+    <a class="zl-nav-item" href="rutina-sol.html">
+      <span aria-hidden="true">☀️</span><span>Mi día</span>
+    </a>
+    <a class="zl-nav-item" href="mi-espacio.html">
+      <span aria-hidden="true">📋</span><span>Mi espacio</span>
+    </a>
+    <a class="zl-nav-item" href="rutina-luna.html">
+      <span aria-hidden="true">🌙</span><span>Cerrar día</span>
+    </a>
+    <a class="zl-nav-item" href="perfil.html">
+      <span aria-hidden="true">👤</span><span>Perfil</span>
+    </a>
+  </nav>
+</div>
+
+<!-- ============================================
+     MODAL — ELEGIR EL ÁRBOL DE UN BOSQUE
+     ============================================ -->
+<div class="zl-modal-pleno mz-modal-arbol" id="modalArbol" role="dialog" aria-modal="true" aria-labelledby="modalArbolTitulo">
+  <h1 class="zl-titulo zl-titulo-xl zl-centro" id="modalArbolTitulo">Elige tu árbol</h1>
+  <p class="zl-subtitulo zl-centro zl-mt-8" style="max-width:520px" id="modalArbolTexto"></p>
+  <div class="mz-opciones-arbol" id="opcionesArbol"></div>
+  <button type="button" class="mz-modal-cerrar-txt" id="btnCerrarArbol">Ahora no</button>
+</div>
+
+<!-- ============================================
+     MODAL — MIS ÁRBOLES EN TODOS LOS BOSQUES
+     ============================================ -->
+<div class="zl-modal" id="modalMisArboles" role="dialog" aria-modal="true" aria-labelledby="modalMisArbolesTitulo">
+  <div class="zl-modal-caja mz-caja-ancha">
+    <div class="zl-modal-titulo" id="modalMisArbolesTitulo">🌳 Mis árboles plantados</div>
+    <div id="resumenBosques"></div>
+    <div class="zl-modal-acciones">
+      <button class="zl-btn-secundario" id="btnCerrarMisArboles">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+<script src="../js/datos.js"></script>
+<script src="../js/sonidos.js"></script>
+<script src="../js/animaciones.js"></script>
+<script src="../js/bosque.js"></script>
+<script src="../js/condor.js"></script>
+
+<script>
+  /* ============================================
+     PROTECCIÓN DE RUTA
+     ============================================ */
+  if (!verificarSesion()) {
+    throw new Error('Sin sesión activa');
+  }
+
+  const D = window.ZocaDatos;
+  const B = window.ZocaBosque;
+
+  /* ============================================
+     HEADER — saludo según la hora real y avatar
+     ============================================ */
+  document.getElementById('saludo').textContent = D.saludoSegunHora();
+  D.pintarAvatar(document.getElementById('avatarBtn'));
+  document.getElementById('avatarBtn').addEventListener('click', function () {
+    window.location.href = 'perfil.html';
+  });
+
+  /* ============================================
+     ELEMENTOS
+     ============================================ */
+  const marco             = document.getElementById('escena');
+  const fondoDia          = document.getElementById('fondoDia');
+  const fondoNoche        = document.getElementById('fondoNoche');
+  const efectos           = document.getElementById('efectos');
+  const contenedorArboles = document.getElementById('bosqueArboles');
+  const contenedorHojas   = document.getElementById('bosqueHojas');
+  const aviso             = document.getElementById('bosqueAviso');
+  const modalArbol        = document.getElementById('modalArbol');
+  const modalMis          = document.getElementById('modalMisArboles');
+
+  // Siempre se lee a través de migrar(): convierte los datos de la
+  // versión anterior (un solo bosque) la primera vez que se abre.
+  function leer() { return B.migrar(); }
+
+  /* ============================================
+     FONDO: bosque activo + día o noche según la hora
+     ============================================ */
+  let esNoche = B.esDeNoche();
+
+  function pintarFondo(bosqueId) {
+    fondoDia.style.backgroundImage   = 'url("' + B.fondoDe(bosqueId, false) + '")';
+    fondoNoche.style.backgroundImage = 'url("' + B.fondoDe(bosqueId, true)  + '")';
+    fondoDia.classList.toggle('visible', !esNoche);
+    fondoNoche.classList.toggle('visible', esNoche);
+
+    document.getElementById('horaChip').textContent = esNoche ? '🌙 Noche' : '☀️ Día';
+    B.montarEfectos(efectos, bosqueId, esNoche);
+  }
+
+  /* ============================================
+     SELECTOR DE BOSQUE
+     ============================================ */
+  function pintarSelector(bosque) {
+    const activo = B.bosqueActivo(bosque);
+    document.getElementById('selectorBosques').innerHTML = B.ORDEN_BOSQUES.map(function (id) {
+      const b = B.BOSQUES[id];
+      const cantidad = B.arbolesDe(bosque, id).length;
+      const tipo = B.tipoDe(bosque, id);
+      const detalle = (cantidad + (cantidad === 1 ? ' árbol' : ' árboles')) +
+                      ' · ' + (tipo ? B.ARBOLES[tipo].nombre : 'sin árbol elegido');
+      return '' +
+        '<button type="button" class="mz-bosque-btn' + (id === activo ? ' activo' : '') + '" data-bosque="' + id + '" ' +
+                'aria-pressed="' + (id === activo) + '">' +
+          '<span class="mz-bosque-mini" style="background-image:url(\'' + B.fondoDe(id, esNoche) + '\')"></span>' +
+          '<span class="mz-bosque-texto"><strong>' + b.nombre + '</strong><span>' + detalle + '</span></span>' +
+        '</button>';
+    }).join('');
+
+    document.querySelectorAll('[data-bosque]').forEach(function (boton) {
+      boton.addEventListener('click', function () {
+        irAlBosque(boton.dataset.bosque);
+      });
+    });
+  }
+
+  function irAlBosque(id) {
+    const bosque = leer();
+    if (id === B.bosqueActivo(bosque)) return;
+    marco.classList.add('cambiando');
+    B.cambiarBosque(id);
+    try { if (window.zocaSound) zocaSound.logro(); } catch (e) {}
+    setTimeout(function () {
+      pintarBosque();
+      marco.classList.remove('cambiando');
+    }, 300);
+  }
+
+  /* ============================================
+     PINTAR EL BOSQUE COMPLETO
+     ============================================ */
+  function pintarBosque() {
+    const bosque = leer();
+    const id = B.bosqueActivo(bosque);
+    const def = B.BOSQUES[id];
+
+    document.getElementById('tituloBosque').textContent = def.nombre;
+    document.getElementById('lemaBosque').textContent = def.lema;
+
+    pintarFondo(id);
+    B.renderizarArboles(contenedorArboles, bosque, id);
+
+    // ====== Estado de la racha: color y hojas ======
+    const estado = B.estadoRacha(bosque);
+    contenedorArboles.classList.remove('sin-racha-1', 'sin-racha-2', 'sin-racha-3');
+    if (estado.clase) contenedorArboles.classList.add(estado.clase);
+
+    if (estado.dias >= 2) {
+      B.lloverHojas(contenedorHojas, 9);
+    } else {
+      contenedorHojas.innerHTML = '';
+    }
+
+    if (estado.mensaje) {
+      aviso.textContent = estado.mensaje;
+      aviso.classList.remove('zl-oculto');
+    } else {
+      aviso.classList.add('zl-oculto');
+    }
+
+    // ====== Tablilla ======
+    document.getElementById('totalArboles').textContent = bosque.totalArboles || 0;
+    document.getElementById('diasRacha').textContent = bosque.diasRacha || 0;
+
+    const tipo = B.tipoDe(bosque, id);
+    const nodoTipo = document.getElementById('tipoArbolActivo');
+    if (tipo) {
+      const arbol = B.ARBOLES[tipo];
+      nodoTipo.innerHTML =
+        '<span class="ico" aria-hidden="true">' + arbol.icono + '</span>' +
+        '<span class="num" style="font-size:17px">' + arbol.nombre + '</span>' +
+        '<span class="eti">árbol de este bosque</span>';
+    } else {
+      nodoTipo.innerHTML =
+        '<span class="ico" aria-hidden="true">🌱</span>' +
+        '<span class="num" style="font-size:17px">Sin elegir</span>' +
+        '<span class="eti">árbol de este bosque</span>';
+    }
+
+    // Solo se puede cambiar de árbol mientras el bosque esté vacío
+    document.getElementById('btnCambiarArbol')
+      .classList.toggle('zl-oculto', !(tipo && B.puedeCambiarTipo(bosque, id)));
+
+    pintarSelector(bosque);
+    pintarZonaAccion(bosque);
+  }
+
+  /* ============================================
+     ZONA DE ACCIÓN
+     ============================================ */
+  function pintarZonaAccion(bosque) {
+    const zona = document.getElementById('zonaAccion');
+    const rutinas = D.leerDato(D.CLAVES.RUTINAS);
+    const id = B.bosqueActivo(bosque);
+    const def = B.BOSQUES[id];
+    const tipo = B.tipoDe(bosque, id);
+
+    const cumplioHoy =
+      (rutinas.sol.completadaHoy  && D.esHoy(rutinas.sol.fechaUltima)) ||
+      (rutinas.luna.completadaHoy && D.esHoy(rutinas.luna.fechaUltima));
+
+    const yaPlanto = D.esHoy(bosque.ultimoEstudio);
+
+    // ====== Ya plantó el árbol de hoy ======
+    if (yaPlanto) {
+      zona.innerHTML =
+        '<div class="plantado-hoy zl-anim-entrada">' +
+          '<div class="principal">✅ Árbol plantado hoy</div>' +
+          '<div class="secundario">Vuelve mañana para plantar otro 🌿</div>' +
+        '</div>';
+      return;
+    }
+
+    // ====== Este bosque todavía no tiene su árbol ======
+    if (!tipo) {
+      zona.innerHTML =
+        '<div class="zl-card-aviso zl-centro zl-anim-entrada">' +
+          '<div class="zl-card-titulo">El ' + def.nombre + ' espera su árbol</div>' +
+          '<p class="zl-card-texto zl-mb-16">Elige el árbol que crecerá aquí. Cada bosque florece con un solo tipo.</p>' +
+          '<button class="zl-btn-primario" id="btnAccionElegir">🌱 Elegir el árbol de este bosque</button>' +
+        '</div>';
+      document.getElementById('btnAccionElegir').addEventListener('click', abrirModalArbol);
+      return;
+    }
+
+    // ====== Cumplió la rutina y puede plantar ======
+    if (cumplioHoy) {
+      zona.innerHTML =
+        '<button class="zl-btn-primario zl-anim-pulso" id="btnPlantar">' +
+          '🌱 Plantar ' + B.ARBOLES[tipo].nombre + ' en este bosque' +
+        '</button>';
+      document.getElementById('btnPlantar').addEventListener('click', plantar);
+      return;
+    }
+
+    // ====== No ha cumplido nada hoy ======
+    const enlace = esNoche
+      ? '<a href="rutina-luna.html" class="zl-btn-primario" style="display:block;text-align:center;text-decoration:none">Cerrar mi día 🌙</a>'
+      : '<a href="rutina-sol.html" class="zl-btn-primario" style="display:block;text-align:center;text-decoration:none">Ir a mi rutina ☀️</a>';
+    zona.innerHTML =
+      '<div class="zl-card-aviso zl-centro zl-anim-entrada">' +
+        '<div class="zl-card-titulo">Completa tu rutina del día para plantar</div>' +
+        '<p class="zl-card-texto zl-mb-16">Tu árbol de hoy nace del compromiso con tu día.</p>' +
+        enlace +
+      '</div>';
+  }
+
+  /* ============================================
+     PLANTAR
+     ============================================ */
+  function plantar() {
+    const nuevo = B.plantarArbol();
+    if (!nuevo) return;
+
+    try {
+      if (window.zocaSound) window.zocaSound.racha();
+      if (window.zocaAnim)  window.zocaAnim.lanzarConfeti(34);
+    } catch (e) {
+      console.error('Bosque: falló la celebración del plantado', e);
+    }
+
+    const celebra = document.createElement('div');
+    celebra.className = 'brote-celebra';
+    celebra.textContent = '🌱';
+    document.body.appendChild(celebra);
+    setTimeout(function () { celebra.remove(); }, 1600);
+
+    pintarBosque();
+    const recienPlantado = contenedorArboles.querySelector('[data-id="' + nuevo.id + '"]');
+    if (recienPlantado) recienPlantado.classList.add('brota');
+
+    const bosque = leer();
+    aviso.textContent = '¡Árbol ' + bosque.totalArboles + ' plantado! 🌳 Racha de ' +
+                        bosque.diasRacha + (bosque.diasRacha === 1 ? ' día' : ' días');
+    aviso.classList.remove('zl-oculto');
+    setTimeout(function () { aviso.classList.add('zl-oculto'); }, 4500);
+  }
+
+  /* ============================================
+     MODAL — ELEGIR ÁRBOL DEL BOSQUE ACTIVO
+     ============================================ */
+  function abrirModalArbol() {
+    const bosque = leer();
+    const id = B.bosqueActivo(bosque);
+    const def = B.BOSQUES[id];
+    const actual = B.tipoDe(bosque, id);
+
+    document.getElementById('modalArbolTitulo').textContent = 'Elige el árbol del ' + def.nombre;
+    document.getElementById('modalArbolTexto').textContent =
+      'Cada bosque florece con un solo tipo de árbol. En cuanto plantes el primero, ' +
+      'este bosque será suyo para siempre.';
+
+    document.getElementById('opcionesArbol').innerHTML = def.arboles.map(function (clave) {
+      const arbol = B.ARBOLES[clave];
+      return '' +
+        '<button type="button" class="mz-opcion-arbol' + (clave === actual ? ' elegida' : '') + '" data-tipo="' + clave + '">' +
+          '<img src="' + arbol.imagen + '" alt="">' +
+          '<span class="nombre">' + arbol.icono + ' ' + arbol.nombre + '</span>' +
+          '<span class="texto">' + arbol.texto + '</span>' +
+          '<span class="aviso">' + (clave === actual ? 'Elegido actualmente' : 'Toca para elegirlo') + '</span>' +
+        '</button>';
+    }).join('');
+
+    document.querySelectorAll('.mz-opcion-arbol').forEach(function (tarjeta) {
+      tarjeta.addEventListener('click', function () { elegirArbol(id, tarjeta.dataset.tipo, tarjeta); });
+    });
+
+    modalArbol.classList.add('abierto');
+    modalArbol.classList.remove('cerrando');
+  }
+
+  function cerrarModalArbol() {
+    modalArbol.classList.add('cerrando');
+    setTimeout(function () { modalArbol.classList.remove('abierto', 'cerrando'); }, 500);
+  }
+
+  function elegirArbol(bosqueId, tipo, tarjeta) {
+    if (!B.elegirTipo(bosqueId, tipo)) return;
+
+    tarjeta.classList.add('elegida');
+    try { if (window.zocaSound) window.zocaSound.logro(); } catch (e) {}
+
+    setTimeout(function () {
+      cerrarModalArbol();
+      pintarBosque();
+    }, 800);
+  }
+
+  document.getElementById('btnCerrarArbol').addEventListener('click', cerrarModalArbol);
+  document.getElementById('btnCambiarArbol').addEventListener('click', abrirModalArbol);
+
+  /* ============================================
+     MODAL — MIS ÁRBOLES
+     ============================================ */
+  function abrirMisArboles() {
+    B.renderizarResumen(document.getElementById('resumenBosques'), leer(), function (id) {
+      cerrarMisArboles();
+      irAlBosque(id);
+    });
+    modalMis.classList.add('abierto');
+  }
+  function cerrarMisArboles() { modalMis.classList.remove('abierto'); }
+
+  document.getElementById('btnMisArboles').addEventListener('click', abrirMisArboles);
+  document.getElementById('btnCerrarMisArboles').addEventListener('click', cerrarMisArboles);
+  modalMis.addEventListener('click', function (evento) {
+    if (evento.target === modalMis) cerrarMisArboles();
+  });
+
+  /* ============================================
+     ARRANQUE
+     ============================================ */
+  // El primer pintado deja el fondo correcto sin transición visible
+  fondoDia.style.transition = 'none';
+  fondoNoche.style.transition = 'none';
+  pintarBosque();
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      fondoDia.style.transition = '';
+      fondoNoche.style.transition = '';
+    });
+  });
+
+  // Cada minuto se revisa si cambió de día a noche (o al revés)
+  setInterval(function () {
+    const ahoraNoche = B.esDeNoche();
+    document.getElementById('saludo').textContent = D.saludoSegunHora();
+    if (ahoraNoche !== esNoche) {
+      esNoche = ahoraNoche;
+      pintarBosque();
+    }
+  }, 60000);
+
+  // Si es la primera vez y el bosque no tiene árbol, se pide elegirlo
+  (function () {
+    const inicial = leer();
+    if (!B.tipoDe(inicial, B.bosqueActivo(inicial)) && !(inicial.totalArboles > 0)) {
+      abrirModalArbol();
+    }
+  })();
+
+  // El Cóndor vigila el tiempo en pantalla
+  ZocaCondor.init();
+
+  /* ============================================
+     RECORDATORIO DE METAS
+     Un aviso suave al entrar, como mucho una vez por día.
+     ============================================ */
+  (function avisarMetaUrgente() {
+    try {
+      const espacioAviso = D.leerDato(D.CLAVES.ESPACIO);
+      if (D.esHoy(espacioAviso.ultimoRecordatorio)) return;
+
+      const recordatorio = D.obtenerRecordatorioMeta();
+      if (!recordatorio) return;
+
+      const dias = recordatorio.diasRestantes;
+      let mensaje;
+      if (dias < 0) {
+        mensaje = 'Venció hace ' + Math.abs(dias) + (Math.abs(dias) === 1 ? ' día' : ' días') + '.';
+      } else if (dias === 0) {
+        mensaje = 'Vence hoy.';
+      } else {
+        mensaje = 'Vence en ' + dias + (dias === 1 ? ' día' : ' días') + '.';
+      }
+
+      setTimeout(function () {
+        if (window.zocaAnim) {
+          zocaAnim.mostrarAviso({
+            icono: '🎯',
+            titulo: '"' + recordatorio.texto + '"',
+            texto: mensaje
+          });
+        }
+      }, 1200);
+
+      D.actualizarDato(D.CLAVES.ESPACIO, 'ultimoRecordatorio', D.hoyISO());
+    } catch (e) {
+      console.error('Bosque: no se pudo mostrar el recordatorio de metas', e);
+    }
+  })();
+</script>
+
+</body>
+</html>
