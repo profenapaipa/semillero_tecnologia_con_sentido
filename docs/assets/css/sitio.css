@@ -47,7 +47,7 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--fuente-titulos);
   font-weight: 700;
-  letter-spacing: -.025em;
+  letter-spacing: -.012em;
   line-height: 1.1;
   margin: 0;
   text-wrap: balance;
@@ -97,8 +97,8 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
 .marca-sitio {
   display: flex; align-items: center; gap: 11px; margin-right: auto;
   color: var(--sobre-panel); text-decoration: none;
-  font-family: var(--fuente-titulos); font-weight: 800; font-size: 15px;
-  letter-spacing: -.02em; line-height: 1.15;
+  font-family: var(--fuente-titulos); font-weight: 700; font-size: 15px;
+  letter-spacing: -.01em; line-height: 1.15;
 }
 .marca-sitio:hover { color: var(--superficie); }
 .marca-sitio .sigla {
@@ -210,7 +210,7 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
 .portada > .envoltura { position: relative; padding-block: 44px 38px; }
 .portada.compacta > .envoltura { padding-block: 26px 26px; }
 .portada h1 {
-  font-size: var(--t-titulo1); font-weight: 800; letter-spacing: -.035em;
+  font-size: var(--t-titulo1); font-weight: 700; letter-spacing: -.012em;
   margin-block: 13px 13px; color: var(--superficie);
 }
 .portada.compacta h1 { font-size: var(--t-titulo2); margin-block: 9px 7px; }
@@ -223,7 +223,7 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
   margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--panel-2);
 }
 .portada-cifras .cifra {
-  display: block; font-family: var(--fuente-titulos); font-size: 30px; font-weight: 800;
+  display: block; font-family: var(--fuente-titulos); font-size: 30px; font-weight: 700;
   line-height: 1.05; color: var(--superficie); font-variant-numeric: tabular-nums;
   letter-spacing: -.03em;
 }
@@ -247,7 +247,7 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
 
 .cab-seccion { margin-bottom: 22px; max-width: 70ch; }
 .cab-seccion .rotulo { color: var(--cian); display: flex; align-items: center; gap: 8px; margin-bottom: 9px; }
-.cab-seccion h2 { font-size: var(--t-titulo2); font-weight: 800; letter-spacing: -.03em; }
+.cab-seccion h2 { font-size: var(--t-titulo2); font-weight: 700; letter-spacing: -.03em; }
 .cab-seccion p { color: var(--tinta-suave); margin-top: 9px; }
 
 .cab-sub {
@@ -259,7 +259,7 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
   display: grid; place-items: center; width: 36px; height: 36px;
   border-radius: 10px; background: var(--linea-t); color: var(--linea); flex: none;
 }
-.cab-sub h3 { font-size: 20px; font-weight: 800; letter-spacing: -.025em; }
+.cab-sub h3 { font-size: 20px; font-weight: 700; letter-spacing: -.012em; }
 .cab-sub .dato { margin-left: auto; }
 
 .intro { display: grid; grid-template-columns: repeat(auto-fit, minmax(228px, 1fr)); gap: 13px; }
@@ -287,8 +287,8 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
   border-radius: var(--radio); padding: 17px 18px; box-shadow: var(--alzado-1);
 }
 .celda .cifra {
-  font-family: var(--fuente-titulos); font-size: 34px; font-weight: 800; line-height: 1.02;
-  display: block; font-variant-numeric: tabular-nums; letter-spacing: -.035em;
+  font-family: var(--fuente-titulos); font-size: 34px; font-weight: 700; line-height: 1.02;
+  display: block; font-variant-numeric: tabular-nums; letter-spacing: -.012em;
 }
 .celda .cifra.alerta { color: var(--ambar-texto); }
 .celda .cifra.bien { color: var(--verde-texto); }
@@ -316,7 +316,7 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
 .anillo svg { width: 78px; height: 78px; }
 .anillo .pista { stroke: var(--panel-2); }
 .anillo .avance { stroke-linecap: round; transform: rotate(-90deg); transform-origin: 50% 50%; }
-.anillo .num { font-family: var(--fuente-titulos); font-weight: 800; font-size: 19px; fill: var(--superficie); }
+.anillo .num { font-family: var(--fuente-titulos); font-weight: 700; font-size: 19px; fill: var(--superficie); }
 .anillo .detalle .grande {
   font-family: var(--fuente-titulos); font-size: 20px; font-weight: 700;
   color: var(--superficie); display: block; line-height: 1.2;
@@ -354,13 +354,13 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
 /* La cifra enorme del nivel, de fondo: el recurso gráfico que le da peso. */
 .nivel-actual .gigante {
   position: absolute; right: 14px; top: -10px;
-  font-family: var(--fuente-titulos); font-size: var(--t-gigante); font-weight: 800;
+  font-family: var(--fuente-titulos); font-size: var(--t-gigante); font-weight: 700;
   line-height: 1; color: var(--linea-t, var(--cian-tenue)); pointer-events: none;
   letter-spacing: -.06em;
 }
 .nivel-actual > * { position: relative; }
 .nivel-actual .encima { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 13px; }
-.nivel-actual h2 { font-size: var(--t-titulo2); font-weight: 800; letter-spacing: -.03em; }
+.nivel-actual h2 { font-size: var(--t-titulo2); font-weight: 700; letter-spacing: -.03em; }
 
 .niveles { display: flex; flex-direction: column; gap: 9px; }
 .nivel {
@@ -417,7 +417,7 @@ a.nivel:hover .derecha { color: var(--linea, var(--cian)); }
 .nivel-abierto.gris  > header { background: var(--superficie2); }
 .nivel-abierto > header .gigante {
   position: absolute; right: 16px; top: -16px;
-  font-family: var(--fuente-titulos); font-size: 74px; font-weight: 800; line-height: 1;
+  font-family: var(--fuente-titulos); font-size: 74px; font-weight: 700; line-height: 1;
   color: var(--filete-sutil); pointer-events: none; letter-spacing: -.06em;
 }
 .nivel-abierto > header > * { position: relative; }
@@ -428,7 +428,7 @@ a.nivel:hover .derecha { color: var(--linea, var(--cian)); }
 .nivel-abierto.verde > header .marca { background: var(--verde-fill); color: var(--superficie); }
 .nivel-abierto.ambar > header .marca { background: var(--superficie); color: var(--ambar-texto); border: 2px solid var(--ambar-fill); }
 .nivel-abierto.gris  > header .marca { background: var(--superficie); color: var(--gris-texto); border: 2px dashed var(--gris-fill); }
-.nivel-abierto > header h3 { font-size: var(--t-titulo3); font-weight: 800; }
+.nivel-abierto > header h3 { font-size: var(--t-titulo3); font-weight: 700; }
 .nivel-abierto > header .que { font-size: var(--t-chico); color: var(--tinta-suave); margin-top: 3px; }
 .nivel-abierto > .contenido { padding: 17px 20px 19px; display: flex; flex-direction: column; gap: 14px; }
 
@@ -490,7 +490,7 @@ details.mas > div { padding-top: 13px; display: flex; flex-direction: column; ga
   padding: 22px 24px; box-shadow: var(--alzado-2);
   display: flex; flex-direction: column; gap: 10px;
 }
-.destacado h3 { font-size: var(--t-titulo3); font-weight: 800; display: flex; align-items: center; gap: 10px; }
+.destacado h3 { font-size: var(--t-titulo3); font-weight: 700; display: flex; align-items: center; gap: 10px; }
 
 /* ============ 9. Tabla del artículo ============ */
 
@@ -534,7 +534,7 @@ a.equipo .banda {
 }
 a.equipo .banda .num { font-family: var(--fuente-datos); font-size: var(--t-rotulo); font-weight: 600; letter-spacing: .1em; margin-left: auto; }
 a.equipo .interior { padding-inline: 18px; display: flex; flex-direction: column; gap: 11px; }
-a.equipo h3 { font-size: 18px; font-weight: 800; letter-spacing: -.025em; color: var(--tinta); }
+a.equipo h3 { font-size: 18px; font-weight: 700; letter-spacing: -.012em; color: var(--tinta); }
 a.equipo .quien { font-size: 13px; color: var(--tinta-suave); }
 a.equipo .medidas { display: flex; flex-direction: column; gap: 9px; }
 a.equipo .sello {
@@ -624,7 +624,7 @@ a.vista p { font-size: var(--t-chico); color: var(--tinta-suave); }
   padding: 22px 23px; box-shadow: var(--alzado-1);
   display: flex; flex-direction: column; gap: 11px;
 }
-.hermano h3 { font-size: 21px; font-weight: 800; letter-spacing: -.03em; }
+.hermano h3 { font-size: 21px; font-weight: 700; letter-spacing: -.03em; }
 .hermano .relacion { font-size: var(--t-chico); color: var(--tinta-suave); }
 
 /* ============ 11. Pie ============ */
@@ -640,8 +640,8 @@ a.vista p { font-size: var(--t-chico); color: var(--tinta-suave); }
 footer.pie { background: var(--panel); color: var(--sobre-panel-suave); margin-top: 44px; }
 footer.pie .envoltura { padding-block: 32px 40px; display: flex; flex-direction: column; gap: 10px; }
 footer.pie .nombre {
-  font-family: var(--fuente-titulos); font-weight: 800; font-size: 18px;
-  color: var(--superficie); letter-spacing: -.025em;
+  font-family: var(--fuente-titulos); font-weight: 700; font-size: 18px;
+  color: var(--superficie); letter-spacing: -.012em;
 }
 footer.pie p { font-size: 13px; max-width: 78ch; }
 footer.pie a { color: var(--cian-vivo); }
@@ -686,12 +686,12 @@ footer.pie a { color: var(--cian-vivo); }
   border-radius: 16px;
   background: var(--linea-t, var(--cian-tenue));
   color: var(--linea, var(--cian));
-  font-family: var(--fuente-titulos); font-size: 27px; font-weight: 800;
+  font-family: var(--fuente-titulos); font-size: 27px; font-weight: 700;
   letter-spacing: -.04em;
 }
 .modulo.verde .modulo-cab .letra { background: var(--verde-fill); color: var(--superficie); }
 .modulo-cab .titulo { min-width: 0; }
-.modulo-cab h3 { font-size: var(--t-titulo3); font-weight: 800; letter-spacing: -.025em; }
+.modulo-cab h3 { font-size: var(--t-titulo3); font-weight: 700; letter-spacing: -.012em; }
 .modulo-cab .medida { min-width: 0; }
 
 @media (max-width: 680px) {
@@ -727,7 +727,7 @@ details.diapos > summary { font-size: var(--t-chico); }
 }
 .diapo-cab h5 {
   font-family: var(--fuente-titulos); font-size: 16px; font-weight: 700;
-  letter-spacing: -.02em; margin: 0; flex: 1; min-width: 160px;
+  letter-spacing: -.01em; margin: 0; flex: 1; min-width: 160px;
 }
 .diapo-cab .seccion {
   font-family: var(--fuente-datos); font-size: var(--t-rotulo); font-weight: 600;
@@ -798,7 +798,7 @@ a.equipo .titular { display: flex; align-items: flex-start; gap: 12px; }
   letter-spacing: .14em; text-transform: uppercase; opacity: .85;
 }
 .numero-equipo b {
-  font-family: var(--fuente-titulos); font-size: 23px; font-weight: 800;
+  font-family: var(--fuente-titulos); font-size: 23px; font-weight: 700;
   letter-spacing: -.04em; margin-top: 2px; font-variant-numeric: tabular-nums;
 }
 a.equipo .titular h3 { padding-top: 2px; }
@@ -814,8 +814,8 @@ a.equipo .titular h3 { padding-top: 2px; }
   letter-spacing: .15em; text-transform: uppercase; opacity: .8;
 }
 .placa-equipo b {
-  font-family: var(--fuente-titulos); font-size: 27px; font-weight: 800;
-  letter-spacing: -.045em; margin-top: 2px; font-variant-numeric: tabular-nums;
+  font-family: var(--fuente-titulos); font-size: 27px; font-weight: 700;
+  letter-spacing: -.012em; margin-top: 2px; font-variant-numeric: tabular-nums;
 }
 
 /* El número en el mapa fijo */
@@ -870,8 +870,8 @@ a.equipo .titular h3 { padding-top: 2px; }
 .caja-lat.destacada { border-left: 5px solid var(--linea, var(--cian)); }
 .marcador { display: flex; align-items: baseline; gap: 9px; }
 .marcador b {
-  font-family: var(--fuente-titulos); font-size: 38px; font-weight: 800;
-  letter-spacing: -.045em; line-height: 1; color: var(--linea, var(--cian));
+  font-family: var(--fuente-titulos); font-size: 38px; font-weight: 700;
+  letter-spacing: -.012em; line-height: 1; color: var(--linea, var(--cian));
   font-variant-numeric: tabular-nums;
 }
 .marcador small { font-size: 12.5px; color: var(--tinta-suave); }
@@ -916,7 +916,7 @@ a.equipo .titular h3 { padding-top: 2px; }
 .nodo {
   display: grid; place-items: center;
   width: 72px; height: 72px; border-radius: 50%;
-  font-family: var(--fuente-titulos); font-size: 26px; font-weight: 800;
+  font-family: var(--fuente-titulos); font-size: 26px; font-weight: 700;
   text-decoration: none; letter-spacing: -.03em;
   box-shadow: var(--alzado-2);
   border: 4px solid var(--superficie);

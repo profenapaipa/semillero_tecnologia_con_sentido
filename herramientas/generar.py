@@ -52,9 +52,10 @@ MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
          'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 
 FUENTES_WEB = ('https://fonts.googleapis.com/css2'
-               '?family=Syne:wght@600;700;800'
-               '&family=Hanken+Grotesk:wght@400;500;600;700'
-               '&family=JetBrains+Mono:wght@400;500;600&display=swap')
+               '?family=IBM+Plex+Serif:wght@600;700'
+               '&family=IBM+Plex+Sans:wght@400;500;600;700'
+               '&family=IBM+Plex+Mono:wght@400;500;600&display=swap')
+
 
 # Cada tarea cumplida vale esto. No hay otra forma de sumar: los puntos NO
 # se regalan ni se ganan por entrar, se ganan cumpliendo lo que ya se pedía.

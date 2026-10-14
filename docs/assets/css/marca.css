@@ -2,7 +2,7 @@
    Sale de datos/marca.json con  python herramientas/generar_marca.py
    Cualquier cambio hecho aquí se pierde en la próxima generación. */
 
-/* Semillero Maker de Tecnología con Sentido · manual de marca v3.0 · 2026-10-13
+/* Semillero Maker de Tecnología con Sentido · manual de marca v4.0 · 2026-10-13
    Concepto: Bitácora de taller con ruta de misión
 
    El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller, y se recorre como un camino: papel con retícula, anotaciones en monoespaciada, cifras enormes y una franja de color por cada oficio. El avance no se cuenta, se camina: cada fase es una parada del camino, y lo que falta no se disfraza.
@@ -10,59 +10,59 @@
    La web de la iguana se rige por el manual de marca del INJUV. Este semillero es un proyecto personal de Néstor Andrés Paipa, no del colegio, así que no hereda ni su tipografía ni sus colores institucionales. Las dos publicaciones conviven sin parecerse.
 
    Licencias:
-     - Iconografía: Lucide 1.56.0, licencia ISC, https://lucide.dev
-     - Tipografías: Syne, Hanken Grotesk y JetBrains Mono, SIL Open Font License, desde Google Fonts
+     - Iconografia: Lucide 1.56.0, licencia ISC, https://lucide.dev
+     - Tipografias: IBM Plex Serif, IBM Plex Sans e IBM Plex Mono, SIL Open Font License, desde Google Fonts
 */
 
 :root {
   /* --- color, tema claro --- */
-  --papel: #EBEFF0;
+  --papel: #ECF1F2;
   --superficie: #FFFFFF;
-  --superficie2: #F3F7F8;
-  --tinta: #0A181D;
-  --tinta-suave: #4A6168;
-  --filete: #CFDADD;
-  --filete-sutil: #E2E9EB;
-  --panel: #0A1920;
-  --panel-2: #102C38;
+  --superficie2: #F2F7F8;
+  --tinta: #0B1A20;
+  --tinta-suave: #4B6069;
+  --filete: #CDD9DD;
+  --filete-sutil: #E1E9EB;
+  --panel: #091B23;
+  --panel-2: #113240;
   --sobre-panel: #E8F2F5;
-  --sobre-panel-suave: #8EAEBB;
-  --cian: #0E8E9E;
-  --cian-vivo: #12A8BA;
-  --verde-fill: #1F9D5B;
-  --verde-texto: #15713F;
-  --ambar-fill: #E8A317;
-  --ambar-texto: #7F5604;
-  --gris-fill: #8A9BA2;
-  --gris-texto: #4F636A;
-  --linea: #0E8E9E;
-  --linea-software: #0E8E9E;
-  --linea-unity: #6A4FD8;
-  --linea-electronica: #D9533E;
-  --linea-audiovisual: #B8348C;
-  --verde-tenue: #1F9D5B21;
-  --ambar-tenue: #E8A31721;
-  --gris-tenue: #8A9BA221;
-  --cian-tenue: #0E8E9E21;
-  --linea-software-tenue: #0E8E9E24;
-  --linea-unity-tenue: #6A4FD824;
-  --linea-electronica-tenue: #D9533E24;
-  --linea-audiovisual-tenue: #B8348C24;
-  --linea-t: #0E8E9E24;
+  --sobre-panel-suave: #90AEBA;
+  --cian: #0E7490;
+  --cian-vivo: #1190B2;
+  --verde-fill: #1C7F4D;
+  --verde-texto: #15633B;
+  --ambar-fill: #D4900C;
+  --ambar-texto: #85580A;
+  --gris-fill: #7E8D94;
+  --gris-texto: #4D6168;
+  --linea: #0E7490;
+  --linea-software: #0E7490;
+  --linea-unity: #4F46B5;
+  --linea-audiovisual: #9B2FA6;
+  --linea-electronica: #C0334D;
+  --verde-tenue: #1C7F4D21;
+  --ambar-tenue: #D4900C21;
+  --gris-tenue: #7E8D9421;
+  --cian-tenue: #0E749021;
+  --linea-software-tenue: #0E749024;
+  --linea-unity-tenue: #4F46B524;
+  --linea-electronica-tenue: #C0334D24;
+  --linea-audiovisual-tenue: #9B2FA624;
+  --linea-t: #0E749024;
 
   /* --- tipografía y escala --- */
-  --fuente-titulos: "Syne", Bricolage Grotesque, Segoe UI, system-ui, sans-serif;
-  --fuente-texto: "Hanken Grotesk", Chivo, Segoe UI, system-ui, -apple-system, sans-serif;
-  --fuente-datos: "JetBrains Mono", ui-monospace, Cascadia Mono, monospace;
-  --t-gigante: clamp(56px, 12vw, 128px);
-  --t-titulo1: clamp(34px, 7vw, 66px);
-  --t-titulo2: clamp(24px, 4.2vw, 36px);
-  --t-titulo3: 21px;
+  --fuente-titulos: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --fuente-texto: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --fuente-datos: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  --t-gigante: clamp(52px, 10vw, 104px);
+  --t-titulo1: clamp(31px, 5.6vw, 52px);
+  --t-titulo2: clamp(23px, 3.6vw, 32px);
+  --t-titulo3: 20px;
   --t-titulo4: 17px;
-  --t-cuerpo: 15.5px;
-  --t-chico: 13.5px;
-  --t-dato: 11.5px;
-  --t-rotulo: 10.5px;
+  --t-cuerpo: 16px;
+  --t-chico: 14px;
+  --t-dato: 12px;
+  --t-rotulo: 11px;
 
   /* --- forma y medidas --- */
   --radio: 12px;
@@ -85,39 +85,39 @@
    gane sobre la preferencia del sistema. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --papel: #071115;
-    --superficie: #0F1D23;
-    --superficie2: #14242B;
-    --tinta: #E4EEF1;
-    --tinta-suave: #8BA3AB;
-    --filete: #21363F;
-    --filete-sutil: #182931;
+    --papel: #081318;
+    --superficie: #0F1E25;
+    --superficie2: #14262E;
+    --tinta: #E3EDF0;
+    --tinta-suave: #8CA4AC;
+    --filete: #22383F;
+    --filete-sutil: #192B32;
     --panel: #050F14;
-    --panel-2: #0D2531;
+    --panel-2: #0D2A36;
     --sobre-panel: #E6F1F4;
-    --sobre-panel-suave: #89A9B7;
-    --cian: #45C6D8;
-    --cian-vivo: #67DAEA;
-    --verde-fill: #34B872;
-    --verde-texto: #5FD39B;
-    --ambar-fill: #E8A317;
-    --ambar-texto: #F2C055;
+    --sobre-panel-suave: #88A8B5;
+    --cian: #45BDD8;
+    --cian-vivo: #67D2E8;
+    --verde-fill: #2FA86B;
+    --verde-texto: #57C993;
+    --ambar-fill: #D4900C;
+    --ambar-texto: #EEB84E;
     --gris-fill: #5F747C;
-    --gris-texto: #8BA3AB;
-    --linea: #45C6D8;
-    --linea-software: #45C6D8;
-    --linea-unity: #9B8CFF;
-    --linea-electronica: #F3826C;
-    --linea-audiovisual: #F06BC0;
-    --verde-tenue: #34B87221;
-    --ambar-tenue: #E8A31721;
+    --gris-texto: #8CA4AC;
+    --linea: #45BDD8;
+    --linea-software: #45BDD8;
+    --linea-unity: #938BFF;
+    --linea-audiovisual: #D87BE6;
+    --linea-electronica: #F0788E;
+    --verde-tenue: #2FA86B21;
+    --ambar-tenue: #D4900C21;
     --gris-tenue: #5F747C21;
-    --cian-tenue: #45C6D821;
-    --linea-software-tenue: #45C6D824;
-    --linea-unity-tenue: #9B8CFF24;
-    --linea-electronica-tenue: #F3826C24;
-    --linea-audiovisual-tenue: #F06BC024;
-    --linea-t: #45C6D824;
+    --cian-tenue: #45BDD821;
+    --linea-software-tenue: #45BDD824;
+    --linea-unity-tenue: #938BFF24;
+    --linea-electronica-tenue: #F0788E24;
+    --linea-audiovisual-tenue: #D87BE624;
+    --linea-t: #45BDD824;
 
     --alzado-1: 0 1px 2px rgba(0, 0, 0, .45);
     --alzado-2: 0 4px 16px rgba(0, 0, 0, .5);
@@ -129,39 +129,39 @@
 /* La misma paleta oscura por elección explícita, para que el selector
    de tema gane en los dos sentidos. */
 :root[data-theme="dark"] {
-  --papel: #071115;
-  --superficie: #0F1D23;
-  --superficie2: #14242B;
-  --tinta: #E4EEF1;
-  --tinta-suave: #8BA3AB;
-  --filete: #21363F;
-  --filete-sutil: #182931;
+  --papel: #081318;
+  --superficie: #0F1E25;
+  --superficie2: #14262E;
+  --tinta: #E3EDF0;
+  --tinta-suave: #8CA4AC;
+  --filete: #22383F;
+  --filete-sutil: #192B32;
   --panel: #050F14;
-  --panel-2: #0D2531;
+  --panel-2: #0D2A36;
   --sobre-panel: #E6F1F4;
-  --sobre-panel-suave: #89A9B7;
-  --cian: #45C6D8;
-  --cian-vivo: #67DAEA;
-  --verde-fill: #34B872;
-  --verde-texto: #5FD39B;
-  --ambar-fill: #E8A317;
-  --ambar-texto: #F2C055;
+  --sobre-panel-suave: #88A8B5;
+  --cian: #45BDD8;
+  --cian-vivo: #67D2E8;
+  --verde-fill: #2FA86B;
+  --verde-texto: #57C993;
+  --ambar-fill: #D4900C;
+  --ambar-texto: #EEB84E;
   --gris-fill: #5F747C;
-  --gris-texto: #8BA3AB;
-  --linea: #45C6D8;
-  --linea-software: #45C6D8;
-  --linea-unity: #9B8CFF;
-  --linea-electronica: #F3826C;
-  --linea-audiovisual: #F06BC0;
-  --verde-tenue: #34B87221;
-  --ambar-tenue: #E8A31721;
+  --gris-texto: #8CA4AC;
+  --linea: #45BDD8;
+  --linea-software: #45BDD8;
+  --linea-unity: #938BFF;
+  --linea-audiovisual: #D87BE6;
+  --linea-electronica: #F0788E;
+  --verde-tenue: #2FA86B21;
+  --ambar-tenue: #D4900C21;
   --gris-tenue: #5F747C21;
-  --cian-tenue: #45C6D821;
-  --linea-software-tenue: #45C6D824;
-  --linea-unity-tenue: #9B8CFF24;
-  --linea-electronica-tenue: #F3826C24;
-  --linea-audiovisual-tenue: #F06BC024;
-  --linea-t: #45C6D824;
+  --cian-tenue: #45BDD821;
+  --linea-software-tenue: #45BDD824;
+  --linea-unity-tenue: #938BFF24;
+  --linea-electronica-tenue: #F0788E24;
+  --linea-audiovisual-tenue: #D87BE624;
+  --linea-t: #45BDD824;
 
   --alzado-1: 0 1px 2px rgba(0, 0, 0, .45);
   --alzado-2: 0 4px 16px rgba(0, 0, 0, .5);

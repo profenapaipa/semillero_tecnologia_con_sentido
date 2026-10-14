@@ -1,6 +1,6 @@
 # Manual de marca
 
-**Semillero Maker de Tecnología con Sentido** · versión 3.0 · 2026-10-13
+**Semillero Maker de Tecnología con Sentido** · versión 4.0 · 2026-10-13
 
 > Este documento y `datos/marca.json` son lo mismo dicho de dos maneras.
 > Para cambiar la identidad se edita el **JSON** y se corre
@@ -23,73 +23,73 @@ La web de la iguana se rige por el manual de marca del INJUV. Este semillero es 
 
 ## 2. Tipografía
 
-### Títulos: Syne
+### Títulos: IBM Plex Serif
 
-- **Pesos:** 600, 700, 800
-- **Respaldo:** `Bricolage Grotesque, Segoe UI, system-ui, sans-serif`
-- **Por qué:** Geométrica y futurista en la estructura, pero con remates y curvas que no son de máquina: la S y la y tienen gesto de mano. Es exactamente la síntesis que se busca, futuro sin perder lo humano. Y no la usa nadie más en el colegio.
-- **Dónde se usa:** Títulos, cifras grandes, números de nivel y de equipo. Siempre con interletraje muy cerrado: a tamaño grande es donde muestra su carácter.
+- **Pesos:** 600, 700
+- **Respaldo:** `Georgia, "Times New Roman", serif`
+- **Por qué:** Es la hermana con remates del mismo sistema. Da el contraste que un titulo necesita frente al texto, sin cambiar de familia ni de altura de x. Y a un semillero que produce articulos de investigacion le sienta mejor una serif que una display de cartel.
+- **Dónde se usa:** Titulos y cifras grandes. Interletraje casi neutro: una serif no se aprieta como una grotesca.
 
-### Texto corrido: Hanken Grotesk
+### Texto corrido: IBM Plex Sans
 
 - **Pesos:** 400, 500, 600, 700
-- **Respaldo:** `Chivo, Segoe UI, system-ui, -apple-system, sans-serif`
-- **Por qué:** Grotesca humanista de formas abiertas y x alta generosa. Es la pieza cálida del conjunto: compensa la frialdad geométrica de Syne y sostiene párrafos largos sin cansar en pantalla.
-- **Dónde se usa:** Todo el texto corrido, botones, etiquetas y paneles laterales.
+- **Respaldo:** `"Segoe UI", system-ui, -apple-system, sans-serif`
+- **Por qué:** Grotesca de corte humanista, con aperturas abiertas y altura de x generosa. Esta dibujada para interfaz y para leerse en pantalla a tamano pequeno: ni condensada ni extendida.
+- **Dónde se usa:** Todo el texto corrido, botones, etiquetas, menus y paneles laterales.
 
-### Datos: JetBrains Mono
+### Datos: IBM Plex Mono
 
 - **Pesos:** 400, 500, 600
-- **Respaldo:** `ui-monospace, Cascadia Mono, monospace`
-- **Por qué:** La tercera voz, la técnica. Mantiene la página anclada a lo que el semillero hace de verdad: archivos, rutas, versiones y commits.
-- **Dónde se usa:** Rutas de archivo, commits, conteos, porcentajes, rótulos en versalita.
+- **Respaldo:** `ui-monospace, "Cascadia Mono", monospace`
+- **Por qué:** La tercera del mismo sistema. Rutas, versiones y commits se escriben en mono o no se leen bien.
+- **Dónde se usa:** Rutas de archivo, commits, conteos, porcentajes y rotulos en versalita.
 
 ### Escala
 
 | Nombre | Tamaño | Token |
 |---|---|---|
-| gigante | `clamp(56px, 12vw, 128px)` | `--t-gigante` |
-| titulo1 | `clamp(34px, 7vw, 66px)` | `--t-titulo1` |
-| titulo2 | `clamp(24px, 4.2vw, 36px)` | `--t-titulo2` |
-| titulo3 | `21px` | `--t-titulo3` |
+| gigante | `clamp(52px, 10vw, 104px)` | `--t-gigante` |
+| titulo1 | `clamp(31px, 5.6vw, 52px)` | `--t-titulo1` |
+| titulo2 | `clamp(23px, 3.6vw, 32px)` | `--t-titulo2` |
+| titulo3 | `20px` | `--t-titulo3` |
 | titulo4 | `17px` | `--t-titulo4` |
-| cuerpo | `15.5px` | `--t-cuerpo` |
-| chico | `13.5px` | `--t-chico` |
-| dato | `11.5px` | `--t-dato` |
-| rotulo | `10.5px` | `--t-rotulo` |
+| cuerpo | `16px` | `--t-cuerpo` |
+| chico | `14px` | `--t-chico` |
+| dato | `12px` | `--t-dato` |
+| rotulo | `11px` | `--t-rotulo` |
 
 ---
 
 ## 3. Color
 
-El verde, el ámbar y el gris son EXCLUSIVAMENTE el semáforo de estado. No se usan de adorno. El cian es lo que se puede tocar. Cada línea técnica tiene su propio color, que se usa en campo, no en filete.
+Metodo: se parte de un color base, el teal #0E7490, y se recorre el arco frio con saltos parejos de matiz, que es la armonia analoga extendida de Adobe Color, cerrando con un carmin calido para tener contraste. Los cuatro colores de linea tecnica salen de ahi: son distinguibles entre si de un vistazo y al mismo tiempo pertenecen a la misma familia. Ningun color de linea pisa el verde ni el ambar, porque esos dos estan reservados al semaforo de estado y no se usan de adorno en ninguna otra parte. Los neutros no son grises puros: son el mismo teal desaturado casi del todo, que es lo que hace que el papel se vea elegido y no heredado.
 
 | Token | Claro | Oscuro | Para qué |
 |---|---|---|---|
-| `--papel` | `#EBEFF0` | `#071115` | Fondo de la página |
-| `--superficie` | `#FFFFFF` | `#0F1D23` | Tarjetas y paneles |
-| `--superficie2` | `#F3F7F8` | `#14242B` | Fondos hundidos, cabeceras de tabla |
-| `--tinta` | `#0A181D` | `#E4EEF1` | Texto principal |
-| `--tinta-suave` | `#4A6168` | `#8BA3AB` | Texto secundario y rótulos |
-| `--filete` | `#CFDADD` | `#21363F` | Bordes |
-| `--filete-sutil` | `#E2E9EB` | `#182931` | Separadores internos |
-| `--panel` | `#0A1920` | `#050F14` | Franjas oscuras: barra, portada, pie |
-| `--panel-2` | `#102C38` | `#0D2531` | Segundo tono del panel oscuro |
+| `--papel` | `#ECF1F2` | `#081318` | Fondo de la página |
+| `--superficie` | `#FFFFFF` | `#0F1E25` | Tarjetas y paneles |
+| `--superficie2` | `#F2F7F8` | `#14262E` | Fondos hundidos, cabeceras de tabla |
+| `--tinta` | `#0B1A20` | `#E3EDF0` | Texto principal |
+| `--tinta-suave` | `#4B6069` | `#8CA4AC` | Texto secundario y rótulos |
+| `--filete` | `#CDD9DD` | `#22383F` | Bordes |
+| `--filete-sutil` | `#E1E9EB` | `#192B32` | Separadores internos |
+| `--panel` | `#091B23` | `#050F14` | Franjas oscuras: barra, portada, pie |
+| `--panel-2` | `#113240` | `#0D2A36` | Segundo tono del panel oscuro |
 | `--sobre-panel` | `#E8F2F5` | `#E6F1F4` | Texto sobre el panel oscuro |
-| `--sobre-panel-suave` | `#8EAEBB` | `#89A9B7` | Texto secundario sobre el panel |
-| `--cian` | `#0E8E9E` | `#45C6D8` | Lo que se puede tocar: enlaces y botones |
-| `--cian-vivo` | `#12A8BA` | `#67DAEA` | El mismo, al pasar el cursor |
-| `--verde-fill` | `#1F9D5B` | `#34B872` | SEMÁFORO: nivel superado |
-| `--verde-texto` | `#15713F` | `#5FD39B` | SEMÁFORO: el mismo, legible como texto |
-| `--ambar-fill` | `#E8A317` | `#E8A317` | SEMÁFORO: nivel en curso |
-| `--ambar-texto` | `#7F5604` | `#F2C055` | SEMÁFORO: el mismo, legible como texto |
-| `--gris-fill` | `#8A9BA2` | `#5F747C` | SEMÁFORO: nivel sin empezar |
-| `--gris-texto` | `#4F636A` | `#8BA3AB` | SEMÁFORO: el mismo, legible como texto |
-| `--linea` | `#0E8E9E` | `#45C6D8` |  |
-| `--linea-software` | `#0E8E9E` | `#45C6D8` | Línea técnica: desarrollo de software |
-| `--linea-unity` | `#6A4FD8` | `#9B8CFF` | Línea técnica: Unity |
-| `--linea-electronica` | `#D9533E` | `#F3826C` | Línea técnica: electrónica y robótica |
-| `--linea-audiovisual` | `#B8348C` | `#F06BC0` | Línea técnica: producción audiovisual |
+| `--sobre-panel-suave` | `#90AEBA` | `#88A8B5` | Texto secundario sobre el panel |
+| `--cian` | `#0E7490` | `#45BDD8` | Lo que se puede tocar: enlaces y botones |
+| `--cian-vivo` | `#1190B2` | `#67D2E8` | El mismo, al pasar el cursor |
+| `--verde-fill` | `#1C7F4D` | `#2FA86B` | SEMÁFORO: nivel superado |
+| `--verde-texto` | `#15633B` | `#57C993` | SEMÁFORO: el mismo, legible como texto |
+| `--ambar-fill` | `#D4900C` | `#D4900C` | SEMÁFORO: nivel en curso |
+| `--ambar-texto` | `#85580A` | `#EEB84E` | SEMÁFORO: el mismo, legible como texto |
+| `--gris-fill` | `#7E8D94` | `#5F747C` | SEMÁFORO: nivel sin empezar |
+| `--gris-texto` | `#4D6168` | `#8CA4AC` | SEMÁFORO: el mismo, legible como texto |
+| `--linea` | `#0E7490` | `#45BDD8` |  |
+| `--linea-software` | `#0E7490` | `#45BDD8` | Línea técnica: desarrollo de software |
+| `--linea-unity` | `#4F46B5` | `#938BFF` | Línea técnica: Unity |
+| `--linea-audiovisual` | `#9B2FA6` | `#D87BE6` | Línea técnica: producción audiovisual |
+| `--linea-electronica` | `#C0334D` | `#F0788E` | Línea técnica: electrónica y robótica |
 
 Los tintes (`--verde-tenue`, `--linea-unity-tenue`, etc.) **no se escriben**: los
 calcula el generador al 13% y 14% de opacidad sobre el color base.
@@ -154,8 +154,8 @@ retiró los iconos de marca.
 
 ## 7. Licencias
 
-- Iconografía: Lucide 1.56.0, licencia ISC, https://lucide.dev
-- Tipografías: Syne, Hanken Grotesk y JetBrains Mono, SIL Open Font License, desde Google Fonts
+- Iconografia: Lucide 1.56.0, licencia ISC, https://lucide.dev
+- Tipografias: IBM Plex Serif, IBM Plex Sans e IBM Plex Mono, SIL Open Font License, desde Google Fonts
 
 ---
 
