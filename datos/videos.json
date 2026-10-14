@@ -1,0 +1,111 @@
+{
+  "_lee_esto": "Videos del canal del semillero y de Filosofartec, para verlos dentro del sitio sin abrir otra ventana. La miniatura se trae de YouTube y el reproductor solo se carga al hacer clic: así la página no arrastra el peso de siete reproductores. Para agregar uno, se copia el id de los 11 caracteres que van después de watch?v= en el enlace.",
+
+  "videos": [
+    {
+      "id": "hAOnfibCEmM",
+      "titulo": "Manos que hablan",
+      "nota": "Ganador DesafIA, Universidad de los Andes",
+      "que": "La lengua de señas colombiana como puente de conexión humana, en un ejercicio colaborativo entre docentes y estudiantes.",
+      "para": ["audiovisual", "unity", "software"],
+      "porque": "Es el referente más cercano al proyecto de lengua de señas y muestra el nivel de acabado que sí se alcanza en el colegio."
+    },
+    {
+      "id": "EQIfMD0BRuc",
+      "titulo": "Inercia",
+      "nota": "Ganador Filosofartec 2025",
+      "que": "Cortometraje sobre la salud mental en docentes.",
+      "para": ["audiovisual"],
+      "porque": "Ganó la edición anterior de Filosofartec: es la vara con la que se van a comparar los cortos de este año."
+    },
+    {
+      "id": "_8xtWc5E588",
+      "titulo": "Al borde",
+      "nota": "Mejor Escolar 2024, Festival Uninpahu",
+      "que": "Cortometraje premiado en el Festival Internacional de Cine Universitario de la Uninpahu.",
+      "para": ["audiovisual"],
+      "porque": "Para mirar cómo se resuelve un plano con los recursos que hay en el colegio."
+    },
+    {
+      "id": "dsfr31BYlBA",
+      "titulo": "Sueños de papel",
+      "que": "Cortometraje de Filosofartec.",
+      "para": ["audiovisual"],
+      "porque": "Ejemplo de narración corta con pocos recursos."
+    },
+    {
+      "id": "uoKmpdw6Bbs",
+      "titulo": "El último turno",
+      "que": "Cortometraje de Filosofartec.",
+      "para": ["audiovisual"],
+      "porque": "Para estudiar el manejo del tiempo y del silencio en una escena."
+    },
+    {
+      "id": "Ra0pw5cL17o",
+      "titulo": "Conexión inestable",
+      "que": "Cortometraje de Filosofartec.",
+      "para": ["audiovisual"],
+      "porque": "Ejemplo de cómo un problema técnico se vuelve recurso narrativo."
+    },
+    {
+      "id": "Yi0qpRl65BA",
+      "titulo": "Agridulce",
+      "que": "Cortometraje de Filosofartec.",
+      "para": ["audiovisual"],
+      "porque": "Para ver cómo se construye un tono que no es ni comedia ni drama."
+    }
+  ],
+
+  "_por_grabar": "Los tutoriales que el profe tiene pendientes aparecen en el sitio con su título y con lo que van a explicar, pero sin reproductor. Cuando se graben y se suban a YouTube, se agrega aquí su id y el reproductor aparece solo.",
+
+  "pendientes": [
+    {
+      "titulo": "Unity: la dinámica del videojuego de motricidad",
+      "que": "Hacer aparecer un objetivo en una posición al azar, detectar el toque sobre él, contar acierto o fallo y volver a empezar.",
+      "para": ["unity"],
+      "modulo": "F"
+    },
+    {
+      "titulo": "Unity: la dinámica del minijuego de coordinación",
+      "que": "Generar una secuencia, mostrarla con un ritmo, recibir la respuesta paso a paso y medir el tiempo de reacción.",
+      "para": ["unity"],
+      "modulo": "F"
+    },
+    {
+      "titulo": "Unity: exportar un build jugable",
+      "que": "Cómo exportar en Unity 2019.4, qué carpeta se entrega completa, y cómo sacar un WebGL con la compresión desactivada para que cargue en GitHub Pages.",
+      "para": ["unity"],
+      "modulo": "G"
+    },
+    {
+      "titulo": "Commit y push desde VS Code",
+      "que": "Guardar cambios en GitHub cuando ya hay trabajo hecho, y qué hacer si pide usuario y contraseña.",
+      "para": ["software", "unity", "electronica", "audiovisual"],
+      "modulo": "G"
+    },
+    {
+      "titulo": "Arduino: cuando el puerto no aparece",
+      "que": "Qué revisar cuando el IDE no encuentra la placa, y cómo guardar el .ino en la carpeta del equipo.",
+      "para": ["electronica"],
+      "modulo": "F"
+    },
+    {
+      "titulo": "Del guion literario al guion técnico",
+      "que": "Cómo pasar de lo que se cuenta a plano por plano, con el formato que ya está en la carpeta y un ejemplo de tres planos.",
+      "para": ["audiovisual"],
+      "modulo": "C"
+    },
+    {
+      "titulo": "Limpiar el audio en CapCut y en DaVinci",
+      "que": "Cómo quitar ruido de fondo, y cuándo conviene regrabar en vez de arreglar.",
+      "para": ["audiovisual"],
+      "modulo": "F"
+    },
+    {
+      "titulo": "Escribir la sección 1.2 del artículo",
+      "que": "Cómo citar tres autores con año a partir de la matriz de antecedentes, sin copiar y pegar.",
+      "para": ["software", "unity", "electronica", "audiovisual"],
+      "modulo": "E"
+    }
+  ]
+}

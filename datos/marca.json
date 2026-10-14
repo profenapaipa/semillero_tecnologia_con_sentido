@@ -1,107 +1,103 @@
 {
   "_lee_esto": "Fuente única de la identidad visual. Al cambiar un valor aquí y correr 'python herramientas/generar_marca.py', cambian la hoja de estilo del sitio y el manual de marca. No se edita marca.css a mano: se regenera.",
-
   "identidad": {
     "nombre": "Semillero Maker de Tecnología con Sentido",
-    "autor": "Néstor Andrés Paipa Castro",
-    "version": "2.0",
+    "autor": "Néstor Andrés Paipa",
+    "version": "3.0",
     "fecha": "2026-10-13",
-    "concepto": "Bitácora de taller",
-    "idea": "El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller: papel con retícula, anotaciones en monoespaciada, cifras grandes escritas a mano alzada y una franja de color por cada oficio. Lo que está hecho se ve hecho; lo que falta no se disfraza.",
+    "concepto": "Bitácora de taller con ruta de misión",
+    "idea": "El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller, y se recorre como un camino: papel con retícula, anotaciones en monoespaciada, cifras enormes y una franja de color por cada oficio. El avance no se cuenta, se camina: cada fase es una parada del camino, y lo que falta no se disfraza.",
     "separacion": "La web de la iguana se rige por el manual de marca del INJUV. Este semillero es un proyecto personal de Néstor Andrés Paipa, no del colegio, así que no hereda ni su tipografía ni sus colores institucionales. Las dos publicaciones conviven sin parecerse."
   },
-
   "tipografia": {
     "titulos": {
-      "familia": "Bricolage Grotesque",
-      "respaldo": "Archivo, Segoe UI, system-ui, sans-serif",
+      "familia": "Syne",
+      "respaldo": "Bricolage Grotesque, Segoe UI, system-ui, sans-serif",
       "pesos": "600, 700, 800",
-      "porque": "Grotesca contemporánea de ancho variable, con rasgos inesperados en la g y la a. Moderna y curiosa sin perder seriedad. No la usa el colegio ni la iguana.",
-      "uso": "Títulos, cifras grandes, números de nivel. Siempre con interletraje negativo."
+      "porque": "Geométrica y futurista en la estructura, pero con remates y curvas que no son de máquina: la S y la y tienen gesto de mano. Es exactamente la síntesis que se busca, futuro sin perder lo humano. Y no la usa nadie más en el colegio.",
+      "uso": "Títulos, cifras grandes, números de nivel y de equipo. Siempre con interletraje muy cerrado: a tamaño grande es donde muestra su carácter."
     },
     "texto": {
-      "familia": "Chivo",
-      "respaldo": "Segoe UI, system-ui, -apple-system, sans-serif",
+      "familia": "Hanken Grotesk",
+      "respaldo": "Chivo, Segoe UI, system-ui, -apple-system, sans-serif",
       "pesos": "400, 500, 600, 700",
-      "porque": "Robusta y muy legible en pantalla, con carácter propio. Sostiene párrafos largos sin cansar, que es lo que pide una página que se lee en mitad de una sesión.",
-      "uso": "Todo el texto corrido, botones y etiquetas de interfaz."
+      "porque": "Grotesca humanista de formas abiertas y x alta generosa. Es la pieza cálida del conjunto: compensa la frialdad geométrica de Syne y sostiene párrafos largos sin cansar en pantalla.",
+      "uso": "Todo el texto corrido, botones, etiquetas y paneles laterales."
     },
     "datos": {
       "familia": "JetBrains Mono",
       "respaldo": "ui-monospace, Cascadia Mono, monospace",
       "pesos": "400, 500, 600",
-      "porque": "La monoespaciada de un entorno de programación. Este semillero habla de archivos, rutas, versiones y commits: esas cosas se escriben en mono o no se leen bien.",
-      "uso": "Rutas de archivo, nombres de commit, conteos, rótulos en versalita, porcentajes."
+      "porque": "La tercera voz, la técnica. Mantiene la página anclada a lo que el semillero hace de verdad: archivos, rutas, versiones y commits.",
+      "uso": "Rutas de archivo, commits, conteos, porcentajes, rótulos en versalita."
     },
     "escala": {
-      "gigante": "clamp(44px, 9vw, 96px)",
-      "titulo1": "clamp(32px, 6.4vw, 58px)",
-      "titulo2": "clamp(23px, 3.8vw, 32px)",
-      "titulo3": "19px",
-      "titulo4": "16.5px",
+      "gigante": "clamp(56px, 12vw, 128px)",
+      "titulo1": "clamp(34px, 7vw, 66px)",
+      "titulo2": "clamp(24px, 4.2vw, 36px)",
+      "titulo3": "21px",
+      "titulo4": "17px",
       "cuerpo": "15.5px",
       "chico": "13.5px",
       "dato": "11.5px",
       "rotulo": "10.5px"
     }
   },
-
   "color": {
     "_regla": "El verde, el ámbar y el gris son EXCLUSIVAMENTE el semáforo de estado. No se usan de adorno. El cian es lo que se puede tocar. Cada línea técnica tiene su propio color, que se usa en campo, no en filete.",
     "claro": {
-      "papel":        "#EBEFF0",
-      "superficie":   "#FFFFFF",
-      "superficie2":  "#F3F7F8",
-      "tinta":        "#0A181D",
-      "tinta-suave":  "#4A6168",
-      "filete":       "#CFDADD",
+      "papel": "#EBEFF0",
+      "superficie": "#FFFFFF",
+      "superficie2": "#F3F7F8",
+      "tinta": "#0A181D",
+      "tinta-suave": "#4A6168",
+      "filete": "#CFDADD",
       "filete-sutil": "#E2E9EB",
-      "panel":        "#0A1920",
-      "panel-2":      "#102C38",
-      "sobre-panel":  "#E8F2F5",
+      "panel": "#0A1920",
+      "panel-2": "#102C38",
+      "sobre-panel": "#E8F2F5",
       "sobre-panel-suave": "#8EAEBB",
-      "cian":         "#0E8E9E",
-      "cian-vivo":    "#12A8BA",
-      "verde-fill":   "#1F9D5B",
-      "verde-texto":  "#15713F",
-      "ambar-fill":   "#E8A317",
-      "ambar-texto":  "#7F5604",
-      "gris-fill":    "#8A9BA2",
-      "gris-texto":   "#4F636A",
-      "linea":             "#0E8E9E",
-      "linea-software":    "#0E8E9E",
-      "linea-unity":       "#6A4FD8",
+      "cian": "#0E8E9E",
+      "cian-vivo": "#12A8BA",
+      "verde-fill": "#1F9D5B",
+      "verde-texto": "#15713F",
+      "ambar-fill": "#E8A317",
+      "ambar-texto": "#7F5604",
+      "gris-fill": "#8A9BA2",
+      "gris-texto": "#4F636A",
+      "linea": "#0E8E9E",
+      "linea-software": "#0E8E9E",
+      "linea-unity": "#6A4FD8",
       "linea-electronica": "#D9533E",
       "linea-audiovisual": "#B8348C"
     },
     "oscuro": {
-      "papel":        "#071115",
-      "superficie":   "#0F1D23",
-      "superficie2":  "#14242B",
-      "tinta":        "#E4EEF1",
-      "tinta-suave":  "#8BA3AB",
-      "filete":       "#21363F",
+      "papel": "#071115",
+      "superficie": "#0F1D23",
+      "superficie2": "#14242B",
+      "tinta": "#E4EEF1",
+      "tinta-suave": "#8BA3AB",
+      "filete": "#21363F",
       "filete-sutil": "#182931",
-      "panel":        "#050F14",
-      "panel-2":      "#0D2531",
-      "sobre-panel":  "#E6F1F4",
+      "panel": "#050F14",
+      "panel-2": "#0D2531",
+      "sobre-panel": "#E6F1F4",
       "sobre-panel-suave": "#89A9B7",
-      "cian":         "#45C6D8",
-      "cian-vivo":    "#67DAEA",
-      "verde-fill":   "#34B872",
-      "verde-texto":  "#5FD39B",
-      "ambar-fill":   "#E8A317",
-      "ambar-texto":  "#F2C055",
-      "gris-fill":    "#5F747C",
-      "gris-texto":   "#8BA3AB",
-      "linea":             "#45C6D8",
-      "linea-software":    "#45C6D8",
-      "linea-unity":       "#9B8CFF",
+      "cian": "#45C6D8",
+      "cian-vivo": "#67DAEA",
+      "verde-fill": "#34B872",
+      "verde-texto": "#5FD39B",
+      "ambar-fill": "#E8A317",
+      "ambar-texto": "#F2C055",
+      "gris-fill": "#5F747C",
+      "gris-texto": "#8BA3AB",
+      "linea": "#45C6D8",
+      "linea-software": "#45C6D8",
+      "linea-unity": "#9B8CFF",
       "linea-electronica": "#F3826C",
       "linea-audiovisual": "#F06BC0"
     }
   },
-
   "forma": {
     "radio": "12px",
     "radio-chico": "7px",
@@ -112,16 +108,14 @@
     "retic": "28px",
     "_nota": "Retícula de 28px: es la que dibuja el fondo de papel cuadriculado y la que marca el ritmo del espaciado."
   },
-
   "texturas": {
     "_nota": "Lo que separa esta página de una plantilla: las superficies tienen grano, no son campos planos de color.",
     "cuadricula": "Retícula de papel milimetrado, muy tenue, sobre el papel claro.",
     "plano": "Retícula azul de plano técnico sobre el panel oscuro, difuminada hacia los bordes.",
     "trama": "Rayado diagonal a 45 grados para las zonas sin empezar: dice 'aquí todavía no hay nada' sin usar color."
   },
-
   "licencias": [
     "Iconografía: Lucide 1.56.0, licencia ISC, https://lucide.dev",
-    "Tipografías: Bricolage Grotesque, Chivo y JetBrains Mono, SIL Open Font License, desde Google Fonts"
+    "Tipografías: Syne, Hanken Grotesk y JetBrains Mono, SIL Open Font License, desde Google Fonts"
   ]
 }

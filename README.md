@@ -1,7 +1,7 @@
 # Semillero Maker de Tecnología con Sentido
 
 Sitio de seguimiento y divulgación del **Semillero Maker de Tecnología con Sentido**,
-espacio extracurricular dirigido por Néstor Andrés Paipa Castro en el Instituto
+espacio extracurricular dirigido por Néstor Andrés Paipa en el Instituto
 Infantil y Juvenil, Bogotá. Semestre 2026-II.
 
 Quince proyectos de 9°, 10° y 11° recorren las fases del Design Thinking anidadas

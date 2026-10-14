@@ -19,6 +19,13 @@
 
 /* ============ 1. Base, texturas y tipografía ============ */
 
+/* Variables de posicion, no de marca. Las de color viven todas en marca.css;
+   estas solo mueven cosas, y llevan valor por defecto para que un elemento
+   sin su style inline no quede roto. */
+:root {
+  --desvio: 0;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 160px; }
 
@@ -818,3 +825,261 @@ a.equipo .titular h3 { padding-top: 2px; }
   font-family: var(--fuente-datos); font-size: 10.5px; font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
+
+/* ============ 14. Dos columnas, a la manera de un aula virtual ============ */
+
+.con-lateral {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding-inline: var(--margen);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 312px;
+  gap: 34px;
+  align-items: start;
+}
+/* Dentro de la rejilla el margen lateral ya está puesto: las secciones
+   no lo vuelven a poner ni se estiran a lo ancho de la ventana. */
+.con-lateral .envoltura { max-width: none; padding-inline: 0; }
+.con-lateral .principal { min-width: 0; }
+.con-lateral .bloque { padding-block: 34px; }
+.con-lateral .bloque.sobre-superficie {
+  background: var(--superficie);
+  border: 1px solid var(--filete-sutil);
+  border-radius: var(--radio);
+  padding: 26px 26px 30px;
+  margin-block: 10px;
+}
+
+.lateral {
+  position: sticky;
+  top: 148px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding-top: 34px;
+}
+.caja-lat {
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  padding: 16px 17px 17px;
+  box-shadow: var(--alzado-1);
+  display: flex; flex-direction: column; gap: 11px;
+}
+.caja-lat > .rotulo { color: var(--tinta-suave); }
+.caja-lat.destacada { border-left: 5px solid var(--linea, var(--cian)); }
+.marcador { display: flex; align-items: baseline; gap: 9px; }
+.marcador b {
+  font-family: var(--fuente-titulos); font-size: 38px; font-weight: 800;
+  letter-spacing: -.045em; line-height: 1; color: var(--linea, var(--cian));
+  font-variant-numeric: tabular-nums;
+}
+.marcador small { font-size: 12.5px; color: var(--tinta-suave); }
+.medidas-lat { display: flex; flex-direction: column; gap: 12px; }
+.indice-lat { display: flex; flex-direction: column; gap: 2px; }
+.indice-lat a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border-radius: var(--radio-chico);
+  color: var(--tinta); text-decoration: none; font-size: 14px; font-weight: 500;
+}
+.indice-lat a span { flex: 1; min-width: 0; }
+.indice-lat a .ico:last-child { color: var(--tinta-suave); }
+.indice-lat a:hover { background: var(--superficie2); color: var(--cian); }
+.indice-lat a.aqui {
+  background: var(--linea-t, var(--cian-tenue));
+  color: var(--linea, var(--cian)); font-weight: 700;
+}
+.tareas.compacta { gap: 8px; }
+.tareas.compacta .texto b { font-size: 13.5px; }
+
+@media (max-width: 1020px) {
+  .con-lateral { grid-template-columns: 1fr; gap: 0; }
+  .lateral {
+    position: static; padding-top: 0; padding-bottom: 34px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* ============ 15. El camino del semestre ============ */
+/* Las paradas no van en columna recta: van en zigzag, como un recorrido.
+   --desvio mueve cada parada a izquierda o derecha. */
+
+.camino {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0; padding-block: 12px 20px;
+}
+.parada {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  transform: translateX(calc(var(--desvio, 0) * 58px));
+}
+.nodo {
+  display: grid; place-items: center;
+  width: 72px; height: 72px; border-radius: 50%;
+  font-family: var(--fuente-titulos); font-size: 26px; font-weight: 800;
+  text-decoration: none; letter-spacing: -.03em;
+  box-shadow: var(--alzado-2);
+  border: 4px solid var(--superficie);
+  transition: transform .16s ease;
+}
+.nodo:hover { transform: scale(1.07); }
+.parada.verde .nodo { background: var(--verde-fill); color: var(--superficie); }
+.parada.ambar .nodo { background: var(--ambar-fill); color: var(--panel); }
+.parada.gris  .nodo {
+  background: var(--superficie); color: var(--gris-texto);
+  border-style: dashed; border-color: var(--gris-fill); box-shadow: none;
+}
+.parada.aqui .nodo { outline: 4px solid var(--linea, var(--cian)); outline-offset: 3px; }
+.parada-txt { text-align: center; max-width: 150px; }
+.parada-txt b { display: block; font-size: 14px; font-weight: 700; line-height: 1.25; }
+.globo {
+  position: absolute; top: -30px; left: 50%; transform: translateX(-50%);
+  background: var(--linea, var(--cian)); color: var(--panel);
+  font-family: var(--fuente-datos); font-size: 10.5px; font-weight: 600;
+  padding: 4px 11px; border-radius: 999px; white-space: nowrap;
+}
+.globo::after {
+  content: ""; position: absolute; left: 50%; bottom: -5px; transform: translateX(-50%);
+  border-left: 6px solid transparent; border-right: 6px solid transparent;
+  border-top: 6px solid var(--linea, var(--cian));
+}
+.enlace-camino {
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+  padding-block: 11px;
+  transform: translateX(calc(var(--desvio, 0) * 58px));
+}
+.enlace-camino span {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--filete);
+}
+
+@media (max-width: 620px) {
+  .parada, .enlace-camino { transform: translateX(calc(var(--desvio, 0) * 30px)); }
+  .nodo { width: 60px; height: 60px; font-size: 22px; }
+}
+
+/* ============ 16. Videos dentro de la página ============ */
+
+.rejilla-videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 13px; }
+.video {
+  background: var(--superficie2); border: 1px solid var(--filete);
+  border-radius: var(--radio); overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.lienzo-video {
+  position: relative; display: block; width: 100%; aspect-ratio: 16 / 9;
+  border: 0; padding: 0; margin: 0; cursor: pointer;
+  background: var(--panel); overflow: hidden;
+}
+.lienzo-video img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lienzo-video .play {
+  position: absolute; inset: 0; margin: auto;
+  width: 56px; height: 56px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--cian); color: var(--superficie);
+  box-shadow: var(--alzado-2);
+  transition: transform .16s ease;
+}
+.lienzo-video:hover .play { transform: scale(1.1); }
+.lienzo-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-pie { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 6px; }
+.video-pie h4 { font-size: 15px; font-weight: 700; }
+.video.sin-grabar .lienzo-video,
+.video.bloqueado .lienzo-video {
+  display: grid; place-items: center; gap: 8px; background: var(--superficie);
+  background-image: repeating-linear-gradient(45deg, var(--filete-sutil) 0 1px, transparent 1px 10px);
+  cursor: default;
+}
+.video.sin-grabar .candado, .video.bloqueado .candado { color: var(--tinta-suave); }
+.video.sin-grabar .rotulo { color: var(--ambar-texto); }
+.recurso-bloqueado {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 14px; color: var(--tinta-suave);
+  padding: 9px 12px; border-radius: var(--radio-chico);
+  background: var(--superficie2); border: 1px dashed var(--filete);
+}
+.candado-aviso { margin-bottom: 4px; }
+
+/* ============ 17. Menús desplegables ============ */
+/* Son <details>: funcionan con teclado y también sin JavaScript. */
+
+.desplegable { position: relative; }
+.desplegable > summary {
+  display: flex; align-items: center; gap: 7px;
+  padding: 8px 12px; border-radius: var(--radio-chico);
+  color: var(--sobre-panel-suave); cursor: pointer; list-style: none;
+  font-size: var(--t-chico); font-weight: 500; white-space: nowrap;
+}
+.desplegable > summary::-webkit-details-marker { display: none; }
+.desplegable > summary:hover { background: var(--panel-2); color: var(--sobre-panel); }
+.desplegable[open] > summary { background: var(--cian); color: var(--panel); font-weight: 600; }
+.desplegable > summary .giro { transition: transform .18s ease; }
+.desplegable[open] > summary .giro { transform: rotate(90deg); }
+
+.panel-desplegable {
+  position: absolute; z-index: 80; top: calc(100% + 9px); left: 0;
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  box-shadow: var(--alzado-3);
+  padding: 14px;
+  min-width: 300px;
+  max-height: min(70vh, 540px);
+  overflow-y: auto;
+}
+.panel-desplegable.estrecho-menu { min-width: 280px; }
+.panel-rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); gap: 16px; }
+.proyectos-menu .panel-desplegable { width: min(92vw, 720px); }
+.panel-grupo { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.panel-titulo {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--fuente-datos); font-size: var(--t-rotulo); font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--linea, var(--cian));
+  padding-bottom: 7px; margin-bottom: 4px;
+  border-bottom: 2px solid var(--linea-t, var(--cian-tenue));
+}
+.panel-desplegable a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 9px; border-radius: var(--radio-chico);
+  text-decoration: none; color: var(--tinta); min-width: 0;
+}
+.panel-desplegable a:hover { background: var(--superficie2); }
+.panel-desplegable .n {
+  flex: none; min-width: 30px; text-align: center;
+  font-family: var(--fuente-datos); font-size: 11px; font-weight: 600;
+  padding: 3px 6px; border-radius: 5px;
+  background: var(--linea-t, var(--cian-tenue)); color: var(--linea, var(--cian));
+  font-variant-numeric: tabular-nums;
+}
+.panel-desplegable .txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.panel-desplegable .txt b {
+  font-size: 13.5px; font-weight: 600; line-height: 1.25;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.panel-desplegable .txt small { font-size: 12px; color: var(--tinta-suave); }
+.panel-desplegable .pc { flex: none; font-variant-numeric: tabular-nums; }
+
+/* La vista previa del camino, en siete puntos */
+.mini-camino { display: flex; align-items: center; gap: 3px; }
+.mini-camino i { width: 7px; height: 7px; border-radius: 2px; display: block; }
+.mini-camino i.verde { background: var(--verde-fill); }
+.mini-camino i.ambar { background: var(--ambar-fill); }
+.mini-camino i.gris  { background: var(--gris-fill); opacity: .45; }
+.mini-camino i.aqui  { outline: 1.5px solid var(--cian); outline-offset: 1.5px; }
+
+@media (max-width: 760px) {
+  .panel-desplegable { position: static; width: auto; min-width: 0; box-shadow: none; margin-top: 8px; }
+  .proyectos-menu .panel-desplegable { width: auto; }
+  .barra .envoltura { align-items: flex-start; }
+  .menu { width: 100%; flex-direction: column; }
+  .desplegable { width: 100%; }
+}
+
+/* Un módulo todavía no alcanzado: se ve, se lee, pero sus recursos extra
+   están cerrados hasta llegar ahí. Las diapositivas nunca se cierran. */
+.modulo.cerrado .modulo-cab { background: var(--superficie); }
+.modulo.cerrado .modulo-cab .letra {
+  background: var(--gris-tenue); color: var(--gris-texto);
+  border: 2px dashed var(--gris-fill);
+}
+.modulo.cerrado .modulo-cab h3 { color: var(--tinta-suave); }

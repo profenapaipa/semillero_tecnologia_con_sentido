@@ -4,7 +4,7 @@ Documento interno del proyecto. **No se publica en el sitio ni se enlaza desde �
 Aquí quedan las decisiones de arquitectura, las limitaciones encontradas y lo que
 queda pendiente, para poder retomar el trabajo sin releer toda la conversación.
 
-Autor: Néstor Andrés Paipa Castro · Semillero Maker de Tecnología con Sentido
+Autor: Néstor Andrés Paipa · Semillero Maker de Tecnología con Sentido
 Inicio: 13 de octubre de 2026
 
 ---

@@ -2,16 +2,16 @@
    Sale de datos/marca.json con  python herramientas/generar_marca.py
    Cualquier cambio hecho aquí se pierde en la próxima generación. */
 
-/* Semillero Maker de Tecnología con Sentido · manual de marca v2.0 · 2026-10-13
-   Concepto: Bitácora de taller
+/* Semillero Maker de Tecnología con Sentido · manual de marca v3.0 · 2026-10-13
+   Concepto: Bitácora de taller con ruta de misión
 
-   El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller: papel con retícula, anotaciones en monoespaciada, cifras grandes escritas a mano alzada y una franja de color por cada oficio. Lo que está hecho se ve hecho; lo que falta no se disfraza.
+   El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller, y se recorre como un camino: papel con retícula, anotaciones en monoespaciada, cifras enormes y una franja de color por cada oficio. El avance no se cuenta, se camina: cada fase es una parada del camino, y lo que falta no se disfraza.
 
    La web de la iguana se rige por el manual de marca del INJUV. Este semillero es un proyecto personal de Néstor Andrés Paipa, no del colegio, así que no hereda ni su tipografía ni sus colores institucionales. Las dos publicaciones conviven sin parecerse.
 
    Licencias:
      - Iconografía: Lucide 1.56.0, licencia ISC, https://lucide.dev
-     - Tipografías: Bricolage Grotesque, Chivo y JetBrains Mono, SIL Open Font License, desde Google Fonts
+     - Tipografías: Syne, Hanken Grotesk y JetBrains Mono, SIL Open Font License, desde Google Fonts
 */
 
 :root {
@@ -51,14 +51,14 @@
   --linea-t: #0E8E9E24;
 
   /* --- tipografía y escala --- */
-  --fuente-titulos: "Bricolage Grotesque", Archivo, Segoe UI, system-ui, sans-serif;
-  --fuente-texto: "Chivo", Segoe UI, system-ui, -apple-system, sans-serif;
+  --fuente-titulos: "Syne", Bricolage Grotesque, Segoe UI, system-ui, sans-serif;
+  --fuente-texto: "Hanken Grotesk", Chivo, Segoe UI, system-ui, -apple-system, sans-serif;
   --fuente-datos: "JetBrains Mono", ui-monospace, Cascadia Mono, monospace;
-  --t-gigante: clamp(44px, 9vw, 96px);
-  --t-titulo1: clamp(32px, 6.4vw, 58px);
-  --t-titulo2: clamp(23px, 3.8vw, 32px);
-  --t-titulo3: 19px;
-  --t-titulo4: 16.5px;
+  --t-gigante: clamp(56px, 12vw, 128px);
+  --t-titulo1: clamp(34px, 7vw, 66px);
+  --t-titulo2: clamp(24px, 4.2vw, 36px);
+  --t-titulo3: 21px;
+  --t-titulo4: 17px;
   --t-cuerpo: 15.5px;
   --t-chico: 13.5px;
   --t-dato: 11.5px;

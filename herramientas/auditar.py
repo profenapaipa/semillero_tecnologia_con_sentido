@@ -100,6 +100,10 @@ for p in paginas:
 marca = leer(os.path.join(CSS, 'marca.css'))
 base = marca.split('@media', 1)[0]
 definidos = set(re.findall(r'(--[a-z0-9-]+)\s*:', base))
+# sitio.css puede definir variables de posicion propias, como --desvio.
+# Las de COLOR siguen teniendo que estar en marca.css: eso lo garantiza la
+# comprobacion de los dos bloques de tema oscuro, mas abajo.
+definidos |= set(re.findall(r'(--[a-z0-9-]+)\s*:', sitio))
 usados = set(re.findall(r'var\((--[a-z0-9-]+)', marca + sitio))
 for p in paginas:
     usados |= set(re.findall(r'var\((--[a-z0-9-]+)', leer(p)))

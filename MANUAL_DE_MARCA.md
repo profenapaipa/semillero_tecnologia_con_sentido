@@ -1,6 +1,6 @@
 # Manual de marca
 
-**Semillero Maker de Tecnología con Sentido** · versión 2.0 · 2026-10-13
+**Semillero Maker de Tecnología con Sentido** · versión 3.0 · 2026-10-13
 
 > Este documento y `datos/marca.json` son lo mismo dicho de dos maneras.
 > Para cambiar la identidad se edita el **JSON** y se corre
@@ -11,9 +11,9 @@
 
 ## 1. De qué va esta identidad
 
-**Concepto: Bitácora de taller.**
+**Concepto: Bitácora de taller con ruta de misión.**
 
-El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller: papel con retícula, anotaciones en monoespaciada, cifras grandes escritas a mano alzada y una franja de color por cada oficio. Lo que está hecho se ve hecho; lo que falta no se disfraza.
+El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller, y se recorre como un camino: papel con retícula, anotaciones en monoespaciada, cifras enormes y una franja de color por cada oficio. El avance no se cuenta, se camina: cada fase es una parada del camino, y lo que falta no se disfraza.
 
 ### Por qué no se parece a la de la iguana
 
@@ -23,36 +23,36 @@ La web de la iguana se rige por el manual de marca del INJUV. Este semillero es 
 
 ## 2. Tipografía
 
-### Títulos: Bricolage Grotesque
+### Títulos: Syne
 
 - **Pesos:** 600, 700, 800
-- **Respaldo:** `Archivo, Segoe UI, system-ui, sans-serif`
-- **Por qué:** Grotesca contemporánea de ancho variable, con rasgos inesperados en la g y la a. Moderna y curiosa sin perder seriedad. No la usa el colegio ni la iguana.
-- **Dónde se usa:** Títulos, cifras grandes, números de nivel. Siempre con interletraje negativo.
+- **Respaldo:** `Bricolage Grotesque, Segoe UI, system-ui, sans-serif`
+- **Por qué:** Geométrica y futurista en la estructura, pero con remates y curvas que no son de máquina: la S y la y tienen gesto de mano. Es exactamente la síntesis que se busca, futuro sin perder lo humano. Y no la usa nadie más en el colegio.
+- **Dónde se usa:** Títulos, cifras grandes, números de nivel y de equipo. Siempre con interletraje muy cerrado: a tamaño grande es donde muestra su carácter.
 
-### Texto corrido: Chivo
+### Texto corrido: Hanken Grotesk
 
 - **Pesos:** 400, 500, 600, 700
-- **Respaldo:** `Segoe UI, system-ui, -apple-system, sans-serif`
-- **Por qué:** Robusta y muy legible en pantalla, con carácter propio. Sostiene párrafos largos sin cansar, que es lo que pide una página que se lee en mitad de una sesión.
-- **Dónde se usa:** Todo el texto corrido, botones y etiquetas de interfaz.
+- **Respaldo:** `Chivo, Segoe UI, system-ui, -apple-system, sans-serif`
+- **Por qué:** Grotesca humanista de formas abiertas y x alta generosa. Es la pieza cálida del conjunto: compensa la frialdad geométrica de Syne y sostiene párrafos largos sin cansar en pantalla.
+- **Dónde se usa:** Todo el texto corrido, botones, etiquetas y paneles laterales.
 
 ### Datos: JetBrains Mono
 
 - **Pesos:** 400, 500, 600
 - **Respaldo:** `ui-monospace, Cascadia Mono, monospace`
-- **Por qué:** La monoespaciada de un entorno de programación. Este semillero habla de archivos, rutas, versiones y commits: esas cosas se escriben en mono o no se leen bien.
-- **Dónde se usa:** Rutas de archivo, nombres de commit, conteos, rótulos en versalita, porcentajes.
+- **Por qué:** La tercera voz, la técnica. Mantiene la página anclada a lo que el semillero hace de verdad: archivos, rutas, versiones y commits.
+- **Dónde se usa:** Rutas de archivo, commits, conteos, porcentajes, rótulos en versalita.
 
 ### Escala
 
 | Nombre | Tamaño | Token |
 |---|---|---|
-| gigante | `clamp(44px, 9vw, 96px)` | `--t-gigante` |
-| titulo1 | `clamp(32px, 6.4vw, 58px)` | `--t-titulo1` |
-| titulo2 | `clamp(23px, 3.8vw, 32px)` | `--t-titulo2` |
-| titulo3 | `19px` | `--t-titulo3` |
-| titulo4 | `16.5px` | `--t-titulo4` |
+| gigante | `clamp(56px, 12vw, 128px)` | `--t-gigante` |
+| titulo1 | `clamp(34px, 7vw, 66px)` | `--t-titulo1` |
+| titulo2 | `clamp(24px, 4.2vw, 36px)` | `--t-titulo2` |
+| titulo3 | `21px` | `--t-titulo3` |
+| titulo4 | `17px` | `--t-titulo4` |
 | cuerpo | `15.5px` | `--t-cuerpo` |
 | chico | `13.5px` | `--t-chico` |
 | dato | `11.5px` | `--t-dato` |
@@ -155,7 +155,7 @@ retiró los iconos de marca.
 ## 7. Licencias
 
 - Iconografía: Lucide 1.56.0, licencia ISC, https://lucide.dev
-- Tipografías: Bricolage Grotesque, Chivo y JetBrains Mono, SIL Open Font License, desde Google Fonts
+- Tipografías: Syne, Hanken Grotesk y JetBrains Mono, SIL Open Font License, desde Google Fonts
 
 ---
 

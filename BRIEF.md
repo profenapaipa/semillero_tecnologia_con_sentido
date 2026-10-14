@@ -4,7 +4,7 @@ Documento de encargo. De aquí sale la construcción del sitio, y a él se vuelv
 cuando haya que decidir algo de diseño. Si una decisión no está en este brief, no
 está decidida.
 
-**Cliente:** Néstor Andrés Paipa Castro
+**Cliente:** Néstor Andrés Paipa
 **Proyecto:** sitio de seguimiento y divulgación del Semillero Maker de Tecnología con Sentido
 **Fecha del brief:** 13 de octubre de 2026
 **Fecha de publicación comprometida:** 14 de octubre de 2026
@@ -14,7 +14,7 @@ está decidida.
 ## 1. Quién es el cliente y de quién es esto
 
 El Semillero Maker de Tecnología con Sentido es un espacio extracurricular
-concebido, dirigido y documentado por Néstor Andrés Paipa Castro, docente de
+concebido, dirigido y documentado por Néstor Andrés Paipa, docente de
 tecnología e informática del Instituto Infantil y Juvenil de Bogotá.
 
 **El semillero es suyo, no es un producto del colegio.** El colegio presta el

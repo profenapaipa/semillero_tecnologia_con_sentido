@@ -6,6 +6,8 @@
      1. Marcar en el mapa fijo la sección que se está mirando.
      2. Filtrar los proyectos con el buscador del portal.
      3. Hacer aparecer los bloques al desplazar.
+     4. Cargar el reproductor de YouTube solo cuando alguien pulsa.
+     5. Cerrar los menus desplegables al salirse o con Escape.
 
    No se usa ninguna librería a propósito. Son unas pocas líneas con las
    herramientas del navegador, y si este archivo no carga la página sigue
@@ -96,6 +98,45 @@
     // La barra puede traer texto si el navegador lo recordo al recargar.
     filtrar();
   }
+
+
+  /* ---- 5. Videos: cargar el reproductor solo al hacer clic ---- */
+  /* Hasta que alguien pulsa, en la pagina solo hay una imagen. Asi una
+     pagina con varios videos sigue cargando rapido, y YouTube no rastrea
+     a quien no los vio. */
+  document.addEventListener('click', function (ev) {
+    var boton = ev.target.closest && ev.target.closest('.lienzo-video[data-video]');
+    if (!boton) { return; }
+    var id = boton.getAttribute('data-video');
+    var marco = document.createElement('iframe');
+    marco.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+    marco.title = boton.getAttribute('aria-label') || 'Video';
+    marco.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+    marco.allowFullscreen = true;
+    boton.innerHTML = '';
+    boton.appendChild(marco);
+    boton.removeAttribute('data-video');
+  });
+
+  /* ---- 6. Un solo desplegable abierto a la vez ---- */
+  var menus = document.querySelectorAll('.barra details.desplegable');
+  Array.prototype.forEach.call(menus, function (d) {
+    d.addEventListener('toggle', function () {
+      if (!d.open) { return; }
+      Array.prototype.forEach.call(menus, function (otro) {
+        if (otro !== d) { otro.open = false; }
+      });
+    });
+  });
+  document.addEventListener('click', function (ev) {
+    Array.prototype.forEach.call(menus, function (d) {
+      if (d.open && !d.contains(ev.target)) { d.open = false; }
+    });
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key !== 'Escape') { return; }
+    Array.prototype.forEach.call(menus, function (d) { d.open = false; });
+  });
 
   /* ---- 4. Aparecer al desplazar ---- */
   var porRevelar = document.querySelectorAll('.revelar');
