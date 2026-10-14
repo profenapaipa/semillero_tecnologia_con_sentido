@@ -186,8 +186,12 @@ except Exception:
     seguidos = []
     avisos.append('no se pudo consultar git para revisar que se versiona')
 for ruta in seguidos:
+    # Se busca el nombre en CUALQUIER tramo de la ruta, no solo al principio:
+    # al mover las carpetas a una subcarpeta, la comparacion por prefijo dejo
+    # de aplicar y se colaron al repositorio sin que esta guardia avisara.
+    tramos = re.split(r'[\/]', ruta)
     for mala in PROHIBIDAS:
-        if ruta.startswith(mala):
+        if any(mala.lower() in t.lower() for t in tramos):
             fallas.append('el repositorio del portal esta versionando %s, que es de un '
                           'equipo y tiene su propio repositorio' % ruta)
             break

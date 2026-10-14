@@ -16,12 +16,18 @@
 #    3. Los estudiantes estarían escribiendo en el repositorio del portal.
 # ===========================================================
 
-/App para planeación de inclusión - Camila y Santiago/
-/Diverseña/
-/La web de la iguana/
-/ROULETTE_EnglishDay2026/
-/Wisfox/
-/ZOCALAB CARPETA COMPLETA🤖/
+# Se ignoran por NOMBRE y no por ruta exacta, a proposito: las carpetas se
+# movieron una vez a "Proyectos repositorios Github/" y las reglas con ruta
+# fija dejaron de aplicar, asi que se colaron al repositorio del portal.
+# Con estas reglas se ignoran esten donde esten.
+Proyectos repositorios Github/
+App para planeación de inclusión*/
+Diverseña/
+La web de la iguana/
+ROULETTE_EnglishDay2026/
+Wisfox/
+ZOCALAB*/
+ZocaLab/
 
 # Windows / macOS
 Thumbs.db
