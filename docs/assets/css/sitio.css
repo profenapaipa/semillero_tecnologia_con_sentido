@@ -45,11 +45,20 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--alto-fijo) + 18px
 body {
   margin: 0;
   background-color: var(--papel);
-  /* Papel cuadriculado: la textura que distingue esto de un campo plano. */
+  /* CURVAS DE NIVEL: el motivo de cuaderno de expedicion, hecho con gradientes
+     radiales repetidos. Dos focos desplazados y de paso distinto, para que el
+     terreno no se lea como un patron regular. Es lo que hace que el fondo se
+     sienta terreno y no campo vacio. */
   background-image:
-    linear-gradient(var(--filete-sutil) 1px, transparent 1px),
-    linear-gradient(90deg, var(--filete-sutil) 1px, transparent 1px);
-  background-size: var(--retic) var(--retic);
+    repeating-radial-gradient(circle at 12% 16%,
+      transparent 0 calc(var(--retic) - 1px),
+      var(--filete-sutil) calc(var(--retic) - 1px) var(--retic),
+      transparent var(--retic) calc(var(--retic) * 2)),
+    repeating-radial-gradient(circle at 86% 74%,
+      transparent 0 calc(var(--retic) * 1.3 - 1px),
+      var(--filete-sutil) calc(var(--retic) * 1.3 - 1px) calc(var(--retic) * 1.3),
+      transparent calc(var(--retic) * 1.3) calc(var(--retic) * 2.6));
+  background-attachment: fixed;
   color: var(--tinta);
   font-family: var(--fuente-texto);
   font-size: var(--t-cuerpo);
@@ -60,6 +69,10 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--fuente-titulos);
   font-weight: 700;
+  /* Fraunces es serif con eje optico: a tamano grande se abre sola, asi que
+     el interletraje queda casi neutro. SOFT ajusta cuanto se redondean los
+     remates; 30 la deja con caracter sin volverla blanda. */
+  font-variation-settings: "SOFT" 30;
   letter-spacing: -.012em;
   line-height: 1.1;
   margin: 0;
@@ -207,10 +220,11 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
 .portada::before {
   content: ""; position: absolute; inset: 0;
   background-image:
-    linear-gradient(var(--panel-2) 1px, transparent 1px),
-    linear-gradient(90deg, var(--panel-2) 1px, transparent 1px);
-  background-size: var(--retic) var(--retic);
-  mask-image: radial-gradient(ellipse 110% 120% at 12% 0%, #000 30%, transparent 75%);
+    repeating-radial-gradient(circle at 88% 14%,
+      transparent 0 calc(var(--retic) * 1.4 - 1px),
+      var(--panel-2) calc(var(--retic) * 1.4 - 1px) calc(var(--retic) * 1.4),
+      transparent calc(var(--retic) * 1.4) calc(var(--retic) * 2.8));
+  mask-image: radial-gradient(ellipse 125% 135% at 86% 4%, #000 36%, transparent 84%);
   pointer-events: none;
 }
 /* Campo de color de la línea técnica, en diagonal: el bloque de color que
@@ -1032,7 +1046,13 @@ a.equipo .titular h3 { padding-top: 2px; }
 /* ============ 17. Menús desplegables ============ */
 /* Son <details>: funcionan con teclado y también sin JavaScript. */
 
+/* El panel se anclaba al boton, asi que con quince proyectos se salia por el
+   borde derecho de la ventana y habia que reducir el zoom para verlo. Ahora el
+   de proyectos se ancla a la caja de la barra y la ocupa de lado a lado: nunca
+   puede salirse, porque esa caja ya esta dentro de la ventana. */
+.barra .envoltura { position: relative; }
 .desplegable { position: relative; }
+.proyectos-menu { position: static; }
 .desplegable > summary {
   display: flex; align-items: center; gap: 7px;
   padding: 8px 12px; border-radius: var(--radio-chico);
@@ -1053,12 +1073,16 @@ a.equipo .titular h3 { padding-top: 2px; }
   box-shadow: var(--alzado-3);
   padding: 14px;
   min-width: 300px;
+  max-width: calc(100vw - 2 * var(--margen));
   max-height: calc(100vh - var(--alto-fijo) - 28px);
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .panel-desplegable.estrecho-menu { min-width: 280px; }
-.panel-rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); gap: 16px; }
-.proyectos-menu .panel-desplegable { width: min(92vw, 720px); }
+.panel-rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px 18px; }
+.proyectos-menu .panel-desplegable {
+  left: 0; right: 0; width: auto; min-width: 0;
+}
 .panel-grupo { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .panel-titulo {
   display: flex; align-items: center; gap: 7px;
@@ -1422,3 +1446,215 @@ details.texto-diapos { margin-top: 4px; }
   justify-content: space-between; gap: 10px 16px; margin-bottom: 4px;
 }
 .barra-diapos .dato { flex: 1 1 240px; min-width: 0; }
+
+/* ============ 23. Índice vertical del portal, a la izquierda ============ */
+/* Las secciones del portal pasan de una fila horizontal en la cabecera a una
+   columna a la izquierda, igual que el índice de un proyecto. Así el portal y
+   las páginas de equipo se recorren de la misma manera. */
+
+.portal-cuerpo {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding-inline: var(--margen);
+  display: grid;
+  grid-template-columns: 236px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.portal-cuerpo .envoltura { max-width: none; padding-inline: 0; }
+.portal-cuerpo .principal { min-width: 0; }
+.portal-cuerpo .bloque.sobre-superficie {
+  background: var(--superficie);
+  border: 1px solid var(--filete-sutil);
+  border-radius: var(--radio);
+  padding: 26px 26px 30px;
+  margin-block: 10px;
+}
+
+.indice-portal {
+  position: sticky;
+  top: calc(var(--alto-fijo) + 18px);
+  padding-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-height: calc(100vh - var(--alto-fijo) - 36px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.indice-portal .cab-ind {
+  padding: 0 10px 12px;
+  border-bottom: 2px solid var(--cian);
+  margin-bottom: 9px;
+}
+.indice-portal .cab-ind .rotulo { display: block; color: var(--tinta-suave); margin-bottom: 4px; }
+.indice-portal .cab-ind b {
+  font-family: var(--fuente-titulos); font-size: 16.5px; font-weight: 700;
+  line-height: 1.2; display: block;
+}
+.indice-portal a {
+  display: flex; align-items: center; gap: 11px;
+  padding: 10px 11px; border-radius: var(--radio-chico);
+  color: var(--tinta); text-decoration: none; font-size: 14.5px; font-weight: 500;
+}
+.indice-portal a:hover { background: var(--superficie); color: var(--cian); }
+.indice-portal a.activa {
+  background: var(--cian-tenue); color: var(--cian); font-weight: 700;
+}
+.indice-portal a span { flex: 1; min-width: 0; }
+.indice-portal a em {
+  font-style: normal; font-family: var(--fuente-datos); font-size: 10.5px;
+  color: var(--tinta-suave); flex: none;
+}
+.indice-portal a.activa em { color: var(--cian); }
+
+@media (max-width: 900px) {
+  .portal-cuerpo { grid-template-columns: 1fr; gap: 0; }
+  .indice-portal {
+    position: static; max-height: none; overflow: visible; padding-top: 20px;
+    background: var(--superficie); border: 1px solid var(--filete);
+    border-radius: var(--radio); padding-inline: 10px; padding-bottom: 10px;
+    margin-top: 20px;
+  }
+}
+
+/* ============ 24. Animaciones que explican, no que decoran ============ */
+/* Cada pieza del panel introductorio lleva un dibujo que SE MUEVE mostrando
+   lo que el texto dice. Si el texto dice "siete niveles que se van ganando",
+   el dibujo recorre siete nodos. Es lo que Mayer llama señalización: la
+   imagen y la palabra dicen lo mismo al mismo tiempo.
+   Todo es CSS puro, sin JavaScript, y se detiene con prefers-reduced-motion. */
+
+.demo {
+  height: 46px;
+  display: flex; align-items: center; gap: 7px;
+  margin-top: 2px;
+}
+
+/* --- Siete niveles que progresan uno tras otro --- */
+.demo-niveles { gap: 5px; }
+.demo-niveles i {
+  width: 20px; height: 20px; border-radius: 7px; flex: none;
+  background: var(--gris-tenue);
+  border: 1.5px dashed var(--gris-fill);
+  animation: ganar-nivel 7s infinite;
+}
+.demo-niveles i:nth-child(1) { animation-delay: 0s; }
+.demo-niveles i:nth-child(2) { animation-delay: .5s; }
+.demo-niveles i:nth-child(3) { animation-delay: 1s; }
+.demo-niveles i:nth-child(4) { animation-delay: 1.5s; }
+.demo-niveles i:nth-child(5) { animation-delay: 2s; }
+.demo-niveles i:nth-child(6) { animation-delay: 2.5s; }
+.demo-niveles i:nth-child(7) { animation-delay: 3s; }
+@keyframes ganar-nivel {
+  0%, 6%    { background: var(--gris-tenue); border-color: var(--gris-fill); border-style: dashed; transform: none; }
+  10%       { background: var(--ambar-tenue); border-color: var(--ambar-fill); border-style: solid; transform: scale(1.22); }
+  16%, 54%  { background: var(--verde-fill); border-color: var(--verde-fill); border-style: solid; transform: none; }
+  64%, 100% { background: var(--gris-tenue); border-color: var(--gris-fill); border-style: dashed; transform: none; }
+}
+
+/* --- Dos niveles de detalle: tareas binarias que llenan un semáforo --- */
+.demo-semaforo { gap: 10px; }
+.demo-semaforo .casillas { display: flex; gap: 4px; }
+.demo-semaforo .casillas b {
+  width: 13px; height: 13px; border-radius: 4px; display: block;
+  border: 1.5px solid var(--gris-fill); background: transparent;
+  animation: marcar 6s infinite;
+}
+.demo-semaforo .casillas b:nth-child(1) { animation-delay: .2s; }
+.demo-semaforo .casillas b:nth-child(2) { animation-delay: 1.2s; }
+.demo-semaforo .casillas b:nth-child(3) { animation-delay: 2.2s; }
+@keyframes marcar {
+  0%, 8%    { background: transparent; border-color: var(--gris-fill); }
+  14%, 58%  { background: var(--cian); border-color: var(--cian); }
+  66%, 100% { background: transparent; border-color: var(--gris-fill); }
+}
+.demo-semaforo .foco {
+  width: 22px; height: 22px; border-radius: 50%; flex: none;
+  animation: semaforo 6s infinite;
+}
+@keyframes semaforo {
+  0%, 12%   { background: var(--gris-fill); box-shadow: none; }
+  22%, 40%  { background: var(--ambar-fill); box-shadow: 0 0 0 5px var(--ambar-tenue); }
+  48%, 62%  { background: var(--verde-fill); box-shadow: 0 0 0 5px var(--verde-tenue); }
+  72%, 100% { background: var(--gris-fill); box-shadow: none; }
+}
+
+/* --- Evidencia: una lupa que recorre un archivo y lo marca --- */
+.demo-evidencia { gap: 9px; }
+.demo-evidencia .hoja {
+  width: 30px; height: 38px; border-radius: 4px; flex: none;
+  background: var(--superficie); border: 1.5px solid var(--filete);
+  position: relative; overflow: hidden;
+}
+.demo-evidencia .hoja::before,
+.demo-evidencia .hoja::after {
+  content: ""; position: absolute; left: 5px; height: 2px; border-radius: 2px;
+  background: var(--filete);
+}
+.demo-evidencia .hoja::before { top: 9px; width: 18px; }
+.demo-evidencia .hoja::after { top: 15px; width: 12px; }
+.demo-evidencia .lupa {
+  width: 15px; height: 15px; border-radius: 50%; flex: none;
+  border: 2px solid var(--cian);
+  animation: buscar 4.5s infinite ease-in-out;
+}
+@keyframes buscar {
+  0%, 100% { transform: translate(0, -4px); opacity: .5; }
+  40%      { transform: translate(14px, 5px); opacity: 1; }
+  70%      { transform: translate(26px, -2px); opacity: 1; }
+}
+.demo-evidencia .visto {
+  font-family: var(--fuente-datos); font-size: 10.5px; font-weight: 600;
+  color: var(--verde-texto); animation: aparecer-visto 4.5s infinite;
+}
+@keyframes aparecer-visto {
+  0%, 68%   { opacity: 0; transform: translateX(-5px); }
+  80%, 94%  { opacity: 1; transform: none; }
+  100%      { opacity: 0; }
+}
+
+/* --- Publicado: una ventanita que se abre --- */
+.demo-publicar .marco {
+  width: 54px; height: 38px; border-radius: 5px; flex: none;
+  background: var(--panel); border: 1.5px solid var(--filete);
+  position: relative; overflow: hidden;
+}
+.demo-publicar .marco::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 7px;
+  background: var(--panel-2);
+}
+.demo-publicar .marco i {
+  position: absolute; left: 6px; right: 6px; top: 13px; height: 4px;
+  border-radius: 2px; background: var(--cian);
+  transform-origin: left; animation: cargar-sitio 5s infinite;
+}
+.demo-publicar .marco i:nth-child(2) { top: 21px; animation-delay: .35s; }
+.demo-publicar .marco i:nth-child(3) { top: 29px; width: 60%; animation-delay: .7s; }
+@keyframes cargar-sitio {
+  0%, 10%   { transform: scaleX(0); opacity: 0; }
+  28%, 72%  { transform: scaleX(1); opacity: 1; }
+  88%, 100% { transform: scaleX(0); opacity: 0; }
+}
+.demo-publicar .vivo {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--fuente-datos); font-size: 10.5px; font-weight: 600;
+  color: var(--verde-texto);
+}
+.demo-publicar .vivo::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--verde-fill); animation: latir 2s infinite;
+}
+@keyframes latir {
+  0%, 100% { box-shadow: 0 0 0 0 var(--verde-tenue); }
+  50%      { box-shadow: 0 0 0 6px transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo * { animation: none !important; }
+  /* Sin movimiento, el dibujo se queda en su estado final, que ya explica */
+  .demo-niveles i { background: var(--verde-fill); border-color: var(--verde-fill); border-style: solid; }
+  .demo-semaforo .casillas b { background: var(--cian); border-color: var(--cian); }
+  .demo-semaforo .foco { background: var(--verde-fill); }
+  .demo-evidencia .visto, .demo-publicar .marco i { opacity: 1; transform: none; }
+}

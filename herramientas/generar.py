@@ -57,8 +57,8 @@ GSAP_JS = 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'
 GSAP_ST = 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js'
 
 FUENTES_WEB = ('https://fonts.googleapis.com/css2'
-               '?family=IBM+Plex+Serif:wght@600;700'
-               '&family=IBM+Plex+Sans:wght@400;500;600;700'
+               '?family=Fraunces:opsz,wght@9..144,600;9..144,700'
+               '&family=Public+Sans:wght@400;500;600;700'
                '&family=IBM+Plex+Mono:wght@400;500;600&display=swap')
 
 
@@ -546,6 +546,40 @@ def mapa_fijo(datos, equipo, nv, act, vista_activa):
     return ''.join(p)
 
 
+
+SECCIONES_PORTAL = [
+    ('como', 'Cómo funciona', 'ayuda'),
+    ('numeros', 'Diagnóstico', 'tendencia'),
+    ('proyectos', 'Los proyectos', 'tablero'),
+    ('publicados', 'Publicados', 'cohete'),
+    ('hermanos', 'Hermanos', 'globo'),
+]
+
+
+def indice_portal(datos):
+    """
+    El indice del portal, en columna a la izquierda.
+
+    Antes era una fila horizontal dentro de la cabecera fija. En columna se
+    recorre igual que el indice de un proyecto, cabe el nombre completo de
+    cada seccion sin recortarlo, y la cabecera queda mas baja, que deja mas
+    pagina a la vista.
+    """
+    cuentas = {'proyectos': str(len(datos['equipos'])),
+               'hermanos': str(len(datos['hermanos'])),
+               'como': '4'}
+    p = ['<nav class="indice-portal" id="indice-portal" aria-label="Secciones del portal">']
+    p.append('<div class="cab-ind"><span class="rotulo">Portal del semillero</span>'
+             '<b>%d proyectos</b></div>' % len(datos['equipos']))
+    for ancla, titulo, icono in SECCIONES_PORTAL:
+        n = cuentas.get(ancla, '')
+        p.append('<a href="#%s" data-seccion="%s">%s<span>%s</span>%s</a>'
+                 % (e(ancla), e(ancla), ico(icono, 17), e(titulo),
+                    '<em>%s</em>' % e(n) if n else ''))
+    p.append('</nav>')
+    return ''.join(p)
+
+
 def mapa_portal(secciones, activa=None):
     """El mismo mapa, para el portal: sus secciones en vez de las vistas."""
     p = ['<div class="mapa"><div class="envoltura">']
@@ -583,11 +617,31 @@ Filosofartec y Un Café con la Iguana.</p>
        'sem': e(meta['semestre']), 'rev': e(fecha_larga(meta['revisado']))}
 
 
+# Dibujos que se mueven mostrando lo que el texto dice. Si el texto habla de
+# siete niveles que se van ganando, el dibujo recorre siete nodos. Es
+# senalizacion en el sentido de Mayer: imagen y palabra dicen lo mismo a la
+# vez, y asi la idea entra sin releer.
+DEMOS = {
+    'mapa': ('<span class="demo demo-niveles" aria-hidden="true">'
+             '<i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>'),
+    'capas': ('<span class="demo demo-semaforo" aria-hidden="true">'
+              '<span class="casillas"><b></b><b></b><b></b></span>'
+              '<span class="foco"></span></span>'),
+    'lupa': ('<span class="demo demo-evidencia" aria-hidden="true">'
+             '<span class="hoja"></span><span class="lupa"></span>'
+             '<span class="visto">con evidencia</span></span>'),
+    'cohete': ('<span class="demo demo-publicar" aria-hidden="true">'
+               '<span class="marco"><i></i><i></i><i></i></span>'
+               '<span class="vivo">en línea</span></span>'),
+}
+
+
 def panel_intro(piezas):
-    """Panel introductorio: explica cómo se lee antes de soltar el dato."""
+    """Panel introductorio: explica cómo se lee, y lo dibuja moviéndose."""
     li = ''.join(
-        '<li><div class="pieza"><span class="icono">%s</span><h3>%s</h3><p>%s</p></div></li>'
-        % (ico(i, 19), e(t), e(d)) for i, t, d in piezas)
+        '<li><div class="pieza"><span class="icono">%s</span><h3>%s</h3>'
+        '<p>%s</p>%s</div></li>'
+        % (ico(i, 19), e(t), e(d), DEMOS.get(i, '')) for i, t, d in piezas)
     return '<ul class="intro">%s</ul>' % li
 
 
@@ -622,12 +676,7 @@ def pagina_portal(datos):
     h = [cabeza('Semillero Maker de Tecnología con Sentido',
                 'Portal del Semillero Maker de Tecnología con Sentido: %d proyectos, '
                 'su ruta por niveles y acceso a los que ya están publicados.' % n,
-                '', 'inicio', datos=datos,
-                mapa=mapa_portal([('como', 'Como funciona', 'ayuda'),
-                                  ('numeros', 'Diagnostico', 'tendencia'),
-                                  ('proyectos', 'Los proyectos', 'tablero'),
-                                  ('publicados', 'Publicados', 'cohete'),
-                                  ('hermanos', 'Hermanos', 'globo')]))]
+                '', 'inicio', datos=datos)]
 
     # --- portada oscura ---
     h.append('<header class="portada"><div class="envoltura">')
@@ -647,7 +696,9 @@ def pagina_portal(datos):
              '<a class="boton" href="#como">Cómo funciona esto</a></div>' % ico('flecha', 17))
     h.append('</div></header>')
 
-    h.append('<main>')
+    h.append('<div class="portal-cuerpo">')
+    h.append(indice_portal(datos))
+    h.append('<main class="principal">')
 
     # --- cómo funciona: panel introductorio ---
     h.append('<section class="bloque sobre-superficie" id="como" data-tinte="teal">'
@@ -827,7 +878,7 @@ def pagina_portal(datos):
         h.append('</div>')
     h.append('</div></div></section>')
 
-    h.append('</main>')
+    h.append('</main></div>')
     h.append(pie(meta))
     return ''.join(h)
 

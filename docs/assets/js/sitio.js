@@ -28,7 +28,8 @@
   'use strict';
 
   /* ---- 1. Dónde estoy: resalta en el mapa la sección visible ---- */
-  var mapa = document.getElementById('mapa-secciones');
+  var mapa = document.getElementById('indice-portal') ||
+             document.getElementById('mapa-secciones');
   if (mapa && 'IntersectionObserver' in window) {
     var enlaces = {};
     Array.prototype.forEach.call(mapa.querySelectorAll('a[data-seccion]'), function (a) {

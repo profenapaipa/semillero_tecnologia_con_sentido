@@ -1,6 +1,6 @@
 # Manual de marca
 
-**Semillero Maker de Tecnología con Sentido** · versión 5.1 · 2026-10-13
+**Semillero Maker de Tecnología con Sentido** · versión 6.0 · 2026-10-13
 
 > Este documento y `datos/marca.json` son lo mismo dicho de dos maneras.
 > Para cambiar la identidad se edita el **JSON** y se corre
@@ -11,9 +11,9 @@
 
 ## 1. De qué va esta identidad
 
-**Concepto: Bitacora de taller, con pigmentos de aqui.**
+**Concepto: Cuaderno de expedicion.**
 
-El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller, y se recorre como un camino: papel con retícula, anotaciones en monoespaciada, cifras enormes y una franja de color por cada oficio. El avance no se cuenta, se camina: cada fase es una parada del camino, y lo que falta no se disfraza.
+El semillero no es una marca de colegio ni un panel de control: es un taller que sale a campo. La pagina se ve como el cuaderno de esa expedicion y se recorre como un sendero: papel marfil con curvas de nivel dibujadas al fondo, tinta sepia, anotaciones en monoespaciada, y un trazo que marca lo recorrido y lo que falta. El avance no se cuenta, se camina.
 
 ### Por qué no se parece a la de la iguana
 
@@ -23,19 +23,19 @@ La web de la iguana se rige por un manual de marca institucional ajeno. Este sem
 
 ## 2. Tipografía
 
-### Títulos: IBM Plex Serif
+### Títulos: Fraunces
 
 - **Pesos:** 600, 700
 - **Respaldo:** `Georgia, "Times New Roman", serif`
-- **Por qué:** Es la hermana con remates del mismo sistema. Da el contraste que un titulo necesita frente al texto, sin cambiar de familia ni de altura de x. Y a un semillero que produce articulos de investigacion le sienta mejor una serif que una display de cartel.
-- **Dónde se usa:** Titulos y cifras grandes. Interletraje casi neutro: una serif no se aprieta como una grotesca.
+- **Por qué:** Serif variable con caracter propio: tiene eje optico, asi que a tamano grande muestra personalidad y a tamano pequeno se endereza y se lee. No es una serif de catalogo ni una grotesca neutra.
+- **Dónde se usa:** Titulos, cifras grandes, numeros de parada. Interletraje casi neutro.
 
-### Texto corrido: IBM Plex Sans
+### Texto corrido: Public Sans
 
 - **Pesos:** 400, 500, 600, 700
 - **Respaldo:** `"Segoe UI", system-ui, -apple-system, sans-serif`
-- **Por qué:** Grotesca de corte humanista, con aperturas abiertas y altura de x generosa. Esta dibujada para interfaz y para leerse en pantalla a tamano pequeno: ni condensada ni extendida.
-- **Dónde se usa:** Todo el texto corrido, botones, etiquetas, menus y paneles laterales.
+- **Por qué:** Disenada con requisito explicito de legibilidad en pantalla y accesibilidad. Formas abiertas, altura de x generosa, sin rasgos que distraigan. Es la pieza sobria que deja brillar a Fraunces sin pelearse con ella.
+- **Dónde se usa:** Todo el texto corrido, botones, etiquetas, menus y paneles.
 
 ### Datos: IBM Plex Mono
 
@@ -62,43 +62,43 @@ La web de la iguana se rige por un manual de marca institucional ajeno. Este sem
 
 ## 3. Color
 
-IDENTIDAD. No es una paleta de catalogo tecnologico. Sale de tres cosas de aqui: el oro de la orfebreria muisca, la piedra clara de la sabana de Bogota y el anil de los textiles. Por eso el papel no es un gris azulado frio como el de cualquier panel de control, sino una piedra calida; y el panel oscuro no es negro sino anil de noche. Los cuatro colores de linea tecnica son pigmentos con nombre propio: anil, chicha, orquidea y achiote. Ninguno pisa el verde ni el ambar, reservados al semaforo. ESTRUCTURA. Cada color de acento tiene DOS versiones: la oscura, para leerse sobre papel, y la clara terminada en -panel, para leerse sobre el anil oscuro. Esa separacion es la que faltaba: el panel oscuro existe tambien en el tema claro, y ahi un color pensado para fondo blanco no contrasta. TEXTO SOBRE RELLENO. Hay un token aparte, sobre-relleno, para el texto que va encima de un color saturado o del panel oscuro: el numero dentro de un nodo verde, la etiqueta de un boton principal, el titulo de la portada. Antes se usaba la superficie, que es blanca en tema claro pero OSCURA en tema oscuro, y por eso habia titulos oscuros sobre fondo oscuro. Ese token se invierte con el tema y no es un descuido: en tema claro los rellenos son oscuros y encima va blanco; en tema oscuro los rellenos son claros y encima va casi negro.
+IDENTIDAD. Papel de cuaderno de campo, no panel de control. El fondo es marfil calido con curvas de nivel dibujadas con gradientes repetidos, y la tinta es sepia profunda: por eso se ve elegido y no heredado. Los cuatro colores de linea tecnica son pigmentos con nombre propio: anil, chicha, orquidea y achiote. Ninguno pisa el verde ni el ambar, reservados al semaforo de estado. ESTRUCTURA. Cada acento tiene dos versiones: la oscura para leerse sobre papel, y la clara terminada en -panel para leerse sobre el panel oscuro, que existe tambien en el tema claro. Y hay un token aparte, sobre-relleno, para el texto que va encima de un color saturado; se invierte con el tema, porque lo que cambia es el relleno.
 
 | Token | Claro | Oscuro | Para qué |
 |---|---|---|---|
-| `--papel` | `#EFECE4` | `#121118` | Fondo de la página |
-| `--superficie` | `#FFFFFF` | `#1B1A23` | Tarjetas y paneles |
-| `--superficie2` | `#F8F6F0` | `#22212C` | Fondos hundidos, cabeceras de tabla |
-| `--tinta` | `#1A1611` | `#F0EDE6` | Texto principal |
-| `--tinta-suave` | `#595246` | `#A8A296` | Texto secundario y rótulos |
-| `--filete` | `#D7D1C4` | `#36343F` | Bordes |
-| `--filete-sutil` | `#E9E5DB` | `#2A2833` | Separadores internos |
-| `--panel` | `#14192E` | `#0C0F1C` | Franjas oscuras: barra, portada, pie |
-| `--panel-2` | `#242C4E` | `#1C2240` | Segundo tono del panel oscuro |
-| `--sobre-panel` | `#EDEFF7` | `#EDEFF7` | Texto sobre el panel oscuro |
-| `--sobre-panel-suave` | `#A8AFCA` | `#A8AFCA` | Texto secundario sobre el panel |
-| `--sobre-relleno` | `#FFFFFF` | `#0E0E16` |  |
-| `--cian` | `#234A9E` | `#93B5FF` | Lo que se puede tocar: enlaces y botones |
-| `--cian-vivo` | `#1B3B80` | `#B4CCFF` | El mismo, al pasar el cursor |
-| `--cian-panel` | `#93B5FF` | `#93B5FF` |  |
-| `--verde-fill` | `#1F7A3D` | `#2E9C55` | SEMÁFORO: nivel superado |
-| `--verde-texto` | `#166130` | `#6BD79A` | SEMÁFORO: el mismo, legible como texto |
-| `--verde-panel` | `#5FD08A` | `#6BD79A` |  |
-| `--ambar-fill` | `#B07908` | `#C98D10` | SEMÁFORO: nivel en curso |
-| `--ambar-texto` | `#7A5305` | `#F2C45C` | SEMÁFORO: el mismo, legible como texto |
-| `--ambar-panel` | `#F0BE4A` | `#F2C45C` |  |
-| `--gris-fill` | `#8A857A` | `#6B6660` | SEMÁFORO: nivel sin empezar |
-| `--gris-texto` | `#565146` | `#A8A296` | SEMÁFORO: el mismo, legible como texto |
-| `--gris-panel` | `#B0B6CC` | `#B0B6CC` |  |
-| `--linea` | `#234A9E` | `#93B5FF` |  |
-| `--linea-software` | `#234A9E` | `#93B5FF` | Línea técnica: desarrollo de software |
+| `--papel` | `#F3EFE4` | `#14110C` | Fondo de la página |
+| `--superficie` | `#FFFFFF` | `#201C15` | Tarjetas y paneles |
+| `--superficie2` | `#FBF9F3` | `#1B1811` | Fondos hundidos, cabeceras de tabla |
+| `--tinta` | `#1C1710` | `#F2EDE2` | Texto principal |
+| `--tinta-suave` | `#5D5243` | `#AFA592` | Texto secundario y rótulos |
+| `--filete` | `#D9D0BC` | `#383226` | Bordes |
+| `--filete-sutil` | `#E8E2D3` | `#2A251C` | Separadores internos |
+| `--panel` | `#16202E` | `#0B111A` | Franjas oscuras: barra, portada, pie |
+| `--panel-2` | `#233449` | `#1A2737` | Segundo tono del panel oscuro |
+| `--sobre-panel` | `#EEF2F7` | `#EEF2F7` | Texto sobre el panel oscuro |
+| `--sobre-panel-suave` | `#A2B2C6` | `#A2B2C6` | Texto secundario sobre el panel |
+| `--sobre-relleno` | `#FFFFFF` | `#14110C` |  |
+| `--cian` | `#2A4C9B` | `#9CB6F2` | Lo que se puede tocar: enlaces y botones |
+| `--cian-vivo` | `#1F3B7D` | `#BBCCF8` | El mismo, al pasar el cursor |
+| `--cian-panel` | `#9CB6F2` | `#9CB6F2` |  |
+| `--verde-fill` | `#1F7A3D` | `#3FAE6B` | SEMÁFORO: nivel superado |
+| `--verde-texto` | `#15602E` | `#6FD398` | SEMÁFORO: el mismo, legible como texto |
+| `--verde-panel` | `#6FD398` | `#6FD398` |  |
+| `--ambar-fill` | `#BF8609` | `#D6A32B` | SEMÁFORO: nivel en curso |
+| `--ambar-texto` | `#7A5305` | `#EFC765` | SEMÁFORO: el mismo, legible como texto |
+| `--ambar-panel` | `#EFC765` | `#EFC765` |  |
+| `--gris-fill` | `#8E8578` | `#757063` | SEMÁFORO: nivel sin empezar |
+| `--gris-texto` | `#5A5144` | `#AFA592` | SEMÁFORO: el mismo, legible como texto |
+| `--gris-panel` | `#B3BECE` | `#B3BECE` |  |
+| `--linea` | `#2A4C9B` | `#9CB6F2` |  |
+| `--linea-software` | `#2A4C9B` | `#9CB6F2` | Línea técnica: desarrollo de software |
 | `--linea-unity` | `#6B2F96` | `#CBA3F2` | Línea técnica: Unity |
-| `--linea-audiovisual` | `#A3176B` | `#F58FC4` | Línea técnica: producción audiovisual |
-| `--linea-electronica` | `#9E3319` | `#F49C80` | Línea técnica: electrónica y robótica |
-| `--linea-software-panel` | `#93B5FF` | `#93B5FF` |  |
+| `--linea-audiovisual` | `#A3176B` | `#F08FC4` | Línea técnica: producción audiovisual |
+| `--linea-electronica` | `#9A3B17` | `#F0A184` | Línea técnica: electrónica y robótica |
+| `--linea-software-panel` | `#9CB6F2` | `#9CB6F2` |  |
 | `--linea-unity-panel` | `#CBA3F2` | `#CBA3F2` |  |
-| `--linea-audiovisual-panel` | `#F58FC4` | `#F58FC4` |  |
-| `--linea-electronica-panel` | `#F49C80` | `#F49C80` |  |
+| `--linea-audiovisual-panel` | `#F08FC4` | `#F08FC4` |  |
+| `--linea-electronica-panel` | `#F0A184` | `#F0A184` |  |
 
 Los tintes (`--verde-tenue`, `--linea-unity-tenue`, etc.) **no se escriben**: los
 calcula el generador al 13% y 14% de opacidad sobre el color base.
@@ -115,9 +115,9 @@ calcula el generador al 13% y 14% de opacidad sobre el color base.
 | `--ancho` | `1180px` |
 | `--margen` | `20px` |
 | `--trazo-icono` | `1.75` |
-| `--retic` | `28px` |
+| `--retic` | `38px` |
 
-Retícula de 28px: es la que dibuja el fondo de papel cuadriculado y la que marca el ritmo del espaciado.
+Reticula de 38px: es el paso de las curvas de nivel que dibujan el papel, y marca el ritmo del espaciado.
 
 ### Texturas
 
@@ -164,7 +164,9 @@ retiró los iconos de marca.
 ## 7. Licencias
 
 - Iconografia: Lucide 1.56.0, licencia ISC, https://lucide.dev
-- Tipografias: IBM Plex Serif, IBM Plex Sans e IBM Plex Mono, SIL Open Font License, desde Google Fonts
+- Tipografias: Fraunces, Public Sans e IBM Plex Mono, SIL Open Font License, desde Google Fonts
+- Carrusel: Swiper 11.2.6, licencia MIT
+- Animacion al desplazar: GSAP 3.12.5
 
 ---
 
