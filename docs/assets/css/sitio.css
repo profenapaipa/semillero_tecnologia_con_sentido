@@ -1083,3 +1083,92 @@ a.equipo .titular h3 { padding-top: 2px; }
   border: 2px dashed var(--gris-fill);
 }
 .modulo.cerrado .modulo-cab h3 { color: var(--tinta-suave); }
+
+/* ============ 18. Carrusel de diapositivas ============ */
+/* Swiper trae su hoja; aquí solo se le pone la marca encima. */
+
+.carrusel { display: flex; flex-direction: column; gap: 10px; }
+.principal-swiper {
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  overflow: hidden;
+  background: var(--panel);
+  box-shadow: var(--alzado-2);
+}
+.principal-swiper .swiper-slide { background: var(--panel); }
+.principal-swiper .swiper-slide img { width: 100%; height: auto; display: block; }
+.principal-swiper .swiper-button-next,
+.principal-swiper .swiper-button-prev {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--superficie); color: var(--tinta);
+  box-shadow: var(--alzado-2);
+  transition: transform .15s ease;
+}
+.principal-swiper .swiper-button-next:hover,
+.principal-swiper .swiper-button-prev:hover { transform: scale(1.08); color: var(--cian); }
+.principal-swiper .swiper-button-next::after,
+.principal-swiper .swiper-button-prev::after { font-size: 16px; font-weight: 700; }
+.principal-swiper .swiper-pagination {
+  bottom: 10px; left: 50%; transform: translateX(-50%);
+  width: auto; padding: 4px 13px; border-radius: 999px;
+  background: var(--panel); color: var(--sobre-panel);
+  font-family: var(--fuente-datos); font-size: 12px; font-weight: 600;
+  box-shadow: var(--alzado-2);
+}
+
+.miniaturas-swiper { padding: 2px; }
+.miniaturas-swiper .swiper-slide {
+  width: 104px; position: relative; cursor: pointer;
+  border: 2px solid transparent; border-radius: var(--radio-chico);
+  overflow: hidden; opacity: .55; transition: opacity .15s ease, border-color .15s ease;
+}
+.miniaturas-swiper .swiper-slide img { width: 100%; height: auto; display: block; }
+.miniaturas-swiper .swiper-slide span {
+  position: absolute; left: 4px; bottom: 4px;
+  background: var(--panel); color: var(--sobre-panel);
+  font-family: var(--fuente-datos); font-size: 10px; font-weight: 600;
+  padding: 1px 6px; border-radius: 4px;
+}
+.miniaturas-swiper .swiper-slide-thumb-active { opacity: 1; border-color: var(--linea, var(--cian)); }
+.miniaturas-swiper .swiper-slide:hover { opacity: .9; }
+
+details.texto-diapos { margin-top: 4px; }
+
+/* Sin JavaScript, las diapositivas se apilan y se ven todas igual */
+.no-js .principal-swiper .swiper-wrapper { display: flex; flex-direction: column; gap: 10px; }
+.no-js .miniaturas-swiper,
+.no-js .swiper-button-next, .no-js .swiper-button-prev,
+.no-js .swiper-pagination { display: none; }
+
+/* ============ 19. Variedad de color por sección ============ */
+/* Cada bloque del portal toma un matiz distinto de la familia, para que la
+   página no sea una sucesión de franjas iguales. Es tinte de fondo, no
+   color de estado: el verde y el ámbar siguen siendo solo del semáforo. */
+
+.bloque[data-tinte="teal"]     { --tinte: var(--linea-software-tenue);    --tinte-fuerte: var(--linea-software); }
+.bloque[data-tinte="indigo"]   { --tinte: var(--linea-unity-tenue);       --tinte-fuerte: var(--linea-unity); }
+.bloque[data-tinte="violeta"]  { --tinte: var(--linea-audiovisual-tenue); --tinte-fuerte: var(--linea-audiovisual); }
+.bloque[data-tinte="carmin"]   { --tinte: var(--linea-electronica-tenue); --tinte-fuerte: var(--linea-electronica); }
+
+.bloque[data-tinte] {
+  position: relative;
+  background-image: linear-gradient(180deg, var(--tinte) 0%, transparent 260px);
+}
+.bloque[data-tinte] .cab-seccion .rotulo { color: var(--tinte-fuerte); }
+.bloque[data-tinte] .cab-seccion h2::after {
+  content: ""; display: block; width: 58px; height: 4px; border-radius: 99px;
+  background: var(--tinte-fuerte); margin-top: 13px;
+}
+
+/* La portada gana profundidad con un degradado de la línea, no un plano */
+.portada::after {
+  background:
+    radial-gradient(ellipse 70% 90% at 92% 10%, var(--linea-t, transparent) 0%, transparent 62%),
+    linear-gradient(145deg, var(--linea-t, transparent) 0%, transparent 70%);
+}
+
+/* Las celdas de cifras alternan matiz, para que el tablero no sea gris */
+.tablero .celda:nth-child(4n+1) { border-top: 3px solid var(--linea-software); }
+.tablero .celda:nth-child(4n+2) { border-top: 3px solid var(--linea-unity); }
+.tablero .celda:nth-child(4n+3) { border-top: 3px solid var(--linea-audiovisual); }
+.tablero .celda:nth-child(4n+4) { border-top: 3px solid var(--linea-electronica); }

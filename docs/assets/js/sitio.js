@@ -8,6 +8,13 @@
      3. Hacer aparecer los bloques al desplazar.
      4. Cargar el reproductor de YouTube solo cuando alguien pulsa.
      5. Cerrar los menus desplegables al salirse o con Escape.
+     6. Mover el carrusel de diapositivas (Swiper).
+     7. Animar las secciones al bajar (GSAP ScrollTrigger).
+
+   Las dos librerias se eligieron por una razon concreta: ninguna esconde
+   contenido desde el CSS. Si no cargan, la pagina se ve completa, solo que
+   quieta. Librerias como AOS ponen opacity:0 en la hoja de estilo, y si su
+   JavaScript falla la pagina queda en blanco.
 
    No se usa ninguna librería a propósito. Son unas pocas líneas con las
    herramientas del navegador, y si este archivo no carga la página sigue
@@ -138,7 +145,101 @@
     Array.prototype.forEach.call(menus, function (d) { d.open = false; });
   });
 
-  /* ---- 4. Aparecer al desplazar ---- */
+
+  /* ---- 7. Carrusel de diapositivas, con Swiper ---- */
+  /* Se usa una libreria solo aqui. Un carrusel accesible de verdad es mucho
+     trabajo: teclado, gestos, foco, miniaturas sincronizadas y carga
+     diferida. Si Swiper no carga, las diapositivas se ven igual, una debajo
+     de otra: el HTML no depende de el. */
+  if (window.Swiper) {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-carrusel]'), function (caja) {
+      var principal = caja.querySelector('.principal-swiper');
+      var tira = caja.querySelector('.miniaturas-swiper');
+      if (!principal) { return; }
+      var swTira = tira ? new Swiper(tira, {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        freeMode: true,
+        watchSlidesProgress: true
+      }) : null;
+      new Swiper(principal, {
+        spaceBetween: 12,
+        keyboard: { enabled: true },
+        navigation: {
+          nextEl: principal.querySelector('.swiper-button-next'),
+          prevEl: principal.querySelector('.swiper-button-prev')
+        },
+        pagination: {
+          el: principal.querySelector('.swiper-pagination'),
+          type: 'fraction'
+        },
+        thumbs: swTira ? { swiper: swTira } : undefined
+      });
+    });
+  }
+
+  /* ---- 8. Movimiento al desplazar, con GSAP ScrollTrigger ---- */
+  /* Al reves que otras librerias de scroll, GSAP no esconde nada desde el
+     CSS: el estado inicial lo pone el script. Si el script no corre, la
+     pagina se ve completa. Esa es la razon de elegirlo. */
+  var quietos2 = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (window.gsap && window.ScrollTrigger && !quietos2) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    function entra(sel, desde, extra) {
+      Array.prototype.forEach.call(document.querySelectorAll(sel), function (el) {
+        gsap.from(el, Object.assign({
+          scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+          duration: 0.6, ease: 'power2.out'
+        }, desde, extra || {}));
+      });
+    }
+
+    // Cabeceras de seccion: entran desde abajo.
+    entra('.cab-seccion', { y: 26, opacity: 0 });
+    // Tarjetas y modulos: en cascada corta, no todas a la vez.
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.rejilla, .modulos, .intro, .rejilla-equipos'),
+      function (grupo) {
+        var hijos = grupo.children;
+        if (!hijos.length) { return; }
+        gsap.from(hijos, {
+          scrollTrigger: { trigger: grupo, start: 'top 85%', once: true },
+          y: 22, opacity: 0, duration: 0.5, stagger: 0.07, ease: 'power2.out'
+        });
+      });
+    // Las paradas del camino: aparecen una tras otra, como un recorrido.
+    Array.prototype.forEach.call(document.querySelectorAll('.camino'), function (c) {
+      gsap.from(c.children, {
+        scrollTrigger: { trigger: c, start: 'top 80%', once: true },
+        scale: 0.7, opacity: 0, duration: 0.45, stagger: 0.06, ease: 'back.out(1.6)'
+      });
+    });
+    // Las barras de progreso se llenan al entrar, no aparecen llenas.
+    Array.prototype.forEach.call(document.querySelectorAll('.barra-progreso > span'), function (b) {
+      var ancho = b.style.width;
+      gsap.fromTo(b, { width: '0%' }, {
+        width: ancho, duration: 0.9, ease: 'power2.out',
+        scrollTrigger: { trigger: b, start: 'top 92%', once: true }
+      });
+    });
+    // Paralaje suave de la reticula del panel oscuro.
+    Array.prototype.forEach.call(document.querySelectorAll('.portada'), function (pz) {
+      gsap.to(pz, {
+        backgroundPositionY: '70px', ease: 'none',
+        scrollTrigger: { trigger: pz, start: 'top top', end: 'bottom top', scrub: true }
+      });
+    });
+    // El numero gigante del nivel actual se mueve un poco mas lento.
+    Array.prototype.forEach.call(document.querySelectorAll('.nivel-actual .gigante'), function (g) {
+      gsap.to(g, {
+        y: -26, ease: 'none',
+        scrollTrigger: { trigger: g.parentNode, start: 'top bottom', end: 'bottom top', scrub: true }
+      });
+    });
+  }
+
+  /* ---- 4. Aparecer al desplazar, respaldo sin librerias ---- */
   var porRevelar = document.querySelectorAll('.revelar');
   if (!porRevelar.length) { return; }
 

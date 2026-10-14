@@ -51,6 +51,11 @@ SALIDA = os.path.join(RAIZ, 'docs')
 MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
          'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 
+SWIPER_CSS = 'https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.css'
+SWIPER_JS = 'https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.js'
+GSAP_JS = 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'
+GSAP_ST = 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js'
+
 FUENTES_WEB = ('https://fonts.googleapis.com/css2'
                '?family=IBM+Plex+Serif:wght@600;700'
                '&family=IBM+Plex+Sans:wght@400;500;600;700'
@@ -60,6 +65,27 @@ FUENTES_WEB = ('https://fonts.googleapis.com/css2'
 # Cada tarea cumplida vale esto. No hay otra forma de sumar: los puntos NO
 # se regalan ni se ganan por entrar, se ganan cumpliendo lo que ya se pedía.
 PUNTOS_TAREA = 10
+
+# Se calcula en main() a partir del contenido real de las hojas y el script.
+VERSION_ASSETS = '0'
+
+
+def huella(*rutas):
+    """
+    Numero corto que cambia cuando cambia el archivo.
+
+    Se cuelga de las hojas de estilo y del script como ?v=... Sin esto, el
+    navegador y la cache de GitHub Pages siguen sirviendo la version vieja
+    y parece que el cambio no se aplico.
+    """
+    import hashlib
+    h = hashlib.sha1()
+    for r in rutas:
+        ruta = os.path.join(SALIDA, r)
+        if os.path.exists(ruta):
+            with open(ruta, 'rb') as fh:
+                h.update(fh.read())
+    return h.hexdigest()[:8]
 
 
 def e(t):
@@ -402,9 +428,13 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="%(fuentes)s">
-<link rel="stylesheet" href="%(pre)sassets/css/marca.css">
-<link rel="stylesheet" href="%(pre)sassets/css/sitio.css">
-<script src="%(pre)sassets/js/sitio.js" defer></script>
+<link rel="stylesheet" href="%(pre)sassets/css/marca.css?v=%(v)s">
+<link rel="stylesheet" href="%(swiper_css)s">
+<link rel="stylesheet" href="%(pre)sassets/css/sitio.css?v=%(v)s">
+<script src="%(swiper_js)s" defer></script>
+<script src="%(gsap)s" defer></script>
+<script src="%(gsap_st)s" defer></script>
+<script src="%(pre)sassets/js/sitio.js?v=%(v)s" defer></script>
 </head>
 <body%(linea)s class="no-js">
 <script>document.body.classList.remove('no-js');</script>
@@ -417,6 +447,9 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None):
 </div></nav>
 """ % {'tit': e(titulo), 'desc': e(desc), 'pre': pre, 'fuentes': FUENTES_WEB,
        'menu': ''.join(menu), 'logo': ico('capas', 18),
+       'v': VERSION_ASSETS,
+       'swiper_css': SWIPER_CSS, 'swiper_js': SWIPER_JS,
+       'gsap': GSAP_JS, 'gsap_st': GSAP_ST,
        'linea': ' data-linea="%s"' % e(linea) if linea else ''}
 
 
@@ -615,7 +648,8 @@ def pagina_portal(datos):
     h.append('<main>')
 
     # --- cómo funciona: panel introductorio ---
-    h.append('<section class="bloque sobre-superficie" id="como"><div class="envoltura">')
+    h.append('<section class="bloque sobre-superficie" id="como" data-tinte="teal">'
+             '<div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">Cómo funciona</span>'
              '<h2>Cada proyecto es una ruta de siete niveles</h2>'
              '<p>Las fases del Design Thinking, anidadas con el método científico. '
@@ -639,7 +673,8 @@ def pagina_portal(datos):
     h.append('</div></section>')
 
     # --- números ---
-    h.append('<section class="bloque" id="numeros"><div class="envoltura">')
+    h.append('<section class="bloque" id="numeros" data-tinte="carmin">'
+             '<div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">Diagnóstico</span>'
              '<h2>El semillero, de un vistazo</h2>'
              '<p>Estos números salen de medir los documentos por dentro, no de contar si el '
@@ -663,7 +698,8 @@ def pagina_portal(datos):
     h.append('</div></section>')
 
     # --- proyectos por línea ---
-    h.append('<section class="bloque sobre-superficie" id="proyectos"><div class="envoltura">')
+    h.append('<section class="bloque sobre-superficie" id="proyectos" data-tinte="indigo">'
+             '<div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">Los proyectos</span>'
              '<h2>Catorce equipos, cuatro líneas técnicas</h2>'
              '<p>Cada tarjeta trae el avance de la ruta completa y el del artículo. '
@@ -719,7 +755,8 @@ def pagina_portal(datos):
     h.append('</div></section>')
 
     # --- publicados ---
-    h.append('<section class="bloque" id="publicados"><div class="envoltura">')
+    h.append('<section class="bloque" id="publicados" data-tinte="violeta">'
+             '<div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">Acceso directo</span>'
              '<h2>Proyectos ejecutables</h2>'
              '<p>Lo que ya se puede abrir, y lo que falta para abrir el resto. Cuando un proyecto '
@@ -1093,6 +1130,47 @@ def panel_lateral(datos, equipo, nv, act, hh, tt, vista):
     return ''.join(p)
 
 
+
+def carrusel(m, diapos, pre='../'):
+    """
+    Carrusel de las diapositivas de una sesion, con Swiper.
+
+    Se usa una libreria aqui y no en el resto del sitio porque un carrusel
+    accesible de verdad es mucho trabajo: teclado, gestos tactiles, foco,
+    miniaturas sincronizadas y carga diferida. Swiper lo resuelve y esta
+    probado en millones de sitios.
+
+    Las imagenes salen de las presentaciones reales, exportadas con
+    PowerPoint y convertidas a WebP. Debajo queda el texto de cada
+    diapositiva, para buscar con Ctrl+F y para lector de pantalla.
+    """
+    if not m.get('imagenes'):
+        return ''
+    cid = 'car-%s' % m['letra']
+    p = ['<div class="carrusel" data-carrusel>']
+    p.append('<div class="swiper principal-swiper" id="%s">' % cid)
+    p.append('<div class="swiper-wrapper">')
+    for d in diapos:
+        ruta = '%sassets/diapositivas/%s/%d.webp' % (pre, m['letra'], d['n'])
+        alt = d['titulo'] or ('Diapositiva %d' % d['n'])
+        p.append('<div class="swiper-slide">'
+                 '<img src="%s" alt="%s" loading="lazy" width="1600" height="900">'
+                 '</div>' % (e(ruta), e(alt)))
+    p.append('</div>')
+    p.append('<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>')
+    p.append('<div class="swiper-pagination"></div>')
+    p.append('</div>')
+    # Tira de miniaturas
+    p.append('<div class="swiper miniaturas-swiper" data-para="%s"><div class="swiper-wrapper">' % cid)
+    for d in diapos:
+        ruta = '%sassets/diapositivas/%s/%d.webp' % (pre, m['letra'], d['n'])
+        p.append('<div class="swiper-slide"><img src="%s" alt="" loading="lazy">'
+                 '<span>%d</span></div>' % (e(ruta), d['n']))
+    p.append('</div></div>')
+    p.append('</div>')
+    return ''.join(p)
+
+
 def pagina_modulos(datos, equipo, modulos, videos=None):
     """
     Vista de modulos: la ruta de aprendizaje, semana por semana.
@@ -1196,11 +1274,14 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
             h.append('</ul></div>')
 
         if diapos:
-            h.append('<details class="mas diapos"><summary>%s Ver las %d diapositivas de la sesion'
-                     '</summary><div>' % (ico('chevron', 14), len(diapos)))
+            h.append('<details class="mas diapos" open><summary>%s Ver las %d diapositivas de '
+                     'la sesion</summary><div>' % (ico('chevron', 14), len(diapos)))
             h.append('<p class="dato">Se muestran las de tu linea y las que eran para todos. '
                      'La presentacion completa esta en <code>%s</code>.</p>'
                      % e(m.get('archivo') or 'la carpeta de la sesion'))
+            h.append(carrusel(m, diapos))
+            h.append('<details class="mas texto-diapos"><summary>%s Leer el texto de las '
+                     'diapositivas</summary><div>' % ico('documento', 14))
             h.append('<ol class="diapositivas">')
             for d in diapos:
                 h.append('<li class="diapo"><div class="diapo-cab">'
@@ -1218,6 +1299,7 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
                     h.append('</tbody></table></div>')
                 h.append('</li>')
             h.append('</ol></div></details>')
+            h.append('</div></details>')
 
         vids = [v for v in (videos or {}).get('videos', []) if linea_eq in v.get('para', [])]
         pend_v = [v for v in (videos or {}).get('pendientes', [])
@@ -1449,6 +1531,9 @@ def pagina_articulo(datos, equipo):
 # ====================================================================
 
 def main():
+    global VERSION_ASSETS
+    VERSION_ASSETS = huella('assets/css/marca.css', 'assets/css/sitio.css',
+                            'assets/js/sitio.js')
     with open(DATOS, encoding='utf-8') as f:
         datos = json.load(f)
 
