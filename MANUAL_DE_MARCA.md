@@ -78,6 +78,7 @@ IDENTIDAD. Papel de cuaderno de campo, no panel de control. El fondo es marfil c
 | `--sobre-panel` | `#EEF2F7` | `#EEF2F7` | Texto sobre el panel oscuro |
 | `--sobre-panel-suave` | `#A2B2C6` | `#A2B2C6` | Texto secundario sobre el panel |
 | `--sobre-relleno` | `#FFFFFF` | `#14110C` |  |
+| `--velo` | `#1C1710A3` | `#0B0906BD` |  |
 | `--cian` | `#2A4C9B` | `#9CB6F2` | Lo que se puede tocar: enlaces y botones |
 | `--cian-vivo` | `#1F3B7D` | `#BBCCF8` | El mismo, al pasar el cursor |
 | `--cian-panel` | `#9CB6F2` | `#9CB6F2` |  |

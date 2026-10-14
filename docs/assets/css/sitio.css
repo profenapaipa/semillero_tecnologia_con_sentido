@@ -1658,3 +1658,84 @@ details.texto-diapos { margin-top: 4px; }
   .demo-semaforo .foco { background: var(--verde-fill); }
   .demo-evidencia .visto, .demo-publicar .marco i { opacity: 1; transform: none; }
 }
+
+/* ============ 25. La instrucción de cada tarea pendiente ============ */
+/* Antes una tarea pendiente decía su nombre y el archivo del que debería
+   salir. Eso le sirve al docente, que ya sabe el proceso, no al estudiante
+   que entra por primera vez. Ahora dice cómo se hace, y se distingue de la
+   evidencia por el filete de color a la izquierda. */
+
+.tareas .como {
+  display: block;
+  margin-top: 8px;
+  padding: 2px 0 2px 13px;
+  border-left: 3px solid var(--linea, var(--cian));
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--tinta-suave);
+  max-width: 72ch;
+}
+.tareas .como b { color: var(--tinta); font-weight: 600; }
+.tareas li.pendiente .texto b { color: var(--tinta); font-weight: 600; }
+
+/* ============ 26. Ventana emergente de las lecciones ============ */
+/* <dialog> nativo: trae foco atrapado, cierre con Escape y fondo sin que
+   haya que programarlos. El contenido vive en un <details>, así que sin
+   JavaScript se despliega ahí mismo y no se pierde nada. */
+
+dialog.modal-leccion {
+  width: min(720px, 94vw);
+  max-height: 86vh;
+  padding: 0;
+  border: 1px solid var(--filete);
+  border-radius: 18px;
+  background: var(--superficie);
+  color: var(--tinta);
+  box-shadow: var(--alzado-3);
+  overflow: hidden;
+}
+dialog.modal-leccion::backdrop {
+  background: var(--velo);
+  backdrop-filter: blur(3px);
+}
+.modal-cab {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 20px 22px;
+  background: var(--linea-t, var(--cian-tenue));
+  border-bottom: 1px solid var(--filete);
+}
+.modal-cab .rotulo { display: block; color: var(--linea, var(--cian)); margin-bottom: 5px; }
+.modal-cab h3 { font-size: var(--t-titulo2); font-weight: 700; }
+.modal-cerrar {
+  margin-left: auto; flex: none;
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid var(--filete); background: var(--superficie);
+  color: var(--tinta-suave); cursor: pointer;
+  display: grid; place-items: center;
+}
+.modal-cerrar:hover { border-color: var(--linea, var(--cian)); color: var(--linea, var(--cian)); }
+.modal-cuerpo {
+  padding: 20px 22px 24px;
+  overflow-y: auto;
+  max-height: 58vh;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.modal-cuerpo .recursos > li { font-size: 15px; }
+.modal-pie {
+  padding: 16px 22px;
+  border-top: 1px solid var(--filete);
+  background: var(--superficie2);
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+
+/* El resumen de una lección se ve como botón, porque abre una ventana */
+details.leccion > summary {
+  padding: 8px 13px;
+  border: 1px solid var(--filete);
+  border-radius: var(--radio-chico);
+  background: var(--superficie2);
+}
+details.leccion > summary:hover { border-color: var(--linea, var(--cian)); }
+/* Con JavaScript la ventana reemplaza al desplegable, así que la flecha
+   dejaría de significar algo: se cambia por el gesto de abrir. */
+details.leccion > summary .ico { transform: none !important; }

@@ -67,85 +67,103 @@
     "empatizar": [
       {
         "id": "prop",
-        "texto": "Propuesta escrita, no solo el archivo creado"
+        "texto": "Propuesta escrita, no solo el archivo creado",
+        "comoSeHace": "Abran su documento de propuesta, el que está en la carpeta 00_Propuesta o en la raíz de su equipo. Tiene cinco preguntas y hay que responderlas todas: a quién va dirigido, qué barrera atienden, cómo sabrían si funcionó, qué tecnología secundaria entra, y con quién del colegio lo validarían. Si solo están los nombres, la propuesta no cuenta: lo que se revisa es si las preguntas tienen respuesta."
       },
       {
         "id": "acue",
-        "texto": "Acuerdos del equipo diligenciados"
+        "texto": "Acuerdos del equipo diligenciados",
+        "comoSeHace": "Abran Formato2_Acuerdos_equipo.docx, en su carpeta de la sesión del 5 y 6 de agosto. Escriban quién hace qué, cada cuánto se reúnen y qué pasa si alguien no cumple. Tres acuerdos concretos valen más que diez generales."
       },
       {
         "id": "nece",
-        "texto": "Necesidades y recursos definidos"
+        "texto": "Necesidades y recursos definidos",
+        "comoSeHace": "Abran Formato1_Necesidades_recursos.docx, en la misma carpeta. Son dos listas: qué necesitan conseguir, con referencia exacta, y qué necesitan aprender. La segunda lista es la que define qué tutoriales les grabo."
       }
     ],
     "definir": [
       {
         "id": "ante",
-        "texto": "Antecedentes reunidos, con autor y año"
+        "texto": "Antecedentes reunidos, con autor y año",
+        "comoSeHace": "Busquen tres artículos sobre su tema y guarden el PDF en la carpeta 01_Antecedentes de su equipo. De cada uno anoten autor, año, la idea principal en una frase, y el enlace. Sin esos tres, la sección 1.2 del artículo no se puede escribir."
       },
       {
         "id": "cron",
-        "texto": "Cronograma del semestre entregado"
+        "texto": "Cronograma del semestre entregado",
+        "comoSeHace": "Abran Cronograma_tareas_2026-II.xlsx. Reparten las tareas en las semanas que quedan, no en las que ya pasaron. Dejen la última semana libre: siempre se necesita."
       },
       {
         "id": "preg",
-        "texto": "Pregunta de investigación escrita en el artículo"
+        "texto": "Pregunta de investigación escrita en el artículo",
+        "comoSeHace": "En Articulo_base.docx, sección 1.3. La pregunta ya la tienen escrita en la propuesta: cópienla allá y agreguen en tres o cuatro líneas qué se propusieron construir para responderla. Tiene que quedar escrita como pregunta, con signo de interrogación."
       }
     ],
     "idear": [
       {
         "id": "bocg",
-        "texto": "Boceto gráfico o guion del proyecto"
+        "texto": "Boceto gráfico o guion del proyecto",
+        "comoSeHace": "Dibujen el proyecto en papel: una hoja por pantalla, por circuito o por plano, con los nombres de las partes. Tomen foto y suban la imagen a la carpeta 04_Desarrollo, con la fecha adelante en el nombre, así: 2026-10-14_bocetos.jpg. No tiene que quedar bonito, tiene que quedar claro."
       },
       {
         "id": "bocr",
-        "texto": "Registro escrito del boceto"
+        "texto": "Registro escrito del boceto",
+        "comoSeHace": "Abran Bocetos_registro.docx, de la sesión del 12 y 13 de agosto. Por cada boceto escriban qué decidieron y qué descartaron, con el porqué. Dos frases por boceto alcanzan. Eso se vuelve después la sección 3.5 del artículo."
       },
       {
         "id": "fich",
-        "texto": "Ficha técnica diligenciada"
+        "texto": "Ficha técnica diligenciada",
+        "comoSeHace": "Abran FFicha_tecnica_19_agosto.docx. Son cuatro pasos: qué debe hacer la solución, en tres acciones; con qué se construye y en qué versión exacta; cómo funciona, es decir qué entra y qué sale; y qué falta por resolver. Las versiones exactas importan: Unity 2019.4.38f1, no solo Unity."
       }
     ],
     "testear": [
       {
         "id": "barr",
-        "texto": "Hoja de barreras diligenciada"
+        "texto": "Hoja de barreras diligenciada",
+        "comoSeHace": "Abran Barreras.docx al final de la clase, no al principio. Escriban hasta tres cosas que no lograron, empezando por «no logramos», y digan qué intentaron y en qué paso se perdieron. Esa última parte es la que me permite grabar el video justo donde hace falta."
       },
       {
         "id": "casi",
-        "texto": "Casillas de la sesión marcadas"
+        "texto": "Casillas de la sesión marcadas",
+        "comoSeHace": "En la misma hoja de barreras, en la tabla de arriba: marquen la columna de su línea técnica. Cambien el cuadrito vacío por uno marcado, solo en la columna que les corresponde. Son cinco casillas y se marcan únicamente las que de verdad lograron."
       },
       {
         "id": "evid",
-        "texto": "Evidencia propia guardada en la carpeta"
+        "texto": "Evidencia propia guardada en la carpeta",
+        "comoSeHace": "Suban a su carpeta lo que hicieron hoy: el archivo del proyecto, la foto del montaje, el corte de video, la captura de pantalla. Con la fecha adelante en el nombre. Si trabajaron en el computador de la sala y no lo subieron, para la revisión no existe."
       }
     ],
     "iterar": [
       {
         "id": "dect",
-        "texto": "Decisiones técnicas registradas en una bitácora"
+        "texto": "Decisiones técnicas registradas en una bitácora",
+        "comoSeHace": "Creen un archivo BITACORA.md en su proyecto, o un documento en la carpeta 03_Bitacora. Cada vez que elijan entre dos caminos, anoten la fecha, qué eligieron y por qué descartaron el otro. Tres entradas alcanzan para el artículo."
       },
       {
         "id": "artv",
-        "texto": "Versión nueva del artículo guardada (_v2)"
+        "texto": "Versión nueva del artículo guardada (_v2)",
+        "comoSeHace": "Cuando le agreguen algo importante al artículo, guarden una copia nueva con el nombre Articulo_base_v2.docx, y la siguiente v3. No borren la anterior: la serie de versiones muestra cómo creció el proyecto, y eso también se evalúa."
       }
     ],
     "comunicar": [
       {
         "id": "a2",
-        "texto": "Metodología, sección 2 del artículo"
+        "texto": "Metodología, sección 2 del artículo",
+        "comoSeHace": "En Articulo_base.docx, sección 2. Primero llenen la tabla: una fila por fase, qué hicimos y qué produjo, con el archivo que lo demuestra. Después conviertan esa tabla en un párrafo seguido de 150 a 250 palabras. La tabla se queda, el párrafo se agrega debajo."
       },
       {
         "id": "a3",
-        "texto": "Resultados, secciones 3.1 a 3.5"
+        "texto": "Resultados, secciones 3.1 a 3.5",
+        "comoSeHace": "Secciones 3.1 a 3.5, que son el corazón del artículo. Las 3.1, 3.2 y 3.3 se copian de la ficha técnica. La 3.4 la escriben hoy: qué funciona y qué no, sin adornar. La 3.5 sale de la bitácora de decisiones."
       },
       {
         "id": "a4",
-        "texto": "Discusión, sección 4"
+        "texto": "Discusión, sección 4",
+        "comoSeHace": "Sección 4, entre 100 y 150 palabras. Qué saben hacer hoy que no sabían en julio, y qué los frenó: tiempo, materiales o conocimiento. Comparen con lo que decían los antecedentes que leyeron."
       },
       {
         "id": "a5",
-        "texto": "Conclusiones y referencias APA 7, sección 5"
+        "texto": "Conclusiones y referencias APA 7, sección 5",
+        "comoSeHace": "Sección 5. Conclusiones en 60 a 100 palabras: en qué estado quedó el desarrollo y qué seguiría el próximo año. Y las referencias en APA 7, mínimo cinco, en orden alfabético, sacadas de la matriz de antecedentes."
       }
     ]
   },

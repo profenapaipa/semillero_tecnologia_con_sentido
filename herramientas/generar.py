@@ -193,6 +193,14 @@ def tarea_articulo(datos, equipo, tarea_id):
 
 
 def tareas_de_fase(datos, equipo, fase_id):
+    """
+    Las tareas de una fase. Cada una sale como:
+        (id, texto, hecha, evidencia, es_hito, como_se_hace)
+
+    El sexto campo es la instruccion. Es lo que faltaba: antes una tarea
+    pendiente decia su nombre y de que archivo deberia salir, que le sirve al
+    docente pero no al estudiante que no sabe por donde empezar.
+    """
     estado = equipo['estado']
     salida = []
     for t in datos['tareasComunes'].get(fase_id, []):
@@ -200,12 +208,33 @@ def tareas_de_fase(datos, equipo, fase_id):
             hecha, fuente = tarea_articulo(datos, equipo, t['id'])
         else:
             hecha, fuente = estado.get(t['id'], [False, 'Sin revisar'])
-        salida.append((t['id'], t['texto'], hecha, fuente, False))
+        salida.append((t['id'], t['texto'], hecha, fuente, False, t.get('comoSeHace', '')))
     for hito in datos['lineas'][equipo['linea']]['hitos']:
         if hito['fase'] == fase_id:
             hecha, fuente = estado.get(hito['id'], [False, 'Sin revisar'])
-            salida.append((hito['id'], hito['nombre'], hecha, fuente, True))
+            # Los hitos tecnicos ya traian su orientacion, por linea.
+            salida.append((hito['id'], hito['nombre'], hecha, fuente, True,
+                           hito.get('orientacion', '')))
     return salida
+
+
+
+def fila_tarea(tarea, mostrar_como=True):
+    """
+    Una tarea en la lista. Si esta pendiente y tiene instruccion, la muestra:
+    es la diferencia entre decir que falta y decir como se hace.
+    """
+    _id, texto, hecha, fuente, es_hito, como = tarea
+    p = ['<li class="%s">' % ('hecha' if hecha else 'pendiente')]
+    p.append('<span class="casilla">%s</span>' % ico('check', 13))
+    p.append('<span class="texto"><b>%s</b>' % e(texto))
+    if es_hito:
+        p.append(' <span class="pin-fase">hito técnico</span>')
+    if not hecha and como and mostrar_como:
+        p.append('<span class="como"><b>Cómo:</b> %s</span>' % e(como))
+    p.append('<span class="fuente dato">%s</span>' % e(fuente))
+    p.append('</span></li>')
+    return ''.join(p)
 
 
 def niveles_de(datos, equipo):
@@ -604,8 +633,23 @@ def migas(items):
             '<ol>%s</ol></div></nav>' % ''.join(li))
 
 
+# Una sola ventana por pagina, que se llena con el contenido de la leccion
+# que se pulse. Es <dialog> nativo: trae foco, Escape y fondo sin programarlos.
+MODAL = """<dialog class="modal-leccion" id="modal-leccion" aria-labelledby="modal-titulo">
+<div class="modal-cab">
+<div><span class="rotulo">Lección</span><h3 id="modal-titulo"></h3></div>
+<button class="modal-cerrar" type="button" data-cierra-modal aria-label="Cerrar la lección">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+</button>
+</div>
+<div class="modal-cuerpo" id="modal-cuerpo"></div>
+<div class="modal-pie"><button class="boton principal" type="button" data-cierra-modal>Entendido, a trabajar</button></div>
+</dialog>
+"""
+
+
 def pie(meta):
-    return """<footer class="pie"><div class="envoltura">
+    return MODAL + """<footer class="pie"><div class="envoltura">
 <span class="nombre">Semillero Maker de Tecnología con Sentido</span>
 <p>%(doc)s · Semestre %(sem)s. Última revisión: %(rev)s.</p>
 <p>Tres espacios con nombre propio: el Semillero Maker de Tecnología con Sentido,
@@ -937,9 +981,7 @@ def pagina_equipo(datos, equipo):
         h.append('<div class="nota-caja cian"><span class="titulo">%s<b>Lo que sigue</b></span>'
                  '<ul class="tareas" style="margin-top:6px">%s</ul></div>'
                  % (ico('flecha', 17),
-                    ''.join('<li class="pendiente"><span class="casilla">%s</span>'
-                            '<span class="texto"><b>%s</b><span class="fuente dato">%s</span></span></li>'
-                            % (ico('check', 13), e(t[1]), e(t[3])) for t in pendientes[:3])))
+                    ''.join(fila_tarea(t) for t in pendientes[:3])))
     else:
         h.append('<div class="nota-caja verde"><span class="titulo">%s<b>Nivel completo</b></span>'
                  'Todas las tareas de este nivel tienen evidencia. Sigue con el siguiente.</div>'
@@ -1023,7 +1065,7 @@ def seccion_semana(datos, equipo, nv):
     meta = datos['meta']
     ya, falta, sigue = [], [], []
     for n in nv:
-        for _id, texto, hecha, fuente, _h in n['tareas']:
+        for _id, texto, hecha, fuente, _h, _c in n['tareas']:
             (ya if hecha else falta).append((texto, fuente, n['fase']['nombre']))
     sigue = falta[:4]
 
@@ -1248,9 +1290,10 @@ def panel_derecho(datos, equipo, nv, act, hh, tt):
     if pend:
         p.append('<div class="caja-lat"><span class="rotulo">Lo que sigue</span>'
                  '<ul class="tareas compacta">')
-        for _id, texto, _h, _f, _e in pend[:3]:
+        for t in pend[:3]:
+            # En el panel lateral no cabe la instruccion: va solo el nombre.
             p.append('<li class="pendiente"><span class="casilla">%s</span>'
-                     '<span class="texto"><b>%s</b></span></li>' % (ico('check', 12), e(texto)))
+                     '<span class="texto"><b>%s</b></span></li>' % (ico('check', 12), e(t[1])))
         p.append('</ul><p class="dato">Hay %d puntos en juego en esta parada.</p></div>'
                  % puntos_de(len(pend)))
 
@@ -1386,7 +1429,7 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
     tareas_texto = {}
     for grupo in datos['tareasComunes'].values():
         for t in grupo:
-            tareas_texto[t['id']] = t['texto']
+            tareas_texto[t['id']] = (t['texto'], t.get('comoSeHace', ''))
 
     listos = total_ent = 0
     for m in modulos:
@@ -1394,7 +1437,8 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
         m['_ent'] = []
         for i in ids:
             hecha, fuente = estado.get(i, [False, 'Sin revisar'])
-            m['_ent'].append((i, tareas_texto.get(i, i), hecha, fuente))
+            texto, como = tareas_texto.get(i, (i, ''))
+            m['_ent'].append((i, texto, hecha, fuente, como))
         m['_hechas'] = sum(1 for x in m['_ent'] if x[2])
         m['_total'] = len(m['_ent'])
         listos += m['_hechas']
@@ -1478,11 +1522,8 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
         if m['_ent']:
             h.append('<div class="modulo-parte"><h4>%s Lo que se pidio esta semana %s</h4>'
                      '<ul class="tareas">' % (ico('lista', 16), rotulo_evento('ejecucion')))
-            for _id, texto, hecha, fuente in m['_ent']:
-                h.append('<li class="%s"><span class="casilla">%s</span><span class="texto">'
-                         '<b>%s</b><span class="fuente dato">%s</span></span></li>'
-                         % ('hecha' if hecha else 'pendiente', ico('check', 13),
-                            e(texto), e(fuente)))
+            for _id, texto, hecha, fuente, como in m['_ent']:
+                h.append(fila_tarea((_id, texto, hecha, fuente, False, como)))
             h.append('</ul></div>')
 
         if diapos:
@@ -1607,12 +1648,8 @@ def pagina_ruta(datos, equipo):
         h.append('<div class="contenido">')
         h.append(progreso(ESTADO_NIVEL[n['color']], n['hechas'], n['total']))
         h.append('<ul class="tareas">')
-        for _id, texto, hecha, fuente, es_hito in n['tareas']:
-            h.append('<li class="%s"><span class="casilla">%s</span><span class="texto">'
-                     '<b>%s</b>%s<span class="fuente dato">%s</span></span></li>'
-                     % ('hecha' if hecha else 'pendiente', ico('check', 13), e(texto),
-                        ' <span class="pin-fase">hito técnico</span>' if es_hito else '',
-                        e(fuente)))
+        for tarea in n['tareas']:
+            h.append(fila_tarea(tarea))
         h.append('</ul></div></article>')
     h.append('</div></div></section>')
 
@@ -1670,8 +1707,9 @@ def pagina_desarrollo(datos, equipo):
                     e(hito['fase'])))
         h.append('<div class="cuerpo">')
         h.append('<p class="dato">%s</p>' % e(fila['fuente']))
-        h.append('<details class="mas"><summary>%s Cómo se hace y con qué apoyarse</summary><div>'
-                 % ico('chevron', 14, 'chevron'))
+        h.append('<details class="mas leccion" data-titulo="%s">'
+                 '<summary>%s Cómo se hace y con qué apoyarse</summary><div>'
+                 % (e(hito['nombre']), ico('chevron', 14, 'chevron')))
         h.append('<p>%s</p>' % e(hito['orientacion']))
         if hito.get('yaEntregado'):
             h.append('<div class="nota-caja verde"><span class="titulo">%s<b>Ya entregado</b></span>%s</div>'

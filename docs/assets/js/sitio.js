@@ -12,6 +12,7 @@
      7. Animar las secciones al bajar (GSAP ScrollTrigger).
      8. Pintar la barra de avance de lectura.
      9. Hacer que las cifras cuenten hasta su valor al entrar en pantalla.
+    10. Abrir las lecciones en ventana emergente, sin sacar de la pagina.
 
    Las dos librerias se eligieron por una razon concreta: ninguna esconde
    contenido desde el CSS. Si no cargan, la pagina se ve completa, solo que
@@ -299,6 +300,37 @@
           onUpdate: function () { el.textContent = Math.round(obj.n) + cola; }
         });
       });
+  }
+
+
+  /* ---- 11. Las lecciones abren en ventana emergente ---- */
+  /* Mejora progresiva: el contenido ya esta en un <details>, asi que sin
+     JavaScript se despliega ahi mismo y no se pierde nada. Con JavaScript,
+     al pulsar el resumen se abre en <dialog> sobre la pagina, para no sacar
+     al estudiante del mapa de progreso. */
+  var modal = document.getElementById('modal-leccion');
+  var modalTit = document.getElementById('modal-titulo');
+  var modalCuerpo = document.getElementById('modal-cuerpo');
+
+  if (modal && modal.showModal && modalCuerpo) {
+    document.addEventListener('click', function (ev) {
+      var res = ev.target.closest && ev.target.closest('details.leccion > summary');
+      if (res) {
+        var det = res.parentNode;
+        var dentro = det.querySelector(':scope > div');
+        if (!dentro) { return; }
+        ev.preventDefault();          // que el <details> no se despliegue
+        modalTit.textContent = det.getAttribute('data-titulo') || 'Cómo se hace';
+        modalCuerpo.innerHTML = dentro.innerHTML;
+        modal.showModal();
+        return;
+      }
+      if (ev.target.closest('[data-cierra-modal]')) { modal.close(); return; }
+      if (ev.target === modal) { modal.close(); }   // clic en el fondo
+    });
+    // Se avisa al usuario que esto abre una ventana, no un desplegable.
+    Array.prototype.forEach.call(document.querySelectorAll('details.leccion > summary'),
+      function (sm) { sm.setAttribute('aria-haspopup', 'dialog'); });
   }
 
   /* ---- 4. Aparecer al desplazar, respaldo sin librerias ---- */
