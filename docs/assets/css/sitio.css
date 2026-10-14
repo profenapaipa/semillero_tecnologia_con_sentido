@@ -1746,3 +1746,52 @@ details.leccion > summary:hover { border-color: var(--linea, var(--cian)); }
 /* Con JavaScript la ventana reemplaza al desplegable, así que la flecha
    dejaría de significar algo: se cambia por el gesto de abrir. */
 details.leccion > summary .ico { transform: none !important; }
+
+/* ============ 27. El carrusel no puede medirse por su contenido ============ */
+/* DEFECTO QUE ARREGLA: el carrusel crecia hasta 33.554.432 x 18.874.366 px,
+   el tope del navegador, y la pagina quedaba con una barra de desplazamiento
+   inmensa sin mostrar una sola diapositiva.
+   CAUSA: dentro de un contenedor flexible, un elemento se mide por su
+   contenido si no se le dice otra cosa. El ancho del carrusel lo decidian
+   las diapositivas, y cada diapositiva mide 100% del carrusel: una
+   referencia circular que el navegador resuelve creciendo hasta su limite.
+   ARREGLO: se corta el circulo. El carrusel toma el ancho de su columna y
+   nunca el de su contenido, y toda la cadena de contenedores flexibles que
+   lo envuelve lleva min-width:0, que es lo que permite a un elemento
+   encogerse por debajo de su contenido. */
+
+.modulo-cuerpo, .modulo-parte, .carrusel { min-width: 0; }
+details.mas > div { min-width: 0; }
+
+.principal-swiper, .miniaturas-swiper {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+.principal-swiper .swiper-wrapper { min-width: 0; }
+.principal-swiper .swiper-slide {
+  min-width: 0;
+  /* La proporcion de las diapositivas, 16:9. Con esto el hueco tiene su
+     alto definitivo desde el primer cuadro, antes de que llegue la imagen:
+     la pagina no da el salto que daria al cargarla. */
+  aspect-ratio: 16 / 9;
+}
+.principal-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.miniaturas-swiper .swiper-slide { min-width: 0; }
+
+/* El video dentro de la ventana emergente, a 16:9 y a todo el ancho */
+.video-en-ventana {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  min-width: 0;
+  border-radius: var(--radio-chico);
+  overflow: hidden;
+  background: var(--panel);
+}
+.video-en-ventana iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }

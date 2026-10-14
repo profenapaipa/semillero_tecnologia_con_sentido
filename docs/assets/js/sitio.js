@@ -112,21 +112,48 @@
   }
 
 
-  /* ---- 5. Videos: cargar el reproductor solo al hacer clic ---- */
-  /* Hasta que alguien pulsa, en la pagina solo hay una imagen. Asi una
-     pagina con varios videos sigue cargando rapido, y YouTube no rastrea
-     a quien no los vio. */
+  /* ---- 5. Videos: se abren en ventana emergente ---- */
+  /* Hasta que alguien pulsa, en la pagina solo hay una imagen: ni se carga
+     el reproductor ni YouTube ve a quien no lo abrio. Al pulsar, el video
+     se abre en la misma ventana emergente de las lecciones, para no sacar
+     al estudiante del modulo donde estaba. */
+  function abrirVideo(id, titulo) {
+    var modal = document.getElementById('modal-leccion');
+    var cuerpo = document.getElementById('modal-cuerpo');
+    var tit = document.getElementById('modal-titulo');
+    var marco = document.createElement('iframe');
+    marco.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+    marco.title = titulo || 'Video';
+    marco.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
+    marco.allowFullscreen = true;
+
+    if (modal && modal.showModal && cuerpo) {
+      if (tit) { tit.textContent = titulo || 'Video'; }
+      cuerpo.innerHTML = '';
+      var caja = document.createElement('div');
+      caja.className = 'video-en-ventana';
+      caja.appendChild(marco);
+      cuerpo.appendChild(caja);
+      modal.showModal();
+      return true;
+    }
+    return false;
+  }
+
   document.addEventListener('click', function (ev) {
     var boton = ev.target.closest && ev.target.closest('.lienzo-video[data-video]');
     if (!boton) { return; }
     var id = boton.getAttribute('data-video');
+    var titulo = boton.getAttribute('aria-label') || '';
+    titulo = titulo.replace(/^Reproducir\s+/i, '');
+    if (abrirVideo(id, titulo)) { return; }
+
+    // Si el navegador no soporta <dialog>, el video se abre en su sitio.
     var marco = document.createElement('iframe');
     marco.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
-    marco.title = boton.getAttribute('aria-label') || 'Video';
+    marco.title = titulo || 'Video';
     marco.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen';
     marco.allowFullscreen = true;
-    // Un <button> no puede contener un <iframe>: es HTML invalido y varios
-    // navegadores se niegan a mostrarlo. Se reemplaza el boton entero.
     var caja = document.createElement('div');
     caja.className = 'lienzo-video reproduciendo';
     caja.appendChild(marco);
@@ -340,6 +367,10 @@
     // Se avisa al usuario que esto abre una ventana, no un desplegable.
     Array.prototype.forEach.call(document.querySelectorAll('details.leccion > summary'),
       function (sm) { sm.setAttribute('aria-haspopup', 'dialog'); });
+
+    // Al cerrar, se vacia el cuerpo. Sin esto un video seguiria sonando
+    // detras de la pagina con la ventana ya cerrada.
+    modal.addEventListener('close', function () { modalCuerpo.innerHTML = ''; });
   }
 
   /* El sistema duplicado de aparicion se retiro aqui: escondia el contenido
