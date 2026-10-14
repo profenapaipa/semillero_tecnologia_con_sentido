@@ -1,0 +1,132 @@
+
+== tema claro ==
+  texto principal sobre papel                    15.25  min 4.5  ok
+  texto suave sobre papel                         6.54  min 4.5  ok
+  enlace sobre papel                              6.99  min 4.5  ok
+  texto principal sobre superficie               18.00  min 4.5  ok
+  texto suave sobre superficie                    7.72  min 4.5  ok
+  enlace sobre superficie                         8.25  min 4.5  ok
+  texto principal sobre superficie2              16.65  min 4.5  ok
+  texto suave sobre superficie2                   7.14  min 4.5  ok
+  enlace sobre superficie2                        7.64  min 4.5  ok
+  texto sobre panel                              15.14  min 4.5  ok
+  texto suave sobre panel                         7.99  min 4.5  ok
+  enlace sobre panel                              8.52  min 4.5  ok
+  texto sobre panel-2                            11.84  min 4.5  ok
+  texto suave sobre panel-2                       6.24  min 4.5  ok
+  enlace sobre panel-2                            6.66  min 4.5  ok
+  chip verde sobre su fondo tenue                 6.32  min 4.5  ok
+  texto verde sobre superficie                    7.54  min 4.5  ok
+  relleno verde sobre superficie (borde)          5.37  min 3.0  ok
+  chip ambar sobre su fondo tenue                 5.93  min 4.5  ok
+  texto ambar sobre superficie                    6.85  min 4.5  ok
+  relleno ambar sobre superficie (borde)          3.76  min 3.0  ok
+  chip gris sobre su fondo tenue                  6.87  min 4.5  ok
+  texto gris sobre superficie                     7.89  min 4.5  ok
+  relleno gris sobre superficie (borde)           3.67  min 3.0  ok
+  numero sobre verde                              5.37  min 4.5  ok
+  numero sobre ambar                              4.62  min 4.5  ok
+  linea software sobre superficie                 8.25  min 4.5  ok
+  linea software sobre su tenue                   6.59  min 4.5  ok
+  linea software sobre su tenue en papel          5.61  min 4.5  ok
+  texto sobre relleno de linea software           8.25  min 4.5  ok
+  linea software sobre panel                      8.52  min 4.5  ok
+  linea software sobre panel tenue                6.47  min 4.5  ok
+  texto sobre relleno de linea software en panel  8.52  min 4.5  ok
+  linea unity sobre superficie                    8.49  min 4.5  ok
+  linea unity sobre su tenue                      6.73  min 4.5  ok
+  linea unity sobre su tenue en papel             5.78  min 4.5  ok
+  texto sobre relleno de linea unity              8.49  min 4.5  ok
+  linea unity sobre panel                         8.33  min 4.5  ok
+  linea unity sobre panel tenue                   6.40  min 4.5  ok
+  texto sobre relleno de linea unity en panel     8.33  min 4.5  ok
+  linea electronica sobre superficie              7.14  min 4.5  ok
+  linea electronica sobre su tenue                5.67  min 4.5  ok
+  linea electronica sobre su tenue en papel       4.88  min 4.5  ok
+  texto sobre relleno de linea electronica        7.14  min 4.5  ok
+  linea electronica sobre panel                   8.21  min 4.5  ok
+  linea electronica sobre panel tenue             6.42  min 4.5  ok
+  texto sobre relleno de linea electronica en panel  8.21  min 4.5  ok
+  linea audiovisual sobre superficie              7.26  min 4.5  ok
+  linea audiovisual sobre su tenue                5.71  min 4.5  ok
+  linea audiovisual sobre su tenue en papel       4.86  min 4.5  ok
+  texto sobre relleno de linea audiovisual        7.26  min 4.5  ok
+  linea audiovisual sobre panel                   7.95  min 4.5  ok
+  linea audiovisual sobre panel tenue             6.17  min 4.5  ok
+  texto sobre relleno de linea audiovisual en panel  7.95  min 4.5  ok
+  texto principal sobre seccion tintada software 14.36  min 4.5  ok
+  texto suave sobre seccion tintada software      6.16  min 4.5  ok
+  texto principal sobre seccion tintada unity    14.26  min 4.5  ok
+  texto suave sobre seccion tintada unity         6.12  min 4.5  ok
+  texto principal sobre seccion tintada electronica 14.30  min 4.5  ok
+  texto suave sobre seccion tintada electronica   6.13  min 4.5  ok
+  texto principal sobre seccion tintada audiovisual 14.16  min 4.5  ok
+  texto suave sobre seccion tintada audiovisual   6.07  min 4.5  ok
+  filete sobre superficie                         1.52  min 1.3  ok
+  filete sobre papel                              1.29  min 1.1  ok
+
+== tema oscuro ==
+  texto principal sobre papel                    16.05  min 4.5  ok
+  texto suave sobre papel                         7.39  min 4.5  ok
+  enlace sobre papel                              9.20  min 4.5  ok
+  texto principal sobre superficie               14.74  min 4.5  ok
+  texto suave sobre superficie                    6.79  min 4.5  ok
+  enlace sobre superficie                         8.45  min 4.5  ok
+  texto principal sobre superficie2              13.59  min 4.5  ok
+  texto suave sobre superficie2                   6.26  min 4.5  ok
+  enlace sobre superficie2                        7.79  min 4.5  ok
+  texto sobre panel                              16.62  min 4.5  ok
+  texto suave sobre panel                         8.77  min 4.5  ok
+  enlace sobre panel                              9.35  min 4.5  ok
+  texto sobre panel-2                            13.53  min 4.5  ok
+  texto suave sobre panel-2                       7.14  min 4.5  ok
+  enlace sobre panel-2                            7.61  min 4.5  ok
+  chip verde sobre su fondo tenue                 8.25  min 4.5  ok
+  texto verde sobre superficie                    9.69  min 4.5  ok
+  relleno verde sobre superficie (borde)          4.93  min 3.0  ok
+  chip ambar sobre su fondo tenue                 8.70  min 4.5  ok
+  texto ambar sobre superficie                   10.52  min 4.5  ok
+  relleno ambar sobre superficie (borde)          5.99  min 3.0  ok
+  chip gris sobre su fondo tenue                  6.06  min 4.5  ok
+  texto gris sobre superficie                     6.79  min 4.5  ok
+  relleno gris sobre superficie (borde)           3.03  min 3.0  ok
+  numero sobre verde                              4.93  min 4.5  ok
+  numero sobre ambar                              6.63  min 4.5  ok
+  linea software sobre superficie                 8.45  min 4.5  ok
+  linea software sobre su tenue                   6.40  min 4.5  ok
+  linea software sobre su tenue en papel          7.17  min 4.5  ok
+  texto sobre relleno de linea software           8.45  min 4.5  ok
+  linea software sobre panel                      9.35  min 4.5  ok
+  linea software sobre panel tenue                7.35  min 4.5  ok
+  texto sobre relleno de linea software en panel  9.35  min 4.5  ok
+  linea unity sobre superficie                    8.26  min 4.5  ok
+  linea unity sobre su tenue                      6.31  min 4.5  ok
+  linea unity sobre su tenue en papel             7.05  min 4.5  ok
+  texto sobre relleno de linea unity              8.26  min 4.5  ok
+  linea unity sobre panel                         9.14  min 4.5  ok
+  linea unity sobre panel tenue                   7.19  min 4.5  ok
+  texto sobre relleno de linea unity en panel     9.14  min 4.5  ok
+  linea electronica sobre superficie              8.14  min 4.5  ok
+  linea electronica sobre su tenue                6.29  min 4.5  ok
+  linea electronica sobre su tenue en papel       6.99  min 4.5  ok
+  texto sobre relleno de linea electronica        8.14  min 4.5  ok
+  linea electronica sobre panel                   9.01  min 4.5  ok
+  linea electronica sobre panel tenue             7.18  min 4.5  ok
+  texto sobre relleno de linea electronica en panel  9.01  min 4.5  ok
+  linea audiovisual sobre superficie              7.88  min 4.5  ok
+  linea audiovisual sobre su tenue                6.11  min 4.5  ok
+  linea audiovisual sobre su tenue en papel       6.77  min 4.5  ok
+  texto sobre relleno de linea audiovisual        7.88  min 4.5  ok
+  linea audiovisual sobre panel                   8.73  min 4.5  ok
+  linea audiovisual sobre panel tenue             6.97  min 4.5  ok
+  texto sobre relleno de linea audiovisual en panel  8.73  min 4.5  ok
+  texto principal sobre seccion tintada software 11.17  min 4.5  ok
+  texto suave sobre seccion tintada software      5.14  min 4.5  ok
+  texto principal sobre seccion tintada unity    11.26  min 4.5  ok
+  texto suave sobre seccion tintada unity         5.19  min 4.5  ok
+  texto principal sobre seccion tintada electronica 11.39  min 4.5  ok
+  texto suave sobre seccion tintada electronica   5.25  min 4.5  ok
+  texto principal sobre seccion tintada audiovisual 11.42  min 4.5  ok
+  texto suave sobre seccion tintada audiovisual   5.26  min 4.5  ok
+  filete sobre superficie                         1.41  min 1.3  ok
+  filete sobre papel                              1.54  min 1.1  ok

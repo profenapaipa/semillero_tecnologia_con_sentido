@@ -1,6 +1,6 @@
 # Manual de marca
 
-**Semillero Maker de Tecnología con Sentido** · versión 4.0 · 2026-10-13
+**Semillero Maker de Tecnología con Sentido** · versión 5.0 · 2026-10-13
 
 > Este documento y `datos/marca.json` son lo mismo dicho de dos maneras.
 > Para cambiar la identidad se edita el **JSON** y se corre
@@ -11,7 +11,7 @@
 
 ## 1. De qué va esta identidad
 
-**Concepto: Bitácora de taller con ruta de misión.**
+**Concepto: Bitacora de taller, con pigmentos de aqui.**
 
 El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller, y se recorre como un camino: papel con retícula, anotaciones en monoespaciada, cifras enormes y una franja de color por cada oficio. El avance no se cuenta, se camina: cada fase es una parada del camino, y lo que falta no se disfraza.
 
@@ -62,34 +62,42 @@ La web de la iguana se rige por el manual de marca del INJUV. Este semillero es 
 
 ## 3. Color
 
-Metodo: se parte de un color base, el teal #0E7490, y se recorre el arco frio con saltos parejos de matiz, que es la armonia analoga extendida de Adobe Color, cerrando con un carmin calido para tener contraste. Los cuatro colores de linea tecnica salen de ahi: son distinguibles entre si de un vistazo y al mismo tiempo pertenecen a la misma familia. Ningun color de linea pisa el verde ni el ambar, porque esos dos estan reservados al semaforo de estado y no se usan de adorno en ninguna otra parte. Los neutros no son grises puros: son el mismo teal desaturado casi del todo, que es lo que hace que el papel se vea elegido y no heredado.
+IDENTIDAD. No es una paleta de catalogo tecnologico. Sale de tres cosas de aqui: el oro de la orfebreria muisca, la piedra clara de la sabana de Bogota y el anil de los textiles. Por eso el papel no es un gris azulado frio como el de cualquier panel de control, sino una piedra calida; y el panel oscuro no es negro sino anil de noche. Los cuatro colores de linea tecnica son pigmentos con nombre propio: anil, chicha, orquidea y achiote. Ninguno pisa el verde ni el ambar, reservados al semaforo. ESTRUCTURA. Cada color de acento tiene DOS versiones: la oscura, para leerse sobre papel, y la clara terminada en -panel, para leerse sobre el anil oscuro. Esa separacion es la que faltaba: el panel oscuro existe tambien en el tema claro, y ahi un color pensado para fondo blanco no contrasta.
 
 | Token | Claro | Oscuro | Para qué |
 |---|---|---|---|
-| `--papel` | `#ECF1F2` | `#081318` | Fondo de la página |
-| `--superficie` | `#FFFFFF` | `#0F1E25` | Tarjetas y paneles |
-| `--superficie2` | `#F2F7F8` | `#14262E` | Fondos hundidos, cabeceras de tabla |
-| `--tinta` | `#0B1A20` | `#E3EDF0` | Texto principal |
-| `--tinta-suave` | `#4B6069` | `#8CA4AC` | Texto secundario y rótulos |
-| `--filete` | `#CDD9DD` | `#22383F` | Bordes |
-| `--filete-sutil` | `#E1E9EB` | `#192B32` | Separadores internos |
-| `--panel` | `#091B23` | `#050F14` | Franjas oscuras: barra, portada, pie |
-| `--panel-2` | `#113240` | `#0D2A36` | Segundo tono del panel oscuro |
-| `--sobre-panel` | `#E8F2F5` | `#E6F1F4` | Texto sobre el panel oscuro |
-| `--sobre-panel-suave` | `#90AEBA` | `#88A8B5` | Texto secundario sobre el panel |
-| `--cian` | `#0E7490` | `#45BDD8` | Lo que se puede tocar: enlaces y botones |
-| `--cian-vivo` | `#1190B2` | `#67D2E8` | El mismo, al pasar el cursor |
-| `--verde-fill` | `#1C7F4D` | `#2FA86B` | SEMÁFORO: nivel superado |
-| `--verde-texto` | `#15633B` | `#57C993` | SEMÁFORO: el mismo, legible como texto |
-| `--ambar-fill` | `#D4900C` | `#D4900C` | SEMÁFORO: nivel en curso |
-| `--ambar-texto` | `#85580A` | `#EEB84E` | SEMÁFORO: el mismo, legible como texto |
-| `--gris-fill` | `#7E8D94` | `#5F747C` | SEMÁFORO: nivel sin empezar |
-| `--gris-texto` | `#4D6168` | `#8CA4AC` | SEMÁFORO: el mismo, legible como texto |
-| `--linea` | `#0E7490` | `#45BDD8` |  |
-| `--linea-software` | `#0E7490` | `#45BDD8` | Línea técnica: desarrollo de software |
-| `--linea-unity` | `#4F46B5` | `#938BFF` | Línea técnica: Unity |
-| `--linea-audiovisual` | `#9B2FA6` | `#D87BE6` | Línea técnica: producción audiovisual |
-| `--linea-electronica` | `#C0334D` | `#F0788E` | Línea técnica: electrónica y robótica |
+| `--papel` | `#EFECE4` | `#121118` | Fondo de la página |
+| `--superficie` | `#FFFFFF` | `#1B1A23` | Tarjetas y paneles |
+| `--superficie2` | `#F8F6F0` | `#22212C` | Fondos hundidos, cabeceras de tabla |
+| `--tinta` | `#1A1611` | `#F0EDE6` | Texto principal |
+| `--tinta-suave` | `#595246` | `#A8A296` | Texto secundario y rótulos |
+| `--filete` | `#D7D1C4` | `#36343F` | Bordes |
+| `--filete-sutil` | `#E9E5DB` | `#2A2833` | Separadores internos |
+| `--panel` | `#14192E` | `#0C0F1C` | Franjas oscuras: barra, portada, pie |
+| `--panel-2` | `#242C4E` | `#1C2240` | Segundo tono del panel oscuro |
+| `--sobre-panel` | `#EDEFF7` | `#EDEFF7` | Texto sobre el panel oscuro |
+| `--sobre-panel-suave` | `#A8AFCA` | `#A8AFCA` | Texto secundario sobre el panel |
+| `--cian` | `#234A9E` | `#93B5FF` | Lo que se puede tocar: enlaces y botones |
+| `--cian-vivo` | `#1B3B80` | `#B4CCFF` | El mismo, al pasar el cursor |
+| `--cian-panel` | `#93B5FF` | `#93B5FF` |  |
+| `--verde-fill` | `#1F7A3D` | `#2E9C55` | SEMÁFORO: nivel superado |
+| `--verde-texto` | `#166130` | `#6BD79A` | SEMÁFORO: el mismo, legible como texto |
+| `--verde-panel` | `#5FD08A` | `#6BD79A` |  |
+| `--ambar-fill` | `#B07908` | `#C98D10` | SEMÁFORO: nivel en curso |
+| `--ambar-texto` | `#7A5305` | `#F2C45C` | SEMÁFORO: el mismo, legible como texto |
+| `--ambar-panel` | `#F0BE4A` | `#F2C45C` |  |
+| `--gris-fill` | `#8A857A` | `#6B6660` | SEMÁFORO: nivel sin empezar |
+| `--gris-texto` | `#565146` | `#A8A296` | SEMÁFORO: el mismo, legible como texto |
+| `--gris-panel` | `#B0B6CC` | `#B0B6CC` |  |
+| `--linea` | `#234A9E` | `#93B5FF` |  |
+| `--linea-software` | `#234A9E` | `#93B5FF` | Línea técnica: desarrollo de software |
+| `--linea-unity` | `#6B2F96` | `#CBA3F2` | Línea técnica: Unity |
+| `--linea-audiovisual` | `#A3176B` | `#F58FC4` | Línea técnica: producción audiovisual |
+| `--linea-electronica` | `#9E3319` | `#F49C80` | Línea técnica: electrónica y robótica |
+| `--linea-software-panel` | `#93B5FF` | `#93B5FF` |  |
+| `--linea-unity-panel` | `#CBA3F2` | `#CBA3F2` |  |
+| `--linea-audiovisual-panel` | `#F58FC4` | `#F58FC4` |  |
+| `--linea-electronica-panel` | `#F49C80` | `#F49C80` |  |
 
 Los tintes (`--verde-tenue`, `--linea-unity-tenue`, etc.) **no se escriben**: los
 calcula el generador al 13% y 14% de opacidad sobre el color base.

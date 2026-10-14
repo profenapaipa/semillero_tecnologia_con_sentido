@@ -832,6 +832,7 @@ def pagina_equipo(datos, equipo):
     """Resumen: dónde va, qué sigue, y las puertas a las tres vistas."""
     meta = datos['meta']
     _hh_lat, _tt_lat, _nv_lat = totales(datos, equipo)
+    _mods_lat = cargar_modulos()
     hh, tt, nv = totales(datos, equipo)
     act = nivel_actual(nv)
     desarrollo, dh, dt = resumen_desarrollo(datos, equipo)
@@ -845,7 +846,9 @@ def pagina_equipo(datos, equipo):
                 % equipo['numero'], '../', linea=equipo['linea'], datos=datos)]
     h.append(mapa_fijo(datos, equipo, nv, act, ''))
     h.append(portada_equipo(datos, equipo, hh, tt))
-    h.append('<div class="con-lateral"><main class="principal">')
+    h.append('<div class="con-lateral">')
+    h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '', _mods_lat))
+    h.append('<main class="principal">')
 
     # --- nivel actual ---
     h.append('<section class="bloque"><div class="envoltura">')
@@ -913,7 +916,7 @@ def pagina_equipo(datos, equipo):
     # --- esta semana ---
     h.append(seccion_semana(datos, equipo, nv))
     h.append('</main>')
-    h.append(panel_lateral(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat, ''))
+    h.append(panel_derecho(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat))
     h.append('</div>')
     h.append(pie(meta))
     return ''.join(h)
@@ -1068,42 +1071,104 @@ def camino(nv, act, enlace, slug):
     return ''.join(p)
 
 
-def panel_lateral(datos, equipo, nv, act, hh, tt, vista):
+def menu_izquierdo(datos, equipo, nv, act, vista, modulos=None):
     """
-    Panel lateral de la página, a la manera de un aula virtual: el avance,
-    el acceso a las otras vistas y lo que sigue, siempre a mano sin tener
-    que volver arriba.
+    Indice del proyecto, a la izquierda y desplegable.
+
+    Es la ruta sencilla que pidio el docente: de un vistazo se ve el proyecto
+    completo, sus cinco vistas, sus siete paradas y sus modulos, y cual se
+    esta mirando. Cada grupo es un <details>, asi que se pliega y funciona
+    con teclado aunque el JavaScript no cargue. Los que corresponden a donde
+    estas vienen abiertos.
     """
     s_ = equipo['slug']
-    desarrollo, dh, dt = resumen_desarrollo(datos, equipo)
-    _arts, ah, at = resumen_articulo(datos, equipo)
+    p = ['<nav class="lateral-izq" aria-label="Indice del proyecto">']
+    p.append('<div class="izq-cab"><span class="rotulo">Indice</span>'
+             '<b>%s</b></div>' % e(equipo['nombre']))
+
+    p.append('<ul class="izq-vistas">')
+    for titulo, sufijo, icono in VISTAS:
+        actual = ' class="aqui" aria-current="page"' if sufijo == vista else ''
+        p.append('<li><a href="%s%s.html"%s>%s<span>%s</span></a></li>'
+                 % (e(s_), sufijo, actual, ico(icono, 16), e(titulo)))
+    p.append('</ul>')
+
+    # El camino, plegable
+    p.append('<details class="izq-grupo"%s><summary>%s El camino '
+             '<span class="cuenta">%d/%d</span></summary><ul>'
+             % (' open' if vista in ('', '-ruta') else '', ico('mapa', 15),
+                sum(1 for n in nv if n['color'] == 'verde'), len(nv)))
+    for n in nv:
+        aqui = ' class="aqui"' if n is act else ''
+        p.append('<li><a href="%s-ruta.html#nivel-%d"%s>'
+                 '<i class="pt %s"></i><span>%s</span>'
+                 '<em class="dato">%d/%d</em></a></li>'
+                 % (e(s_), n['n'], aqui, n['color'], e(n['fase']['nombre']),
+                    n['hechas'], n['total']))
+    p.append('</ul></details>')
+
+    # Los modulos, plegables
+    if modulos:
+        p.append('<details class="izq-grupo"%s><summary>%s Modulos '
+                 '<span class="cuenta">%d</span></summary><ul>'
+                 % (' open' if vista == '-modulos' else '', ico('libro', 15), len(modulos)))
+        for m in modulos:
+            p.append('<li><a href="%s-modulos.html#mod-%s"><i class="letra">%s</i>'
+                     '<span>%s</span></a></li>'
+                     % (e(s_), e(m['letra']), e(m['letra']), e(m['sesion'])))
+        p.append('</ul></details>')
+
+    # Los otros proyectos
+    p.append('<details class="izq-grupo"><summary>%s Otros proyectos '
+             '<span class="cuenta">%d</span></summary><ul>'
+             % (ico('tablero', 15), len(datos['equipos']) - 1))
+    for eq in datos['equipos']:
+        if eq['slug'] == s_:
+            continue
+        hh2, tt2, nv2 = totales(datos, eq)
+        p.append('<li data-linea="%s"><a href="%s.html"><i class="num">%s</i>'
+                 '<span>%s</span><em class="dato">%d%%</em></a></li>'
+                 % (e(eq['linea']), e(eq['slug']), e(eq['numero']),
+                    e(eq['nombre']), pct(hh2, tt2)))
+    p.append('</ul></details>')
+
+    p.append('<a class="izq-volver" href="../index.html">%s Portal del semillero</a>'
+             % ico('inicio', 15))
+    p.append('</nav>')
+    return ''.join(p)
+
+
+def panel_derecho(datos, equipo, nv, act, hh, tt):
+    """
+    Bloques de informacion a la derecha, como los de un aula virtual: el
+    puntaje, el avance, lo que sigue y el acceso al proyecto publicado.
+    No navegan, informan. Por eso van separados del indice.
+    """
+    _d, dh, dt = resumen_desarrollo(datos, equipo)
+    _a, ah, at = resumen_articulo(datos, equipo)
     pend = [t for t in act['tareas'] if not t[2]]
 
-    p = ['<aside class="lateral" aria-label="Panel del proyecto">']
+    p = ['<aside class="lateral" aria-label="Estado del proyecto">']
 
-    p.append('<div class="caja-lat destacada">')
-    p.append('<span class="rotulo">Puntos del equipo</span>')
+    p.append('<div class="caja-lat destacada"><span class="rotulo">Puntos del equipo</span>')
     p.append('<div class="marcador"><b>%d</b><small>de %d posibles</small></div>'
              % (puntos_de(hh), puntos_de(tt)))
     p.append(barra(hh, tt, alta=True))
     p.append('<p class="dato">Cada tarea cumplida suma %d puntos. No hay otra forma '
-             'de subir.</p>' % PUNTOS_TAREA)
-    p.append('</div>')
+             'de subir.</p></div>' % PUNTOS_TAREA)
 
     p.append('<div class="caja-lat"><span class="rotulo">Tu avance</span><ul class="medidas-lat">')
-    for et, a, b in [('Ruta del semestre', hh, tt), ('Desarrollo técnico', dh, dt),
-                     ('Artículo', ah, at)]:
+    for et, a, b in [('Ruta del semestre', hh, tt), ('Desarrollo tecnico', dh, dt),
+                     ('Articulo', ah, at)]:
         p.append('<li>%s</li>' % progreso(et, a, b))
     p.append('</ul></div>')
 
-    p.append('<nav class="caja-lat" aria-label="Secciones del proyecto">'
-             '<span class="rotulo">Secciones</span><ul class="indice-lat">')
-    for titulo, sufijo, icono in VISTAS:
-        actual = ' class="aqui" aria-current="page"' if sufijo == vista else ''
-        p.append('<li><a href="%s%s.html"%s>%s<span>%s</span>%s</a></li>'
-                 % (e(s_), sufijo, actual, ico(icono, 17), e(titulo),
-                    ico('chevron', 15)))
-    p.append('</ul></nav>')
+    p.append('<div class="caja-lat"><span class="rotulo">Donde vas</span>'
+             '<div class="donde-vas">%s<div><b>%s</b>'
+             '<span class="dato">parada %d de %d</span></div></div>%s</div>'
+             % (chip(act['color'], ESTADO_NIVEL[act['color']], 'diana'),
+                e(act['fase']['nombre']), act['n'], len(nv),
+                progreso('Esta parada', act['hechas'], act['total'])))
 
     if pend:
         p.append('<div class="caja-lat"><span class="rotulo">Lo que sigue</span>'
@@ -1111,9 +1176,8 @@ def panel_lateral(datos, equipo, nv, act, hh, tt, vista):
         for _id, texto, _h, _f, _e in pend[:3]:
             p.append('<li class="pendiente"><span class="casilla">%s</span>'
                      '<span class="texto"><b>%s</b></span></li>' % (ico('check', 12), e(texto)))
-        p.append('</ul><p class="dato">Van %d puntos en juego en este nivel.</p>'
+        p.append('</ul><p class="dato">Hay %d puntos en juego en esta parada.</p></div>'
                  % puntos_de(len(pend)))
-        p.append('</div>')
 
     pub = equipo.get('publicacion') or {}
     if pub.get('url') or pub.get('repo'):
@@ -1128,7 +1192,6 @@ def panel_lateral(datos, equipo, nv, act, hh, tt, vista):
 
     p.append('</aside>')
     return ''.join(p)
-
 
 
 def carrusel(m, diapos, pre='../'):
@@ -1183,6 +1246,7 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
     """
     meta = datos['meta']
     _hh_lat, _tt_lat, _nv_lat = totales(datos, equipo)
+    _mods_lat = cargar_modulos()
     hh, tt, nv = totales(datos, equipo)
     act = nivel_actual(nv)
     estado = equipo['estado']
@@ -1212,7 +1276,9 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
     h.append(mapa_fijo(datos, equipo, nv, act, '-modulos'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
-    h.append('<div class="con-lateral"><main class="principal">')
+    h.append('<div class="con-lateral">')
+    h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-modulos', _mods_lat))
+    h.append('<main class="principal">')
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 2 de 5</span>'
              '<h2>Modulos del semestre</h2>'
@@ -1248,7 +1314,8 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
         bloqueado = i_m > frontera
         anterior_letra = modulos[frontera]['letra'] if bloqueado else ''
         faltan_antes = (modulos[frontera]['_total'] - modulos[frontera]['_hechas']) if bloqueado else 0
-        h.append('<li class="modulo %s%s revelar">' % (col, ' cerrado' if bloqueado else ''))
+        h.append('<li class="modulo %s%s revelar" id="mod-%s">'
+                 % (col, ' cerrado' if bloqueado else '', e(m['letra'])))
         h.append('<div class="modulo-cab">')
         h.append('<span class="letra">%s</span>' % (ico('llave', 22) if bloqueado else e(m['letra'])))
         detalle = ('%d diapositivas para tu linea' % len(diapos)) if diapos else 'sin presentacion'
@@ -1342,7 +1409,7 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
 
     h.append(seccion_origen(meta))
     h.append('</main>')
-    h.append(panel_lateral(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat, '-modulos'))
+    h.append(panel_derecho(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat))
     h.append('</div>')
     h.append(pie(meta))
     return ''.join(h)
@@ -1351,6 +1418,7 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
 def pagina_ruta(datos, equipo):
     meta = datos['meta']
     _hh_lat, _tt_lat, _nv_lat = totales(datos, equipo)
+    _mods_lat = cargar_modulos()
     hh, tt, nv = totales(datos, equipo)
     act = nivel_actual(nv)
 
@@ -1361,7 +1429,9 @@ def pagina_ruta(datos, equipo):
     h.append(mapa_fijo(datos, equipo, _nv, nivel_actual(_nv), '-ruta'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
-    h.append('<div class="con-lateral"><main class="principal">')
+    h.append('<div class="con-lateral">')
+    h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-ruta', _mods_lat))
+    h.append('<main class="principal">')
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 1 de 3</span>'
              '<h2>La ruta por niveles</h2>'
@@ -1394,7 +1464,7 @@ def pagina_ruta(datos, equipo):
 
     h.append(seccion_origen(meta))
     h.append('</main>')
-    h.append(panel_lateral(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat, '-ruta'))
+    h.append(panel_derecho(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat))
     h.append('</div>')
     h.append(pie(meta))
     return ''.join(h)
@@ -1403,6 +1473,7 @@ def pagina_ruta(datos, equipo):
 def pagina_desarrollo(datos, equipo):
     meta = datos['meta']
     _hh_lat, _tt_lat, _nv_lat = totales(datos, equipo)
+    _mods_lat = cargar_modulos()
     hh, tt, _ = totales(datos, equipo)
     desarrollo, dh, dt = resumen_desarrollo(datos, equipo)
     linea = datos['lineas'][equipo['linea']]
@@ -1414,7 +1485,9 @@ def pagina_desarrollo(datos, equipo):
     h.append(mapa_fijo(datos, equipo, _nv, nivel_actual(_nv), '-desarrollo'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
-    h.append('<div class="con-lateral"><main class="principal">')
+    h.append('<div class="con-lateral">')
+    h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-desarrollo', _mods_lat))
+    h.append('<main class="principal">')
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 2 de 3</span>'
              '<h2>Desarrollo tecnológico</h2>'
@@ -1465,7 +1538,7 @@ def pagina_desarrollo(datos, equipo):
 
     h.append(seccion_origen(meta))
     h.append('</main>')
-    h.append(panel_lateral(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat, '-desarrollo'))
+    h.append(panel_derecho(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat))
     h.append('</div>')
     h.append(pie(meta))
     return ''.join(h)
@@ -1474,6 +1547,7 @@ def pagina_desarrollo(datos, equipo):
 def pagina_articulo(datos, equipo):
     meta = datos['meta']
     _hh_lat, _tt_lat, _nv_lat = totales(datos, equipo)
+    _mods_lat = cargar_modulos()
     hh, tt, _ = totales(datos, equipo)
     arts, ah, at = resumen_articulo(datos, equipo)
 
@@ -1484,7 +1558,9 @@ def pagina_articulo(datos, equipo):
     h.append(mapa_fijo(datos, equipo, _nv, nivel_actual(_nv), '-articulo'))
     h.append(portada_equipo(datos, equipo, hh, tt, compacta=True))
 
-    h.append('<div class="con-lateral"><main class="principal">')
+    h.append('<div class="con-lateral">')
+    h.append(menu_izquierdo(datos, equipo, _nv_lat, nivel_actual(_nv_lat), '-articulo', _mods_lat))
+    h.append('<main class="principal">')
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 3 de 3</span>'
              '<h2>Documentación del artículo</h2>'
@@ -1522,7 +1598,7 @@ def pagina_articulo(datos, equipo):
 
     h.append(seccion_origen(meta))
     h.append('</main>')
-    h.append(panel_lateral(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat, '-articulo'))
+    h.append(panel_derecho(datos, equipo, _nv_lat, nivel_actual(_nv_lat), _hh_lat, _tt_lat))
     h.append('</div>')
     h.append(pie(meta))
     return ''.join(h)

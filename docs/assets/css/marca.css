@@ -2,8 +2,8 @@
    Sale de datos/marca.json con  python herramientas/generar_marca.py
    Cualquier cambio hecho aquí se pierde en la próxima generación. */
 
-/* Semillero Maker de Tecnología con Sentido · manual de marca v4.0 · 2026-10-13
-   Concepto: Bitácora de taller con ruta de misión
+/* Semillero Maker de Tecnología con Sentido · manual de marca v5.0 · 2026-10-13
+   Concepto: Bitacora de taller, con pigmentos de aqui
 
    El semillero no es una marca de colegio ni una app de productividad: es un taller donde unos muchachos construyen algo y lo anotan todo. La página se ve como el cuaderno de ese taller, y se recorre como un camino: papel con retícula, anotaciones en monoespaciada, cifras enormes y una franja de color por cada oficio. El avance no se cuenta, se camina: cada fase es una parada del camino, y lo que falta no se disfraza.
 
@@ -16,39 +16,47 @@
 
 :root {
   /* --- color, tema claro --- */
-  --papel: #ECF1F2;
+  --papel: #EFECE4;
   --superficie: #FFFFFF;
-  --superficie2: #F2F7F8;
-  --tinta: #0B1A20;
-  --tinta-suave: #4B6069;
-  --filete: #CDD9DD;
-  --filete-sutil: #E1E9EB;
-  --panel: #091B23;
-  --panel-2: #113240;
-  --sobre-panel: #E8F2F5;
-  --sobre-panel-suave: #90AEBA;
-  --cian: #0E7490;
-  --cian-vivo: #1190B2;
-  --verde-fill: #1C7F4D;
-  --verde-texto: #15633B;
-  --ambar-fill: #D4900C;
-  --ambar-texto: #85580A;
-  --gris-fill: #7E8D94;
-  --gris-texto: #4D6168;
-  --linea: #0E7490;
-  --linea-software: #0E7490;
-  --linea-unity: #4F46B5;
-  --linea-audiovisual: #9B2FA6;
-  --linea-electronica: #C0334D;
-  --verde-tenue: #1C7F4D21;
-  --ambar-tenue: #D4900C21;
-  --gris-tenue: #7E8D9421;
-  --cian-tenue: #0E749021;
-  --linea-software-tenue: #0E749024;
-  --linea-unity-tenue: #4F46B524;
-  --linea-electronica-tenue: #C0334D24;
-  --linea-audiovisual-tenue: #9B2FA624;
-  --linea-t: #0E749024;
+  --superficie2: #F8F6F0;
+  --tinta: #1A1611;
+  --tinta-suave: #595246;
+  --filete: #D7D1C4;
+  --filete-sutil: #E9E5DB;
+  --panel: #14192E;
+  --panel-2: #242C4E;
+  --sobre-panel: #EDEFF7;
+  --sobre-panel-suave: #A8AFCA;
+  --cian: #234A9E;
+  --cian-vivo: #1B3B80;
+  --cian-panel: #93B5FF;
+  --verde-fill: #1F7A3D;
+  --verde-texto: #166130;
+  --verde-panel: #5FD08A;
+  --ambar-fill: #B07908;
+  --ambar-texto: #7A5305;
+  --ambar-panel: #F0BE4A;
+  --gris-fill: #8A857A;
+  --gris-texto: #565146;
+  --gris-panel: #B0B6CC;
+  --linea: #234A9E;
+  --linea-software: #234A9E;
+  --linea-unity: #6B2F96;
+  --linea-audiovisual: #A3176B;
+  --linea-electronica: #9E3319;
+  --linea-software-panel: #93B5FF;
+  --linea-unity-panel: #CBA3F2;
+  --linea-audiovisual-panel: #F58FC4;
+  --linea-electronica-panel: #F49C80;
+  --verde-tenue: #1F7A3D21;
+  --ambar-tenue: #B0790821;
+  --gris-tenue: #8A857A21;
+  --cian-tenue: #234A9E21;
+  --linea-software-tenue: #234A9E24;
+  --linea-unity-tenue: #6B2F9624;
+  --linea-electronica-tenue: #9E331924;
+  --linea-audiovisual-tenue: #A3176B24;
+  --linea-t: #234A9E24;
 
   /* --- tipografía y escala --- */
   --fuente-titulos: "IBM Plex Serif", Georgia, "Times New Roman", serif;
@@ -85,39 +93,47 @@
    gane sobre la preferencia del sistema. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --papel: #081318;
-    --superficie: #0F1E25;
-    --superficie2: #14262E;
-    --tinta: #E3EDF0;
-    --tinta-suave: #8CA4AC;
-    --filete: #22383F;
-    --filete-sutil: #192B32;
-    --panel: #050F14;
-    --panel-2: #0D2A36;
-    --sobre-panel: #E6F1F4;
-    --sobre-panel-suave: #88A8B5;
-    --cian: #45BDD8;
-    --cian-vivo: #67D2E8;
-    --verde-fill: #2FA86B;
-    --verde-texto: #57C993;
-    --ambar-fill: #D4900C;
-    --ambar-texto: #EEB84E;
-    --gris-fill: #5F747C;
-    --gris-texto: #8CA4AC;
-    --linea: #45BDD8;
-    --linea-software: #45BDD8;
-    --linea-unity: #938BFF;
-    --linea-audiovisual: #D87BE6;
-    --linea-electronica: #F0788E;
-    --verde-tenue: #2FA86B21;
-    --ambar-tenue: #D4900C21;
-    --gris-tenue: #5F747C21;
-    --cian-tenue: #45BDD821;
-    --linea-software-tenue: #45BDD824;
-    --linea-unity-tenue: #938BFF24;
-    --linea-electronica-tenue: #F0788E24;
-    --linea-audiovisual-tenue: #D87BE624;
-    --linea-t: #45BDD824;
+    --papel: #121118;
+    --superficie: #1B1A23;
+    --superficie2: #22212C;
+    --tinta: #F0EDE6;
+    --tinta-suave: #A8A296;
+    --filete: #36343F;
+    --filete-sutil: #2A2833;
+    --panel: #0C0F1C;
+    --panel-2: #1C2240;
+    --sobre-panel: #EDEFF7;
+    --sobre-panel-suave: #A8AFCA;
+    --cian: #93B5FF;
+    --cian-vivo: #B4CCFF;
+    --cian-panel: #93B5FF;
+    --verde-fill: #2E9C55;
+    --verde-texto: #6BD79A;
+    --verde-panel: #6BD79A;
+    --ambar-fill: #C98D10;
+    --ambar-texto: #F2C45C;
+    --ambar-panel: #F2C45C;
+    --gris-fill: #6B6660;
+    --gris-texto: #A8A296;
+    --gris-panel: #B0B6CC;
+    --linea: #93B5FF;
+    --linea-software: #93B5FF;
+    --linea-unity: #CBA3F2;
+    --linea-audiovisual: #F58FC4;
+    --linea-electronica: #F49C80;
+    --linea-software-panel: #93B5FF;
+    --linea-unity-panel: #CBA3F2;
+    --linea-audiovisual-panel: #F58FC4;
+    --linea-electronica-panel: #F49C80;
+    --verde-tenue: #2E9C5521;
+    --ambar-tenue: #C98D1021;
+    --gris-tenue: #6B666021;
+    --cian-tenue: #93B5FF21;
+    --linea-software-tenue: #93B5FF24;
+    --linea-unity-tenue: #CBA3F224;
+    --linea-electronica-tenue: #F49C8024;
+    --linea-audiovisual-tenue: #F58FC424;
+    --linea-t: #93B5FF24;
 
     --alzado-1: 0 1px 2px rgba(0, 0, 0, .45);
     --alzado-2: 0 4px 16px rgba(0, 0, 0, .5);
@@ -129,39 +145,47 @@
 /* La misma paleta oscura por elección explícita, para que el selector
    de tema gane en los dos sentidos. */
 :root[data-theme="dark"] {
-  --papel: #081318;
-  --superficie: #0F1E25;
-  --superficie2: #14262E;
-  --tinta: #E3EDF0;
-  --tinta-suave: #8CA4AC;
-  --filete: #22383F;
-  --filete-sutil: #192B32;
-  --panel: #050F14;
-  --panel-2: #0D2A36;
-  --sobre-panel: #E6F1F4;
-  --sobre-panel-suave: #88A8B5;
-  --cian: #45BDD8;
-  --cian-vivo: #67D2E8;
-  --verde-fill: #2FA86B;
-  --verde-texto: #57C993;
-  --ambar-fill: #D4900C;
-  --ambar-texto: #EEB84E;
-  --gris-fill: #5F747C;
-  --gris-texto: #8CA4AC;
-  --linea: #45BDD8;
-  --linea-software: #45BDD8;
-  --linea-unity: #938BFF;
-  --linea-audiovisual: #D87BE6;
-  --linea-electronica: #F0788E;
-  --verde-tenue: #2FA86B21;
-  --ambar-tenue: #D4900C21;
-  --gris-tenue: #5F747C21;
-  --cian-tenue: #45BDD821;
-  --linea-software-tenue: #45BDD824;
-  --linea-unity-tenue: #938BFF24;
-  --linea-electronica-tenue: #F0788E24;
-  --linea-audiovisual-tenue: #D87BE624;
-  --linea-t: #45BDD824;
+  --papel: #121118;
+  --superficie: #1B1A23;
+  --superficie2: #22212C;
+  --tinta: #F0EDE6;
+  --tinta-suave: #A8A296;
+  --filete: #36343F;
+  --filete-sutil: #2A2833;
+  --panel: #0C0F1C;
+  --panel-2: #1C2240;
+  --sobre-panel: #EDEFF7;
+  --sobre-panel-suave: #A8AFCA;
+  --cian: #93B5FF;
+  --cian-vivo: #B4CCFF;
+  --cian-panel: #93B5FF;
+  --verde-fill: #2E9C55;
+  --verde-texto: #6BD79A;
+  --verde-panel: #6BD79A;
+  --ambar-fill: #C98D10;
+  --ambar-texto: #F2C45C;
+  --ambar-panel: #F2C45C;
+  --gris-fill: #6B6660;
+  --gris-texto: #A8A296;
+  --gris-panel: #B0B6CC;
+  --linea: #93B5FF;
+  --linea-software: #93B5FF;
+  --linea-unity: #CBA3F2;
+  --linea-audiovisual: #F58FC4;
+  --linea-electronica: #F49C80;
+  --linea-software-panel: #93B5FF;
+  --linea-unity-panel: #CBA3F2;
+  --linea-audiovisual-panel: #F58FC4;
+  --linea-electronica-panel: #F49C80;
+  --verde-tenue: #2E9C5521;
+  --ambar-tenue: #C98D1021;
+  --gris-tenue: #6B666021;
+  --cian-tenue: #93B5FF21;
+  --linea-software-tenue: #93B5FF24;
+  --linea-unity-tenue: #CBA3F224;
+  --linea-electronica-tenue: #F49C8024;
+  --linea-audiovisual-tenue: #F58FC424;
+  --linea-t: #93B5FF24;
 
   --alzado-1: 0 1px 2px rgba(0, 0, 0, .45);
   --alzado-2: 0 4px 16px rgba(0, 0, 0, .5);

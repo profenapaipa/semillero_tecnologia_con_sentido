@@ -1172,3 +1172,135 @@ details.texto-diapos { margin-top: 4px; }
 .tablero .celda:nth-child(4n+2) { border-top: 3px solid var(--linea-unity); }
 .tablero .celda:nth-child(4n+3) { border-top: 3px solid var(--linea-audiovisual); }
 .tablero .celda:nth-child(4n+4) { border-top: 3px solid var(--linea-electronica); }
+
+/* ============ 20. Acentos dentro del panel oscuro ============ */
+/* El panel añil existe también en el tema claro: la barra, el mapa, la
+   portada y el pie. Un color pensado para fondo blanco no se lee ahí.
+   Por eso cada acento tiene su variante clara, y dentro del panel las
+   variables se redefinen para apuntar a ella. Así ningún componente tiene
+   que saber sobre qué fondo está: lo resuelve la cascada. */
+
+[data-linea="software"]    { --linea-en-panel: var(--linea-software-panel); }
+[data-linea="unity"]       { --linea-en-panel: var(--linea-unity-panel); }
+[data-linea="electronica"] { --linea-en-panel: var(--linea-electronica-panel); }
+[data-linea="audiovisual"] { --linea-en-panel: var(--linea-audiovisual-panel); }
+
+.barra, .mapa, .portada, footer.pie {
+  --cian: var(--cian-panel);
+  --cian-vivo: var(--cian-panel);
+  --linea: var(--linea-en-panel, var(--cian-panel));
+  --linea-t: color-mix(in srgb, var(--linea-en-panel, var(--cian-panel)) 16%, transparent);
+  --verde-fill: var(--verde-panel);
+  --verde-texto: var(--verde-panel);
+  --ambar-fill: var(--ambar-panel);
+  --ambar-texto: var(--ambar-panel);
+  --gris-texto: var(--gris-panel);
+}
+/* Si el navegador no soporta color-mix, el tinte cae a transparente y el
+   fondo del panel se ve igual: no rompe nada. */
+
+/* ============ 21. Tres columnas: índice, contenido, bloques ============ */
+/* Izquierda: el índice del proyecto, desplegable, para moverse.
+   Centro: el contenido.
+   Derecha: bloques que informan y no navegan. */
+
+.con-lateral {
+  grid-template-columns: 258px minmax(0, 1fr) 300px;
+  gap: 28px;
+}
+
+.lateral-izq {
+  position: sticky;
+  top: 148px;
+  padding-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: calc(100vh - 170px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.izq-cab { padding: 0 10px 12px; border-bottom: 2px solid var(--linea, var(--cian)); margin-bottom: 8px; }
+.izq-cab .rotulo { display: block; color: var(--tinta-suave); margin-bottom: 4px; }
+.izq-cab b { font-family: var(--fuente-titulos); font-size: 17px; font-weight: 700; line-height: 1.2; display: block; }
+
+.izq-vistas { display: flex; flex-direction: column; gap: 1px; margin-bottom: 10px; }
+.izq-vistas a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border-radius: var(--radio-chico);
+  color: var(--tinta); text-decoration: none; font-size: 14.5px; font-weight: 500;
+}
+.izq-vistas a:hover { background: var(--superficie); color: var(--cian); }
+.izq-vistas a.aqui {
+  background: var(--linea-t, var(--cian-tenue)); color: var(--linea, var(--cian));
+  font-weight: 700;
+}
+
+.izq-grupo { border-top: 1px solid var(--filete-sutil); }
+.izq-grupo > summary {
+  display: flex; align-items: center; gap: 9px;
+  padding: 11px 10px; cursor: pointer; list-style: none;
+  font-family: var(--fuente-datos); font-size: 11.5px; font-weight: 600;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--tinta-suave);
+}
+.izq-grupo > summary::-webkit-details-marker { display: none; }
+.izq-grupo > summary:hover { color: var(--cian); }
+.izq-grupo > summary .cuenta {
+  margin-left: auto; font-size: 10.5px; padding: 1px 7px; border-radius: 999px;
+  background: var(--superficie2); color: var(--tinta-suave); letter-spacing: 0;
+}
+.izq-grupo > summary::after {
+  content: ""; width: 6px; height: 6px; flex: none;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg); transition: transform .18s ease;
+}
+.izq-grupo[open] > summary::after { transform: rotate(45deg); }
+.izq-grupo > ul { display: flex; flex-direction: column; gap: 1px; padding-bottom: 8px; }
+.izq-grupo a {
+  display: flex; align-items: center; gap: 9px;
+  padding: 7px 10px 7px 12px; border-radius: var(--radio-chico);
+  color: var(--tinta-suave); text-decoration: none; font-size: 13.5px;
+}
+.izq-grupo a:hover { background: var(--superficie); color: var(--tinta); }
+.izq-grupo a span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.izq-grupo a em { font-style: normal; flex: none; }
+.izq-grupo li.aqui > a,
+.izq-grupo a.aqui { background: var(--superficie); color: var(--tinta); font-weight: 600; }
+.izq-grupo .pt { width: 9px; height: 9px; border-radius: 3px; flex: none; }
+.izq-grupo .pt.verde { background: var(--verde-fill); }
+.izq-grupo .pt.ambar { background: var(--ambar-fill); }
+.izq-grupo .pt.gris  { background: var(--gris-fill); opacity: .5; }
+.izq-grupo .letra, .izq-grupo .num {
+  flex: none; min-width: 22px; text-align: center; font-style: normal;
+  font-family: var(--fuente-datos); font-size: 10.5px; font-weight: 600;
+  padding: 2px 5px; border-radius: 4px;
+  background: var(--linea-t, var(--cian-tenue)); color: var(--linea, var(--cian));
+}
+.izq-volver {
+  display: flex; align-items: center; gap: 9px;
+  margin-top: 10px; padding: 10px; border-radius: var(--radio-chico);
+  border: 1px dashed var(--filete); color: var(--tinta-suave);
+  text-decoration: none; font-size: 13.5px;
+}
+.izq-volver:hover { border-color: var(--cian); color: var(--cian); }
+
+/* El panel derecho ya no navega: solo informa */
+.donde-vas { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; }
+.donde-vas b { font-family: var(--fuente-titulos); font-size: 17px; display: block; }
+
+@media (max-width: 1240px) {
+  .con-lateral { grid-template-columns: 234px minmax(0, 1fr); }
+  .lateral {
+    grid-column: 1 / -1; position: static; padding-top: 0; padding-bottom: 34px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .con-lateral { grid-template-columns: 1fr; gap: 0; }
+  .lateral-izq {
+    position: static; max-height: none; overflow: visible;
+    padding-top: 20px; padding-bottom: 8px;
+    background: var(--superficie); border: 1px solid var(--filete);
+    border-radius: var(--radio); padding-inline: 10px; margin-top: 20px;
+  }
+}
