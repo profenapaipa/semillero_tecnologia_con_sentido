@@ -382,3 +382,72 @@ contenido contra 489 px de ventana, y la de equipo a 542 px. Culpables medidos:
 las tarjetas de proyecto hermano en el portal, y en la página de equipo la vista
 previa incrustada. Comprobado contra la versión anterior: **ya existía**, no lo
 introdujeron estos cambios. Queda por decidir si se corrige.
+
+---
+
+## 8. Carga de avances del 16 de octubre de 2026
+
+### 8.1 Un commit a mano sobre HTML generado
+
+El commit `501c8d3`, "Publica ZocaLab en el portal del semillero", editó
+directamente `docs/index.html` y `docs/equipos/equipo-12.html`. Esos archivos
+los escribe `generar.py` a partir de `datos/semillero.json`, así que el cambio
+se perdía en la siguiente regeneración. Comprobado antes de tocar nada: al
+regenerar, las menciones a ZocaLab bajaban de 3 a 1 y desaparecían los sellos
+de publicado. El trabajo se restauró desde git y se trasladó a la fuente de
+datos, que es donde sobrevive.
+
+**Regla, por si vuelve a pasar:** lo que se edite en `docs/` dura hasta la
+próxima regeneración. Todo cambio de contenido va en `datos/semillero.json`.
+
+### 8.2 El repositorio del Equipo 3 se renombró
+
+`planeacion-inclusiva-piar` ahora se llama `Kinesis`. GitHub redirige la API
+del nombre viejo, por eso seguía respondiendo, pero **no** redirige GitHub
+Pages: por eso la URL vieja daba 404 y el sitio seguía mostrándolo como no
+publicado. La URL buena es `https://profenapaipa.github.io/Kinesis/`.
+
+### 8.3 Estado de publicación, medido
+
+Consultado en la API pública de GitHub y comprobado pidiendo cada URL.
+
+| Equipo | Repositorio | Público | Pages | Responde |
+|---|---|---|---|---|
+| 1 | lawebdelaiguana | sí | sí | 200 |
+| 3 | Kinesis | sí | sí | 200 |
+| 5 | englishroulette | sí | sí | 404 |
+| 6 | diversena | sí | sí | 200 |
+| 7 | wisfox | sí | sí | 200 |
+| 12 | zocalab | sí | sí | 200 |
+
+Los seis son públicos y los seis tienen Pages activado. El 404 de
+`englishroulette` no es un error de configuración: es una aplicación de
+escritorio en Python, no tiene `index.html` que servir, y su entregable no es
+una página web. Pasó de un publicado a cinco.
+
+### 8.4 Avances leídos en Drive
+
+La plantilla en limpio pesa 13.803 bytes en `Articulo_base.docx` y 10.808 en
+`Barreras.docx`. Un archivo más grande no basta como prueba, así que cada
+documento se leyó completo.
+
+- **Equipo 7, Wisfox.** `Barreras.docx` con dos barreras reales escritas: no
+  lograr hacer la IA, y no saber sacar el ID de los archivos para la base de
+  datos, con una pregunta concreta para grabar. Son las primeras barreras
+  escritas de todo el semillero. Las 20 casillas de la sección 1 siguen sin
+  marcar, así que `casi` sigue en falso.
+- **Equipo 9.** Llenó el Formato 1 y el Formato 2 el 16 de octubre. De ahí
+  salen el nombre real del proyecto, *Animación de abandono*, que en el sitio
+  figuraba como "Proyecto de Matías, Jacobo y Danna", y los nombres completos
+  de quienes lo hacen.
+- **Equipo 11.1.** Formato 1 lleno el 15 de octubre.
+
+### 8.5 Lo que parecía avance y no lo era
+
+El `Articulo_base.docx` del Equipo 9 creció de 13.803 a 16.287 bytes y se marcó
+como versión 0.0.5 del 16 de octubre. Leído entero, **las secciones siguen
+vacías**: lo que llenaron fue la tabla de seguimiento, marcando "sí" en 1.1,
+1.2, 1.3 y 3.1 a 3.3. El texto del artículo no está en el documento. Por la
+regla del semillero eso no cuenta como hecho, así que `preg` sigue en falso.
+
+Es el caso que justifica leer y no solo pesar los archivos.
