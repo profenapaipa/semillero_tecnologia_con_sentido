@@ -949,7 +949,7 @@
     {
       "numero": "3",
       "slug": "equipo-3",
-      "nombre": "App de planeación inclusiva",
+      "nombre": "Kinesis, plataforma de planeación inclusiva",
       "linea": "software",
       "integrantes": "Camila y Santiago",
       "stack": "Next.js con TypeScript, Drizzle y base de datos",
@@ -1020,11 +1020,11 @@
         ],
         "s5": [
           true,
-          "Cinco commits por fases, de la 2 a la 7"
+          "Repositorio Kinesis con trece commits, del 18 de agosto al 17 de octubre"
         ],
         "s6": [
-          false,
-          "Repositorio privado y proyecto con base de datos: no se puede publicar en GitHub Pages tal como está"
+          true,
+          "Demostración navegable publicada en GitHub Pages, con datos ficticios declarados en la propia página"
         ],
         "barr": [
           false,
@@ -1052,7 +1052,7 @@
         "estado": "en linea",
         "url": "https://profenapaipa.github.io/Kinesis/",
         "repo": "https://github.com/profenapaipa/Kinesis",
-        "nota": "El repositorio se renombró de planeacion-inclusiva-piar a Kinesis, ya es público y publica una demostración estática en GitHub Pages. La aplicación completa sigue necesitando base de datos, que Pages no puede servir: lo publicado es la demostración, no la app entera."
+        "nota": "El proyecto se llamó antes Andamio y su repositorio, planeacion-inclusiva-piar; hoy los dos se llaman Kinesis. Lo publicado en GitHub Pages es una demostración navegable con datos ficticios: la aplicación completa necesita base de datos, y eso Pages no lo sirve."
       }
     },
     {
@@ -1266,7 +1266,7 @@
     {
       "numero": "6",
       "slug": "equipo-6",
-      "nombre": "Diverseña, lector de lengua de señas",
+      "nombre": "DiverSeña, lector de lengua de señas",
       "linea": "software",
       "integrantes": "Nicolás Pachón, César Alejandro Prada y Matías Ávila",
       "stack": "TypeScript con Vite, detección de puntos de la mano y clasificador por vecino más cercano",
@@ -1337,11 +1337,11 @@
         ],
         "s5": [
           true,
-          "Cinco commits, con integración de la rama de una compañera"
+          "Veintiún commits entre el 26 de agosto y el 16 de octubre, de dos autores: el seguimiento de las dos manos, el marcado de los puntos de la mano sobre las grabaciones y la identidad del proyecto"
         ],
         "s6": [
-          false,
-          "Repositorio privado: con cuenta gratuita no se puede publicar en Pages"
+          true,
+          "Publicado en GitHub Pages: \"DiverSeña, aprende lengua de señas con tu cámara\""
         ],
         "barr": [
           true,
@@ -1445,12 +1445,12 @@
           "MALLA INGLES 2026.xlsx y actividades reales de inglés de 10D"
         ],
         "s5": [
-          false,
-          "No hay repositorio en GitHub: el proyecto vive solo en Drive"
+          true,
+          "Repositorio wisfox con dos commits del 14 de octubre y un flujo de despliegue automático; el archivo .glb quedó fuera por su tamaño"
         ],
         "s6": [
-          false,
-          "Sin publicar"
+          true,
+          "Publicado en GitHub Pages: \"Wisfox, tu plataforma de aprendizaje\""
         ],
         "barr": [
           true,
@@ -1612,8 +1612,8 @@
           "Formato1_Necesidades_recursos.docx del 16 de octubre: cinco entregables con su fecha, las cinco categorías de recursos resueltas y cuatro habilidades por aprender"
         ],
         "ante": [
-          false,
-          "No hay carpeta de antecedentes con fuentes"
+          true,
+          "Carpeta Antecedentes del 16 de octubre con dos fuentes en PDF sobre protección animal: la política nacional de protección y bienestar animal, y un artículo de 2024 sobre protección animal en el derecho penal colombiano. Una de las dos está subida dos veces"
         ],
         "cron": [
           true,
@@ -2173,12 +2173,12 @@
           "Contenido real del proyecto: escenas del bosque, perfiles y rutinas, con sus propios archivos de datos"
         ],
         "s5": [
-          false,
-          "No hay repositorio en GitHub: el proyecto vive solo en la carpeta local"
+          true,
+          "Repositorio zocalab con dos commits del 15 de octubre, el segundo para agregar .nojekyll y que GitHub Pages sirva la carpeta tal cual"
         ],
         "s6": [
-          false,
-          "Sin publicar"
+          true,
+          "Publicado en GitHub Pages: \"ZocaLab, educación ancestral digital\""
         ],
         "barr": [
           false,

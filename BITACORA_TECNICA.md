@@ -496,3 +496,62 @@ hay y qué falta. Una evidencia que miente en contra del estudiante es tan
 inútil como una que miente a favor.
 
 El avance del semillero queda en 31%.
+
+---
+
+## 9. Tercera carga: repositorios y Drive al 17 de octubre
+
+### 9.1 Una contradicción que dejó la carga anterior
+
+Al actualizar la publicación de cuatro equipos no se actualizaron sus tareas de
+desarrollo técnico, así que el sitio se contradecía a sí mismo: la tarjeta del
+equipo decía "publicado y en línea" y, más abajo, su tarea `s6` seguía diciendo
+"sin publicar", y la `s5` de Wisfox y ZocaLab decía "no hay repositorio en
+GitHub" cuando los dos ya lo tenían.
+
+Queda arreglado, y se agregó una comprobación al cerrar: el estado de
+publicación y la tarea `s6` de cada equipo tienen que decir lo mismo. Hoy hay
+cero contradicciones.
+
+### 9.2 Commits contados, no supuestos
+
+| Repositorio | Commits | Autores | Rango |
+|---|---|---|---|
+| Kinesis | 13 | Napaipa | 18 ago → 17 oct |
+| diversena | 21 | Carla, Napaipa | 26 ago → 16 oct |
+| zocalab | 2 | Napaipa | 15 oct |
+| wisfox | 2 | Napaipa | 14 oct |
+| lawebdelaiguana | 6 | Equipo 1, Napaipa | 17 sep → 1 oct |
+
+El sitio decía "cinco commits" para Kinesis y para DiverSeña. Eran trece y
+veintiuno.
+
+### 9.3 Los proyectos tienen nombre propio
+
+Los nombres salieron de los sitios publicados, no de lo que suponíamos:
+
+- **Equipo 3.** El proyecto se llama **Kinesis**. Antes se llamó Andamio: hay
+  un commit del 16 de octubre que lo renombra. Su página se titula "Kinesis ·
+  Demostración" y se describe como plataforma de planeación inclusiva PIAR, con
+  datos ficticios declarados en la propia página.
+- **Equipo 6.** La marca propia se escribe **DiverSeña**, con la eñe en
+  mayúscula interior. El sitio lo escribía "Diverseña".
+
+### 9.4 Avances de Drive
+
+- **Equipo 9.** Jacobo Rodríguez subió el 16 de octubre una carpeta
+  *Antecedentes* con dos fuentes en PDF sobre protección animal, que es
+  justamente el tema de *Animación de abandono*. Una de las dos está subida dos
+  veces. La tarea `ante` pasa a hecha.
+
+El avance del semillero queda en 33%.
+
+### 9.5 Hallazgo sin cargar: una carpeta de Equipo 13
+
+El 16 de octubre se creó en Drive la carpeta **Equipo 13_Desarrollo_IA_Valeria**,
+al mismo nivel que las de los demás equipos. Dentro solo hay un acceso directo,
+"AI códigos:", sin documentos ni tareas.
+
+No se agregó al sitio. Crear un subequipo número dieciséis cambia la cifra de
+la portada y la estructura entera a partir de una carpeta vacía, y esa es una
+decisión de Néstor, no una medición.
