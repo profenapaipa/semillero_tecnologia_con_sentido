@@ -433,9 +433,10 @@ documento se leyó completo.
 
 - **Equipo 7, Wisfox.** `Barreras.docx` con dos barreras reales escritas: no
   lograr hacer la IA, y no saber sacar el ID de los archivos para la base de
-  datos, con una pregunta concreta para grabar. Son las primeras barreras
-  escritas de todo el semillero. Las 20 casillas de la sección 1 siguen sin
-  marcar, así que `casi` sigue en falso.
+  datos, con una pregunta concreta para grabar, escritas el 14 de octubre.
+  Es el tercer equipo con barreras escritas: el 6 y el 10.1 ya las tenían.
+  Las 20 casillas de la sección 1 siguen sin marcar, así que `casi` sigue en
+  falso, y sigue sin haber un solo equipo que las haya marcado.
 - **Equipo 9.** Llenó el Formato 1 y el Formato 2 el 16 de octubre. De ahí
   salen el nombre real del proyecto, *Animación de abandono*, que en el sitio
   figuraba como "Proyecto de Matías, Jacobo y Danna", y los nombres completos
@@ -451,3 +452,16 @@ vacías**: lo que llenaron fue la tabla de seguimiento, marcando "sí" en 1.1,
 regla del semillero eso no cuenta como hecho, así que `preg` sigue en falso.
 
 Es el caso que justifica leer y no solo pesar los archivos.
+
+
+### 8.6 Corrección y comprobación de las fechas
+
+En el commit `c048926` se afirmó que las barreras de Wisfox eran las primeras
+de todo el semillero. **Es falso:** los equipos 6 y 10.1 ya tenían barreras
+escritas. Wisfox es el tercero. Queda corregido arriba; el mensaje de ese
+commit conserva el error porque ya estaba publicado.
+
+Sobre las fechas: se comprobó que leer un documento con el conector de Drive
+**no** altera su `modifiedTime`. Un archivo leído el 16 de octubre siguió
+marcando su modificación real del 14. Las fechas de esta sección son, por
+tanto, ediciones reales de personas y no rastros de la lectura.
