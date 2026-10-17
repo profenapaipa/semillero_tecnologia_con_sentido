@@ -465,3 +465,34 @@ Sobre las fechas: se comprobó que leer un documento con el conector de Drive
 **no** altera su `modifiedTime`. Un archivo leído el 16 de octubre siguió
 marcando su modificación real del 14. Las fechas de esta sección son, por
 tanto, ediciones reales de personas y no rastros de la lectura.
+
+### 8.7 Segunda tanda: los documentos del 14 de octubre
+
+En la primera pasada quedaron sin atribuir unos diez documentos editados el 14
+de octubre. Se leyeron todos y se subió por el árbol de Drive para confirmar de
+qué equipo era cada carpeta cuando el documento no lo decía con claridad.
+
+- **Equipo 2.1.** Formato 2 firmado por Sara Valeria Ordoñez Vargas y Deivyd
+  Steban Vega López, que además nombra a una tercera integrante que el sitio no
+  tenía: Lucía Salgado. Acuerdos hechos.
+- **Equipo 4.** Formato 2 completo, con los dos nombres y el frente del que
+  responde cada uno. Acuerdos hechos.
+- **Equipo 11.2.** Formato 1 y Formato 2 llenos el 14 de octubre, los dos muy
+  completos. De ahí salen los nombres: Karla Atalito y Pammela Marín.
+
+Dos documentos se leyeron y **no** cambiaron nada, porque su tarea ya estaba
+marcada: los bocetos del 2.1 y la ficha técnica del 6.
+
+### 8.8 Una tarea que no se marcó, aunque tiene contenido
+
+La ficha técnica del Equipo 2.1 figuraba como "idéntica a la plantilla", y eso
+era falso: tiene el paso 1 escrito y el paso 3 bien hecho, con Ibis Paint X
+14.1.2 y Alight Motion 4.2.5 con sus versiones exactas, que es justo lo que el
+formato pide. Pero el paso 2 tiene una de tres acciones y el paso 4, el esquema
+de las tres cajas que explica cómo funciona el proyecto por dentro, está vacío.
+
+No se marcó como hecha. Lo que se corrigió fue la evidencia, para que diga qué
+hay y qué falta. Una evidencia que miente en contra del estudiante es tan
+inútil como una que miente a favor.
+
+El avance del semillero queda en 31%.

@@ -745,7 +745,7 @@
       "slug": "equipo-2-1",
       "nombre": "Animación para el Filosofartec",
       "linea": "audiovisual",
-      "integrantes": "Deivid y Valeria",
+      "integrantes": "Sara Valeria Ordoñez Vargas, Deivyd Steban Vega López y Lucía Salgado",
       "stack": "Animación, pendiente de confirmar la herramienta",
       "carpeta": "Equipo 2_Animación para el Filosofartec / Equipo 2.1",
       "enlaces": [],
@@ -756,8 +756,8 @@
           "Propuesta Deivyd y Valeria: nombres y correos vacíos, solo un enlace a un tutorial de Unity"
         ],
         "acue": [
-          false,
-          "Formato2_Acuerdos idéntico a la plantilla"
+          true,
+          "Formato2_Acuerdos_equipo.docx del 5 de agosto: los cinco frentes repartidos entre los tres, los cinco acuerdos escritos y las dos firmas"
         ],
         "nece": [
           true,
@@ -785,7 +785,7 @@
         ],
         "fich": [
           false,
-          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+          "FFicha_tecnica_19_agosto.docx: el paso 3 está bien, con Ibis Paint X 14.1.2 y Alight Motion 4.2.5 y sus versiones exactas, pero el paso 2 tiene una de tres acciones y el paso 4, el esquema de las tres cajas, está vacío"
         ],
         "v1": [
           false,
@@ -1060,7 +1060,7 @@
       "slug": "equipo-4",
       "nombre": "Comedero automático para mascotas",
       "linea": "electronica",
-      "integrantes": "Javier Sanabria y Alejandra Cuestas",
+      "integrantes": "María Alejandra Cuestas Escobedo y Javier Esteban Sanabria Zea",
       "stack": "Arduino",
       "carpeta": "Equipo 4_Comedero mascotas automático",
       "enlaces": [],
@@ -1071,8 +1071,8 @@
           "Propuesta comedero automático: 1.024 bytes, solo nombres y correos, las cinco preguntas sin responder"
         ],
         "acue": [
-          false,
-          "Formato2_Acuerdos idéntico a la plantilla"
+          true,
+          "Formato2_Acuerdos_equipo.docx: cuatro frentes repartidos entre los dos, los cinco acuerdos escritos y los dos nombres con el frente del que responde cada uno"
         ],
         "nece": [
           true,
@@ -2003,7 +2003,7 @@
       "slug": "equipo-11-2",
       "nombre": "La odisea de la diversidad",
       "linea": "audiovisual",
-      "integrantes": "Equipo del corto de diversidad",
+      "integrantes": "Karla Atalito y Pammela Marín",
       "stack": "Producción audiovisual",
       "carpeta": "Equipo 11_Cortometrajes para el Filosofartec / Equipo 11.2",
       "enlaces": [],
@@ -2014,12 +2014,12 @@
           "Propuesta corto diversidad: 1.134 bytes, la plantilla sin responder"
         ],
         "acue": [
-          false,
-          "Formato2_Acuerdos idéntico a la plantilla"
+          true,
+          "Formato2_Acuerdos_equipo.docx del 14 de octubre: siete frentes de trabajo, los cinco acuerdos escritos y las dos firmas"
         ],
         "nece": [
-          false,
-          "Formato1_Necesidades idéntico a la plantilla"
+          true,
+          "Formato1_Necesidades_recursos.docx del 14 de octubre: cinco entregables con su criterio de calidad, las cinco categorías de recursos resueltas y cinco habilidades de edición y sonido por aprender"
         ],
         "ante": [
           false,
