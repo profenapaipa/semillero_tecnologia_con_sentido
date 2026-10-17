@@ -223,6 +223,24 @@ for eq in datos['equipos']:
             avisos.append('equipo %s: el total %d de %d no aparece en su pagina'
                           % (eq['numero'], hh, tt))
 
+# ---- 7.bis el estado de publicacion y la tarea s6 deben decir lo mismo ----
+# Paso de verdad: se actualizo la publicacion de cuatro equipos y no sus tareas
+# tecnicas, asi que la tarjeta decia "publicado y en linea" mientras la tarea s6
+# del mismo equipo seguia diciendo "sin publicar". Son dos campos distintos que
+# describen el mismo hecho, y por eso se pueden separar sin que nadie lo note.
+for eq in datos['equipos']:
+    pub = (eq.get('publicacion') or {}).get('estado')
+    s6 = eq['estado'].get('s6')
+    if s6 is None or pub is None:
+        continue
+    if (pub == 'en linea') != bool(s6[0]):
+        fallas.append('equipo %s: la publicacion dice "%s" pero su tarea s6 dice %s. '
+                      'Los dos campos describen lo mismo y tienen que coincidir'
+                      % (eq['numero'], pub, 'hecha' if s6[0] else 'no hecha'))
+    # Si esta publicado, la ficha tiene que traer la URL
+    if pub == 'en linea' and not (eq.get('publicacion') or {}).get('url'):
+        fallas.append('equipo %s: figura publicado pero no tiene url' % eq['numero'])
+
 # ---- 8. que carpetas estan versionadas ----
 # El portal no debe llevarse el codigo de los estudiantes. Cuatro de esas
 # carpetas traen su propio .git y se guardarian como enlaces rotos.
