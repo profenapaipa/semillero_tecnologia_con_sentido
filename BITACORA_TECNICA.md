@@ -910,3 +910,55 @@ queda solo en este computador.
 **Peso:** `docs/descargas/unity/` suma 19 MB, casi todo música dentro de los dos
 paquetes. Si el repositorio crece demasiado con cada versión del kit, la salida
 es dejar los paquetes solo en Drive y enlazar desde el sitio.
+
+### 13.6 WebGL: lo que se comprobó y lo que no
+
+El módulo WebGL de 2019.4.38f1 no estaba instalado; se agregó con el Hub por
+línea de comandos (`Unity Hub.exe -- --headless install-modules --version
+2019.4.38f1 --module webgl`). En esta sesión hubo que quitar la variable
+`ELECTRON_RUN_AS_NODE`, que VS Code deja puesta y hace que el Hub se lea a sí
+mismo como un script de Node.
+
+**Comprobado**, exportando las dos soluciones y abriéndolas en Chrome por HTTP
+con un controlador propio del protocolo DevTools (Node 24 trae WebSocket):
+
+- Las dos exportaciones salen sin errores y pesan unos 21 MB cada una.
+- Unity arranca, los menús y las escenas se ven, las notas caen y las que nadie
+  toca salen en rojo, y el contexto de audio queda en `running`.
+- Sin excepciones propias del juego en la consola.
+
+**Hallazgos que cambiaron cosas:**
+
+1. **Una ruta con tilde rompe la exportación.** Desde
+   `...\Tecnología con Sentido\...` falla `il2cpp.exe` con "No hay ninguna
+   asignación en la página de códigos de múltiples bytes"; copiado a una ruta
+   sin tildes, sale bien. Es otra razón para el `C:\Unity` de la Guía 0, y está
+   en la Guía 2.
+2. **Compresión en Disabled.** GitHub Pages no puede enviar el encabezado
+   `Content-Encoding` que piden los archivos Gzip o Brotli. No se probó el
+   síntoma exacto de dejarla activada; la guía solo dice que no carga.
+3. **`CursorVirtual` solo funcionaba con el mouse capturado.** Sin captura, cada
+   clic solo reintentaba capturar y el juego quedaba muerto; bastaba con que el
+   navegador la rechazara o con pulsar Escape. Ahora distingue "liberado a
+   propósito" de "no capturado" y, sin captura, sigue el movimiento normal.
+
+**No comprobado, y la Guía 2 lo dice así:**
+
+- **La captura del mouse en el navegador.** Una página de 12 líneas, sin Unity,
+  falla igual con `pointerlockerror` en Chrome sin ventana, con la ventana
+  nueva y con el foco simulado. Ningún navegador automático la concede, así que
+  hace falta una persona. La Guía 2 trae la lista de comprobación de dos minutos.
+- **Si la sensibilidad se siente igual en la web que en Windows.** Se sospecha
+  que Unity entrega el movimiento del mouse con otra escala en WebGL, pero no se
+  midió. Si no se siente bien, se cambian `SensibilidadFina` y
+  `SensibilidadGruesa` en `ConfiguracionJuego.cs`.
+- La captura de mouse tampoco la ejercita el banco de pruebas de escritorio, que
+  apaga el `CursorVirtual` y escribe sus valores a mano.
+
+Las exportaciones quedan en `Proyectos repositorios Github/Kit Unity Equipo 10/webgl_referencia/`
+(ignorada por git), con `probar.py` para abrirlas. No se publicaron en el sitio:
+son 41 MB y falta la aprobación del docente.
+
+**Sobre el aviso de tiempo agotado:** `auditar_js.py` agotó los 180 s una vez en
+la página de inicio y pasó a la segunda, con el equipo menos cargado. Si vuelve
+a pasar, repetirlo antes de investigar.

@@ -982,6 +982,104 @@
      "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/BuildSettings.html"
     }
    ]
+  },
+  {
+   "id": "unity-probar-y-publicar",
+   "titulo": "Probarlo con alguien y llevarlo a la página web",
+   "para": [
+    "unity"
+   ],
+   "hitos": [
+    "u6",
+    "u7"
+   ],
+   "modulos": [],
+   "estado": "Vista previa",
+   "resumen": "Para los equipos 10.1 y 10.2, en las dos últimas semanas. Probar el juego con tres personas de fuera, ajustar lo que no entendieron con las casillas del Inspector, y exportarlo a WebGL para que se pueda jugar en la página del semillero.",
+   "porQue": "Quedan dos hitos sin evidencia en la línea Unity: la segunda versión después de probarlo con alguien y el build exportado. Esta guía los cubre con lo que se comprobó exportando las dos soluciones de referencia a WebGL en Unity 2019.4.38f1 y abriéndolas en Chrome: la compresión debe quedar en Disabled, una ruta con letras con tilde hace fallar la exportación, y cada juego pesa unos 21 MB.",
+   "diapositivas": {
+    "carpeta": "unity-probar-y-publicar",
+    "titulos": [
+     "Portada: probarlo con alguien y llevarlo a la página web",
+     "Parte 1: probarlo con alguien de fuera",
+     "Del síntoma a la casilla: qué mover para cada problema",
+     "La segunda versión: guarda antes de cambiar",
+     "Parte 2: exportar a WebGL, paso a paso",
+     "El error que da una carpeta con tilde",
+     "Lo que cambia cuando el juego corre en el navegador",
+     "Cómo llega el juego a la página del semillero",
+     "La prueba que solo puede hacer una persona",
+     "Antes del 13 de noviembre"
+    ]
+   },
+   "descargas": [
+    {
+     "titulo": "Guía 2 en PowerPoint, con el guion en las notas",
+     "archivo": "unity/Guia2_Probar_y_Publicar.pptx"
+    }
+   ],
+   "pasos": [
+    {
+     "titulo": "Prueba el juego con tres personas que no lo hayan visto",
+     "texto": "No les expliques nada. Pídeles que jueguen y digan en voz alta lo que piensan, y anota cada vez que dudan o preguntan. Que jueguen dos veces: la primera muestra qué no se entiende y la segunda si mejoraron. Copia el CSV de cada persona antes de que juegue la siguiente.",
+     "ojo": "Si se confunden, el juego no se explicó solo. No se corrige a la persona: se corrige el juego."
+    },
+    {
+     "titulo": "Pasa del síntoma a la casilla",
+     "texto": "Cada problema tiene una casilla del Inspector que se cambia sin tocar el código: Ancho del camino, Factor De Achique y Segundos De Gracia de la zona, Primer Pulso de los obstáculos, Unidades Por Pulso de las notas, Ventana Perfecto del juez. La sensibilidad es una constante de ConfiguracionJuego.cs.",
+     "ojo": "Cambia una sola cosa por vez: si cambias tres y mejora, no sabes cuál ayudó."
+    },
+    {
+     "titulo": "Guarda una copia y haz la segunda versión",
+     "texto": "Cierra Unity y copia la carpeta del proyecto como Equipo10_Motricidad_v1. Haz los cambios en el original, pide a las mismas personas que jueguen otra vez y compara el CSV de la v1 con el de la v2.",
+     "ojo": "Cuenta como segunda versión un cambio hecho por algo que observaste, con su dato antes y después."
+    },
+    {
+     "titulo": "Exporta a WebGL con la compresión desactivada",
+     "texto": "File, Build Settings, elige WebGL y pulsa Switch Platform. Con las escenas en la lista, abre Player Settings, Publishing Settings, y pon Compression Format en Disabled. Pulsa Build And Run: Unity exporta, levanta un servidor local y abre el navegador.",
+     "ojo": "GitHub Pages no puede enviar el encabezado que necesitan los archivos comprimidos, y el juego no carga."
+    },
+    {
+     "titulo": "Si la exportación falla con un error de il2cpp",
+     "texto": "El compilador de WebGL de Unity 2019.4 no entiende las letras con tilde en la ruta del proyecto. Mueve el proyecto a C:\\Unity y cuida que su nombre no las tenga.",
+     "codigo": "il2cpp.exe did not run properly!\n...opt.exe: ...\\Library\\il2cpp_cache\\940702E2....o: error: Could not open input file:"
+    },
+    {
+     "titulo": "Revisa lo que cambia en el navegador",
+     "texto": "El sonido empieza después de un clic en la página; el mouse se captura con un clic y Escape lo suelta; los datos no se guardan en un archivo sino que salen en la consola del navegador (F12); y Application.Quit no cierra la pestaña.",
+     "ojo": "La captura del mouse y la sensibilidad no se pudieron probar sin una persona: hazlo tú con la lista de comprobación."
+    },
+    {
+     "titulo": "Entrega la carpeta exportada",
+     "texto": "Sube a tu carpeta de Drive la carpeta completa que exportó Unity, con index.html, Build y TemplateData, y un LEEME con el origen de todo lo que no sea del kit. Se revisa y se publica en la página.",
+     "ojo": "Si agregaste imágenes o música de internet, anota de dónde salieron y su licencia. Sin eso no se puede publicar."
+    }
+   ],
+   "comprobar": [
+    "Tres personas distintas jugaron y quedó anotado qué no entendieron.",
+    "Hay una versión 2 con cambios por lo observado y el dato antes y después en el CSV.",
+    "El juego se exportó a WebGL con Compression Format en Disabled y la carpeta pesa unos 21 MB.",
+    "En Chrome hay un clic y aparece el cursor; la sensibilidad fina y la gruesa se sienten distintas; Escape suelta el mouse; la música suena al ritmo.",
+    "La carpeta exportada está en Drive, completa, con su LEEME de recursos."
+   ],
+   "recursos": [
+    {
+     "titulo": "Manual de Unity 2019.4: construir para WebGL",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/webgl-building.html"
+    },
+    {
+     "titulo": "Manual de Unity 2019.4: publicar un build de WebGL",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/webgl-deploying.html"
+    },
+    {
+     "titulo": "Manual de Unity 2019.4: el audio en WebGL",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/webgl-audio.html"
+    },
+    {
+     "titulo": "Manual de Unity 2019.4: cursor y pantalla completa en WebGL",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/webgl-cursorfullscreen.html"
+    }
+   ]
   }
  ]
 }
