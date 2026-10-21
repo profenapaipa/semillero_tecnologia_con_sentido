@@ -450,7 +450,7 @@ def desplegable_proyectos(datos, pre):
 def desplegable_secciones(pre):
     """Las secciones del portal, tambien desplegables."""
     items = [('como', 'Como funciona', 'ayuda', 'Que es la ruta y como se lee'),
-             ('numeros', 'Diagnostico', 'tendencia', 'El semillero en numeros'),
+             ('numeros', 'Diagnóstico', 'tendencia', 'El semillero en números'),
              ('proyectos', 'Los proyectos', 'tablero',
               'Los %s, por línea técnica' % PROYECTOS_EN_LETRAS),
              ('publicados', 'Publicados', 'cohete', 'Lo que ya se puede abrir'),
@@ -471,7 +471,7 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
     if datos:
         menu.append('<li>%s</li>' % desplegable_secciones(pre))
         menu.append('<li>%s</li>' % desplegable_proyectos(datos, pre))
-    menu.append('<li><a href="%sguias/index.html"%s>%s Guias</a></li>'
+    menu.append('<li><a href="%sguias/index.html"%s>%s Guías</a></li>'
                 % (pre, ' aria-current="page"' if activo == 'guias' else '',
                    ico('libro', 15)))
     menu.append('<li><a href="%sindex.html#publicados">%s Publicados</a></li>'
@@ -613,7 +613,7 @@ def lista_guias(gs, pre):
     if not gs:
         return ''
     return ('<div class="nota-caja verde guias-aqui">'
-            '<span class="titulo">%s Guias del semillero</span>'
+            '<span class="titulo">%s Guías del semillero</span>'
             '<ul class="recursos">%s</ul></div>'
             % (ico('libro', 16),
                ''.join('<li>%s<a href="%s">%s</a></li>'
@@ -1358,7 +1358,7 @@ def menu_izquierdo(datos, equipo, nv, act, vista, modulos=None):
 
     # Los modulos, plegables
     if modulos:
-        p.append('<details class="izq-grupo"%s><summary>%s Modulos '
+        p.append('<details class="izq-grupo"%s><summary>%s Módulos '
                  '<span class="cuenta">%d</span></summary><ul>'
                  % (' open' if vista == '-modulos' else '', ico('libro', 15), len(modulos)))
         for m in modulos:
@@ -1407,8 +1407,8 @@ def panel_derecho(datos, equipo, nv, act, hh, tt):
              'de subir.</p></div>' % PUNTOS_TAREA)
 
     p.append('<div class="caja-lat"><span class="rotulo">Tu avance</span><ul class="medidas-lat">')
-    for et, a, b in [('Ruta del semestre', hh, tt), ('Desarrollo tecnico', dh, dt),
-                     ('Articulo', ah, at)]:
+    for et, a, b in [('Ruta del semestre', hh, tt), ('Desarrollo técnico', dh, dt),
+                     ('Artículo', ah, at)]:
         p.append('<li>%s</li>' % progreso(et, a, b))
     p.append('</ul></div>')
 
@@ -1576,7 +1576,7 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
         listos += m['_hechas']
         total_ent += m['_total']
 
-    h = [cabeza('Modulos - %s' % equipo['nombre'],
+    h = [cabeza('Módulos · %s' % equipo['nombre'],
                 'Ruta de aprendizaje semana por semana del equipo %s, con las diapositivas de '
                 'cada sesion y lo que se pidio.' % equipo['numero'],
                 '../', linea=equipo['linea'], datos=datos,
@@ -1589,7 +1589,7 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
     h.append(tiradores())
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">%s Vista 2 de 5</span>'
-             '<h2>Modulos del semestre</h2>'
+             '<h2>Módulos del semestre</h2>'
              '<p>Una sesion, un modulo. Cada uno trae lo que se pidio esa semana, el material '
              'de apoyo que se proyecto en clase, y recursos de fuera para repasar. '
              'Las diapositivas estan aqui: no hay que ir a buscarlas al Drive.</p></div>'
@@ -1600,7 +1600,7 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
     h.append('<section class="bloque sobre-superficie"><div class="envoltura">')
     h.append('<ol class="modulos">')
     ETIQ = {'todos': 'para todos', 'unity': 'Unity', 'software': 'Desarrollo de software',
-            'electronica': 'Electronica', 'audiovisual': 'Audiovisual'}
+            'electronica': 'Electrónica', 'audiovisual': 'Audiovisual'}
     # Regla de desbloqueo, al estilo del camino: estan abiertos todos los
     # modulos hasta donde va el equipo, y se cierran los siguientes. El primer
     # modulo con entregables sin cumplir es "donde vas": ese tambien esta
@@ -1966,8 +1966,15 @@ def pagina_hoy(datos, equipo):
             continue
         otros += [(n, t) for t in n['tareas'] if not t[2]]
 
+    # Cuantos niveles posteriores ya tienen trabajo hecho. Si son varios y al
+    # nivel actual le faltan una o dos tareas, el equipo no esta empezando:
+    # esta atascado en un tramite. Decirle "vas en el nivel 1" a un equipo con
+    # el 72% de la ruta hecha es desmotivarlo por un documento de agosto.
+    adelante = sum(1 for n in nv if n['n'] > act['n'] and n['hechas'] > 0)
+    destrabar = (len(pendientes_nivel) <= 2 and adelante >= 1)
+
     h = [cabeza('Lo de hoy · %s' % equipo['nombre'],
-                'Lo que le toca hoy al equipo %s: lo que tiene pendiente y las guias '
+                'Lo que le toca hoy al equipo %s: lo que tiene pendiente y las guías '
                 'que le sirven.' % equipo['numero'], '../', linea=equipo['linea'],
                 datos=datos, mapa=mapa_fijo(datos, equipo, nv, act, '-hoy'))]
     h.append(portada_equipo(datos, equipo, hh, tt))
@@ -1979,13 +1986,17 @@ def pagina_hoy(datos, equipo):
     # --- cuanto falta ---
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="hoy-cabeza">')
-    h.append('<span class="rotulo">%s Sesion del %s</span>'
+    h.append('<span class="rotulo">%s Sesión del %s</span>'
              % (ico('reloj', 14), e(fecha_larga(meta['revisado']))))
     h.append('<h2>Lo de hoy</h2>')
     h.append('<p class="entradilla">%s</p>' % e(meta.get('sesionHoy', '')))
     h.append('<div class="hoy-cifras">')
-    h.append('<div><span class="cifra">%d</span><span class="pie">dias para la muestra</span></div>'
+    h.append('<div><span class="cifra">%d</span><span class="pie">días para la muestra, el 29 de octubre</span></div>'
              % max(faltan, 0))
+    if meta.get('entregaOficial'):
+        h.append('<div><span class="cifra">%d</span>'
+                 '<span class="pie">días para la entrega oficial, el 13 de noviembre</span></div>'
+                 % max(dias_entre(meta['revisado'], meta['entregaOficial']), 0))
     h.append('<div><span class="cifra">%d</span><span class="pie">sesiones incluida esta</span></div>'
              % len(meta.get('sesionesRestantes', [])))
     h.append('<div><span class="cifra">%d</span><span class="pie">tareas sin evidencia</span></div>'
@@ -1993,30 +2004,47 @@ def pagina_hoy(datos, equipo):
     h.append('</div></div>')
     h.append('</div></section>')
 
-    # --- lo primero: el nivel actual ---
+    # --- lo primero: lo que destraba, si aplica ---
+    if destrabar:
+        h.append('<section class="bloque"><div class="envoltura">')
+        h.append('<div class="destrabar">')
+        h.append('<span class="rotulo">%s Lo primero de hoy</span>' % ico('llave', 15))
+        h.append('<h2>Están a %s de que se les refleje lo que ya hicieron</h2>'
+                 % ('una tarea' if len(pendientes_nivel) == 1 else '%d tareas' % len(pendientes_nivel)))
+        h.append('<p class="entradilla">El nivel %d no se ha cerrado, y la ruta va '
+                 'en orden: por eso el tablero los muestra ahí aunque ya tengan trabajo '
+                 'hecho en %s posteriores. No es que vayan atrasados, es que falta '
+                 'cerrar esto.</p>'
+                 % (act['n'], 'un nivel' if adelante == 1 else '%d niveles' % adelante))
+        h.append('<ul class="tareas">%s</ul>'
+                 % ''.join(fila_tarea(t) for t in pendientes_nivel))
+        h.append('</div></div></section>')
+
+    # --- el nivel actual ---
     h.append('<section class="bloque sobre-superficie"><div class="envoltura">')
-    h.append('<div class="cab-seccion"><span class="rotulo">Empiecen por aqui</span>'
+    h.append('<div class="cab-seccion"><span class="rotulo">%s</span>'
              '<h2>Vas en %s, nivel %d de 7</h2><p>%s</p></div>'
-             % (e(act['fase']['nombre']), act['n'], e(act['fase']['que'])))
+             % ('Dónde va la ruta' if destrabar else 'Empiecen por aquí',
+                e(act['fase']['nombre']), act['n'], e(act['fase']['que'])))
     if pendientes_nivel:
         h.append('<ul class="tareas">%s</ul>'
                  % ''.join(fila_tarea(t) for t in pendientes_nivel))
     else:
-        h.append('<div class="nota-caja verde"><span class="titulo">%s<b>Este nivel esta completo</b></span>'
+        h.append('<div class="nota-caja verde"><span class="titulo">%s<b>Este nivel está completo</b></span>'
                  'Sigan con el siguiente nivel de la ruta.</div>' % ico('check', 17))
     h.append('</div></section>')
 
     # --- lo que falta en el resto de la ruta ---
     if otros:
         h.append('<section class="bloque"><div class="envoltura">')
-        h.append('<div class="cab-seccion"><span class="rotulo">Y ademas</span>'
+        h.append('<div class="cab-seccion"><span class="rotulo">Y además</span>'
                  '<h2>%d tareas de otros niveles</h2>'
-                 '<p>Quedaron atras. Si hoy sobra tiempo, estas son las que mas pesan '
+                 '<p>Quedaron atrás. Si hoy sobra tiempo, estas son las que más pesan '
                  'en el avance del proyecto.</p></div>' % len(otros))
         h.append('<ul class="tareas">%s</ul>'
                  % ''.join(fila_tarea(t) for _n, t in otros[:6]))
         if len(otros) > 6:
-            h.append('<p class="dato">Y %d mas, en la vista de la ruta.</p>' % (len(otros) - 6))
+            h.append('<p class="dato">Y %d más, en la vista de la ruta.</p>' % (len(otros) - 6))
         h.append('</div></section>')
 
     # --- las guias que le sirven a este equipo ---
@@ -2024,10 +2052,10 @@ def pagina_hoy(datos, equipo):
               if 'todos' in (g.get('para') or []) or equipo['linea'] in (g.get('para') or [])]
     if utiles:
         h.append('<section class="bloque sobre-superficie"><div class="envoltura">')
-        h.append('<div class="cab-seccion"><span class="rotulo">Con que apoyarse</span>'
-                 '<h2>Guias para su linea</h2>'
+        h.append('<div class="cab-seccion"><span class="rotulo">Con qué apoyarse</span>'
+                 '<h2>Guías para su línea</h2>'
                  '<p>Escritas a partir de las barreras que los equipos reportaron. '
-                 'No estan bloqueadas.</p></div>')
+                 'No están bloqueadas.</p></div>')
         h.append('<div class="rejilla c2">')
         for g in utiles:
             h.append('<a class="tarjeta-guia revelar" href="../guias/%s.html">'
@@ -2037,17 +2065,22 @@ def pagina_hoy(datos, equipo):
 
     # --- que tiene que existir el 29 ---
     h.append('<section class="bloque"><div class="envoltura">')
-    h.append('<div class="destacado"><h3>%s Que tiene que existir el 29 de octubre</h3>'
-             '<p>El dia de la muestra tiene que haber algo que otra persona pueda usar, '
-             'ver o leer sin que ustedes se lo expliquen: el prototipo funcionando hasta '
-             'donde llego, el articulo con sus secciones escritas y la carpeta del equipo '
-             'con las evidencias. Lo que no funcione se cuenta en la seccion 3.4 del '
-             'articulo; escribirlo no baja la nota, ocultarlo si se nota.</p></div>'
+    h.append('<div class="destacado"><h3>%s Las dos fechas que importan</h3>'
+             '<p><b>El 29 de octubre es la muestra:</b> tiene que haber algo que otra '
+             'persona pueda usar, ver o leer sin que ustedes se lo expliquen. El '
+             'prototipo funcionando hasta donde llegó, el artículo con sus secciones '
+             'escritas y la carpeta del equipo con las evidencias.</p>'
+             '<p><b>El 13 de noviembre es la entrega oficial.</b> Las sesiones del '
+             'semillero van hasta el 30 de octubre; despues el trabajo sigue en clase. '
+             'Que haya una segunda fecha no significa dejarlo todo para noviembre: lo '
+             'que no esté el 29 no se alcanza a arreglar en clase.</p>'
+             '<p>Lo que no funcione se cuenta en la sección 3.4 del artículo. '
+             'Escribirlo no baja la nota; ocultarlo sí se nota.</p></div>'
              % ico('cohete', 20))
     h.append('<div class="botones" style="margin-top:14px">')
     h.append('<a class="boton principal" href="%s-ruta.html">%s Ver la ruta completa</a>' % (e(s), ico('mapa', 16)))
-    h.append('<a class="boton" href="%s-articulo.html">Estado del articulo</a>' % e(s))
-    h.append('<a class="boton" href="../guias/index.html">Todas las guias</a>')
+    h.append('<a class="boton" href="%s-articulo.html">Estado del artículo</a>' % e(s))
+    h.append('<a class="boton" href="../guias/index.html">Todas las guías</a>')
     h.append('</div></div></section>')
 
     h.append('</main>')
@@ -2112,7 +2145,7 @@ def pagina_guia(datos, g):
     pre = '../'
     h = [cabeza(g['titulo'], g['resumen'], pre, datos=datos)]
     h.append('<header class="portada compacta"><div class="envoltura envoltura-lectura">')
-    h.append('<p class="rotulo">%s Guia del semillero</p>' % ico('libro', 14))
+    h.append('<p class="rotulo">%s Guía del semillero</p>' % ico('libro', 14))
     h.append('<h1>%s</h1>' % e(g['titulo']))
     h.append('<p class="bajada">%s</p>' % e(g['resumen']))
     # "Vista previa" marca el material publicado antes de que el docente lo
@@ -2122,7 +2155,7 @@ def pagina_guia(datos, g):
     h.append('</div></header>')
 
     h.append('<section class="bloque"><div class="envoltura envoltura-lectura">')
-    h.append('<div class="destacado"><h3>%s De donde sale esta guia</h3><p>%s</p></div>'
+    h.append('<div class="destacado"><h3>%s De dónde sale esta guía</h3><p>%s</p></div>'
              % (ico('diana', 20), e(g['porQue'])))
     h.append('</div></section>')
 
@@ -2138,7 +2171,7 @@ def pagina_guia(datos, g):
 
     h.append('<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">')
     h.append('<div class="cab-seccion"><span class="rotulo">Paso a paso</span>'
-             '<h2>Como se hace</h2></div>')
+             '<h2>Cómo se hace</h2></div>')
     h.append('<ol class="guia-pasos">')
     for paso in g['pasos']:
         h.append('<li><h3>%s</h3><p>%s</p>' % (e(paso['titulo']), e(paso['texto'])))
@@ -2153,7 +2186,7 @@ def pagina_guia(datos, g):
     if g.get('comprobar'):
         h.append('<section class="bloque"><div class="envoltura envoltura-lectura">')
         h.append('<div class="cab-seccion"><span class="rotulo">Antes de darlo por hecho</span>'
-                 '<h2>Como saber si quedo bien</h2></div>')
+                 '<h2>Cómo saber si quedó bien</h2></div>')
         h.append('<ul class="lista-check">%s</ul>'
                  % ''.join('<li>%s%s</li>' % (ico('check', 15), e(c)) for c in g['comprobar']))
         h.append('</div></section>')
@@ -2161,8 +2194,8 @@ def pagina_guia(datos, g):
     if g.get('recursos'):
         h.append('<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">')
         h.append('<div class="cab-seccion"><span class="rotulo">Para profundizar</span>'
-                 '<h2>Documentacion oficial</h2>'
-                 '<p>Cada enlace se comprobo antes de publicarlo.</p></div>')
+                 '<h2>Documentación oficial</h2>'
+                 '<p>Cada enlace se comprobó antes de publicarlo.</p></div>')
         h.append('<ul class="recursos">%s</ul>'
                  % ''.join('<li>%s<a href="%s">%s</a></li>'
                            % (ico('externo', 15), e(r['url']), e(r['titulo']))
@@ -2170,7 +2203,7 @@ def pagina_guia(datos, g):
         h.append('</div></section>')
 
     h.append('<section class="bloque"><div class="envoltura envoltura-lectura">')
-    h.append('<div class="botones"><a class="boton" href="%sguias/index.html">%s Todas las guias</a>'
+    h.append('<div class="botones"><a class="boton" href="%sguias/index.html">%s Todas las guías</a>'
              '<a class="boton" href="%sindex.html">Volver al portal</a></div>'
              % (pre, ico('libro', 16), pre))
     h.append('</div></section>')
@@ -2181,21 +2214,21 @@ def pagina_guia(datos, g):
 def pagina_guias(datos, guias):
     """El indice de las guias, agrupadas por a quien sirven."""
     pre = '../'
-    h = [cabeza('Guias del semillero',
-                'Material propio del semillero: %d guias que responden a las barreras '
+    h = [cabeza('Guías del semillero',
+                'Material propio del semillero: %d guías que responden a las barreras '
                 'que los equipos escribieron.' % len(guias), pre, activo='guias',
                 datos=datos)]
     h.append('<header class="portada compacta"><div class="envoltura envoltura-lectura">')
     h.append('<p class="rotulo">%s Material del semillero</p>' % ico('libro', 14))
-    h.append('<h1>Guias del semillero</h1>')
-    h.append('<p class="bajada">Cada guia responde a una barrera que un equipo escribio '
-             'de verdad. No estan bloqueadas: se abren cuando hagan falta.</p>')
+    h.append('<h1>Guías del semillero</h1>')
+    h.append('<p class="bajada">Cada guía responde a una barrera que un equipo escribió '
+             'de verdad. No están bloqueadas: se abren cuando hagan falta.</p>')
     h.append('</div></header>')
 
     GRUPOS = [('todos', 'Para todos los equipos'),
-              ('audiovisual', 'Linea audiovisual'),
+              ('audiovisual', 'Línea audiovisual'),
               ('software', 'Desarrollo de software'),
-              ('electronica', 'Electronica y robotica'),
+              ('electronica', 'Electrónica y robótica'),
               ('unity', 'Unity')]
     h.append('<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">')
     for clave, titulo in GRUPOS:

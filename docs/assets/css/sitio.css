@@ -1971,7 +1971,7 @@ details.mas > div { min-width: 0; }
 }
 
 
-/* ============ 30. Guias del semillero ============ */
+/* ============ 30. Guías del semillero ============ */
 /* Material propio, escrito a partir de las barreras que los equipos
    reportaron. No se bloquea nunca: el objetivo es que nadie se quede sin
    con que seguir. */
@@ -2109,3 +2109,24 @@ details.mas > div { min-width: 0; }
 .guia-codigo code { font-size: inherit; overflow-wrap: normal; }
 .descargas { margin-top: 22px; }
 .descargas .peso { color: var(--tinta-suave); font-family: var(--fuente-datos); font-size: 12px; }
+
+
+/* ---- El aviso que destraba, en la pagina de hoy ---- */
+/* Va antes que el nivel actual y con el color de la linea, porque es lo
+   primero que tiene que hacer el equipo. Sin esto la pagina le decia "vas en
+   el nivel 1" a equipos con el 72% de la ruta hecha. */
+.destrabar {
+  padding: 22px 24px;
+  border: 1px solid var(--linea, var(--cian));
+  border-left: 5px solid var(--linea, var(--cian));
+  border-radius: var(--radio);
+  background: var(--linea-t, var(--superficie2));
+  box-shadow: var(--alzado-1);
+}
+.destrabar .rotulo {
+  display: inline-flex; align-items: center; gap: 7px;
+  color: var(--linea, var(--cian)); margin-bottom: 8px;
+}
+.destrabar h2 { font-size: var(--t-titulo3, 22px); letter-spacing: -.02em; }
+.destrabar .entradilla { margin-top: 8px; max-width: 72ch; color: var(--tinta-suave); }
+.destrabar .tareas { margin-top: 14px; }

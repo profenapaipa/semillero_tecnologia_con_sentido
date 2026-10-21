@@ -19,7 +19,9 @@
     "_nota_estudiantes": "El sitio es público y no hay autorización para publicar nombres de estudiantes. Cada uno se identifica con un código fijo (E01, E02...). La equivalencia con el nombre es privada y no se sube a ningún repositorio.",
     "_nota_colegio": "El semillero es un proyecto personal de Néstor Andrés Paipa. El sitio no lleva credito ni marca de ninguna institución.",
     "muestra": "2026-10-29",
-    "sesionHoy": "Penúltima sesión antes de la muestra. Hoy se cierra lo que quedó a medias y se deja listo lo que haya que mostrar el 29."
+    "sesionHoy": "Penúltima sesión antes de la muestra. Hoy se cierra lo que quedó a medias y se deja listo lo que haya que mostrar el 29.",
+    "entregaOficial": "2026-11-13",
+    "_nota_fechas": "Dos fechas distintas y las dos ciertas: la muestra del 29 de octubre, que es cuando se enseña lo construido, y la entrega oficial del 13 de noviembre. Las sesiones del semillero van hasta el 30 de octubre; después el trabajo sigue en clase."
   },
   "fases": [
     {
