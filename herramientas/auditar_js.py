@@ -61,6 +61,16 @@ PAGINAS = [
     os.path.join('equipos', 'equipo-2-2-modulos.html'),
 ]
 
+# Una pagina por linea tecnica, para el contraste del boton "Lo de hoy": su
+# fondo cambia segun data-linea, y el bug que motivo esta comprobacion solo
+# aparecia en unas lineas y no en otras, segun el color de fondo de cada una.
+PAGINAS_LINEA = [
+    os.path.join('equipos', 'equipo-1.html'),      # software
+    os.path.join('equipos', 'equipo-10-1.html'),   # unity
+    os.path.join('equipos', 'equipo-2-1.html'),    # audiovisual
+    os.path.join('equipos', 'equipo-4.html'),      # electronica
+]
+
 SONDA = """
 <script>
 window.__errJS = [];
@@ -71,14 +81,43 @@ window.addEventListener('error', function (e) {
 window.addEventListener('unhandledrejection', function (e) {
   window.__errJS.push('promesa sin atender: ' + e.reason);
 });
+
+// Contraste WCAG 2.1 entre dos "rgb(r, g, b)" tal como los devuelve
+// getComputedStyle: no entre tokens en el papel, entre lo que de verdad
+// quedo pintado despues de resolver toda la cascada.
+function __contrasteWCAG(rgbA, rgbB) {
+  function partes(rgb) {
+    var m = (rgb || '').match(/[\\d.]+/g) || [0, 0, 0];
+    return m.slice(0, 3).map(Number);
+  }
+  function luminancia(rgb) {
+    var c = partes(rgb).map(function (v) {
+      v = v / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  }
+  var l1 = luminancia(rgbA), l2 = luminancia(rgbB);
+  var claro = Math.max(l1, l2), oscuro = Math.min(l1, l2);
+  return (claro + 0.05) / (oscuro + 0.05);
+}
+
 window.addEventListener('load', function () {
   setTimeout(function () {
     var b = document.getElementById('tema');
+    var bh = document.querySelector('.boton-hoy');
+    var botonTxt = 'sin-boton';
+    if (bh) {
+      var cs = getComputedStyle(bh);
+      var ratio = __contrasteWCAG(cs.color, cs.backgroundColor);
+      botonTxt = ratio.toFixed(2);
+    }
     document.title = 'AUD' + [
       'completo=' + (window.__sitioCompleto === true ? 'si' : 'NO'),
       'barra=' + (document.querySelector('.progreso-lectura') ? 'si' : 'NO'),
       'tiradores=' + document.querySelectorAll('[data-pliega][aria-expanded]').length,
       'tema=' + (b ? (b.getAttribute('data-tema') || 'SIN-ATRIBUTO') : 'sin boton'),
+      'boton=' + botonTxt,
       'errores=' + (window.__errJS.length ? window.__errJS.join(' / ') : 'ninguno')
     ].join('|');
   }, 2600);
@@ -149,6 +188,34 @@ def main():
         if d.get('tema') in ('SIN-ATRIBUTO',):
             fallas.append('%s: el botón de tema quedó sin estado, o sea que el '
                           'selector no corrió' % rel)
+
+    # El contraste calculado del botón "Lo de hoy", una página por línea
+    # técnica: su fondo cambia según data-linea y el bug que motivó esta
+    # comprobación solo aparecía en unas líneas y no en otras.
+    print('\n-- contraste calculado de "Lo de hoy", por línea técnica --')
+    for rel in PAGINAS_LINEA:
+        if not os.path.isfile(os.path.join(DOCS, rel)):
+            fallas.append('%s: la página no existe' % rel)
+            continue
+        d = medir(chrome, rel)
+        if d is None:
+            fallas.append('%s: sin medida de contraste' % rel)
+            continue
+        boton = d.get('boton', 'sin-boton')
+        print('   %-34s boton=%s' % (rel, boton))
+        if boton == 'sin-boton':
+            fallas.append('%s: no se encontró el botón "Lo de hoy"' % rel)
+        else:
+            try:
+                ratio = float(boton)
+            except ValueError:
+                fallas.append('%s: no se pudo leer el contraste del botón' % rel)
+            else:
+                if ratio < 4.5:
+                    fallas.append('%s: el botón "Lo de hoy" mide %.2f a 1 de '
+                                  'contraste calculado en el navegador, por '
+                                  'debajo del mínimo de 4.5 a 1 de WCAG AA'
+                                  % (rel, ratio))
 
     print()
     if fallas:

@@ -639,7 +639,16 @@ def mapa_fijo(datos, equipo, nv, act, vista_activa):
     s = equipo['slug']
     p = ['<div class="mapa"><div class="envoltura">']
 
-    # fila 1: donde estoy en la jerarquia
+    # fila 1: donde estoy en la jerarquia, y el boton de hoy al otro extremo.
+    # El boton vivia antes dentro de <nav class="mapa-vistas">, la fila de
+    # pestanas de abajo, y eso le traia dos problemas medidos en el
+    # navegador: la regla ".mapa-vistas a" le ganaba el color de texto por
+    # especificidad (el boton quedaba gris sobre su propio fondo, contraste
+    # real de hasta 1.1 a 1 en tema oscuro), y en pantallas angostas podia
+    # quedar fuera de vista, porque esa fila se desplaza horizontalmente.
+    # Aqui, en la fila de la migaja de pan, no compite con esas reglas y
+    # nunca se oculta por scroll.
+    p.append('<div class="mapa-cabecera">')
     p.append('<ol class="mapa-ruta">')
     p.append('<li><a href="../index.html">%s Portal</a></li>' % ico('inicio', 14))
     p.append('<li><a href="../index.html#linea-%s"><span class="insignia">%s %s</span></a></li>'
@@ -649,18 +658,16 @@ def mapa_fijo(datos, equipo, nv, act, vista_activa):
              '<span class="num-mapa">%s</span>%s</a></li>'
              % (e(s), e(equipo['numero']), e(equipo['nombre'])))
     p.append('</ol>')
+    p.append('<a class="boton-hoy" href="%s-hoy.html"%s>%s<span>Lo de hoy</span></a>'
+             % (e(s), ' aria-current="page"' if vista_activa == '-hoy' else '',
+                ico('diana', 16)))
+    p.append('</div>')
 
-    # fila 2: las cuatro subsecciones
+    # fila 2: las cinco subsecciones
     p.append('<nav class="mapa-vistas" aria-label="Vistas del proyecto">')
     for titulo, sufijo, icono in VISTAS:
         actual = ' aria-current="page"' if sufijo == vista_activa else ''
         p.append('<a href="%s%s.html"%s>%s%s</a>' % (e(s), sufijo, actual, ico(icono, 15), e(titulo)))
-    # El boton de hoy va aqui, pegado a las vistas y con relleno solido: es el
-    # unico elemento del mapa que lo lleva, y por eso se ve de inmediato sin
-    # necesidad de un color de alarma.
-    p.append('<a class="boton-hoy" href="%s-hoy.html"%s>%s<span>Lo de hoy</span></a>'
-             % (e(s), ' aria-current="page"' if vista_activa == '-hoy' else '',
-                ico('diana', 15)))
     p.append('</nav>')
 
     # fila 3: los siete niveles, siempre visibles

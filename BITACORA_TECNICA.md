@@ -984,3 +984,108 @@ nuevos de 2019.4.38f1 y compilaron sin errores (13.5).
 **El aviso de `auditar.py`** sobre el color `#C59BFF` en `sitio.css` línea 2062
 es la auditoría leyendo un comentario del commit `779660e`, no un color en uso.
 Las fallas son cero.
+
+## 14. El botón "Lo de hoy" era casi invisible, con dos causas distintas
+
+Fecha: 21 de octubre de 2026. Pedido: "el botón de 'Lo de hoy' sigue estando
+con fallas en el contraste, mejora eso como experto UX/UI para definir su
+lugar, colores, tamaño, contraste, etc".
+
+La auditoría estática de contraste (`contraste.py`) daba limpio porque compara
+tokens de marca entre sí, en el papel. El problema real solo aparecía midiendo
+el botón ya renderizado en el navegador, con la cascada completa de CSS
+resuelta, y resultó tener dos causas independientes, encontradas una después
+de la otra.
+
+### 14.1 Primera causa: un choque de especificidad
+
+El botón vivía dentro de `<nav class="mapa-vistas">`, la fila de las cinco
+pestañas (Resumen, Módulos, La ruta, Desarrollo, El artículo). Esa fila tiene
+la regla `.mapa-vistas a { color: var(--sobre-panel-suave) }`, con
+especificidad 0-1-1 (clase más elemento). La regla propia del botón,
+`.boton-hoy { color: var(--sobre-relleno) }`, tiene especificidad 0-1-0 (una
+sola clase) y pierde el empate.
+
+Medido antes de tocar nada: el texto no se pintaba blanco sobre el color de
+la línea, se pintaba gris apagado (`#94A4C6`), el mismo de las pestañas sin
+seleccionar.
+
+**Arreglo:** el botón se movió de sitio. Ya no vive en la fila de pestañas,
+que además se desplaza horizontalmente en pantallas angostas y podía dejarlo
+fuera de vista; pasa a la fila de la migaja de pan, en un contenedor nuevo
+`.mapa-cabecera` con `justify-content: space-between`, donde no compite con
+esa regla y nunca depende de scroll para verse.
+
+### 14.2 Segunda causa, más de fondo: el token equivocado
+
+Con el botón ya movido, el fondo seguía midiendo el mismo azul pálido en
+tema claro y en tema oscuro, lo cual no tiene sentido si el fondo sigue al
+tema. La causa está en la sección 20 de `sitio.css`, "Acentos dentro del
+panel oscuro": el mapa vive sobre un panel que es oscuro en los dos temas
+del sitio, así que ahí dentro `--linea` se redefine para apuntar a la
+variante `-panel` de cada color de línea, pensada para leerse como **texto**
+sobre ese panel. Esa variante no cambia con el tema, a propósito: el panel
+es oscuro siempre.
+
+El botón usaba `background: var(--linea, ...)`, y por vivir dentro de
+`.mapa` heredaba esa variante de texto, no el color vivo de relleno. Medido:
+
+| Tema | Fondo real | Contraste con sobre-relleno |
+|---|---|---|
+| Claro | `#8FA8FF` (variante de texto, invariable) | 2.28 a 1, falla |
+| Oscuro | `#8FA8FF` (el mismo valor) | 8.67 a 1, pasa por accidente |
+
+En oscuro se leía bien de pura casualidad, porque `--sobre-relleno` sí se
+oscurece con el tema y quedaba texto oscuro sobre ese mismo azul pálido. En
+claro, blanco sobre un azul casi tan claro como el blanco: invisible.
+
+**Arreglo:** el fondo deja de pasar por `--linea`. Usa el color de línea real
+por separado, el mismo que `.tablero .celda` ya usa de forma directa en sus
+bordes (`var(--linea-software)` y las demás), que sí invierte con el tema y
+está pensado para ser fondo, no texto.
+
+### 14.3 Contraste verificado en el navegador, no en la hoja de tokens
+
+Con las dos causas resueltas, medido con `getComputedStyle()` sobre el
+elemento real, las ocho combinaciones de línea técnica y tema:
+
+| Línea | Claro | Oscuro |
+|---|---|---|
+| Software | 6.94 a 1 | 8.67 a 1 |
+| Unity | 7.79 a 1 | 8.95 a 1 |
+| Audiovisual | 6.62 a 1 | 8.25 a 1 |
+| Electrónica | 6.68 a 1 | 8.56 a 1 |
+
+Las ocho pasan AA (4.5 a 1) con margen; seis de ocho pasan AAA (7 a 1). El
+estado activo, cuando ya se está viendo la página de hoy (`--sobre-panel`
+sobre `--panel`), mide 16.9 a 1 en claro y 17.4 a 1 en oscuro.
+
+### 14.4 Lugar, tamaño y color, decididos como UX/UI
+
+- **Lugar:** fila de la migaja de pan, extremo derecho, siempre visible, sin
+  depender de scroll horizontal.
+- **Tamaño:** subió de 13.5px/padding 7×15 a 14.5px/padding 10×20, con un
+  alto mínimo de 42px, el tamaño recomendado para tocar con el dedo.
+- **Color:** se mantiene el color de la línea técnica del equipo como fondo,
+  coherente con el resto del sitio, con `--sobre-relleno` como texto.
+- **Estado activo:** se invierte (fondo claro, texto oscuro) cuando ya se
+  está en la página de hoy, igual de sólido en el sentido contrario.
+- **Foco de teclado:** contorno de 2px en `--sobre-relleno`, con
+  `outline-offset`.
+
+### 14.5 Una comprobación nueva, permanente, en `auditar_js.py`
+
+`contraste.py` no podía ver este bug: compara tokens entre sí, nunca llegó a
+medir el par que de verdad terminaba junto en pantalla. Se agregó a
+`auditar_js.py` una función `__contrasteWCAG()` en JavaScript que calcula el
+contraste real entre `getComputedStyle(boton).color` y
+`.backgroundColor`, en una página por línea técnica (software, unity,
+audiovisual, electrónica), y falla si alguna baja de 4.5 a 1.
+
+Probada al revés: se reintrodujo a propósito el fondo viejo
+(`var(--linea-en-panel, var(--cian-panel))`) en la línea de software, y la
+auditoría lo marcó con el número exacto medido antes del arreglo (2.28 a 1),
+sin tocar las otras tres líneas, que seguían midiendo bien. Restaurado el
+arreglo, vuelve a pasar limpio.
+
+Las cuatro auditorías del repositorio pasan limpias tras el cambio.

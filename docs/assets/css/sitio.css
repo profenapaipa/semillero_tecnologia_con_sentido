@@ -2054,18 +2054,29 @@ details.mas > div { min-width: 0; }
 
 
 /* ============ 31. La sesion de hoy ============ */
-/* Medido en Chrome headless antes de tocar esto: el boton vivia dentro de
-   <nav class="mapa-vistas">, y ".mapa-vistas a" (especificidad 0-1-1) le
-   ganaba el color de texto a ".boton-hoy" (0-1-0). El texto no salia blanco
-   sobre el color de la linea: salia gris apagado, el mismo de las pestanas
-   sin seleccionar. Contraste real contra el fondo mas claro del juego,
-   unity en tema oscuro (#C59BFF): 1.13 a 1. Invisible en la practica.
+/* Dos causas distintas, las dos medidas en el navegador, no supuestas.
 
-   El arreglo no es subir la especificidad y dejarlo donde estaba: el boton
-   se movio de sitio (ver mapa_fijo en generar.py), a la fila de la migaja de
-   pan, fuera del alcance de esa regla. Aqui, ademas, se usa un selector de
-   dos clases para que ningun selector de una sola clase dentro de .mapa
-   lo vuelva a tapar aunque alguien lo anide mal el dia de manana. */
+   1. El boton vivia dentro de <nav class="mapa-vistas">, y
+      ".mapa-vistas a" (especificidad 0-1-1) le ganaba el color de texto a
+      ".boton-hoy" (0-1-0). Arreglo: el boton se movio de sitio (ver
+      mapa_fijo en generar.py), a la fila de la migaja de pan, fuera del
+      alcance de esa regla.
+
+   2. Con eso resuelto, el fondo seguia midiendo siempre el mismo azul
+      palido, IGUAL en tema claro que en tema oscuro, lo que no tiene
+      sentido si sigue al tema. Causa: la seccion 20, "Acentos dentro del
+      panel oscuro", redefine --linea dentro de .mapa para que apunte a la
+      variante "-panel" de cada color (pensada para leerse como TEXTO sobre
+      el panel, que es oscuro en los dos temas, por eso no cambia). El
+      boton heredaba esa variante de texto y la usaba como FONDO, con
+      --sobre-relleno encima: en tema claro, blanco sobre un azul palido,
+      2.28 a 1. En oscuro se leia bien por accidente, porque --sobre-relleno
+      si se oscurece con el tema.
+
+      Arreglo: el fondo deja de pasar por --linea. Usa el color de linea
+      real por separado, el mismo que .tablero .celda ya usa de forma
+      directa en sus bordes (var(--linea-software) y las demas), que si
+      invierte con el tema y esta pensado para ser FONDO, no texto. */
 
 .mapa .boton-hoy {
   display: inline-flex; align-items: center; gap: 8px;
@@ -2073,7 +2084,7 @@ details.mas > div { min-width: 0; }
   padding: 10px 20px;
   min-height: 42px;
   border-radius: 999px;
-  background: var(--linea, var(--cian));
+  background: var(--linea-software);
   color: var(--sobre-relleno);
   font-weight: 700; font-size: 14.5px; letter-spacing: -.005em;
   text-decoration: none; white-space: nowrap;
@@ -2081,8 +2092,14 @@ details.mas > div { min-width: 0; }
               var(--alzado-2);
   transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
 }
+/* Una regla por linea tecnica, la misma idea que la seccion 3 usa para
+   --linea: software es el valor base de arriba, las otras tres lo pisan. */
+[data-linea="unity"]       .mapa .boton-hoy { background: var(--linea-unity); }
+[data-linea="electronica"] .mapa .boton-hoy { background: var(--linea-electronica); }
+[data-linea="audiovisual"] .mapa .boton-hoy { background: var(--linea-audiovisual); }
 /* Contraste verificado con la formula de WCAG 2.1, texto --sobre-relleno
-   sobre cada color de linea, antes de publicar:
+   sobre el color de linea DE FONDO (no la variante de texto), medido en el
+   navegador tras el arreglo:
      claro:  software 6.94:1 · unity 7.79:1 · audiovisual 6.62:1 · electronica 6.68:1
      oscuro: software 8.67:1 · unity 8.95:1 · audiovisual 8.25:1 · electronica 8.56:1
    Los ocho pasan AA (4.5:1) de sobra; seis de ocho pasan AAA (7:1). */
