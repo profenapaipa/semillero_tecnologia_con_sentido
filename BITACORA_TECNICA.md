@@ -583,7 +583,7 @@ contraste.
 
 El sitio es público y no hay autorización para publicar nombres de estudiantes,
 que son menores de edad. El 17 de octubre se reemplazaron todos por un código
-fijo: E01 a E26 (el 21 de octubre se sumó E27, quien trabaja en el Equipo 1 sin ser del semillero). El código es el mismo en todos los equipos donde la persona
+fijo: E01 a E26 (el 21 de octubre se sumó E27 al Equipo 1). El código es el mismo en todos los equipos donde la persona
 participa, de modo que el trabajo de una misma persona sigue siendo rastreable.
 
 - Cambió el campo `integrantes` de los quince equipos con estudiantes, las
