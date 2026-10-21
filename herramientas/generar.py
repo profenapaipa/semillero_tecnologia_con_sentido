@@ -2057,6 +2057,56 @@ def pagina_hoy(datos, equipo):
     return '\n'.join(h)
 
 
+def carrusel_guia(g, pre='../'):
+    """
+    Las diapositivas de una guia que tambien existe en PowerPoint.
+
+    Mismo marcado que carrusel() de los modulos, para que sitio.js lo arranque
+    sin codigo nuevo: busca [data-carrusel] en cualquier pagina. Las imagenes
+    viven en assets/guias/<carpeta>/<n>.webp y las copia el script que publica
+    la guia, no este generador.
+    """
+    d = g.get('diapositivas')
+    if not d:
+        return ''
+    cid = 'car-guia-%s' % g['id']
+    rutas = ['%sassets/guias/%s/%d.webp' % (pre, d['carpeta'], n)
+             for n in range(1, len(d['titulos']) + 1)]
+    p = ['<div class="carrusel" data-carrusel>']
+    p.append('<div class="swiper principal-swiper" id="%s"><div class="swiper-wrapper">' % cid)
+    for ruta, alt in zip(rutas, d['titulos']):
+        p.append('<div class="swiper-slide"><img src="%s" alt="%s" loading="lazy" '
+                 'width="1600" height="900"></div>' % (e(ruta), e(alt)))
+    p.append('</div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div>'
+             '<div class="swiper-pagination"></div></div>')
+    p.append('<div class="swiper miniaturas-swiper" data-para="%s"><div class="swiper-wrapper">' % cid)
+    for n, ruta in enumerate(rutas, 1):
+        p.append('<div class="swiper-slide"><img src="%s" alt="" loading="lazy"><span>%d</span></div>'
+                 % (e(ruta), n))
+    p.append('</div></div></div>')
+    return ''.join(p)
+
+
+def descargas_guia(g, pre='../'):
+    """Archivos que acompanan la guia: la presentacion y los paquetes del kit."""
+    if not g.get('descargas'):
+        return ''
+    filas = []
+    for dsc in g['descargas']:
+        ruta = os.path.join(SALIDA, 'descargas', dsc['archivo'])
+        # El peso se mide del archivo real: si no existe, el enlace se omite
+        # en vez de publicar una descarga rota.
+        if not os.path.exists(ruta):
+            continue
+        kb = max(1, round(os.path.getsize(ruta) / 1024.0))
+        nombre = os.path.basename(dsc['archivo'])
+        filas.append('<li>%s<a href="%sdescargas/%s" download>%s</a> <span class="peso">%s, %d KB</span></li>'
+                     % (ico('documento', 15), pre, e(dsc['archivo']), e(dsc['titulo']), e(nombre), kb))
+    if not filas:
+        return ''
+    return '<ul class="recursos descargas">%s</ul>' % ''.join(filas)
+
+
 def pagina_guia(datos, g):
     """Una guia: por que existe, los pasos, como comprobar y con que apoyarse."""
     pre = '../'
@@ -2065,6 +2115,10 @@ def pagina_guia(datos, g):
     h.append('<p class="rotulo">%s Guia del semillero</p>' % ico('libro', 14))
     h.append('<h1>%s</h1>' % e(g['titulo']))
     h.append('<p class="bajada">%s</p>' % e(g['resumen']))
+    # "Vista previa" marca el material publicado antes de que el docente lo
+    # apruebe del todo: se puede usar, pero puede cambiar.
+    if g.get('estado'):
+        h.append('<p>%s</p>' % chip('ambar', g['estado']))
     h.append('</div></header>')
 
     h.append('<section class="bloque"><div class="envoltura envoltura-lectura">')
@@ -2072,12 +2126,24 @@ def pagina_guia(datos, g):
              % (ico('diana', 20), e(g['porQue'])))
     h.append('</div></section>')
 
+    if g.get('diapositivas') or g.get('descargas'):
+        h.append('<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">')
+        h.append('<div class="cab-seccion"><span class="rotulo">La presentacion</span>'
+                 '<h2>Las diapositivas de clase</h2>'
+                 '<p>Las mismas que se proyectan en la sesion. Abajo estan los pasos en texto, '
+                 'para leerlos de corrido.</p></div>')
+        h.append(carrusel_guia(g, pre))
+        h.append(descargas_guia(g, pre))
+        h.append('</div></section>')
+
     h.append('<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">')
     h.append('<div class="cab-seccion"><span class="rotulo">Paso a paso</span>'
              '<h2>Como se hace</h2></div>')
     h.append('<ol class="guia-pasos">')
     for paso in g['pasos']:
         h.append('<li><h3>%s</h3><p>%s</p>' % (e(paso['titulo']), e(paso['texto'])))
+        if paso.get('codigo'):
+            h.append('<pre class="guia-codigo"><code>%s</code></pre>' % e(paso['codigo']))
         if paso.get('ojo'):
             h.append('<div class="nota-caja ambar"><span class="titulo">%s Ojo con esto</span>%s</div>'
                      % (ico('bombilla', 15), e(paso['ojo'])))

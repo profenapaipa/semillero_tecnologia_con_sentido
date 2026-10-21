@@ -2092,3 +2092,20 @@ details.mas > div { min-width: 0; }
   font-variant-numeric: tabular-nums;
 }
 .hoy-cifras .pie { font-size: 12.5px; color: var(--tinta-suave); }
+
+/* ============ 32. Guias con diapositivas, codigo y descargas ============ */
+/* Las guias de Unity traen tres cosas que las otras no: la presentacion de
+   clase en carrusel, un mensaje de error copiado tal cual y los paquetes del
+   kit para descargar. El codigo va sobre el panel oscuro en los dos temas,
+   igual que en las diapositivas, para que el estudiante reconozca el mismo
+   bloque en la pagina y en la proyeccion. */
+.guia-codigo {
+  margin-top: 12px; padding: 14px 16px;
+  background: var(--panel); color: var(--sobre-panel);
+  border-radius: var(--radio-chico);
+  font-family: var(--fuente-datos); font-size: 13.5px; line-height: 1.5;
+  overflow-x: auto; white-space: pre;
+}
+.guia-codigo code { font-size: inherit; overflow-wrap: normal; }
+.descargas { margin-top: 22px; }
+.descargas .peso { color: var(--tinta-suave); font-family: var(--fuente-datos); font-size: 12px; }

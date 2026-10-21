@@ -803,3 +803,57 @@ Prometer en el material algo que el programa no hace es la forma más rápida de
 que un equipo pierda una tarde.
 
 El sitio pasa de 93 a 110 páginas.
+
+---
+
+## 13. Centro de desarrollo Unity del Equipo 10, 21 de octubre de 2026
+
+### 13.1 Dónde vive cada cosa
+
+El kit se construye fuera del portal, en
+`Proyectos repositorios Github/Kit Unity Equipo 10/`, que git ya ignora:
+
+| Carpeta | Qué hay |
+|---|---|
+| `Referencia/` | Proyecto Unity 2019.4.38f1 donde se compilan y prueban las piezas |
+| `Referencia/Assets/KitEquipo10/` | Lo que viaja en los paquetes: scripts, escenas y recursos |
+| `Referencia/Assets/Editor/ConstructorDelKit.cs` | Arma la escena de prueba y exporta los `.unitypackage`; no viaja |
+| `guias/` | Generadores de las presentaciones (`guia0.py`, `estilo.py`) y del texto web (`contenido_web.py`) |
+| `paquetes/` | `KitEquipo10_Motricidad.unitypackage` y `KitEquipo10_Ritmo.unitypackage` |
+
+`guias/publicar_guias.py` escribe las guías Unity en `datos/guias.json` y copia
+al sitio las diapositivas (`docs/assets/guias/<id>/`) y las descargas
+(`docs/descargas/unity/`). Reemplaza por id, así que se puede correr varias veces.
+
+### 13.2 Lo que se comprobó, no solo se escribió
+
+- Los 14 scripts compilan en Unity 2019.4.38f1 con cero errores y cero advertencias.
+- La escena `00_PruebaDelKit` corre en un ejecutable real de Windows y escribe
+  "Kit listo · versión correcta" en el registro del jugador.
+- El mensaje de error que cita la guía se obtuvo compilando el código de la foto
+  de 10.2: `(23,26): error CS1525: Invalid expression term '}'`.
+- Al correr el ejecutable, Windows abrió un aviso del Firewall y el arranque
+  esperó unos 20 segundos. Quedó en la guía: se pulsa Cancelar.
+- Las 9 diapositivas se revisaron renderizadas con PowerPoint, y el extractor
+  del sitio las clasifica todas como línea Unity.
+
+### 13.3 Tres campos nuevos y opcionales en las guías
+
+`pagina_guia` acepta ahora `estado` (un chip, por ejemplo "Vista previa"),
+`diapositivas` (carrusel con el mismo marcado de los módulos, así `sitio.js` lo
+arranca sin código nuevo) y `descargas` (con el peso medido del archivo real;
+si el archivo no existe, el enlace no se publica). Un paso puede traer
+`codigo`. Las guías anteriores no usan ninguno y se ven igual.
+
+Medido en Chrome sin ventana: Swiper inicializado, 9 de 9 imágenes cargadas,
+3 descargas, el bloque de código y ningún error de JavaScript.
+
+### 13.4 Pendiente
+
+- `extraer_modulos.py` toma como título de cada diapositiva la primera línea de
+  más de tres letras, que es la etiqueta de sección ("Unity"). No afecta a las
+  guías, que llevan sus títulos escritos, pero sí a los módulos.
+- Los dos enlaces rotos del hito u4 (11.3) se reemplazan con la Guía 1, que es
+  la de ese hito.
+- El Unity de este computador no tiene el módulo WebGL para 2019.4.38f1. Sin él
+  no hay build para publicar en la Fase 3.

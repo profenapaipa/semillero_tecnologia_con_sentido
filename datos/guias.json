@@ -1,652 +1,765 @@
 {
-  "_lee_esto": "Material propio del semillero. Cada guía responde a una barrera que un equipo escribió de verdad, y lo dice en su campo porQue. El editor aconsejado es CapCut, que es el que los equipos ya tienen instalado; donde CapCut no alcanza, la guía lo dice y propone la alternativa en vez de prometer lo que el programa no hace. Los enlaces externos se comprobaron uno por uno: todos respondían cuando se escribieron.",
-  "guias": [
+ "_lee_esto": "Material propio del semillero. Cada guía responde a una barrera que un equipo escribió de verdad, y lo dice en su campo porQue. El editor aconsejado es CapCut, que es el que los equipos ya tienen instalado; donde CapCut no alcanza, la guía lo dice y propone la alternativa en vez de prometer lo que el programa no hace. Los enlaces externos se comprobaron uno por uno: todos respondían cuando se escribieron.",
+ "guias": [
+  {
+   "id": "montar-en-capcut",
+   "titulo": "Montar el stop motion en CapCut",
+   "para": [
+    "audiovisual"
+   ],
+   "hitos": [
+    "v6"
+   ],
+   "modulos": [
+    "F"
+   ],
+   "resumen": "Pasar de una carpeta con cientos de fotos a una secuencia que se reproduce a doce por segundo.",
+   "porQue": "Es el primer paso de la edición y no estaba escrito en ninguna parte. Las demás guías de edición empiezan después de esto: si las fotos no quedan todas a la misma duración, nada de lo que venga después cuadra.",
+   "pasos": [
     {
-      "id": "montar-en-capcut",
-      "titulo": "Montar el stop motion en CapCut",
-      "para": [
-        "audiovisual"
-      ],
-      "hitos": [
-        "v6"
-      ],
-      "modulos": [
-        "F"
-      ],
-      "resumen": "Pasar de una carpeta con cientos de fotos a una secuencia que se reproduce a doce por segundo.",
-      "porQue": "Es el primer paso de la edición y no estaba escrito en ninguna parte. Las demás guías de edición empiezan después de esto: si las fotos no quedan todas a la misma duración, nada de lo que venga después cuadra.",
-      "pasos": [
-        {
-          "titulo": "Ordenen las fotos antes de importarlas",
-          "texto": "CapCut las va a poner en el orden del nombre del archivo. Si la cámara las numeró del 1 al 480, van bien. Si mezclaron varias sesiones, renómbrenlas por plano antes de importar: plano07_001, plano07_002 y así. Arreglar el orden dentro del editor cuesta mucho más.",
-          "ojo": "Una carpeta por plano. No metan los 40 planos juntos en la línea de tiempo."
-        },
-        {
-          "titulo": "Dejen la duración de foto por defecto antes de arrastrar",
-          "texto": "En los ajustes de CapCut hay una duración por defecto para las imágenes, que suele venir en 3 o 5 segundos. Si importan sin cambiarla, cada foto entra con esa duración y van a tener que corregir cientos de clips. Cámbienla primero."
-        },
-        {
-          "titulo": "La cuenta que convierte fotos en segundos",
-          "texto": "A doce fotos por segundo, cada foto dura un doceavo de segundo, es decir 0,083 segundos. Si su plano son 60 fotos, dura 5 segundos. Esa es la misma cuenta que ya tienen en la columna de fotos del guion técnico: la tabla les dice exactamente cuánto debe durar cada plano montado."
-        },
-        {
-          "titulo": "Importen y pongan todas las fotos del plano a la vez",
-          "texto": "Seleccionen todas las fotos del plano y arrástrenlas juntas a la línea de tiempo. Quedan una detrás de otra. Si la duración por defecto quedó bien puesta, el plano ya dura lo que debe."
-        },
-        {
-          "titulo": "Comparen con el guion técnico plano por plano",
-          "texto": "Al terminar cada plano, miren la duración que marca CapCut y compárenla con la del guion. Si no coinciden, es que faltan o sobran fotos, y es mejor saberlo ahora que al final, cuando la voz ya esté puesta.",
-          "ojo": "Vayan marcando Sí en la columna de grabado del guion técnico a medida que montan. Esa columna es la que les dice qué falta sin tener que acordarse."
-        },
-        {
-          "titulo": "Guarden el proyecto con un nombre y una fecha",
-          "texto": "Y exporten un borrador en baja calidad cada vez que terminen un canto. Si el proyecto se daña, un borrador exportado les salva el trabajo de una tarde."
-        }
-      ],
-      "comprobar": [
-        "Cada plano montado dura lo que dice la columna de duración del guion técnico.",
-        "No hay fotos repetidas ni saltadas: el movimiento se ve continuo a velocidad normal.",
-        "El proyecto está guardado y hay un borrador exportado del avance."
-      ],
-      "recursos": [
-        {
-          "titulo": "CapCut, sitio oficial y descarga",
-          "url": "https://www.capcut.com/"
-        }
-      ]
+     "titulo": "Ordenen las fotos antes de importarlas",
+     "texto": "CapCut las va a poner en el orden del nombre del archivo. Si la cámara las numeró del 1 al 480, van bien. Si mezclaron varias sesiones, renómbrenlas por plano antes de importar: plano07_001, plano07_002 y así. Arreglar el orden dentro del editor cuesta mucho más.",
+     "ojo": "Una carpeta por plano. No metan los 40 planos juntos en la línea de tiempo."
     },
     {
-      "id": "quitar-el-parpadeo",
-      "titulo": "Quitar el parpadeo de la luz en un stop motion ya grabado",
-      "para": [
-        "audiovisual"
-      ],
-      "hitos": [
-        "v4",
-        "v6"
-      ],
-      "modulos": [
-        "F"
-      ],
-      "resumen": "Qué se puede arreglar en CapCut cuando las fotos quedaron con saltos de luz, y qué no.",
-      "porQue": "El equipo 11.2 escribió esta barrera: \"cada vez que acercamos las manos para mover el crayón, la pantalla se oscurece o se aclara automáticamente y las fotos quedan con parpadeos de luz\". Ya grabaron, así que esta guía empieza por lo que todavía se puede arreglar en edición.",
-      "pasos": [
-        {
-          "titulo": "Primero entiendan qué lo causó",
-          "texto": "El celular vuelve a medir la luz en cada foto. Cuando una mano entra al encuadre, el teléfono cree que la escena se oscureció y sube la exposición; cuando la mano sale, la baja. Esas correcciones, una por foto, son el parpadeo. No es la lámpara: es la cámara corrigiendo."
-        },
-        {
-          "titulo": "Separen las tomas que se salvan de las que hay que repetir",
-          "texto": "Reproduzcan cada plano a velocidad normal y clasifíquenlo en tres montones: sin parpadeo, con parpadeo leve y con parpadeo que salta a la vista. Los dos primeros se arreglan. El tercero se regraba, y conviene saberlo antes de perder una tarde editando algo que no tiene arreglo.",
-          "ojo": "Háganlo plano por plano, no con el corto entero: el parpadeo no es parejo."
-        },
-        {
-          "titulo": "Sepan qué puede y qué no puede hacer CapCut",
-          "texto": "CapCut no tiene un efecto que quite el parpadeo automáticamente. Lo que sí tiene es Ajustar, con brillo, contraste, luminosidad y temperatura, y fotogramas clave. Con eso se corrige a mano un tramo corto, y se iguala un plano entero que quedó más oscuro que el de al lado. Lo que no se puede es arreglar foto por foto cuatrocientas fotos.",
-          "ojo": "Esto es importante para decidir: si el parpadeo es rápido, de foto a foto, en CapCut no hay arreglo razonable y conviene regrabar ese plano."
-        },
-        {
-          "titulo": "Igualen planos enteros entre sí",
-          "texto": "Si un plano quedó más oscuro que el siguiente, selecciónenlo, abran Ajustar y suban el brillo hasta que el corte entre los dos no se note. Esto sí vale la pena: son cuarenta ajustes como máximo, uno por plano, y resuelve el salto más molesto, que es el del corte."
-        },
-        {
-          "titulo": "Corrijan un tramo corto con fotogramas clave",
-          "texto": "Cuando dentro de un plano hay un tramo de uno o dos segundos que se aclara, pongan un fotograma clave antes y otro después, y bajen el brillo solo en el del medio. CapCut interpola el resto. Sirve para dos o tres tramos por plano, no para todo el corto."
-        },
-        {
-          "titulo": "Para lo que falte grabar, bloqueen la cámara",
-          "texto": "Antes de la primera foto: fijen la exposición y el balance de blancos, en la aplicación de stop motion o en el modo profesional del celular con ISO y velocidad manuales. Apaguen la luz del techo y dejen solo la LED. Y no muevan las manos dentro del encuadre mientras la cámara dispara.",
-          "ojo": "Esto responde la pregunta exacta que pidieron para grabar. Hasta que no se bloquee la exposición, el parpadeo vuelve."
-        },
-        {
-          "titulo": "Si de verdad necesitan corrección automática",
-          "texto": "DaVinci Resolve es gratuito y sí trae un efecto Deflicker, dentro de ResolveFX Revival. Vale la pena instalarlo solo si tienen varios planos con parpadeo rápido que no pueden regrabar. Para todo lo demás, CapCut alcanza y es el que ya saben usar."
-        }
-      ],
-      "comprobar": [
-        "Reproduzcan el plano corregido a velocidad normal, no cuadro a cuadro: el parpadeo se ve en movimiento.",
-        "Miren la cartulina blanca del fondo, que es donde más se nota el cambio de luz.",
-        "En el corte entre dos planos seguidos no debe haber un salto de brillo."
-      ],
-      "recursos": [
-        {
-          "titulo": "CapCut, sitio oficial y descarga",
-          "url": "https://www.capcut.com/"
-        },
-        {
-          "titulo": "DaVinci Resolve, solo si necesitan Deflicker",
-          "url": "https://www.blackmagicdesign.com/products/davinciresolve/"
-        }
-      ]
+     "titulo": "Dejen la duración de foto por defecto antes de arrastrar",
+     "texto": "En los ajustes de CapCut hay una duración por defecto para las imágenes, que suele venir en 3 o 5 segundos. Si importan sin cambiarla, cada foto entra con esa duración y van a tener que corregir cientos de clips. Cámbienla primero."
     },
     {
-      "id": "voz-y-animacion",
-      "titulo": "Que la voz calce con la animación",
-      "para": [
-        "audiovisual"
-      ],
-      "hitos": [
-        "v5",
-        "v6"
-      ],
-      "modulos": [
-        "F"
-      ],
-      "resumen": "Tres formas de cuadrar el audio con las fotos en CapCut, de la que menos daña a la que más.",
-      "porQue": "El equipo 11.2 escribió: \"el audio de la voz va muy rápido en comparación con la cantidad de fotos que tomamos y la escena se acaba antes que la voz\". Pidieron grabar un tutorial sobre esto.",
-      "pasos": [
-        {
-          "titulo": "Midan antes de tocar nada",
-          "texto": "Anoten dos números por escena: cuánto dura la voz y cuánto dura la animación. Si la voz dura 9 segundos y la animación 6, les faltan 3 segundos de imagen, no les sobra voz. Saber de qué lado está la diferencia decide cuál de los tres caminos tomar."
-        },
-        {
-          "titulo": "Primero: corten los silencios de la grabación",
-          "texto": "Casi siempre sobra aire al principio, al final y entre frases. En CapCut se corta el clip de audio con la herramienta de división y se borran los trozos vacíos. Quitarlo no cambia la voz y suele recuperar uno o dos segundos.",
-          "ojo": "Dejen un respiro corto entre frases. Un diálogo sin pausas suena atropellado."
-        },
-        {
-          "titulo": "Segundo: estiren la imagen repitiendo fotos",
-          "texto": "Es la opción que mejor se ve. En los planos quietos, donde el personaje casi no se mueve, alarguen la duración de esas fotos arrastrando el borde del clip. El guion técnico de ustedes ya dice qué planos son quietos: ahí sostener la imagen no se nota, y ganan los segundos que falten."
-        },
-        {
-          "titulo": "Tercero, y con cuidado: cambien la velocidad de la voz",
-          "texto": "En CapCut, seleccionen el clip de audio, abran Velocidad y suban un poco. Activen la opción de mantener el tono: sin eso la voz sube de tono y queda de caricatura. No pasen del diez por ciento; más allá se oye artificial.",
-          "ojo": "Mantener el tono es la casilla que marca la diferencia. Es el error más común."
-        },
-        {
-          "titulo": "Cuadren por el golpe, no por el principio",
-          "texto": "Alineen el audio con el momento en que el personaje hace la acción, no con el arranque del plano. El oído perdona que la voz empiece un poco antes; no perdona que el gesto vaya por un lado y el sonido por otro."
-        }
-      ],
-      "comprobar": [
-        "Escuchen la escena con los ojos cerrados: si la voz suena apurada, todavía falta.",
-        "Véanla sin sonido: si la imagen se siente estirada, se repitieron demasiadas fotos.",
-        "Pónganla a alguien que no sea del equipo y pregúntenle si algo le sonó raro."
-      ],
-      "recursos": [
-        {
-          "titulo": "CapCut, sitio oficial y descarga",
-          "url": "https://www.capcut.com/"
-        },
-        {
-          "titulo": "Audacity, si prefieren editar la voz aparte",
-          "url": "https://manual.audacityteam.org/man/change_tempo.html"
-        }
-      ]
+     "titulo": "La cuenta que convierte fotos en segundos",
+     "texto": "A doce fotos por segundo, cada foto dura un doceavo de segundo, es decir 0,083 segundos. Si su plano son 60 fotos, dura 5 segundos. Esa es la misma cuenta que ya tienen en la columna de fotos del guion técnico: la tabla les dice exactamente cuánto debe durar cada plano montado."
     },
     {
-      "id": "audio-con-audifonos",
-      "titulo": "Revisar el audio con audífonos antes de exportar",
-      "para": [
-        "audiovisual"
-      ],
-      "hitos": [
-        "v5"
-      ],
-      "modulos": [
-        "F"
-      ],
-      "resumen": "Qué escuchar, en qué orden y qué anotar para no regrabar de más.",
-      "porQue": "Es el hito v5 de la línea audiovisual y ningún equipo lo tiene cumplido. En el parlante del computador no se oye lo que después se oye en el salón.",
-      "pasos": [
-        {
-          "titulo": "Usen audífonos de verdad, no el parlante",
-          "texto": "El parlante del portátil no reproduce los graves ni el ruido de fondo. Unos audífonos sencillos de cable alcanzan: lo que importa es que tapen el ruido del salón mientras revisan."
-        },
-        {
-          "titulo": "Escuchen una sola cosa por pasada",
-          "texto": "Primera pasada, solo si se entiende cada palabra. Segunda, solo el ruido de fondo: ventiladores, sillas, pasos, un celular vibrando. Tercera, solo el volumen: si una escena suena más fuerte que la siguiente. Buscar las tres cosas a la vez no funciona."
-        },
-        {
-          "titulo": "Anoten con el minuto exacto",
-          "texto": "Escriban una tabla con tres columnas: minuto y segundo, qué pasa, y qué se hace. Ejemplo: 1:12, se oye una silla, se corta y se repite el ambiente de al lado. Sin el minuto, después nadie encuentra el problema."
-        },
-        {
-          "titulo": "Decidan qué se arregla y qué se regraba",
-          "texto": "Un ruido corto se corta. Un zumbido parejo se baja con Reducir ruido, que en CapCut es un interruptor en el panel de audio con su nivel. Una frase que no se entiende se vuelve a grabar: ningún filtro arregla una palabra que no está.",
-          "ojo": "Reducir ruido al máximo deja la voz con sonido metálico. Es preferible un poco de ruido a una voz que suena a robot."
-        },
-        {
-          "titulo": "Dejen todas las voces al mismo volumen",
-          "texto": "Igualen el volumen de las pistas de voz para que ninguna quede más baja que otra. Después suban o bajen la música, nunca al revés: la música se acomoda a la voz, no la voz a la música."
-        }
-      ],
-      "comprobar": [
-        "Escuchen el corto completo con audífonos sin pausar y sin mirar la pantalla.",
-        "Pruébenlo también en el parlante donde se va a proyectar, que suena distinto.",
-        "La tabla de minutos debe quedar guardada: es la evidencia de este hito."
-      ],
-      "recursos": [
-        {
-          "titulo": "CapCut, sitio oficial y descarga",
-          "url": "https://www.capcut.com/"
-        },
-        {
-          "titulo": "Audacity, reducción de ruido con más control",
-          "url": "https://manual.audacityteam.org/man/noise_reduction.html"
-        }
-      ]
+     "titulo": "Importen y pongan todas las fotos del plano a la vez",
+     "texto": "Seleccionen todas las fotos del plano y arrástrenlas juntas a la línea de tiempo. Quedan una detrás de otra. Si la duración por defecto quedó bien puesta, el plano ya dura lo que debe."
     },
     {
-      "id": "exportar-el-video",
-      "titulo": "Exportar el video final para que se vea bien en el salón",
-      "para": [
-        "audiovisual"
-      ],
-      "hitos": [
-        "v7"
-      ],
-      "modulos": [
-        "G"
-      ],
-      "resumen": "Con qué ajustes exportar y cómo nombrar y guardar el archivo.",
-      "porQue": "Es el último hito de la ruta de video y el entregable del 29 de octubre. Un corto bien hecho que se exporta mal se ve mal, y es el día de la muestra.",
-      "pasos": [
-        {
-          "titulo": "Exporten en MP4, 1920 por 1080",
-          "texto": "En CapCut, el botón de exportar deja elegir resolución, velocidad de fotogramas y calidad. Pongan 1080p y formato MP4: eso lo abre cualquier computador y cualquier proyector sin instalar nada. No entreguen el proyecto de CapCut, que solo lo abre CapCut."
-        },
-        {
-          "titulo": "Dejen la velocidad de fotogramas en 30",
-          "texto": "Aunque animaron a doce fotos por segundo, exporten a 30: cada foto ocupa varios fotogramas y el movimiento queda igual de fluido. Lo que no se debe hacer es cambiar la duración en la exportación, porque ahí sí se altera el tiempo y la voz se desacomoda.",
-          "ojo": "Si CapCut ofrece exportar a 60, no hace falta: pesa el doble y no se ve mejor en una animación a doce fotos por segundo."
-        },
-        {
-          "titulo": "Revisen el archivo exportado completo",
-          "texto": "Ábranlo con un reproductor normal, no con el editor, y véanlo entero. Es frecuente que el último segundo quede cortado o que el audio se corte antes del final.",
-          "ojo": "Véanlo en otro computador si pueden. Lo que se ve bien en el que editó no siempre se ve bien en el del salón."
-        },
-        {
-          "titulo": "Nómbrenlo y guárdenlo donde se pueda encontrar",
-          "texto": "Nombre del proyecto, versión y fecha, sin espacios ni tildes. Por ejemplo: odisea_diversidad_v1_2026-10-29.mp4. Súbanlo a la carpeta del equipo en Drive, no lo dejen solo en un celular."
-        },
-        {
-          "titulo": "Lleven una copia que no dependa de internet",
-          "texto": "El día de la muestra, en una memoria USB. Si la red falla, el corto se proyecta igual."
-        }
-      ],
-      "comprobar": [
-        "El archivo pesa algo razonable: un corto de tres minutos en 1080p suele quedar entre 50 y 300 MB.",
-        "Se abre con doble clic en un computador que no tiene el editor instalado.",
-        "Se ve y se oye completo, incluido el último plano."
-      ],
-      "recursos": [
-        {
-          "titulo": "CapCut, sitio oficial y descarga",
-          "url": "https://www.capcut.com/"
-        },
-        {
-          "titulo": "Kdenlive, alternativa libre",
-          "url": "https://docs.kdenlive.org/en/"
-        }
-      ]
+     "titulo": "Comparen con el guion técnico plano por plano",
+     "texto": "Al terminar cada plano, miren la duración que marca CapCut y compárenla con la del guion. Si no coinciden, es que faltan o sobran fotos, y es mejor saberlo ahora que al final, cuando la voz ya esté puesta.",
+     "ojo": "Vayan marcando Sí en la columna de grabado del guion técnico a medida que montan. Esa columna es la que les dice qué falta sin tener que acordarse."
     },
     {
-      "id": "del-literario-al-tecnico",
-      "titulo": "Del guion literario al guion técnico",
-      "para": [
-        "audiovisual"
-      ],
-      "hitos": [
-        "v2"
-      ],
-      "modulos": [
-        "C",
-        "D"
-      ],
-      "resumen": "Cómo convertir lo que pasa en la historia en una lista de planos que se puede grabar.",
-      "porQue": "Es el tutorial que estaba pendiente de grabar para el hito v2. El equipo 11.2 ya lo resolvió y su guion técnico sirve de ejemplo para los demás equipos de la línea.",
-      "pasos": [
-        {
-          "titulo": "Numeren las escenas del literario",
-          "texto": "El guion literario cuenta qué pasa. Antes de pensar en planos, pónganle número a cada escena. Una escena es un lugar y un momento: si cambian de sitio o pasa el tiempo, es otra escena."
-        },
-        {
-          "titulo": "Partan cada escena en planos",
-          "texto": "Un plano es lo que se ve sin cortar la cámara. Pregúntense, para cada momento: ¿qué necesito que el espectador vea aquí, la cara o las manos o todo el lugar? Cada respuesta distinta es un plano distinto."
-        },
-        {
-          "titulo": "Llenen una fila por plano",
-          "texto": "Como mínimo: número, escena de la que viene, qué se ve, locación, tipo de plano, ángulo, qué se oye y cuánto dura en segundos. En animación agreguen cuántas fotos son, que es la duración por los fotogramas por segundo.",
-          "ojo": "Si trabajan a 12 fotos por segundo, un plano de 5 segundos son 60 fotos. Ese número es el que dice cuánto trabajo hay de verdad."
-        },
-        {
-          "titulo": "Sumen las duraciones y comparen con lo acordado",
-          "texto": "La suma de todos los planos es la duración del corto. Si se pasaron, recorten planos ahora, en la tabla, que es gratis. Recortar después de grabar cuesta el doble."
-        },
-        {
-          "titulo": "Agreguen una columna de grabado",
-          "texto": "Una columna con Sí o No por plano. Es lo que les va a decir, en pleno rodaje, qué falta sin tener que acordarse."
-        }
-      ],
-      "comprobar": [
-        "Cada fila se puede grabar sin preguntarle nada a quien escribió el guion.",
-        "La suma de las duraciones da la duración acordada, ni más ni menos.",
-        "Alguien de otro equipo puede leer una fila y entender qué hay que poner en cámara."
-      ],
-      "recursos": []
-    },
-    {
-      "id": "plan-de-rodaje",
-      "titulo": "Un plan de rodaje que cabe en una página",
-      "para": [
-        "audiovisual"
-      ],
-      "hitos": [
-        "v3"
-      ],
-      "modulos": [
-        "D"
-      ],
-      "resumen": "Dónde se graba, qué día, quién hace qué y qué hay que llevar.",
-      "porQue": "Es el hito v3 y casi ningún equipo de la línea lo tiene. Sin esto, cada sesión se va en montar otra vez lo que ya estaba montado.",
-      "pasos": [
-        {
-          "titulo": "Agrupen los planos por lugar, no por orden de la historia",
-          "texto": "Si cinco planos del principio y tres del final pasan en el mismo sitio, se graban el mismo día. Montar y desmontar la luz y el escenario es lo que más tiempo consume."
-        },
-        {
-          "titulo": "Una fila por jornada",
-          "texto": "Fecha, locación, qué números de plano se graban ahí, quién anima o actúa y qué hay que llevar. Si alguien tiene que traer algo, va su nombre: sin nombre, nadie lo trae."
-        },
-        {
-          "titulo": "Dejen una jornada aparte para voces y edición",
-          "texto": "Grabar voces el mismo día que se anima sale mal: el salón tiene ruido y el equipo está cansado. Una jornada corta en un sitio silencioso rinde más que dos horas al final de una sesión."
-        },
-        {
-          "titulo": "Pongan una jornada de revisión antes de la entrega",
-          "texto": "Una fecha, antes del 29 de octubre, para ver el corte completo con alguien de fuera del equipo. Lo que no se vea ahí, no se arregla.",
-          "ojo": "Esa jornada de revisión es también la evidencia del hito v6."
-        }
-      ],
-      "comprobar": [
-        "Cabe en una página y se entiende sin explicación.",
-        "Cada plano del guion técnico aparece en alguna jornada: ninguno quedó por fuera.",
-        "Tiene una columna de listo, para ir marcando."
-      ],
-      "recursos": []
-    },
-    {
-      "id": "plano-de-prueba",
-      "titulo": "El plano de prueba: qué mirar antes de grabarlo todo",
-      "para": [
-        "audiovisual"
-      ],
-      "hitos": [
-        "v4"
-      ],
-      "modulos": [
-        "D"
-      ],
-      "resumen": "Media hora de prueba que evita perder una jornada entera de rodaje.",
-      "porQue": "Es el hito v4. El equipo 11.2 lo hizo y por eso detectó el parpadeo de la luz a tiempo para preguntar. Los equipos que no lo hacen descubren el problema cuando ya tienen todo grabado.",
-      "pasos": [
-        {
-          "titulo": "Graben un plano cualquiera, corto, con todo el montaje real",
-          "texto": "Misma luz, misma cámara, mismo soporte, mismo escenario. No sirve una prueba hecha de otra forma: lo que se está probando es el montaje, no la actuación."
-        },
-        {
-          "titulo": "Revisen la luz",
-          "texto": "Reproduzcan a velocidad normal. ¿Parpadea? ¿Hay sombras de las manos? ¿La luz del salón se mete y cambia cuando alguien abre la puerta?"
-        },
-        {
-          "titulo": "Revisen la estabilidad",
-          "texto": "Si el encuadre tiembla entre foto y foto, el soporte no está firme. Resuélvanlo ahora: un soporte flojo arruina cuarenta planos sin que nadie se dé cuenta hasta el final."
-        },
-        {
-          "titulo": "Revisen el sonido en ese mismo sitio",
-          "texto": "Graben diez segundos de silencio en el lugar donde van a grabar las voces y escúchenlos con audífonos. Ahí aparece el ventilador, el pasillo y el zumbido de la luz."
-        },
-        {
-          "titulo": "Anoten lo que hay que cambiar y vuelvan a probar",
-          "texto": "La prueba sirve si hay una segunda prueba. Cambien una cosa a la vez, para saber cuál fue la que sirvió."
-        }
-      ],
-      "comprobar": [
-        "El archivo de prueba queda guardado en la carpeta del equipo: es la evidencia del hito.",
-        "Hay una lista escrita de lo que se ajustó después de verlo.",
-        "La segunda prueba se ve mejor que la primera."
-      ],
-      "recursos": []
-    },
-    {
-      "id": "fuentes-que-existen",
-      "titulo": "Buscar fuentes que existan de verdad y citarlas en APA",
-      "para": [
-        "todos"
-      ],
-      "hitos": [],
-      "modulos": [
-        "E"
-      ],
-      "resumen": "Cómo encontrar antecedentes reales, comprobar que existen y escribirlos en APA 7.",
-      "porQue": "El 21 de octubre se revisaron las cinco referencias del artículo de un equipo: los cuatro DOI citados devuelven error en Crossref y los títulos no aparecen en ningún registro. Eran referencias inventadas. Pasa cuando se le pide la bibliografía a una inteligencia artificial y se pega sin comprobar.",
-      "pasos": [
-        {
-          "titulo": "Busquen donde hay artículos de verdad",
-          "texto": "Google Académico para buscar por tema. SciELO, Redalyc y Dialnet para artículos en español y de América Latina, que es donde más van a encontrar sobre educación y sobre el contexto colombiano. Busquen con palabras del problema de ustedes, no con el título que querrían encontrar."
-        },
-        {
-          "titulo": "Abran el artículo y léanlo, aunque sea el resumen",
-          "texto": "Si no pueden abrirlo, no lo citen. Citar algo que no se leyó es el camino corto a decir algo que el autor no dijo."
-        },
-        {
-          "titulo": "Comprueben que la referencia existe",
-          "texto": "Si tiene DOI, péguenlo en doi.org: debe abrir el artículo. Si no abre, la referencia está mal o no existe. También pueden pegar el título en el buscador de Crossref. Son treinta segundos por referencia.",
-          "ojo": "Esta es la comprobación que cambia todo. Una referencia que no resuelve no se arregla escribiéndola mejor: hay que reemplazarla."
-        },
-        {
-          "titulo": "Guarden el PDF en la carpeta de antecedentes",
-          "texto": "En 01_Antecedentes, con un nombre que se entienda: apellido, año y dos palabras del tema. Esa carpeta es la evidencia de la tarea de antecedentes; sin PDF, la tarea no está hecha."
-        },
-        {
-          "titulo": "Escriban la referencia en APA 7",
-          "texto": "Apellido, A. (año). Título del artículo. Nombre de la Revista, volumen(número), páginas. https://doi.org/... Copien los datos del artículo que tienen abierto, no de memoria."
-        },
-        {
-          "titulo": "Y entonces sí escriban la sección 1.2",
-          "texto": "Con mínimo tres autores y su año, diciendo qué encontró cada uno, y cerrando con lo que quedó sin resolver. Ese hueco es justamente el que el proyecto de ustedes intenta llenar."
-        }
-      ],
-      "comprobar": [
-        "Cada referencia de la lista tiene su PDF en la carpeta 01_Antecedentes.",
-        "Cada DOI abre el artículo correcto al pegarlo en doi.org.",
-        "Lo que dice la sección 1.2 de cada autor aparece de verdad en su artículo."
-      ],
-      "recursos": [
-        {
-          "titulo": "Google Académico",
-          "url": "https://scholar.google.com/"
-        },
-        {
-          "titulo": "SciELO, artículos en acceso abierto",
-          "url": "https://www.scielo.org/es/"
-        },
-        {
-          "titulo": "Redalyc, revistas de América Latina",
-          "url": "https://www.redalyc.org/"
-        },
-        {
-          "titulo": "Dialnet",
-          "url": "https://dialnet.unirioja.es/"
-        },
-        {
-          "titulo": "Comprobar un DOI",
-          "url": "https://www.doi.org/"
-        },
-        {
-          "titulo": "Buscador de Crossref",
-          "url": "https://search.crossref.org/"
-        },
-        {
-          "titulo": "APA 7, cómo se escriben las referencias",
-          "url": "https://apastyle.apa.org/style-grammar-guidelines/references"
-        }
-      ]
-    },
-    {
-      "id": "llenar-el-articulo",
-      "titulo": "La tabla de seguimiento no es el artículo",
-      "para": [
-        "todos"
-      ],
-      "hitos": [],
-      "modulos": [
-        "E",
-        "G"
-      ],
-      "resumen": "Qué va en cada sección del artículo base y de dónde se copia.",
-      "porQue": "Un equipo marcó \"sí\" en seis secciones de la tabla de seguimiento del artículo mientras esas secciones seguían en blanco. No fue mala fe: la tabla de arriba y las secciones de abajo son dos cosas distintas y es fácil confundirlas.",
-      "pasos": [
-        {
-          "titulo": "Entiendan qué es cada cosa",
-          "texto": "La tabla de arriba es un índice para ver de un vistazo qué falta. Marcar \"sí\" ahí no escribe nada. El artículo son las cajas de abajo, donde está el texto. Mientras la caja esté vacía, la sección no está hecha, aunque la tabla diga que sí."
-        },
-        {
-          "titulo": "Casi todo ya está escrito en otro archivo",
-          "texto": "Cada caja dice de dónde se copia. 1.1 el problema sale de la propuesta de julio. 1.2 sale de la matriz de antecedentes. 1.3 también de la propuesta. 3.1, 3.2 y 3.3 salen de la ficha técnica. Es trabajo de copiar, pegar y redactar, no de inventar."
-        },
-        {
-          "titulo": "Empiecen por las que ya se pueden llenar",
-          "texto": "Hoy mismo pueden quedar listas 1.1, 1.3, 3.1, 3.2 y 3.3 si tienen la propuesta y la ficha. Dejen para el final el resumen, que se escribe cuando todo lo demás está."
-        },
-        {
-          "titulo": "Escriban 3.4 con honestidad",
-          "texto": "Qué funciona hoy y qué quedó a medias. Escribir lo que no funciona no baja la nota: ocultarlo sí se nota, porque el lector abre el proyecto y lo ve."
-        },
-        {
-          "titulo": "Guarden una versión nueva cuando agreguen algo grande",
-          "texto": "Articulo_base_v2.docx, v3 y así. Esa serie de versiones muestra cómo creció el proyecto, y eso también se evalúa.",
-          "ojo": "Guardar una versión nueva es, además, la tarea artv de la ruta."
-        }
-      ],
-      "comprobar": [
-        "Abran el documento y lean solo las cajas: lo que esté vacío, está vacío.",
-        "Cada sección marcada en la tabla tiene texto propio debajo, no la instrucción de la plantilla.",
-        "El conteo del portal coincide con lo que ustedes ven en el documento."
-      ],
-      "recursos": []
-    },
-    {
-      "id": "id-de-un-documento",
-      "titulo": "Sacar el identificador de un documento para guardarlo en la base de datos",
-      "para": [
-        "software"
-      ],
-      "hitos": [
-        "s4"
-      ],
-      "modulos": [
-        "G"
-      ],
-      "resumen": "Cómo se referencia un archivo o un contenido desde la base de datos, sin guardar el archivo adentro.",
-      "porQue": "El equipo 7 escribió esta barrera: \"no sabemos cómo sacar el ID de los archivos con la información\", y pidió grabar un tutorial sobre cómo agregar el contenido a la base de datos.",
-      "pasos": [
-        {
-          "titulo": "Separen el archivo del dato",
-          "texto": "En una base de datos no se guarda el archivo: se guarda una ficha que dice dónde está y qué es. El archivo vive en el almacenamiento o en una carpeta; la base guarda su ruta, su nombre y sus etiquetas."
-        },
-        {
-          "titulo": "Entiendan qué es el identificador",
-          "texto": "Cada documento de una colección tiene un identificador único. Si ustedes no le ponen uno, la base le inventa uno al crearlo. Ese identificador es lo que después permite traer ese documento concreto sin recorrer todos."
-        },
-        {
-          "titulo": "Decidan si el identificador lo ponen ustedes",
-          "texto": "Si cada contenido ya tiene un código propio, por ejemplo la unidad y el número de actividad, úsenlo como identificador. Es más fácil de depurar que un código aleatorio, y evita que se dupliquen los contenidos cuando alguien sube dos veces lo mismo.",
-          "ojo": "Un identificador que ustedes eligen no puede llevar espacios, tildes ni barras. Usen algo como ingles10-u2-act03."
-        },
-        {
-          "titulo": "Al crear el documento, guarden el identificador que devuelve",
-          "texto": "Cuando la base crea el documento, la respuesta trae su identificador. Guárdenlo en una variable antes de seguir: es el momento en que está disponible y es el error más común perderlo ahí."
-        },
-        {
-          "titulo": "Prueben con un solo contenido antes de subir todo",
-          "texto": "Creen un documento, anoten su identificador, y escriban el código que lo vuelve a traer usando ese identificador. Hasta que ese ciclo no funcione con uno, no vale la pena subir cincuenta."
-        }
-      ],
-      "comprobar": [
-        "Pueden traer un contenido concreto por su identificador, sin recorrer la colección entera.",
-        "Subir dos veces el mismo contenido no crea dos copias.",
-        "En la consola de la base se ve la ficha con los campos que ustedes definieron."
-      ],
-      "recursos": [
-        {
-          "titulo": "Firestore, agregar datos",
-          "url": "https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es"
-        },
-        {
-          "titulo": "Firestore, leer datos",
-          "url": "https://firebase.google.com/docs/firestore/query-data/get-data?hl=es"
-        },
-        {
-          "titulo": "Firestore, documentación general",
-          "url": "https://firebase.google.com/docs/firestore?hl=es"
-        }
-      ]
-    },
-    {
-      "id": "dibujar-el-circuito",
-      "titulo": "Dibujar el circuito y saber qué pin va a dónde",
-      "para": [
-        "electronica"
-      ],
-      "hitos": [
-        "e1",
-        "e2",
-        "e3"
-      ],
-      "modulos": [
-        "C",
-        "D"
-      ],
-      "resumen": "Pasar de una lista de componentes a un circuito que se puede armar y revisar.",
-      "porQue": "Son los hitos e1 y e2 de la línea de electrónica, y hasta hoy no tenían ningún recurso. Sin el circuito dibujado, el montaje se arma a prueba y error y se queman componentes.",
-      "pasos": [
-        {
-          "titulo": "Listen los componentes con su referencia exacta",
-          "texto": "No \"un motor\" sino \"servomotor SG90\". No \"una placa\" sino \"Arduino Uno\". La referencia es la que permite buscar cuánta corriente consume y qué voltaje necesita, y esos dos números deciden si el montaje funciona."
-        },
-        {
-          "titulo": "Dibújenlo antes de conectarlo",
-          "texto": "Tinkercad Circuits deja armar el circuito en el navegador y simularlo sin tener los componentes en la mano. Fritzing hace el dibujo de la protoboard. Cualquiera de los dos sirve: lo que no sirve es armarlo directamente sobre la mesa."
-        },
-        {
-          "titulo": "Hagan la tabla de pines",
-          "texto": "Una fila por conexión: qué componente, qué patica, a qué pin de la placa y para qué. Esa tabla es la que les permite revisar el montaje sin desarmarlo, y es la evidencia del hito e3."
-        },
-        {
-          "titulo": "Revisen la alimentación aparte",
-          "texto": "Sumen cuánta corriente piden todos los componentes juntos. Un servo bajo carga pide más de lo que el puerto USB entrega, y ahí es donde la placa se reinicia sola. Si la suma se acerca al límite, hace falta alimentación externa.",
-          "ojo": "La tierra de la fuente externa y la de la placa van unidas. Si no, el circuito hace cosas raras sin razón aparente."
-        },
-        {
-          "titulo": "Prueben un componente a la vez",
-          "texto": "Conecten solo uno y háganlo responder. Cuando funcione, agreguen el siguiente. Armar todo y probar al final hace imposible saber cuál falla."
-        }
-      ],
-      "comprobar": [
-        "El dibujo del circuito está guardado en la carpeta del equipo.",
-        "La tabla de pines coincide con lo que está armado de verdad.",
-        "Cada componente respondió por separado antes de armar el montaje completo."
-      ],
-      "recursos": [
-        {
-          "titulo": "Tinkercad Circuits, simular sin tener los componentes",
-          "url": "https://www.tinkercad.com/circuits"
-        },
-        {
-          "titulo": "Fritzing, dibujar la protoboard",
-          "url": "https://fritzing.org/"
-        },
-        {
-          "titulo": "Arduino, servomotores",
-          "url": "https://docs.arduino.cc/learn/electronics/servo-motors/"
-        },
-        {
-          "titulo": "Arduino, referencia del lenguaje",
-          "url": "https://docs.arduino.cc/language-reference/"
-        }
-      ]
+     "titulo": "Guarden el proyecto con un nombre y una fecha",
+     "texto": "Y exporten un borrador en baja calidad cada vez que terminen un canto. Si el proyecto se daña, un borrador exportado les salva el trabajo de una tarde."
     }
-  ]
+   ],
+   "comprobar": [
+    "Cada plano montado dura lo que dice la columna de duración del guion técnico.",
+    "No hay fotos repetidas ni saltadas: el movimiento se ve continuo a velocidad normal.",
+    "El proyecto está guardado y hay un borrador exportado del avance."
+   ],
+   "recursos": [
+    {
+     "titulo": "CapCut, sitio oficial y descarga",
+     "url": "https://www.capcut.com/"
+    }
+   ]
+  },
+  {
+   "id": "quitar-el-parpadeo",
+   "titulo": "Quitar el parpadeo de la luz en un stop motion ya grabado",
+   "para": [
+    "audiovisual"
+   ],
+   "hitos": [
+    "v4",
+    "v6"
+   ],
+   "modulos": [
+    "F"
+   ],
+   "resumen": "Qué se puede arreglar en CapCut cuando las fotos quedaron con saltos de luz, y qué no.",
+   "porQue": "El equipo 11.2 escribió esta barrera: \"cada vez que acercamos las manos para mover el crayón, la pantalla se oscurece o se aclara automáticamente y las fotos quedan con parpadeos de luz\". Ya grabaron, así que esta guía empieza por lo que todavía se puede arreglar en edición.",
+   "pasos": [
+    {
+     "titulo": "Primero entiendan qué lo causó",
+     "texto": "El celular vuelve a medir la luz en cada foto. Cuando una mano entra al encuadre, el teléfono cree que la escena se oscureció y sube la exposición; cuando la mano sale, la baja. Esas correcciones, una por foto, son el parpadeo. No es la lámpara: es la cámara corrigiendo."
+    },
+    {
+     "titulo": "Separen las tomas que se salvan de las que hay que repetir",
+     "texto": "Reproduzcan cada plano a velocidad normal y clasifíquenlo en tres montones: sin parpadeo, con parpadeo leve y con parpadeo que salta a la vista. Los dos primeros se arreglan. El tercero se regraba, y conviene saberlo antes de perder una tarde editando algo que no tiene arreglo.",
+     "ojo": "Háganlo plano por plano, no con el corto entero: el parpadeo no es parejo."
+    },
+    {
+     "titulo": "Sepan qué puede y qué no puede hacer CapCut",
+     "texto": "CapCut no tiene un efecto que quite el parpadeo automáticamente. Lo que sí tiene es Ajustar, con brillo, contraste, luminosidad y temperatura, y fotogramas clave. Con eso se corrige a mano un tramo corto, y se iguala un plano entero que quedó más oscuro que el de al lado. Lo que no se puede es arreglar foto por foto cuatrocientas fotos.",
+     "ojo": "Esto es importante para decidir: si el parpadeo es rápido, de foto a foto, en CapCut no hay arreglo razonable y conviene regrabar ese plano."
+    },
+    {
+     "titulo": "Igualen planos enteros entre sí",
+     "texto": "Si un plano quedó más oscuro que el siguiente, selecciónenlo, abran Ajustar y suban el brillo hasta que el corte entre los dos no se note. Esto sí vale la pena: son cuarenta ajustes como máximo, uno por plano, y resuelve el salto más molesto, que es el del corte."
+    },
+    {
+     "titulo": "Corrijan un tramo corto con fotogramas clave",
+     "texto": "Cuando dentro de un plano hay un tramo de uno o dos segundos que se aclara, pongan un fotograma clave antes y otro después, y bajen el brillo solo en el del medio. CapCut interpola el resto. Sirve para dos o tres tramos por plano, no para todo el corto."
+    },
+    {
+     "titulo": "Para lo que falte grabar, bloqueen la cámara",
+     "texto": "Antes de la primera foto: fijen la exposición y el balance de blancos, en la aplicación de stop motion o en el modo profesional del celular con ISO y velocidad manuales. Apaguen la luz del techo y dejen solo la LED. Y no muevan las manos dentro del encuadre mientras la cámara dispara.",
+     "ojo": "Esto responde la pregunta exacta que pidieron para grabar. Hasta que no se bloquee la exposición, el parpadeo vuelve."
+    },
+    {
+     "titulo": "Si de verdad necesitan corrección automática",
+     "texto": "DaVinci Resolve es gratuito y sí trae un efecto Deflicker, dentro de ResolveFX Revival. Vale la pena instalarlo solo si tienen varios planos con parpadeo rápido que no pueden regrabar. Para todo lo demás, CapCut alcanza y es el que ya saben usar."
+    }
+   ],
+   "comprobar": [
+    "Reproduzcan el plano corregido a velocidad normal, no cuadro a cuadro: el parpadeo se ve en movimiento.",
+    "Miren la cartulina blanca del fondo, que es donde más se nota el cambio de luz.",
+    "En el corte entre dos planos seguidos no debe haber un salto de brillo."
+   ],
+   "recursos": [
+    {
+     "titulo": "CapCut, sitio oficial y descarga",
+     "url": "https://www.capcut.com/"
+    },
+    {
+     "titulo": "DaVinci Resolve, solo si necesitan Deflicker",
+     "url": "https://www.blackmagicdesign.com/products/davinciresolve/"
+    }
+   ]
+  },
+  {
+   "id": "voz-y-animacion",
+   "titulo": "Que la voz calce con la animación",
+   "para": [
+    "audiovisual"
+   ],
+   "hitos": [
+    "v5",
+    "v6"
+   ],
+   "modulos": [
+    "F"
+   ],
+   "resumen": "Tres formas de cuadrar el audio con las fotos en CapCut, de la que menos daña a la que más.",
+   "porQue": "El equipo 11.2 escribió: \"el audio de la voz va muy rápido en comparación con la cantidad de fotos que tomamos y la escena se acaba antes que la voz\". Pidieron grabar un tutorial sobre esto.",
+   "pasos": [
+    {
+     "titulo": "Midan antes de tocar nada",
+     "texto": "Anoten dos números por escena: cuánto dura la voz y cuánto dura la animación. Si la voz dura 9 segundos y la animación 6, les faltan 3 segundos de imagen, no les sobra voz. Saber de qué lado está la diferencia decide cuál de los tres caminos tomar."
+    },
+    {
+     "titulo": "Primero: corten los silencios de la grabación",
+     "texto": "Casi siempre sobra aire al principio, al final y entre frases. En CapCut se corta el clip de audio con la herramienta de división y se borran los trozos vacíos. Quitarlo no cambia la voz y suele recuperar uno o dos segundos.",
+     "ojo": "Dejen un respiro corto entre frases. Un diálogo sin pausas suena atropellado."
+    },
+    {
+     "titulo": "Segundo: estiren la imagen repitiendo fotos",
+     "texto": "Es la opción que mejor se ve. En los planos quietos, donde el personaje casi no se mueve, alarguen la duración de esas fotos arrastrando el borde del clip. El guion técnico de ustedes ya dice qué planos son quietos: ahí sostener la imagen no se nota, y ganan los segundos que falten."
+    },
+    {
+     "titulo": "Tercero, y con cuidado: cambien la velocidad de la voz",
+     "texto": "En CapCut, seleccionen el clip de audio, abran Velocidad y suban un poco. Activen la opción de mantener el tono: sin eso la voz sube de tono y queda de caricatura. No pasen del diez por ciento; más allá se oye artificial.",
+     "ojo": "Mantener el tono es la casilla que marca la diferencia. Es el error más común."
+    },
+    {
+     "titulo": "Cuadren por el golpe, no por el principio",
+     "texto": "Alineen el audio con el momento en que el personaje hace la acción, no con el arranque del plano. El oído perdona que la voz empiece un poco antes; no perdona que el gesto vaya por un lado y el sonido por otro."
+    }
+   ],
+   "comprobar": [
+    "Escuchen la escena con los ojos cerrados: si la voz suena apurada, todavía falta.",
+    "Véanla sin sonido: si la imagen se siente estirada, se repitieron demasiadas fotos.",
+    "Pónganla a alguien que no sea del equipo y pregúntenle si algo le sonó raro."
+   ],
+   "recursos": [
+    {
+     "titulo": "CapCut, sitio oficial y descarga",
+     "url": "https://www.capcut.com/"
+    },
+    {
+     "titulo": "Audacity, si prefieren editar la voz aparte",
+     "url": "https://manual.audacityteam.org/man/change_tempo.html"
+    }
+   ]
+  },
+  {
+   "id": "audio-con-audifonos",
+   "titulo": "Revisar el audio con audífonos antes de exportar",
+   "para": [
+    "audiovisual"
+   ],
+   "hitos": [
+    "v5"
+   ],
+   "modulos": [
+    "F"
+   ],
+   "resumen": "Qué escuchar, en qué orden y qué anotar para no regrabar de más.",
+   "porQue": "Es el hito v5 de la línea audiovisual y ningún equipo lo tiene cumplido. En el parlante del computador no se oye lo que después se oye en el salón.",
+   "pasos": [
+    {
+     "titulo": "Usen audífonos de verdad, no el parlante",
+     "texto": "El parlante del portátil no reproduce los graves ni el ruido de fondo. Unos audífonos sencillos de cable alcanzan: lo que importa es que tapen el ruido del salón mientras revisan."
+    },
+    {
+     "titulo": "Escuchen una sola cosa por pasada",
+     "texto": "Primera pasada, solo si se entiende cada palabra. Segunda, solo el ruido de fondo: ventiladores, sillas, pasos, un celular vibrando. Tercera, solo el volumen: si una escena suena más fuerte que la siguiente. Buscar las tres cosas a la vez no funciona."
+    },
+    {
+     "titulo": "Anoten con el minuto exacto",
+     "texto": "Escriban una tabla con tres columnas: minuto y segundo, qué pasa, y qué se hace. Ejemplo: 1:12, se oye una silla, se corta y se repite el ambiente de al lado. Sin el minuto, después nadie encuentra el problema."
+    },
+    {
+     "titulo": "Decidan qué se arregla y qué se regraba",
+     "texto": "Un ruido corto se corta. Un zumbido parejo se baja con Reducir ruido, que en CapCut es un interruptor en el panel de audio con su nivel. Una frase que no se entiende se vuelve a grabar: ningún filtro arregla una palabra que no está.",
+     "ojo": "Reducir ruido al máximo deja la voz con sonido metálico. Es preferible un poco de ruido a una voz que suena a robot."
+    },
+    {
+     "titulo": "Dejen todas las voces al mismo volumen",
+     "texto": "Igualen el volumen de las pistas de voz para que ninguna quede más baja que otra. Después suban o bajen la música, nunca al revés: la música se acomoda a la voz, no la voz a la música."
+    }
+   ],
+   "comprobar": [
+    "Escuchen el corto completo con audífonos sin pausar y sin mirar la pantalla.",
+    "Pruébenlo también en el parlante donde se va a proyectar, que suena distinto.",
+    "La tabla de minutos debe quedar guardada: es la evidencia de este hito."
+   ],
+   "recursos": [
+    {
+     "titulo": "CapCut, sitio oficial y descarga",
+     "url": "https://www.capcut.com/"
+    },
+    {
+     "titulo": "Audacity, reducción de ruido con más control",
+     "url": "https://manual.audacityteam.org/man/noise_reduction.html"
+    }
+   ]
+  },
+  {
+   "id": "exportar-el-video",
+   "titulo": "Exportar el video final para que se vea bien en el salón",
+   "para": [
+    "audiovisual"
+   ],
+   "hitos": [
+    "v7"
+   ],
+   "modulos": [
+    "G"
+   ],
+   "resumen": "Con qué ajustes exportar y cómo nombrar y guardar el archivo.",
+   "porQue": "Es el último hito de la ruta de video y el entregable del 29 de octubre. Un corto bien hecho que se exporta mal se ve mal, y es el día de la muestra.",
+   "pasos": [
+    {
+     "titulo": "Exporten en MP4, 1920 por 1080",
+     "texto": "En CapCut, el botón de exportar deja elegir resolución, velocidad de fotogramas y calidad. Pongan 1080p y formato MP4: eso lo abre cualquier computador y cualquier proyector sin instalar nada. No entreguen el proyecto de CapCut, que solo lo abre CapCut."
+    },
+    {
+     "titulo": "Dejen la velocidad de fotogramas en 30",
+     "texto": "Aunque animaron a doce fotos por segundo, exporten a 30: cada foto ocupa varios fotogramas y el movimiento queda igual de fluido. Lo que no se debe hacer es cambiar la duración en la exportación, porque ahí sí se altera el tiempo y la voz se desacomoda.",
+     "ojo": "Si CapCut ofrece exportar a 60, no hace falta: pesa el doble y no se ve mejor en una animación a doce fotos por segundo."
+    },
+    {
+     "titulo": "Revisen el archivo exportado completo",
+     "texto": "Ábranlo con un reproductor normal, no con el editor, y véanlo entero. Es frecuente que el último segundo quede cortado o que el audio se corte antes del final.",
+     "ojo": "Véanlo en otro computador si pueden. Lo que se ve bien en el que editó no siempre se ve bien en el del salón."
+    },
+    {
+     "titulo": "Nómbrenlo y guárdenlo donde se pueda encontrar",
+     "texto": "Nombre del proyecto, versión y fecha, sin espacios ni tildes. Por ejemplo: odisea_diversidad_v1_2026-10-29.mp4. Súbanlo a la carpeta del equipo en Drive, no lo dejen solo en un celular."
+    },
+    {
+     "titulo": "Lleven una copia que no dependa de internet",
+     "texto": "El día de la muestra, en una memoria USB. Si la red falla, el corto se proyecta igual."
+    }
+   ],
+   "comprobar": [
+    "El archivo pesa algo razonable: un corto de tres minutos en 1080p suele quedar entre 50 y 300 MB.",
+    "Se abre con doble clic en un computador que no tiene el editor instalado.",
+    "Se ve y se oye completo, incluido el último plano."
+   ],
+   "recursos": [
+    {
+     "titulo": "CapCut, sitio oficial y descarga",
+     "url": "https://www.capcut.com/"
+    },
+    {
+     "titulo": "Kdenlive, alternativa libre",
+     "url": "https://docs.kdenlive.org/en/"
+    }
+   ]
+  },
+  {
+   "id": "del-literario-al-tecnico",
+   "titulo": "Del guion literario al guion técnico",
+   "para": [
+    "audiovisual"
+   ],
+   "hitos": [
+    "v2"
+   ],
+   "modulos": [
+    "C",
+    "D"
+   ],
+   "resumen": "Cómo convertir lo que pasa en la historia en una lista de planos que se puede grabar.",
+   "porQue": "Es el tutorial que estaba pendiente de grabar para el hito v2. El equipo 11.2 ya lo resolvió y su guion técnico sirve de ejemplo para los demás equipos de la línea.",
+   "pasos": [
+    {
+     "titulo": "Numeren las escenas del literario",
+     "texto": "El guion literario cuenta qué pasa. Antes de pensar en planos, pónganle número a cada escena. Una escena es un lugar y un momento: si cambian de sitio o pasa el tiempo, es otra escena."
+    },
+    {
+     "titulo": "Partan cada escena en planos",
+     "texto": "Un plano es lo que se ve sin cortar la cámara. Pregúntense, para cada momento: ¿qué necesito que el espectador vea aquí, la cara o las manos o todo el lugar? Cada respuesta distinta es un plano distinto."
+    },
+    {
+     "titulo": "Llenen una fila por plano",
+     "texto": "Como mínimo: número, escena de la que viene, qué se ve, locación, tipo de plano, ángulo, qué se oye y cuánto dura en segundos. En animación agreguen cuántas fotos son, que es la duración por los fotogramas por segundo.",
+     "ojo": "Si trabajan a 12 fotos por segundo, un plano de 5 segundos son 60 fotos. Ese número es el que dice cuánto trabajo hay de verdad."
+    },
+    {
+     "titulo": "Sumen las duraciones y comparen con lo acordado",
+     "texto": "La suma de todos los planos es la duración del corto. Si se pasaron, recorten planos ahora, en la tabla, que es gratis. Recortar después de grabar cuesta el doble."
+    },
+    {
+     "titulo": "Agreguen una columna de grabado",
+     "texto": "Una columna con Sí o No por plano. Es lo que les va a decir, en pleno rodaje, qué falta sin tener que acordarse."
+    }
+   ],
+   "comprobar": [
+    "Cada fila se puede grabar sin preguntarle nada a quien escribió el guion.",
+    "La suma de las duraciones da la duración acordada, ni más ni menos.",
+    "Alguien de otro equipo puede leer una fila y entender qué hay que poner en cámara."
+   ],
+   "recursos": []
+  },
+  {
+   "id": "plan-de-rodaje",
+   "titulo": "Un plan de rodaje que cabe en una página",
+   "para": [
+    "audiovisual"
+   ],
+   "hitos": [
+    "v3"
+   ],
+   "modulos": [
+    "D"
+   ],
+   "resumen": "Dónde se graba, qué día, quién hace qué y qué hay que llevar.",
+   "porQue": "Es el hito v3 y casi ningún equipo de la línea lo tiene. Sin esto, cada sesión se va en montar otra vez lo que ya estaba montado.",
+   "pasos": [
+    {
+     "titulo": "Agrupen los planos por lugar, no por orden de la historia",
+     "texto": "Si cinco planos del principio y tres del final pasan en el mismo sitio, se graban el mismo día. Montar y desmontar la luz y el escenario es lo que más tiempo consume."
+    },
+    {
+     "titulo": "Una fila por jornada",
+     "texto": "Fecha, locación, qué números de plano se graban ahí, quién anima o actúa y qué hay que llevar. Si alguien tiene que traer algo, va su nombre: sin nombre, nadie lo trae."
+    },
+    {
+     "titulo": "Dejen una jornada aparte para voces y edición",
+     "texto": "Grabar voces el mismo día que se anima sale mal: el salón tiene ruido y el equipo está cansado. Una jornada corta en un sitio silencioso rinde más que dos horas al final de una sesión."
+    },
+    {
+     "titulo": "Pongan una jornada de revisión antes de la entrega",
+     "texto": "Una fecha, antes del 29 de octubre, para ver el corte completo con alguien de fuera del equipo. Lo que no se vea ahí, no se arregla.",
+     "ojo": "Esa jornada de revisión es también la evidencia del hito v6."
+    }
+   ],
+   "comprobar": [
+    "Cabe en una página y se entiende sin explicación.",
+    "Cada plano del guion técnico aparece en alguna jornada: ninguno quedó por fuera.",
+    "Tiene una columna de listo, para ir marcando."
+   ],
+   "recursos": []
+  },
+  {
+   "id": "plano-de-prueba",
+   "titulo": "El plano de prueba: qué mirar antes de grabarlo todo",
+   "para": [
+    "audiovisual"
+   ],
+   "hitos": [
+    "v4"
+   ],
+   "modulos": [
+    "D"
+   ],
+   "resumen": "Media hora de prueba que evita perder una jornada entera de rodaje.",
+   "porQue": "Es el hito v4. El equipo 11.2 lo hizo y por eso detectó el parpadeo de la luz a tiempo para preguntar. Los equipos que no lo hacen descubren el problema cuando ya tienen todo grabado.",
+   "pasos": [
+    {
+     "titulo": "Graben un plano cualquiera, corto, con todo el montaje real",
+     "texto": "Misma luz, misma cámara, mismo soporte, mismo escenario. No sirve una prueba hecha de otra forma: lo que se está probando es el montaje, no la actuación."
+    },
+    {
+     "titulo": "Revisen la luz",
+     "texto": "Reproduzcan a velocidad normal. ¿Parpadea? ¿Hay sombras de las manos? ¿La luz del salón se mete y cambia cuando alguien abre la puerta?"
+    },
+    {
+     "titulo": "Revisen la estabilidad",
+     "texto": "Si el encuadre tiembla entre foto y foto, el soporte no está firme. Resuélvanlo ahora: un soporte flojo arruina cuarenta planos sin que nadie se dé cuenta hasta el final."
+    },
+    {
+     "titulo": "Revisen el sonido en ese mismo sitio",
+     "texto": "Graben diez segundos de silencio en el lugar donde van a grabar las voces y escúchenlos con audífonos. Ahí aparece el ventilador, el pasillo y el zumbido de la luz."
+    },
+    {
+     "titulo": "Anoten lo que hay que cambiar y vuelvan a probar",
+     "texto": "La prueba sirve si hay una segunda prueba. Cambien una cosa a la vez, para saber cuál fue la que sirvió."
+    }
+   ],
+   "comprobar": [
+    "El archivo de prueba queda guardado en la carpeta del equipo: es la evidencia del hito.",
+    "Hay una lista escrita de lo que se ajustó después de verlo.",
+    "La segunda prueba se ve mejor que la primera."
+   ],
+   "recursos": []
+  },
+  {
+   "id": "fuentes-que-existen",
+   "titulo": "Buscar fuentes que existan de verdad y citarlas en APA",
+   "para": [
+    "todos"
+   ],
+   "hitos": [],
+   "modulos": [
+    "E"
+   ],
+   "resumen": "Cómo encontrar antecedentes reales, comprobar que existen y escribirlos en APA 7.",
+   "porQue": "El 21 de octubre se revisaron las cinco referencias del artículo de un equipo: los cuatro DOI citados devuelven error en Crossref y los títulos no aparecen en ningún registro. Eran referencias inventadas. Pasa cuando se le pide la bibliografía a una inteligencia artificial y se pega sin comprobar.",
+   "pasos": [
+    {
+     "titulo": "Busquen donde hay artículos de verdad",
+     "texto": "Google Académico para buscar por tema. SciELO, Redalyc y Dialnet para artículos en español y de América Latina, que es donde más van a encontrar sobre educación y sobre el contexto colombiano. Busquen con palabras del problema de ustedes, no con el título que querrían encontrar."
+    },
+    {
+     "titulo": "Abran el artículo y léanlo, aunque sea el resumen",
+     "texto": "Si no pueden abrirlo, no lo citen. Citar algo que no se leyó es el camino corto a decir algo que el autor no dijo."
+    },
+    {
+     "titulo": "Comprueben que la referencia existe",
+     "texto": "Si tiene DOI, péguenlo en doi.org: debe abrir el artículo. Si no abre, la referencia está mal o no existe. También pueden pegar el título en el buscador de Crossref. Son treinta segundos por referencia.",
+     "ojo": "Esta es la comprobación que cambia todo. Una referencia que no resuelve no se arregla escribiéndola mejor: hay que reemplazarla."
+    },
+    {
+     "titulo": "Guarden el PDF en la carpeta de antecedentes",
+     "texto": "En 01_Antecedentes, con un nombre que se entienda: apellido, año y dos palabras del tema. Esa carpeta es la evidencia de la tarea de antecedentes; sin PDF, la tarea no está hecha."
+    },
+    {
+     "titulo": "Escriban la referencia en APA 7",
+     "texto": "Apellido, A. (año). Título del artículo. Nombre de la Revista, volumen(número), páginas. https://doi.org/... Copien los datos del artículo que tienen abierto, no de memoria."
+    },
+    {
+     "titulo": "Y entonces sí escriban la sección 1.2",
+     "texto": "Con mínimo tres autores y su año, diciendo qué encontró cada uno, y cerrando con lo que quedó sin resolver. Ese hueco es justamente el que el proyecto de ustedes intenta llenar."
+    }
+   ],
+   "comprobar": [
+    "Cada referencia de la lista tiene su PDF en la carpeta 01_Antecedentes.",
+    "Cada DOI abre el artículo correcto al pegarlo en doi.org.",
+    "Lo que dice la sección 1.2 de cada autor aparece de verdad en su artículo."
+   ],
+   "recursos": [
+    {
+     "titulo": "Google Académico",
+     "url": "https://scholar.google.com/"
+    },
+    {
+     "titulo": "SciELO, artículos en acceso abierto",
+     "url": "https://www.scielo.org/es/"
+    },
+    {
+     "titulo": "Redalyc, revistas de América Latina",
+     "url": "https://www.redalyc.org/"
+    },
+    {
+     "titulo": "Dialnet",
+     "url": "https://dialnet.unirioja.es/"
+    },
+    {
+     "titulo": "Comprobar un DOI",
+     "url": "https://www.doi.org/"
+    },
+    {
+     "titulo": "Buscador de Crossref",
+     "url": "https://search.crossref.org/"
+    },
+    {
+     "titulo": "APA 7, cómo se escriben las referencias",
+     "url": "https://apastyle.apa.org/style-grammar-guidelines/references"
+    }
+   ]
+  },
+  {
+   "id": "llenar-el-articulo",
+   "titulo": "La tabla de seguimiento no es el artículo",
+   "para": [
+    "todos"
+   ],
+   "hitos": [],
+   "modulos": [
+    "E",
+    "G"
+   ],
+   "resumen": "Qué va en cada sección del artículo base y de dónde se copia.",
+   "porQue": "Un equipo marcó \"sí\" en seis secciones de la tabla de seguimiento del artículo mientras esas secciones seguían en blanco. No fue mala fe: la tabla de arriba y las secciones de abajo son dos cosas distintas y es fácil confundirlas.",
+   "pasos": [
+    {
+     "titulo": "Entiendan qué es cada cosa",
+     "texto": "La tabla de arriba es un índice para ver de un vistazo qué falta. Marcar \"sí\" ahí no escribe nada. El artículo son las cajas de abajo, donde está el texto. Mientras la caja esté vacía, la sección no está hecha, aunque la tabla diga que sí."
+    },
+    {
+     "titulo": "Casi todo ya está escrito en otro archivo",
+     "texto": "Cada caja dice de dónde se copia. 1.1 el problema sale de la propuesta de julio. 1.2 sale de la matriz de antecedentes. 1.3 también de la propuesta. 3.1, 3.2 y 3.3 salen de la ficha técnica. Es trabajo de copiar, pegar y redactar, no de inventar."
+    },
+    {
+     "titulo": "Empiecen por las que ya se pueden llenar",
+     "texto": "Hoy mismo pueden quedar listas 1.1, 1.3, 3.1, 3.2 y 3.3 si tienen la propuesta y la ficha. Dejen para el final el resumen, que se escribe cuando todo lo demás está."
+    },
+    {
+     "titulo": "Escriban 3.4 con honestidad",
+     "texto": "Qué funciona hoy y qué quedó a medias. Escribir lo que no funciona no baja la nota: ocultarlo sí se nota, porque el lector abre el proyecto y lo ve."
+    },
+    {
+     "titulo": "Guarden una versión nueva cuando agreguen algo grande",
+     "texto": "Articulo_base_v2.docx, v3 y así. Esa serie de versiones muestra cómo creció el proyecto, y eso también se evalúa.",
+     "ojo": "Guardar una versión nueva es, además, la tarea artv de la ruta."
+    }
+   ],
+   "comprobar": [
+    "Abran el documento y lean solo las cajas: lo que esté vacío, está vacío.",
+    "Cada sección marcada en la tabla tiene texto propio debajo, no la instrucción de la plantilla.",
+    "El conteo del portal coincide con lo que ustedes ven en el documento."
+   ],
+   "recursos": []
+  },
+  {
+   "id": "id-de-un-documento",
+   "titulo": "Sacar el identificador de un documento para guardarlo en la base de datos",
+   "para": [
+    "software"
+   ],
+   "hitos": [
+    "s4"
+   ],
+   "modulos": [
+    "G"
+   ],
+   "resumen": "Cómo se referencia un archivo o un contenido desde la base de datos, sin guardar el archivo adentro.",
+   "porQue": "El equipo 7 escribió esta barrera: \"no sabemos cómo sacar el ID de los archivos con la información\", y pidió grabar un tutorial sobre cómo agregar el contenido a la base de datos.",
+   "pasos": [
+    {
+     "titulo": "Separen el archivo del dato",
+     "texto": "En una base de datos no se guarda el archivo: se guarda una ficha que dice dónde está y qué es. El archivo vive en el almacenamiento o en una carpeta; la base guarda su ruta, su nombre y sus etiquetas."
+    },
+    {
+     "titulo": "Entiendan qué es el identificador",
+     "texto": "Cada documento de una colección tiene un identificador único. Si ustedes no le ponen uno, la base le inventa uno al crearlo. Ese identificador es lo que después permite traer ese documento concreto sin recorrer todos."
+    },
+    {
+     "titulo": "Decidan si el identificador lo ponen ustedes",
+     "texto": "Si cada contenido ya tiene un código propio, por ejemplo la unidad y el número de actividad, úsenlo como identificador. Es más fácil de depurar que un código aleatorio, y evita que se dupliquen los contenidos cuando alguien sube dos veces lo mismo.",
+     "ojo": "Un identificador que ustedes eligen no puede llevar espacios, tildes ni barras. Usen algo como ingles10-u2-act03."
+    },
+    {
+     "titulo": "Al crear el documento, guarden el identificador que devuelve",
+     "texto": "Cuando la base crea el documento, la respuesta trae su identificador. Guárdenlo en una variable antes de seguir: es el momento en que está disponible y es el error más común perderlo ahí."
+    },
+    {
+     "titulo": "Prueben con un solo contenido antes de subir todo",
+     "texto": "Creen un documento, anoten su identificador, y escriban el código que lo vuelve a traer usando ese identificador. Hasta que ese ciclo no funcione con uno, no vale la pena subir cincuenta."
+    }
+   ],
+   "comprobar": [
+    "Pueden traer un contenido concreto por su identificador, sin recorrer la colección entera.",
+    "Subir dos veces el mismo contenido no crea dos copias.",
+    "En la consola de la base se ve la ficha con los campos que ustedes definieron."
+   ],
+   "recursos": [
+    {
+     "titulo": "Firestore, agregar datos",
+     "url": "https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es"
+    },
+    {
+     "titulo": "Firestore, leer datos",
+     "url": "https://firebase.google.com/docs/firestore/query-data/get-data?hl=es"
+    },
+    {
+     "titulo": "Firestore, documentación general",
+     "url": "https://firebase.google.com/docs/firestore?hl=es"
+    }
+   ]
+  },
+  {
+   "id": "dibujar-el-circuito",
+   "titulo": "Dibujar el circuito y saber qué pin va a dónde",
+   "para": [
+    "electronica"
+   ],
+   "hitos": [
+    "e1",
+    "e2",
+    "e3"
+   ],
+   "modulos": [
+    "C",
+    "D"
+   ],
+   "resumen": "Pasar de una lista de componentes a un circuito que se puede armar y revisar.",
+   "porQue": "Son los hitos e1 y e2 de la línea de electrónica, y hasta hoy no tenían ningún recurso. Sin el circuito dibujado, el montaje se arma a prueba y error y se queman componentes.",
+   "pasos": [
+    {
+     "titulo": "Listen los componentes con su referencia exacta",
+     "texto": "No \"un motor\" sino \"servomotor SG90\". No \"una placa\" sino \"Arduino Uno\". La referencia es la que permite buscar cuánta corriente consume y qué voltaje necesita, y esos dos números deciden si el montaje funciona."
+    },
+    {
+     "titulo": "Dibújenlo antes de conectarlo",
+     "texto": "Tinkercad Circuits deja armar el circuito en el navegador y simularlo sin tener los componentes en la mano. Fritzing hace el dibujo de la protoboard. Cualquiera de los dos sirve: lo que no sirve es armarlo directamente sobre la mesa."
+    },
+    {
+     "titulo": "Hagan la tabla de pines",
+     "texto": "Una fila por conexión: qué componente, qué patica, a qué pin de la placa y para qué. Esa tabla es la que les permite revisar el montaje sin desarmarlo, y es la evidencia del hito e3."
+    },
+    {
+     "titulo": "Revisen la alimentación aparte",
+     "texto": "Sumen cuánta corriente piden todos los componentes juntos. Un servo bajo carga pide más de lo que el puerto USB entrega, y ahí es donde la placa se reinicia sola. Si la suma se acerca al límite, hace falta alimentación externa.",
+     "ojo": "La tierra de la fuente externa y la de la placa van unidas. Si no, el circuito hace cosas raras sin razón aparente."
+    },
+    {
+     "titulo": "Prueben un componente a la vez",
+     "texto": "Conecten solo uno y háganlo responder. Cuando funcione, agreguen el siguiente. Armar todo y probar al final hace imposible saber cuál falla."
+    }
+   ],
+   "comprobar": [
+    "El dibujo del circuito está guardado en la carpeta del equipo.",
+    "La tabla de pines coincide con lo que está armado de verdad.",
+    "Cada componente respondió por separado antes de armar el montaje completo."
+   ],
+   "recursos": [
+    {
+     "titulo": "Tinkercad Circuits, simular sin tener los componentes",
+     "url": "https://www.tinkercad.com/circuits"
+    },
+    {
+     "titulo": "Fritzing, dibujar la protoboard",
+     "url": "https://fritzing.org/"
+    },
+    {
+     "titulo": "Arduino, servomotores",
+     "url": "https://docs.arduino.cc/learn/electronics/servo-motors/"
+    },
+    {
+     "titulo": "Arduino, referencia del lenguaje",
+     "url": "https://docs.arduino.cc/language-reference/"
+    }
+   ]
+  },
+  {
+   "id": "preparar-unity",
+   "titulo": "Preparar Unity para que nada se rompa",
+   "para": [
+    "unity"
+   ],
+   "hitos": [
+    "u1",
+    "u2"
+   ],
+   "modulos": [],
+   "estado": "Vista previa",
+   "resumen": "Dejar el computador listo una sola vez: la versión 2019.4.38f1 con sus módulos, un proyecto 2D en una carpeta segura, Visual Studio conectado y el kit del Equipo 10 importado y probado.",
+   "porQue": "Casi todos los bloqueos de la línea Unity entre agosto y septiembre vinieron del entorno y no del juego: una ficha técnica con la versión 2019.4.41f1 en vez de la 38f1, el error de .NET al usar VS Code con Unity 2019, un proyecto guardado en OneDrive que ya iba en su séptima copia, y una línea de código a medias que apagaba todos los scripts. Esta guía resuelve esos cuatro antes de empezar a construir.",
+   "diapositivas": {
+    "carpeta": "preparar-unity",
+    "titulos": [
+     "Portada: preparar Unity para que nada se rompa",
+     "Todos con la misma versión: 2019.4.38f1",
+     "Paso 1: revisar la versión y agregar dos módulos",
+     "Paso 2: crear el proyecto 2D en una carpeta segura",
+     "Paso 3: las cinco zonas del editor",
+     "Paso 4: conectar Visual Studio",
+     "Paso 5: importar el kit y hacer la prueba",
+     "Si la consola se pone roja, léela así",
+     "Antes de salir"
+    ]
+   },
+   "descargas": [
+    {
+     "titulo": "Guía 0 en PowerPoint, con el guion de cada diapositiva en las notas",
+     "archivo": "unity/Guia0_Preparar_Unity.pptx"
+    },
+    {
+     "titulo": "Kit del Equipo 10.1, motricidad fina y gruesa",
+     "archivo": "unity/KitEquipo10_Motricidad.unitypackage"
+    },
+    {
+     "titulo": "Kit del Equipo 10.2, juego rítmico de coordinación",
+     "archivo": "unity/KitEquipo10_Ritmo.unitypackage"
+    }
+   ],
+   "pasos": [
+    {
+     "titulo": "Revisa que la versión sea 2019.4.38f1",
+     "texto": "En Unity Hub, Installs, busca la tarjeta de 2019.4.38f1. Fíjate en los últimos números: 2019.4.41f1 se parece, pero no es la misma, y un proyecto abierto con otra versión se convierte y ya no vuelve a abrir en la anterior.",
+     "ojo": "Si la versión no aparece, copia en el navegador unityhub://2019.4.38f1/fdbb7325fa47 y Unity Hub la instala directo."
+    },
+    {
+     "titulo": "Agrega dos módulos: Visual Studio y WebGL",
+     "texto": "En la tarjeta de la versión pulsa los tres puntos, Add modules, y marca Microsoft Visual Studio Community 2019 y WebGL Build Support. El primero sirve para escribir los scripts; el segundo, para publicar el juego en esta página al final del semestre."
+    },
+    {
+     "titulo": "Crea un solo proyecto 2D en C:\\Unity",
+     "texto": "Projects, New project, Editor Version 2019.4.38f1, plantilla 2D. Nómbralo Equipo10_Motricidad o Equipo10_Ritmo y guárdalo en C:\\Unity. La próxima vez ábrelo desde Projects: no crees otro.",
+     "ojo": "Nunca en OneDrive, ni en el Escritorio ni en Documentos si están sincronizados: OneDrive sube los archivos mientras Unity los escribe y el proyecto se daña."
+    },
+    {
+     "titulo": "Repasa las cinco zonas del editor",
+     "texto": "Hierarchy es la lista de lo que hay en la escena; Scene es donde acomodas y Game lo que ve el jugador; Inspector muestra las propiedades del objeto elegido; Project tiene todos los archivos; Console muestra mensajes y errores.",
+     "ojo": "Lo que cambias mientras el juego está en Play se borra al detenerlo."
+    },
+    {
+     "titulo": "Conecta Visual Studio con Unity",
+     "texto": "Edit, Preferences, External Tools, y en External Script Editor elige Visual Studio Community. Para comprobarlo, abre un script y escribe transform seguido de un punto: debe aparecer una lista de sugerencias.",
+     "ojo": "VS Code con la extensión nueva de C# pide el SDK de .NET y está hecho para Unity 2021 en adelante. Con 2019.4 se queda sin sugerencias: ese fue el error de agosto."
+    },
+    {
+     "titulo": "Importa el kit y corre la escena de prueba",
+     "texto": "Assets, Import Package, Custom Package, elige el paquete de tu equipo y pulsa Import sin desmarcar nada. Luego abre KitEquipo10, Escenas, 00_PruebaDelKit, y dale Play.",
+     "ojo": "Si Windows pregunta por el Firewall, pulsa Cancelar: el kit no usa internet. Ese aviso frena el arranque hasta que alguien lo atiende."
+    },
+    {
+     "titulo": "Si la consola se pone roja, léela por partes",
+     "texto": "Un error se lee así: archivo, línea y columna entre paréntesis, código del error y lo que Unity no entendió. Doble clic en el mensaje abre el archivo en esa línea. Casi siempre falta un punto y coma o una llave en esa línea o en la de arriba.",
+     "codigo": "Assets\\Scripts\\PlayerMovement.cs(23,26): error CS1525: Invalid expression term '}'",
+     "ojo": "Basta un error en un solo archivo para que no funcione ninguno. Ese mensaje es real: sale de una línea que quedó como float rotationY = sin terminar."
+    }
+   ],
+   "comprobar": [
+    "Unity Hub muestra 2019.4.38f1 con los módulos de Windows y WebGL.",
+    "El proyecto está en C:\\Unity y es el único del equipo.",
+    "Doble clic en un script abre Visual Studio con sugerencias.",
+    "La escena 00_PruebaDelKit muestra Kit listo en verde.",
+    "La captura de esa pantalla está en la carpeta del equipo con el nombre Fase0_listo.png."
+   ],
+   "recursos": [
+    {
+     "titulo": "Archivo de versiones de Unity, para instalar 2019.4.38f1",
+     "url": "https://unity.com/releases/editor/archive"
+    },
+    {
+     "titulo": "Manual de Unity 2019.4: el editor y sus ventanas",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/UsingTheEditor.html"
+    },
+    {
+     "titulo": "Manual de Unity 2019.4: Preferences y External Tools",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/Preferences.html"
+    },
+    {
+     "titulo": "Manual de Unity 2019.4: importar un paquete",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/AssetPackagesImport.html"
+    },
+    {
+     "titulo": "Manual de Unity 2019.4: la ventana Console",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/Console.html"
+    },
+    {
+     "titulo": "Visual Studio Community, descarga gratuita",
+     "url": "https://visualstudio.microsoft.com/es/vs/community/"
+    }
+   ]
+  }
+ ]
 }
