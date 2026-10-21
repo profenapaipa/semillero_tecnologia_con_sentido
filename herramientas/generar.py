@@ -463,6 +463,9 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
     if datos:
         menu.append('<li>%s</li>' % desplegable_secciones(pre))
         menu.append('<li>%s</li>' % desplegable_proyectos(datos, pre))
+    menu.append('<li><a href="%sguias/index.html"%s>%s Guias</a></li>'
+                % (pre, ' aria-current="page"' if activo == 'guias' else '',
+                   ico('libro', 15)))
     menu.append('<li><a href="%sindex.html#publicados">%s Publicados</a></li>'
                 % (pre, ico('cohete', 15)))
     return """<!doctype html>
@@ -560,6 +563,54 @@ RECURSOS_MODULO = {
                        {'titulo': 'Empezar con CSS, MDN en español', 'url': 'https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Getting_started'}],
           'porGrabar': 'Cómo guardar una versión nueva del artículo sin perder la anterior.'},
 }
+
+
+def cargar_guias():
+    """
+    Las guias propias del semillero. Cada una responde a una barrera que un
+    equipo escribio de verdad; el campo porQue dice cual.
+    """
+    ruta = os.path.join(RAIZ, 'datos', 'guias.json')
+    if not os.path.exists(ruta):
+        return []
+    with open(ruta, encoding='utf-8') as fh:
+        return json.load(fh).get('guias', [])
+
+
+GUIAS = []          # se llena en main()
+
+
+def guias_de_hito(hito_id):
+    return [g for g in GUIAS if hito_id in (g.get('hitos') or [])]
+
+
+def guias_de_modulo(letra, linea):
+    """Las del modulo, filtradas por la linea tecnica del equipo."""
+    fuera = []
+    for g in GUIAS:
+        if letra not in (g.get('modulos') or []):
+            continue
+        para = g.get('para') or []
+        if 'todos' in para or linea in para:
+            fuera.append(g)
+    return fuera
+
+
+def enlace_guia(g, pre):
+    return '%sguias/%s.html' % (pre, g['id'])
+
+
+def lista_guias(gs, pre):
+    """El bloque de guias del semillero. Nunca va bloqueado."""
+    if not gs:
+        return ''
+    return ('<div class="nota-caja verde guias-aqui">'
+            '<span class="titulo">%s Guias del semillero</span>'
+            '<ul class="recursos">%s</ul></div>'
+            % (ico('libro', 16),
+               ''.join('<li>%s<a href="%s">%s</a></li>'
+                       % (ico('chevron', 14), e(enlace_guia(g, pre)), e(g['titulo']))
+                       for g in gs)))
 
 
 def cargar_modulos():
@@ -1549,6 +1600,12 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
         if mm['_total'] and mm['_hechas'] < mm['_total']:
             frontera = i_f
             break
+    # Se abre ademas la mitad de lo que quedaba cerrado, redondeando hacia
+    # arriba. El objetivo dejo de ser dosificar el material: ningun equipo
+    # puede quedarse sin con que seguir porque le falte una tarea anterior.
+    cerrados = len(modulos) - 1 - frontera
+    if cerrados > 0:
+        frontera += (cerrados + 1) // 2
 
     for i_m, m in enumerate(modulos):
         col = color_de(m['_hechas'], m['_total'])
@@ -1634,9 +1691,13 @@ def pagina_modulos(datos, equipo, modulos, videos=None):
         vids = [v for v in (videos or {}).get('videos', []) if linea_eq in v.get('para', [])]
         pend_v = [v for v in (videos or {}).get('pendientes', [])
                   if v.get('modulo') == m['letra'] and linea_eq in v.get('para', [])]
-        if rec.get('recursos') or rec.get('porGrabar') or pend_v or (vids and m['letra'] == 'A'):
+        if (rec.get('recursos') or rec.get('porGrabar') or pend_v
+                or guias_de_modulo(m['letra'], linea_eq) or (vids and m['letra'] == 'A')):
             h.append('<div class="modulo-parte"><h4>%s Para repasar por fuera de la presentacion %s</h4>'
                      % (ico('birrete', 16), rotulo_evento('guia')))
+            gs_mod = guias_de_modulo(m['letra'], linea_eq)
+            if gs_mod:
+                h.append(lista_guias(gs_mod, '../'))
             if bloqueado:
                 h.append('<div class="nota-caja ambar candado-aviso">'
                          '<span class="titulo">%s Recursos bloqueados</span>'
@@ -1784,6 +1845,9 @@ def pagina_desarrollo(datos, equipo):
         if hito.get('yaEntregado'):
             h.append('<div class="nota-caja verde"><span class="titulo">%s<b>Ya entregado</b></span>%s</div>'
                      % (ico('check', 16), e(hito['yaEntregado'])))
+        gs = guias_de_hito(hito['id'])
+        if gs:
+            h.append(lista_guias(gs, '../'))
         if hito.get('recursos'):
             h.append('<ul class="recursos">%s</ul>' % ''.join(
                 '<li>%s<a href="%s">%s</a></li>' % (ico('externo', 15), e(r['url']), e(r['titulo']))
@@ -1792,7 +1856,7 @@ def pagina_desarrollo(datos, equipo):
             h.append('<div class="nota-caja ambar"><span class="titulo">%s'
                      '<b>Tutorial pendiente de grabar por el profe</b></span>%s</div>'
                      % (ico('llave', 16), e(hito['porGrabar'])))
-        if not (hito.get('recursos') or hito.get('porGrabar') or hito.get('yaEntregado')):
+        if not (gs or hito.get('recursos') or hito.get('porGrabar') or hito.get('yaEntregado')):
             h.append('<p class="dato">Sin recurso externo: este hito se resuelve con lo visto en '
                      'sesión. Si necesitan un tutorial, pídanlo en la hoja de barreras.</p>')
         h.append('</div></details></div></article>')
@@ -1869,8 +1933,103 @@ def pagina_articulo(datos, equipo):
 
 # ====================================================================
 
+def pagina_guia(datos, g):
+    """Una guia: por que existe, los pasos, como comprobar y con que apoyarse."""
+    pre = '../'
+    h = [cabeza(g['titulo'], g['resumen'], pre, datos=datos)]
+    h.append('<header class="portada compacta"><div class="envoltura envoltura-lectura">')
+    h.append('<p class="rotulo">%s Guia del semillero</p>' % ico('libro', 14))
+    h.append('<h1>%s</h1>' % e(g['titulo']))
+    h.append('<p class="bajada">%s</p>' % e(g['resumen']))
+    h.append('</div></header>')
+
+    h.append('<section class="bloque"><div class="envoltura envoltura-lectura">')
+    h.append('<div class="destacado"><h3>%s De donde sale esta guia</h3><p>%s</p></div>'
+             % (ico('diana', 20), e(g['porQue'])))
+    h.append('</div></section>')
+
+    h.append('<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">')
+    h.append('<div class="cab-seccion"><span class="rotulo">Paso a paso</span>'
+             '<h2>Como se hace</h2></div>')
+    h.append('<ol class="guia-pasos">')
+    for paso in g['pasos']:
+        h.append('<li><h3>%s</h3><p>%s</p>' % (e(paso['titulo']), e(paso['texto'])))
+        if paso.get('ojo'):
+            h.append('<div class="nota-caja ambar"><span class="titulo">%s Ojo con esto</span>%s</div>'
+                     % (ico('bombilla', 15), e(paso['ojo'])))
+        h.append('</li>')
+    h.append('</ol></div></section>')
+
+    if g.get('comprobar'):
+        h.append('<section class="bloque"><div class="envoltura envoltura-lectura">')
+        h.append('<div class="cab-seccion"><span class="rotulo">Antes de darlo por hecho</span>'
+                 '<h2>Como saber si quedo bien</h2></div>')
+        h.append('<ul class="lista-check">%s</ul>'
+                 % ''.join('<li>%s%s</li>' % (ico('check', 15), e(c)) for c in g['comprobar']))
+        h.append('</div></section>')
+
+    if g.get('recursos'):
+        h.append('<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">')
+        h.append('<div class="cab-seccion"><span class="rotulo">Para profundizar</span>'
+                 '<h2>Documentacion oficial</h2>'
+                 '<p>Cada enlace se comprobo antes de publicarlo.</p></div>')
+        h.append('<ul class="recursos">%s</ul>'
+                 % ''.join('<li>%s<a href="%s">%s</a></li>'
+                           % (ico('externo', 15), e(r['url']), e(r['titulo']))
+                           for r in g['recursos']))
+        h.append('</div></section>')
+
+    h.append('<section class="bloque"><div class="envoltura envoltura-lectura">')
+    h.append('<div class="botones"><a class="boton" href="%sguias/index.html">%s Todas las guias</a>'
+             '<a class="boton" href="%sindex.html">Volver al portal</a></div>'
+             % (pre, ico('libro', 16), pre))
+    h.append('</div></section>')
+    h.append(pie(datos['meta']))
+    return '\n'.join(h)
+
+
+def pagina_guias(datos, guias):
+    """El indice de las guias, agrupadas por a quien sirven."""
+    pre = '../'
+    h = [cabeza('Guias del semillero',
+                'Material propio del semillero: %d guias que responden a las barreras '
+                'que los equipos escribieron.' % len(guias), pre, activo='guias',
+                datos=datos)]
+    h.append('<header class="portada compacta"><div class="envoltura envoltura-lectura">')
+    h.append('<p class="rotulo">%s Material del semillero</p>' % ico('libro', 14))
+    h.append('<h1>Guias del semillero</h1>')
+    h.append('<p class="bajada">Cada guia responde a una barrera que un equipo escribio '
+             'de verdad. No estan bloqueadas: se abren cuando hagan falta.</p>')
+    h.append('</div></header>')
+
+    GRUPOS = [('todos', 'Para todos los equipos'),
+              ('audiovisual', 'Linea audiovisual'),
+              ('software', 'Desarrollo de software'),
+              ('electronica', 'Electronica y robotica'),
+              ('unity', 'Unity')]
+    h.append('<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">')
+    for clave, titulo in GRUPOS:
+        gs = [g for g in guias if clave in (g.get('para') or [])]
+        if not gs:
+            continue
+        h.append('<div class="cab-sub"><span class="icono">%s</span><h3>%s</h3>'
+                 '<span class="dato">%d</span></div>' % (ico('libro', 19), e(titulo), len(gs)))
+        h.append('<div class="rejilla c2">')
+        for g in gs:
+            h.append('<a class="tarjeta-guia revelar" href="%s">' % e(enlace_guia(g, pre)))
+            h.append('<h3>%s</h3><p>%s</p>' % (e(g['titulo']), e(g['resumen'])))
+            h.append('<p class="relacion">%d pasos%s</p>'
+                     % (len(g['pasos']),
+                        (' y %d enlaces' % len(g['recursos'])) if g.get('recursos') else ''))
+            h.append('</a>')
+        h.append('</div>')
+    h.append('</div></section>')
+    h.append(pie(datos['meta']))
+    return '\n'.join(h)
+
+
 def main():
-    global VERSION_ASSETS, PROYECTOS_EN_LETRAS
+    global VERSION_ASSETS, PROYECTOS_EN_LETRAS, GUIAS
     VERSION_ASSETS = huella('assets/css/marca.css', 'assets/css/sitio.css',
                             'assets/js/sitio.js')
     with open(DATOS, encoding='utf-8') as f:
@@ -1879,7 +2038,9 @@ def main():
 
     modulos = cargar_modulos()
     videos = cargar_videos()
+    GUIAS = cargar_guias()
     os.makedirs(os.path.join(SALIDA, 'equipos'), exist_ok=True)
+    os.makedirs(os.path.join(SALIDA, 'guias'), exist_ok=True)
     escritas = []
 
     def escribir(ruta, contenido):
@@ -1896,6 +2057,10 @@ def main():
         escribir('equipos/%s-ruta.html' % s, pagina_ruta(datos, eq))
         escribir('equipos/%s-desarrollo.html' % s, pagina_desarrollo(datos, eq))
         escribir('equipos/%s-articulo.html' % s, pagina_articulo(datos, eq))
+
+    for g in GUIAS:
+        escribir('guias/%s.html' % g['id'], pagina_guia(datos, g))
+    escribir('guias/index.html', pagina_guias(datos, GUIAS))
 
     with open(os.path.join(SALIDA, '.nojekyll'), 'w', encoding='utf-8') as fh:
         fh.write('')

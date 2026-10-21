@@ -1969,3 +1969,81 @@ details.mas > div { min-width: 0; }
   .tema { margin-left: 0; }
   .tema .tema-txt { display: none; }
 }
+
+
+/* ============ 30. Guias del semillero ============ */
+/* Material propio, escrito a partir de las barreras que los equipos
+   reportaron. No se bloquea nunca: el objetivo es que nadie se quede sin
+   con que seguir. */
+
+/* Una guia no tiene paneles a los lados, asi que su contenido se centra en
+   vez de pegarse al borde izquierdo. Medido antes: los pasos ocupaban 1427px
+   de ancho con el texto limitado a 78 caracteres, o sea casi la mitad de la
+   pagina vacia a la derecha. */
+.envoltura-lectura { max-width: 1000px; }
+
+.guia-pasos { list-style: none; counter-reset: paso; display: grid; gap: 18px; }
+.guia-pasos > li {
+  counter-increment: paso;
+  position: relative;
+  padding: 18px 20px 18px 62px;
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  box-shadow: var(--alzado-1);
+}
+.guia-pasos > li::before {
+  content: counter(paso);
+  position: absolute; left: 18px; top: 18px;
+  width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--linea, var(--cian)); color: var(--sobre-relleno);
+  font-family: var(--fuente-datos); font-size: 14px; font-weight: 700;
+}
+.guia-pasos > li h3 { font-size: 17px; margin-bottom: 6px; }
+.guia-pasos > li p { color: var(--tinta-suave); }
+.guia-pasos .nota-caja { margin-top: 12px; }
+
+.lista-check { list-style: none; display: grid; gap: 10px; }
+.lista-check li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 12px 14px;
+  background: var(--superficie); border: 1px solid var(--filete-sutil);
+  border-radius: var(--radio-chico);
+}
+.lista-check li .ico { color: var(--verde-texto); flex: none; margin-top: 2px; }
+
+/* El bloque de guias dentro de un hito o un modulo */
+.guias-aqui { margin-block: 12px; }
+.guias-aqui .recursos a { font-weight: 600; }
+
+/* La tarjeta del indice de guias es un enlace entero, no un div. Sin esto
+   hereda el subrayado y el color de enlace del navegador, y el titulo y el
+   resumen salen en azul y subrayados. */
+.tarjeta-guia {
+  display: block;
+  padding: 18px 20px;
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-left: 3px solid var(--cian);
+  border-radius: var(--radio);
+  box-shadow: var(--alzado-1);
+  color: var(--tinta);
+  text-decoration: none;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.tarjeta-guia:hover, .tarjeta-guia:focus-visible {
+  border-color: var(--cian);
+  box-shadow: var(--alzado-2);
+  transform: translateY(-2px);
+}
+.tarjeta-guia h3 {
+  font-size: 17px; line-height: 1.25; margin-bottom: 7px; color: var(--tinta);
+}
+.tarjeta-guia:hover h3 { color: var(--cian); }
+.tarjeta-guia p { color: var(--tinta-suave); font-size: 14.5px; }
+.tarjeta-guia .relacion {
+  margin-top: 10px;
+  font-family: var(--fuente-datos); font-size: 11.5px;
+  letter-spacing: .05em; text-transform: uppercase; color: var(--tinta-suave);
+}

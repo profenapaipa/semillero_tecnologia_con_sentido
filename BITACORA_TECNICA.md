@@ -684,3 +684,66 @@ avisa que no pudo comprobar en vez de fingir que revisó. Probada al revés,
 insertando un nombre a propósito en el portal.
 
 El semillero queda en 34% y con dos sesiones por delante.
+
+---
+
+## 11. Material propio del semillero, 21 de octubre de 2026
+
+### 11.1 Por qué hacía falta
+
+La línea audiovisual tenía **cero recursos en sus siete hitos**. Los equipos
+escribían barreras y la respuesta del sitio era siempre la misma: "tutorial
+pendiente de grabar por el profe". Eso deja a un equipo esperando en vez de
+avanzando.
+
+### 11.2 Once guías, escritas desde las barreras reales
+
+Cada guía responde a una barrera que un equipo escribió de verdad, y lo dice en
+su campo `porQue`. No salen de un temario.
+
+| Guía | Responde a |
+|---|---|
+| Quitar el parpadeo de la luz | La barrera literal del 11.2 sobre la exposición automática |
+| Que la voz calce con la animación | Su segunda barrera, el audio más rápido que las fotos |
+| Revisar el audio con audífonos | Hito v5, que ningún equipo tenía |
+| Exportar el video final | Hito v7, el entregable del 29 |
+| Del guion literario al técnico | Hito v2, que estaba pendiente de grabar |
+| Un plan de rodaje que cabe en una página | Hito v3 |
+| El plano de prueba | Hito v4 |
+| Buscar fuentes que existan y citarlas en APA | Las referencias inventadas del 11.2 |
+| La tabla de seguimiento no es el artículo | La confusión del Equipo 9 |
+| Sacar el identificador de un documento | La barrera del Equipo 7 sobre la base de datos |
+| Dibujar el circuito y mapear los pines | Hitos e1 y e2, sin recursos hasta hoy |
+
+Unity quedó fuera a propósito: ese material se está haciendo en paralelo.
+
+### 11.3 Los enlaces se comprobaron antes de publicarlos
+
+Veintidós enlaces externos, uno por uno. El manual de Stop Motion Studio se
+descartó porque su página de ayuda devuelve 404. SciELO Colombia tampoco
+respondió, así que se usó el portal general de SciELO.
+
+Al revisar después los 47 enlaces del sitio completo aparecieron **dos enlaces
+rotos que ya existían**, los dos de Unity: la ruta de interfaz de usuario de
+*junior programmer* y el tutorial de *drag and drop*. No se tocaron, porque
+Unity se está trabajando en paralelo, pero quedan anotados aquí.
+
+### 11.4 El candado se soltó a la mitad
+
+Antes se abrían los módulos hasta donde iba el equipo y se cerraba el resto.
+Ahora se abre además **la mitad de lo que quedaba cerrado**, redondeando hacia
+arriba. El objetivo dejó de ser dosificar el material: ningún equipo puede
+quedarse sin con qué seguir porque le falte una tarea anterior.
+
+Las guías del semillero no se bloquean nunca, igual que las diapositivas.
+
+### 11.5 Dos correcciones de maquetación
+
+- Las guías se centraron. Medido antes: los pasos ocupaban 1427 px de ancho con
+  el texto limitado a 78 caracteres, o sea media página vacía a la derecha. Una
+  página de guía no tiene paneles laterales, así que su contenido va centrado.
+- Las tarjetas del índice eran un `<a>` con la clase `.hermano`, pensada para un
+  `div`: heredaban el subrayado y el color de enlace, y el título y el resumen
+  salían en azul subrayado. Ahora tienen clase propia.
+
+El sitio pasa de 81 a 93 páginas.
