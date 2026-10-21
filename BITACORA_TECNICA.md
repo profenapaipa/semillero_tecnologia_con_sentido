@@ -615,3 +615,72 @@ archivos de Wisfox que se colaron en algún commit y en mensajes de commit.
 Quitarlos exige reescribir el historial y forzar el push, y eso no se hizo. Hay
 un plan paso a paso, con una copia de seguridad y cuatro verificaciones antes de
 publicar, en la carpeta del Equipo 13 (`docs/plan-limpiar-historial.md`).
+
+---
+
+## 10. Revisión semanal del 21 de octubre de 2026
+
+Se revisó todo lo modificado en Drive desde el 17 de octubre, documento por
+documento, y los commits de los seis repositorios. En los repositorios no hubo
+nada nuevo desde el 17.
+
+### 10.1 El Equipo 11.2 escribió el artículo en un fin de semana
+
+Pasaron de tener el `Articulo_base.docx` idéntico a la plantilla a escribir
+**catorce de las quince secciones**, en la versión v1.0 fechada el 21 de
+octubre. No es relleno: lo que cuentan coincide con su guion técnico hasta en
+el detalle de los fotogramas por segundo y el color de la luz por escena.
+
+En el mismo fin de semana subieron, además:
+
+- **Guion técnico**, cuarenta planos con encuadre, ángulo, diálogo, color de la
+  luz LED, duración, fotos a doce por segundo y una columna de explicación
+  simbólica. Cuadra exactamente los 195 segundos acordados.
+- **Locaciones y plan de rodaje**, cuatro locaciones y cinco jornadas con
+  fecha, qué planos se graban en cada una, quién anima y qué hay que llevar.
+- **Plano de prueba grabado**, un video del 20 de octubre. En el guion técnico
+  las cuarenta tomas siguen marcadas como no grabadas, así que esto es la
+  prueba de luz y sonido, no el rodaje.
+- **Ficha técnica** con los cuatro pasos llenos, incluido el esquema de las
+  tres cajas, que es el paso que casi nadie completa.
+- **Barreras** con tres problemas escritos y dos preguntas concretas para
+  grabar.
+- **Registro de bocetos**, donde declaran con honestidad que no dibujaron
+  bocetos en papel y pasaron directo al prototipado en plastilina.
+
+Su ruta pasó a 18 de 25, su ruta de video a 5 de 7 y su artículo a 13 de 15.
+
+### 10.2 Las referencias del artículo no existen
+
+Las cinco referencias en APA de la sección 5.2 se verificaron una por una. Los
+cuatro DOI citados se consultaron en Crossref y **los cuatro devuelven 404**. Al
+buscar los títulos tampoco aparece ningún registro que coincida: lo más cercano
+que devuelve Crossref son artículos de temas distintos.
+
+Son referencias inventadas, casi con seguridad generadas y pegadas sin
+verificar. Por eso quedan como **no hechas** las dos secciones que dependen por
+completo de esa bibliografía, la 1.2 y la 5.2, y también la tarea de
+antecedentes. Todo lo demás queda como hecho, porque es trabajo propio sobre su
+propio proyecto.
+
+La regla del semillero es que una tarea sin evidencia no está hecha. Una
+referencia que no existe no es evidencia. El equipo lo ve escrito en su propia
+página, con el motivo.
+
+### 10.3 Equipo 10.1
+
+Subieron el 21 de octubre el documento de diseño de los dos modos de juego:
+motricidad fina coloreando el personaje y esquivando obstáculos al ritmo de la
+música, y motricidad gruesa con el ratón en baja sensibilidad sobre un espacio
+que se reduce. Los siete hitos de Unity siguen todos sin evidencia: es el
+equipo más trabado del semillero.
+
+### 10.4 Una guarda nueva contra la fuga de nombres
+
+La auditoría ahora falla si el nombre de un estudiante aparece en cualquier
+página generada o en cualquier documento `.md` del repositorio. Compara contra
+el archivo de seudónimos, que vive fuera del repositorio; si no lo encuentra,
+avisa que no pudo comprobar en vez de fingir que revisó. Probada al revés,
+insertando un nombre a propósito en el portal.
+
+El semillero queda en 34% y con dos sesiones por delante.

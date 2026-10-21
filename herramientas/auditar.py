@@ -241,6 +241,44 @@ for eq in datos['equipos']:
     if pub == 'en linea' and not (eq.get('publicacion') or {}).get('url'):
         fallas.append('equipo %s: figura publicado pero no tiene url' % eq['numero'])
 
+# ---- 7.ter ningun nombre de estudiante puede quedar publicado ----
+# El portal es publico y son menores: no hay autorizacion para publicar sus
+# nombres, y tratarlos sin ella va contra la Ley 1581 de 2012, articulo 7.
+# Cada estudiante se identifica con un codigo E01, E02...
+# La equivalencia vive FUERA del repositorio, en un archivo que .gitignore
+# excluye, asi que esta regla solo puede correr en el equipo de Nestor. Donde
+# no este el archivo, avisa y no finge que reviso.
+RUTA_SEUDONIMOS = os.path.join(RAIZ, 'Proyectos repositorios Github', 'IA ValerIA',
+                               'datos', 'seudonimos.json')
+if not os.path.isfile(RUTA_SEUDONIMOS):
+    avisos.append('no se encontro el archivo de seudonimos, asi que NO se pudo '
+                  'comprobar que no haya nombres de estudiantes publicados')
+else:
+    with io.open(RUTA_SEUDONIMOS, encoding='utf-8') as fh:
+        _seud = json.load(fh)
+    # Se revisan las paginas y tambien los documentos del repositorio: la
+    # bitacora y el README se publican igual que el sitio.
+    _revisables = list(paginas)
+    for _n in os.listdir(RAIZ):
+        if _n.lower().endswith('.md'):
+            _revisables.append(os.path.join(RAIZ, _n))
+    _textos = [(os.path.relpath(_p, RAIZ), leer(_p)) for _p in _revisables]
+    for _cod, _datos in _seud.get('estudiantes', {}).items():
+        _nombre = (_datos or {}).get('nombre') or ''
+        _partes = [t for t in _nombre.split() if len(t) >= 3]
+        # El nombre completo y cada pareja de palabras seguidas: asi se detecta
+        # una fuga parcial sin disparar con un nombre de pila suelto y comun.
+        _agujas = [_nombre] if _nombre else []
+        _agujas += ['%s %s' % (_partes[i], _partes[i + 1]) for i in range(len(_partes) - 1)]
+        for _aguja in _agujas:
+            if len(_aguja) < 7:
+                continue
+            for _rel, _txt in _textos:
+                if _aguja.lower() in _txt.lower():
+                    fallas.append('%s publica el nombre de un estudiante (%s). '
+                                  'Va el codigo %s, no el nombre' % (_rel, _aguja, _cod))
+                    break
+
 # ---- 8. que carpetas estan versionadas ----
 # El portal no debe llevarse el codigo de los estudiantes. Cuatro de esas
 # carpetas traen su propio .git y se guardarian como enlaces rotos.

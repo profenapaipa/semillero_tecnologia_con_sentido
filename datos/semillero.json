@@ -4,9 +4,8 @@
     "docente": "Néstor Andrés Paipa",
     "colegio": "Bogotá",
     "semestre": "2026-II",
-    "revisado": "2026-10-13",
+    "revisado": "2026-10-21",
     "sesionesRestantes": [
-      "miércoles 14 y jueves 15 de octubre",
       "miércoles 21 y jueves 22 de octubre",
       "miércoles 28 y jueves 29 de octubre"
     ],
@@ -1728,8 +1727,8 @@
           "Articulo_base.docx idéntico a la plantilla"
         ],
         "bocg": [
-          false,
-          "No hay imagen de boceto en la carpeta"
+          true,
+          "Ideas de Actividades Motricidad, del 21 de octubre: el diseño de los dos modos de juego, motricidad fina coloreando el personaje y esquivando al ritmo de la música, y motricidad gruesa con el ratón en baja sensibilidad sobre un espacio que se reduce, con los niveles por género musical"
         ],
         "bocr": [
           false,
@@ -2008,7 +2007,7 @@
       "stack": "Producción audiovisual",
       "carpeta": "Equipo 11_Cortometrajes para el Filosofartec / Equipo 11.2",
       "enlaces": [],
-      "nota": "Produce también para Filosofartec. Es el único equipo de la línea audiovisual con guion escrito y versionado: hay cinco versiones de Guion editado. La propuesta, en cambio, está en blanco.",
+      "nota": "En un fin de semana pasaron de tener el artículo en blanco a escribir catorce de las quince secciones, y lo que cuentan coincide con su guion técnico hasta en el detalle de la luz y los fotogramas. Queda un problema serio y concreto: las cinco referencias en APA no existen. Los cuatro DOI citados devuelven 404 en Crossref y los títulos no aparecen en ningún registro. Antes de presentar el artículo hay que reemplazarlas por fuentes reales, leídas y guardadas en la carpeta de antecedentes, y reescribir con ellas la sección 1.2.",
       "estado": {
         "prop": [
           false,
@@ -2024,43 +2023,43 @@
         ],
         "ante": [
           false,
-          "No hay carpeta de antecedentes con fuentes"
+          "El artículo cita cinco referencias, pero ninguna se pudo verificar: los cuatro DOI consultados en Crossref devuelven 404 y los títulos no coinciden con ningún registro. Faltan fuentes reales, con su PDF en la carpeta de antecedentes"
         ],
         "cron": [
           true,
           "Cronograma_tareas_2026-II.xlsx entregado"
         ],
         "preg": [
-          false,
-          "Articulo_base.docx idéntico a la plantilla"
+          true,
+          "Articulo_base.docx v1.0 del 21 de octubre, sección 1.3: la pregunta y el propósito escritos, con la duración del corto y los materiales"
         ],
         "bocg": [
           true,
           "Guion editado.docx y Guion editado (5).docx: cinco versiones del guion"
         ],
         "bocr": [
-          false,
-          "Bocetos_registro.docx idéntico a la plantilla"
+          true,
+          "Bocetos_registro.docx: declaran que no dibujaron bocetos en papel y que pasaron directo al prototipado de los personajes en plastilina y al diseño de la luz LED, y escriben tres cosas que no lograron"
         ],
         "fich": [
-          false,
-          "FFicha_tecnica_19_agosto.docx idéntica a la plantilla"
+          true,
+          "FFicha_tecnica_19_agosto.docx con los cuatro pasos llenos, incluido el esquema de las tres cajas: entran guion, fotos y audio; se ordenan y sincronizan cuadro por cuadro; sale el cortometraje"
         ],
         "v1": [
           true,
           "Guion editado, con cinco versiones hasta el 9 de septiembre"
         ],
         "v2": [
-          false,
-          "No hay guion técnico plano por plano"
+          true,
+          "Guion_tecnico_La_odisea_de_la_diversidad.xlsx: cuarenta planos con encuadre, ángulo, diálogo, color de la luz LED, duración y fotos a doce por segundo, cuadrando los 195 segundos acordados"
         ],
         "v3": [
-          false,
-          "No hay plan de rodaje"
+          true,
+          "Guiones_audiovisual_v3.xlsx, hojas de Locaciones y Plan de rodaje: cuatro locaciones y cinco jornadas con fecha, qué planos se graban en cada una, quién anima y qué hay que llevar"
         ],
         "v4": [
-          false,
-          "No hay material grabado en la carpeta"
+          true,
+          "Video de prueba del 20 de octubre en la carpeta del equipo. En el guion técnico las cuarenta tomas siguen marcadas como no grabadas: esto es la prueba de luz y sonido, no el rodaje"
         ],
         "v5": [
           false,
@@ -2075,8 +2074,8 @@
           "No hay exportado final de video"
         ],
         "barr": [
-          false,
-          "Barreras.docx idéntica a la plantilla"
+          true,
+          "Barreras.docx: tres barreras escritas con lo que pasó y en qué paso, y dos preguntas concretas para grabar, sobre bloqueo de exposición y sincronía de la voz con la animación"
         ],
         "casi": [
           false,
@@ -2087,15 +2086,31 @@
           "Las cinco versiones del guion y la presentación final legible"
         ],
         "dect": [
-          false,
-          "Sin bitácora de decisiones"
+          true,
+          "Artículo, sección 3.5: dos decisiones técnicas con su razón, animar a doce fotogramas por segundo en vez de veinticuatro, y usar luz LED real en vez de filtros en postproducción"
         ],
         "artv": [
           false,
           "No existe Articulo_base_v2.docx"
         ]
       },
-      "articuloEstado": {},
+      "articuloEstado": {
+        "res": true,
+        "tit": true,
+        "1.1": true,
+        "1.2": false,
+        "1.3": true,
+        "2": true,
+        "2.1": true,
+        "3.1": true,
+        "3.2": true,
+        "3.3": true,
+        "3.4": true,
+        "3.5": true,
+        "4": true,
+        "5.1": true,
+        "5.2": false
+      },
       "publicacion": {
         "estado": "no aplica",
         "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
