@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Un juego rítmico de coordinación, armado en Unity</title>
+<meta name="description" content="Para el Equipo 10.2. Ensamblar un juego tipo Guitar Hero donde se coordinan las teclas D, F, J y K con los dos clics del mouse, notas sostenidas y acordes, al ritmo de tres canciones. El juego mide el error de cada golpe en milisegundos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/css/marca.css?v=9dee731d">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.css">
+<link rel="stylesheet" href="../assets/css/sitio.css?v=9dee731d">
+<script>
+/* El documento ya viene con data-theme="light" en la etiqueta html, asi que
+   el tema claro es el de por defecto incluso sin JavaScript. El atributo
+   tiene que estar escrito: sin el, un equipo configurado en oscuro entraria
+   en oscuro por la regla @media (prefers-color-scheme: dark).
+   Aqui solo se corrige cuando hay una eleccion guardada, y se hace antes de
+   pintar: si se hiciera despues, la pagina parpadearia del claro al
+   elegido. */
+(function () {
+  try {
+    var t = localStorage.getItem('tema');
+    if (t === 'oscuro') { document.documentElement.setAttribute('data-theme', 'dark'); }
+    else if (t === 'sistema') { document.documentElement.removeAttribute('data-theme'); }
+  } catch (e) { /* sin permiso para recordar: queda el claro */ }
+}());
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.2.6/swiper-bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="../assets/js/sitio.js?v=9dee731d" defer></script>
+</head>
+<body class="no-js">
+<script>document.body.classList.remove('no-js');</script>
+<div class="cabecera-fija">
+<nav class="barra" aria-label="Navegacion principal"><div class="envoltura">
+<a class="marca-sitio" href="../index.html">
+<span class="sigla"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></svg></span>
+<span>Tecnologia con Sentido<small>Semillero Maker</small></span>
+</a>
+<ul class="menu"><li><a href="../index.html"><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg> Inicio</a></li><li><details class="desplegable"><summary><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></svg> Secciones <svg class="ico giro" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></summary><div class="panel-desplegable estrecho-menu"><a href="../index.html#como"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+  <path d="M12 17h.01" /></svg><span class="txt"><b>Como funciona</b><small>Que es la ruta y como se lee</small></span></a><a href="../index.html#numeros"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6" />
+  <path d="m22 7-8.5 8.5-5-5L2 17" /></svg><span class="txt"><b>Diagnostico</b><small>El semillero en numeros</small></span></a><a href="../index.html#proyectos"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" /></svg><span class="txt"><b>Los proyectos</b><small>Los dieciséis, por línea técnica</small></span></a><a href="../index.html#publicados"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+  <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg><span class="txt"><b>Publicados</b><small>Lo que ya se puede abrir</small></span></a><a href="../index.html#hermanos"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+  <path d="M2 12h20" /></svg><span class="txt"><b>Hermanos</b><small>Filosofartec y Un Cafe con la Iguana</small></span></a></div></details></li><li><details class="desplegable proyectos-menu"><summary><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="3" rx="1" />
+  <rect width="7" height="7" x="14" y="14" rx="1" />
+  <rect width="7" height="7" x="3" y="14" rx="1" /></svg> Proyectos <svg class="ico giro" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></summary><div class="panel-desplegable"><div class="panel-rejilla"><div class="panel-grupo" data-linea="software"><span class="panel-titulo"><svg class="ico " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4" />
+  <path d="m6 8-4 4 4 4" />
+  <path d="m14.5 4-5 16" /></svg> Desarrollo de software</span><a href="../equipos/equipo-1.html"><span class="n">1</span><span class="txt"><b>La web de la iguana</b><span class="mini-camino" aria-hidden="true"><i class="verde"></i><i class="ambar aqui"></i><i class="ambar"></i><i class="verde"></i><i class="ambar"></i><i class="ambar"></i><i class="ambar"></i></span></span><span class="pc dato">58%</span></a><a href="../equipos/equipo-3.html"><span class="n">3</span><span class="txt"><b>Kinesis, plataforma de planeación inclusiva</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="gris"></i><i class="verde"></i><i class="ambar"></i><i class="ambar"></i><i class="ambar"></i></span></span><span class="pc dato">46%</span></a><a href="../equipos/equipo-5.html"><span class="n">5</span><span class="txt"><b>English Roulette</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="verde"></i><i class="verde"></i><i class="ambar"></i><i class="ambar"></i><i class="gris"></i></span></span><span class="pc dato">50%</span></a><a href="../equipos/equipo-6.html"><span class="n">6</span><span class="txt"><b>DiverSeña, lector de lengua de señas</b><span class="mini-camino" aria-hidden="true"><i class="verde"></i><i class="ambar aqui"></i><i class="ambar"></i><i class="verde"></i><i class="ambar"></i><i class="ambar"></i><i class="ambar"></i></span></span><span class="pc dato">62%</span></a><a href="../equipos/equipo-7.html"><span class="n">7</span><span class="txt"><b>Wisfox</b><span class="mini-camino" aria-hidden="true"><i class="verde"></i><i class="verde"></i><i class="verde"></i><i class="verde"></i><i class="ambar aqui"></i><i class="ambar"></i><i class="ambar"></i></span></span><span class="pc dato">75%</span></a><a href="../equipos/equipo-12.html"><span class="n">12</span><span class="txt"><b>ZocaLab</b><span class="mini-camino" aria-hidden="true"><i class="gris aqui"></i><i class="gris"></i><i class="ambar"></i><i class="verde"></i><i class="ambar"></i><i class="ambar"></i><i class="ambar"></i></span></span><span class="pc dato">33%</span></a><a href="../equipos/equipo-13.html"><span class="n">13</span><span class="txt"><b>Asistente IA del semillero</b><span class="mini-camino" aria-hidden="true"><i class="gris aqui"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i></span></span><span class="pc dato">0%</span></a></div><div class="panel-grupo" data-linea="unity"><span class="panel-titulo"><svg class="ico " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" x2="10" y1="11" y2="11" />
+  <line x1="8" x2="8" y1="9" y2="13" />
+  <line x1="15" x2="15.01" y1="12" y2="12" />
+  <line x1="18" x2="18.01" y1="10" y2="10" />
+  <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" /></svg> Unity</span><a href="../equipos/equipo-10-1.html"><span class="n">10.1</span><span class="txt"><b>Videojuego para motricidad</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="ambar"></i><i class="gris"></i><i class="ambar"></i><i class="gris"></i><i class="gris"></i></span></span><span class="pc dato">24%</span></a><a href="../equipos/equipo-10-2.html"><span class="n">10.2</span><span class="txt"><b>Minijuego de coordinación</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i></span></span><span class="pc dato">12%</span></a></div><div class="panel-grupo" data-linea="electronica"><span class="panel-titulo"><svg class="ico " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20v2" />
+  <path d="M12 2v2" />
+  <path d="M17 20v2" />
+  <path d="M17 2v2" />
+  <path d="M2 12h2" />
+  <path d="M2 17h2" />
+  <path d="M2 7h2" />
+  <path d="M20 12h2" />
+  <path d="M20 17h2" />
+  <path d="M20 7h2" />
+  <path d="M7 20v2" />
+  <path d="M7 2v2" />
+  <rect x="4" y="4" width="16" height="16" rx="2" />
+  <rect x="8" y="8" width="8" height="8" rx="1" /></svg> Electrónica y robótica</span><a href="../equipos/equipo-4.html"><span class="n">4</span><span class="txt"><b>Comedero automático para mascotas</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="ambar"></i><i class="ambar"></i><i class="ambar"></i><i class="gris"></i><i class="gris"></i></span></span><span class="pc dato">28%</span></a><a href="../equipos/equipo-8.html"><span class="n">8</span><span class="txt"><b>Brazo robótico</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="gris"></i><i class="ambar"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i></span></span><span class="pc dato">16%</span></a></div><div class="panel-grupo" data-linea="audiovisual"><span class="panel-titulo"><svg class="ico " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.296 3.464 3.02 3.956" />
+  <path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3z" />
+  <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+  <path d="m6.18 5.276 3.1 3.899" /></svg> Producción audiovisual</span><a href="../equipos/equipo-2-1.html"><span class="n">2.1</span><span class="txt"><b>Animación para el Filosofartec</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="ambar"></i><i class="gris"></i><i class="ambar"></i><i class="gris"></i><i class="gris"></i></span></span><span class="pc dato">20%</span></a><a href="../equipos/equipo-2-2.html"><span class="n">2.2</span><span class="txt"><b>MictoMotion, animación para el Filosofartec</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="ambar"></i><i class="ambar"></i><i class="ambar"></i><i class="gris"></i><i class="gris"></i></span></span><span class="pc dato">20%</span></a><a href="../equipos/equipo-9.html"><span class="n">9</span><span class="txt"><b>Animación de abandono</b><span class="mini-camino" aria-hidden="true"><i class="verde"></i><i class="ambar aqui"></i><i class="gris"></i><i class="gris"></i><i class="ambar"></i><i class="gris"></i><i class="gris"></i></span></span><span class="pc dato">24%</span></a><a href="../equipos/equipo-11-1.html"><span class="n">11.1</span><span class="txt"><b>Cortometraje de E24</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i><i class="gris"></i></span></span><span class="pc dato">12%</span></a><a href="../equipos/equipo-11-2.html"><span class="n">11.2</span><span class="txt"><b>La odisea de la diversidad</b><span class="mini-camino" aria-hidden="true"><i class="ambar aqui"></i><i class="ambar"></i><i class="verde"></i><i class="verde"></i><i class="ambar"></i><i class="ambar"></i><i class="ambar"></i></span></span><span class="pc dato">72%</span></a></div></div></div></details></li><li><a href="../guias/index.html"><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16" />
+  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></svg> Guias</a></li><li><a href="../index.html#publicados"><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+  <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg> Publicados</a></li></ul>
+<button class="tema" type="button" id="tema" aria-label="Cambiar entre tema claro y oscuro">
+<span class="tema-ico" data-t="sistema"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2" />
+  <line x1="8" x2="16" y1="21" y2="21" />
+  <line x1="12" x2="12" y1="17" y2="21" /></svg></span>
+<span class="tema-ico" data-t="claro"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" /></svg></span>
+<span class="tema-ico" data-t="oscuro"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" /></svg></span>
+<span class="tema-txt">Tema</span>
+</button>
+</div></nav>
+</div>
+
+<header class="portada compacta"><div class="envoltura envoltura-lectura">
+<p class="rotulo"><svg class="ico " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16" />
+  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></svg> Guia del semillero</p>
+<h1>Un juego rítmico de coordinación, armado en Unity</h1>
+<p class="bajada">Para el Equipo 10.2. Ensamblar un juego tipo Guitar Hero donde se coordinan las teclas D, F, J y K con los dos clics del mouse, notas sostenidas y acordes, al ritmo de tres canciones. El juego mide el error de cada golpe en milisegundos.</p>
+<p><span class="chip ambar"><span class="pt"></span>Vista previa</span></p>
+</div></header>
+<section class="bloque"><div class="envoltura envoltura-lectura">
+<div class="destacado"><h3><svg class="ico " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="12" r="6" />
+  <circle cx="12" cy="12" r="2" /></svg> De donde sale esta guia</h3><p>La propuesta de julio hablaba de un juego de coordinación para aprender a tocar guitarra, y el 21 de octubre se acordó un juego rítmico tipo Guitar Hero o de flechas. En agosto el avance se quedó en un tutorial de movimiento 3D, en un proyecto 2D guardado en OneDrive. Esta guía cambia de enfoque: un juego rítmico no necesita física ni movimiento, sino tres piezas, un reloj, una partitura y un juez, que vienen hechas y probadas.</p></div>
+</div></section>
+<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">
+<div class="cab-seccion"><span class="rotulo">La presentacion</span><h2>Las diapositivas de clase</h2><p>Las mismas que se proyectan en la sesion. Abajo estan los pasos en texto, para leerlos de corrido.</p></div>
+<div class="carrusel" data-carrusel><div class="swiper principal-swiper" id="car-guia-unity-ritmo"><div class="swiper-wrapper"><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/1.webp" alt="Portada: un juego rítmico de coordinación, armado en Unity" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/2.webp" alt="Todo juego rítmico tiene tres piezas" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/3.webp" alt="Lo que viene hecho y lo que armas tú" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/4.webp" alt="La partitura es un archivo de texto" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/5.webp" alt="Escena 01_Menu: elegir la canción" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/6.webp" alt="Escena 02_Ritmo, 1 de 4: el reloj y la música" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/7.webp" alt="Escena 02_Ritmo, 2 de 4: seis carriles y la línea de golpe" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/8.webp" alt="Escena 02_Ritmo, 3 de 4: el generador de notas" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/9.webp" alt="Escena 02_Ritmo, 4 de 4: el juez y los textos" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/10.webp" alt="Lo difícil: notas sostenidas y acordes" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/11.webp" alt="Reto: escribe tu propia partitura" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/12.webp" alt="Los datos y los errores más comunes" loading="lazy" width="1600" height="900"></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/13.webp" alt="Antes de salir, y lo que sigue" loading="lazy" width="1600" height="900"></div></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div><div class="swiper-pagination"></div></div><div class="swiper miniaturas-swiper" data-para="car-guia-unity-ritmo"><div class="swiper-wrapper"><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/1.webp" alt="" loading="lazy"><span>1</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/2.webp" alt="" loading="lazy"><span>2</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/3.webp" alt="" loading="lazy"><span>3</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/4.webp" alt="" loading="lazy"><span>4</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/5.webp" alt="" loading="lazy"><span>5</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/6.webp" alt="" loading="lazy"><span>6</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/7.webp" alt="" loading="lazy"><span>7</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/8.webp" alt="" loading="lazy"><span>8</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/9.webp" alt="" loading="lazy"><span>9</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/10.webp" alt="" loading="lazy"><span>10</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/11.webp" alt="" loading="lazy"><span>11</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/12.webp" alt="" loading="lazy"><span>12</span></div><div class="swiper-slide"><img src="../assets/guias/unity-ritmo/13.webp" alt="" loading="lazy"><span>13</span></div></div></div></div>
+<ul class="recursos descargas"><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" /></svg><a href="../descargas/unity/Guia1_Ritmo.pptx" download>Guía 1 del juego rítmico en PowerPoint, con el guion en las notas</a> <span class="peso">Guia1_Ritmo.pptx, 2190 KB</span></li><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" /></svg><a href="../descargas/unity/KitEquipo10_Ritmo.unitypackage" download>Kit del Equipo 10.2: scripts, prefabs, música y partituras</a> <span class="peso">KitEquipo10_Ritmo.unitypackage, 7504 KB</span></li></ul>
+</div></section>
+<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">
+<div class="cab-seccion"><span class="rotulo">Paso a paso</span><h2>Como se hace</h2></div>
+<ol class="guia-pasos">
+<li><h3>Entiende las tres piezas: reloj, partitura y juez</h3><p>El Conductor dice en qué pulso de la canción vamos. El Generador De Notas lee la partitura y baja cada nota por su carril. El Juez De Ritmo escucha teclas y clics y mide cuántos milisegundos se alejó cada golpe del pulso.</p>
+<div class="nota-caja ambar"><span class="titulo"><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+  <path d="M9 18h6" />
+  <path d="M10 22h4" /></svg> Ojo con esto</span>El reloj no es Time.time, que se atrasa cuando el computador se pone lento. Es AudioSettings.dspTime, el reloj de la tarjeta de sonido: el mismo de la música.</div>
+</li>
+<li><h3>Lee la partitura: pulso, carril y duración</h3><p>Cada renglón es una nota. Carriles: 0 D, 1 F, 2 J, 3 K, 4 clic izquierdo, 5 clic derecho. Duración 0 es de toque; mayor que 0, sostenida. Dos renglones con el mismo pulso son un acorde.</p>
+<pre class="guia-codigo"><code># pulso  carril  duración
+8        0       0
+37       4       0
+64       0       2
+92       1       0
+92       4       0</code></pre>
+</li>
+<li><h3>Escena 01_Menu: tres canciones</h3><p>Tres botones, uno por género. Cada uno encadena MenuDeOpciones.ElegirGenero con el nombre del género y CambiarEscena.IrA con 02_Ritmo.</p>
+<div class="nota-caja ambar"><span class="titulo"><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+  <path d="M9 18h6" />
+  <path d="M10 22h4" /></svg> Ojo con esto</span>Electronica va sin tilde: es el nombre de la opción de la música.</div>
+</li>
+<li><h3>Escena 02_Ritmo: el reloj y la música</h3><p>Un objeto Conductor con Audio Source, Conductor y Musica Por Genero. En las tres opciones van la canción, su BPM (120, 128 y 160), el fondo y la partitura.</p>
+<div class="nota-caja ambar"><span class="titulo"><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+  <path d="M9 18h6" />
+  <path d="M10 22h4" /></svg> Ojo con esto</span>Desmarca Play On Awake: la canción la arranca el Conductor en un instante exacto. Si la arranca Unity, las notas quedan corridas.</div>
+</li>
+<li><h3>Seis carriles y la línea de golpe</h3><p>Seis sprites Cuadrado en las X de la tabla, cada uno con su icono debajo, y una línea horizontal en Y -3,6. El hueco entre K y el clic izquierdo separa las dos manos.</p>
+<pre class="guia-codigo"><code>carril   0     1     2     3     4    5
+X     -4,6  -3,2  -1,8  -0,4  2,4  3,8</code></pre>
+</li>
+<li><h3>Conecta el generador y el juez</h3><p>En el Conductor agrega Generador De Notas, con el prefab Nota, los seis carriles en orden y la línea; y Juez De Ritmo, con los textos de puntaje, combo y calificación. Agrega el prefab PantallaFinal y pon las dos escenas en Build Settings.</p>
+<pre class="guia-codigo"><code>y = lineaDeGolpe + (pulsoNota - pulsoActual) * unidadesPorPulso</code></pre>
+</li>
+<li><h3>Sostenidas y acordes: donde está la coordinación</h3><p>En la sección 3 una mano sostiene una tecla mientras la otra hace clic: independencia de manos. En la sección 4, tecla y clic van al mismo tiempo: sincronización. Perfecto es hasta 50 ms del pulso; Bien, hasta 110 ms.</p>
+</li>
+<li><h3>Escribe tu propia partitura</h3><p>Copia Rock.txt con otro nombre, cámbiala en el Bloc de notas y ponla en la opción de Musica Por Genero. A 120 BPM un pulso dura medio segundo; se pueden usar medios pulsos, como 9.5.</p>
+<div class="nota-caja ambar"><span class="titulo"><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+  <path d="M9 18h6" />
+  <path d="M10 22h4" /></svg> Ojo con esto</span>En la partitura el decimal es punto, 9.5, aunque Windows esté en español.</div>
+</li>
+</ol></div></section>
+<section class="bloque"><div class="envoltura envoltura-lectura">
+<div class="cab-seccion"><span class="rotulo">Antes de darlo por hecho</span><h2>Como saber si quedo bien</h2></div>
+<ul class="lista-check"><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>01_Menu y 02_Ritmo están en Build Settings, con el menú arriba.</li><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Las tres canciones suenan desde el menú y cada una trae su fondo y su partitura.</li><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Cada nota tocada a tiempo dice Perfecto o Bien, y las sostenidas se cuentan al soltar al final.</li><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Al terminar la canción aparece la pantalla con precisión, error en milisegundos y combo.</li><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>resultados_Ritmo.csv está en AppData, LocalLow, y copiado a la carpeta del equipo.</li></ul>
+</div></section>
+<section class="bloque sobre-superficie"><div class="envoltura envoltura-lectura">
+<div class="cab-seccion"><span class="rotulo">Para profundizar</span><h2>Documentacion oficial</h2><p>Cada enlace se comprobo antes de publicarlo.</p></div>
+<ul class="recursos"><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg><a href="https://docs.unity3d.com/2019.4/Documentation/ScriptReference/AudioSettings-dspTime.html">Referencia de Unity 2019.4: AudioSettings.dspTime</a></li><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg><a href="https://docs.unity3d.com/2019.4/Documentation/ScriptReference/AudioSource.PlayScheduled.html">Referencia de Unity 2019.4: AudioSource.PlayScheduled</a></li><li><svg class="ico " width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6" />
+  <path d="M10 14 21 3" />
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg><a href="https://docs.unity3d.com/2019.4/Documentation/Manual/BuildSettings.html">Manual de Unity 2019.4: Build Settings</a></li></ul>
+</div></section>
+<section class="bloque"><div class="envoltura envoltura-lectura">
+<div class="botones"><a class="boton" href="../guias/index.html"><svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16" />
+  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></svg> Todas las guias</a><a class="boton" href="../index.html">Volver al portal</a></div>
+</div></section>
+<dialog class="modal-leccion" id="modal-leccion" aria-labelledby="modal-titulo">
+<div class="modal-cab">
+<div><span class="rotulo">Lección</span><h3 id="modal-titulo"></h3></div>
+<button class="modal-cerrar" type="button" data-cierra-modal aria-label="Cerrar la lección">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+</button>
+</div>
+<div class="modal-cuerpo" id="modal-cuerpo"></div>
+<div class="modal-pie"><button class="boton principal" type="button" data-cierra-modal>Entendido, a trabajar</button></div>
+</dialog>
+<footer class="pie"><div class="envoltura">
+<span class="nombre">Semillero Maker de Tecnología con Sentido</span>
+<p>Néstor Andrés Paipa · Semestre 2026-II. Última revisión: 21 de octubre de 2026.</p>
+<p>Tres espacios con nombre propio: el Semillero Maker de Tecnología con Sentido,
+Filosofartec y Un Café con la Iguana.</p>
+</div></footer>
+</body>
+</html>

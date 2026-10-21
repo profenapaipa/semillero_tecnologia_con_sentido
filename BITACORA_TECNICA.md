@@ -853,7 +853,60 @@ Medido en Chrome sin ventana: Swiper inicializado, 9 de 9 imágenes cargadas,
 - `extraer_modulos.py` toma como título de cada diapositiva la primera línea de
   más de tres letras, que es la etiqueta de sección ("Unity"). No afecta a las
   guías, que llevan sus títulos escritos, pero sí a los módulos.
-- Los dos enlaces rotos del hito u4 (11.3) se reemplazan con la Guía 1, que es
-  la de ese hito.
+- ~~Los dos enlaces rotos del hito u4 (11.3)~~: resuelto en 13.5.
 - El Unity de este computador no tiene el módulo WebGL para 2019.4.38f1. Sin él
   no hay build para publicar en la Fase 3.
+
+### 13.5 Fase 1: los cuatro minijuegos y el juego rítmico, armados y jugados
+
+Las piezas nuevas son 9 scripts, 7 prefabs, 3 personajes para colorear, 6 fondos,
+3 canciones y 3 partituras. Todo es original y lo genera código del kit
+(`recursos/generar_arte.py`, `recursos/generar_musica.py`). Los personajes que
+propuso el equipo (Kirby, Eevee, Totoro, Hollow Knight) y las canciones de bandas
+reales no se usaron, porque tienen derechos y el juego se va a publicar.
+
+`ConstructorDelKit` arma además las escenas de referencia en `Assets/Solucion`.
+Esas no viajan en los paquetes de los estudiantes: ellos ensamblan las suyas.
+
+**El banco de pruebas** (`Referencia/Assets/Pruebas/BancoDePruebas.cs`) es un
+jugador simulado. Juega cada minijuego en un ejecutable real, comprueba lo que
+promete cada pieza y toma las capturas que usan las guías. Corrida final:
+12 de 12 comprobaciones en motricidad y 7 de 7 en ritmo, estable en dos corridas
+seguidas (112 de 112 notas, 7 de 7 sostenidas, 6 ms de error promedio).
+
+Encontró tres cosas que leer el código no mostraba:
+
+1. **El juego grueso era casi imposible de ganar.** El viaje hasta cada zona
+   nueva contaba como "estar afuera", y el mapa se desvanecía en el escalón 5
+   sin que el jugador se hubiera salido nunca. Ahora solo castiga salirse
+   después de entrar, y el viaje se mide aparte como tiempo de llegada.
+   La prueba al revés confirma que todavía se puede perder.
+2. **Las notas acertadas se montaban sobre los íconos de las teclas.** Ahora
+   desaparecen al acertarlas; las falladas siguen cayendo en rojo.
+3. **El juez escuchaba también el teclado real durante la prueba**, y dos
+   sostenidas salieron como soltadas. Se le agregó la casilla
+   `leerTecladoYMouse`, que el banco apaga.
+
+El CSV pasó de un solo archivo con celdas `clave=valor` a un archivo por juego
+con encabezados, que Excel abre directo en columnas.
+
+Los dos paquetes se importaron en proyectos 2D nuevos y vacíos de 2019.4.38f1 y
+compilaron sin errores. En esa prueba apareció un error de Unity por **una ruta
+de más de 260 caracteres**, y no era del kit. Es otra razón para el `C:\Unity`
+corto que pide la Guía 0.
+
+**Hito u4:** los dos enlaces de learn.unity.com daban 404 (comprobado el 21 de
+octubre). Se reemplazaron por la referencia oficial de 2019.4 de
+`Input.GetMouseButtonDown` y `Object.Instantiate`, que responden 200.
+
+En Drive, cada equipo tiene:
+- en "H) 21 y 22 de octubre", el kit, los scripts sueltos para leer y un LEEME
+  con el origen de los recursos;
+- en "I) 28 y 29 de octubre", su Guía 1.
+
+La solución armada (`paquetes/Solucion_Equipo10_SoloDocente.unitypackage`)
+queda solo en este computador.
+
+**Peso:** `docs/descargas/unity/` suma 19 MB, casi todo música dentro de los dos
+paquetes. Si el repositorio crece demasiado con cada versión del kit, la salida
+es dejar los paquetes solo en Drive y enlazar desde el sitio.

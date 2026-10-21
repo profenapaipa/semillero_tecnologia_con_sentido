@@ -760,6 +760,228 @@
      "url": "https://visualstudio.microsoft.com/es/vs/community/"
     }
    ]
+  },
+  {
+   "id": "unity-motricidad",
+   "titulo": "Cuatro minijuegos de motricidad, armados en Unity",
+   "para": [
+    "unity"
+   ],
+   "hitos": [
+    "u3",
+    "u4",
+    "u5"
+   ],
+   "modulos": [],
+   "estado": "Vista previa",
+   "resumen": "Para el Equipo 10.1. Ensamblar con las piezas del kit un menú y cuatro minijuegos: colorear con pincel, recorrer un camino y un runner rítmico para motricidad fina, y una zona que se achica para motricidad gruesa. Cada partida deja sus datos en un CSV.",
+   "porQue": "El equipo definió el 20 de octubre sus dos juegos: uno fino, con un personaje que se colorea y luego esquiva obstáculos al ritmo de la música por géneros, y uno grueso, donde la baja sensibilidad del mouse obliga a mover el brazo. El bloqueo de agosto fue el código de movimiento. Esta guía no pide programar desde cero: entrega las piezas probadas y enseña a unirlas. Todo se comprobó armando el juego con esas mismas piezas y dejándolo jugar solo en un ejecutable de Unity 2019.4.38f1.",
+   "diapositivas": {
+    "carpeta": "unity-motricidad",
+    "titulos": [
+     "Portada: cuatro minijuegos de motricidad, armados en Unity",
+     "El mapa del juego: cinco escenas y un menú",
+     "Lo que viene hecho y lo que armas tú",
+     "La idea que sostiene los dos juegos: el cursor virtual",
+     "Escena 01_Menu: mano, juego, género y mundo",
+     "Un botón puede hacer tres cosas, en orden",
+     "Escena 10_Colorear, 1 de 2: el personaje y el pincel",
+     "Escena 10_Colorear, 2 de 2: paleta, personajes y Listo",
+     "Escena 11_Camino: recorrer sin salirse",
+     "Escena 12_Runner, 1 de 2: la música manda",
+     "Escena 12_Runner, 2 de 2: personaje y obstáculos",
+     "Escena 20_Grueso: la zona que se achica",
+     "Build Settings: la lista que conecta las escenas",
+     "Los datos que deja cada partida",
+     "Si algo falla, busca aquí primero",
+     "Antes de salir, y lo que sigue"
+    ]
+   },
+   "descargas": [
+    {
+     "titulo": "Guía 1 de motricidad en PowerPoint, con el guion en las notas",
+     "archivo": "unity/Guia1_Motricidad.pptx"
+    },
+    {
+     "titulo": "Kit del Equipo 10.1: scripts, prefabs, dibujos y música",
+     "archivo": "unity/KitEquipo10_Motricidad.unitypackage"
+    }
+   ],
+   "pasos": [
+    {
+     "titulo": "Entiende la idea: un cursor con su propia sensibilidad",
+     "texto": "Un juego no puede cambiar el DPI del mouse. El prefab Cursor esconde el puntero real y mueve uno propio multiplicado por la sensibilidad del menú: por 3 en los juegos finos, donde un movimiento de milímetros cruza la pantalla, y por 0,25 en el grueso, donde hay que mover todo el brazo.",
+     "ojo": "Mientras el cursor virtual está activo, los Button del Canvas no responden. Dentro del juego se usa BotonVirtual: un sprite con Collider 2D. Los menús sí usan Button normales."
+    },
+    {
+     "titulo": "Escena 01_Menu: diez botones con varias acciones",
+     "texto": "Crea el Canvas con GameObject, UI, Button, y un objeto vacío Navegacion con Cambiar Escena y Menu De Opciones. Cada botón encadena acciones en su On Click: por ejemplo Runner Metal pone la sensibilidad fina, guarda el género Metal y abre 12_Runner, en ese orden.",
+     "codigo": "MenuDeOpciones.UsarSensibilidadFina\nMenuDeOpciones.ElegirGenero      \"Metal\"\nCambiarEscena.IrA                \"12_Runner\"",
+     "ojo": "IrA va siempre de último: si cambias de escena primero, las otras acciones no alcanzan a correr."
+    },
+    {
+     "titulo": "Escena 10_Colorear: personaje, pincel, paleta y Listo",
+     "texto": "Arrastra el prefab Cursor y el dibujo MichiFantasma con el script Pincel. Ocho prefabs ColorDePaleta a la derecha, tres miniaturas con BotonVirtual que llaman Pincel.CambiarDibujo, y el prefab BotonListo que llama Pincel.Terminar. En el Pincel, Escena Siguiente: 12_Runner.",
+     "ojo": "El pincel solo pinta el blanco: la línea negra y el fondo nunca. Mide el porcentaje pintado y el tiempo fuera de la línea."
+    },
+    {
+     "titulo": "Escena 11_Camino: Line Renderer y Camino Preciso",
+     "texto": "Un objeto Camino con Line Renderer y Camino Preciso, dos círculos de Inicio y Meta, el Cursor y la PantallaFinal. El camino sale de una semilla: mismo número, mismo camino, así los tiempos de distintas personas se pueden comparar.",
+     "ojo": "Si el camino sale rosado o no se ve, falta el material Sprites-Default en el Line Renderer."
+    },
+    {
+     "titulo": "Escena 12_Runner: la música manda",
+     "texto": "Un objeto Conductor con Audio Source, Conductor, Musica Por Genero (rock 120, electrónica 128 y metal 160 BPM) y Generador De Obstaculos. El personaje lleva Personaje Corredor y aparece con los colores que el jugador le puso en Colorear. Los obstáculos llegan justo en el pulso de la música.",
+     "codigo": "x = xPersonaje + (pulsoDeLlegada - pulsoActual) * unidadesPorPulso",
+     "ojo": "Desmarca Play On Awake en el Audio Source. Y el género se escribe igual en el botón y en la opción: Electronica, sin tilde."
+    },
+    {
+     "titulo": "Escena 20_Grueso: la zona que se achica",
+     "texto": "El fondo Mapa con Fondo Segun Mundo, un círculo Zona y un objeto Juego con Zona Que Se Achica. Aguantar adentro sube de escalón; la zona salta lejos y se hace más pequeña; doce escalones ganan. El viaje hasta la zona nueva no se castiga: se mide aparte como tiempo de llegada.",
+     "ojo": "Salirse después de haber entrado desvanece el mapa. Si se desvanece del todo, la partida termina."
+    },
+    {
+     "titulo": "Build Settings y la prueba completa",
+     "texto": "File, Build Settings, y arrastra las cinco escenas con 01_Menu arriba. Luego juega desde el menú los cuatro caminos, con la mano derecha y con la izquierda.",
+     "codigo": "Scene '12_Runner' couldn't be loaded because it has not been added to the build settings"
+    },
+    {
+     "titulo": "Recoge los datos para el artículo",
+     "texto": "Cada juego escribe resultados_<juego>.csv en AppData, LocalLow, con una fila por partida: fecha, mano, sensibilidad y los datos de ese juego. Se abre con doble clic en Excel. Con la columna mano se compara derecha contra izquierda; con sensibilidad, fino contra grueso.",
+     "codigo": "fecha;mano;sensibilidad;mundo;escalones;gano;diametroFinal;segundos;segundosFuera;salidas;llegadaPromedioSeg\n2026-10-21 08:28:35;Derecha;0,25;Bosque;13;si;0,50;15,0;0,0;0;0,90"
+    }
+   ],
+   "comprobar": [
+    "Las cinco escenas están guardadas y en Build Settings, con 01_Menu arriba.",
+    "Colorear pinta el interior, cambia de color y de personaje, y Listo abre el runner con el personaje pintado.",
+    "El runner suena, lanza obstáculos al ritmo y termina con la pantalla final.",
+    "El camino se completa y la zona del grueso sube de escalón hasta ganar.",
+    "Hay un CSV por juego en AppData, LocalLow, y ya está copiado a la carpeta del equipo."
+   ],
+   "recursos": [
+    {
+     "titulo": "Manual de Unity 2019.4: Line Renderer",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/class-LineRenderer.html"
+    },
+    {
+     "titulo": "Manual de Unity 2019.4: Build Settings",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/BuildSettings.html"
+    },
+    {
+     "titulo": "Referencia de Unity 2019.4: Cursor.lockState",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Cursor-lockState.html"
+    },
+    {
+     "titulo": "Referencia de Unity 2019.4: Texture2D.SetPixel",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Texture2D.SetPixel.html"
+    }
+   ]
+  },
+  {
+   "id": "unity-ritmo",
+   "titulo": "Un juego rítmico de coordinación, armado en Unity",
+   "para": [
+    "unity"
+   ],
+   "hitos": [
+    "u3",
+    "u4",
+    "u5"
+   ],
+   "modulos": [],
+   "estado": "Vista previa",
+   "resumen": "Para el Equipo 10.2. Ensamblar un juego tipo Guitar Hero donde se coordinan las teclas D, F, J y K con los dos clics del mouse, notas sostenidas y acordes, al ritmo de tres canciones. El juego mide el error de cada golpe en milisegundos.",
+   "porQue": "La propuesta de julio hablaba de un juego de coordinación para aprender a tocar guitarra, y el 21 de octubre se acordó un juego rítmico tipo Guitar Hero o de flechas. En agosto el avance se quedó en un tutorial de movimiento 3D, en un proyecto 2D guardado en OneDrive. Esta guía cambia de enfoque: un juego rítmico no necesita física ni movimiento, sino tres piezas, un reloj, una partitura y un juez, que vienen hechas y probadas.",
+   "diapositivas": {
+    "carpeta": "unity-ritmo",
+    "titulos": [
+     "Portada: un juego rítmico de coordinación, armado en Unity",
+     "Todo juego rítmico tiene tres piezas",
+     "Lo que viene hecho y lo que armas tú",
+     "La partitura es un archivo de texto",
+     "Escena 01_Menu: elegir la canción",
+     "Escena 02_Ritmo, 1 de 4: el reloj y la música",
+     "Escena 02_Ritmo, 2 de 4: seis carriles y la línea de golpe",
+     "Escena 02_Ritmo, 3 de 4: el generador de notas",
+     "Escena 02_Ritmo, 4 de 4: el juez y los textos",
+     "Lo difícil: notas sostenidas y acordes",
+     "Reto: escribe tu propia partitura",
+     "Los datos y los errores más comunes",
+     "Antes de salir, y lo que sigue"
+    ]
+   },
+   "descargas": [
+    {
+     "titulo": "Guía 1 del juego rítmico en PowerPoint, con el guion en las notas",
+     "archivo": "unity/Guia1_Ritmo.pptx"
+    },
+    {
+     "titulo": "Kit del Equipo 10.2: scripts, prefabs, música y partituras",
+     "archivo": "unity/KitEquipo10_Ritmo.unitypackage"
+    }
+   ],
+   "pasos": [
+    {
+     "titulo": "Entiende las tres piezas: reloj, partitura y juez",
+     "texto": "El Conductor dice en qué pulso de la canción vamos. El Generador De Notas lee la partitura y baja cada nota por su carril. El Juez De Ritmo escucha teclas y clics y mide cuántos milisegundos se alejó cada golpe del pulso.",
+     "ojo": "El reloj no es Time.time, que se atrasa cuando el computador se pone lento. Es AudioSettings.dspTime, el reloj de la tarjeta de sonido: el mismo de la música."
+    },
+    {
+     "titulo": "Lee la partitura: pulso, carril y duración",
+     "texto": "Cada renglón es una nota. Carriles: 0 D, 1 F, 2 J, 3 K, 4 clic izquierdo, 5 clic derecho. Duración 0 es de toque; mayor que 0, sostenida. Dos renglones con el mismo pulso son un acorde.",
+     "codigo": "# pulso  carril  duración\n8        0       0\n37       4       0\n64       0       2\n92       1       0\n92       4       0"
+    },
+    {
+     "titulo": "Escena 01_Menu: tres canciones",
+     "texto": "Tres botones, uno por género. Cada uno encadena MenuDeOpciones.ElegirGenero con el nombre del género y CambiarEscena.IrA con 02_Ritmo.",
+     "ojo": "Electronica va sin tilde: es el nombre de la opción de la música."
+    },
+    {
+     "titulo": "Escena 02_Ritmo: el reloj y la música",
+     "texto": "Un objeto Conductor con Audio Source, Conductor y Musica Por Genero. En las tres opciones van la canción, su BPM (120, 128 y 160), el fondo y la partitura.",
+     "ojo": "Desmarca Play On Awake: la canción la arranca el Conductor en un instante exacto. Si la arranca Unity, las notas quedan corridas."
+    },
+    {
+     "titulo": "Seis carriles y la línea de golpe",
+     "texto": "Seis sprites Cuadrado en las X de la tabla, cada uno con su icono debajo, y una línea horizontal en Y -3,6. El hueco entre K y el clic izquierdo separa las dos manos.",
+     "codigo": "carril   0     1     2     3     4    5\nX     -4,6  -3,2  -1,8  -0,4  2,4  3,8"
+    },
+    {
+     "titulo": "Conecta el generador y el juez",
+     "texto": "En el Conductor agrega Generador De Notas, con el prefab Nota, los seis carriles en orden y la línea; y Juez De Ritmo, con los textos de puntaje, combo y calificación. Agrega el prefab PantallaFinal y pon las dos escenas en Build Settings.",
+     "codigo": "y = lineaDeGolpe + (pulsoNota - pulsoActual) * unidadesPorPulso"
+    },
+    {
+     "titulo": "Sostenidas y acordes: donde está la coordinación",
+     "texto": "En la sección 3 una mano sostiene una tecla mientras la otra hace clic: independencia de manos. En la sección 4, tecla y clic van al mismo tiempo: sincronización. Perfecto es hasta 50 ms del pulso; Bien, hasta 110 ms."
+    },
+    {
+     "titulo": "Escribe tu propia partitura",
+     "texto": "Copia Rock.txt con otro nombre, cámbiala en el Bloc de notas y ponla en la opción de Musica Por Genero. A 120 BPM un pulso dura medio segundo; se pueden usar medios pulsos, como 9.5.",
+     "ojo": "En la partitura el decimal es punto, 9.5, aunque Windows esté en español."
+    }
+   ],
+   "comprobar": [
+    "01_Menu y 02_Ritmo están en Build Settings, con el menú arriba.",
+    "Las tres canciones suenan desde el menú y cada una trae su fondo y su partitura.",
+    "Cada nota tocada a tiempo dice Perfecto o Bien, y las sostenidas se cuentan al soltar al final.",
+    "Al terminar la canción aparece la pantalla con precisión, error en milisegundos y combo.",
+    "resultados_Ritmo.csv está en AppData, LocalLow, y copiado a la carpeta del equipo."
+   ],
+   "recursos": [
+    {
+     "titulo": "Referencia de Unity 2019.4: AudioSettings.dspTime",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/ScriptReference/AudioSettings-dspTime.html"
+    },
+    {
+     "titulo": "Referencia de Unity 2019.4: AudioSource.PlayScheduled",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/ScriptReference/AudioSource.PlayScheduled.html"
+    },
+    {
+     "titulo": "Manual de Unity 2019.4: Build Settings",
+     "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/BuildSettings.html"
+    }
+   ]
   }
  ]
 }

@@ -278,15 +278,15 @@
           "orientacion": "Esto es el corazón del proyecto: lo que el jugador hace una y otra vez. Sin esto no hay juego, hay menú. Es el hito que tiene frenados a los equipos de Unity.",
           "recursos": [
             {
-              "titulo": "Llevar el puntaje al hacer clic en objetivos, lección oficial",
-              "url": "https://learn.unity.com/pathway/junior-programmer/unit/user-interface/tutorial/67520c50edbc2a0071aaa9f0?version=6"
+              "titulo": "Detectar el clic del mouse, referencia oficial de Unity 2019.4",
+              "url": "https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Input.GetMouseButtonDown.html"
             },
             {
-              "titulo": "Arrastrar y soltar, módulo oficial de 2019",
-              "url": "https://learn.unity.com/tutorial/drag-and-drop"
+              "titulo": "Crear objetos desde un prefab con Instantiate, referencia oficial de Unity 2019.4",
+              "url": "https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Object.Instantiate.html"
             }
           ],
-          "porGrabar": "La dinámica concreta de cada juego, paso a paso en Unity 2019.4. Ver la nota del equipo: no es la misma para el videojuego de motricidad que para el minijuego de coordinación."
+          "porGrabar": "Las dinámicas del Equipo 10 ya están en las guías de Unity, con sus piezas probadas: los cuatro minijuegos de motricidad y el juego rítmico. Falta grabar los videos con el guion que traen las notas de cada presentación."
         },
         {
           "id": "u5",
