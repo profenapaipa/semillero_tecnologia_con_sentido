@@ -157,7 +157,7 @@ La página de "Un café con la iguana" está publicada y en línea en
 <https://profenapaipa.github.io/lawebdelaiguana/>, servida desde
 `profenapaipa/lawebdelaiguana`, rama `main`, carpeta `/docs`.
 
-Ese repositorio **es el proyecto del Equipo 1** (Gabriel Giraldo y Samuel Gómez),
+Ese repositorio **es el proyecto del Equipo 1** (E04 y E03),
 no el portal del semillero. Clon local en
 `D:\Escritorio old\La web de la iguana`. Último commit: 1 de octubre de 2026.
 
@@ -175,7 +175,7 @@ lugar. Mientras no lo decida, no se migra ni se enlaza nada.
 | Equipo | Repositorio | Visibilidad | Local |
 |---|---|---|---|
 | 1 · La web de la iguana | `profenapaipa/lawebdelaiguana` | público, con Pages | `D:\Escritorio old\La web de la iguana` |
-| 3 · Camila y Santiago | `profenapaipa/planeacion-inclusiva-piar` | privado | `D:\Escritorio old\App para planeación de inclusión - Camila y Santiago` |
+| 3 · Kinesis | `profenapaipa/planeacion-inclusiva-piar` | privado | `D:\Escritorio old\App para planeación de inclusión - (nombres omitidos)` |
 | 5 · English Roulette | `profenapaipa/englishroulette` | público | `D:\Escritorio old\ROULETTE_EnglishDay2026` |
 | 6 · Lector de lengua de señas | `profenapaipa/diversena` | privado | `D:\Escritorio old\Diverseña` |
 
@@ -439,7 +439,7 @@ documento se leyó completo.
   falso, y sigue sin haber un solo equipo que las haya marcado.
 - **Equipo 9.** Llenó el Formato 1 y el Formato 2 el 16 de octubre. De ahí
   salen el nombre real del proyecto, *Animación de abandono*, que en el sitio
-  figuraba como "Proyecto de Matías, Jacobo y Danna", y los nombres completos
+  figuraba como "Proyecto de E18, E19 y E17", y los nombres completos
   de quienes lo hacen.
 - **Equipo 11.1.** Formato 1 lleno el 15 de octubre.
 
@@ -472,13 +472,12 @@ En la primera pasada quedaron sin atribuir unos diez documentos editados el 14
 de octubre. Se leyeron todos y se subió por el árbol de Drive para confirmar de
 qué equipo era cada carpeta cuando el documento no lo decía con claridad.
 
-- **Equipo 2.1.** Formato 2 firmado por Sara Valeria Ordoñez Vargas y Deivyd
-  Steban Vega López, que además nombra a una tercera integrante que el sitio no
-  tenía: Lucía Salgado. Acuerdos hechos.
+- **Equipo 2.1.** Formato 2 firmado por E02 y E01, que además nombra a una tercera integrante que el sitio no
+  tenía: E05. Acuerdos hechos.
 - **Equipo 4.** Formato 2 completo, con los dos nombres y el frente del que
   responde cada uno. Acuerdos hechos.
 - **Equipo 11.2.** Formato 1 y Formato 2 llenos el 14 de octubre, los dos muy
-  completos. De ahí salen los nombres: Karla Atalito y Pammela Marín.
+  completos. De ahí salen los nombres: E25 y E26.
 
 Dos documentos se leyeron y **no** cambiaron nada, porque su tarea ya estaba
 marcada: los bocetos del 2.1 y la ficha técnica del 6.
@@ -539,19 +538,80 @@ Los nombres salieron de los sitios publicados, no de lo que suponíamos:
 
 ### 9.4 Avances de Drive
 
-- **Equipo 9.** Jacobo Rodríguez subió el 16 de octubre una carpeta
+- **Equipo 9.** E19 subió el 16 de octubre una carpeta
   *Antecedentes* con dos fuentes en PDF sobre protección animal, que es
   justamente el tema de *Animación de abandono*. Una de las dos está subida dos
   veces. La tarea `ante` pasa a hecha.
 
 El avance del semillero queda en 33%.
 
-### 9.5 Hallazgo sin cargar: una carpeta de Equipo 13
+### 9.5 El Equipo 13 entra al portal
 
-El 16 de octubre se creó en Drive la carpeta **Equipo 13_Desarrollo_IA_Valeria**,
+El 16 de octubre se creó en Drive la carpeta **Equipo 13**,
 al mismo nivel que las de los demás equipos. Dentro solo hay un acceso directo,
 "AI códigos:", sin documentos ni tareas.
 
-No se agregó al sitio. Crear un subequipo número dieciséis cambia la cifra de
-la portada y la estructura entera a partir de una carpeta vacía, y esa es una
-decisión de Néstor, no una medición.
+Al principio no se agregó al sitio: crear un subequipo número dieciséis cambia
+la cifra de la portada a partir de una carpeta casi vacía, y eso lo decide
+Néstor. El 17 de octubre Néstor decidió agregarlo.
+
+El acceso directo lleva a un documento de Google de E02, "AI códigos:", con
+tres bloques de código. Se pasaron a la carpeta local del Equipo 13 tal como
+estaban: `agente/AGENTS.md` y `agente/SOUL.md`, que son configuración de
+OpenClaw, y `voz/asistente_de_voz.py`, que convierte texto en voz con
+ElevenLabs. El script no corre: dos líneas llegaron como `***` desde el propio
+documento original.
+
+Como el equipo no tiene propuesta, formatos, repositorio ni sitio, entra con
+todas las tareas en falso y cada una con su razón. Es de la línea software y su
+publicación figura "sin publicar".
+
+Cambios que trajo agregarlo:
+
+- La portada pasa de 15 a 16 subequipos y el avance del semillero baja de 33% a
+  31%, porque entra un equipo en 0%.
+- Las páginas pasan a 81. Todas cambian un poco, porque el menú de proyectos
+  aparece en cada una y ahora lista el Equipo 13.
+- El generador decía "quince" escrito a mano en dos textos del menú. Ahora
+  calcula el número desde `datos/semillero.json`, para que no se vuelva a
+  desactualizar.
+
+Las cinco auditorías pasan: estructura, color, JavaScript, proporciones y
+contraste.
+
+### 9.6 Los estudiantes salen del sitio público
+
+El sitio es público y no hay autorización para publicar nombres de estudiantes,
+que son menores de edad. El 17 de octubre se reemplazaron todos por un código
+fijo: E01 a E26 (el 21 de octubre se sumó E27, quien trabaja en el Equipo 1 sin ser del semillero). El código es el mismo en todos los equipos donde la persona
+participa, de modo que el trabajo de una misma persona sigue siendo rastreable.
+
+- Cambió el campo `integrantes` de los quince equipos con estudiantes, las
+  notas y las tareas que nombraban a alguien, un nombre de proyecto que llevaba
+  un nombre propio y los nombres de carpeta de Drive que se copian en los datos.
+- La equivalencia entre código y persona está en
+  `datos/seudonimos.json`, dentro de la carpeta del Equipo 13. Esa carpeta no se sube a ningún
+  repositorio. Al cargar datos nuevos de Drive hay que traducir primero los
+  nombres a su código, y los estudiantes nuevos reciben el siguiente número.
+- La mención al docente no cambia.
+- Dos ajustes del mismo día: el Equipo 13 pasó de llamarse con un nombre de
+  pila a *Asistente IA del semillero*, y las dos Marianas, la del Equipo 5 y la
+  del 10.1, resultaron ser personas distintas por sus apellidos, así que llevan
+  códigos distintos: E11 y E21.
+
+Otras comprobaciones del mismo día:
+
+- Las 75 diapositivas de las sesiones se revisaron una por una: solo traen
+  números de equipo, ningún nombre ni captura de un documento de estudiantes. Los
+  seis PDF de las sesiones también salieron limpios.
+- Dos formularios de Office llenados por estudiantes estaban versionados dentro de
+  `SEMILLERO AULA MAKER`. Se sacaron del repositorio y se agregaron al
+  `.gitignore`; siguen en el disco y en Drive.
+
+Importante: los nombres siguen en el historial de commits del repositorio, que
+es público. Una auditoría del historial completo (2.187 versiones de archivo)
+los encontró en las páginas generadas, en los datos, en esos dos formularios, en
+archivos de Wisfox que se colaron en algún commit y en mensajes de commit.
+Quitarlos exige reescribir el historial y forzar el push, y eso no se hizo. Hay
+un plan paso a paso, con una copia de seguridad y cuatro verificaciones antes de
+publicar, en la carpeta del Equipo 13 (`docs/plan-limpiar-historial.md`).

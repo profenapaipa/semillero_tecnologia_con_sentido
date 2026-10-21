@@ -4,7 +4,7 @@ Sitio de seguimiento y divulgación del **Semillero Maker de Tecnología con Sen
 espacio extracurricular dirigido por Néstor Andrés Paipa en el Instituto
 Infantil y Juvenil, Bogotá. Semestre 2026-II.
 
-Quince proyectos de 9°, 10° y 11° recorren las fases del Design Thinking anidadas
+Dieciséis proyectos de 9°, 10° y 11° recorren las fases del Design Thinking anidadas
 con el método científico, hasta llegar a un artículo de desarrollo tecnológico.
 Este sitio le muestra a cada equipo el estado real de su proceso.
 
@@ -103,7 +103,7 @@ lleva además una forma o un glifo, para que se lea sin depender de distinguir c
 
 3. Comitear y hacer push. GitHub Pages publica solo.
 
-El generador reescribe las quince páginas desde cero cada vez, así que se puede
+El generador reescribe todas las páginas desde cero cada vez, así que se puede
 correr tantas veces como haga falta.
 
 ### Marcar una tarea como cumplida

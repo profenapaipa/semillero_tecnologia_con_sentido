@@ -17,6 +17,7 @@
     ],
     "repo": "https://github.com/profenapaipa/semillero_tecnologia_con_sentido",
     "sitio": "https://profenapaipa.github.io/semillero_tecnologia_con_sentido/",
+    "_nota_estudiantes": "El sitio es público y no hay autorización para publicar nombres de estudiantes. Cada uno se identifica con un código fijo (E01, E02...). La equivalencia con el nombre es privada y no se sube a ningún repositorio.",
     "_nota_colegio": "El semillero es un proyecto personal de Néstor Andrés Paipa. El sitio no lleva credito ni marca de ninguna institución."
   },
   "fases": [
@@ -631,7 +632,7 @@
       "slug": "equipo-1",
       "nombre": "La web de la iguana",
       "linea": "software",
-      "integrantes": "Deivyd Vega, Valeria Ordoñez, Samuel Alejandro Gómez Gordillo y Gabriel Leonardo Giraldo Collazos",
+      "integrantes": "Estudiantes E01, E02, E03, E04 y E27",
       "stack": "HTML, CSS y JavaScript, con los datos en archivos JSON",
       "carpeta": "Equipo 1_[la web de la iguana]_2026-II",
       "enlaces": [
@@ -644,7 +645,7 @@
           "url": "https://github.com/profenapaipa/lawebdelaiguana"
         }
       ],
-      "nota": "Construyen el portal de divulgación de Filosofartec, bajo la identidad de Un Café con la Iguana. Es el equipo más adelantado en construcción y el único del semillero con el sitio publicado en internet; su artículo, en cambio, está en blanco. Los créditos del sitio nombran a Samuel Gómez y Gabriel Giraldo, de décimo B, como quienes lo desarrollaron; Deivyd Vega y Valeria Ordoñez se suman al equipo.",
+      "nota": "Construyen el portal de divulgación de Filosofartec, bajo la identidad de Un Café con la Iguana. Es el equipo más adelantado en construcción y el único del semillero con el sitio publicado en internet; su artículo, en cambio, está en blanco. Los créditos del sitio nombran a E03 y E04, de décimo B, como quienes lo desarrollaron; E01 y E02 se suman al equipo. E27 no pertenece al semillero, pero en las mañanas también trabaja en este proyecto, por eso figura aquí.",
       "estado": {
         "prop": [
           true,
@@ -745,7 +746,7 @@
       "slug": "equipo-2-1",
       "nombre": "Animación para el Filosofartec",
       "linea": "audiovisual",
-      "integrantes": "Sara Valeria Ordoñez Vargas, Deivyd Steban Vega López y Lucía Salgado",
+      "integrantes": "Estudiantes E02, E01 y E05",
       "stack": "Animación, pendiente de confirmar la herramienta",
       "carpeta": "Equipo 2_Animación para el Filosofartec / Equipo 2.1",
       "enlaces": [],
@@ -753,7 +754,7 @@
       "estado": {
         "prop": [
           false,
-          "Propuesta Deivyd y Valeria: nombres y correos vacíos, solo un enlace a un tutorial de Unity"
+          "Propuesta de E01 y E02: nombres y correos vacíos, solo un enlace a un tutorial de Unity"
         ],
         "acue": [
           true,
@@ -847,7 +848,7 @@
       "slug": "equipo-2-2",
       "nombre": "MictoMotion, animación para el Filosofartec",
       "linea": "audiovisual",
-      "integrantes": "Emily",
+      "integrantes": "Estudiante E06",
       "stack": "Animación 3D, archivos .abc y .mtl",
       "carpeta": "Equipo 2_Animación para el Filosofartec / Equipo[2.2]_[MictoMotion]",
       "enlaces": [],
@@ -951,9 +952,9 @@
       "slug": "equipo-3",
       "nombre": "Kinesis, plataforma de planeación inclusiva",
       "linea": "software",
-      "integrantes": "Camila y Santiago",
+      "integrantes": "Estudiantes E07 y E08",
       "stack": "Next.js con TypeScript, Drizzle y base de datos",
-      "carpeta": "Equipo 3_Camila y Santiago -",
+      "carpeta": "Equipo 3_E07 y E08 -",
       "enlaces": [
         {
           "titulo": "Demostración publicada",
@@ -1060,7 +1061,7 @@
       "slug": "equipo-4",
       "nombre": "Comedero automático para mascotas",
       "linea": "electronica",
-      "integrantes": "María Alejandra Cuestas Escobedo y Javier Esteban Sanabria Zea",
+      "integrantes": "Estudiantes E09 y E10",
       "stack": "Arduino",
       "carpeta": "Equipo 4_Comedero mascotas automático",
       "enlaces": [],
@@ -1164,7 +1165,7 @@
       "slug": "equipo-5",
       "nombre": "English Roulette",
       "linea": "software",
-      "integrantes": "Mariana Soler",
+      "integrantes": "Estudiante E11",
       "stack": "Python con interfaz de escritorio, base de datos SQLite y firmware para ESP32",
       "carpeta": "Equipo 5_English _Roulette_2026_II",
       "enlaces": [
@@ -1268,7 +1269,7 @@
       "slug": "equipo-6",
       "nombre": "DiverSeña, lector de lengua de señas",
       "linea": "software",
-      "integrantes": "Nicolás Pachón, César Alejandro Prada y Matías Ávila",
+      "integrantes": "Estudiantes E12, E13 y E14",
       "stack": "TypeScript con Vite, detección de puntos de la mano y clasificador por vecino más cercano",
       "carpeta": "Equipo 6 - Lector de lengua de señas",
       "enlaces": [
@@ -1377,7 +1378,7 @@
       "slug": "equipo-7",
       "nombre": "Wisfox",
       "linea": "software",
-      "integrantes": "Stephany Parra Peña y Elizabeth Sofía Moreno Nope, grado 10",
+      "integrantes": "Estudiantes E15 y E16, grado 10",
       "stack": "HTML y JavaScript con Vite y Firebase",
       "carpeta": "Equipo 7_Wisfox",
       "enlaces": [
@@ -1593,9 +1594,9 @@
       "slug": "equipo-9",
       "nombre": "Animación de abandono",
       "linea": "audiovisual",
-      "integrantes": "Danna Fuquen, Matías Peñaloza y Jacobo Rodríguez",
+      "integrantes": "Estudiantes E17, E18 y E19",
       "stack": "Producción audiovisual, pendiente de confirmar la herramienta",
-      "carpeta": "Equipo 9_Proyecto Matías Jacobo y Danna",
+      "carpeta": "Equipo 9_Proyecto E18 E19 y E17",
       "enlaces": [],
       "nota": "La propuesta está escrita, con 4.647 bytes de contenido, pero los formatos de necesidades y de bocetos siguen en blanco y no hay material audiovisual en la carpeta.",
       "estado": {
@@ -1695,7 +1696,7 @@
       "slug": "equipo-10-1",
       "nombre": "Videojuego para motricidad",
       "linea": "unity",
-      "integrantes": "Camilo, Mariana e Isabella",
+      "integrantes": "Estudiantes E20, E21 y E22",
       "stack": "Unity 2019.4.38f1, proyecto 2D",
       "carpeta": "Equipo 10_Videojuego para motricidad / Equipo 10.1",
       "enlaces": [],
@@ -1798,7 +1799,7 @@
       "slug": "equipo-10-2",
       "nombre": "Minijuego de coordinación",
       "linea": "unity",
-      "integrantes": "David",
+      "integrantes": "Estudiante E23",
       "stack": "Unity 2019.4.38f1, proyecto 2D",
       "carpeta": "Equipo 10_Videojuego para motricidad / Equipo 10.2",
       "enlaces": [],
@@ -1807,7 +1808,7 @@
       "estado": {
         "prop": [
           false,
-          "propuesta mninijuego coordinación David: 1.024 bytes, es la plantilla sin responder"
+          "propuesta mninijuego coordinación E23: 1.024 bytes, es la plantilla sin responder"
         ],
         "acue": [
           true,
@@ -1899,9 +1900,9 @@
     {
       "numero": "11.1",
       "slug": "equipo-11-1",
-      "nombre": "Cortometraje de Heidy Farieta",
+      "nombre": "Cortometraje de E24",
       "linea": "audiovisual",
-      "integrantes": "Heidy Farieta",
+      "integrantes": "Estudiante E24",
       "stack": "Producción audiovisual",
       "carpeta": "Equipo 11_Cortometrajes para el Filosofartec / Equipo 11.1",
       "enlaces": [],
@@ -2003,7 +2004,7 @@
       "slug": "equipo-11-2",
       "nombre": "La odisea de la diversidad",
       "linea": "audiovisual",
-      "integrantes": "Karla Atalito y Pammela Marín",
+      "integrantes": "Estudiantes E25 y E26",
       "stack": "Producción audiovisual",
       "carpeta": "Equipo 11_Cortometrajes para el Filosofartec / Equipo 11.2",
       "enlaces": [],
@@ -2207,6 +2208,104 @@
         "url": "https://profenapaipa.github.io/zocalab/",
         "repo": "https://github.com/profenapaipa/zocalab",
         "nota": "Publicado en GitHub Pages desde la rama main, con el index.html en la raíz del repositorio. Aplicación web educativa con identidad muisca para la gestión del tiempo y el aprendizaje."
+      }
+    },
+    {
+      "numero": "13",
+      "slug": "equipo-13",
+      "nombre": "Asistente IA del semillero",
+      "linea": "software",
+      "integrantes": "Estudiante E02",
+      "stack": "Asistente sobre OpenClaw, con la voz en Python y la API de ElevenLabs",
+      "carpeta": "Equipo 13_Desarrollo_IA_E02",
+      "enlaces": [],
+      "nota": "Proyecto nuevo: la carpeta en Drive se creó el 16 de octubre y solo tiene un acceso directo al documento \"AI códigos:\", donde E02 reunió tres bloques de código. Dos son archivos de configuración de OpenClaw, AGENTS.md y SOUL.md, y el tercero es un script en Python que convierte texto en voz con ElevenLabs. En SOUL.md el asistente ya está pensado para estudiantes de sexto a once, con apoyo en español e inglés y cuidado de sus datos. Lo que existe son archivos de texto y un script que todavía no corre, no una aplicación con pantallas.",
+      "estado": {
+        "prop": [
+          false,
+          "La carpeta de Drive no tiene propuesta, solo el acceso directo al documento de códigos"
+        ],
+        "acue": [
+          false,
+          "Sin formato de acuerdos del equipo"
+        ],
+        "nece": [
+          false,
+          "Sin formato de necesidades y recursos"
+        ],
+        "ante": [
+          false,
+          "Sin carpeta de antecedentes con fuentes"
+        ],
+        "cron": [
+          false,
+          "Sin cronograma entregado"
+        ],
+        "preg": [
+          false,
+          "Sin Articulo_base.docx en la carpeta"
+        ],
+        "bocg": [
+          false,
+          "Sin boceto de la interfaz ni del flujo de conversación"
+        ],
+        "bocr": [
+          false,
+          "Sin registro escrito del boceto"
+        ],
+        "fich": [
+          false,
+          "Sin ficha técnica"
+        ],
+        "s1": [
+          false,
+          "La carpeta tiene AGENTS.md, SOUL.md y un script de voz, pero el script no abre: dos líneas quedaron rotas en el documento original y Python da error de sintaxis"
+        ],
+        "s2": [
+          false,
+          "Sin interfaz: por ahora son archivos de texto y un script de consola"
+        ],
+        "s3": [
+          false,
+          "Sin estilos propios, porque todavía no hay pantallas"
+        ],
+        "s4": [
+          false,
+          "Sin contenido educativo cargado: SOUL.md define el propósito del asistente, pero aún no hay materias, ejercicios ni material de apoyo"
+        ],
+        "s5": [
+          false,
+          "Sin repositorio en GitHub"
+        ],
+        "s6": [
+          false,
+          "Sin publicar ni ejecutable de uso"
+        ],
+        "barr": [
+          false,
+          "Sin hoja de barreras"
+        ],
+        "casi": [
+          false,
+          "Sin casillas marcadas"
+        ],
+        "evid": [
+          false,
+          "Sin carpeta de evidencias de avance"
+        ],
+        "dect": [
+          false,
+          "Sin bitácora de decisiones"
+        ],
+        "artv": [
+          false,
+          "No existe Articulo_base_v2.docx"
+        ]
+      },
+      "articuloEstado": {},
+      "publicacion": {
+        "estado": "sin publicar",
+        "nota": "Todavía no tiene repositorio. Es un asistente que corre sobre OpenClaw, no un sitio web: su entregable sería el agente configurado con sus instrucciones de uso, no GitHub Pages."
       }
     }
   ],

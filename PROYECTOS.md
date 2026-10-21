@@ -7,7 +7,7 @@ Una sola carpeta para abrir, varios repositorios adentro. Así el docente es el
 GIT Tecnología con Sentido/        ← EL PORTAL. Solo lo modifica Néstor.
 │
 ├── docs/                          el sitio publicado
-├── datos/semillero.json           el estado de los quince proyectos
+├── datos/semillero.json           el estado de los dieciséis proyectos
 ├── herramientas/                  el generador y la auditoría
 ├── README.md · BRIEF.md · PUBLICAR.md · BITACORA_TECNICA.md
 │
@@ -16,7 +16,8 @@ GIT Tecnología con Sentido/        ← EL PORTAL. Solo lo modifica Néstor.
 ├── ROULETTE_EnglishDay2026/       ← repositorio propio del Equipo 5
 ├── Diverseña/                     ← repositorio propio del Equipo 6
 ├── Wisfox/                        ← todavía sin repositorio
-└── ZOCALAB CARPETA COMPLETA/      ← todavía sin repositorio
+├── ZOCALAB CARPETA COMPLETA/      ← todavía sin repositorio
+└── (carpeta del Equipo 13)/       ← Asistente IA del semillero, todavía sin repositorio
 ```
 
 ### La excepción: `SEMILLERO AULA MAKER`
@@ -66,7 +67,7 @@ Porque meterlo junto rompe tres cosas a la vez:
 Trabajas en la carpeta de arriba, la del portal:
 
 ```
-python herramientas/generar.py     reconstruye las 61 páginas
+python herramientas/generar.py     reconstruye las 81 páginas
 python herramientas/auditar.py     revisa que no haya nada roto
 git add -A && git commit && git push
 ```
@@ -84,11 +85,12 @@ Desde ahí, sus commits van a **su** repositorio. El portal ni se entera.
 | Equipo | Carpeta que abren | Su repositorio |
 |---|---|---|
 | 1 | `La web de la iguana` | `lawebdelaiguana` |
-| 3 | `App para planeación de inclusión - Camila y Santiago` | `planeacion-inclusiva-piar` |
+| 3 | `App para planeación de inclusión - (nombres omitidos)` | `planeacion-inclusiva-piar` |
 | 5 | `ROULETTE_EnglishDay2026` | `englishroulette` |
 | 6 | `Diverseña` | `diversena` |
 | 7 | `Wisfox` | por crear |
 | 12 | `ZOCALAB CARPETA COMPLETA` | por crear |
+| 13 | carpeta del Equipo 13 | por crear |
 
 ## Los dos proyectos que todavía no tienen repositorio
 

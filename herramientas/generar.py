@@ -10,7 +10,7 @@ Qué escribe
     docs/equipos/<slug>-desarrollo.html    vista 2: el desarrollo tecnológico
     docs/equipos/<slug>-articulo.html      vista 3: la documentación del artículo
 
-Son 1 + 14 x 4 = 57 páginas. Por eso se generan y no se escriben a mano.
+Son el portal más cinco páginas por cada uno de los 16 equipos (81 en total). Por eso se generan y no se escriben a mano.
 
 Cómo se usa
 -----------
@@ -90,6 +90,21 @@ def huella(*rutas):
 
 def e(t):
     return html.escape(str(t), quote=True)
+
+
+# El total de proyectos, en letras, para los textos del menú. Antes decía
+# "quince" escrito a mano y quedó viejo cuando entró el Equipo 13; main() lo
+# calcula al cargar los datos, así agregar un equipo en el JSON no deja un
+# número desactualizado en el sitio.
+_EN_LETRAS = {10: 'diez', 11: 'once', 12: 'doce', 13: 'trece', 14: 'catorce',
+              15: 'quince', 16: 'dieciséis', 17: 'diecisiete', 18: 'dieciocho',
+              19: 'diecinueve', 20: 'veinte'}
+PROYECTOS_EN_LETRAS = ''
+
+
+def en_letras(n):
+    """El número en letras para los casos que usa el portal; si no, en cifras."""
+    return _EN_LETRAS.get(n, str(n))
 
 
 def fecha_larga(iso):
@@ -397,7 +412,7 @@ def mini_camino(nv, act):
 
 def desplegable_proyectos(datos, pre):
     """
-    El menu de proyectos: los quince, agrupados por linea tecnica, cada uno
+    El menu de proyectos: todos, agrupados por linea tecnica, cada uno
     con la vista previa de su camino. Es un <details>, asi que funciona con
     teclado y tambien si el JavaScript no carga.
     """
@@ -428,7 +443,8 @@ def desplegable_secciones(pre):
     """Las secciones del portal, tambien desplegables."""
     items = [('como', 'Como funciona', 'ayuda', 'Que es la ruta y como se lee'),
              ('numeros', 'Diagnostico', 'tendencia', 'El semillero en numeros'),
-             ('proyectos', 'Los proyectos', 'tablero', 'Los quince, por linea tecnica'),
+             ('proyectos', 'Los proyectos', 'tablero',
+              'Los %s, por línea técnica' % PROYECTOS_EN_LETRAS),
              ('publicados', 'Publicados', 'cohete', 'Lo que ya se puede abrir'),
              ('hermanos', 'Hermanos', 'globo', 'Filosofartec y Un Cafe con la Iguana')]
     p = ['<details class="desplegable"><summary>%s Secciones %s</summary>'
@@ -640,7 +656,8 @@ def mapa_portal(secciones, activa=None):
     """El mismo mapa, para el portal: sus secciones en vez de las vistas."""
     p = ['<div class="mapa"><div class="envoltura">']
     p.append('<ol class="mapa-ruta"><li><span class="aqui">%s Portal del semillero</span></li>'
-             '<li>quince proyectos, cuatro lineas tecnicas</li></ol>' % ico('inicio', 14))
+             '<li>%s proyectos, cuatro lineas tecnicas</li></ol>'
+             % (ico('inicio', 14), PROYECTOS_EN_LETRAS))
     p.append('<nav class="mapa-vistas" id="mapa-secciones" aria-label="Secciones del portal">')
     for ancla, titulo, icono in secciones:
         p.append('<a href="#%s" data-seccion="%s">%s%s</a>' % (e(ancla), e(ancla), ico(icono, 15), e(titulo)))
@@ -1853,11 +1870,12 @@ def pagina_articulo(datos, equipo):
 # ====================================================================
 
 def main():
-    global VERSION_ASSETS
+    global VERSION_ASSETS, PROYECTOS_EN_LETRAS
     VERSION_ASSETS = huella('assets/css/marca.css', 'assets/css/sitio.css',
                             'assets/js/sitio.js')
     with open(DATOS, encoding='utf-8') as f:
         datos = json.load(f)
+    PROYECTOS_EN_LETRAS = en_letras(len(datos['equipos']))
 
     modulos = cargar_modulos()
     videos = cargar_videos()
