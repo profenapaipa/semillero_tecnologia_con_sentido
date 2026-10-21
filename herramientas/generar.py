@@ -107,6 +107,14 @@ def en_letras(n):
     return _EN_LETRAS.get(n, str(n))
 
 
+def dias_entre(iso_a, iso_b):
+    """Dias de iso_a a iso_b. Sirve para decir cuanto falta para la muestra."""
+    import datetime
+    a = datetime.date(*[int(x) for x in iso_a.split('-')])
+    b = datetime.date(*[int(x) for x in iso_b.split('-')])
+    return (b - a).days
+
+
 def fecha_larga(iso):
     a, m, d = (int(x) for x in iso.split('-'))
     return '%d de %s de %d' % (d, MESES[m - 1], a)
@@ -647,6 +655,12 @@ def mapa_fijo(datos, equipo, nv, act, vista_activa):
     for titulo, sufijo, icono in VISTAS:
         actual = ' aria-current="page"' if sufijo == vista_activa else ''
         p.append('<a href="%s%s.html"%s>%s%s</a>' % (e(s), sufijo, actual, ico(icono, 15), e(titulo)))
+    # El boton de hoy va aqui, pegado a las vistas y con relleno solido: es el
+    # unico elemento del mapa que lo lleva, y por eso se ve de inmediato sin
+    # necesidad de un color de alarma.
+    p.append('<a class="boton-hoy" href="%s-hoy.html"%s>%s<span>Lo de hoy</span></a>'
+             % (e(s), ' aria-current="page"' if vista_activa == '-hoy' else '',
+                ico('diana', 15)))
     p.append('</nav>')
 
     # fila 3: los siete niveles, siempre visibles
@@ -1933,6 +1947,116 @@ def pagina_articulo(datos, equipo):
 
 # ====================================================================
 
+def pagina_hoy(datos, equipo):
+    """
+    Lo que a este equipo le toca hoy. Se calcula: el nivel en el que va, lo que
+    tiene pendiente ahi, lo que le falta en el resto de la ruta y las guias de
+    su linea. No hay nada escrito a mano por equipo.
+    """
+    meta = datos['meta']
+    hh, tt, nv = totales(datos, equipo)
+    act = nivel_actual(nv)
+    s = equipo['slug']
+    faltan = dias_entre(meta['revisado'], meta.get('muestra', meta['revisado']))
+
+    pendientes_nivel = [t for t in act['tareas'] if not t[2]]
+    otros = []
+    for n in nv:
+        if n is act:
+            continue
+        otros += [(n, t) for t in n['tareas'] if not t[2]]
+
+    h = [cabeza('Lo de hoy · %s' % equipo['nombre'],
+                'Lo que le toca hoy al equipo %s: lo que tiene pendiente y las guias '
+                'que le sirven.' % equipo['numero'], '../', linea=equipo['linea'],
+                datos=datos, mapa=mapa_fijo(datos, equipo, nv, act, '-hoy'))]
+    h.append(portada_equipo(datos, equipo, hh, tt))
+    h.append('<div class="con-lateral">')
+    h.append(menu_izquierdo(datos, equipo, nv, act, '-hoy', cargar_modulos()))
+    h.append('<main class="principal">')
+    h.append(tiradores())
+
+    # --- cuanto falta ---
+    h.append('<section class="bloque"><div class="envoltura">')
+    h.append('<div class="hoy-cabeza">')
+    h.append('<span class="rotulo">%s Sesion del %s</span>'
+             % (ico('reloj', 14), e(fecha_larga(meta['revisado']))))
+    h.append('<h2>Lo de hoy</h2>')
+    h.append('<p class="entradilla">%s</p>' % e(meta.get('sesionHoy', '')))
+    h.append('<div class="hoy-cifras">')
+    h.append('<div><span class="cifra">%d</span><span class="pie">dias para la muestra</span></div>'
+             % max(faltan, 0))
+    h.append('<div><span class="cifra">%d</span><span class="pie">sesiones incluida esta</span></div>'
+             % len(meta.get('sesionesRestantes', [])))
+    h.append('<div><span class="cifra">%d</span><span class="pie">tareas sin evidencia</span></div>'
+             % (tt - hh))
+    h.append('</div></div>')
+    h.append('</div></section>')
+
+    # --- lo primero: el nivel actual ---
+    h.append('<section class="bloque sobre-superficie"><div class="envoltura">')
+    h.append('<div class="cab-seccion"><span class="rotulo">Empiecen por aqui</span>'
+             '<h2>Vas en %s, nivel %d de 7</h2><p>%s</p></div>'
+             % (e(act['fase']['nombre']), act['n'], e(act['fase']['que'])))
+    if pendientes_nivel:
+        h.append('<ul class="tareas">%s</ul>'
+                 % ''.join(fila_tarea(t) for t in pendientes_nivel))
+    else:
+        h.append('<div class="nota-caja verde"><span class="titulo">%s<b>Este nivel esta completo</b></span>'
+                 'Sigan con el siguiente nivel de la ruta.</div>' % ico('check', 17))
+    h.append('</div></section>')
+
+    # --- lo que falta en el resto de la ruta ---
+    if otros:
+        h.append('<section class="bloque"><div class="envoltura">')
+        h.append('<div class="cab-seccion"><span class="rotulo">Y ademas</span>'
+                 '<h2>%d tareas de otros niveles</h2>'
+                 '<p>Quedaron atras. Si hoy sobra tiempo, estas son las que mas pesan '
+                 'en el avance del proyecto.</p></div>' % len(otros))
+        h.append('<ul class="tareas">%s</ul>'
+                 % ''.join(fila_tarea(t) for _n, t in otros[:6]))
+        if len(otros) > 6:
+            h.append('<p class="dato">Y %d mas, en la vista de la ruta.</p>' % (len(otros) - 6))
+        h.append('</div></section>')
+
+    # --- las guias que le sirven a este equipo ---
+    utiles = [g for g in GUIAS
+              if 'todos' in (g.get('para') or []) or equipo['linea'] in (g.get('para') or [])]
+    if utiles:
+        h.append('<section class="bloque sobre-superficie"><div class="envoltura">')
+        h.append('<div class="cab-seccion"><span class="rotulo">Con que apoyarse</span>'
+                 '<h2>Guias para su linea</h2>'
+                 '<p>Escritas a partir de las barreras que los equipos reportaron. '
+                 'No estan bloqueadas.</p></div>')
+        h.append('<div class="rejilla c2">')
+        for g in utiles:
+            h.append('<a class="tarjeta-guia revelar" href="../guias/%s.html">'
+                     '<h3>%s</h3><p>%s</p><p class="relacion">%d pasos</p></a>'
+                     % (e(g['id']), e(g['titulo']), e(g['resumen']), len(g['pasos'])))
+        h.append('</div></div></section>')
+
+    # --- que tiene que existir el 29 ---
+    h.append('<section class="bloque"><div class="envoltura">')
+    h.append('<div class="destacado"><h3>%s Que tiene que existir el 29 de octubre</h3>'
+             '<p>El dia de la muestra tiene que haber algo que otra persona pueda usar, '
+             'ver o leer sin que ustedes se lo expliquen: el prototipo funcionando hasta '
+             'donde llego, el articulo con sus secciones escritas y la carpeta del equipo '
+             'con las evidencias. Lo que no funcione se cuenta en la seccion 3.4 del '
+             'articulo; escribirlo no baja la nota, ocultarlo si se nota.</p></div>'
+             % ico('cohete', 20))
+    h.append('<div class="botones" style="margin-top:14px">')
+    h.append('<a class="boton principal" href="%s-ruta.html">%s Ver la ruta completa</a>' % (e(s), ico('mapa', 16)))
+    h.append('<a class="boton" href="%s-articulo.html">Estado del articulo</a>' % e(s))
+    h.append('<a class="boton" href="../guias/index.html">Todas las guias</a>')
+    h.append('</div></div></section>')
+
+    h.append('</main>')
+    h.append(panel_derecho(datos, equipo, nv, act, hh, tt))
+    h.append('</div>')
+    h.append(pie(datos['meta']))
+    return '\n'.join(h)
+
+
 def pagina_guia(datos, g):
     """Una guia: por que existe, los pasos, como comprobar y con que apoyarse."""
     pre = '../'
@@ -2057,6 +2181,7 @@ def main():
         escribir('equipos/%s-ruta.html' % s, pagina_ruta(datos, eq))
         escribir('equipos/%s-desarrollo.html' % s, pagina_desarrollo(datos, eq))
         escribir('equipos/%s-articulo.html' % s, pagina_articulo(datos, eq))
+        escribir('equipos/%s-hoy.html' % s, pagina_hoy(datos, eq))
 
     for g in GUIAS:
         escribir('guias/%s.html' % g['id'], pagina_guia(datos, g))

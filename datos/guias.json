@@ -1,6 +1,60 @@
 {
-  "_lee_esto": "Material propio del semillero. Cada guía responde a una barrera que un equipo escribió de verdad, y lo dice en su campo porQue. Los enlaces externos se comprobaron uno por uno: todos respondían cuando se escribieron. Para agregar una guía, se copia la estructura de cualquiera de estas y se enlaza desde el hito o el módulo que corresponda; generar.py hace el resto.",
+  "_lee_esto": "Material propio del semillero. Cada guía responde a una barrera que un equipo escribió de verdad, y lo dice en su campo porQue. El editor aconsejado es CapCut, que es el que los equipos ya tienen instalado; donde CapCut no alcanza, la guía lo dice y propone la alternativa en vez de prometer lo que el programa no hace. Los enlaces externos se comprobaron uno por uno: todos respondían cuando se escribieron.",
   "guias": [
+    {
+      "id": "montar-en-capcut",
+      "titulo": "Montar el stop motion en CapCut",
+      "para": [
+        "audiovisual"
+      ],
+      "hitos": [
+        "v6"
+      ],
+      "modulos": [
+        "F"
+      ],
+      "resumen": "Pasar de una carpeta con cientos de fotos a una secuencia que se reproduce a doce por segundo.",
+      "porQue": "Es el primer paso de la edición y no estaba escrito en ninguna parte. Las demás guías de edición empiezan después de esto: si las fotos no quedan todas a la misma duración, nada de lo que venga después cuadra.",
+      "pasos": [
+        {
+          "titulo": "Ordenen las fotos antes de importarlas",
+          "texto": "CapCut las va a poner en el orden del nombre del archivo. Si la cámara las numeró del 1 al 480, van bien. Si mezclaron varias sesiones, renómbrenlas por plano antes de importar: plano07_001, plano07_002 y así. Arreglar el orden dentro del editor cuesta mucho más.",
+          "ojo": "Una carpeta por plano. No metan los 40 planos juntos en la línea de tiempo."
+        },
+        {
+          "titulo": "Dejen la duración de foto por defecto antes de arrastrar",
+          "texto": "En los ajustes de CapCut hay una duración por defecto para las imágenes, que suele venir en 3 o 5 segundos. Si importan sin cambiarla, cada foto entra con esa duración y van a tener que corregir cientos de clips. Cámbienla primero."
+        },
+        {
+          "titulo": "La cuenta que convierte fotos en segundos",
+          "texto": "A doce fotos por segundo, cada foto dura un doceavo de segundo, es decir 0,083 segundos. Si su plano son 60 fotos, dura 5 segundos. Esa es la misma cuenta que ya tienen en la columna de fotos del guion técnico: la tabla les dice exactamente cuánto debe durar cada plano montado."
+        },
+        {
+          "titulo": "Importen y pongan todas las fotos del plano a la vez",
+          "texto": "Seleccionen todas las fotos del plano y arrástrenlas juntas a la línea de tiempo. Quedan una detrás de otra. Si la duración por defecto quedó bien puesta, el plano ya dura lo que debe."
+        },
+        {
+          "titulo": "Comparen con el guion técnico plano por plano",
+          "texto": "Al terminar cada plano, miren la duración que marca CapCut y compárenla con la del guion. Si no coinciden, es que faltan o sobran fotos, y es mejor saberlo ahora que al final, cuando la voz ya esté puesta.",
+          "ojo": "Vayan marcando Sí en la columna de grabado del guion técnico a medida que montan. Esa columna es la que les dice qué falta sin tener que acordarse."
+        },
+        {
+          "titulo": "Guarden el proyecto con un nombre y una fecha",
+          "texto": "Y exporten un borrador en baja calidad cada vez que terminen un canto. Si el proyecto se daña, un borrador exportado les salva el trabajo de una tarde."
+        }
+      ],
+      "comprobar": [
+        "Cada plano montado dura lo que dice la columna de duración del guion técnico.",
+        "No hay fotos repetidas ni saltadas: el movimiento se ve continuo a velocidad normal.",
+        "El proyecto está guardado y hay un borrador exportado del avance."
+      ],
+      "recursos": [
+        {
+          "titulo": "CapCut, sitio oficial y descarga",
+          "url": "https://www.capcut.com/"
+        }
+      ]
+    },
     {
       "id": "quitar-el-parpadeo",
       "titulo": "Quitar el parpadeo de la luz en un stop motion ya grabado",
@@ -14,7 +68,7 @@
       "modulos": [
         "F"
       ],
-      "resumen": "Qué hacer cuando las fotos quedaron con saltos de luz entre toma y toma.",
+      "resumen": "Qué se puede arreglar en CapCut cuando las fotos quedaron con saltos de luz, y qué no.",
       "porQue": "El equipo 11.2 escribió esta barrera: \"cada vez que acercamos las manos para mover el crayón, la pantalla se oscurece o se aclara automáticamente y las fotos quedan con parpadeos de luz\". Ya grabaron, así que esta guía empieza por lo que todavía se puede arreglar en edición.",
       "pasos": [
         {
@@ -23,35 +77,44 @@
         },
         {
           "titulo": "Separen las tomas que se salvan de las que hay que repetir",
-          "texto": "Reproduzcan cada plano a velocidad normal y clasifíquenlo en tres montones: sin parpadeo, con parpadeo leve y con parpadeo que salta a la vista. Los dos primeros se arreglan en edición. El tercero se regraba, y conviene saberlo antes de perder una tarde editando algo que no tiene arreglo.",
+          "texto": "Reproduzcan cada plano a velocidad normal y clasifíquenlo en tres montones: sin parpadeo, con parpadeo leve y con parpadeo que salta a la vista. Los dos primeros se arreglan. El tercero se regraba, y conviene saberlo antes de perder una tarde editando algo que no tiene arreglo.",
           "ojo": "Háganlo plano por plano, no con el corto entero: el parpadeo no es parejo."
         },
         {
-          "titulo": "Corrijan el parpadeo leve en DaVinci Resolve",
-          "texto": "Resolve es gratuito. Lleven el plano a la página Color, abran la biblioteca de efectos y busquen Deflicker, dentro de ResolveFX Revival. Arrástrenlo sobre el nodo. Empiecen con el ajuste más suave y suban solo hasta que el salto deje de notarse: si lo fuerzan, el movimiento se vuelve blando y se pierde el gesto del stop motion."
+          "titulo": "Sepan qué puede y qué no puede hacer CapCut",
+          "texto": "CapCut no tiene un efecto que quite el parpadeo automáticamente. Lo que sí tiene es Ajustar, con brillo, contraste, luminosidad y temperatura, y fotogramas clave. Con eso se corrige a mano un tramo corto, y se iguala un plano entero que quedó más oscuro que el de al lado. Lo que no se puede es arreglar foto por foto cuatrocientas fotos.",
+          "ojo": "Esto es importante para decidir: si el parpadeo es rápido, de foto a foto, en CapCut no hay arreglo razonable y conviene regrabar ese plano."
         },
         {
-          "titulo": "Si el parpadeo es de color y no de brillo",
-          "texto": "Cuando lo que cambia es el tono, por ejemplo el magenta que se vuelve más rosado en algunas fotos, el problema fue el balance de blancos automático. En la página Color, igualen los fotogramas tomando uno bueno como referencia y aplicando su corrección a todo el plano."
+          "titulo": "Igualen planos enteros entre sí",
+          "texto": "Si un plano quedó más oscuro que el siguiente, selecciónenlo, abran Ajustar y suban el brillo hasta que el corte entre los dos no se note. Esto sí vale la pena: son cuarenta ajustes como máximo, uno por plano, y resuelve el salto más molesto, que es el del corte."
+        },
+        {
+          "titulo": "Corrijan un tramo corto con fotogramas clave",
+          "texto": "Cuando dentro de un plano hay un tramo de uno o dos segundos que se aclara, pongan un fotograma clave antes y otro después, y bajen el brillo solo en el del medio. CapCut interpola el resto. Sirve para dos o tres tramos por plano, no para todo el corto."
         },
         {
           "titulo": "Para lo que falte grabar, bloqueen la cámara",
-          "texto": "Antes de la primera foto: fijen la exposición y el balance de blancos, en la aplicación de stop motion o en el modo profesional del celular con ISO y velocidad manuales. Apaguen la luz del techo y dejen solo la LED, para que la luz del salón no se meta. Y no muevan las manos dentro del encuadre mientras la cámara dispara.",
+          "texto": "Antes de la primera foto: fijen la exposición y el balance de blancos, en la aplicación de stop motion o en el modo profesional del celular con ISO y velocidad manuales. Apaguen la luz del techo y dejen solo la LED. Y no muevan las manos dentro del encuadre mientras la cámara dispara.",
           "ojo": "Esto responde la pregunta exacta que pidieron para grabar. Hasta que no se bloquee la exposición, el parpadeo vuelve."
+        },
+        {
+          "titulo": "Si de verdad necesitan corrección automática",
+          "texto": "DaVinci Resolve es gratuito y sí trae un efecto Deflicker, dentro de ResolveFX Revival. Vale la pena instalarlo solo si tienen varios planos con parpadeo rápido que no pueden regrabar. Para todo lo demás, CapCut alcanza y es el que ya saben usar."
         }
       ],
       "comprobar": [
         "Reproduzcan el plano corregido a velocidad normal, no cuadro a cuadro: el parpadeo se ve en movimiento.",
         "Miren la cartulina blanca del fondo, que es donde más se nota el cambio de luz.",
-        "Comparen el antes y el después uno al lado del otro antes de dar el plano por bueno."
+        "En el corte entre dos planos seguidos no debe haber un salto de brillo."
       ],
       "recursos": [
         {
-          "titulo": "DaVinci Resolve, formación oficial y gratuita",
-          "url": "https://www.blackmagicdesign.com/products/davinciresolve/training"
+          "titulo": "CapCut, sitio oficial y descarga",
+          "url": "https://www.capcut.com/"
         },
         {
-          "titulo": "DaVinci Resolve, descarga",
+          "titulo": "DaVinci Resolve, solo si necesitan Deflicker",
           "url": "https://www.blackmagicdesign.com/products/davinciresolve/"
         }
       ]
@@ -69,7 +132,7 @@
       "modulos": [
         "F"
       ],
-      "resumen": "Tres formas de cuadrar el audio con las fotos, de la que menos daña a la que más.",
+      "resumen": "Tres formas de cuadrar el audio con las fotos en CapCut, de la que menos daña a la que más.",
       "porQue": "El equipo 11.2 escribió: \"el audio de la voz va muy rápido en comparación con la cantidad de fotos que tomamos y la escena se acaba antes que la voz\". Pidieron grabar un tutorial sobre esto.",
       "pasos": [
         {
@@ -78,21 +141,21 @@
         },
         {
           "titulo": "Primero: corten los silencios de la grabación",
-          "texto": "Casi siempre sobra aire al principio, al final y entre frases. Quitarlo no cambia la voz y suele recuperar uno o dos segundos. En Audacity, Truncar silencio hace esto de una vez sobre toda la pista.",
+          "texto": "Casi siempre sobra aire al principio, al final y entre frases. En CapCut se corta el clip de audio con la herramienta de división y se borran los trozos vacíos. Quitarlo no cambia la voz y suele recuperar uno o dos segundos.",
           "ojo": "Dejen un respiro corto entre frases. Un diálogo sin pausas suena atropellado."
         },
         {
           "titulo": "Segundo: estiren la imagen repitiendo fotos",
-          "texto": "Es la opción que mejor se ve. En los planos quietos, donde el personaje casi no se mueve, repitan fotos para alargar la duración. El guion técnico de ustedes ya dice qué planos son quietos: ahí sostener la imagen no se nota, y ganan los segundos que falten."
+          "texto": "Es la opción que mejor se ve. En los planos quietos, donde el personaje casi no se mueve, alarguen la duración de esas fotos arrastrando el borde del clip. El guion técnico de ustedes ya dice qué planos son quietos: ahí sostener la imagen no se nota, y ganan los segundos que falten."
         },
         {
           "titulo": "Tercero, y con cuidado: cambien la velocidad de la voz",
-          "texto": "Si todavía falta, usen Cambiar tempo en Audacity, que cambia la velocidad sin alterar el tono. No usen Cambiar velocidad: esa sube o baja el tono y la voz queda de caricatura. No pasen del diez por ciento; más allá se oye artificial.",
-          "ojo": "Cambiar tempo conserva el tono. Cambiar velocidad no. Es el error más común."
+          "texto": "En CapCut, seleccionen el clip de audio, abran Velocidad y suban un poco. Activen la opción de mantener el tono: sin eso la voz sube de tono y queda de caricatura. No pasen del diez por ciento; más allá se oye artificial.",
+          "ojo": "Mantener el tono es la casilla que marca la diferencia. Es el error más común."
         },
         {
           "titulo": "Cuadren por el golpe, no por el principio",
-          "texto": "Alineen el audio con el momento en que el personaje hace la acción, no con el arranque del plano. El oído perdona que la voz empiece un poco antes; no perdona que la boca o el gesto vayan por un lado y el sonido por otro."
+          "texto": "Alineen el audio con el momento en que el personaje hace la acción, no con el arranque del plano. El oído perdona que la voz empiece un poco antes; no perdona que el gesto vaya por un lado y el sonido por otro."
         }
       ],
       "comprobar": [
@@ -102,12 +165,12 @@
       ],
       "recursos": [
         {
-          "titulo": "Audacity, cambiar el tempo sin cambiar el tono",
-          "url": "https://manual.audacityteam.org/man/change_tempo.html"
+          "titulo": "CapCut, sitio oficial y descarga",
+          "url": "https://www.capcut.com/"
         },
         {
-          "titulo": "Audacity, truncar silencios",
-          "url": "https://manual.audacityteam.org/man/truncate_silence.html"
+          "titulo": "Audacity, si prefieren editar la voz aparte",
+          "url": "https://manual.audacityteam.org/man/change_tempo.html"
         }
       ]
     },
@@ -140,12 +203,12 @@
         },
         {
           "titulo": "Decidan qué se arregla y qué se regraba",
-          "texto": "Un ruido corto se corta. Un zumbido parejo se baja con reducción de ruido. Una frase que no se entiende se vuelve a grabar: ningún filtro arregla una palabra que no está.",
-          "ojo": "La reducción de ruido, usada fuerte, deja la voz con sonido metálico. Es preferible un poco de ruido a una voz que suena a robot."
+          "texto": "Un ruido corto se corta. Un zumbido parejo se baja con Reducir ruido, que en CapCut es un interruptor en el panel de audio con su nivel. Una frase que no se entiende se vuelve a grabar: ningún filtro arregla una palabra que no está.",
+          "ojo": "Reducir ruido al máximo deja la voz con sonido metálico. Es preferible un poco de ruido a una voz que suena a robot."
         },
         {
           "titulo": "Dejen todas las voces al mismo volumen",
-          "texto": "Normalicen las pistas de voz para que ninguna quede más baja que otra. Después suban o bajen la música, nunca al revés: la música se acomoda a la voz."
+          "texto": "Igualen el volumen de las pistas de voz para que ninguna quede más baja que otra. Después suban o bajen la música, nunca al revés: la música se acomoda a la voz, no la voz a la música."
         }
       ],
       "comprobar": [
@@ -155,12 +218,12 @@
       ],
       "recursos": [
         {
-          "titulo": "Audacity, reducción de ruido",
-          "url": "https://manual.audacityteam.org/man/noise_reduction.html"
+          "titulo": "CapCut, sitio oficial y descarga",
+          "url": "https://www.capcut.com/"
         },
         {
-          "titulo": "Audacity, normalizar el volumen",
-          "url": "https://manual.audacityteam.org/man/normalize.html"
+          "titulo": "Audacity, reducción de ruido con más control",
+          "url": "https://manual.audacityteam.org/man/noise_reduction.html"
         }
       ]
     },
@@ -181,11 +244,12 @@
       "pasos": [
         {
           "titulo": "Exporten en MP4, 1920 por 1080",
-          "texto": "MP4 con video H.264 y audio AAC lo abre cualquier computador y cualquier proyector sin instalar nada. Eviten formatos del editor, como los proyectos de Resolve o de CapCut: esos solo los abre el editor."
+          "texto": "En CapCut, el botón de exportar deja elegir resolución, velocidad de fotogramas y calidad. Pongan 1080p y formato MP4: eso lo abre cualquier computador y cualquier proyector sin instalar nada. No entreguen el proyecto de CapCut, que solo lo abre CapCut."
         },
         {
-          "titulo": "Dejen la velocidad de fotogramas del proyecto",
-          "texto": "Si animaron a doce fotos por segundo y el proyecto está en 24, exporten a 24: cada foto ocupa dos fotogramas y el movimiento queda igual. Lo que no se debe hacer es cambiar la velocidad en la exportación, porque ahí sí se altera la duración y la voz se desacomoda."
+          "titulo": "Dejen la velocidad de fotogramas en 30",
+          "texto": "Aunque animaron a doce fotos por segundo, exporten a 30: cada foto ocupa varios fotogramas y el movimiento queda igual de fluido. Lo que no se debe hacer es cambiar la duración en la exportación, porque ahí sí se altera el tiempo y la voz se desacomoda.",
+          "ojo": "Si CapCut ofrece exportar a 60, no hace falta: pesa el doble y no se ve mejor en una animación a doce fotos por segundo."
         },
         {
           "titulo": "Revisen el archivo exportado completo",
@@ -208,11 +272,11 @@
       ],
       "recursos": [
         {
-          "titulo": "DaVinci Resolve, formación oficial",
-          "url": "https://www.blackmagicdesign.com/products/davinciresolve/training"
+          "titulo": "CapCut, sitio oficial y descarga",
+          "url": "https://www.capcut.com/"
         },
         {
-          "titulo": "Kdenlive, manual del editor libre",
+          "titulo": "Kdenlive, alternativa libre",
           "url": "https://docs.kdenlive.org/en/"
         }
       ]

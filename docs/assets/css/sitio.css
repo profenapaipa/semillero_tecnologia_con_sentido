@@ -2047,3 +2047,48 @@ details.mas > div { min-width: 0; }
   font-family: var(--fuente-datos); font-size: 11.5px;
   letter-spacing: .05em; text-transform: uppercase; color: var(--tinta-suave);
 }
+
+
+/* ============ 31. La sesion de hoy ============ */
+/* El boton va dentro del mapa pegado arriba, al lado de las cuatro vistas. Es
+   el unico elemento del mapa con relleno solido, y eso basta para que se vea
+   primero sin recurrir a un color de alarma. */
+
+.boton-hoy {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-left: auto;
+  padding: 7px 15px;
+  border-radius: 999px;
+  background: var(--linea, var(--cian));
+  color: var(--sobre-relleno);
+  font-weight: 700; font-size: 13.5px;
+  text-decoration: none; white-space: nowrap;
+  box-shadow: var(--alzado-2);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.boton-hoy:hover, .boton-hoy:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: var(--alzado-3, var(--alzado-2));
+  color: var(--sobre-relleno);
+}
+.boton-hoy[aria-current="page"] {
+  background: var(--sobre-panel); color: var(--panel);
+}
+.mapa-vistas { align-items: center; }
+
+@media (max-width: 760px) {
+  .boton-hoy { margin-left: 0; }
+}
+
+.hoy-cabeza .entradilla { max-width: 72ch; margin-top: 8px; }
+.hoy-cifras {
+  display: flex; flex-wrap: wrap; gap: 14px 40px;
+  margin-top: 20px; padding-top: 18px;
+  border-top: 1px solid var(--filete);
+}
+.hoy-cifras .cifra {
+  display: block; font-family: var(--fuente-titulos); font-size: 32px; font-weight: 700;
+  line-height: 1.05; letter-spacing: -.03em; color: var(--linea, var(--cian));
+  font-variant-numeric: tabular-nums;
+}
+.hoy-cifras .pie { font-size: 12.5px; color: var(--tinta-suave); }

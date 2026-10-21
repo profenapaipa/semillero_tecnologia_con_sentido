@@ -747,3 +747,59 @@ Las guías del semillero no se bloquean nunca, igual que las diapositivas.
   salían en azul subrayado. Ahora tienen clase propia.
 
 El sitio pasa de 81 a 93 páginas.
+
+---
+
+## 12. Lo de hoy, y CapCut como editor aconsejado
+
+### 12.1 Por qué la sesión de hoy es una página nueva y no un módulo
+
+Los módulos llegan hasta el 16 y 17 de septiembre: no hay presentación para las
+sesiones de octubre. Así que la sección que explica lo de hoy había que
+escribirla, y tenía que calcularse sola, porque lo que a cada equipo le toca hoy
+depende de en qué nivel va y de qué le falta.
+
+Cada equipo tiene ahora su página `<slug>-hoy.html` con cuatro cosas, todas
+sacadas de los mismos datos que alimentan el resto del sitio:
+
+- Cuántos días faltan para la muestra, cuántas sesiones quedan y cuántas tareas
+  siguen sin evidencia.
+- Lo que tiene pendiente en su nivel actual, con la instrucción de cada tarea.
+- Lo que le falta en los demás niveles, por si hoy sobra tiempo.
+- Las guías que le sirven según su línea técnica.
+
+### 12.2 El botón
+
+Va dentro del mapa pegado arriba, al lado de las cuatro vistas, así que se ve
+desde las seis páginas de cada proyecto. Es el único elemento del mapa con
+relleno sólido, y toma el color de la línea técnica del equipo: eso basta para
+que se vea primero sin recurrir a un color de alarma.
+
+El contraste ya estaba cubierto por la auditoría, que verifica "texto sobre
+relleno" para las cuatro líneas. Medido: entre 6,62 y 8,95 a uno, muy por
+encima del mínimo de 4,5.
+
+### 12.3 CapCut pasa a ser el editor aconsejado
+
+Las guías de edición se habían escrito alrededor de DaVinci Resolve. CapCut es
+el que los equipos ya tienen: la ficha técnica del 11.2 nombra "App Stop Motion
+Studio (o CapCut v11.0)". Un editor instalado vale más que uno mejor que nadie
+abre.
+
+Cinco guías quedaron reescritas sobre CapCut, y se agregó la que faltaba:
+**montar el stop motion en CapCut**, que es el primer paso y no estaba en
+ninguna parte. Sin dejar las fotos a la misma duración, nada de lo que venga
+después cuadra.
+
+### 12.4 Lo que la guía dice que CapCut no hace
+
+CapCut no tiene un efecto que quite el parpadeo de forma automática. La guía lo
+dice con todas las letras, explica qué sí se puede hacer con Ajustar y
+fotogramas clave, cuánto cuesta hacerlo a mano, y cuándo conviene regrabar en
+vez de pelear con la edición. Deja DaVinci Resolve como alternativa solo para
+el caso en que de verdad haga falta corrección automática.
+
+Prometer en el material algo que el programa no hace es la forma más rápida de
+que un equipo pierda una tarde.
+
+El sitio pasa de 93 a 110 páginas.
