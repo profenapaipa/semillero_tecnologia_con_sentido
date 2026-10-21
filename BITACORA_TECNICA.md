@@ -962,3 +962,25 @@ son 41 MB y falta la aprobación del docente.
 **Sobre el aviso de tiempo agotado:** `auditar_js.py` agotó los 180 s una vez en
 la página de inicio y pasó a la segunda, con el equipo menos cargado. Si vuelve
 a pasar, repetirlo antes de investigar.
+
+### 13.7 El paso de importar el kit, reforzado
+
+Importar el kit era una sola diapositiva de la Guía 0 y no nombraba la carpeta de
+Drive donde está el archivo. Ahora son tres (diapositivas 7 a 9): conseguirlo
+(carpeta `H) 21 y 22 de octubre`, guardarlo en `C:\Unity\Kit`, no
+descomprimirlo), importarlo (con un esquema de la ventana de importación) y
+probar que quedó, con el letrero verde. La versión web tiene los mismos tres
+pasos, y la portada de la Guía 1 de cada equipo remite a esas diapositivas.
+
+El esquema de la ventana de importación **no es una captura real**: se intentó
+abrir el Editor con el diálogo para fotografiarlo, pero la ventana quedó detrás de
+otra aplicación y la captura por coordenadas sacó lo que había encima (la pantalla
+del docente). Se borró y no se repitió. Si se quiere una captura real, la tiene
+que tomar una persona con la ventana de Unity al frente.
+
+El importado en sí sí está comprobado: ambos paquetes se importaron en proyectos
+nuevos de 2019.4.38f1 y compilaron sin errores (13.5).
+
+**El aviso de `auditar.py`** sobre el color `#C59BFF` en `sitio.css` línea 2062
+es la auditoría leyendo un comentario del commit `779660e`, no un color en uso.
+Las fallas son cero.

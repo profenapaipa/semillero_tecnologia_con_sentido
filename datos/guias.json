@@ -671,7 +671,9 @@
      "Paso 2: crear el proyecto 2D en una carpeta segura",
      "Paso 3: las cinco zonas del editor",
      "Paso 4: conectar Visual Studio",
-     "Paso 5: importar el kit y hacer la prueba",
+     "Paso 5, 1 de 3: conseguir el kit en tu computador",
+     "Paso 5, 2 de 3: importar el kit en tu proyecto",
+     "Paso 5, 3 de 3: probar que quedó bien",
      "Si la consola se pone roja, léela así",
      "Antes de salir"
     ]
@@ -716,8 +718,18 @@
      "ojo": "VS Code con la extensión nueva de C# pide el SDK de .NET y está hecho para Unity 2021 en adelante. Con 2019.4 se queda sin sugerencias: ese fue el error de agosto."
     },
     {
-     "titulo": "Importa el kit y corre la escena de prueba",
-     "texto": "Assets, Import Package, Custom Package, elige el paquete de tu equipo y pulsa Import sin desmarcar nada. Luego abre KitEquipo10, Escenas, 00_PruebaDelKit, y dale Play.",
+     "titulo": "Consigue el kit y guárdalo fuera del proyecto",
+     "texto": "En Drive, abre la carpeta de tu equipo y entra a H) 21 y 22 de octubre. Descarga el archivo de tu juego con clic derecho, Descargar: KitEquipo10_Motricidad.unitypackage para el 10.1 (7,8 MB) o KitEquipo10_Ritmo.unitypackage para el 10.2 (7,5 MB). Crea la carpeta C:\\Unity\\Kit y guárdalo ahí, aparte de la carpeta del proyecto, y abre el proyecto desde Unity Hub.",
+     "ojo": "No lo descomprimas. Un .unitypackage no es un zip: Unity lo abre tal cual, y si lo abres con un descompresor ya no sirve para importar."
+    },
+    {
+     "titulo": "Impórtalo en tu proyecto",
+     "texto": "Con el proyecto abierto: Assets, Import Package, Custom Package. Elige el archivo en C:\\Unity\\Kit y pulsa Abrir. En la ventana Import Unity Package deja todo marcado y pulsa Import. Abajo a la derecha, un círculo gira mientras Unity importa y compila; cuando para, terminó. En Project, dentro de Assets, debe aparecer la carpeta KitEquipo10 con Comun, Escenas, Fino y Grueso en el 10.1, o Comun, Escenas y Ritmo en el 10.2.",
+     "ojo": "Si ya habías importado otro kit antes, importa este encima sin desmarcar nada: reemplaza al anterior. Si la consola se pone roja al terminar, casi siempre es la versión de Unity: revisa los pasos 1 y 2."
+    },
+    {
+     "titulo": "Prueba que quedó bien",
+     "texto": "En Project abre KitEquipo10, Escenas, haz doble clic en 00_PruebaDelKit y dale Play. En la ventana Game debe salir Kit listo en verde: la versión es la correcta, el kit se importó completo y no hay errores de compilación.",
      "ojo": "Si Windows pregunta por el Firewall, pulsa Cancelar: el kit no usa internet. Ese aviso frena el arranque hasta que alguien lo atiende."
     },
     {

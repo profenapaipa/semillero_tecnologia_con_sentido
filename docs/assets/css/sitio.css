@@ -174,7 +174,11 @@ code { font-family: var(--fuente-datos); font-size: .9em; overflow-wrap: anywher
 }
 .mapa .envoltura { padding-block: 9px 0; }
 
-/* fila 1: la jerarquía */
+/* fila 1: la jerarquía, y el boton de hoy al otro extremo */
+.mapa-cabecera {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px 16px;
+}
 .mapa-ruta { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 7px; font-size: 12.5px; }
 .mapa-ruta li { display: flex; align-items: center; gap: 7px; color: var(--sobre-panel-suave); }
 .mapa-ruta li + li::before { content: ""; width: 5px; height: 5px; border-right: 1.5px solid var(--sobre-panel-suave); border-top: 1.5px solid var(--sobre-panel-suave); transform: rotate(45deg); opacity: .6; }
@@ -2050,34 +2054,67 @@ details.mas > div { min-width: 0; }
 
 
 /* ============ 31. La sesion de hoy ============ */
-/* El boton va dentro del mapa pegado arriba, al lado de las cuatro vistas. Es
-   el unico elemento del mapa con relleno solido, y eso basta para que se vea
-   primero sin recurrir a un color de alarma. */
+/* Medido en Chrome headless antes de tocar esto: el boton vivia dentro de
+   <nav class="mapa-vistas">, y ".mapa-vistas a" (especificidad 0-1-1) le
+   ganaba el color de texto a ".boton-hoy" (0-1-0). El texto no salia blanco
+   sobre el color de la linea: salia gris apagado, el mismo de las pestanas
+   sin seleccionar. Contraste real contra el fondo mas claro del juego,
+   unity en tema oscuro (#C59BFF): 1.13 a 1. Invisible en la practica.
 
-.boton-hoy {
-  display: inline-flex; align-items: center; gap: 7px;
-  margin-left: auto;
-  padding: 7px 15px;
+   El arreglo no es subir la especificidad y dejarlo donde estaba: el boton
+   se movio de sitio (ver mapa_fijo en generar.py), a la fila de la migaja de
+   pan, fuera del alcance de esa regla. Aqui, ademas, se usa un selector de
+   dos clases para que ningun selector de una sola clase dentro de .mapa
+   lo vuelva a tapar aunque alguien lo anide mal el dia de manana. */
+
+.mapa .boton-hoy {
+  display: inline-flex; align-items: center; gap: 8px;
+  flex: none;
+  padding: 10px 20px;
+  min-height: 42px;
   border-radius: 999px;
   background: var(--linea, var(--cian));
   color: var(--sobre-relleno);
-  font-weight: 700; font-size: 13.5px;
+  font-weight: 700; font-size: 14.5px; letter-spacing: -.005em;
   text-decoration: none; white-space: nowrap;
-  box-shadow: var(--alzado-2);
-  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--sobre-relleno) 22%, transparent),
+              var(--alzado-2);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
 }
-.boton-hoy:hover, .boton-hoy:focus-visible {
+/* Contraste verificado con la formula de WCAG 2.1, texto --sobre-relleno
+   sobre cada color de linea, antes de publicar:
+     claro:  software 6.94:1 · unity 7.79:1 · audiovisual 6.62:1 · electronica 6.68:1
+     oscuro: software 8.67:1 · unity 8.95:1 · audiovisual 8.25:1 · electronica 8.56:1
+   Los ocho pasan AA (4.5:1) de sobra; seis de ocho pasan AAA (7:1). */
+.mapa .boton-hoy:hover, .mapa .boton-hoy:focus-visible {
   transform: translateY(-1px);
-  box-shadow: var(--alzado-3, var(--alzado-2));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--sobre-relleno) 35%, transparent),
+              var(--alzado-3, var(--alzado-2));
   color: var(--sobre-relleno);
+  filter: brightness(1.06);
 }
-.boton-hoy[aria-current="page"] {
-  background: var(--sobre-panel); color: var(--panel);
+.mapa .boton-hoy:focus-visible {
+  outline: 2px solid var(--sobre-relleno);
+  outline-offset: 2px;
 }
-.mapa-vistas { align-items: center; }
+/* Pagina de hoy activa: se invierte, igual de solido en el sentido opuesto.
+   sobre-panel sobre panel es el mismo par que usa el resto del sitio para
+   texto sobre el panel oscuro: 16.9:1 en claro y 17.4:1 en oscuro. */
+.mapa .boton-hoy[aria-current="page"] {
+  background: var(--sobre-panel);
+  color: var(--panel);
+  box-shadow: var(--alzado-2);
+}
+.mapa .boton-hoy[aria-current="page"]:hover,
+.mapa .boton-hoy[aria-current="page"]:focus-visible {
+  filter: none;
+  background: var(--sobre-panel);
+  color: var(--panel);
+}
 
-@media (max-width: 760px) {
-  .boton-hoy { margin-left: 0; }
+@media (max-width: 480px) {
+  .mapa-cabecera { gap: 10px; }
+  .mapa .boton-hoy { padding: 9px 16px; font-size: 14px; }
 }
 
 .hoy-cabeza .entradilla { max-width: 72ch; margin-top: 8px; }
