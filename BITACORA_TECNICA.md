@@ -1077,6 +1077,32 @@ y coordinación se juzgó en capturas, no con un jugador humano.
 paquete nuevo en él: se dejó el paquete listo y el docente lo importa. Sí se
 actualizó `Assets/Editor/MenuEquipo10.cs`, que Unity recompila solo.
 
+### 13.10 Proyecto listo para Play, repositorios y juego en la web
+
+**Proyecto del docente.** Con el Editor ya cerrado se importó la versión 2 (217 archivos
+idénticos al paquete, 11 escenas sin scripts perdidos) y se dejó listo para abrir y
+pulsar Play. Un proyecto recién abierto muestra una escena vacía; `MenuEquipo10.cs` ahora
+abre `00_Principal` sola, solo si no hay escena guardada y fuera de modo batch. Se comprobó
+abriendo el Editor de verdad sin escena guardada: el registro dice "se abrió el menú
+principal" y la barra de título muestra `00_Principal`. En 2019.4 la última escena se guarda en
+`Library/LastSceneManagerSetup.txt` (no `.json`), y el Editor la restauró aunque se borrara el
+archivo equivocado: conviene saberlo si se vuelve a probar. El Game view puede necesitar
+"Free Aspect" si la ventana es pequeña.
+
+**Tres repositorios, todos subidos.**
+- Proyecto de Unity: `Videojuego-motricidad-y-coordinacin` (41 archivos de arte y música
+  por Git LFS).
+- Copia de seguridad del kit: `game_motricidad_coordinacion`, sin `Library`, builds ni logs.
+  GitHub lo creó **público**; el contenido es original y no lleva nombres de estudiantes.
+- Portal: este repositorio.
+
+**Juego en la web.** El build unificado (21 MB, los tres juegos) está en
+`docs/juegos/equipo-10/` y responde en la dirección de GitHub Pages. No se enlazó desde las
+páginas de los equipos, porque eso pasa por `herramientas/generar.py`.
+
+**Drive.** Las cuatro guías y los dos paquetes de las carpetas 10.1 y 10.2 son idénticos,
+por suma de verificación, a los del kit y a los del portal.
+
 ## 14. El botón "Lo de hoy" era casi invisible, con dos causas distintas
 
 Fecha: 21 de octubre de 2026. Pedido: "el botón de 'Lo de hoy' sigue estando
