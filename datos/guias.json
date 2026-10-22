@@ -705,7 +705,7 @@
     {
      "titulo": "Crea un solo proyecto 2D en C:\\Unity",
      "texto": "Projects, New project, Editor Version 2019.4.38f1, plantilla 2D. Nómbralo Equipo10_Motricidad o Equipo10_Ritmo y guárdalo en C:\\Unity. La próxima vez ábrelo desde Projects: no crees otro.",
-     "ojo": "Nunca en OneDrive, ni en el Escritorio ni en Documentos si están sincronizados: OneDrive sube los archivos mientras Unity los escribe y el proyecto se daña."
+     "ojo": "Nunca en OneDrive, ni en el Escritorio ni en Documentos si están sincronizados: OneDrive sube los archivos mientras Unity los escribe y el proyecto se daña. Tampoco en una carpeta con tildes, como Educación: Unity Hub no puede crear el proyecto ahí."
     },
     {
      "titulo": "Repasa las cinco zonas del editor",

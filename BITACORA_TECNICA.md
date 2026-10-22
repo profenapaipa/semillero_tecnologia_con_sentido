@@ -981,6 +981,40 @@ que tomar una persona con la ventana de Unity al frente.
 El importado en sí sí está comprobado: ambos paquetes se importaron en proyectos
 nuevos de 2019.4.38f1 y compilaron sin errores (13.5).
 
+### 13.8 El proyecto de Unity del docente, montado
+
+Las carpetas cambiaron de lugar el 21 de octubre. Todo vive ahora en
+`Proyectos repositorios Github/Videojuego - Motricidad y coordinación/`:
+
+| Carpeta | Qué es |
+|---|---|
+| `Kit Unity Equipo 10/` | Lo mismo de antes: referencia, generadores, guías, paquetes. Sigue ignorada por git del portal |
+| `Videojuego motricidad y coordinación/` | El proyecto de Unity del docente. **Es un repositorio propio**, enlazado a `profenapaipa/Videojuego-motricidad-y-coordinacin`, sin commits todavía |
+
+**Lo que pasó al crearlo con Unity Hub:** el Hub lanzó Unity 2019.4.38f1 con la
+plantilla 3D y falló la extracción de la plantilla: `Can not open output file: El
+sistema no puede encontrar la ruta especificada`. La ruta tenía `Tecnología` y
+`coordinación`. Quedó la carpeta con solo los archivos de git y un Editor con la
+ventana "Error". Se cerró ese proceso y se creó el proyecto por línea de comandos
+(`-createProject`, sin plantilla), que sí funciona en esa ruta: ya había
+funcionado para la carpeta de referencia. Es el mismo origen del fallo de
+WebGL (13.6): las rutas con tilde. La Guía 0 ahora lo advierte en el paso 2.
+
+**Cómo quedó:** se importó `Solucion_Equipo10_SoloDocente.unitypackage` (kit y
+escenas de los dos juegos), se activó el modo 2D, y se agregó
+`Assets/Editor/MenuEquipo10.cs`. Los dos juegos tienen una escena llamada
+`01_Menu`, así que no caben a la vez en Build Settings; el menú **Equipo 10**
+prepara la lista para uno u otro. Trae además una verificación de scripts
+perdidos en las escenas.
+
+**Comprobado:** compila sin errores; los 152 archivos de `KitEquipo10` y `Solucion`
+son idénticos (hash) a los de la referencia que pasó los bancos de pruebas
+jugando; las 7 escenas se abren sin scripts perdidos. **No comprobado:** pulsar
+Play en el Editor con ventana; lo hará el docente.
+
+`publicar_guias.py` buscaba el portal contando dos niveles hacia arriba y dejó de
+funcionar con la carpeta movida; ahora sube hasta encontrar `datos/guias.json`.
+
 **El aviso de `auditar.py`** sobre el color `#C59BFF` en `sitio.css` línea 2062
 es la auditoría leyendo un comentario del commit `779660e`, no un color en uso.
 Las fallas son cero.
