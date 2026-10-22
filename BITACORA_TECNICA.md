@@ -1019,6 +1019,57 @@ funcionar con la carpeta movida; ahora sube hasta encontrar `datos/guias.json`.
 es la auditoría leyendo un comentario del commit `779660e`, no un color en uso.
 Las fallas son cero.
 
+### 13.9 Versión 2 de los juegos: estabilidad, sincronización, pausa y menús
+
+Petición del docente (21 de octubre): mejorar estabilidad, fluidez, sincronización
+con la música, botón de pausa, menús y categorización fina, gruesa y coordinación.
+Decisión de alcance: las mejoras internas y la pausa llegan a los kits de los
+estudiantes; el menú de categorías vive solo en el proyecto del docente.
+
+**Antes de tocar nada se midió** (jugador simulado en un ejecutable real, i5-12450H):
+
+| Qué | Antes | Después |
+|---|---|---|
+| Irregularidad del avance de la canción por cuadro | 10,0 ms | 0,7 a 0,9 ms |
+| Cuadros en que la canción no avanza | 67 % | 0 % |
+| Cuadro más lento (60 s de ritmo) | 87 a 143 ms | 17,6 ms |
+| Recolecciones de basura (60 s de ritmo) | 9 | 1 |
+
+Salvedad sobre la última fila: el 9 mezclaba basura del propio jugador simulado,
+que creaba listas y arreglos en cada cuadro. Se volvió libre de asignaciones y
+entonces dio 1, pero no se midió el juego viejo con el jugador limpio, así que no
+se puede atribuir esa mejora a la reserva de objetos. Lo cierto es el estado actual.
+
+**Sincronización.** `AudioSettings.dspTime` avanza a saltos de un buffer de audio
+(unos 20 ms) y se repetía en 2 de cada 3 cuadros; las notas se dibujaban con ese valor
+y se veían a tirones. `Conductor` lleva ahora un reloj propio que avanza suave y se
+corrige hacia `dspTime`. Se agregó compensación de latencia, que el jugador ajusta o
+calibra con un metrónomo: con +80 ms la posición se atrasa 79,5 ms.
+
+**Pausa.** `AudioListener.pause` detiene el reloj de audio (0,000 s en 1 s de pausa);
+`Time.timeScale = 0` solo NO (1,003 s, la música sigue). Por eso la pausa usa las dos.
+Pausar a mitad de la canción y reanudar no desfasa nada: 112 de 112 notas perfectas
+al final. El botón es un sprite del mundo, porque con el mouse capturado los `Button`
+del Canvas no responden. Se encontró y corrigió que se encimaba con el puntaje del
+ritmo, y que la categoría quedaba guardada de la partida anterior.
+
+**Menús.** Tres categorías con color propio (fina violeta, gruesa verde, coordinación
+cian), récords por mano y por dificultad, ajustes que se guardan, dificultad Fácil,
+Normal y Difícil, calibración, efectos de sonido originales y una pantalla final que
+compara con la otra mano. Las maquetas están en `maquetas/`.
+
+**Pruebas del jugador simulado:** 23 en el menú unificado, 17 en motricidad y 15 en
+ritmo, todas en verde. La calibración con toques a 70 ms de retraso midió 74 ms.
+
+**No comprobado:** pausar con la tecla Escape real y la pausa por pérdida de foco
+(el banco las invoca por código); la captura del mouse en el navegador (ver 13.6);
+cómo suenan los efectos y las canciones. El esquema de las páginas de motricidad
+y coordinación se juzgó en capturas, no con un jugador humano.
+
+**El proyecto del docente** tenía el Editor abierto, así que no se importó el
+paquete nuevo en él: se dejó el paquete listo y el docente lo importa. Sí se
+actualizó `Assets/Editor/MenuEquipo10.cs`, que Unity recompila solo.
+
 ## 14. El botón "Lo de hoy" era casi invisible, con dos causas distintas
 
 Fecha: 21 de octubre de 2026. Pedido: "el botón de 'Lo de hoy' sigue estando

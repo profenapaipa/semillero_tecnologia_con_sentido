@@ -803,6 +803,7 @@
      "Escena 12_Runner, 1 de 2: la música manda",
      "Escena 12_Runner, 2 de 2: personaje y obstáculos",
      "Escena 20_Grueso: la zona que se achica",
+     "Un paso que se repite: agrega la pausa a cada escena",
      "Build Settings: la lista que conecta las escenas",
      "Los datos que deja cada partida",
      "Si algo falla, busca aquí primero",
@@ -853,6 +854,11 @@
      "ojo": "Salirse después de haber entrado desvanece el mapa. Si se desvanece del todo, la partida termina."
     },
     {
+     "titulo": "Agrega la pausa a cada escena de juego",
+     "texto": "Arrastra el prefab Pausa (KitEquipo10, Comun, Prefabs) a 10_Colorear, 11_Camino, 12_Runner y 20_Grueso. En el Inspector escribe Nombre Del Juego y elige la Categoria: Fina para colorear, camino y runner, Gruesa para la zona. En el runner marca Agregar Genero y en el grueso Agregar Mundo. El prefab ya trae su botón, su menú, la cuenta atrás y los ajustes: no hay nada que conectar.",
+     "ojo": "El botón de pausa es un sprite del mundo y no un Button del Canvas, porque con el mouse capturado los botones del Canvas no responden. Esc pausa y continúa; al continuar hay una cuenta atrás de 3 segundos."
+    },
+    {
      "titulo": "Build Settings y la prueba completa",
      "texto": "File, Build Settings, y arrastra las cinco escenas con 01_Menu arriba. Luego juega desde el menú los cuatro caminos, con la mano derecha y con la izquierda.",
      "codigo": "Scene '12_Runner' couldn't be loaded because it has not been added to the build settings"
@@ -868,6 +874,7 @@
     "Colorear pinta el interior, cambia de color y de personaje, y Listo abre el runner con el personaje pintado.",
     "El runner suena, lanza obstáculos al ritmo y termina con la pantalla final.",
     "El camino se completa y la zona del grueso sube de escalón hasta ganar.",
+    "Esc abre la pausa en cada juego, detiene todo, y Continuar vuelve con una cuenta atrás de 3 segundos.",
     "Hay un CSV por juego en AppData, LocalLow, y ya está copiado a la carpeta del equipo."
    ],
    "recursos": [
@@ -916,6 +923,7 @@
      "Escena 02_Ritmo, 2 de 4: seis carriles y la línea de golpe",
      "Escena 02_Ritmo, 3 de 4: el generador de notas",
      "Escena 02_Ritmo, 4 de 4: el juez y los textos",
+     "La pausa: un paso más en la escena 02_Ritmo",
      "Lo difícil: notas sostenidas y acordes",
      "Reto: escribe tu propia partitura",
      "Los datos y los errores más comunes",
@@ -964,6 +972,11 @@
      "codigo": "y = lineaDeGolpe + (pulsoNota - pulsoActual) * unidadesPorPulso"
     },
     {
+     "titulo": "Agrega la pausa a la escena",
+     "texto": "Arrastra el prefab Pausa (KitEquipo10, Comun, Prefabs) a 02_Ritmo. En Nombre Del Juego escribe Juego rítmico, en Categoria elige Coordinacion y marca Agregar Genero. Dale Play y pulsa Esc a mitad de la canción: la música y las notas se detienen juntas, y al continuar vuelven tras una cuenta atrás, sin desfase.",
+     "ojo": "La pausa usa AudioListener.pause y no solo el tiempo del juego: con el tiempo detenido la música seguiría sonando (el reloj de audio avanzó un segundo entero en un segundo de pausa), y con AudioListener.pause se queda quieto."
+    },
+    {
      "titulo": "Sostenidas y acordes: donde está la coordinación",
      "texto": "En la sección 3 una mano sostiene una tecla mientras la otra hace clic: independencia de manos. En la sección 4, tecla y clic van al mismo tiempo: sincronización. Perfecto es hasta 50 ms del pulso; Bien, hasta 110 ms."
     },
@@ -978,6 +991,7 @@
     "Las tres canciones suenan desde el menú y cada una trae su fondo y su partitura.",
     "Cada nota tocada a tiempo dice Perfecto o Bien, y las sostenidas se cuentan al soltar al final.",
     "Al terminar la canción aparece la pantalla con precisión, error en milisegundos y combo.",
+    "Esc pausa a mitad de la canción: la música y las notas se detienen juntas y vuelven sin desfase tras la cuenta atrás.",
     "resultados_Ritmo.csv está en AppData, LocalLow, y copiado a la carpeta del equipo."
    ],
    "recursos": [
