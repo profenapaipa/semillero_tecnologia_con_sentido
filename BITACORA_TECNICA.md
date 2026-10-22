@@ -1061,9 +1061,16 @@ compara con la otra mano. Las maquetas están en `maquetas/`.
 **Pruebas del jugador simulado:** 23 en el menú unificado, 17 en motricidad y 15 en
 ritmo, todas en verde. La calibración con toques a 70 ms de retraso midió 74 ms.
 
-**No comprobado:** pausar con la tecla Escape real y la pausa por pérdida de foco
-(el banco las invoca por código); la captura del mouse en el navegador (ver 13.6);
-cómo suenan los efectos y las canciones. El esquema de las páginas de motricidad
+**WebGL.** Las tres exportaciones (unificado, motricidad y ritmo) salieron sin errores,
+con lo que también compila la parte del código de la pausa que solo existe en el
+navegador. En Chrome, con clics y la tecla Escape REAL, el menú unificado recorrió:
+menú principal, página de motricidad fina, Jugar Camino, Escape abre la pausa, Escape
+otra vez da la cuenta atrás de 3 s, y el juego sigue con el botón de pausa de vuelta.
+Sin excepciones propias del juego.
+
+**No comprobado:** la pausa por pérdida de foco de la ventana y Escape en el ejecutable
+de Windows (el banco las invoca por código); la captura del mouse en el navegador (ver
+13.6); cómo suenan los efectos y las canciones. El esquema de las páginas de motricidad
 y coordinación se juzgó en capturas, no con un jugador humano.
 
 **El proyecto del docente** tenía el Editor abierto, así que no se importó el
