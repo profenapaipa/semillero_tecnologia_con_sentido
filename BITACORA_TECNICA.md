@@ -1286,3 +1286,66 @@ versión anterior, donde la medición sí encuentra la fila repetida.
 borrador en WebGL que publicó la sesión de Unity (commit `71cf3ae`). Es una
 plantilla de Unity que no usa las hojas del sitio. Conviene excluir
 `docs/juegos/` de las reglas de página o completar su cabecera. No se tocó.
+
+
+## 16. Segunda etapa: una tarea por pestaña
+
+Néstor pidió bajar la saturación del sitio: que la información no se repita
+entre pestañas y que el material, la ruta, lo pendiente y lo publicado se
+encuentren fácil. Antes de tocar nada se midió (equipos 11.2 y 1, las seis
+vistas de cada uno) y él escogió entre opciones concretas.
+
+### 16.1 Lo que se midió antes
+
+- 137 frases idénticas en las seis vistas, unas 350 palabras que se leían
+  seis veces: casi todas del panel derecho y del índice izquierdo.
+- El nivel actual aparecía en 14 lugares; "lo que sigue", en 9; una misma
+  tarea pendiente, en 9; los puntos del equipo, en 6.
+- En Resumen, Desarrollo y Artículo la columna central era apenas el 53 a
+  60 % de las palabras de la página.
+- Las cinco vistas previas en vivo del portal lo dejaban más de 120 s
+  cargando.
+
+### 16.2 Lo que se decidió y cómo quedó
+
+| Decisión | Implementación |
+|---|---|
+| Quitar el panel derecho | Fuera `panel_derecho()`. La rejilla `.con-lateral` pasa a dos columnas. Puntos y avance por frente viven una sola vez, en Resumen. |
+| Panel izquierdo = índice de la página | `con_indice()` arma el índice después de generar la página, leyendo sus `<h2>` y los módulos marcados con `data-indice`; así nunca se desincroniza. `sitio.js` marca la sección a la vista. |
+| Resumen responde "cómo vamos" | Puntos, avance por frente (cada barra enlaza a su vista), revisión del docente con botón "Ver qué hacer hoy", y publicación. Fuera: nivel actual, "lo que sigue", las tarjetas de las vistas, el camino en zigzag (ocupaba ~900 px para decir lo que ya dicen los siete puntos de la barra fija) y "Esta semana". |
+| Lo de hoy responde "qué hacer" | Solo tareas. Cada pendiente trae su cómo y, debajo, la guía que la resuelve (`guias_de_tarea()`: hitos de `guias.json` más `GUIAS_TAREA` para antecedentes y artículo). Fuera la rejilla de guías y la revisión, que pasó a Resumen con un enlace. Si "Lo primero de hoy" ya lista las tareas del nivel, no se pinta la caja del nivel. |
+| Módulos por equipo, plegados | Cada sesión es un `<details>`: la cabecera es el `<summary>` con letra, título, objetivo en una línea y avance. Solo la sesión donde va el equipo viene abierta, con la marca "vas aquí". Un enlace a `#mod-X` abre el módulo, y el carrusel se recalcula al abrir cualquiera de los `<details>` que lo contienen. |
+| Captura fija y botón | `docs/assets/capturas/<equipo>.webp`, 960×600, de 7 a 32 KB. Tomadas con Chrome sin ventana el 26 de octubre. |
+
+Además: "De dónde sale este estado" queda solo en La ruta (estaba en cuatro
+vistas), y los rótulos "Vista 2 de 5", "Vista 1 de 3"... se cambiaron por
+lo que es cada vista, porque ya no cuadraban con las seis pestañas.
+
+### 16.3 Un error viejo que apareció de paso
+
+El resaltado del índice del portal buscaba `id="indice-portal"`, pero ese id
+lo tenía un `<span>` vacío y no el `<nav>`: nunca encontró un enlace que
+marcar. Ahora el índice se marca con `data-indice`, en el portal y en las
+páginas de equipo.
+
+### 16.4 Lo que se midió después
+
+Mismos equipos, misma herramienta:
+
+| | Antes | Después |
+|---|---|---|
+| Frases idénticas en las seis vistas | 137 (~350 palabras) | 87 (213 palabras: barra fija y pie) |
+| "Lo que sigue" | 9 lugares | 2 |
+| Una misma tarea pendiente | 9 lugares | 2 (La ruta y Lo de hoy) |
+| Puntos del equipo | 6 lugares | 1 |
+| Columna central en Resumen | 53 % | 41 a 51 %, sobre la mitad de palabras |
+
+Las cuatro auditorías pasan igual que antes; las únicas fallas siguen siendo
+las seis de `docs/juegos/equipo-10/index.html` (15.6).
+
+### 16.5 Pendiente
+
+La web de la iguana (equipo 1) no terminó de cargar en Chrome sin ventana
+en tres intentos, así que no tiene captura: su tarjeta muestra el botón
+"Abrir" sin imagen. Para agregarla basta guardar
+`docs/assets/capturas/equipo-1.webp` (960×600) y regenerar.

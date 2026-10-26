@@ -60,7 +60,10 @@
 
 
   /* ---- 1. Dónde estoy: resalta en el mapa la sección visible ---- */
-  var mapa = document.getElementById('indice-portal') ||
+  /* Antes se buscaba por id="indice-portal", pero ese id lo tenia un <span>
+     vacio y no el <nav>: el resaltado no encontraba ningun enlace. Ahora el
+     indice se marca con data-indice, en el portal y en cada pagina de equipo. */
+  var mapa = document.querySelector('[data-indice]') ||
              document.getElementById('mapa-secciones');
   if (mapa && 'IntersectionObserver' in window) {
     var enlaces = {};
@@ -71,23 +74,46 @@
     var visibles = {};
     var observador = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (ent) {
-        visibles[ent.target.id] = ent.isIntersecting ? ent.intersectionRatio : 0;
+        visibles[ent.target.__ancla] = ent.isIntersecting ? ent.intersectionRatio : 0;
       });
-      // Gana la sección con más superficie a la vista.
+      // Gana la sección con más superficie a la vista. Si ninguna está en la
+      // franja, se queda marcada la última: el índice nunca queda en blanco.
       var mejor = null, mayor = 0;
       Object.keys(visibles).forEach(function (id) {
         if (visibles[id] > mayor) { mayor = visibles[id]; mejor = id; }
       });
+      if (!mejor) { return; }
       Object.keys(enlaces).forEach(function (id) {
         enlaces[id].classList.toggle('activa', id === mejor);
       });
     }, { rootMargin: '-180px 0px -55% 0px', threshold: [0, 0.15, 0.4, 0.75] });
 
+    // En las paginas de equipo el ancla es un titulo <h2>, que mide una
+    // linea: se observa la seccion entera que lo contiene. Un modulo es su
+    // propio <li>. Si dos anclas caen en la misma seccion, gana la primera.
     Object.keys(enlaces).forEach(function (id) {
-      var sec = document.getElementById(id);
-      if (sec) { observador.observe(sec); }
+      var ancla = document.getElementById(id);
+      if (!ancla) { return; }
+      var caja = ancla.matches('section, li') ? ancla : (ancla.closest('section, li') || ancla);
+      if (caja.__ancla) { return; }
+      caja.__ancla = id;
+      observador.observe(caja);
     });
   }
+
+  /* Un enlace a #mod-C (desde el indice o desde otra pagina) tiene que
+     mostrar el modulo C aunque este plegado: se abre su <details>. */
+  function abrirDestino() {
+    var id = decodeURIComponent((location.hash || '').slice(1));
+    var el = id && document.getElementById(id);
+    if (!el) { return; }
+    var d = el.matches('details') ? el : el.querySelector('details.modulo-plegable');
+    for (var x = d || el.closest('details'); x; x = x.parentElement && x.parentElement.closest('details')) {
+      x.open = true;
+    }
+  }
+  abrirDestino();
+  window.addEventListener('hashchange', abrirDestino);
 
 
   /* ---- 3. Buscador de proyectos ---- */
@@ -262,11 +288,13 @@
         },
         thumbs: swTira ? { swiper: swTira } : undefined
       });
-      // Y al desplegar el bloque se recalcula, por si acaso.
-      var plegable = caja.closest('details');
-      if (plegable) {
-        plegable.addEventListener('toggle', function () {
-          if (plegable.open) {
+      // Y al desplegar el bloque se recalcula. Son todos los <details> de
+      // arriba, no solo el mas cercano: el carrusel vive dentro del de las
+      // diapositivas, y este dentro del modulo plegado.
+      for (var plegable = caja.closest('details'); plegable;
+           plegable = plegable.parentElement && plegable.parentElement.closest('details')) {
+        plegable.addEventListener('toggle', function (ev) {
+          if (ev.target.open) {
             sw.update();
             if (swTira) { swTira.update(); }
           }
