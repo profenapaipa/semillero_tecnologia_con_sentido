@@ -1349,3 +1349,15 @@ La web de la iguana (equipo 1) no terminó de cargar en Chrome sin ventana
 en tres intentos, así que no tiene captura: su tarjeta muestra el botón
 "Abrir" sin imagen. Para agregarla basta guardar
 `docs/assets/capturas/equipo-1.webp` (960×600) y regenerar.
+
+### 16.6 Desborde en celular
+
+Medido con una sonda en Chrome (ventana mínima de ~489 px): solo el portal
+desbordaba, 21 px, por las tarjetas de "Proyectos hermanos". Causa: las
+rejillas `auto-fit` con mínimo fijo (`minmax(300px, 1fr)`) no caben cuando la
+columna mide menos que ese mínimo. Las 11 reglas pasaron a
+`minmax(min(Npx, 100%), 1fr)`. Después de eso, `scrollWidth` es igual al ancho
+de la ventana en el portal, un resumen, Lo de hoy, Módulos y las guías. Lo
+que la sonda aún lista es esperado: el enlace de saltar al contenido, que va
+fuera de pantalla a propósito, y las diapositivas del carrusel, que Swiper
+recorta.
