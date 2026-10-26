@@ -137,10 +137,18 @@ def medir(chrome, rel):
     """Abre una copia de la página con la sonda puesta y devuelve lo medido."""
     tmp = tempfile.mkdtemp(prefix='audjs_')
     try:
-        shutil.copytree(DOCS, os.path.join(tmp, 'docs'))
+        # docs/juegos pesa decenas de megas y ninguna pagina auditada lo usa.
+        shutil.copytree(DOCS, os.path.join(tmp, 'docs'),
+                        ignore=shutil.ignore_patterns('juegos'))
         pg = os.path.join(tmp, 'docs', rel)
         with io.open(pg, encoding='utf-8') as fh:
             h = fh.read()
+        # Las vistas previas en vivo de los proyectos publicados son sitios
+        # externos: su tiempo de carga depende de la red del dia, no de este
+        # codigo. Medido el 26 de octubre: sin ellas el portal carga en 4,7 s;
+        # con ellas pasa de 120 s y la auditoria se agotaba. Aqui se mide el
+        # JavaScript propio del sitio, asi que se quitan de la copia.
+        h = re.sub(r'<iframe[^>]*src="https?://[^"]*"[^>]*>\s*</iframe>', '', h)
         with io.open(pg, 'w', encoding='utf-8') as fh:
             fh.write(h.replace('</body>', SONDA + '</body>'))
         url = 'file:///' + pg.replace(os.sep, '/')

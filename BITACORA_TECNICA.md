@@ -1207,3 +1207,82 @@ sin tocar las otras tres líneas, que seguían midiendo bien. Restaurado el
 arreglo, vuelve a pasar limpio.
 
 Las cuatro auditorías del repositorio pasan limpias tras el cambio.
+
+## 15. Revisión del 26 de octubre: lo que la búsqueda anterior no veía
+
+Pedido de Néstor: revisar el historial de versiones de los documentos de la
+semana, porque había cambios hechos dentro de los archivos que no se
+detectaron, y agregar un panel de revisión con realimentación por equipo.
+
+### 15.1 Por qué se escaparon cosas
+
+Dos causas, las dos comprobadas:
+
+1. **La fecha de modificación engaña en los archivos subidos.** Un archivo que
+   se sube a Drive puede conservar como fecha de modificación la del original.
+   Los bocetos de DiverSeña se subieron el 14 de octubre pero figuran como
+   modificados semanas antes, así que una búsqueda por modificación los dejaba
+   por fuera. La que los delata es la fecha de **creación**.
+2. **El conector de Drive no lista el historial de versiones.** Los metadatos
+   no traen la revisión actual ni quién modificó por última vez. La descarga sí
+   acepta un identificador de revisión, pero sin la lista no hay cómo pedirlo.
+   El sustituto: leer completo cada documento y compararlo con lo que el sitio
+   registró en la revisión anterior.
+
+Método de esta vez: archivos **creados** desde el 12 de octubre (105) más
+documentos viejos **modificados** desde el 21 (8). Se descartaron las copias
+del docente y los kits de Unity; quedaron 23 documentos de estudiantes, leídos
+completos. Los repositorios no tuvieron commits desde el 21.
+
+### 15.2 Lo que cambió
+
+- **Equipo 6:** los bocetos (`subcarpetas/04_Desarrollo/2026-10-14_bocetos.jpg.png`).
+  Se descargó la imagen y se revisó: tres viñetas, con la pantalla de inicio,
+  cómo la cámara reconoce la mano y el caso de error.
+- **Equipo 2.1:** artículo nuevo, con título, autores, problema, antecedentes y
+  pregunta. La propuesta se editó, pero sigue sin las cinco preguntas.
+- **Equipo 10.1:** propuesta y acuerdos, los dos completos y editados el 26.
+  Cierran el nivel 1.
+- **Equipo 11.2:** propuesta completa (cierra el nivel 1), las cinco casillas
+  de su sección marcadas (primer equipo en hacerlo) y versiones v2 y v3 del
+  artículo.
+
+### 15.3 Las referencias, comprobadas una por una
+
+El 11.2 hizo un esfuerzo real por corregir sus referencias, pero quedaron tres
+listas distintas en tres documentos:
+
+| Documento | Resultado |
+|---|---|
+| Artículo v3 | Inventada: tres DOI no existen y el cuarto lleva a otro artículo (Lee y Park, 2021) |
+| Sección 5 aparte y matriz de antecedentes | Gonzalez, Minchala y Langer (2025) **confirmada** en Crossref |
+| La misma, fuente de Popayán | El PDF existe, pero es otro trabajo: Muelas Aranda (2023), sobre modelado en arcilla |
+| La misma, fuente de Manizales | No se pudo comprobar: el servidor bloquea robots |
+| La misma, MEN 2020 y Unesco 2021 | Sin enlace, no verificables |
+
+Por eso `ante` y las secciones 1.2 y 5.2 siguen sin marcarse.
+
+### 15.4 Criterio de chequeo
+
+Una tarea o sección cuenta cuando tiene contenido propio del equipo que
+responde lo pedido. Lo que le falte de calidad va a la realimentación, no al
+chequeo. La excepción es lo inventado.
+
+### 15.5 Panel "Revisión del docente"
+
+En la página "Lo de hoy" de cada equipo, arriba: lo que se revisó, el
+veredicto (quedó bien, hay que ajustar o pendiente, con color, símbolo y
+palabra a la vez) y una línea de lo que sigue. El texto sale del campo
+`revision` de cada equipo en `semillero.json`: es una lectura humana, no un
+cálculo, y si falta no se rellena con frases genéricas. Las 16 escritas.
+
+De paso: cuando aparecía "Lo primero de hoy", la lista de tareas del nivel
+salía dos veces en la misma página. Ahora sale una vez. Comprobado contra la
+versión anterior, donde la medición sí encuentra la fila repetida.
+
+### 15.6 Pendiente que no es de esta sesión
+
+`auditar.py` marca seis fallas en `docs/juegos/equipo-10/index.html`, el
+borrador en WebGL que publicó la sesión de Unity (commit `71cf3ae`). Es una
+plantilla de Unity que no usa las hojas del sitio. Conviene excluir
+`docs/juegos/` de las reglas de página o completar su cabecera. No se tocó.

@@ -2184,3 +2184,54 @@ details.mas > div { min-width: 0; }
 .destrabar h2 { font-size: var(--t-titulo3, 22px); letter-spacing: -.02em; }
 .destrabar .entradilla { margin-top: 8px; max-width: 72ch; color: var(--tinta-suave); }
 .destrabar .tareas { margin-top: 14px; }
+
+
+/* ============ 32. Revision del docente ============ */
+/* Lo que se reviso, como les fue y hacia donde seguir. Cada item lleva color,
+   simbolo y palabra a la vez: el color nunca va solo en este sitio. */
+
+.revision {
+  padding: 22px 24px;
+  background: var(--superficie);
+  border: 1px solid var(--filete);
+  border-radius: var(--radio);
+  box-shadow: var(--alzado-1);
+}
+.revision-cab .rotulo { display: inline-flex; align-items: center; gap: 7px; color: var(--cian); }
+.revision-cab h2 { font-size: var(--t-titulo3, 22px); letter-spacing: -.02em; margin-top: 6px; }
+.revision-items { list-style: none; display: grid; gap: 10px; margin-top: 16px; }
+.revision-items li {
+  display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start;
+  padding: 12px 14px; border-radius: var(--radio-chico);
+  border-left: 3px solid var(--gris-fill);
+  background: color-mix(in srgb, var(--gris-fill) 7%, var(--superficie));
+}
+.revision-items .marca {
+  display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--gris-fill); color: var(--sobre-relleno);
+}
+.revision-items .revision-linea { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.revision-items .veredicto {
+  font-family: var(--fuente-datos); font-size: 11.5px; font-weight: 600;
+  letter-spacing: .04em; text-transform: uppercase; color: var(--gris-texto);
+}
+.revision-items p { color: var(--tinta-suave); margin-top: 3px; font-size: 14.5px; max-width: 78ch; }
+
+.revision-items li.verde { border-left-color: var(--verde-fill);
+  background: color-mix(in srgb, var(--verde-fill) 7%, var(--superficie)); }
+.revision-items li.verde .marca { background: var(--verde-fill); }
+.revision-items li.verde .veredicto { color: var(--verde-texto); }
+
+.revision-items li.ambar { border-left-color: var(--ambar-fill);
+  background: color-mix(in srgb, var(--ambar-fill) 8%, var(--superficie)); }
+.revision-items li.ambar .marca { background: var(--ambar-fill); }
+.revision-items li.ambar .veredicto { color: var(--ambar-texto); }
+
+.revision-sigue {
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--filete);
+  max-width: 78ch;
+}
+.revision-sigue .titulo {
+  display: inline-flex; align-items: center; gap: 6px; margin-right: 8px;
+  font-weight: 700; color: var(--cian);
+}

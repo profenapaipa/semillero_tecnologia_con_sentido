@@ -4,9 +4,8 @@
     "docente": "Néstor Andrés Paipa",
     "colegio": "Bogotá",
     "semestre": "2026-II",
-    "revisado": "2026-10-21",
+    "revisado": "2026-10-26",
     "sesionesRestantes": [
-      "miércoles 21 y jueves 22 de octubre",
       "miércoles 28 y jueves 29 de octubre"
     ],
     "fuentes": [
@@ -19,7 +18,7 @@
     "_nota_estudiantes": "El sitio es público y no hay autorización para publicar nombres de estudiantes. Cada uno se identifica con un código fijo (E01, E02...). La equivalencia con el nombre es privada y no se sube a ningún repositorio.",
     "_nota_colegio": "El semillero es un proyecto personal de Néstor Andrés Paipa. El sitio no lleva credito ni marca de ninguna institución.",
     "muestra": "2026-10-29",
-    "sesionHoy": "Penúltima sesión antes de la muestra. Hoy se cierra lo que quedó a medias y se deja listo lo que haya que mostrar el 29.",
+    "sesionHoy": "Queda una sola sesión del semillero, el 28 y 29 de octubre, y el 29 es la muestra. Lo que se haga desde hoy es para dejar listo lo que se va a mostrar.",
     "entregaOficial": "2026-11-13",
     "_nota_fechas": "Dos fechas distintas y las dos ciertas: la muestra del 29 de octubre, que es cuando se enseña lo construido, y la entrega oficial del 13 de noviembre. Las sesiones del semillero van hasta el 30 de octubre; después el trabajo sigue en clase."
   },
@@ -742,6 +741,27 @@
         "url": "https://profenapaipa.github.io/lawebdelaiguana/",
         "repo": "https://github.com/profenapaipa/lawebdelaiguana",
         "nota": "Publicado en GitHub Pages desde la rama main, carpeta /docs. Fue el primero del semillero en estar en internet."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Sitio y desarrollo técnico",
+            "veredicto": "bien",
+            "porque": "Los seis hitos técnicos tienen evidencia y el sitio está publicado en GitHub Pages."
+          },
+          {
+            "que": "Antecedentes",
+            "veredicto": "bien",
+            "porque": "Cinco artículos en PDF en 01_Antecedentes."
+          },
+          {
+            "que": "Artículo",
+            "veredicto": "pendiente",
+            "porque": "Sigue en blanco. Sin la pregunta escrita en la sección 1.3, la ruta no pasa del nivel 2."
+          }
+        ],
+        "siguiente": "Escriban 1.1 y 1.3 en el artículo copiando de la propuesta, que ya la tienen."
       }
     },
     {
@@ -757,7 +777,7 @@
       "estado": {
         "prop": [
           false,
-          "Propuesta de E01 y E02: nombres y correos vacíos, solo un enlace a un tutorial de Unity"
+          "Propuesta Deivyd y Valeria, editada el 21 de octubre: tiene los nombres, un correo y un enlace a un tutorial de Unity, pero no las cinco preguntas"
         ],
         "acue": [
           true,
@@ -776,8 +796,8 @@
           "Cronograma_tareas_2026-II.xlsx entregado"
         ],
         "preg": [
-          false,
-          "Articulo_base.docx idéntico a la plantilla"
+          true,
+          "Articulo_base en Google Docs, del 21 de octubre, sección 1.3: la pregunta y el propósito de darle una cara al Filosofartec"
         ],
         "bocg": [
           false,
@@ -840,10 +860,36 @@
           "No existe Articulo_base_v2.docx"
         ]
       },
-      "articuloEstado": {},
+      "articuloEstado": {
+        "tit": true,
+        "1.1": true,
+        "1.2": true,
+        "1.3": true
+      },
       "publicacion": {
         "estado": "no aplica",
         "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Artículo",
+            "veredicto": "bien",
+            "porque": "El 21 escribieron título, autores, problema, antecedentes y pregunta. En la tabla pusieron \"Equipo 1\": son el 2.1."
+          },
+          {
+            "que": "Antecedentes del artículo",
+            "veredicto": "ajustar",
+            "porque": "Cuentan sus referentes de diseño, y está bien que estén. Para que sea antecedente, sumen al menos un trabajo con autor y año."
+          },
+          {
+            "que": "Propuesta",
+            "veredicto": "ajustar",
+            "porque": "Tiene los nombres y un enlace a un tutorial, pero no las cinco preguntas. Es lo único que tiene la ruta en el nivel 1."
+          }
+        ],
+        "siguiente": "Respondan las cinco preguntas de la propuesta: pueden reutilizar lo que ya escribieron en 1.1 y 1.3."
       }
     },
     {
@@ -948,6 +994,22 @@
       "publicacion": {
         "estado": "no aplica",
         "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Plano de prueba",
+            "veredicto": "bien",
+            "porque": "Hay un plano grabado para revisar luz y sonido."
+          },
+          {
+            "que": "Propuesta y acuerdos",
+            "veredicto": "pendiente",
+            "porque": "Son las dos tareas de agosto que tienen la ruta en el nivel 1. Trabajando en solitario, el formato de acuerdos se llena repartiendo por semanas."
+          }
+        ],
+        "siguiente": "Responde las cinco preguntas de la propuesta y llena el formato de acuerdos."
       }
     },
     {
@@ -1057,6 +1119,27 @@
         "url": "https://profenapaipa.github.io/Kinesis/",
         "repo": "https://github.com/profenapaipa/Kinesis",
         "nota": "El proyecto se llamó antes Andamio y su repositorio, planeacion-inclusiva-piar; hoy los dos se llaman Kinesis. Lo publicado en GitHub Pages es una demostración navegable con datos ficticios: la aplicación completa necesita base de datos, y eso Pages no lo sirve."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Desarrollo",
+            "veredicto": "bien",
+            "porque": "Trece commits y una demostración publicada, con los datos ficticios declarados en la propia página."
+          },
+          {
+            "que": "Acuerdos",
+            "veredicto": "pendiente",
+            "porque": "El formato casi no tiene contenido propio. Es lo que deja la ruta en el nivel 1 aunque el desarrollo esté completo."
+          },
+          {
+            "que": "Artículo",
+            "veredicto": "pendiente",
+            "porque": "Sigue en blanco."
+          }
+        ],
+        "siguiente": "Llenen el formato de acuerdos y empiecen el artículo por 3.1 a 3.3, que salen de lo que ya construyeron."
       }
     },
     {
@@ -1161,6 +1244,22 @@
       "publicacion": {
         "estado": "no aplica",
         "nota": "La línea de electrónica no se publica como sitio web: el resultado es el montaje funcionando, y se documenta aquí con video y fotos."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Circuito",
+            "veredicto": "bien",
+            "porque": "Componentes identificados y circuito dibujado."
+          },
+          {
+            "que": "Propuesta",
+            "veredicto": "pendiente",
+            "porque": "Es la única tarea que tiene la ruta en el nivel 1."
+          }
+        ],
+        "siguiente": "Respondan la propuesta y hagan la tabla de pines, que es el siguiente hito."
       }
     },
     {
@@ -1265,6 +1364,22 @@
         "estado": "sin publicar",
         "repo": "https://github.com/profenapaipa/englishroulette",
         "nota": "Es una aplicación de escritorio en Python, no un sitio web: su entregable no es GitHub Pages sino un ejecutable con sus instrucciones de uso. El repositorio ya es público."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Desarrollo",
+            "veredicto": "bien",
+            "porque": "Aplicación de escritorio con modo doble, niveles e identidad visual, en un repositorio público."
+          },
+          {
+            "que": "Acuerdos y necesidades",
+            "veredicto": "pendiente",
+            "porque": "Los dos formatos de agosto tienen la ruta en el nivel 1."
+          }
+        ],
+        "siguiente": "Llena los dos formatos. Para publicar, tu entregable es un ejecutable con instrucciones de uso, no una página web."
       }
     },
     {
@@ -1312,8 +1427,8 @@
           "Articulo_base.docx: 101 caracteres sobre la plantilla, está en blanco"
         ],
         "bocg": [
-          false,
-          "No hay imagen de boceto en la carpeta"
+          true,
+          "04_Desarrollo/2026-10-14_bocetos.jpg.png: tres viñetas, la pantalla de inicio, cómo la cámara reconoce la mano y el caso de error con \"quizás quisiste decir\""
         ],
         "bocr": [
           false,
@@ -1374,6 +1489,27 @@
         "url": "https://profenapaipa.github.io/diversena/",
         "repo": "https://github.com/profenapaipa/diversena",
         "nota": "Ya es público y está publicado en GitHub Pages. El proyecto se construye con Vite y el sitio se sirve desde la raíz del repositorio."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Bocetos",
+            "veredicto": "bien",
+            "porque": "La imagen del 14 muestra la pantalla de inicio, cómo la cámara reconoce la mano y el caso de error con \"quizás quisiste decir\". Pensar el error desde el boceto es poco común y muy bueno."
+          },
+          {
+            "que": "Bitácora de cambios",
+            "veredicto": "bien",
+            "porque": "Registran con fecha los cambios que piden: el logo, el enlace al código y la letra A. Sumen el porqué de cada uno."
+          },
+          {
+            "que": "Artículo",
+            "veredicto": "pendiente",
+            "porque": "Sigue en blanco. La pregunta de la sección 1.3 es lo que frena el nivel 2."
+          }
+        ],
+        "siguiente": "Escriban 1.3 en el artículo y describan en el registro de bocetos la imagen que ya subieron."
       }
     },
     {
@@ -1488,6 +1624,27 @@
         "url": "https://profenapaipa.github.io/wisfox/",
         "repo": "https://github.com/profenapaipa/wisfox",
         "nota": "Ya tiene repositorio y está publicado en GitHub Pages. El archivo .glb quedó fuera del repositorio por su tamaño."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Desarrollo",
+            "veredicto": "bien",
+            "porque": "Publicado en GitHub Pages, con los seis hitos técnicos."
+          },
+          {
+            "que": "Barreras",
+            "veredicto": "bien",
+            "porque": "Dos barreras concretas, con una pregunta para grabar."
+          },
+          {
+            "que": "Casillas",
+            "veredicto": "pendiente",
+            "porque": "Es lo único que falta para cerrar el nivel 5."
+          }
+        ],
+        "siguiente": "Marquen las casillas de su sección en Barreras.docx y guarden el artículo como Articulo_base_v2 cuando sumen secciones."
       }
     },
     {
@@ -1590,6 +1747,27 @@
       "publicacion": {
         "estado": "no aplica",
         "nota": "La línea de electrónica no se publica como sitio web: el resultado es el montaje funcionando, y se documenta aquí con video y fotos."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Componentes",
+            "veredicto": "bien",
+            "porque": "Identificados."
+          },
+          {
+            "que": "Propuesta",
+            "veredicto": "pendiente",
+            "porque": "Es lo que tiene la ruta en el nivel 1."
+          },
+          {
+            "que": "Evidencias",
+            "veredicto": "pendiente",
+            "porque": "No hay carpeta de evidencias. Las fotos del montaje cuentan."
+          }
+        ],
+        "siguiente": "Respondan la propuesta y suban fotos del montaje a 05_Evidencias."
       }
     },
     {
@@ -1692,6 +1870,22 @@
       "publicacion": {
         "estado": "no aplica",
         "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Antecedentes",
+            "veredicto": "bien",
+            "porque": "Dos fuentes reales en PDF sobre protección animal, del 16 de octubre."
+          },
+          {
+            "que": "Artículo",
+            "veredicto": "ajustar",
+            "porque": "La tabla de seguimiento dice \"sí\" en seis secciones, pero las secciones siguen vacías. La tabla no es el artículo."
+          }
+        ],
+        "siguiente": "Escriban la pregunta en la sección 1.3: es lo que tiene la ruta en el nivel 2."
       }
     },
     {
@@ -1707,12 +1901,12 @@
       "nota": "Es el equipo con la documentación más completa de la línea Unity: la ficha técnica está llena y la hoja de barreras es la única del semillero con texto propio de verdad, 4.229 caracteres. Lo que no aparece es el proyecto de Unity. Si lo construyeron en la sala y no lo subieron, no hay cómo verlo desde aquí.",
       "estado": {
         "prop": [
-          false,
-          "Propuesta videojuego motricidad: 1.024 bytes, ni los nombres están escritos"
+          true,
+          "Propuesta videojuego motricidad, editada el 26 de octubre: las cinco preguntas respondidas"
         ],
         "acue": [
-          false,
-          "Formato2_Acuerdos, 92 caracteres sobre la plantilla"
+          true,
+          "Copia de Formato2_Acuerdos_equipo.docx del 26 de octubre: cinco frentes, cinco acuerdos y las tres firmas"
         ],
         "nece": [
           true,
@@ -1795,6 +1989,27 @@
       "publicacion": {
         "estado": "pendiente de build",
         "nota": "Un juego de Unity se puede publicar en GitHub Pages si se exporta como build WebGL. Primero hay que tener la dinámica funcionando."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Propuesta",
+            "veredicto": "bien",
+            "porque": "La llenaron hoy, con las cinco preguntas. Un ajuste: la pregunta 2 habla de su dificultad con Unity; la barrera del proyecto es la de los jugadores."
+          },
+          {
+            "que": "Acuerdos",
+            "veredicto": "bien",
+            "porque": "Cinco frentes, cinco acuerdos y las tres firmas. \"Mediante buena comunicación\" no es un canal: escriban dónde se hablan."
+          },
+          {
+            "que": "Diseño del juego",
+            "veredicto": "bien",
+            "porque": "Documento con los dos modos de juego."
+          }
+        ],
+        "siguiente": "Con esto se cierra el nivel 1. Lo siguiente es abrir el kit de Unity y probar la escena (Guía 0)."
       }
     },
     {
@@ -1898,6 +2113,22 @@
       "publicacion": {
         "estado": "pendiente de build",
         "nota": "Un juego de Unity se puede publicar en GitHub Pages si se exporta como build WebGL. Primero hay que tener la dinámica funcionando."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Acuerdos y necesidades",
+            "veredicto": "bien",
+            "porque": "Los dos formatos de agosto, llenos."
+          },
+          {
+            "que": "Propuesta",
+            "veredicto": "pendiente",
+            "porque": "Es lo que tiene la ruta en el nivel 1."
+          }
+        ],
+        "siguiente": "Responde las cinco preguntas e importa el kit de ritmo para probar la escena (Guía 0)."
       }
     },
     {
@@ -2000,6 +2231,22 @@
       "publicacion": {
         "estado": "no aplica",
         "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Necesidades",
+            "veredicto": "bien",
+            "porque": "Formato 1 lleno el 15 de octubre."
+          },
+          {
+            "que": "Acuerdos",
+            "veredicto": "pendiente",
+            "porque": "Es lo único que tiene la ruta en el nivel 1. Trabajando en solitario, se llena repartiendo por semanas."
+          }
+        ],
+        "siguiente": "Llena el formato de acuerdos y escribe el guion literario."
       }
     },
     {
@@ -2014,8 +2261,8 @@
       "nota": "En un fin de semana pasaron de tener el artículo en blanco a escribir catorce de las quince secciones, y lo que cuentan coincide con su guion técnico hasta en el detalle de la luz y los fotogramas. Queda un problema serio y concreto: las cinco referencias en APA no existen. Los cuatro DOI citados devuelven 404 en Crossref y los títulos no aparecen en ningún registro. Antes de presentar el artículo hay que reemplazarlas por fuentes reales, leídas y guardadas en la carpeta de antecedentes, y reescribir con ellas la sección 1.2.",
       "estado": {
         "prop": [
-          false,
-          "Propuesta corto diversidad: 1.134 bytes, la plantilla sin responder"
+          true,
+          "00_Propuesta/Propuesta_IMRaD_Equipo11.2_v1, del 21 de octubre: las cinco preguntas respondidas con detalle"
         ],
         "acue": [
           true,
@@ -2027,7 +2274,7 @@
         ],
         "ante": [
           false,
-          "El artículo cita cinco referencias, pero ninguna se pudo verificar: los cuatro DOI consultados en Crossref devuelven 404 y los títulos no coinciden con ningún registro. Faltan fuentes reales, con su PDF en la carpeta de antecedentes"
+          "01_Antecedentes tiene una matriz con tres fuentes: una confirmada (Gonzalez, Minchala y Langer, 2025, Revista Colombiana de Educación); la de Popayán existe pero es otro trabajo; la de Manizales no se pudo comprobar. Faltan los PDF"
         ],
         "cron": [
           true,
@@ -2082,8 +2329,8 @@
           "Barreras.docx: tres barreras escritas con lo que pasó y en qué paso, y dos preguntas concretas para grabar, sobre bloqueo de exposición y sincronía de la voz con la animación"
         ],
         "casi": [
-          false,
-          "20 casillas, ninguna marcada"
+          true,
+          "Barreras_Actualizado_Equipo11.2.docx: las cinco casillas de producción audiovisual marcadas. Primer equipo del semillero en marcarlas"
         ],
         "evid": [
           true,
@@ -2094,8 +2341,8 @@
           "Artículo, sección 3.5: dos decisiones técnicas con su razón, animar a doce fotogramas por segundo en vez de veinticuatro, y usar luz LED real en vez de filtros en postproducción"
         ],
         "artv": [
-          false,
-          "No existe Articulo_base_v2.docx"
+          true,
+          "Articulo_base_v2.docx y Articulo_base_v3.docx, del 21 de octubre"
         ]
       },
       "articuloEstado": {
@@ -2118,6 +2365,32 @@
       "publicacion": {
         "estado": "no aplica",
         "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Propuesta",
+            "veredicto": "bien",
+            "porque": "Las cinco preguntas, respondidas con detalle. Con esto se cierra el nivel 1."
+          },
+          {
+            "que": "Casillas de la sesión",
+            "veredicto": "bien",
+            "porque": "Primer equipo del semillero en marcarlas."
+          },
+          {
+            "que": "Referencias",
+            "veredicto": "ajustar",
+            "porque": "Tienen tres listas distintas en tres documentos. La del artículo v3 no sirve: tres DOI no existen y el cuarto es otro artículo. En la sección 5 hay una fuente confirmada, Gonzalez, Minchala y Langer (2025). La de Popayán existe, pero es otro trabajo: Muelas Aranda (2023), sobre modelado en arcilla, que igual les sirve si lo citan como es."
+          },
+          {
+            "que": "Coherencia",
+            "veredicto": "ajustar",
+            "porque": "La presentación dice que usaron trípode y que el corto está terminado. La ficha técnica dice que no hubo trípode, y en Drive no está el video exportado."
+          }
+        ],
+        "siguiente": "Quédense con una sola lista, la de la sección 5, corrijan la cita de Popayán, bajen los PDF a 01_Antecedentes y suban el video exportado."
       }
     },
     {
@@ -2227,6 +2500,22 @@
         "url": "https://profenapaipa.github.io/zocalab/",
         "repo": "https://github.com/profenapaipa/zocalab",
         "nota": "Publicado en GitHub Pages desde la rama main, con el index.html en la raíz del repositorio. Aplicación web educativa con identidad muisca para la gestión del tiempo y el aprendizaje."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Desarrollo",
+            "veredicto": "bien",
+            "porque": "Publicado, con los seis hitos técnicos."
+          },
+          {
+            "que": "Formatos de la fase 1",
+            "veredicto": "pendiente",
+            "porque": "Propuesta, acuerdos, necesidades y cronograma no están en la carpeta."
+          }
+        ],
+        "siguiente": "Subir la propuesta y los formatos de la fase 1 a la carpeta oficial."
       }
     },
     {
@@ -2325,6 +2614,22 @@
       "publicacion": {
         "estado": "sin publicar",
         "nota": "Todavía no tiene repositorio. Es un asistente que corre sobre OpenClaw, no un sitio web: su entregable sería el agente configurado con sus instrucciones de uso, no GitHub Pages."
+      },
+      "revision": {
+        "fecha": "2026-10-26",
+        "items": [
+          {
+            "que": "Configuración del asistente",
+            "veredicto": "bien",
+            "porque": "Partiste de la plantilla de OpenClaw y escribiste un propósito propio: un asistente para estudiantes de sexto a once, bilingüe y cuidadoso con sus datos. La clave de la API está tapada, bien hecho."
+          },
+          {
+            "que": "Formatos de la fase 1",
+            "veredicto": "pendiente",
+            "porque": "No hay propuesta, acuerdos ni necesidades."
+          }
+        ],
+        "siguiente": "Responde la propuesta: a quién ayuda el asistente y cómo sabrías si sirvió."
       }
     }
   ],

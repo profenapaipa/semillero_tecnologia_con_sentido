@@ -1954,6 +1954,43 @@ def pagina_articulo(datos, equipo):
 
 # ====================================================================
 
+VEREDICTOS = {
+    # color, icono, palabra. Las tres cosas a la vez: el color nunca va solo.
+    'bien':      ('verde', 'check',         'Quedó bien'),
+    'ajustar':   ('ambar', 'llave-inglesa', 'Hay que ajustar'),
+    'pendiente': ('gris',  'punteado',      'Pendiente'),
+}
+
+
+def panel_revision(equipo):
+    """
+    Lo que el docente reviso esta semana, como les fue y hacia donde seguir.
+    Sale del campo revision del equipo en semillero.json. Si no hay revision
+    escrita, no se pinta nada: este panel es una lectura humana, no un calculo,
+    y no tiene sentido rellenarlo con frases genericas.
+    """
+    r = equipo.get('revision')
+    if not r or not r.get('items'):
+        return ''
+    h = ['<section class="bloque"><div class="envoltura"><div class="revision">']
+    h.append('<div class="revision-cab"><span class="rotulo">%s Revisión del docente · %s</span>'
+             '<h2>Así les fue con lo que se revisó</h2></div>'
+             % (ico('lista', 15), e(fecha_larga(r['fecha']))))
+    h.append('<ul class="revision-items">')
+    for it in r['items']:
+        color, icono, palabra = VEREDICTOS.get(it.get('veredicto'), VEREDICTOS['pendiente'])
+        h.append('<li class="%s"><span class="marca">%s</span><div>'
+                 '<div class="revision-linea"><b>%s</b><span class="veredicto">%s</span></div>'
+                 '<p>%s</p></div></li>'
+                 % (color, ico(icono, 15), e(it['que']), e(palabra), e(it['porque'])))
+    h.append('</ul>')
+    if r.get('siguiente'):
+        h.append('<p class="revision-sigue"><span class="titulo">%s Lo que sigue</span>%s</p>'
+                 % (ico('flecha', 15), e(r['siguiente'])))
+    h.append('</div></div></section>')
+    return ''.join(h)
+
+
 def pagina_hoy(datos, equipo):
     """
     Lo que a este equipo le toca hoy. Se calcula: el nivel en el que va, lo que
@@ -1993,7 +2030,7 @@ def pagina_hoy(datos, equipo):
     # --- cuanto falta ---
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="hoy-cabeza">')
-    h.append('<span class="rotulo">%s Sesión del %s</span>'
+    h.append('<span class="rotulo">%s Revisión del %s</span>'
              % (ico('reloj', 14), e(fecha_larga(meta['revisado']))))
     h.append('<h2>Lo de hoy</h2>')
     h.append('<p class="entradilla">%s</p>' % e(meta.get('sesionHoy', '')))
@@ -2004,17 +2041,21 @@ def pagina_hoy(datos, equipo):
         h.append('<div><span class="cifra">%d</span>'
                  '<span class="pie">días para la entrega oficial, el 13 de noviembre</span></div>'
                  % max(dias_entre(meta['revisado'], meta['entregaOficial']), 0))
-    h.append('<div><span class="cifra">%d</span><span class="pie">sesiones incluida esta</span></div>'
-             % len(meta.get('sesionesRestantes', [])))
+    _ses = len(meta.get('sesionesRestantes', []))
+    h.append('<div><span class="cifra">%d</span><span class="pie">%s</span></div>'
+             % (_ses, 'sesión que queda' if _ses == 1 else 'sesiones que quedan'))
     h.append('<div><span class="cifra">%d</span><span class="pie">tareas sin evidencia</span></div>'
              % (tt - hh))
     h.append('</div></div>')
     h.append('</div></section>')
 
+    # --- la revision del docente: que se reviso y como les fue ---
+    h.append(panel_revision(equipo))
+
     # --- lo primero: lo que destraba, si aplica ---
     if destrabar:
         h.append('<section class="bloque"><div class="envoltura">')
-        h.append('<div class="destrabar">')
+        h.append('<div class="destrabar" id="lo-primero">')
         h.append('<span class="rotulo">%s Lo primero de hoy</span>' % ico('llave', 15))
         h.append('<h2>Están a %s de que se les refleje lo que ya hicieron</h2>'
                  % ('una tarea' if len(pendientes_nivel) == 1 else '%d tareas' % len(pendientes_nivel)))
@@ -2033,7 +2074,12 @@ def pagina_hoy(datos, equipo):
              '<h2>Vas en %s, nivel %d de 7</h2><p>%s</p></div>'
              % ('Dónde va la ruta' if destrabar else 'Empiecen por aquí',
                 e(act['fase']['nombre']), act['n'], e(act['fase']['que'])))
-    if pendientes_nivel:
+    if pendientes_nivel and destrabar:
+        # Ya se listaron arriba, en "Lo primero de hoy". Antes salian dos veces
+        # en la misma pagina, identicas.
+        h.append('<p class="dato">Las tareas de este nivel están arriba, en '
+                 '<a href="#lo-primero">Lo primero de hoy</a>.</p>')
+    elif pendientes_nivel:
         h.append('<ul class="tareas">%s</ul>'
                  % ''.join(fila_tarea(t) for t in pendientes_nivel))
     else:
