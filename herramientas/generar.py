@@ -116,6 +116,20 @@ def dias_entre(iso_a, iso_b):
     return (b - a).days
 
 
+def desde_hoy(meta):
+    """
+    Fecha desde la que se cuentan los dias que faltan: la de hoy, que es la del
+    dia en que se genera el sitio. Antes se contaba desde meta['revisado'], asi
+    que el 28 de octubre la pagina seguia diciendo "3 dias para la muestra"
+    porque la ultima revision era del 26. 'revisado' sigue siendo la fecha de
+    la ultima revision de lo que subieron los equipos: no se adelanta si no
+    hubo revision. Nunca es anterior a ella.
+    """
+    import datetime
+    hoy = datetime.date.today().isoformat()
+    return max(hoy, meta['revisado'])
+
+
 def fecha_larga(iso):
     a, m, d = (int(x) for x in iso.split('-'))
     return '%d de %s de %d' % (d, MESES[m - 1], a)
@@ -1948,7 +1962,7 @@ def pagina_hoy(datos, equipo):
     hh, tt, nv = totales(datos, equipo)
     act = nivel_actual(nv)
     s = equipo['slug']
-    faltan = dias_entre(meta['revisado'], meta.get('muestra', meta['revisado']))
+    faltan = dias_entre(desde_hoy(meta), meta.get('muestra', meta['revisado']))
 
     pendientes_nivel = [t for t in act['tareas'] if not t[2]]
     otros = []
@@ -1985,12 +1999,15 @@ def pagina_hoy(datos, equipo):
                  '<a href="%s.html#revision">Resumen</a>. Aquí va solo lo que hay que hacer.</p>'
                  % e(s))
     h.append('<div class="hoy-cifras">')
-    h.append('<div><span class="cifra">%d</span><span class="pie">días para la muestra, el 29 de octubre</span></div>'
-             % max(faltan, 0))
+    if faltan <= 0:
+        h.append('<div><span class="cifra">Hoy</span><span class="pie">es la muestra, el 29 de octubre</span></div>')
+    else:
+        h.append('<div><span class="cifra">%d</span><span class="pie">%s para la muestra, el 29 de octubre</span></div>'
+                 % (faltan, 'día' if faltan == 1 else 'días'))
     if meta.get('entregaOficial'):
         h.append('<div><span class="cifra">%d</span>'
                  '<span class="pie">días para la entrega oficial, el 13 de noviembre</span></div>'
-                 % max(dias_entre(meta['revisado'], meta['entregaOficial']), 0))
+                 % max(dias_entre(desde_hoy(meta), meta['entregaOficial']), 0))
     _ses = len(meta.get('sesionesRestantes', []))
     h.append('<div><span class="cifra">%d</span><span class="pie">%s</span></div>'
              % (_ses, 'sesión que queda' if _ses == 1 else 'sesiones que quedan'))

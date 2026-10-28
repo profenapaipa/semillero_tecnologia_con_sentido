@@ -1361,3 +1361,27 @@ de la ventana en el portal, un resumen, Lo de hoy, Módulos y las guías. Lo
 que la sonda aún lista es esperado: el enlace de saltar al contenido, que va
 fuera de pantalla a propósito, y las diapositivas del carrusel, que Swiper
 recorta.
+
+## 17. Revisión del 28 de octubre: sin novedades, y la cuenta regresiva
+
+Con Drive desconectado en la sesión no se pudo leer lo que subieron los
+estudiantes. Lo que sí se comprobó:
+
+- Los seis repositorios públicos no tienen commits posteriores al 26 de
+  octubre (el más reciente, Kinesis, es del 17; la iguana, del 1 de octubre;
+  English Roulette, del 10 de septiembre).
+- Las carpetas locales `Proyectos repositorios Github` y `SEMILLERO AULA MAKER`
+  no tienen archivos modificados desde el 26.
+
+Por eso `meta.revisado` se queda en el 26 de octubre: esa fecha dice cuándo se
+revisó lo que subieron los equipos, y no hubo revisión nueva.
+
+Lo que sí estaba desactualizado era la cuenta regresiva de "Lo de hoy": se
+contaba desde `revisado`, así que el 28 de octubre seguía diciendo "3 días
+para la muestra" cuando faltaba 1. Ahora `desde_hoy()` cuenta desde la fecha
+en que se genera el sitio (nunca anterior a `revisado`), dice "1 día" en
+singular y "Hoy es la muestra" el 29. La cuenta se actualiza al regenerar, no
+sola: si el sitio no se regenera, queda con la fecha de la última generación.
+
+La auditoría de JavaScript agotó una vez los 180 s en `equipo-1.html` y pasó
+al repetirla sin cambiar nada; no hay procesos de Chrome huérfanos.
