@@ -2542,27 +2542,27 @@
           "url": "https://github.com/profenapaipa/zocalab"
         }
       ],
-      "nota": "Proyecto nuevo: la carpeta en Drive se creó el 13 de octubre y por ahora solo tiene un documento. La aplicación, en cambio, ya existe y está bastante avanzada: ZocaLab, educación ancestral digital, con siete páginas funcionando y una identidad visual muisca propia. Es la aplicación web más fácil de publicar de todo el semillero, porque es estática: no necesita compilarse ni servidor.",
+      "nota": "La carpeta de Drive creció: tiene la propuesta de ZocaLab y, en las carpetas de sesión, copias de documentos de otros equipos que no cuentan como suyos. La aplicación está avanzada: siete páginas funcionando con identidad visual muisca, y datos guardados en el navegador, sin servidor.",
       "estado": {
         "prop": [
-          false,
-          "La carpeta de Drive tiene un documento, ZocaLab App, creado el 13 de octubre"
+          true,
+          "ZocaLab_Propuesta.docx y ZocaLab App.docx (octubre de 2026): descripción, problema, justificación, objetivos, público, MVP, avances por mes y visión"
         ],
         "acue": [
           false,
-          "Sin formato de acuerdos del equipo"
+          "El Formato2_Acuerdos de la carpeta es del equipo 10, no de ZocaLab"
         ],
         "nece": [
           false,
-          "Sin formato de necesidades y recursos"
+          "La propuesta define público y MVP, pero no lista recursos ni qué hay que aprender; el Formato1 de la carpeta es del equipo 10"
         ],
         "ante": [
           false,
-          "Sin carpeta de antecedentes con fuentes"
+          "Ninguna fuente citada en la propuesta ni carpeta de antecedentes"
         ],
         "cron": [
           false,
-          "Sin cronograma entregado"
+          "Sin cronograma: la línea de avances por mes de la propuesta cuenta lo que ya se hizo, no lo que sigue"
         ],
         "preg": [
           false,
@@ -2578,7 +2578,7 @@
         ],
         "fich": [
           false,
-          "Sin ficha técnica"
+          "La ficha técnica de la carpeta es la de Wisfox (equipo 7)"
         ],
         "s1": [
           true,
@@ -2586,15 +2586,15 @@
         ],
         "s2": [
           true,
-          "Siete páginas: inicio, login, perfil, bosque, mi espacio, rutina sol y rutina luna"
+          "Siete páginas en línea, todas responden: entrada, inicio de sesión, perfil, bosque, mi espacio, rutina del sol y rutina de la luna"
         ],
         "s3": [
           true,
-          "Tres hojas propias: muisca.css, style.css y zocalab.css"
+          "Tres hojas propias: muisca.css, style.css y zocalab.css, unas 2.750 líneas"
         ],
         "s4": [
           true,
-          "Contenido real del proyecto: escenas del bosque, perfiles y rutinas, con sus propios archivos de datos"
+          "Contenido real: bosques con día y noche por la hora del dispositivo, árboles, rachas, rutinas, notas, tareas, metas, diario y el Cóndor, con siete módulos de JavaScript (unas 2.700 líneas)"
         ],
         "s5": [
           true,
@@ -2606,7 +2606,7 @@
         ],
         "barr": [
           false,
-          "Sin hoja de barreras"
+          "Barreras.docx de la carpeta es la plantilla sin llenar"
         ],
         "casi": [
           false,
@@ -2614,7 +2614,7 @@
         ],
         "evid": [
           true,
-          "Material de trabajo con imágenes y música, y el código completo de la aplicación"
+          "Código completo de la aplicación, 17 ilustraciones propias y sonidos generados por código; capturas de las cuatro pantallas internas en el Resumen"
         ],
         "dect": [
           false,
@@ -2633,21 +2633,133 @@
         "nota": "Publicado en GitHub Pages desde la rama main, con el index.html en la raíz del repositorio. Aplicación web educativa con identidad muisca para la gestión del tiempo y el aprendizaje."
       },
       "revision": {
-        "fecha": "2026-10-26",
+        "fecha": "2026-10-28",
         "items": [
           {
-            "que": "Desarrollo",
+            "que": "La aplicación",
             "veredicto": "bien",
-            "porque": "Publicado, con los seis hitos técnicos."
+            "porque": "Siete páginas en línea y funcionando: bosque con día y noche, Rutina del Sol y de la Luna con palabras muiscas, Mi espacio con cinco pestañas y el Cóndor en el perfil. Son unas 12.000 líneas en siete módulos. Se ve abajo, en Avances."
           },
           {
-            "que": "Formatos de la fase 1",
-            "veredicto": "pendiente",
-            "porque": "Propuesta, acuerdos, necesidades y cronograma no están en la carpeta."
+            "que": "Propuesta",
+            "veredicto": "bien",
+            "porque": "Problema, justificación, objetivos, público, descripción del MVP y visión, con los avances mes a mes. Lo que cuenta es lo que hay en el código: coincide con casi todo lo que dice."
+          },
+          {
+            "que": "Cifras de la pantalla de entrada",
+            "veredicto": "ajustar",
+            "porque": "Muestra 12K+ estudiantes, 320 colegios y 98 % de satisfacción, y el proyecto todavía no tiene usuarios. Son cifras sin respaldo: quítenlas o márquenlas como ejemplo. Una aplicación con sentido no inventa su impacto."
+          },
+          {
+            "que": "Documentación y alcance",
+            "veredicto": "ajustar",
+            "porque": "Los acuerdos, las necesidades, la guía y la ficha técnica de las carpetas de sesión son de otros equipos. Faltan antecedentes con fuentes, cronograma y el artículo. Y como los datos viven en el navegador, que los docentes asignen contenidos y los padres acompañen todavía no es posible."
           }
         ],
-        "siguiente": "Subir la propuesta y los formatos de la fase 1 a la carpeta oficial."
-      }
+        "siguiente": "Antes del 13 de noviembre: tres antecedentes reales sobre inclusión y dificultades de aprendizaje, un cronograma de lo que sigue (servidor y rol docente) y pasar la propuesta al formato del artículo."
+      },
+      "avances": [
+        {
+          "tipo": "galeria",
+          "titulo": "Cuatro pantallas de la aplicación",
+          "fecha": "2026-10-28",
+          "nota": "El bosque isométrico, la rutina del sol, Mi espacio y el perfil con el Cóndor. Capturadas con una sesión de prueba: sin usuarios reales.",
+          "imagenes": [
+            {
+              "archivo": "assets/avances/equipo-12/pantalla-bosque-mini.webp",
+              "grande": "assets/avances/equipo-12/pantalla-bosque.webp",
+              "alt": "Pantalla del bosque: un terreno isométrico verde con el cielo de día y los contadores de árboles y racha",
+              "ancho": 420,
+              "alto": 263
+            },
+            {
+              "archivo": "assets/avances/equipo-12/pantalla-rutina-sol-mini.webp",
+              "grande": "assets/avances/equipo-12/pantalla-rutina-sol.webp",
+              "alt": "Pantalla de la rutina del sol: la intención del día, la actividad del cuerpo y lo que se va a aprender",
+              "ancho": 420,
+              "alto": 263
+            },
+            {
+              "archivo": "assets/avances/equipo-12/pantalla-mi-espacio-mini.webp",
+              "grande": "assets/avances/equipo-12/pantalla-mi-espacio.webp",
+              "alt": "Pantalla de Mi espacio, con pestañas de notas, tareas, metas, mes y diario",
+              "ancho": 420,
+              "alto": 263
+            },
+            {
+              "archivo": "assets/avances/equipo-12/pantalla-perfil-mini.webp",
+              "grande": "assets/avances/equipo-12/pantalla-perfil.webp",
+              "alt": "Pantalla del perfil, con las estadísticas y el interruptor del Cóndor",
+              "ancho": 420,
+              "alto": 263
+            }
+          ]
+        },
+        {
+          "tipo": "galeria",
+          "titulo": "Identidad visual muisca",
+          "fecha": "2026-10-15",
+          "nota": "Los cuatro árboles que se plantan al cumplir la rutina y cuatro de las ocho fotos de perfil.",
+          "imagenes": [
+            {
+              "archivo": "assets/avances/equipo-12/identidad-lluvia-mini.webp",
+              "grande": "assets/avances/equipo-12/identidad-lluvia.webp",
+              "alt": "Ilustración muisca: árbol de la lluvia",
+              "ancho": 294,
+              "alto": 420
+            },
+            {
+              "archivo": "assets/avances/equipo-12/identidad-viento-mini.webp",
+              "grande": "assets/avances/equipo-12/identidad-viento.webp",
+              "alt": "Ilustración muisca: árbol del viento",
+              "ancho": 287,
+              "alto": 420
+            },
+            {
+              "archivo": "assets/avances/equipo-12/identidad-sol-mini.webp",
+              "grande": "assets/avances/equipo-12/identidad-sol.webp",
+              "alt": "Ilustración muisca: árbol del sol",
+              "ancho": 297,
+              "alto": 420
+            },
+            {
+              "archivo": "assets/avances/equipo-12/identidad-estrella-mini.webp",
+              "grande": "assets/avances/equipo-12/identidad-estrella.webp",
+              "alt": "Ilustración muisca: árbol de la estrella",
+              "ancho": 264,
+              "alto": 420
+            },
+            {
+              "archivo": "assets/avances/equipo-12/identidad-tunjo-mini.webp",
+              "grande": "assets/avances/equipo-12/identidad-tunjo.webp",
+              "alt": "Ilustración muisca: tunjo",
+              "ancho": 240,
+              "alto": 240
+            },
+            {
+              "archivo": "assets/avances/equipo-12/identidad-totem-mini.webp",
+              "grande": "assets/avances/equipo-12/identidad-totem.webp",
+              "alt": "Ilustración muisca: tótem",
+              "ancho": 240,
+              "alto": 240
+            },
+            {
+              "archivo": "assets/avances/equipo-12/identidad-ave-mini.webp",
+              "grande": "assets/avances/equipo-12/identidad-ave.webp",
+              "alt": "Ilustración muisca: ave de oro",
+              "ancho": 240,
+              "alto": 240
+            },
+            {
+              "archivo": "assets/avances/equipo-12/identidad-tortuga-mini.webp",
+              "grande": "assets/avances/equipo-12/identidad-tortuga.webp",
+              "alt": "Ilustración muisca: tortuga",
+              "ancho": 240,
+              "alto": 240
+            }
+          ]
+        }
+      ]
     },
     {
       "numero": "13",
