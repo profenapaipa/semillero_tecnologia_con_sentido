@@ -1443,3 +1443,61 @@ actualiza al regenerar, no sola.
   virtual. Por eso el video se valida con ffmpeg.
 - La auditoría de JavaScript agotó una vez los 180 s en `equipo-1.html` y pasó al
   repetirla; Chrome sin ventana es intermitente.
+
+## 18. ZocaLab evaluado por su contenido, y la página del cierre del año
+
+### 18.1 ZocaLab (equipo 12)
+
+Se pidió buscar la forma de ver avances tangibles analizando los documentos y
+su contenido. Lo que se hizo y lo que apareció:
+
+- **Los documentos de las carpetas de sesión no son de ZocaLab.** Formato1 y
+  Formato2 son del equipo 10, la guía del 19 y 20 de agosto y la ficha técnica
+  son de Wisfox, y Barreras y Articulo_base son la plantilla vacía. Eran copias:
+  no cuentan como evidencia. Lo propio es `ZocaLab App.docx` y
+  `ZocaLab_Propuesta.docx`: descripción, problema, justificación, objetivos,
+  público, MVP, avances por mes y visión. Se marcó la propuesta.
+- **La aplicación se contrastó con lo que dice la propuesta.** Siete páginas
+  responden 200 en GitHub Pages; unas 6.650 líneas de HTML, 2.750 de CSS y 2.700
+  de JS en siete módulos; 17 ilustraciones; sonidos generados con WebAudio;
+  modo día y noche por `getHours`; rachas, Cóndor, calendario y diario. Los
+  datos viven en `localStorage`: no hay servidor, así que "docentes asignan
+  contenidos" todavía no existe.
+- **Las páginas internas piden sesión** y redirigen al inicio de sesión, así
+  que una captura directa solo muestra el login. Se capturaron desde una copia
+  temporal con una sesión de prueba ("Estudiante demo") inyectada solo en la
+  copia. El repositorio de ZocaLab no se tocó.
+- **La pantalla de entrada muestra "12K+ estudiantes, 320 colegios, 98 % de
+  satisfacción"** (`pages/login.html`, línea 658 y siguientes), y el proyecto no
+  tiene usuarios. Quedó como "hay que ajustar" en la revisión. La corrección es
+  en el repositorio de ZocaLab, no en este sitio.
+
+### 18.2 Cierre del año: `docs/cierre.html`
+
+Pedido: hoy y mañana son el cierre. Una introducción del director (pedagogía,
+técnica y barreras), cada equipo con sus avances y su vista previa, la
+proyección, y un cierre sobre la tecnología con sentido y la IA.
+
+- Es una presentación de 25 láminas. Sin JavaScript se lee de corrido. Con
+  JavaScript: flechas, Re Pág y Av Pág, Inicio y Fin, la F para pantalla
+  completa y un selector para saltar a cualquier lámina. Con el foco en un
+  video, un botón, un enlace o el selector no se atienden las teclas.
+- Cada equipo muestra, en este orden: su video, la captura de su sitio, un
+  enlace a su juego, o la lista de lo que ya tiene. Debajo, miniaturas de sus
+  fotos y bocetos y los botones de abrir. `principal: "galeria"` en
+  `cierre.json` pone las pantallas de la aplicación en lugar de la captura
+  (se usa en ZocaLab, para no abrir con el login).
+- El contenido sale de `datos/cierre.json`. La apertura es un borrador armado con
+  lo que quedó documentado: ajústalo o agrega las barreras que viviste tú.
+- **Una colisión de nombres que costó un rato:** `.diapo` y `.diapo-cab` ya
+  existían (las diapositivas del lector de módulos, con fondo y borde propios) y
+  dejaban la portada oscura en claro. Las láminas del cierre se llaman `lamina`.
+  Antes de usar una clase nueva conviene buscarla en el CSS previo.
+- Las capturas con ancla (`cierre.html#eq-equipo-6`) salen corridas en Chrome sin
+  ventana por el desplazamiento suave. Se capturan láminas aisladas con una copia
+  que oculta las demás (`capturar_diapos.py`).
+- Texto que crece con el ancho (`clamp`) para proyectar. Sin desborde a 489 px
+  (el mínimo de Chrome sin ventana). Navegación probada en el navegador: 25
+  láminas, 25 opciones en el selector, sin errores de JavaScript.
+- `cierre.html` entra en la auditoría de JavaScript.
+- Enlaces: "Cierre" en el menú de todas las páginas y un botón en la portada.

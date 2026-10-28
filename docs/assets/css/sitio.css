@@ -2345,3 +2345,178 @@ summary.modulo-cab:focus-visible { outline: 3px solid var(--cian); outline-offse
 .avance.tipo-imagen > img {
   max-height: 520px; object-fit: contain; background: var(--superficie2);
 }
+
+
+/* ============ 35. Cierre del año: presentacion de diapositivas ============ */
+/* Una diapositiva ocupa la pantalla debajo de la cabecera fija. Sin
+   JavaScript se leen una tras otra; con JavaScript se avanza con el teclado. */
+.deck { padding-bottom: 64px; }
+.lamina {
+  min-height: calc(100vh - var(--alto-fijo));
+  scroll-margin-top: var(--alto-fijo);
+  display: flex; align-items: center;
+  padding-block: 40px;
+  border-bottom: 1px solid var(--filete-sutil);
+}
+.lamina > .envoltura { width: 100%; }
+.lamina.portada { border-bottom: 0; }
+.lamina.portada > .envoltura { padding-block: 24px; }
+.lamina-cab { margin-bottom: 26px; }
+.lamina-cab h2 { font-size: clamp(30px, 4.2vw, 52px); letter-spacing: -.025em; line-height: 1.08; margin-block: 8px 10px; }
+.bajada-lamina { color: var(--tinta-suave); font-size: 18px; max-width: 64ch; }
+.texto-grande { font-size: clamp(20px, 2.2vw, 28px); line-height: 1.4; max-width: 52ch; }
+
+.niveles-cierre { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+.niveles-cierre li {
+  display: flex; align-items: center; gap: 10px; padding: 10px 18px 10px 10px;
+  background: var(--superficie); border: 1px solid var(--filete); border-radius: 999px;
+  font-weight: 600; box-shadow: var(--alzado-1);
+}
+.niveles-cierre li span {
+  display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+  background: var(--cian); color: var(--sobre-relleno);
+  font-family: var(--fuente-datos); font-size: 13px;
+}
+
+.tarjetas-cierre {
+  list-style: none; display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+.tarjetas-cierre li {
+  background: var(--superficie); border: 1px solid var(--filete); border-radius: var(--radio);
+  padding: 18px 20px 20px; box-shadow: var(--alzado-1); border-top: 4px solid var(--cian);
+}
+.tarjetas-cierre h3 { font-size: 19px; letter-spacing: -.01em; margin-bottom: 6px; }
+.tarjetas-cierre p { color: var(--tinta-suave); font-size: 15.5px; line-height: 1.5; }
+
+.lineas-cierre {
+  list-style: none; display: grid; gap: 12px; margin-bottom: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+.lineas-cierre li {
+  display: flex; gap: 14px; padding: 16px 18px; border-radius: var(--radio);
+  background: var(--superficie); border: 1px solid var(--filete);
+  border-left: 5px solid var(--linea-software);
+}
+.lineas-cierre li[data-linea="unity"] { border-left-color: var(--linea-unity); }
+.lineas-cierre li[data-linea="electronica"] { border-left-color: var(--linea-electronica); }
+.lineas-cierre li[data-linea="audiovisual"] { border-left-color: var(--linea-audiovisual); }
+.lineas-cierre h3 { font-size: 18px; margin-bottom: 4px; }
+.lineas-cierre p { color: var(--tinta-suave); font-size: 15px; line-height: 1.45; }
+.icono-linea { color: var(--tinta); flex: none; margin-top: 2px; }
+
+.chips-equipos {
+  list-style: none; display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+}
+.chips-equipos a {
+  display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+  background: var(--superficie); border: 1px solid var(--filete); border-radius: var(--radio);
+  border-left: 5px solid var(--linea-software); color: var(--tinta); text-decoration: none; font-weight: 600;
+}
+.chips-equipos li[data-linea="unity"] a { border-left-color: var(--linea-unity); }
+.chips-equipos li[data-linea="electronica"] a { border-left-color: var(--linea-electronica); }
+.chips-equipos li[data-linea="audiovisual"] a { border-left-color: var(--linea-audiovisual); }
+.chips-equipos a:hover { background: var(--superficie2); }
+.chips-equipos b { font-family: var(--fuente-datos); font-size: 13px; color: var(--tinta-suave); min-width: 34px; }
+
+/* Una diapositiva de equipo: texto a la izquierda, vista previa a la derecha */
+.lamina-cuerpo { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 40px; align-items: center; }
+.lamina-texto h2 { font-size: clamp(28px, 3.6vw, 46px); letter-spacing: -.025em; line-height: 1.08; margin-block: 8px 6px; }
+.lamina-texto .rotulo { display: inline-flex; align-items: center; gap: 7px; color: var(--tinta-suave); }
+.lamina-texto h3 { margin-top: 22px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase;
+  font-family: var(--fuente-datos); color: var(--tinta-suave); }
+.lamina-texto .progreso, .lamina-texto .linea-progreso { margin-top: 16px; }
+.logros { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 10px; }
+.logros li { display: flex; gap: 10px; align-items: flex-start; font-size: 17px; line-height: 1.4; }
+.logros .ico { color: var(--verde-texto); flex: none; margin-top: 3px; }
+.sigue-lamina {
+  margin-top: 20px; padding: 12px 16px; border-radius: var(--radio-chico);
+  background: var(--superficie); border-left: 4px solid var(--cian); font-size: 16px;
+}
+.sigue-lamina b { display: block; font-family: var(--fuente-datos); font-size: 11.5px; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--cian); margin-bottom: 3px; }
+.lamina-vista { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.lamina-vista .avance { box-shadow: var(--alzado-2, var(--alzado-1)); }
+.lamina-vista .vistaprevia { box-shadow: var(--alzado-1); }
+.lamina-vista .botones { margin-top: 2px; }
+.minis { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(86px, 22%), 1fr)); gap: 6px; }
+.minis li { aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radio-chico); border: 1px solid var(--filete); }
+.minis a { display: block; height: 100%; }
+.minis img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ya-tiene, .vista-enlace {
+  background: var(--superficie); border: 1px solid var(--filete); border-radius: var(--radio);
+  padding: 22px 24px; box-shadow: var(--alzado-1);
+}
+.ya-tiene h3 { font-size: 14px; letter-spacing: .08em; text-transform: uppercase;
+  font-family: var(--fuente-datos); color: var(--tinta-suave); margin-bottom: 10px; }
+.ya-tiene ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.ya-tiene li { display: flex; gap: 10px; align-items: flex-start; font-size: 16px; }
+.ya-tiene .ico { color: var(--verde-texto); flex: none; margin-top: 3px; }
+.vista-enlace { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.vista-enlace p { color: var(--tinta-suave); }
+
+.proyeccion { display: grid; gap: 22px; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: start; }
+.fechas-cierre { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.fechas-cierre li {
+  display: flex; flex-direction: column; gap: 3px; padding: 14px 18px;
+  background: var(--superficie); border: 1px solid var(--filete); border-radius: var(--radio);
+  border-left: 5px solid var(--cian);
+}
+.fechas-cierre b { font-family: var(--fuente-datos); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--cian); }
+.fechas-cierre span { font-size: 16px; line-height: 1.45; }
+.proyeccion .tarjetas-cierre { grid-template-columns: 1fr; }
+
+/* Las diapositivas oscuras reutilizan .portada: aqui solo se ajusta el texto */
+.lamina-oscura h1 { font-size: clamp(34px, 5.6vw, 72px); }
+.lamina-oscura .titulo-final { font-size: clamp(34px, 5vw, 64px); letter-spacing: -.03em; line-height: 1.08; margin-block: 8px 24px; }
+.lamina-oscura .titulo-final.grande { font-size: clamp(44px, 7vw, 92px); margin-bottom: 28px; }
+.frase-final { font-size: clamp(19px, 2.2vw, 28px); line-height: 1.45; max-width: 40ch; margin: 0 auto 16px; color: var(--sobre-panel); }
+.firma-final { margin-top: 30px; font-family: var(--fuente-datos); font-size: 13px; color: var(--sobre-panel-suave); letter-spacing: .04em; }
+.pista-deck { margin-top: 26px; font-size: 13.5px; color: var(--sobre-panel-suave); }
+
+/* Barra de la presentacion: solo existe con JavaScript */
+.deck-nav {
+  position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 40;
+  display: flex; align-items: center; gap: 8px; padding: 6px 8px;
+  background: var(--panel); color: var(--sobre-panel); border: 1px solid var(--panel-2);
+  border-radius: 999px; box-shadow: 0 8px 28px rgba(0,0,0,.28);
+}
+.no-js .deck-nav { display: none; }
+.deck-nav button, .deck-nav select {
+  font: inherit; font-size: 13.5px; color: var(--sobre-panel); background: var(--panel-2);
+  border: 1px solid var(--panel-2); border-radius: 999px; padding: 8px 14px; cursor: pointer; min-height: 38px;
+}
+.deck-nav select { max-width: 220px; }
+.deck-nav button:hover, .deck-nav select:hover { border-color: var(--cian-vivo); }
+.deck-nav button:focus-visible, .deck-nav select:focus-visible { outline: 3px solid var(--cian-vivo); outline-offset: 2px; }
+#deck-ant .ico { transform: rotate(180deg); }
+.deck-cuenta { font-family: var(--fuente-datos); font-size: 13px; min-width: 56px; text-align: center; }
+.solo-lectores { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 900px) {
+  .lamina-cuerpo, .proyeccion { grid-template-columns: 1fr; gap: 24px; }
+  .lamina { align-items: flex-start; }
+  .deck-nav { width: calc(100% - 24px); justify-content: space-between; }
+  .deck-nav select { max-width: 40vw; }
+  #deck-pantalla { display: none; }
+}
+@media print {
+  .deck-nav { display: none; }
+  .lamina { break-after: page; min-height: 0; }
+}
+
+/* Para proyectar: el texto de las laminas crece con el ancho de la pantalla,
+   sin pasar de lo comodo en un portatil. */
+.tarjetas-cierre h3 { font-size: clamp(18px, 1.55vw, 25px); }
+.tarjetas-cierre p { font-size: clamp(15.5px, 1.2vw, 20px); }
+.lineas-cierre h3 { font-size: clamp(18px, 1.5vw, 24px); }
+.lineas-cierre p { font-size: clamp(15px, 1.15vw, 19px); }
+.logros li { font-size: clamp(16.5px, 1.3vw, 22px); }
+.sigue-diapo { font-size: clamp(16px, 1.2vw, 20px); }
+.ya-tiene li { font-size: clamp(16px, 1.2vw, 20px); }
+.fechas-cierre span { font-size: clamp(16px, 1.25vw, 21px); }
+.chips-equipos a { font-size: clamp(15px, 1.1vw, 18px); }
+/* Como vista principal, las pantallas de una aplicacion van de a dos */
+.lamina-vista > .avance .galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.lamina-vista > .avance .galeria li { aspect-ratio: 16 / 10; }

@@ -59,6 +59,7 @@ PAGINAS = [
     os.path.join('equipos', 'equipo-1.html'),
     os.path.join('equipos', 'equipo-1-ruta.html'),
     os.path.join('equipos', 'equipo-2-2-modulos.html'),
+    'cierre.html',                                  # la presentacion del cierre
 ]
 
 # Una pagina por linea tecnica, para el contraste del boton "Lo de hoy": su

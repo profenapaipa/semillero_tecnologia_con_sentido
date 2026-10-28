@@ -1,0 +1,297 @@
+{
+  "_nota": "Contenido de docs/cierre.html. La apertura (pedagogía, técnica y barreras) es un borrador armado con lo que quedó documentado en la bitácora y en los datos del semillero: ajústalo o agrégale las barreras que viviste tú. Los textos por equipo salen de lo que cada carpeta tiene a 28 de octubre de 2026. No lleva nombres de estudiantes.",
+  "portada": {
+    "rotulo": "Cierre del año · 2026-II",
+    "titulo": "Semillero Maker de Tecnología con Sentido",
+    "bajada": "Del 15 de julio al 29 de octubre de 2026. Esto es lo que se construyó, lo que se aprendió y lo que viene."
+  },
+  "apertura": {
+    "intro": {
+      "titulo": "Qué fue este semestre",
+      "texto": "Dieciséis proyectos en cuatro líneas técnicas siguieron la misma ruta: empezar por una persona real con un problema real, preguntar, diseñar, construir, probar y contar con honestidad lo que pasó. Cada nivel se superaba con evidencia, no con casillas."
+    },
+    "pedagogia": {
+      "titulo": "Cómo lo trabajamos",
+      "subtitulo": "La pedagogía detrás de cada sesión",
+      "items": [
+        {
+          "titulo": "Design Thinking con método científico",
+          "texto": "Siete niveles: empatizar, definir, idear, prototipar, testear, iterar y comunicar. Se avanza cuando hay evidencia en la carpeta, no cuando se marca una casilla."
+        },
+        {
+          "titulo": "Aprender haciendo algo propio",
+          "texto": "Cada equipo construyó algo suyo y real: un sitio, un juego, un circuito, un cortometraje. El producto es la forma de aprender."
+        },
+        {
+          "titulo": "Sesiones con secuencia",
+          "texto": "Cada sesión sigue los nueve eventos de instrucción de Gagné: objetivo, repaso, contenido, guía, práctica, realimentación, evaluación y transferencia."
+        },
+        {
+          "titulo": "Material pensado para leerse",
+          "texto": "Diapositivas y guías diseñadas con los principios del aprendizaje multimedia de Mayer: una idea por pantalla, texto junto a imagen y señales de dónde estás."
+        },
+        {
+          "titulo": "Realimentación cada semana",
+          "texto": "Se revisaba la carpeta de cada equipo y se le decía qué quedó bien, qué ajustar y qué seguía. Lo que se revisaba se veía en el portal."
+        },
+        {
+          "titulo": "El artículo como memoria",
+          "texto": "Un artículo de desarrollo tecnológico, un formato académico real: documentar con honestidad hasta dónde llegó cada proyecto."
+        },
+        {
+          "titulo": "La IA, con verificación",
+          "texto": "Buscaron antecedentes con inteligencia artificial y tenían que comprobar que cada fuente existiera. Aprendieron que una referencia que suena bien no es una referencia."
+        }
+      ]
+    },
+    "tecnica": {
+      "titulo": "Con qué lo construimos",
+      "subtitulo": "Cuatro líneas técnicas y una forma común de publicar",
+      "lineas": [
+        {
+          "linea": "software",
+          "texto": "HTML, CSS y JavaScript; TypeScript con Vite; Next.js con base de datos; Python; Firebase."
+        },
+        {
+          "linea": "unity",
+          "texto": "Unity en 2D, con kits de dinámicas de motricidad y de ritmo, y una guía para publicar el juego en el navegador."
+        },
+        {
+          "linea": "electronica",
+          "texto": "Arduino, servomotores y ESP32: del circuito dibujado al montaje."
+        },
+        {
+          "linea": "audiovisual",
+          "texto": "Stop motion y animación: guion literario, guion técnico, plan de rodaje, plano de prueba y montaje en CapCut."
+        }
+      ],
+      "comun": [
+        {
+          "titulo": "Una carpeta igual para todos",
+          "texto": "Siete subcarpetas, de la propuesta a la entrega final, para que el trabajo de cada equipo se encuentre sin pedirlo."
+        },
+        {
+          "titulo": "Publicar con GitHub",
+          "texto": "Los proyectos web viven en repositorios y se publican con GitHub Pages: ya son sitios en internet. Un juego de Unity corre en el navegador."
+        },
+        {
+          "titulo": "Guías hechas desde las barreras",
+          "texto": "Cada equipo escribía dónde se trababa, y de ahí salieron las guías y los tutoriales del semillero."
+        }
+      ]
+    },
+    "barreras": {
+      "titulo": "Lo que se atravesó en el camino",
+      "subtitulo": "Las barreras que encontré como director del semillero",
+      "items": [
+        {
+          "titulo": "Los computadores de la sala",
+          "texto": "Lo que se construía en las máquinas de la sala muchas veces no llegaba a Drive ni a GitHub, y lo que no se sube no se puede revisar. Unity pedía una versión antigua, la 2019.4, y no crea proyectos en rutas con tilde."
+        },
+        {
+          "titulo": "El tiempo",
+          "texto": "Sesiones de 90 minutos para proyectos que piden semanas de trabajo. Lo que no se terminaba en la sala quedaba para la casa, o para nunca."
+        },
+        {
+          "titulo": "Cuatro líneas, un solo director",
+          "texto": "Software, Unity, electrónica y audiovisual al mismo tiempo: cada equipo necesitaba un tutorial distinto en el momento justo."
+        },
+        {
+          "titulo": "Evidencia por todas partes",
+          "texto": "El trabajo estaba en Drive, en repositorios, en los computadores de la sala y en cuentas distintas. Revisar de verdad exigió ir a buscarlo."
+        },
+        {
+          "titulo": "Fuentes que no existen",
+          "texto": "Varias referencias sugeridas por la IA se veían reales y no lo eran. Verificarlas costó tiempo de clase, y valió la pena."
+        },
+        {
+          "titulo": "Publicar también es técnico",
+          "texto": "Archivos que no caben en GitHub, repositorios privados que no se publican gratis y proyectos de escritorio que no son sitios web."
+        }
+      ]
+    }
+  },
+  "equipos": {
+    "equipo-1": {
+      "lograron": [
+        "Construyeron el portal de divulgación de Filosofartec, bajo la identidad de Un Café con la Iguana.",
+        "Es un sitio en internet, con contenido real y respaldo en GitHub.",
+        "Dibujaron a mano el boceto de la página antes de programarla."
+      ],
+      "sigue": "Escribir el artículo a partir de la propuesta, que ya la tienen."
+    },
+    "equipo-2-1": {
+      "lograron": [
+        "Definieron los acuerdos, las necesidades y el cronograma del equipo.",
+        "Escribieron la pregunta de investigación y el registro del boceto."
+      ],
+      "sigue": "Responder las cinco preguntas de la propuesta y pasar a producir."
+    },
+    "equipo-2-2": {
+      "lograron": [
+        "Tienen la carpeta mejor organizada de la línea audiovisual, con las siete subcarpetas del proceso.",
+        "Hay archivos de animación 3D reales y un plano de prueba grabado."
+      ],
+      "sigue": "Escribir el guion y completar los acuerdos del equipo."
+    },
+    "equipo-3": {
+      "lograron": [
+        "Una plataforma de planeación de clase inclusiva, apoyada en el Decreto 1421 de 2017, con roles y base de datos.",
+        "Publicaron una demostración navegable con datos ficticios.",
+        "Es una de las aplicaciones más ambiciosas del semillero."
+      ],
+      "sigue": "Documentar lo construido en el artículo, empezando por los requerimientos."
+    },
+    "equipo-4": {
+      "lograron": [
+        "La lista de necesidades más detallada del semillero.",
+        "Identificaron los componentes y dibujaron el circuito."
+      ],
+      "sigue": "Pasar del papel al montaje: la tabla de pines y el primer prototipo."
+    },
+    "equipo-5": {
+      "lograron": [
+        "Una aplicación de escritorio en Python, con base de datos SQLite y firmware para ESP32.",
+        "Antecedentes verificados y ficha técnica completa."
+      ],
+      "sigue": "Empaquetar el ejecutable con sus instrucciones de uso."
+    },
+    "equipo-6": {
+      "lograron": [
+        "Un lector de lengua de señas que usa la cámara: detecta los puntos de la mano y reconoce la seña.",
+        "Pensaron el error desde el boceto: la aplicación sugiere «quizás quisiste decir».",
+        "Grabaron las cinco vocales con cada mano para el reconocimiento."
+      ],
+      "sigue": "Ampliar las fotos de cada vocal y escribir el artículo."
+    },
+    "equipo-7": {
+      "lograron": [
+        "Una plataforma de aprendizaje con mascota, hecha con Vite y Firebase.",
+        "Está publicada en internet.",
+        "Escribieron el artículo con antecedentes citados con año y DOI."
+      ],
+      "sigue": "Seguir sumando secciones al artículo y guardarlo por versiones."
+    },
+    "equipo-8": {
+      "lograron": [
+        "Los acuerdos de equipo más completos del semillero.",
+        "Identificaron los componentes: Arduino con servomotores."
+      ],
+      "sigue": "Subir fotos del montaje y responder la propuesta."
+    },
+    "equipo-9": {
+      "lograron": [
+        "Escribieron la propuesta y reunieron antecedentes con autor y año.",
+        "Acuerdos, necesidades y cronograma listos."
+      ],
+      "sigue": "Escribir la pregunta de investigación y empezar a producir."
+    },
+    "equipo-10-1": {
+      "lograron": [
+        "La ficha técnica y la hoja de barreras más completas de la línea Unity.",
+        "Un videojuego de agilidad motriz con patrones musicales, con su pregunta de investigación y tres antecedentes."
+      ],
+      "sigue": "Probar la escena en Unity y pasar la pregunta al artículo.",
+      "enlace": {
+        "texto": "Probar el juego (borrador)",
+        "url": "juegos/equipo-10/index.html"
+      }
+    },
+    "equipo-10-2": {
+      "lograron": [
+        "Acuerdos, necesidades y cronograma del minijuego de coordinación.",
+        "Un equipo de una sola persona."
+      ],
+      "sigue": "Importar el kit de ritmo y probar la escena.",
+      "enlace": {
+        "texto": "Probar el juego (borrador)",
+        "url": "juegos/equipo-10/index.html"
+      }
+    },
+    "equipo-11-1": {
+      "lograron": [
+        "La propuesta del cortometraje, escrita y actualizada a finales de septiembre.",
+        "Necesidades y cronograma entregados."
+      ],
+      "sigue": "Llenar los acuerdos y escribir el guion literario."
+    },
+    "equipo-11-2": {
+      "lograron": [
+        "Terminaron un cortometraje en stop motion con crayones y luz LED: 2 minutos 50, con voz y subtítulos.",
+        "Escribieron 13 de las 15 secciones del artículo.",
+        "Decidieron animar a doce fotogramas por segundo y usar luz LED real, y explicaron por qué."
+      ],
+      "sigue": "Corregir las referencias y registrar la revisión del audio."
+    },
+    "equipo-12": {
+      "lograron": [
+        "Una aplicación educativa con identidad muisca: bosque con día y noche, rutinas del sol y de la luna, Mi espacio y el Cóndor.",
+        "Siete páginas en línea y unas 12.000 líneas de código."
+      ],
+      "sigue": "Antecedentes reales, un cronograma y un servidor para docentes y familias.",
+      "principal": "galeria"
+    },
+    "equipo-13": {
+      "lograron": [
+        "Una idea nueva: un asistente de inteligencia artificial para el semillero, con voz.",
+        "Reunieron los primeros bloques de código: la configuración del asistente y la conversión de texto a voz."
+      ],
+      "sigue": "Responder la propuesta: a quién ayuda y cómo se sabría si sirvió."
+    }
+  },
+  "proyeccion": {
+    "titulo": "Lo que falta y lo que viene",
+    "cercano": [
+      {
+        "cuando": "29 de octubre",
+        "que": "La muestra: algo que otra persona pueda ver, usar o leer sin que se lo expliquen."
+      },
+      {
+        "cuando": "9 de noviembre",
+        "que": "Muestra de emprendimiento de la Cámara de Comercio de Bogotá, con Wisfox, Kinesis y el asistente de inteligencia artificial presentados como una sola propuesta."
+      },
+      {
+        "cuando": "13 de noviembre",
+        "que": "Entrega oficial: el artículo final con referencias verificadas y las evidencias en la carpeta de cada equipo."
+      }
+    ],
+    "futuro": [
+      {
+        "titulo": "Probar con quienes lo necesitan",
+        "texto": "Estudiantes con otros ritmos de aprendizaje, docentes, la comunidad sorda: los proyectos se hicieron para ellos."
+      },
+      {
+        "titulo": "Publicar lo que falta",
+        "texto": "El ejecutable de English Roulette, los juegos de Unity en el navegador, una segunda versión de los sitios."
+      },
+      {
+        "titulo": "Documentar con honestidad",
+        "texto": "Cada proyecto con su artículo, sus fuentes verificadas y también lo que no funcionó."
+      },
+      {
+        "titulo": "Seguir creciendo",
+        "texto": "El asistente de IA del semillero y la próxima cohorte, que arrancará con la carpeta, la ruta y las guías ya hechas."
+      }
+    ]
+  },
+  "cierre": {
+    "mundo": {
+      "titulo": "El mundo está cambiando",
+      "lineas": [
+        "La inteligencia artificial ya escribe, programa, dibuja y hasta inventa fuentes que parecen reales.",
+        "Producir ya no es lo escaso. Lo escaso es saber qué vale la pena producir, para quién y con qué cuidado.",
+        "Se van a necesitar, más que nunca, personas que sepan orientar la tecnología, dinamizarla y ponerla al servicio de otros, con ética y con sentido."
+      ]
+    },
+    "final": {
+      "titulo": "Tecnología con sentido",
+      "parrafos": [
+        "Este semillero se llama así por una razón: no se trata de lo que ya brotó, sino de lo que va a crecer.",
+        "Lo que aprendieron aquí, preguntar antes de construir, probar, verificar y contar con honestidad lo que funcionó y lo que no, les sirve para cualquier cosa que hagan.",
+        "Úsenlo para incluir, para cuidar, para entender y para darle voz a quien no la tiene. Pregúntense siempre para quién y para qué.",
+        "Gracias por haber hecho cosas reales."
+      ],
+      "firma": "Néstor Andrés Paipa · Semillero Maker de Tecnología con Sentido · 2026"
+    }
+  }
+}

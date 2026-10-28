@@ -525,6 +525,84 @@
      sitio.css, regla .revelar. */
 
 
+  /* ---- 14. Presentacion del cierre del año ---- */
+  /* Cada <section class="lamina"> es una diapositiva. Sin este bloque la pagina
+     se lee igual, de corrido; aqui solo se agregan las flechas, el contador y
+     la pantalla completa. Las teclas no se atienden cuando el foco esta en un
+     video, un boton, un enlace o un selector: ahi la flecha ya significa algo. */
+  var deckEl = document.querySelector('[data-deck]');
+  if (deckEl) {
+    var diapos = Array.prototype.slice.call(deckEl.querySelectorAll('.lamina'));
+    var cuentaEl = document.getElementById('deck-cuenta');
+    var selEl = document.getElementById('deck-indice');
+    var quietosDeck = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var actualDeck = 0;
+
+    function pintarDeck(i) {
+      actualDeck = i;
+      if (cuentaEl) { cuentaEl.textContent = (i + 1) + ' / ' + diapos.length; }
+      if (selEl) { selEl.value = diapos[i].id; }
+    }
+    function irADeck(i) {
+      i = Math.max(0, Math.min(diapos.length - 1, i));
+      diapos[i].scrollIntoView({ behavior: quietosDeck ? 'auto' : 'smooth', block: 'start' });
+      pintarDeck(i);
+    }
+
+    // La diapositiva que cruza la mitad de la pantalla es la actual.
+    if ('IntersectionObserver' in window) {
+      var obsDeck = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (ent) {
+          if (ent.isIntersecting) { pintarDeck(diapos.indexOf(ent.target)); }
+        });
+      }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+      diapos.forEach(function (d) { obsDeck.observe(d); });
+    }
+
+    var ant = document.getElementById('deck-ant');
+    var sig = document.getElementById('deck-sig');
+    var pant = document.getElementById('deck-pantalla');
+    if (ant) { ant.addEventListener('click', function () { irADeck(actualDeck - 1); }); }
+    if (sig) { sig.addEventListener('click', function () { irADeck(actualDeck + 1); }); }
+    if (selEl) {
+      selEl.addEventListener('change', function () {
+        var d = document.getElementById(selEl.value);
+        if (d) { irADeck(diapos.indexOf(d)); }
+      });
+    }
+    function pantallaCompleta() {
+      var raiz = document.documentElement;
+      if (document.fullscreenElement) {
+        if (document.exitFullscreen) { document.exitFullscreen(); }
+      } else if (raiz.requestFullscreen) {
+        raiz.requestFullscreen();
+      }
+    }
+    if (pant) {
+      if (!document.documentElement.requestFullscreen) { pant.hidden = true; }
+      pant.addEventListener('click', pantallaCompleta);
+    }
+
+    document.addEventListener('keydown', function (ev) {
+      if (ev.altKey || ev.ctrlKey || ev.metaKey) { return; }
+      var t = ev.target && ev.target.tagName;
+      if (t === 'VIDEO' || t === 'BUTTON' || t === 'A' || t === 'SELECT' || t === 'INPUT' || t === 'TEXTAREA') { return; }
+      var k = ev.key;
+      if (k === 'ArrowRight' || k === 'PageDown' || k === ' ') { ev.preventDefault(); irADeck(actualDeck + 1); }
+      else if (k === 'ArrowLeft' || k === 'PageUp') { ev.preventDefault(); irADeck(actualDeck - 1); }
+      else if (k === 'Home') { ev.preventDefault(); irADeck(0); }
+      else if (k === 'End') { ev.preventDefault(); irADeck(diapos.length - 1); }
+      else if (k === 'f' || k === 'F') { pantallaCompleta(); }
+    });
+
+    // Un enlace con ancla (#eq-equipo-6) abre esa diapositiva y la marca como actual.
+    var ancla = decodeURIComponent((location.hash || '').slice(1));
+    var primera = ancla && document.getElementById(ancla);
+    if (primera && diapos.indexOf(primera) >= 0) { irADeck(diapos.indexOf(primera)); }
+    else { pintarDeck(0); }
+  }
+
+
   /* Senal de que el archivo corrio hasta el final. No la borres: la usa
      herramientas/auditar_js.py para detectar que una excepcion a mitad de
      camino dejo muertas las secciones de abajo sin que se note en la

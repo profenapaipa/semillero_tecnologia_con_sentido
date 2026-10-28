@@ -509,6 +509,8 @@ def cabeza(titulo, desc, pre, activo=None, linea=None, datos=None, mapa=None):
                    ico('libro', 15)))
     menu.append('<li><a href="%sindex.html#publicados">%s Publicados</a></li>'
                 % (pre, ico('cohete', 15)))
+    menu.append('<li><a href="%scierre.html"%s>%s Cierre</a></li>'
+                % (pre, ' aria-current="page"' if activo == 'cierre' else '', ico('diana', 15)))
     return """<!doctype html>
 <html lang="es" data-theme="light">
 <head>
@@ -905,7 +907,9 @@ def pagina_portal(datos):
     h.append('</ul>')
     h.append('<div class="botones portada-acciones">'
              '<a class="boton principal" href="#proyectos">%s Ver los proyectos</a>'
-             '<a class="boton" href="#como">Cómo funciona esto</a></div>' % ico('flecha', 17))
+             '<a class="boton" href="#como">Cómo funciona esto</a>'
+             '<a class="boton" href="cierre.html">%s Cierre del año</a></div>'
+             % (ico('flecha', 17), ico('diana', 16)))
     h.append('</div></header>')
 
     h.append('<div class="portal-cuerpo">')
@@ -1922,6 +1926,44 @@ VEREDICTOS = {
 }
 
 
+def figura_avance(it, pre):
+    """
+    Una pieza de la seccion Avances: video, galeria o imagen, con su pie.
+    pre es la ruta a la raiz del sitio: '../' desde la pagina de un equipo y
+    '' desde cierre.html.
+    """
+    h = []
+    # tipo-<x> y no <x>: "galeria" y "video" ya son clases de otras piezas
+    h.append('<figure class="avance tipo-%s">' % e(it['tipo']))
+    if it['tipo'] == 'video':
+        h.append('<video controls preload="none" playsinline poster="%s%s" '
+                 'width="%d" height="%d" aria-label="%s">'
+                 '<source src="%s%s" type="video/mp4">'
+                 'Tu navegador no reproduce este video. Se abre desde '
+                 '<a href="%s%s">este enlace</a>.</video>'
+                 % (pre, e(it['poster']), it['ancho'], it['alto'], e(it['titulo']),
+                    pre, e(it['archivo']), pre, e(it['archivo'])))
+    elif it['tipo'] == 'galeria':
+        h.append('<ul class="galeria">')
+        for im in it['imagenes']:
+            h.append('<li><a href="%s%s" target="_blank" rel="noopener">'
+                     '<img src="%s%s" alt="%s" loading="lazy" width="%d" height="%d"></a></li>'
+                     % (pre, e(im.get('grande', im['archivo'])), pre, e(im['archivo']), e(im['alt']),
+                        im.get('ancho', 320), im.get('alto', 240)))
+        h.append('</ul>')
+    else:
+        h.append('<img src="%s%s" alt="%s" loading="lazy" width="%d" height="%d">'
+                 % (pre, e(it['archivo']), e(it['alt']), it.get('ancho', 640), it.get('alto', 400)))
+    meta_txt = ' · '.join(x for x in (it.get('duracion'),
+                                      fecha_larga(it['fecha']) if it.get('fecha') else '') if x)
+    h.append('<figcaption><b>%s</b>%s%s</figcaption>'
+             % (e(it['titulo']),
+                ('<span class="dato">%s</span>' % e(meta_txt)) if meta_txt else '',
+                ('<p>%s</p>' % e(it['nota'])) if it.get('nota') else ''))
+    h.append('</figure>')
+    return ''.join(h)
+
+
 def seccion_avances(equipo):
     """
     Lo que el equipo ya hizo y se puede ver aqui mismo: un video, una galeria
@@ -1943,34 +1985,7 @@ def seccion_avances(equipo):
              'El original sigue allá.</p></div>' % ico('video', 15))
     h.append('<div class="avances">')
     for it in items:
-        # tipo-<x> y no <x>: "galeria" y "video" ya son clases de otras piezas
-        h.append('<figure class="avance tipo-%s">' % e(it['tipo']))
-        if it['tipo'] == 'video':
-            h.append('<video controls preload="none" playsinline poster="../%s" '
-                     'width="%d" height="%d" aria-label="%s">'
-                     '<source src="../%s" type="video/mp4">'
-                     'Tu navegador no reproduce este video. Se abre desde '
-                     '<a href="../%s">este enlace</a>.</video>'
-                     % (e(it['poster']), it['ancho'], it['alto'], e(it['titulo']),
-                        e(it['archivo']), e(it['archivo'])))
-        elif it['tipo'] == 'galeria':
-            h.append('<ul class="galeria">')
-            for im in it['imagenes']:
-                h.append('<li><a href="../%s" target="_blank" rel="noopener">'
-                         '<img src="../%s" alt="%s" loading="lazy" width="%d" height="%d"></a></li>'
-                         % (e(im.get('grande', im['archivo'])), e(im['archivo']), e(im['alt']),
-                            im.get('ancho', 320), im.get('alto', 240)))
-            h.append('</ul>')
-        else:
-            h.append('<img src="../%s" alt="%s" loading="lazy" width="%d" height="%d">'
-                     % (e(it['archivo']), e(it['alt']), it.get('ancho', 640), it.get('alto', 400)))
-        meta_txt = ' · '.join(x for x in (it.get('duracion'),
-                                          fecha_larga(it['fecha']) if it.get('fecha') else '') if x)
-        h.append('<figcaption><b>%s</b>%s%s</figcaption>'
-                 % (e(it['titulo']),
-                    ('<span class="dato">%s</span>' % e(meta_txt)) if meta_txt else '',
-                    ('<p>%s</p>' % e(it['nota'])) if it.get('nota') else ''))
-        h.append('</figure>')
+        h.append(figura_avance(it, '../'))
     h.append('</div></div></section>')
     return ''.join(h)
 
@@ -2308,6 +2323,221 @@ def pagina_guias(datos, guias):
     return '\n'.join(h)
 
 
+def cargar_cierre():
+    ruta = os.path.join(RAIZ, 'datos', 'cierre.json')
+    with open(ruta, encoding='utf-8') as fh:
+        return json.load(fh)
+
+
+def _tarjetas(items):
+    """Una rejilla de tarjetas con titulo y texto: pedagogia, barreras, etc."""
+    return ('<ul class="tarjetas-cierre">%s</ul>'
+            % ''.join('<li><h3>%s</h3><p>%s</p></li>' % (e(x['titulo']), e(x['texto'])) for x in items))
+
+
+def _cab_lamina(rotulo, titulo, sub=''):
+    return ('<div class="lamina-cab"><span class="rotulo">%s</span><h2>%s</h2>%s</div>'
+            % (e(rotulo), e(titulo), ('<p class="bajada-lamina">%s</p>' % e(sub)) if sub else ''))
+
+
+def vista_equipo_cierre(datos, equipo, cfg):
+    """
+    Lo que se ve a la derecha de la diapositiva de un equipo. En este orden:
+    un video, si hay; si no, la captura de su sitio publicado; si no, un
+    enlace al juego; si no, una lista de lo que ya tiene. Debajo, las
+    miniaturas de sus fotos y bocetos y los botones de abrir.
+    """
+    avs = equipo.get('avances') or []
+    pub = equipo.get('publicacion') or {}
+    video = next((a for a in avs if a['tipo'] == 'video'), None)
+    captura = vista_previa(pub['url'], equipo['nombre'], equipo['slug'], '') if pub.get('url') else ''
+    enlace = cfg.get('enlace')
+    if enlace and not os.path.exists(os.path.join(SALIDA, enlace['url'])):
+        enlace = None
+
+    h = ['<div class="lamina-vista">']
+    # cfg['principal'] = 'galeria' pone las pantallas de la aplicacion en lugar
+    # de la captura del sitio: sirve cuando la pantalla de entrada no es lo
+    # mejor que el equipo tiene para mostrar.
+    galeria = next((a for a in avs if a['tipo'] == 'galeria'), None)
+    if video:
+        h.append(figura_avance(video, ''))
+    elif cfg.get('principal') == 'galeria' and galeria:
+        h.append(figura_avance(galeria, ''))
+        avs = [a for a in avs if a is not galeria]
+    elif captura:
+        h.append(captura)
+    elif enlace:
+        h.append('<div class="vista-enlace">%s<p>Hay un borrador que ya se puede jugar en el navegador.</p>'
+                 '<a class="boton principal" href="%s">%s %s</a></div>'
+                 % (ico('unity', 34), e(enlace['url']), ico('externo', 16), e(enlace['texto'])))
+    else:
+        hh, tt, nv = totales(datos, equipo)
+        hechas = [t[1] for n in nv for t in n['tareas'] if t[2]]
+        if hechas:
+            h.append('<div class="ya-tiene"><h3>Lo que ya tiene</h3><ul>%s</ul></div>'
+                     % ''.join('<li>%s%s</li>' % (ico('check', 15), e(x)) for x in hechas[:6]))
+        else:
+            h.append('<div class="ya-tiene"><h3>Lo que ya tiene</h3>'
+                     '<p>Es un proyecto que empieza: lo primero es ponerlo por escrito.</p></div>')
+
+    # miniaturas de lo demas: imagenes sueltas y fotos de las galerias
+    minis = []
+    for a in avs:
+        if a is video:
+            continue
+        if a['tipo'] == 'imagen':
+            minis.append((a['archivo'], a['archivo'], a['alt']))
+        elif a['tipo'] == 'galeria':
+            minis += [(im['archivo'], im.get('grande', im['archivo']), im['alt']) for im in a['imagenes']]
+    if minis:
+        h.append('<ul class="minis">%s</ul>' % ''.join(
+            '<li><a href="%s" target="_blank" rel="noopener"><img src="%s" alt="%s" loading="lazy"></a></li>'
+            % (e(g), e(m), e(alt)) for m, g, alt in minis[:8]))
+
+    bot = []
+    if pub.get('url'):
+        bot.append('<a class="boton principal" href="%s">%s Abrir el sitio</a>' % (e(pub['url']), ico('externo', 16)))
+    if enlace and (video or captura):
+        bot.append('<a class="boton" href="%s">%s %s</a>' % (e(enlace['url']), ico('externo', 16), e(enlace['texto'])))
+    if pub.get('repo'):
+        bot.append('<a class="boton" href="%s">%s Código</a>' % (e(pub['repo']), ico('github', 16)))
+    if bot:
+        h.append('<div class="botones">%s</div>' % ''.join(bot))
+    h.append('</div>')
+    return ''.join(h)
+
+
+def pagina_cierre(datos, cierre):
+    """docs/cierre.html: el cierre del año como una presentacion de diapositivas."""
+    meta = datos['meta']
+    eqs = datos['equipos']
+    ap = cierre['apertura']
+    codigos = set()
+    hechas_total = publicados = 0
+    for eq in eqs:
+        codigos.update(re.findall(r'E\d{2}', eq['integrantes']))
+        hh, _tt, _nv = totales(datos, eq)
+        hechas_total += hh
+        if (eq.get('publicacion') or {}).get('estado') == 'en linea':
+            publicados += 1
+
+    h = [cabeza('Cierre del año · Semillero Maker de Tecnología con Sentido',
+                'El cierre del año del Semillero Maker: lo que se hizo, lo que se aprendió '
+                'y lo que viene, equipo por equipo.', '', activo='cierre', datos=datos)]
+    h.append('<main class="deck" id="deck" data-deck>')
+    indice = []   # (id, titulo): lo usa el selector de la barra
+
+    def abrir(id_, titulo, clase=''):
+        indice.append((id_, titulo))
+        return '<section class="lamina %s" id="%s" data-titulo="%s">' % (clase, id_, e(titulo))
+
+    # --- 1. portada ---
+    pt = cierre['portada']
+    h.append(abrir('inicio-cierre', 'Portada', 'portada portada-inicio lamina-oscura'))
+    h.append('<div class="envoltura">')
+    h.append('<p class="rotulo">%s</p><h1>%s</h1><p class="bajada">%s</p>'
+             % (e(pt['rotulo']), e(pt['titulo']), e(pt['bajada'])))
+    h.append('<ul class="portada-cifras">')
+    for cifra, pie_ in [(len(eqs), 'proyectos'), (len(datos['lineas']), 'líneas técnicas'),
+                        (len(codigos), 'estudiantes'), (publicados, 'sitios publicados'),
+                        (hechas_total, 'tareas con evidencia')]:
+        h.append('<li><span class="cifra">%s</span><span class="pie">%s</span></li>' % (e(cifra), e(pie_)))
+    h.append('</ul>')
+    h.append('<p class="pista-deck">Avanza con las flechas del teclado. Con F, pantalla completa.</p>')
+    h.append('</div></section>')
+
+    # --- 2. que fue este semestre ---
+    it = ap['intro']
+    h.append(abrir('semestre', it['titulo']))
+    h.append('<div class="envoltura">%s<p class="texto-grande">%s</p><ol class="niveles-cierre">%s</ol></div></section>'
+             % (_cab_lamina('Apertura', it['titulo']), e(it['texto']),
+                ''.join('<li><span>%d</span>%s</li>' % (i + 1, e(f['nombre'])) for i, f in enumerate(datos['fases']))))
+
+    # --- 3 a 5. pedagogia, tecnica, barreras ---
+    ped = ap['pedagogia']
+    h.append(abrir('pedagogia', ped['titulo']))
+    h.append('<div class="envoltura">%s%s</div></section>'
+             % (_cab_lamina('Pedagogía', ped['titulo'], ped['subtitulo']), _tarjetas(ped['items'])))
+
+    tec = ap['tecnica']
+    h.append(abrir('tecnica', tec['titulo']))
+    h.append('<div class="envoltura">%s<ul class="lineas-cierre">%s</ul>%s</div></section>'
+             % (_cab_lamina('Lo técnico', tec['titulo'], tec['subtitulo']),
+                ''.join('<li data-linea="%s"><span class="icono-linea">%s</span><div><h3>%s</h3><p>%s</p></div></li>'
+                        % (e(x['linea']), ico(ICONO_LINEA[x['linea']], 22), e(datos['lineas'][x['linea']]['nombre']), e(x['texto']))
+                        for x in tec['lineas']),
+                _tarjetas(tec['comun'])))
+
+    bar = ap['barreras']
+    h.append(abrir('barreras', bar['titulo']))
+    h.append('<div class="envoltura">%s%s</div></section>'
+             % (_cab_lamina('Barreras', bar['titulo'], bar['subtitulo']), _tarjetas(bar['items'])))
+
+    # --- 6. los equipos: indice ---
+    h.append(abrir('equipos', 'Los equipos'))
+    h.append('<div class="envoltura">%s<ul class="chips-equipos">%s</ul></div></section>'
+             % (_cab_lamina('Ahora, los equipos', 'Cada uno cuenta lo que hizo',
+                           'Un proyecto, su avance y una vista de lo que construyó.'),
+                ''.join('<li data-linea="%s"><a href="#eq-%s"><b>%s</b><span>%s</span></a></li>'
+                        % (e(eq['linea']), e(eq['slug']), e(eq['numero']), e(eq['nombre'])) for eq in eqs)))
+
+    # --- 7 a 22. un equipo por diapositiva ---
+    for eq in eqs:
+        cfg = cierre['equipos'].get(eq['slug'], {})
+        hh, tt, _nv = totales(datos, eq)
+        h.append(abrir('eq-' + eq['slug'], 'Equipo %s · %s' % (eq['numero'], eq['nombre']), 'equipo-lamina'))
+        h.append('<div class="envoltura lamina-cuerpo" data-linea="%s">' % e(eq['linea']))
+        h.append('<div class="lamina-texto">')
+        h.append('<span class="rotulo">%s Equipo %s · %s</span><h2>%s</h2><p class="dato">%s</p>'
+                 % (ico(ICONO_LINEA.get(eq['linea'], 'diana'), 15), e(eq['numero']),
+                    e(datos['lineas'][eq['linea']]['nombre']), e(eq['nombre']), e(eq['integrantes'])))
+        h.append(progreso('Avance de la ruta', hh, tt, alta=True))
+        if cfg.get('lograron'):
+            h.append('<h3>Lo que lograron</h3><ul class="logros">%s</ul>'
+                     % ''.join('<li>%s<span>%s</span></li>' % (ico('check', 15), e(x)) for x in cfg['lograron']))
+        if cfg.get('sigue'):
+            h.append('<p class="sigue-lamina"><b>Lo que sigue</b>%s</p>' % e(cfg['sigue']))
+        h.append('</div>')
+        h.append(vista_equipo_cierre(datos, eq, cfg))
+        h.append('</div></section>')
+
+    # --- proyeccion ---
+    pr = cierre['proyeccion']
+    h.append(abrir('proyeccion', pr['titulo']))
+    h.append('<div class="envoltura">%s<div class="proyeccion"><ol class="fechas-cierre">%s</ol>%s</div></div></section>'
+             % (_cab_lamina('Proyección', pr['titulo']),
+                ''.join('<li><b>%s</b><span>%s</span></li>' % (e(x['cuando']), e(x['que'])) for x in pr['cercano']),
+                _tarjetas(pr['futuro'])))
+
+    # --- cierre: el mundo cambia, y el final ---
+    mu = cierre['cierre']['mundo']
+    h.append(abrir('mundo', mu['titulo'], 'portada portada-inicio lamina-oscura'))
+    h.append('<div class="envoltura"><p class="rotulo">Para terminar</p><h2 class="titulo-final">%s</h2>%s</div></section>'
+             % (e(mu['titulo']), ''.join('<p class="frase-final">%s</p>' % e(x) for x in mu['lineas'])))
+
+    fi = cierre['cierre']['final']
+    h.append(abrir('final', fi['titulo'], 'portada portada-inicio lamina-oscura'))
+    h.append('<div class="envoltura"><h2 class="titulo-final grande">%s</h2>%s<p class="firma-final">%s</p></div></section>'
+             % (e(fi['titulo']), ''.join('<p class="frase-final">%s</p>' % e(x) for x in fi['parrafos']), e(fi['firma'])))
+    h.append('</main>')
+
+    # --- barra de la presentacion (solo con JavaScript) ---
+    h.append('<div class="deck-nav" id="deck-nav" role="group" aria-label="Controles de la presentación">'
+             '<button type="button" id="deck-ant" aria-label="Diapositiva anterior">%s</button>'
+             '<span class="deck-cuenta" id="deck-cuenta" aria-live="polite">1 / %d</span>'
+             '<button type="button" id="deck-sig" aria-label="Diapositiva siguiente">%s</button>'
+             '<label class="deck-ir"><span class="solo-lectores">Ir a la diapositiva</span>'
+             '<select id="deck-indice">%s</select></label>'
+             '<button type="button" id="deck-pantalla" aria-label="Pantalla completa">Pantalla completa</button>'
+             '</div>'
+             % (ico('chevron', 18), len(indice), ico('chevron', 18),
+                ''.join('<option value="%s">%s</option>' % (e(i), e(t)) for i, t in indice)))
+    h.append(pie(meta))
+    return '\n'.join(h)
+
+
+
 def main():
     global VERSION_ASSETS, PROYECTOS_EN_LETRAS, GUIAS
     VERSION_ASSETS = huella('assets/css/marca.css', 'assets/css/sitio.css',
@@ -2342,6 +2572,7 @@ def main():
     for g in GUIAS:
         escribir('guias/%s.html' % g['id'], pagina_guia(datos, g))
     escribir('guias/index.html', pagina_guias(datos, GUIAS))
+    escribir('cierre.html', pagina_cierre(datos, cargar_cierre()))
 
     with open(os.path.join(SALIDA, '.nojekyll'), 'w', encoding='utf-8') as fh:
         fh.write('')
