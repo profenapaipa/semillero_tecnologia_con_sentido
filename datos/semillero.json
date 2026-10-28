@@ -4,7 +4,7 @@
     "docente": "Néstor Andrés Paipa",
     "colegio": "Bogotá",
     "semestre": "2026-II",
-    "revisado": "2026-10-26",
+    "revisado": "2026-10-28",
     "sesionesRestantes": [
       "miércoles 28 y jueves 29 de octubre"
     ],
@@ -762,7 +762,19 @@
           }
         ],
         "siguiente": "Escriban 1.1 y 1.3 en el artículo copiando de la propuesta, que ya la tienen."
-      }
+      },
+      "avances": [
+        {
+          "tipo": "imagen",
+          "titulo": "Boceto de la página web",
+          "archivo": "assets/avances/equipo-1/bocetos.webp",
+          "alt": "Boceto en papel cuadriculado de la página: una cuadrícula de tarjetas con videos, una lista de capítulos y el título «Un café con la iguana»",
+          "ancho": 675,
+          "alto": 1200,
+          "fecha": "2026-08-12",
+          "nota": "Dibujo a mano de cómo se organizan los videos y los capítulos en la página."
+        }
+      ]
     },
     {
       "numero": "2.1",
@@ -1491,17 +1503,17 @@
         "nota": "Ya es público y está publicado en GitHub Pages. El proyecto se construye con Vite y el sitio se sirve desde la raíz del repositorio."
       },
       "revision": {
-        "fecha": "2026-10-26",
+        "fecha": "2026-10-28",
         "items": [
           {
-            "que": "Bocetos",
+            "que": "Datos para el lector",
             "veredicto": "bien",
-            "porque": "La imagen del 14 muestra la pantalla de inicio, cómo la cámara reconoce la mano y el caso de error con \"quizás quisiste decir\". Pensar el error desde el boceto es poco común y muy bueno."
+            "porque": "Grabaron las cinco vocales con cada mano: diez videos y dieciséis fotos el 27 de octubre. Tres fotos de la mano izquierda (E, I 1 e I 2) son copias exactas de las de la derecha; con las demás quedan trece distintas, abajo en Avances."
           },
           {
             "que": "Bitácora de cambios",
             "veredicto": "bien",
-            "porque": "Registran con fecha los cambios que piden: el logo, el enlace al código y la letra A. Sumen el porqué de cada uno."
+            "porque": "Se editó el 27 y esa edición todavía no se ha revisado. Lo que había registra con fecha los cambios que piden; sumen el porqué de cada uno."
           },
           {
             "que": "Artículo",
@@ -1509,8 +1521,119 @@
             "porque": "Sigue en blanco. La pregunta de la sección 1.3 es lo que frena el nivel 2."
           }
         ],
-        "siguiente": "Escriban 1.3 en el artículo y describan en el registro de bocetos la imagen que ya subieron."
-      }
+        "siguiente": "Escriban 1.3 en el artículo. Cada video pesa unos 200 MB: no los suban a GitHub; saquen fotogramas de cada uno y graben las fotos que faltan de la mano izquierda (E, I 1 e I 2)."
+      },
+      "avances": [
+        {
+          "tipo": "galeria",
+          "titulo": "Las cinco vocales, con cada mano",
+          "imagenes": [
+            {
+              "archivo": "assets/avances/equipo-6/mano-derecha-a-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-derecha-a.webp",
+              "alt": "Mano derecha formando la vocal A en lengua de señas",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-derecha-e-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-derecha-e.webp",
+              "alt": "Mano derecha formando la vocal E en lengua de señas",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-derecha-i1-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-derecha-i1.webp",
+              "alt": "Mano derecha formando la vocal I en lengua de señas (toma 1)",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-derecha-i2-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-derecha-i2.webp",
+              "alt": "Mano derecha formando la vocal I en lengua de señas (toma 2)",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-derecha-o-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-derecha-o.webp",
+              "alt": "Mano derecha formando la vocal O en lengua de señas",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-derecha-o2-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-derecha-o2.webp",
+              "alt": "Mano derecha formando la vocal O en lengua de señas (toma 2)",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-derecha-u1-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-derecha-u1.webp",
+              "alt": "Mano derecha formando la vocal U en lengua de señas (toma 1)",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-derecha-u2-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-derecha-u2.webp",
+              "alt": "Mano derecha formando la vocal U en lengua de señas (toma 2)",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-izquierda-a-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-izquierda-a.webp",
+              "alt": "Mano izquierda formando la vocal A en lengua de señas",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-izquierda-o1-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-izquierda-o1.webp",
+              "alt": "Mano izquierda formando la vocal O en lengua de señas (toma 1)",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-izquierda-o2-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-izquierda-o2.webp",
+              "alt": "Mano izquierda formando la vocal O en lengua de señas (toma 2)",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-izquierda-u1-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-izquierda-u1.webp",
+              "alt": "Mano izquierda formando la vocal U en lengua de señas (toma 1)",
+              "ancho": 420,
+              "alto": 315
+            },
+            {
+              "archivo": "assets/avances/equipo-6/mano-izquierda-u2-mini.webp",
+              "grande": "assets/avances/equipo-6/mano-izquierda-u2.webp",
+              "alt": "Mano izquierda formando la vocal U en lengua de señas (toma 2)",
+              "ancho": 420,
+              "alto": 315
+            }
+          ],
+          "fecha": "2026-10-27",
+          "nota": "Fotos para que el lector aprenda a reconocer la seña. Son 13 distintas: tres de la mano izquierda eran copias de la derecha. Los diez videos de donde salen quedan en la carpeta del equipo; pesan unos 200 MB cada uno."
+        },
+        {
+          "tipo": "imagen",
+          "titulo": "Bocetos de la aplicación",
+          "archivo": "assets/avances/equipo-6/bocetos.webp",
+          "alt": "Tres bocetos de la aplicación: la pantalla de inicio con dos manos y un ojo, la cámara captando la mano de una persona para reconocer la letra A, y el aviso de error «quizás quisiste decir»",
+          "ancho": 615,
+          "alto": 757,
+          "fecha": "2026-10-14",
+          "nota": "Incluye el caso de error: qué ve el usuario cuando la seña no se reconoce."
+        }
+      ]
     },
     {
       "numero": "7",
@@ -1913,8 +2036,8 @@
           "Formato1_Necesidades_Equipo10, 1.108 caracteres propios"
         ],
         "ante": [
-          false,
-          "No hay carpeta de antecedentes con fuentes"
+          true,
+          "Antecedentes/Propuesta.docx, editado el 27 de octubre: tres fuentes con autor, idea principal y enlace. Dos (Ontiveros Terrazas et al., EFDeportes, 2020) existen y dicen lo que el equipo anota; la tercera es una tesis en ProQuest. Falta el año en cada cita"
         ],
         "cron": [
           true,
@@ -1991,17 +2114,17 @@
         "nota": "Un juego de Unity se puede publicar en GitHub Pages si se exporta como build WebGL. Primero hay que tener la dinámica funcionando."
       },
       "revision": {
-        "fecha": "2026-10-26",
+        "fecha": "2026-10-28",
         "items": [
           {
-            "que": "Propuesta",
+            "que": "Antecedentes",
             "veredicto": "bien",
-            "porque": "La llenaron hoy, con las cinco preguntas. Un ajuste: la pregunta 2 habla de su dificultad con Unity; la barrera del proyecto es la de los jugadores."
+            "porque": "Tres fuentes sobre videojuegos y habilidades motrices, cada una con autor, idea principal y enlace. Dos de EFDeportes existen y dicen lo que ustedes anotan. Falta el año de cada una: es parte de la cita."
           },
           {
-            "que": "Acuerdos",
+            "que": "Pregunta de investigación",
             "veredicto": "bien",
-            "porque": "Cinco frentes, cinco acuerdos y las tres firmas. \"Mediante buena comunicación\" no es un canal: escriban dónde se hablan."
+            "porque": "Mide algo concreto (tiempo de reacción y precisión) y compara con un método convencional. Está en la propuesta; todavía no en el artículo."
           },
           {
             "que": "Diseño del juego",
@@ -2009,7 +2132,7 @@
             "porque": "Documento con los dos modos de juego."
           }
         ],
-        "siguiente": "Con esto se cierra el nivel 1. Lo siguiente es abrir el kit de Unity y probar la escena (Guía 0)."
+        "siguiente": "Pasen la pregunta a la sección 1.3 del artículo y agreguen el año a cada antecedente. Después, la Guía 0: abrir el kit de Unity y probar la escena."
       }
     },
     {
@@ -2274,7 +2397,7 @@
         ],
         "ante": [
           false,
-          "01_Antecedentes tiene una matriz con tres fuentes: una confirmada (Gonzalez, Minchala y Langer, 2025, Revista Colombiana de Educación); la de Popayán existe pero es otro trabajo; la de Manizales no se pudo comprobar. Faltan los PDF"
+          "01_Antecedentes tiene ahora el PDF de Muelas Aranda (2023) y la matriz con González, Minchala y Langer (2025): dos fuentes reales. Falta una tercera comprobada; la de Manizales no se pudo comprobar, y el artículo v5 cita cuatro que no aparecen en Crossref"
         ],
         "cron": [
           true,
@@ -2314,15 +2437,15 @@
         ],
         "v5": [
           false,
-          "Sin registro de revisión de audio"
+          "Sin registro de revisión de audio con audífonos. El video exportado ya trae pista de audio y subtítulos"
         ],
         "v6": [
           true,
           "La_incomodidad_de_un_dia_FINAL_legible.pptx, del 16 de septiembre"
         ],
         "v7": [
-          false,
-          "No hay exportado final de video"
+          true,
+          "Video exportado el 26 de octubre, odisea_diversidad_v1: 2 min 50 s, con audio y subtítulos, 1280×544"
         ],
         "barr": [
           true,
@@ -2367,31 +2490,39 @@
         "nota": "La línea audiovisual no se publica como sitio web: el resultado es la pieza audiovisual, y se documenta aquí con el video embebido y el guion."
       },
       "revision": {
-        "fecha": "2026-10-26",
+        "fecha": "2026-10-28",
         "items": [
           {
-            "que": "Propuesta",
+            "que": "Video exportado",
             "veredicto": "bien",
-            "porque": "Las cinco preguntas, respondidas con detalle. Con esto se cierra el nivel 1."
-          },
-          {
-            "que": "Casillas de la sesión",
-            "veredicto": "bien",
-            "porque": "Primer equipo del semillero en marcarlas."
+            "porque": "Dura 2 minutos 50, tiene audio y subtítulos, y la historia de los crayones se entiende sin explicarla. Es lo que se muestra el 29: se puede ver abajo, en Avances."
           },
           {
             "que": "Referencias",
             "veredicto": "ajustar",
-            "porque": "Tienen tres listas distintas en tres documentos. La del artículo v3 no sirve: tres DOI no existen y el cuarto es otro artículo. En la sección 5 hay una fuente confirmada, Gonzalez, Minchala y Langer (2025). La de Popayán existe, pero es otro trabajo: Muelas Aranda (2023), sobre modelado en arcilla, que igual les sirve si lo citan como es."
+            "porque": "El artículo v5 volvió a la lista de cinco fuentes. Cuatro no aparecen en Crossref ni con su título ni con sus autores (Gomez-Galindo, Martínez y Pérez, Ruiz y Gómez, Vargas y Patiño). La de González, Minchala y Langer es real, pero está en el número 96 de la Revista Colombiana de Educación, no en el 89. Los documentos corregidos del 26 eran más fieles: se quedaban con esa y con Muelas Aranda."
           },
           {
             "que": "Coherencia",
             "veredicto": "ajustar",
-            "porque": "La presentación dice que usaron trípode y que el corto está terminado. La ficha técnica dice que no hubo trípode, y en Drive no está el video exportado."
+            "porque": "El v5 dice 195 segundos a 12 fotogramas por segundo y no menciona que se filmó sin trípode; el video dura 170 segundos, y la ficha técnica y los documentos corregidos sí hablan del trípode. Ajusten el dato o el video, y repongan lo del trípode."
           }
         ],
-        "siguiente": "Quédense con una sola lista, la de la sección 5, corrijan la cita de Popayán, bajen los PDF a 01_Antecedentes y suban el video exportado."
-      }
+        "siguiente": "Dejen en el artículo solo las fuentes de 01_Antecedentes (González et al. y Muelas Aranda) y busquen una tercera real; corrijan la duración y registren la revisión del audio con audífonos."
+      },
+      "avances": [
+        {
+          "tipo": "video",
+          "titulo": "La odisea de la diversidad",
+          "archivo": "assets/avances/equipo-11-2/odisea.mp4",
+          "poster": "assets/avances/equipo-11-2/odisea-portada.webp",
+          "ancho": 960,
+          "alto": 408,
+          "duracion": "2 min 50 s",
+          "fecha": "2026-10-26",
+          "nota": "Cortometraje en stop motion con crayones y luz LED, con subtítulos. Copia reducida: el original está en la carpeta de entrega final del equipo."
+        }
+      ]
     },
     {
       "numero": "12",

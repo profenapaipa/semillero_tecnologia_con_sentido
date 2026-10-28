@@ -36,7 +36,9 @@ for base, _d, archivos in os.walk(DOCS):
 # ---- 1. enlaces internos ----
 for p in paginas:
     s = leer(p)
-    for m in re.finditer(r'(?:href|src)="([^"#:]+)(?:#[^"]*)?"', s):
+    # poster: la portada de un <video>. Sin ella el video se ve negro hasta
+    # que se reproduce, y nadie lo nota porque el enlace no se rompe.
+    for m in re.finditer(r'(?:href|src|poster)="([^"#:]+)(?:#[^"]*)?"', s):
         # Se quita la huella de version: assets/x.css?v=abc123 es assets/x.css
         destino = m.group(1).split('?')[0]
         if destino.startswith(('http', 'mailto:', 'data:', '//')) or not destino:

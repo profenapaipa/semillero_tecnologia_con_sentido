@@ -1362,26 +1362,84 @@ que la sonda aún lista es esperado: el enlace de saltar al contenido, que va
 fuera de pantalla a propósito, y las diapositivas del carrusel, que Swiper
 recorta.
 
-## 17. Revisión del 28 de octubre: sin novedades, y la cuenta regresiva
+## 17. Revisión del 28 de octubre, con Drive de escritorio
 
-Con Drive desconectado en la sesión no se pudo leer lo que subieron los
-estudiantes. Lo que sí se comprobó:
+### 17.1 Cómo se leyó Drive
 
-- Los seis repositorios públicos no tienen commits posteriores al 26 de
-  octubre (el más reciente, Kinesis, es del 17; la iguana, del 1 de octubre;
-  English Roulette, del 10 de septiembre).
-- Las carpetas locales `Proyectos repositorios Github` y `SEMILLERO AULA MAKER`
-  no tienen archivos modificados desde el 26.
+El conector de Drive no estaba en la sesión, pero Drive de escritorio mantiene
+la carpeta sincronizada. La cuenta del colegio está en la unidad `K:` y los
+aportes de los equipos, en `Proyectos semillero 2026`. La cuenta personal está
+en `G:`, sin material de los equipos. Detalles que cuestan encontrar:
 
-Por eso `meta.revisado` se queda en el 26 de octubre: esa fecha dice cuándo se
-revisó lo que subieron los equipos, y no hubo revisión nueva.
+- Fecha de modificación o de creación local: un archivo cuenta si cualquiera
+  de las dos pasa el corte. La de creación local es la de Drive, así que un
+  archivo subido conserva su fecha original de modificación pero no la de
+  creación.
+- Se ignoran los `desktop.ini`: la sincronización del 28 a las 12:07 los
+  reescribió todos y llenaba el listado de ruido.
+- Pedir un archivo entero de una vez falla con `OSError 22`. Se lee por
+  bloques de 1 MB. Hace falta también para videos de decenas de MB.
+- Los documentos de Google (`.gdoc`, `.gsheet`) son un acceso directo de unos
+  200 bytes: su contenido no se puede leer desde el disco. Quedaron sin leer la
+  bitácora de cambios del equipo 6 y "ZocaLab App", editados el 27 y el 28.
 
-Lo que sí estaba desactualizado era la cuenta regresiva de "Lo de hoy": se
-contaba desde `revisado`, así que el 28 de octubre seguía diciendo "3 días
-para la muestra" cuando faltaba 1. Ahora `desde_hoy()` cuenta desde la fecha
-en que se genera el sitio (nunca anterior a `revisado`), dice "1 día" en
-singular y "Hoy es la muestra" el 29. La cuenta se actualiza al regenerar, no
-sola: si el sitio no se regenera, queda con la fecha de la última generación.
+De 15.702 archivos, 35 son nuevos o modificados desde el 26 de octubre a las 12:00.
+Solo los equipos 11.2, 10.1 y 6 tienen aportes nuevos. Los repositorios
+públicos no tienen commits posteriores al 17 de octubre.
 
-La auditoría de JavaScript agotó una vez los 180 s en `equipo-1.html` y pasó
-al repetirla sin cambiar nada; no hay procesos de Chrome huérfanos.
+### 17.2 Lo que cambió por equipo
+
+- **11.2.** Primer video exportado: `odisea_diversidad_v1`, 2 min 50 s, 1280×544,
+  con audio y subtítulos. Marca "Exportado final entregado". El artículo v5 vuelve
+  a una lista de cinco referencias de las que cuatro no aparecen en Crossref, y la
+  quinta (González, Minchala y Langer, 2025) está en el número 96 de la Revista
+  Colombiana de Educación, no en el 89. Los documentos "corregidos" del 26 eran
+  más fieles. El v5 dice 195 s a 12 fps y el video dura 170 s. `ante` sigue sin
+  marcar: dos fuentes reales de tres.
+- **10.1.** `Propuesta.docx` trae la pregunta de investigación y tres antecedentes
+  con autor, idea y enlace. Dos (EFDeportes, 2020) existen y coinciden. Marca
+  `ante`. Falta el año en el documento. La pregunta sigue pendiente porque está
+  en la propuesta y no en el artículo.
+- **6.** Diez videos de vocales (175 a 250 MB cada uno) y dieciséis fotos. Tres
+  fotos de la mano izquierda son copias exactas (mismo MD5) de las de la
+  derecha, así que son trece distintas. No cambia ninguna casilla.
+
+### 17.3 Sección "Avances" en el Resumen
+
+Pedido: mostrar los recursos, como el video, desde la página. `equipo['avances']`
+en `semillero.json` admite `video`, `galeria` e `imagen`. Los archivos son
+copias reducidas en `docs/assets/avances/<equipo>/`; el original queda en Drive.
+
+- **Video del 11.2:** de 39 MB a 3,9 MB con el ffmpeg de KeyShot 8 (el único con
+  libx264 en este equipo): 960 px de ancho, H.264 y AAC, `+faststart`.
+  `preload="none"` con portada: el Resumen no descarga el video hasta que alguien
+  lo reproduce. Se decodificó completo con ffmpeg sin errores.
+- **Escudo del colegio:** el video lleva el escudo de la institución como marca
+  de agua abajo a la derecha hasta cerca del segundo 79. Como el sitio no lleva
+  créditos del colegio, la copia reducida lo tapa con `delogo` entre los
+  segundos 0 y 79,5. El original de Drive no se tocó. La marca de la app de
+  stop motion se dejó.
+- **Fotos del 6:** miniaturas de 420 px y ampliación de 1200 px en WebP, con
+  nombres neutros. Solo manos contra una pared lisa, sin rostros. Los 10 videos
+  de 200 MB no se publican.
+- **Bocetos de los equipos 1 y 6:** dibujos, sin rostros reales.
+- Las clases del `figure` son `tipo-<x>`: la primera versión usaba `galeria` y
+  `video`, que ya son clases de otras piezas, y la galería se rompía.
+- `auditar.py` ahora también revisa `poster=`. Probado quitando la portada: falla.
+
+### 17.4 La cuenta regresiva de Lo de hoy
+
+Se contaba desde `meta.revisado`, así que el 28 de octubre decía "3 días para la
+muestra" cuando faltaba 1. `desde_hoy()` cuenta desde la fecha de generación
+(nunca anterior a `revisado`), dice "1 día" y "Hoy es la muestra" el 29. Se
+actualiza al regenerar, no sola.
+
+### 17.5 Pendiente
+
+- El push falló: git perdió la credencial de GitHub y el administrador de
+  credenciales pide iniciar sesión en el navegador.
+- La sonda de reproducción con `--virtual-time-budget` no sirve para medios
+  (devuelve duración 0 sin error): Chrome no espera la descarga bajo tiempo
+  virtual. Por eso el video se valida con ffmpeg.
+- La auditoría de JavaScript agotó una vez los 180 s en `equipo-1.html` y pasó al
+  repetirla; Chrome sin ventana es intermitente.

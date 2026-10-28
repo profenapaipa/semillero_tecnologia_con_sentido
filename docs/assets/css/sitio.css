@@ -2315,3 +2315,33 @@ summary.modulo-cab:focus-visible { outline: 3px solid var(--cian); outline-offse
   summary.modulo-cab { padding-right: 42px; }
   summary.modulo-cab::after { right: 18px; top: 34px; }
 }
+
+
+/* ============ 34. Avances: video y fotos de lo que el equipo ya hizo ============ */
+.avances { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 18px; }
+.avance {
+  background: var(--superficie); border: 1px solid var(--filete);
+  border-radius: var(--radio); box-shadow: var(--alzado-1); overflow: hidden;
+  display: flex; flex-direction: column; margin: 0;
+}
+.avance.tipo-video, .avance.tipo-galeria { grid-column: 1 / -1; }
+.avance video { display: block; width: 100%; height: auto; background: #000; }
+.avance > img { display: block; width: 100%; height: auto; }
+.avance figcaption { padding: 14px 18px 17px; display: flex; flex-direction: column; gap: 4px; }
+.avance figcaption b { font-family: var(--fuente-titulos); font-size: 17px; letter-spacing: -.01em; }
+.avance figcaption p { color: var(--tinta-suave); font-size: 14.5px; max-width: 78ch; margin-top: 2px; }
+.galeria {
+  list-style: none; display: grid; gap: 8px; padding: 12px; margin: 0;
+  grid-template-columns: repeat(auto-fill, minmax(min(150px, 45%), 1fr));
+  background: var(--superficie2);
+}
+.galeria li { aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radio-chico); }
+.galeria a { display: block; height: 100%; }
+.galeria img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .2s ease; }
+.galeria a:hover img { transform: scale(1.04); }
+.galeria a:focus-visible { outline: 3px solid var(--cian); outline-offset: 2px; }
+
+/* Una imagen vertical (un boceto en papel) no debe ocupar tres pantallas */
+.avance.tipo-imagen > img {
+  max-height: 520px; object-fit: contain; background: var(--superficie2);
+}

@@ -1170,6 +1170,9 @@ def pagina_equipo(datos, equipo):
     # --- la revision del docente ---
     h.append(panel_revision(equipo, '%s-hoy.html' % s))
 
+    # --- lo que ya se puede ver: video, fotos ---
+    h.append(seccion_avances(equipo))
+
     # --- publicacion ---
     h.append('<section class="bloque"><div class="envoltura">')
     h.append('<div class="cab-seccion"><span class="rotulo">Tu proyecto</span>'
@@ -1917,6 +1920,59 @@ VEREDICTOS = {
     'ajustar':   ('ambar', 'llave-inglesa', 'Hay que ajustar'),
     'pendiente': ('gris',  'punteado',      'Pendiente'),
 }
+
+
+def seccion_avances(equipo):
+    """
+    Lo que el equipo ya hizo y se puede ver aqui mismo: un video, una galeria
+    de fotos o una imagen. Sale de equipo['avances'] y no se pinta si esta
+    vacio. Los archivos son copias reducidas en docs/assets/avances/<equipo>/;
+    el original queda en el Drive del equipo.
+
+    El video NO se descarga hasta que alguien lo reproduce (preload="none" y
+    una imagen de portada): el Resumen no debe pesar varios MB mas para quien
+    solo quiere ver el avance.
+    """
+    items = equipo.get('avances') or []
+    if not items:
+        return ''
+    h = ['<section class="bloque"><div class="envoltura">']
+    h.append('<div class="cab-seccion"><span class="rotulo">%s Avances</span>'
+             '<h2>Lo que ya se puede ver</h2>'
+             '<p>Copias reducidas de lo que el equipo guardó en su carpeta. '
+             'El original sigue allá.</p></div>' % ico('video', 15))
+    h.append('<div class="avances">')
+    for it in items:
+        # tipo-<x> y no <x>: "galeria" y "video" ya son clases de otras piezas
+        h.append('<figure class="avance tipo-%s">' % e(it['tipo']))
+        if it['tipo'] == 'video':
+            h.append('<video controls preload="none" playsinline poster="../%s" '
+                     'width="%d" height="%d" aria-label="%s">'
+                     '<source src="../%s" type="video/mp4">'
+                     'Tu navegador no reproduce este video. Se abre desde '
+                     '<a href="../%s">este enlace</a>.</video>'
+                     % (e(it['poster']), it['ancho'], it['alto'], e(it['titulo']),
+                        e(it['archivo']), e(it['archivo'])))
+        elif it['tipo'] == 'galeria':
+            h.append('<ul class="galeria">')
+            for im in it['imagenes']:
+                h.append('<li><a href="../%s" target="_blank" rel="noopener">'
+                         '<img src="../%s" alt="%s" loading="lazy" width="%d" height="%d"></a></li>'
+                         % (e(im.get('grande', im['archivo'])), e(im['archivo']), e(im['alt']),
+                            im.get('ancho', 320), im.get('alto', 240)))
+            h.append('</ul>')
+        else:
+            h.append('<img src="../%s" alt="%s" loading="lazy" width="%d" height="%d">'
+                     % (e(it['archivo']), e(it['alt']), it.get('ancho', 640), it.get('alto', 400)))
+        meta_txt = ' · '.join(x for x in (it.get('duracion'),
+                                          fecha_larga(it['fecha']) if it.get('fecha') else '') if x)
+        h.append('<figcaption><b>%s</b>%s%s</figcaption>'
+                 % (e(it['titulo']),
+                    ('<span class="dato">%s</span>' % e(meta_txt)) if meta_txt else '',
+                    ('<p>%s</p>' % e(it['nota'])) if it.get('nota') else ''))
+        h.append('</figure>')
+    h.append('</div></div></section>')
+    return ''.join(h)
 
 
 def panel_revision(equipo, enlace_hoy=None):
