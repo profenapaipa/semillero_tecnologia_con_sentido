@@ -2542,19 +2542,19 @@
           "url": "https://github.com/profenapaipa/zocalab"
         }
       ],
-      "nota": "La carpeta de Drive creció: tiene la propuesta de ZocaLab y, en las carpetas de sesión, copias de documentos de otros equipos que no cuentan como suyos. La aplicación está avanzada: siete páginas funcionando con identidad visual muisca, y datos guardados en el navegador, sin servidor.",
+      "nota": "La carpeta de Drive se ordenó con las subcarpetas del semestre: ya tiene la propuesta, los acuerdos y las necesidades de ZocaLab. Las carpetas de sesión siguen con copias de documentos de otros equipos, que no cuentan como suyos; la guía copiada el 29 de octubre no tiene casillas marcadas. Las carpetas de antecedentes, bitácora, evidencias y entrega final están vacías. La aplicación está avanzada: siete páginas funcionando con identidad visual muisca, y datos guardados en el navegador, sin servidor.",
       "estado": {
         "prop": [
           true,
           "ZocaLab_Propuesta.docx y ZocaLab App.docx (octubre de 2026): descripción, problema, justificación, objetivos, público, MVP, avances por mes y visión"
         ],
         "acue": [
-          false,
-          "El Formato2_Acuerdos de la carpeta es del equipo 10, no de ZocaLab"
+          true,
+          "Formato_Acuerdos_ZocaLab.docx, en 02_Cronograma, del 29 de octubre: tres de los cinco frentes con responsable, los cinco acuerdos y la firma. Al ser un solo integrante, el acuerdo sobre incumplimiento dice que no aplica, y el formato pedía escribirlo igual"
         ],
         "nece": [
-          false,
-          "La propuesta define público y MVP, pero no lista recursos ni qué hay que aprender; el Formato1 de la carpeta es del equipo 10"
+          true,
+          "Formato_Necesidades_recursos_Zocalab.docx, en 04_Desarrollo, del 29 de octubre: las cinco categorías de recursos y cuatro habilidades concretas por aprender (base de datos de usuarios, persistencia entre sesiones, árboles animados con SVG y CSS, publicar en un servidor). Falta ajustar la fecha de la parte A, que dice 29 de septiembre"
         ],
         "ante": [
           false,
@@ -2653,7 +2653,7 @@
           {
             "que": "Documentación y alcance",
             "veredicto": "ajustar",
-            "porque": "Los acuerdos, las necesidades, la guía y la ficha técnica de las carpetas de sesión son de otros equipos. Faltan antecedentes con fuentes, cronograma y el artículo. Y como los datos viven en el navegador, que los docentes asignen contenidos y los padres acompañen todavía no es posible."
+            "porque": "Los acuerdos y las necesidades ya están diligenciados y cuentan. La guía y la ficha técnica de las carpetas de sesión siguen siendo de otros equipos. Faltan antecedentes con fuentes, cronograma y el artículo. Y como los datos viven en el navegador, que los docentes asignen contenidos y los padres acompañen todavía no es posible."
           }
         ],
         "siguiente": "Antes del 13 de noviembre: tres antecedentes reales sobre inclusión y dificultades de aprendizaje, un cronograma de lo que sigue (servidor y rol docente) y pasar la propuesta al formato del artículo."
