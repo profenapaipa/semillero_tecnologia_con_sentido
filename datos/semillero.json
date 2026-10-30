@@ -2623,7 +2623,11 @@
           "No existe Articulo_base_v2.docx"
         ]
       },
-      "articuloEstado": {"1.2": true, "1.3": true, "3.4": true},
+      "articuloEstado": {
+        "1.2": true,
+        "1.3": true,
+        "3.4": true
+      },
       "publicacion": {
         "estado": "en linea",
         "url": "https://profenapaipa.github.io/zocalab/",
@@ -2649,12 +2653,37 @@
             "porque": "Muestra 12K+ estudiantes, 320 colegios y 98 % de satisfacción, y el proyecto todavía no tiene usuarios. Son cifras sin respaldo: quítenlas o márquenlas como ejemplo. Una aplicación con sentido no inventa su impacto."
           },
           {
-            "que": "Documentación y alcance",
+            "que": "Acuerdos y necesidades (29 de octubre)",
+            "veredicto": "bien",
+            "porque": "Los dos formatos son propios y están llenos. Los acuerdos reparten los frentes, escriben los cinco acuerdos y traen la firma; como el equipo tiene un solo integrante, el acuerdo sobre incumplimiento dice que no aplica, y el formato pedía escribirlo igual. Las necesidades traen las cinco categorías de recursos y cuatro habilidades por aprender. Un ajuste pequeño: la parte A dice 29 de septiembre y debería decir noviembre."
+          },
+          {
+            "que": "Antecedentes",
+            "veredicto": "bien",
+            "porque": "La matriz tiene tres fuentes reales con autor, año, idea principal y enlace: Baars et al. (2022), Rodríguez-Ferrer et al. (2024) y Delgado-Morales et al. (2025). Se comprobó que los dos primeros DOI existen en Crossref y coinciden con autores y año, y que el enlace del tercero responde. Falta guardar los tres PDF en 01_Antecedentes, que el propio cronograma da como pendientes."
+          },
+          {
+            "que": "Cronograma",
             "veredicto": "ajustar",
-            "porque": "Ya cuentan acuerdos, necesidades, antecedentes, cronograma y la pregunta del artículo. Faltan las secciones 2, 4 y 5 del artículo, los tres PDF de antecedentes, el registro escrito de bocetos, la ficha técnica propia, la hoja de barreras y la bitácora de decisiones. El artículo dice que el repositorio está por definir y ya existe, y el cronograma llega a diciembre cuando la entrega es el 13 de noviembre. Y como los datos viven en el navegador, que los docentes asignen contenidos y los padres acompañen todavía no es posible."
+            "porque": "El Excel está diligenciado de agosto a octubre, con estado y ajustes, y hay un documento con las semanas que siguen. Pero ese plan llega al 16 de diciembre y habla de una muestra el 29 de octubre, y la entrega es el 13 de noviembre: hay que recortarlo a lo que cabe hasta esa fecha. Las filas del 19 de octubre en adelante del Excel quedaron sin llenar. Además cuenta como pendientes el cronómetro Tiempo Sua con esmeraldas y la Tienda del Territorio, que no están en el código, y las pantallas del bosque, que sí están."
+          },
+          {
+            "que": "Artículo base",
+            "veredicto": "ajustar",
+            "porque": "Está hecha la introducción: el problema, los antecedentes (1.2) y la pregunta de investigación escrita como pregunta (1.3), más el estado actual del desarrollo (3.4). La 1.1 no trae evidencia observada ni un dato. Faltan la metodología (2), la discusión (4), las conclusiones y las referencias en APA 7 (5), el título con el grado de cada integrante y el resumen. El texto dice que el repositorio está por definir y ya existe: github.com/profenapaipa/zocalab. Y la numeración de las secciones 3 no coincide con la plantilla del curso, como el propio documento avisa."
+          },
+          {
+            "que": "Orden de la carpeta de Drive",
+            "veredicto": "ajustar",
+            "porque": "El cronograma está repetido en 01_Antecedentes y en 02_Cronograma, y el artículo en 01_Antecedentes y en 04_Desarrollo: conviene dejar una sola copia de cada uno. Siguen vacías 03_Bitacora, 05_Evidencias y 06_Entrega_final. Las carpetas de sesión conservan copias de documentos de otros equipos, que no cuentan. Dos documentos de Google, el planteamiento del problema y ZocaLab App, no se pueden leer desde el disco y no se contaron."
+          },
+          {
+            "que": "Lo que sigue sin hacer",
+            "veredicto": "pendiente",
+            "porque": "Registro escrito de los bocetos, ficha técnica propia, hoja de barreras, casillas de la sesión marcadas, bitácora de decisiones, el artículo en versión 2 y las secciones 2, 4 y 5. Como los datos viven en el navegador, que los docentes asignen contenidos y los padres acompañen todavía no es posible."
           }
         ],
-        "siguiente": "Antes del 13 de noviembre: recortar el cronograma a lo que cabe hasta esa fecha, corregir la fecha de la muestra, subir los tres PDF, escribir las secciones 2, 4 y 5 del artículo (con la tabla de fases y las referencias en APA 7) y dejar la bitácora de decisiones."
+        "siguiente": "Antes del 13 de noviembre, en este orden: recortar el cronograma a esa fecha y corregir la fecha de la muestra; subir los tres PDF de antecedentes; escribir las secciones 2, 4 y 5 del artículo con las referencias en APA 7; dejar la bitácora de decisiones; y quitar o marcar como ejemplo las cifras de la pantalla de entrada."
       },
       "avances": [
         {
