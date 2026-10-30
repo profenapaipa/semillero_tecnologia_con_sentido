@@ -2540,7 +2540,7 @@
           "url": "https://github.com/profenapaipa/zocalab"
         }
       ],
-      "nota": "La carpeta de Drive se ordenó con las subcarpetas del semestre: ya tiene la propuesta, los acuerdos y las necesidades de ZocaLab. Las carpetas de sesión siguen con copias de documentos de otros equipos, que no cuentan como suyos; la guía copiada el 29 de octubre no tiene casillas marcadas. Las carpetas de antecedentes, bitácora, evidencias y entrega final están vacías. La aplicación está avanzada: siete páginas funcionando con identidad visual muisca, y datos guardados en el navegador, sin servidor.",
+      "nota": "La carpeta de Drive ya tiene las subcarpetas del semestre y lo esencial escrito: propuesta, acuerdos, necesidades, matriz de antecedentes, cronograma y artículo base con las secciones 1 y 3. Se repiten archivos: el cronograma está en 01_Antecedentes y en 02_Cronograma, y el artículo en 01_Antecedentes y en 04_Desarrollo. Siguen vacías bitácora, evidencias y entrega final, y las carpetas de sesión conservan copias de documentos de otros equipos que no cuentan.",
       "estado": {
         "prop": [
           true,
@@ -2555,16 +2555,16 @@
           "Formato_Necesidades_recursos_Zocalab.docx, en 04_Desarrollo, del 29 de octubre: las cinco categorías de recursos y cuatro habilidades concretas por aprender (base de datos de usuarios, persistencia entre sesiones, árboles animados con SVG y CSS, publicar en un servidor). Falta ajustar la fecha de la parte A, que dice 29 de septiembre"
         ],
         "ante": [
-          false,
-          "Ninguna fuente citada en la propuesta ni carpeta de antecedentes"
+          true,
+          "Matriz_Antecedentes_ZocaLab.docx, en 01_Antecedentes, del 29 de octubre: tres fuentes con autor, año, idea principal y enlace. Dos tienen el DOI verificado en Crossref (Baars et al., 2022; Rodríguez-Ferrer et al., 2024) y el tercero (Delgado-Morales et al., 2025, revista RED) responde en su enlace. Faltan los tres PDF en la carpeta, que el propio cronograma da como pendientes"
         ],
         "cron": [
-          false,
-          "Sin cronograma: la línea de avances por mes de la propuesta cuenta lo que ya se hizo, no lo que sigue"
+          true,
+          "Cronograma_tareas_2026-II.xlsx diligenciado de agosto a octubre, con estado, avance real y ajustes, y Cronograma_ZocaLab.docx con las semanas que siguen. Ojo: el plan llega al 16 de diciembre y dice que la muestra es el 29 de octubre, y la entrega es el 13 de noviembre; las filas del 19 de octubre en adelante quedaron sin llenar"
         ],
         "preg": [
-          false,
-          "Sin Articulo_base.docx en la carpeta"
+          true,
+          "Articulo_base_ZocaLab.docx, sección 1.3: la pregunta escrita con signos de interrogación y lo que se propusieron construir para responderla"
         ],
         "bocg": [
           true,
@@ -2623,7 +2623,7 @@
           "No existe Articulo_base_v2.docx"
         ]
       },
-      "articuloEstado": {},
+      "articuloEstado": {"1.2": true, "1.3": true, "3.4": true},
       "publicacion": {
         "estado": "en linea",
         "url": "https://profenapaipa.github.io/zocalab/",
@@ -2631,7 +2631,7 @@
         "nota": "Publicado en GitHub Pages desde la rama main, con el index.html en la raíz del repositorio. Aplicación web educativa con identidad muisca para la gestión del tiempo y el aprendizaje."
       },
       "revision": {
-        "fecha": "2026-10-28",
+        "fecha": "2026-10-30",
         "items": [
           {
             "que": "La aplicación",
@@ -2651,10 +2651,10 @@
           {
             "que": "Documentación y alcance",
             "veredicto": "ajustar",
-            "porque": "Los acuerdos y las necesidades ya están diligenciados y cuentan. La guía y la ficha técnica de las carpetas de sesión siguen siendo de otros equipos. Faltan antecedentes con fuentes, cronograma y el artículo. Y como los datos viven en el navegador, que los docentes asignen contenidos y los padres acompañen todavía no es posible."
+            "porque": "Ya cuentan acuerdos, necesidades, antecedentes, cronograma y la pregunta del artículo. Faltan las secciones 2, 4 y 5 del artículo, los tres PDF de antecedentes, el registro escrito de bocetos, la ficha técnica propia, la hoja de barreras y la bitácora de decisiones. El artículo dice que el repositorio está por definir y ya existe, y el cronograma llega a diciembre cuando la entrega es el 13 de noviembre. Y como los datos viven en el navegador, que los docentes asignen contenidos y los padres acompañen todavía no es posible."
           }
         ],
-        "siguiente": "Antes del 13 de noviembre: tres antecedentes reales sobre inclusión y dificultades de aprendizaje, un cronograma de lo que sigue (servidor y rol docente) y pasar la propuesta al formato del artículo."
+        "siguiente": "Antes del 13 de noviembre: recortar el cronograma a lo que cabe hasta esa fecha, corregir la fecha de la muestra, subir los tres PDF, escribir las secciones 2, 4 y 5 del artículo (con la tabla de fases y las referencias en APA 7) y dejar la bitácora de decisiones."
       },
       "avances": [
         {
