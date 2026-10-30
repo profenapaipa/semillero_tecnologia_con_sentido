@@ -1106,6 +1106,102 @@
      "url": "https://docs.unity3d.com/2019.4/Documentation/Manual/webgl-cursorfullscreen.html"
     }
    ]
+  },
+  {
+   "id": "unity-abrir-el-proyecto",
+   "titulo": "Abrir el proyecto de Unity, paso a paso",
+   "para": [
+    "unity"
+   ],
+   "hitos": [],
+   "modulos": [],
+   "resumen": "Abrir el proyecto del Equipo 10 en tu computador y verlo funcionar, en nueve pasos con dibujos. Cada paso dice cómo saber que salió bien antes de seguir.",
+   "porQue": "Un proyecto de Unity mal abierto falla sin decir por qué: una versión parecida pero distinta (2019.4.41f1 en vez de 2019.4.38f1), una ruta con tildes, una carpeta repetida dentro de otra, o abrirlo desde Drive. Unity 2019.4 no soporta tildes ni ñ en la ruta, y Windows no admite rutas de más de 260 caracteres. El 28 y 29 de octubre el proyecto se entregó a los equipos 10.1 y 10.2 para que lo abran en sus computadores, y esta guía deja el camino sin saltos.",
+   "diapositivas": {
+    "carpeta": "unity-abrir-el-proyecto",
+    "titulos": [
+     "Portada: abrir el proyecto de Unity, paso a paso",
+     "Antes de empezar: lo que necesitas y la versión exacta",
+     "Paso 1: mira qué versión de Unity tienes",
+     "Paso 2: instala la versión exacta, si te faltó",
+     "Paso 3: consigue la carpeta Unity_Proyecto de Drive",
+     "Paso 4: crea la carpeta C:\\Unity",
+     "Paso 5: pon el proyecto dentro de C:\\Unity",
+     "Paso 6: añade el proyecto a Unity Hub",
+     "Paso 7: revisa la versión y ábrelo",
+     "Paso 8: espera, la primera vez tarda",
+     "Paso 9: pulsa Play y juega",
+     "Si algo falla: qué hacer en cada caso",
+     "Otra forma: importar solo tu juego con el paquete",
+     "Cuando quieras entregar tu trabajo"
+    ]
+   },
+   "descargas": [
+    {
+     "titulo": "La guía en PDF, con las 14 láminas",
+     "archivo": "unity/GUIA_Abrir_el_proyecto_de_Unity.pdf"
+    }
+   ],
+   "pasos": [
+    {
+     "titulo": "Revisa qué versión de Unity tienes",
+     "texto": "Abre Unity Hub y entra a Instalaciones. Busca una tarjeta que diga 2019.4.38f1.",
+     "ojo": "La versión tiene que ser exacta. 2019.4.41f1 se parece, pero un proyecto abierto con otra versión se convierte y ya no vuelve a abrir en la anterior."
+    },
+    {
+     "titulo": "Instala la versión exacta, solo si te faltó",
+     "texto": "Copia unityhub://2019.4.38f1/fdbb7325fa47 en la barra de direcciones del navegador, pulsa Enter y acepta abrir Unity Hub. Otra forma: Instalaciones, Instalar editor, pestaña Archivo, archivo de descarga, 2019.4, 2019.4.38.",
+     "ojo": "Para abrir y jugar no hace falta marcar módulos extra."
+    },
+    {
+     "titulo": "Consigue la carpeta Unity_Proyecto de Drive",
+     "texto": "Abre la carpeta de tu equipo en Drive, busca Unity_Proyecto y con clic derecho elige Descargar. Si Drive ya está en tu computador, copia la carpeta."
+    },
+    {
+     "titulo": "Crea la carpeta C:\\Unity",
+     "texto": "En el Explorador de archivos entra a Disco local (C:), clic derecho en un espacio vacío, Nuevo, Carpeta, y llámala Unity.",
+     "ojo": "Sin tildes y sin espacios. No abras el proyecto desde Drive ni desde una ruta larga."
+    },
+    {
+     "titulo": "Pon el proyecto dentro de C:\\Unity",
+     "texto": "Si bajaste el ZIP: clic derecho, Extraer todo, cambia la ruta a C:\\Unity y pulsa Extraer. Si copiaste la carpeta, pégala dentro de C:\\Unity. Abre la carpeta: debes ver Assets, Packages y ProjectSettings.",
+     "ojo": "Si ves otra carpeta Unity_Proyecto adentro, usa la de adentro: es la que tiene Assets."
+    },
+    {
+     "titulo": "Añade el proyecto a Unity Hub",
+     "texto": "En Proyectos pulsa Añadir, elige Añadir proyecto desde el disco, ve a C:\\Unity\\Unity_Proyecto y pulsa Seleccionar carpeta."
+    },
+    {
+     "titulo": "Revisa la versión y ábrelo",
+     "texto": "En la fila del proyecto, la columna del editor debe decir 2019.4.38f1. Haz clic en el nombre del proyecto.",
+     "ojo": "Si Unity te ofrece actualizar o convertir el proyecto, no aceptes: ciérralo y elige 2019.4.38f1."
+    },
+    {
+     "titulo": "Espera: la primera vez tarda",
+     "texto": "No cierres la ventana ni pulses nada. Unity reconstruye sus archivos; en la prueba tardó unos 2 minutos y medio en un computador de escritorio, y en el aula puede ser más."
+    },
+    {
+     "titulo": "Pulsa Play y juega",
+     "texto": "Arriba, al centro, pulsa el botón Play. En la pestaña Game aparece el menú principal; elige un juego.",
+     "ojo": "Si no ves el menú, abre Assets, Solucion, Unificado, 00_Principal con doble clic y pulsa Play otra vez."
+    },
+    {
+     "titulo": "Otra forma: importar solo tu juego",
+     "texto": "En tu propio proyecto de Unity 2019.4.38f1, menú Assets, Import Package, Custom Package. Elige el archivo .unitypackage de la carpeta Unity_Importar y pulsa Import.",
+     "ojo": "Importa un solo juego por proyecto: los dos traen una escena 01_Menu y chocan."
+    },
+    {
+     "titulo": "Cuando quieras entregar tu trabajo",
+     "texto": "Cierra Unity, selecciona solo Assets, Packages y ProjectSettings, clic derecho, Enviar a, Carpeta comprimida, y sube el ZIP a la carpeta de la sesión.",
+     "ojo": "No incluyas Library: pesa gigas y Unity la genera sola."
+    }
+   ],
+   "comprobar": [
+    "Unity Hub muestra Unity_Proyecto con el editor 2019.4.38f1.",
+    "Al terminar de importar, la ventana de Unity se ve con sus paneles y sin barra de progreso.",
+    "Al pulsar Play, el menú del juego aparece en la pestaña Game."
+   ],
+   "recursos": []
   }
  ]
 }

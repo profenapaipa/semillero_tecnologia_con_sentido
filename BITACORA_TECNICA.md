@@ -1501,3 +1501,55 @@ proyección, y un cierre sobre la tecnología con sentido y la IA.
   láminas, 25 opciones en el selector, sin errores de JavaScript.
 - `cierre.html` entra en la auditoría de JavaScript.
 - Enlaces: "Cierre" en el menú de todas las páginas y un botón en la portada.
+
+## 19. Proyecto de Unity en las carpetas de los equipos, y una guía ilustrada
+
+### 19.1 Qué se entregó y dónde (Drive de escritorio, unidad K:)
+
+En la carpeta de cada equipo, 10.1 y 10.2:
+
+- `Unity_Proyecto\`: el proyecto editable (Assets, Packages, ProjectSettings y un
+  LEEME), sin `Library`, `Logs` ni `.git`. 243 archivos, idénticos al original
+  (MD5 uno por uno).
+- `Unity_Importar\`: el `.unitypackage` del juego de ese equipo y su LEEME.
+- `LEEME_Unity.txt` y `GUIA_Abrir_el_proyecto_de_Unity.pdf`.
+- En "I) 28 y 29 de octubre": `Proyecto_Unity_Motricidad_y_Coordinacion.zip` (8,4 MB).
+
+Probado con Unity 2019.4.38f1 en modo batch, desde el ZIP descomprimido en una
+ruta limpia: cero errores de compilación, cero excepciones, cierre normal, 2 min
+19 s de importación inicial.
+
+### 19.2 Lecciones
+
+- **MAX_PATH (260).** La primera prueba falló con `DirectoryNotFoundException` en
+  `Library\PackageCache` por una ruta de prueba de 186 caracteres: los archivos de
+  los paquetes de Unity llegaban a 367 a 377. No era del proyecto. Se repitió
+  con una unidad virtual corta (`subst U:`) y quedó limpio. Por eso la carpeta
+  editable va en la raíz del equipo y con nombre corto: dentro de "I) 28 y 29 de
+  octubre" el archivo más profundo pasaría de 290 caracteres; en la raíz queda en
+  234 (10.1) y 217 (10.2). El script entregador se detiene si alguna ruta pasa de 250.
+- **No abrir el proyecto desde Drive.** Tildes en la ruta (Unity 2019.4 no las
+  soporta), rutas largas, y Drive sincronizando los miles de archivos de Library.
+  El LEEME y la guía indican copiarlo a `C:\Unity`.
+- **Una carpeta repetida.** Extraer un ZIP de Drive puede dejar
+  `Unity_Proyecto\Unity_Proyecto\Assets`; el Hub añadiría la de afuera y diría que
+  no es un proyecto. La guía lo muestra como "así no" y da la regla: la carpeta que
+  se añade tiene que mostrar Assets, Packages y ProjectSettings.
+
+### 19.3 La guía ilustrada
+
+`GUIA_Abrir_el_proyecto_de_Unity.pdf` y `docs/guias/unity-abrir-el-proyecto.html`:
+14 láminas de 1600×900, una por acción, cada una con un recuadro verde "Listo
+cuando…". Se arman con un script (HTML a PNG y PDF con Chrome). Los dibujos de
+Unity Hub, del Explorador, de Drive y del editor son **ilustraciones**, no
+capturas de pantalla (hay una regla de no capturar el escritorio). Los nombres de
+los botones salen de los textos del propio Unity Hub 3.22.3 en español:
+Instalaciones, Añadir, "Añadir proyecto desde el disco", Seleccionar carpeta,
+Instalar editor, Archivo. La guía se suma al portal con su carrusel y su descarga.
+
+### 19.4 Un error mío en la cuenta regresiva
+
+El 30 de octubre "Lo de hoy" decía "Hoy es la muestra, el 29 de octubre": la rama
+`faltan <= 0` no distinguía "hoy" de "ya pasó". Ahora dice "Ya pasó la muestra" y
+oculta "0 sesiones que quedan". También se actualizó `meta.sesionHoy`, que seguía
+hablando de "una sola sesión que queda"; `sesionesRestantes` quedó vacío.

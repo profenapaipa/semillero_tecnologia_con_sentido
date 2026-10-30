@@ -902,7 +902,7 @@ def pagina_portal(datos):
     h.append('<ul class="portada-cifras">')
     for cifra, pie_ in [(n, 'subequipos'), (len(datos['lineas']), 'líneas técnicas'),
                         ('%d%%' % pct(glob_h, glob_t), 'avance del semillero'),
-                        (len(meta['sesionesRestantes']), 'sesiones restantes')]:
+                        (len(meta['sesionesRestantes']), 'sesiones restantes')][:3 if not meta['sesionesRestantes'] else 4]:
         h.append('<li><span class="cifra">%s</span><span class="pie">%s</span></li>' % (e(cifra), e(pie_)))
     h.append('</ul>')
     h.append('<div class="botones portada-acciones">'
@@ -2070,18 +2070,23 @@ def pagina_hoy(datos, equipo):
                  '<a href="%s.html#revision">Resumen</a>. Aquí va solo lo que hay que hacer.</p>'
                  % e(s))
     h.append('<div class="hoy-cifras">')
-    if faltan <= 0:
+    if faltan < 0:
+        # La muestra ya paso: decir "Hoy es la muestra" o "0 dias" seria falso.
+        h.append('<div><span class="cifra">Ya</span><span class="pie">pasó la muestra, el 29 de octubre</span></div>')
+    elif faltan == 0:
         h.append('<div><span class="cifra">Hoy</span><span class="pie">es la muestra, el 29 de octubre</span></div>')
     else:
         h.append('<div><span class="cifra">%d</span><span class="pie">%s para la muestra, el 29 de octubre</span></div>'
                  % (faltan, 'día' if faltan == 1 else 'días'))
     if meta.get('entregaOficial'):
         h.append('<div><span class="cifra">%d</span>'
-                 '<span class="pie">días para la entrega oficial, el 13 de noviembre</span></div>'
-                 % max(dias_entre(desde_hoy(meta), meta['entregaOficial']), 0))
+                 '<span class="pie">%s para la entrega oficial, el 13 de noviembre</span></div>'
+                 % (max(dias_entre(desde_hoy(meta), meta['entregaOficial']), 0),
+                    'día' if dias_entre(desde_hoy(meta), meta['entregaOficial']) == 1 else 'días'))
     _ses = len(meta.get('sesionesRestantes', []))
-    h.append('<div><span class="cifra">%d</span><span class="pie">%s</span></div>'
-             % (_ses, 'sesión que queda' if _ses == 1 else 'sesiones que quedan'))
+    if _ses:   # sin sesiones por delante, "0 sesiones que quedan" solo estorba
+        h.append('<div><span class="cifra">%d</span><span class="pie">%s</span></div>'
+                 % (_ses, 'sesión que queda' if _ses == 1 else 'sesiones que quedan'))
     h.append('<div><span class="cifra">%d</span><span class="pie">tareas sin evidencia</span></div>'
              % (tt - hh))
     h.append('</div></div>')

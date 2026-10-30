@@ -5,9 +5,7 @@
     "colegio": "Bogotá",
     "semestre": "2026-II",
     "revisado": "2026-10-28",
-    "sesionesRestantes": [
-      "miércoles 28 y jueves 29 de octubre"
-    ],
+    "sesionesRestantes": [],
     "fuentes": [
       "Carpeta de Drive montada en local: Proyectos semillero 2026",
       "Repositorios de los equipos en GitHub",
@@ -18,7 +16,7 @@
     "_nota_estudiantes": "El sitio es público y no hay autorización para publicar nombres de estudiantes. Cada uno se identifica con un código fijo (E01, E02...). La equivalencia con el nombre es privada y no se sube a ningún repositorio.",
     "_nota_colegio": "El semillero es un proyecto personal de Néstor Andrés Paipa. El sitio no lleva credito ni marca de ninguna institución.",
     "muestra": "2026-10-29",
-    "sesionHoy": "Queda una sola sesión del semillero, el 28 y 29 de octubre, y el 29 es la muestra. Lo que se haga desde hoy es para dejar listo lo que se va a mostrar.",
+    "sesionHoy": "La muestra fue el 29 de octubre. Lo que sigue es la entrega oficial del 13 de noviembre: el artículo final con referencias verificadas y las evidencias en la carpeta de cada equipo.",
     "entregaOficial": "2026-11-13",
     "_nota_fechas": "Dos fechas distintas y las dos ciertas: la muestra del 29 de octubre, que es cuando se enseña lo construido, y la entrega oficial del 13 de noviembre. Las sesiones del semillero van hasta el 30 de octubre; después el trabajo sigue en clase."
   },
