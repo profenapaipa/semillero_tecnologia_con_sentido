@@ -159,6 +159,17 @@ const TAREAS = {
     `Ajuste ya aprobado por orientación: ${texto}\n` +
     'Redacta un mensaje corto para la familia, de máximo 90 palabras, en lenguaje sencillo y cálido: qué cambió en la clase ' +
     'y dos acciones concretas para acompañar en casa. No uses términos clínicos ni menciones diagnósticos.',
+  // Pregunta o petición escrita a mano por quien visita la plataforma, en cualquier rol. Se llama "libre" y
+  // no "general" porque la página ya usa "general" para las burbujas guía, que tienen sus textos propios y no
+  // deben gastar cuota. Lo que existe hoy está escrito aquí para que Niky no prometa funciones que no hay.
+  libre: (texto, perfil) =>
+    `Una persona que visita la plataforma te escribe: "${texto}"\n` +
+    'Lo que existe hoy, y solo esto: Kinesis es el espacio del colegio (docentes, orientación, familias y coordinación): perfiles de apoyos sin diagnóstico, ' +
+    'planeación con el Diseño Universal para el Aprendizaje, ajustes que el docente propone y orientación aprueba o devuelve, vista para la familia y cifras para coordinación. ' +
+    'Wisfox es el espacio de la persona estudiante: la actividad ya ajustada, el quiz, puntos y logros, y la ruta de inglés. Tú, Niky, propones y la persona decide. ' +
+    `Los perfiles que ves son ficticios (por ejemplo: ${perfil}).\n` +
+    'Responde a lo que preguntó, en máximo 120 palabras. Si pide algo que la plataforma todavía no hace, dilo con claridad y ofrece lo más cercano que sí existe. ' +
+    'Si pregunta por un estudiante real o pide datos personales, explica que aquí todo es ficticio. Si la petición no tiene que ver con aprender, enseñar o la plataforma, devuélvela con amabilidad a lo que sí puedes hacer.',
   coordinar: (texto) =>
     `Cifras ficticias del colegio: ${texto}\n` +
     'Resume en tres líneas, cada una empezando con un guion (-), qué muestran y qué conviene mirar primero. No inventes cifras que no estén en el texto, ' +

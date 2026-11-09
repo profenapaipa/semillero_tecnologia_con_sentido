@@ -277,6 +277,23 @@ test('un ejemplo preparado responde al instante, sin tocar ningún modelo ni la 
   } finally { s.parar(); }
 });
 
+test('la caja libre ("libre") llega al modelo con lo que existe hoy; "general" sigue rechazada para no mezclarla con las burbujas guía', async () => {
+  reiniciar();
+  const s = await arrancar(CONECTADO());
+  try {
+    const r = await s.preguntar('libre', '¿Qué puedes hacer por mí?');
+    assert.deepEqual(r.json, { fuente: 'openclaw', texto: 'RESPUESTA_OPENCLAW' });
+    const enviado = visto.openclaw.at(-1).cuerpo.messages[1].content;
+    assert.match(enviado, /¿Qué puedes hacer por mí\?/);
+    assert.match(enviado, /Kinesis/);
+    assert.match(enviado, /Wisfox/);
+    assert.match(enviado, /todavía no hace/i, 'debe decir qué hacer ante una función que no existe');
+    assert.equal((await s.preguntar('general', 'hola')).status, 400);
+    // el filtro de datos personales también cubre la caja libre
+    assert.equal((await s.preguntar('libre', 'escríbeme a juan@correo.com')).json.fuente, 'filtro');
+  } finally { s.parar(); }
+});
+
 test('OpenClaw y Gemini fallan: respaldo', async () => {
   reiniciar({ openclaw: 'error', gemini: 'error' });
   const s = await arrancar({ ...CONECTADO(), GEMINI_API_KEY: CLAVE_GEMINI, GEMINI_BASE: urlSimulador });
@@ -358,7 +375,7 @@ test('ninguna clave aparece en lo que imprime el servidor', async () => {
 });
 
 test('toda tarea tiene un texto de respaldo propio', () => {
-  for (const tarea of ['disenar', 'ajustar', 'ayuda', 'orientar', 'familia', 'coordinar']) {
+  for (const tarea of ['disenar', 'ajustar', 'ayuda', 'orientar', 'familia', 'coordinar', 'libre']) {
     assert.ok(typeof RESPALDO[tarea] === 'string' && RESPALDO[tarea].length > 60, tarea);
     assert.doesNotMatch(RESPALDO[tarea], /diagn[oó]stic/i, `${tarea}: el respaldo no debe nombrar diagnósticos`);
   }
